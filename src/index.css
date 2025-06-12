@@ -1,0 +1,284 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Make sure ReactFlow container allows scrolling */
+.react-flow {
+  overflow: auto !important;
+}
+
+.react-flow__renderer {
+  overflow: visible !important;
+  z-index: 0;
+}
+
+.react-flow__node {
+  background: transparent;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  flex-direction: column;
+  z-index: 5;
+  pointer-events: all !important;
+}
+
+.react-flow__node.selected {
+  @apply shadow-md ring-2 ring-gray-400/50;
+}
+
+.react-flow__handle {
+  @apply w-3 h-3 rounded-full border-2 border-white bg-gray-400 transition-all duration-300 opacity-100;
+  z-index: 100;
+}
+
+.react-flow__handle-top {
+  @apply top-0 -translate-y-1/2;
+}
+
+.react-flow__handle-bottom {
+  @apply bottom-0 translate-y-1/2;
+}
+
+.react-flow__handle-left {
+  @apply left-0 -translate-x-1/2;
+}
+
+.react-flow__handle-right {
+  @apply right-0 translate-x-1/2;
+}
+
+.react-flow__handle:hover {
+  @apply bg-gray-700;
+}
+
+.react-flow__edge-path {
+  @apply stroke-gray-400 stroke-[3px];
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  @apply stroke-gray-700 stroke-[4px];
+}
+
+.react-flow__edge-text {
+  @apply fill-gray-700 text-xs font-medium;
+}
+
+.react-flow__controls {
+  @apply rounded-lg overflow-hidden shadow-md backdrop-blur-sm bg-white/70;
+}
+
+.react-flow__controls-button {
+  @apply border-gray-200 text-gray-700 hover:bg-gray-100 transition-colors;
+}
+
+.react-flow__minimap {
+  @apply rounded-lg overflow-hidden shadow-md backdrop-blur-sm bg-white/70;
+}
+
+.react-flow__attribution {
+  @apply hidden;
+}
+
+/* Shortened edge style */
+.react-flow__edge-path.shortened {
+  stroke-dasharray: 5, 2;
+}
+
+.nodeToolbar {
+  @apply absolute bottom-full mb-2 left-1/2 -translate-x-1/2 flex items-center bg-white rounded-lg shadow-md p-1 gap-1;
+  animation: fade-up 0.2s ease-out forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.toolbarButton {
+  @apply p-1.5 rounded hover:bg-gray-100 text-gray-600 transition-colors flex items-center justify-center;
+}
+
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-lg rounded-xl;
+}
+
+.node-enter {
+  animation: node-enter 0.3s ease-out forwards;
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: flex !important;
+}
+
+@keyframes node-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.controls-panel {
+  @apply bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-sm rounded-lg p-2;
+}
+
+.node-type-button {
+  @apply px-3 py-2 rounded-lg font-medium transition-all duration-200 flex items-center gap-2;
+}
+
+.node-type-button.active {
+  @apply bg-gray-200/70 shadow-sm;
+}
+
+.node-inner {
+  @apply backdrop-blur-sm bg-white/90 shadow-sm rounded-lg transition-all duration-200;
+}
+
+.node-data {
+  @apply bg-gray-50/90 backdrop-blur-sm rounded p-2 text-sm text-gray-600;
+}
+
+/* Custom shape styles for specific node types */
+
+/* Cell Area Node - Hexagon */
+div[data-node-type="cell-area"] {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* RRP Node - Pentagon */
+div[data-node-type="rrp"] {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* S-NSSAI Node - Hexagon (different from cell area with different color) */
+div[data-node-type="s-nssai"] {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* DNN Node - Diamond */
+div[data-node-type="dnn"] {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) !important;
+  width: 140px !important;
+  height: 140px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* 5QI Node - Octagon */
+div[data-node-type="5qi"] {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* CRITICAL: Ensure any hidden nodes become visible */
+.react-flow__node[style*="visibility: hidden"],
+.react-flow__node[style*="display: none"],
+.react-flow__node[style*="opacity: 0"] {
+  visibility: visible !important;
+  display: flex !important;
+  opacity: 1 !important;
+  z-index: 1000 !important;
+}
+
+.node-wrapper {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 1000 !important; 
+  min-width: 150px;
+  min-height: 80px;
+  pointer-events: all !important;
+}
+
+/* Force elements to be visible regardless of style */
+[data-ensurevisible="true"],
+[data-forcevisible="true"],
+[data-visible="true"],
+[data-persistnode="true"] {
+  visibility: visible !important;
+  display: flex !important;
+  opacity: 1 !important;
+  z-index: 5 !important;
+}
