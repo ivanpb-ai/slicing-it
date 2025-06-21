@@ -31,9 +31,9 @@ export const arrangeNodesInTreeLayout = (
 ): Node[] => {
   // MINIMUM: All vertical spacing must be exactly 1px
   const {
-    horizontalSpacing = 100,
-    verticalSpacing = 10,     // Minimum: 1px edge length
-    levelHeight = 10,         // Minimum: 1px edge length
+    horizontalSpacing = 280,
+    verticalSpacing = 1,     // Minimum: 1px edge length
+    levelHeight = 1,         // Minimum: 1px edge length
     preservePositions = false,
     centerWidth = 1400,
     edgeCrossingReduction = true,
@@ -79,8 +79,8 @@ export const arrangeNodesInTreeLayout = (
       {
         ...options,
         horizontalSpacing,
-        verticalSpacing: 10,     // Minimum: Exactly 1px
-        levelHeight: 10,         // Minimum: Exactly 1px
+        verticalSpacing: 1,     // Minimum: Exactly 1px
+        levelHeight: 1,         // Minimum: Exactly 1px
         edgeCrossingReduction,
         edgeShortenFactor,
         minNodeDistance: 80
@@ -91,7 +91,7 @@ export const arrangeNodesInTreeLayout = (
     const finalNodes = processNodesAfterLayout(
       positionedNodes,
       relationships,
-      10 // Minimum: 1px vertical spacing
+      1 // Minimum: 1px vertical spacing
     );
     
     // 8. Verify the arrangement is valid
