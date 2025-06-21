@@ -13,10 +13,10 @@ export const getDefaultLayoutOptions = (): LayoutOptions => ({
   marginY: 50,
   preventOverlap: true,
   compactFactor: 0.9,
-  edgeShortenFactor: 0.55,
+  edgeShortenFactor: 0.9,
   maxIterations: 100,
-  verticalSpacing: 1,      // Absolute minimum: 1px edge length
-  horizontalSpacing: 200,
-  levelHeight: 1,          // Absolute minimum: 1px edge length
+  verticalSpacing: 100,      // Absolute minimum: 1px edge length
+  horizontalSpacing: 100,
+  levelHeight: 10,          // Absolute minimum: 1px edge length
   minNodeDistance: 50
 });

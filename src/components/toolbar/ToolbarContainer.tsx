@@ -124,7 +124,9 @@ const ToolbarContainer: React.FC<ToolbarContainerProps> = ({
       />
       
       <div className="text-[9px] text-muted-foreground px-1 mt-1">
-        <p>❓ Tip: Drag nodes to create connections (Network → Cell Area → RRP → S-NSSAI → DNN → 5QI)</p>
+        <p>❓ Tip: Drag nodes on top of each other or by connecting edges to nodes</p>
+        <p>❓ The hierarchy is Network → Cell Area → RRP(member) → S-NSSAI → DNN → 5QI</p>
+        <p>❓ RRPmember nodes are created automatically when a PLMN is added to an RRRP node</p>
       </div>
     </div>
   );
