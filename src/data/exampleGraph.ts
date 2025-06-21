@@ -1,6 +1,6 @@
 
 export const EXAMPLE_GRAPH = {
-{"nodes": [
+"nodes": [
     {
       "id": "network-1750337202178-7623",
       "type": "customNode",
@@ -460,5 +460,4 @@ export const EXAMPLE_GRAPH = {
     }
   ],
   "timestamp": 1750337555550
-}
 };
