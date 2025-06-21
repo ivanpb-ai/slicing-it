@@ -13,7 +13,7 @@ export function positionNodesInTree(nodes: Node[], options: any = {}): Node[] {
     const defaultOptions = {
       marginX: 300,       // Horizontal margin
       marginY: 100,       // Top margin for the layout
-      spacing: 250,       // Horizontal spacing between siblings
+      spacing: 200,       // Horizontal spacing between siblings
       nodeWidth: 180,     // Default node width
       nodeHeight: 100,    // Default node height
       verticalSpacing: 200, // Updated to consistent 200px spacing
