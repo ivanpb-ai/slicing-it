@@ -23,7 +23,7 @@ export function positionAllNodes(
     relationships,
     {
       nodeWidth: options.nodeWidth || 180,
-      spacing: options.horizontalSpacing || 280,
+      spacing: options.horizontalSpacing || 100,
       minNodeDistance: options.minNodeDistance || 80
     }
   );
@@ -46,7 +46,7 @@ export function positionAllNodes(
       {
         ...options,
         marginX: options.marginX || 300,
-        spacing: (options.horizontalSpacing || 280) 
+        spacing: (options.horizontalSpacing || 100) 
       }
     );
   }
@@ -70,7 +70,7 @@ export function positionAllNodes(
       verticalSpacing: 100,     // MINIMUM: Exactly 1px
       minNodeDistance: options.minNodeDistance || 80,
       edgeShortenFactor: options.edgeShortenFactor || 0.9,
-      horizontalSpacing: (options.horizontalSpacing || 280) 
+      horizontalSpacing: (options.horizontalSpacing || 100) 
     }
   );
 
@@ -86,7 +86,7 @@ export function positionAllNodes(
       {
         ...options,
         marginY: options.marginY || 80,
-        verticalSpacing: 1  // MINIMUM: Exactly 1px
+        verticalSpacing: 100  // MINIMUM: Exactly 1px
       }
     );
   });
