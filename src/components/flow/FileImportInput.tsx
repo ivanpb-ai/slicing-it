@@ -44,7 +44,7 @@ const handleImportGraph = (event: React.ChangeEvent<HTMLInputElement>) => {
       accept=".json,application/json"
       className="hidden"
       aria-label="Import graph file"
-      
+      onChange={handleImportGraph}
       onClick={(e) => {
         // CRITICAL FIX: Force complete reset of the input
         const target = e.target as HTMLInputElement;
@@ -56,7 +56,6 @@ const handleImportGraph = (event: React.ChangeEvent<HTMLInputElement>) => {
         setTimeout(() => {
           console.log('FileImportInput: Input reset completed');
         }, 10);
-          onChange={handleImportGraph}
       }}
     />
   );
