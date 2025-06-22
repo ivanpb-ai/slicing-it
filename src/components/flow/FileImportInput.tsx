@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 interface FileImportInputProps {
   onImport: (file: File) => void;
+  inputRef?: React.RefObject<HTMLInputElement>;
 }
 
-const FileImportInput: React.FC<FileImportInputProps> = ({ onImport }) => {
-  // Use a key to force remount of the input
+const FileImportInput: React.FC<FileImportInputProps> = ({ onImport, inputRef }) => {
+  // Internal ref if no external ref is passed
+  const internalFileInputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = inputRef || internalFileInputRef;
+
+  // Use a key to force remount of the input to reset it completely
   const [inputKey, setInputKey] = useState(Date.now());
 
   const handleImportGraph = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +25,7 @@ const FileImportInput: React.FC<FileImportInputProps> = ({ onImport }) => {
       `FileImportInput: Processing file: ${file.name}, type: ${file.type}, size: ${file.size}`
     );
 
-    // Validate file type
+    // Validate file type (accept JSON files)
     if (file.type !== 'application/json' && !file.name.endsWith('.json')) {
       console.error('FileImportInput: Invalid file type:', file.type);
       // Force remount so the user can try again
@@ -42,8 +47,10 @@ const FileImportInput: React.FC<FileImportInputProps> = ({ onImport }) => {
   return (
     <input
       key={inputKey}
+      ref={fileInputRef}
       type="file"
       accept=".json,application/json"
+      aria-label="Import graph file"
       onChange={handleImportGraph}
     />
   );
