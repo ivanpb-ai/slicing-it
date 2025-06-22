@@ -42,13 +42,6 @@ const handleImportGraph = (event: React.ChangeEvent<HTMLInputElement>) => {
   event.target.value = '';
 };
 
-  
-  // Initialize file input
-  useEffect(() => {
-    if (fileInputRef.current) {
-      fileInputRef.current.value = '';
-    }
-  }, [fileInputRef]);
 
   return (
     <input 
