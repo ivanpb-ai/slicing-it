@@ -10,31 +10,38 @@ const FileImportInput: React.FC<FileImportInputProps> = ({ onImport, inputRef })
   const internalFileInputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = inputRef || internalFileInputRef;
 
-  // Handle file selection and import - simplified logic
-  const handleImportGraph = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = event.target.files;
-    if (!files || files.length === 0) {
-      console.log('FileImportInput: No files selected');
-      return;
-    }
-    
-    const file = files[0];
-    console.log(`FileImportInput: Processing file: ${file.name}, type: ${file.type}, size: ${file.size}`);
-    
-    // Validate file type
-    if (file.type !== 'application/json' && !file.name.endsWith('.json')) {
-      console.error('FileImportInput: Invalid file type:', file.type);
-      return;
-    }
-    
-    try {
-      // Call the import handler directly
-      onImport(file);
-      console.log('FileImportInput: Successfully called onImport handler');
-    } catch (error) {
-      console.error('FileImportInput: Error calling onImport:', error);
-    }
-  };
+  // Handle file selection and import - corrected
+const handleImportGraph = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const files = event.target.files;
+  if (!files || files.length === 0) {
+    console.log('FileImportInput: No files selected');
+    return;
+  }
+
+  const file = files[0];
+  console.log(
+    `FileImportInput: Processing file: ${file.name}, type: ${file.type}, size: ${file.size}`
+  );
+
+  // Validate file type
+  if (file.type !== 'application/json' && !file.name.endsWith('.json')) {
+    console.error('FileImportInput: Invalid file type:', file.type);
+    // Reset the input so the user can try again
+    event.target.value = '';
+    return;
+  }
+
+  try {
+    onImport(file);
+    console.log('FileImportInput: Successfully called onImport handler');
+  } catch (error) {
+    console.error('FileImportInput: Error calling onImport:', error);
+  }
+
+  // Reset the input so the same file can be selected again
+  event.target.value = '';
+};
+
   
   // Initialize file input
   useEffect(() => {
