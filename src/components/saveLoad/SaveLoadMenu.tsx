@@ -75,23 +75,6 @@ const SaveLoadMenu: React.FC<SaveLoadMenuProps> = ({
         title="Quick Load"
       />
       
-      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <MenuButton 
-          icon={StarIcon} 
-          onClick={handleOpenSaveDialog}
-          title="Advanced Save/Load"
-        />
-        
-        <SaveLoadDialog
-          mode={dialogMode}
-          onSave={onSave}
-          onLoad={onLoadGraphFromStorage}
-          onDelete={onDelete}
-          getSavedGraphs={getSavedGraphs}
-          onClose={() => setDialogOpen(false)}
-        />
-      </Dialog>
-      
       <MenuButton 
         icon={DownloadIcon} 
         onClick={onExport}
