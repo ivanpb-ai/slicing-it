@@ -6,17 +6,17 @@ export const createInitialSnssaiNode = (): Node => {
   const snssaiId = getNextSnssaiId();
   
   return {
-    id: 's-nssai-1',
-    type: 'customNode',
+    id: '${snssaiId}',
+    type: 'S-NSSAI',
     position: { x: 250, y: 350 },
     data: {
       label: `S-NSSAI #${snssaiId}`,
-      type: 's-nssai',
       description: 'Single Network Slice Selection Assistance Information',
       snssaiId: snssaiId,
+      nodeId: 'S-NSSAI-${snssaiId}',
       sd: '', // Service Differentiator
       sst: '', // Slice/Service Type
-      snssaiCustomName: 'Enhanced Mobile Broadband' // Keep for backward compatibility
+      snssaiCustomName: 'Initial S-NSSAI type' // Keep for backward compatibility
     },
   };
 };

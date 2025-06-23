@@ -6,14 +6,14 @@ export const createInitialDnnNode = (): Node => {
   const dnnId = getNextDnnId();
   
   return {
-    id: 'dnn-1',
-    type: 'customNode',
+    id: '${dnnId}',
+    type: 'DNN',
     position: { x: 250, y: 500 },
     data: {
       label: `DNN #${dnnId}`,
-      type: 'dnn',
       description: 'Data Network Name',
       dnnId: dnnId,
+      nodeId: 'DNN-${dnnId}',
     },
   };
 };
