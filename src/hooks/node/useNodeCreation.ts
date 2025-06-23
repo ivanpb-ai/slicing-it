@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import { Node, XYPosition } from '@xyflow/react';
 import { NodeType } from '@/types/nodeTypes';
 import { getNodeId } from '@/utils/flowData/idGenerator';
-import { getNextCellAreaId, getNextDnnId, getNextSnssaiId } from '@/utils/flowData/idCounters';
+import { getNextCellAreaId, getNextRrpId, getNextDnnId, getNextSnssaiId } from '@/utils/flowData/idCounters';
 
 export const useNodeCreation = (setNodes: React.Dispatch<React.SetStateAction<Node[]>>) => {
   const createNode = useCallback((
@@ -23,6 +23,15 @@ export const useNodeCreation = (setNodes: React.Dispatch<React.SetStateAction<No
         cellAreaDescription: `TAC ${cellAreaId}`,
         nodeId: id
       };
+    } else if (type === 'rrp') {
+      const rrpId = getNextRrpId();
+      id = `rrp-${rrpId}`;
+      extraData = { 
+        rrpId,
+        rrpDescription: `RRP ${rrpId}`,
+        rrpPercentage: 100,
+        nodeId: id
+      };
     } else if (type === 'dnn') {
       const dnnId = getNextDnnId();
       id = `dnn-${dnnId}`;
@@ -39,12 +48,9 @@ export const useNodeCreation = (setNodes: React.Dispatch<React.SetStateAction<No
       };
     } else {
       id = getNodeId(type, fiveQIId);
-      
       if (type === '5qi') {
         extraData = { fiveQIId };
-      } else if (type === 'rrp') {
-        extraData = { rrpPercentage: 100 };
-      }
+      } 
     }
 
     const newNode: Node = {

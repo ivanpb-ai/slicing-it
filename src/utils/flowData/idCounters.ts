@@ -2,16 +2,23 @@
 // Counters for generating IDs - use numbers for consistent typing
 let dnnCounter = 1;
 let snssaiCounter = 1;
+let rrpCounter = 1;
 let cellAreaCounter = 1;
 
-// Get the next DNN ID - return as string since that's how it's used in the app
-export const getNextDnnId = (): string => {
-  return (dnnCounter++).toString();
+// Get the next DNN ID - return as number
+export const getNextDnnId = (): number => {
+  const id = dnnCounter;
+  console.log(`Generated new DNN ID: ${id}`);
+  dnnCounter++;
+  return id;
 };
 
 // Get the next S-NSSAI ID - return as number
 export const getNextSnssaiId = (): number => {
-  return snssaiCounter++;
+  const id = snssaiCounter;
+  console.log(`Generated new S-NSSAI ID: ${id}`);
+  snssaiCounter++;
+  return id;
 };
 
 // Get the next Cell Area ID - return as number 
@@ -19,6 +26,14 @@ export const getNextCellAreaId = (): number => {
   const id = cellAreaCounter;
   console.log(`Generated new Cell Area ID: ${id}`);
   cellAreaCounter++;
+  return id;
+};
+
+// Get the next RRP ID - return as number 
+export const getNextRrpId = (): number => {
+  const id = rrpCounter;
+  console.log(`Generated new RRP ID: ${id}`);
+  rrpCounter++;
   return id;
 };
 
@@ -47,6 +62,17 @@ export const updateDnnCounter = (nodes: any[]): void => {
       const highestSnssaiId = Math.max(...snssaiNodes.map(node => parseInt(node.data.snssaiId)));
       snssaiCounter = highestSnssaiId + 1;
       console.log(`Updated S-NSSAI counter to: ${snssaiCounter}`);
+    }
+
+    // Find the highest RRP ID
+    const rrpNodes = nodes.filter(node => 
+      node.data && node.data.type === 'rrp' && node.data.rrpId
+    );
+    
+    if (rrpNodes.length > 0) {
+      const highestRrpId = Math.max(...rrpNodes.map(node => parseInt(node.data.rrpId)));
+      rrpCounter = highestRrpId + 1;
+      console.log(`Updated RRP counter to: ${rrpCounter}`);
     }
     
     // Find the highest Cell Area ID - ensure we get simple sequential numbers
@@ -83,5 +109,6 @@ export const resetCounters = (): void => {
   console.log('Resetting all ID counters to 1');
   dnnCounter = 1;
   snssaiCounter = 1;
+  rrpCounter = 1;
   cellAreaCounter = 1;
 };
