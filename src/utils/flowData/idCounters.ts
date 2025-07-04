@@ -65,15 +65,15 @@ export const updateDnnCounter = (nodes: any[]): void => {
     }
 
     // Find the highest RRP ID
-    const rrpNodes = nodes.filter(node => 
-      node.data && node.data.type === 'rrp' && node.data.rrpId
-    );
+    //const rrpNodes = nodes.filter(node => 
+    //  node.data && node.data.type === 'rrp' && node.data.rrpId
+    //);
     
-    if (rrpNodes.length > 0) {
-      const highestRrpId = Math.max(...rrpNodes.map(node => parseInt(node.data.rrpId)));
-      rrpCounter = highestRrpId + 1;
-      console.log(`Updated RRP counter to: ${rrpCounter}`);
-    }
+    //if (rrpNodes.length > 0) {
+    //  const highestRrpId = Math.max(...rrpNodes.map(node => parseInt(node.data.rrpId)));
+    //  rrpCounter = highestRrpId + 1;
+    //  console.log(`Updated RRP counter to: ${rrpCounter}`);
+    //}
     
     // Find the highest Cell Area ID - ensure we get simple sequential numbers
     const cellAreaNodes = nodes.filter(node => 
