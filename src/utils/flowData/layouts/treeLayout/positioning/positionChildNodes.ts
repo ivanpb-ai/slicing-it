@@ -34,7 +34,7 @@ export function positionChildNodes(
     spacing = 100,
     nodeHeight = 120,
     nodeWidth = 180,
-    verticalSpacing = 150,  // Default to 50px if not provided
+    verticalSpacing = 150,  // Default to 150px if not provided
     minNodeDistance = 20
   } = options;
 
