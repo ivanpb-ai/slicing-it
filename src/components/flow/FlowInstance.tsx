@@ -75,6 +75,7 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
     if (edges.length > 0) {
       console.log('FlowInstance edges detail:', edges.map(e => ({ 
         id: e.id, 
+        console.log(`FlowInstance: Rendering  ${e.id} node`),
         source: e.source, 
         target: e.target,
         sourceHandle: e.sourceHandle,
