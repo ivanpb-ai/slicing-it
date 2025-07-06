@@ -1,16 +1,25 @@
-import { getNextRrpId} from "@/utils/flowData/idCounters/getNextRrpId";
-import { useState, useCallback } from "react";
+import { getNextRrpId } from '@/utils/flowData/idCounters';
+import { useState, useCallback, useEffect } from "react";
 import { NodeData } from "@/types/nodeTypes";
 
-export const useRrpName = (data: NodeData) => {
+export const useRrpName = (
+  data: NodeData,
+  onRrpNameChange?: (newName: string) => void
+) => {
   const [isEditingName, setIsEditingName] = useState(false);
   const [rrpName, setRrpName] = useState(data.rrpName || 'RRP-1');
 
+  // Sync with external changes
+  useEffect(() => {
+    setRrpName(data.rrpName || 'RRP-1');
+  }, [data.rrpName]);
+
   const handleNameChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    getNextRrpId(e.target.value);
-    setRrpName(e.target.value);
-    data.rrpName = e.target.value;
-  }, [data]);
+    const newRrpName = getNextRrpId(e.target.value);
+    setRrpName(newRrpName);
+    if (onRrpNameChange) onRrpNameChange(newRrpName);
+    // Do NOT mutate data directly here
+  }, [onRrpNameChange]);
 
   const handleNameBlur = useCallback(() => {
     setIsEditingName(false);
