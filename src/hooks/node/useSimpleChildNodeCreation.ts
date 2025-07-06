@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import { Node, XYPosition } from '@xyflow/react';
 import { NodeType } from '@/types/nodeTypes';
 import { getNodeId } from '@/utils/flowData/idGenerator';
-import { getNextCellAreaId, getNextDnnId, getNextSnssaiId } from '@/utils/flowData/idCounters';
+import { getNextCellAreaId, getNextDnnId, getNextRrpId, getNextSnssaiId } from '@/utils/flowData/idCounters';
 
 export const useSimpleChildNodeCreation = (
   setNodes: React.Dispatch<React.SetStateAction<Node[]>>,
@@ -42,6 +42,14 @@ export const useSimpleChildNodeCreation = (
         snssaiId,
         nodeId: id
       };
+    } else if (type === 'rrp') {
+      const rrpId = getNextRrpId();
+      id = `rrp-${rrpId}`;
+      extraData = { 
+        rrpId,
+        extraData : { rrpPercentage: 100 },
+        nodeId: id
+      };
     } else if (type === 'rrpmember') {
       // For RRPmember nodes, use the fiveQIId as the PLMN value
       id = getNodeId(type);
@@ -52,12 +60,9 @@ export const useSimpleChildNodeCreation = (
       console.log(`Creating RRPmember child with PLMN: ${fiveQIId || 'Unknown'}`);
     } else {
       id = getNodeId(type, fiveQIId);
-      
       if (type === '5qi') {
         extraData = { fiveQIId };
-      } else if (type === 'rrp') {
-        extraData = { rrpPercentage: 100 };
-      }
+      } 
     }
 
     console.log(`Creating child ${type} node with ID: ${id} under parent: ${parentId}`);
