@@ -35,6 +35,7 @@ export const useSimpleChildNodeCreation = (
         dnnId,
         nodeId: id
       };
+      console.log(`Creating child DNN with ID: ${dnnId}`);
     } else if (type === 's-nssai') {
       const snssaiId = getNextSnssaiId();
       id = `s-nssai-${snssaiId}`;
@@ -42,6 +43,7 @@ export const useSimpleChildNodeCreation = (
         snssaiId,
         nodeId: id
       };
+      console.log(`Creating child S-NSSAI with ID: ${snssaiId}`);
     } else if (type === 'rrp') {
       const rrpId = getNextRrpId();
       id = `rrp-${rrpId}`;
@@ -50,6 +52,7 @@ export const useSimpleChildNodeCreation = (
         extraData : { rrpPercentage: 100 },
         nodeId: id
       };
+      console.log(`Creating RRP with ID: ${rrpId}`);
     } else if (type === 'rrpmember') {
       // For RRPmember nodes, use the fiveQIId as the PLMN value
       id = getNodeId(type);
