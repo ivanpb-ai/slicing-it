@@ -1,5 +1,14 @@
 import React, { useRef, useEffect } from 'react';
-import { ReactFlow, SelectionMode, MarkerType, Node, Edge } from '@xyflow/react';
+import {
+  ReactFlow,
+  SelectionMode,
+  MarkerType,
+  Node,
+  Edge,
+  NodeChange,
+  EdgeChange,
+  Connection,
+} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import NodeTypes from './NodeTypes';
 import FlowBackground from './FlowBackground';
@@ -8,20 +17,21 @@ import EditorPanels from './EditorPanels';
 import FileImportInput from './FileImportInput';
 import { SavedGraph } from '@/hooks/types';
 import type { GraphData } from '@/services/storage/GraphLocalStorageService';
+import type { NodeData } from '@/types/nodeTypes';
 
 interface FlowInstanceProps {
-  nodes: Node[];
+  nodes: Node<NodeData>[];
   edges: Edge[];
-  onNodesChange: (changes: any) => void;
-  onEdgesChange: (changes: any) => void;
-  onConnect: (connection: any) => void;
-  onNodeDoubleClick: (event: React.MouseEvent, node: Node) => void;
-  onSelectionChange: (params: any) => void;
+  onNodesChange: (changes: NodeChange[]) => void;
+  onEdgesChange: (changes: EdgeChange[]) => void;
+  onConnect: (connection: Connection) => void;
+  onNodeDoubleClick: (event: React.MouseEvent, node: Node<NodeData>) => void;
+  onSelectionChange: (params: { nodes: Node<NodeData>[]; edges: Edge[] }) => void;
   onPaneClick: () => void;
   onDragOver: React.DragEventHandler;
   onDrop: React.DragEventHandler;
 
-  handleAddNode: (type: any, fiveQIId?: string) => void;
+  handleAddNode: (type: string, fiveQIId?: string) => void;
   deleteSelected: () => void;
   duplicateSelected: () => void;
   clearCanvas: () => void;
@@ -64,7 +74,7 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
   onExport,
   onImport,
   getSavedGraphs,
-  onLoadGraphFromStorage
+  onLoadGraphFromStorage,
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -78,10 +88,10 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
         sourceHandle: e.sourceHandle,
         targetHandle: e.targetHandle,
         style: e.style,
-        type: e.type
+        type: e.type,
       });
     });
-  }, [nodes.length, edges.length, edges]);
+  }, [nodes, edges]);
 
   const handleFileImport = () => {
     if (fileInputRef.current) {
@@ -110,14 +120,14 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
     style: {
       stroke: '#2563eb',
       strokeWidth: 3,
-      opacity: 1
+      opacity: 1,
     },
     markerEnd: {
       type: MarkerType.ArrowClosed,
       color: '#2563eb',
       width: 12,
-      height: 12
-    }
+      height: 12,
+    },
   };
 
   return (
@@ -142,7 +152,7 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
       nodesConnectable={true}
       elementsSelectable={true}
       onInit={() => {
-        console.log("FlowInstance: ReactFlow initialized");
+        console.log('FlowInstance: ReactFlow initialized');
       }}
     >
       <FlowBackground />

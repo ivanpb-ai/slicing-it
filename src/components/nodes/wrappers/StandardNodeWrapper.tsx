@@ -8,18 +8,36 @@ import DnnNode from "../DnnNode";
 import FiveQiNode from "../FiveQiNode";
 import RrpMemberNode from "../RrpMemberNode";
 
+// Add cell-area if you want to enumerate it here too
+// import CellAreaNode from "../CellAreaNode";
+
 interface StandardNodeWrapperProps {
   id: string;
   data: NodeData;
 }
 
+type IdKey =
+  | "cellAreaId"
+  | "networkId"
+  | "rrpId"
+  | "snssaiId"
+  | "dnnId"
+  | "fiveQiId"
+  | "rrpMemberId";
+
 // Shared enumeration logic for all node types
 function getNodeNumber(data: NodeData, id: string): number | undefined {
-  // Try known ID fields
-  for (const key of [
-    "cellAreaId", "networkId", "rrpId", "snssaiId", "dnnId", "fiveQiId", "rrpMemberId"
-  ]) {
-    if (typeof (data as any)[key] === "number") return (data as any)[key];
+  const idKeys: IdKey[] = [
+    "cellAreaId",
+    "networkId",
+    "rrpId",
+    "snssaiId",
+    "dnnId",
+    "fiveQiId",
+    "rrpMemberId",
+  ];
+  for (const key of idKeys) {
+    if (typeof data[key] === "number") return data[key];
   }
   // Fallback: extract trailing number from ID
   const match = id.match(/(\d+)$/);
@@ -45,6 +63,9 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
   };
 
   switch (data.type) {
+    // Uncomment if you want to enumerate cell-area nodes here
+    // case "cell-area":
+    //   return <CellAreaNode {...commonProps} />;
     case "network":
       return <NetworkNode {...commonProps} />;
     case "rrp":
@@ -61,3 +82,7 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
       return <div>Unknown node type: {data.type}</div>;
   }
 });
+
+StandardNodeWrapper.displayName = "StandardNodeWrapper";
+
+export default StandardNodeWrapper;
