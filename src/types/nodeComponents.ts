@@ -16,6 +16,7 @@ export interface NodeLabelProps {
   displayId: string;
   fiveQIId?: string;
   cellAreaId?: number;
+  rrpId?: number;
   snssaiId?: number;
   dnnId?: string;
 }
