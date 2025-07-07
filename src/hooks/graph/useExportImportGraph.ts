@@ -2,7 +2,7 @@
 import { useCallback } from 'react';
 import { Node, Edge, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
-import { updateDnnCounter, resetCounters } from '@/utils/flowData/idCounters';
+import { resetCounters } from '@/utils/flowData/idCounters';
 import type { GraphData } from '@/services/storage/GraphLocalStorageService';
 
 // Export the hook with the name that's imported in useGraphOperations.tsx
@@ -107,10 +107,10 @@ export const useExportImportGraph = (
           }
           
           // First reset all counters to avoid ID conflicts
-          resetCounters();
+          //resetCounters();
           
           // Then update counters based on imported nodes
-          updateDnnCounter(parsedData.nodes);
+          //updateDnnCounter(parsedData.nodes);
           
           // First, reset the viewport
           if (reactFlowInstance) {

@@ -23,6 +23,9 @@ const SnssaiNode = memo(({ data }: SnssaiNodeProps) => {
     data.sst = newValue;
   }, [data]);
 
+  // Format the S-NSSAI ID properly - ensure it shows a number
+  const displayId = data.snssaiId !== undefined && data.snssaiId !== null ? data.snssaiId : 1;
+
   return (
     <div className="w-full h-full flex flex-col items-center relative">
       {/* Input handle at the top */}
@@ -37,7 +40,7 @@ const SnssaiNode = memo(({ data }: SnssaiNodeProps) => {
       
       {/* Header */}
       <div className="w-full bg-violet-100 border-b border-violet-200 px-2 py-1 mb-2 rounded-t">
-        <div className="text-sm font-semibold text-violet-800 text-center">S-NSSAI</div>
+        <div className="text-sm font-semibold text-violet-800 text-center">S-NSSAI#{displayId}</div>
       </div>
       
       {data.description && (

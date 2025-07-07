@@ -38,6 +38,9 @@ const DnnNode = memo(({ data }: DnnNodeProps) => {
     setIsEditing(true);
   }, []);
 
+  // Format the DNN ID properly - ensure it shows a number
+  const displayId = data.dnnId !== undefined && data.dnnId !== null ? data.dnnId : 1;
+
   return (
     <div className="w-full h-full flex flex-col items-center relative">
       {/* Input handle at the top */}
@@ -52,7 +55,7 @@ const DnnNode = memo(({ data }: DnnNodeProps) => {
       
       {/* Header */}
       <div className="w-full bg-orange-100 border-b border-orange-200 px-2 py-1 mb-2 rounded-t">
-        <div className="text-sm font-semibold text-orange-800 text-center">DNN</div>
+        <div className="text-sm font-semibold text-orange-800 text-center">DNN#{displayId}</div>
       </div>
       
       {data.description && (

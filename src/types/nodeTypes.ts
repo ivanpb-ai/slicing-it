@@ -13,19 +13,19 @@ export interface NodeData {
   type?: NodeType;
   description?: string;
   nodeId?: string;
-  id?: string;
-  parentId?: string;
+  id?: number;
+  parentId?: number;
   fiveQIId?: string;
   snssaiId?: number;
-  dnnId?: string;
+  dnnId?: number;
   rrpId?: number;
   cellAreaId?: number;
   cellAreaDescription?: string;
   rrpPercentage?: number;
   rrpBands?: RrpBand[];
   rrpName?: string; // Add name field for RRP nodes
-  plmn?: string; // Single PLMN field instead of plmn1 and plmn2
-  plmnValue?: string; // Add PLMN value for RRPmember nodes
+  plmn?: number; // Single PLMN field instead of plmn1 and plmn2
+  plmnValue?: number; // Add PLMN value for RRPmember nodes
   notes?: string;
   qosValues?: QoSValues;
   // S-NSSAI specific fields

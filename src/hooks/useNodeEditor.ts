@@ -7,7 +7,7 @@ import { useSimpleChildNodeCreation } from './node/useSimpleChildNodeCreation';
 import { useEdgeCreation } from './edge/useEdgeCreation';
 import { useNodeSelection } from './node/useNodeSelection';
 import { useNodeDuplication } from './node/useNodeDuplication';
-import { resetCounters, updateDnnCounter } from '@/utils/flowData/idCounters';
+import { resetCounters} from '@/utils/flowData/idCounters';
 
 import { EXAMPLE_GRAPH } from '@/data/exampleGraph';
 
@@ -117,18 +117,18 @@ export const useNodeEditor = () => {
     toast.success('Canvas cleared');
   }, [reactFlowInstance]);
 
-  // Initialize canvas with hardcoded mats1 graph
+  // Initialize canvas with hardcoded graph
   const initializeCanvas = useCallback(() => {
-    console.log('useNodeEditor: Initializing canvas with hardcoded mats1 graph');
+    console.log('useNodeEditor: Initializing canvas with hardcoded graph');
     
     try {
       const graphData = EXAMPLE_GRAPH;
       
-      console.log(`Loading mats1 graph with ${graphData.nodes.length} nodes and ${graphData.edges.length} edges`);
+      console.log(`Loading graph with ${graphData.nodes.length} nodes and ${graphData.edges.length} edges`);
       
       // Reset counters before loading
       resetCounters();
-      updateDnnCounter(graphData.nodes);
+      //updateDnnCounter(graphData.nodes);
       
       // Clear existing state first
       setNodes([]);
