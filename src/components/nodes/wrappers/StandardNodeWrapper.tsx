@@ -70,13 +70,13 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
       return <NetworkNode {...commonProps} />;
     case "rrp":
       return <RrpNode {...commonProps} />;
-    case "snssai":
+    case "s-nssai":
       return <SnssaiNode {...commonProps} />;
     case "dnn":
       return <DnnNode {...commonProps} />;
     case "fiveqi":
       return <FiveQiNode {...commonProps} />;
-    case "rrp-member":
+    case "rrpmember":
       return <RrpMemberNode {...commonProps} />;
     default:
       return <div>Unknown node type: {data.type}</div>;

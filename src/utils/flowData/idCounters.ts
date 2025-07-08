@@ -30,7 +30,7 @@ export const getNextCellAreaId = (): number => {
 };
 
 // Get the next RRP ID - return as number 
-export const getNextRrpId = (): number => {
+export const getNextRrpId = (value: string): number => {
   const id = rrpCounter;
   console.log(`Generated new RRP ID: ${id}`);
   rrpCounter++;

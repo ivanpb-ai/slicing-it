@@ -7,11 +7,11 @@ export const useRrpName = (
   onRrpNameChange?: (newName: string) => void
 ) => {
   const [isEditingName, setIsEditingName] = useState(false);
-  const [rrpName, setRrpName] = useState(data.rrpName || 'RRP-1');
+  const [rrpName, setRrpName] = useState(data.rrpName || 'Enter RRP name');
 
   // Sync with external changes
   useEffect(() => {
-    setRrpName(data.rrpName || 'RRP-1');
+    setRrpName(data.rrpName || 'Enter RRP name');
   }, [data.rrpName]);
 
   const handleNameChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {

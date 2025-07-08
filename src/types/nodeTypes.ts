@@ -5,7 +5,7 @@ export type NodeType =
   | 'rrp' 
   | 's-nssai' 
   | 'dnn' 
-  | '5qi'
+  | 'fiveqi'
   | 'rrpmember';
 
 export interface NodeData {
