@@ -6,7 +6,7 @@ import { findNonOverlappingPosition, getNodeDimensions } from '@/utils/flowData/
 interface NodeAdditionHandlerProps {
   reactFlowInstance: any | null;
   reactFlowWrapper: React.RefObject<HTMLDivElement>;
-  addNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "5qi", position: { x: number, y: number }, fiveQIId?: string) => void;
+  addNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "fiveqi", position: { x: number, y: number }, fiveQIId?: string) => void;
 }
 
 const NodeAdditionHandler = ({ 
@@ -18,7 +18,7 @@ const NodeAdditionHandler = ({
 
   // Add a new node to the canvas with collision prevention
   const handleAddNode = useCallback(
-    (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "5qi", fiveQIId?: string) => {
+    (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "fiveqi", fiveQIId?: string) => {
       if (!canAddNodes) {
         console.log('Node addition is temporarily disabled to prevent rapid additions');
         return;
@@ -85,7 +85,7 @@ const NodeAdditionHandler = ({
       }
       
       // Create the node - all nodes created via toolbar are standalone (no hierarchy constraints)
-      if (type === '5qi') {
+      if (type === 'fiveqi') {
         // Make sure we're passing a string ID
         const validFiveQIId = fiveQIId ? String(fiveQIId) : undefined;
         console.log(`NodeAdditionHandler: Adding 5QI node with ID: ${validFiveQIId || 'undefined'}`);

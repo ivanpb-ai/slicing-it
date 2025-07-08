@@ -11,7 +11,7 @@ interface NodeButtonProps {
   iconColor: string;
   tooltipTitle: string;
   tooltipDescription: string;
-  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "5qi", fiveQIId?: string) => void;
+  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "fiveqi", fiveQIId?: string) => void;
 }
 
 const NodeButton: React.FC<NodeButtonProps> = ({

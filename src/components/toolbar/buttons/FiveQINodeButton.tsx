@@ -57,7 +57,7 @@ const FiveQINodeButton: React.FC<FiveQINodeButtonProps> = ({
     console.log(`FiveQINodeButton: Started dragging 5QI ${fiveQIId}`);
     
     // Use the simple string format that the parser expects
-    const dragData = `5qi:${fiveQIId}`;
+    const dragData = `fiveqi:${fiveQIId}`;
     
     console.log(`FiveQINodeButton: Setting drag data: "${dragData}"`);
     

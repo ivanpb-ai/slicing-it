@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 interface NodeButtonsGridProps {
-  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "5qi", fiveQIId?: string) => void;
+  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "fiveqi", fiveQIId?: string) => void;
 }
 
 const NodeButtonsGrid: React.FC<NodeButtonsGridProps> = ({ onAddNode }) => {
@@ -22,7 +22,7 @@ const NodeButtonsGrid: React.FC<NodeButtonsGridProps> = ({ onAddNode }) => {
     console.log(`Toolbar: Selected 5QI with ID: ${fiveQIId}`);
     // Make this an explicit string to ensure consistency
     const validId = String(fiveQIId);
-    onAddNode("5qi", validId);
+    onAddNode("fiveqi", validId);
   }, [onAddNode]);
 
   return (

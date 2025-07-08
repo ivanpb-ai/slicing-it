@@ -2,7 +2,7 @@
 import ToolbarContainer from "./toolbar/ToolbarContainer";
 
 interface ToolbarProps {
-  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "5qi", fiveQIId?: string) => void;
+  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "fiveqi", fiveQIId?: string) => void;
   onDeleteSelected: () => void;
   onDuplicateSelected: () => void;
   onClearCanvas: () => void;
