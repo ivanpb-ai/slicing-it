@@ -49,6 +49,7 @@ const RrpNode = memo(({ data }: RrpNodeProps) => {
 
   return (
     <div className="text-xs text-gray-600 text-center">
+      data-node-type="rrp"
       {/* Header */}
       <div className="w-full bg-green-100 border-b border-green-200 px-2 py-1 mb-2 rounded-t">
         <div className="text-sm font-semibold text-green-800 text-center">RRP#{displayId}</div>
