@@ -8,7 +8,7 @@ export const createInitialFiveQiNode = (): Node => ({
   position: { x: 250, y: 650 },
   data: {
     label: '5QI #1',
-    type: '5qi',
+    type: 'fiveqi',
     description: '5G QoS Identifier',
     qosValues: fiveQIValues[0],
   },

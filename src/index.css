@@ -201,7 +201,7 @@
 /* Custom shape styles for specific node types */
 
 /* Cell Area Node - Hexagon */
-div[data-node-type="cell-area"] {
+div[NodeType="cell-area"] {
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) !important;
   display: flex !important;
   flex-direction: column !important;
@@ -211,7 +211,7 @@ div[data-node-type="cell-area"] {
 }
 
 /* RRP Node - Pentagon */
-div[data-node-type="rrp"] {
+div[NodeType="rrp"] {
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%) !important;
   display: flex !important;
   flex-direction: column !important;
@@ -243,7 +243,7 @@ div[data-node-type="dnn"] {
 }
 
 /* 5QI Node - Octagon */
-div[data-node-type="5qi"] {
+div[data-node-type="fiveqi"] {
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%) !important;
   display: flex !important;
   flex-direction: column !important;

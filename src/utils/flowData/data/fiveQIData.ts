@@ -208,7 +208,7 @@ export const fiveQIValues: QoSValues[] = [
   },
   {
     value: "79",
-    resourceType: "GBR", 
+    resourceType: "Non-GBR", 
     priority: "65",
     packetDelay: "50 ms",
     service: "V2X messages"

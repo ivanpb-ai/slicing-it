@@ -13,7 +13,7 @@ export const getBgColor = (nodeType: string): string => {
       return "bg-violet-50";
     case "dnn":
       return "bg-orange-50";
-    case "5qi":
+    case "fiveqi":
       return "bg-purple-50";
     default:
       return "bg-gray-50";
@@ -34,7 +34,7 @@ export const getBorderColor = (nodeType: string): string => {
       return "border-violet-500";
     case "dnn":
       return "border-orange-500";
-    case "5qi":
+    case "fiveqi":
       return "border-purple-500";
     default:
       return "border-gray-200";
@@ -55,7 +55,7 @@ export const getNodeShape = (nodeType: string): string => {
       return ""; // Hexagon shape (handled by CSS clip-path)
     case "dnn":
       return ""; // Diamond shape (handled by CSS clip-path)
-    case "5qi":
+    case "fiveqi":
       return ""; // Octagon shape (handled by CSS clip-path)
     default:
       return "rounded-lg";
@@ -76,7 +76,7 @@ export const getPadding = (nodeType: string): string => {
       return "p-4";
     case "dnn":
       return "p-4";
-    case "5qi":
+    case "fiveqi":
       return "p-4";
     default:
       return "p-3";
@@ -100,7 +100,7 @@ export const getWidth = (nodeType: string, rrpPercentage?: number): string => {
       return "min-w-[180px]";
     case "dnn":
       return "min-w-[180px]";
-    case "5qi":
+    case "fiveqi":
       return "min-w-[160px]";
     default:
       return "min-w-[150px]";
@@ -117,7 +117,7 @@ export const getClipPath = (nodeType: string): string => {
       return "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)"; // Pentagon
     case "dnn":
       return "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"; // Diamond
-    case "5qi":
+    case "fiveqi":
       return "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"; // Octagon
     default:
       return "none";
