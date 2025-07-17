@@ -109,6 +109,7 @@ export const getWidth = (nodeType: string, rrpPercentage?: number): string => {
 
 // Additional utility for special shapes that need clip-path
 export const getClipPath = (nodeType: string): string => {
+  console.log(nodeType, "clip-path:", getClipPath);
   switch (nodeType) {
     case "cell-area":
     case "s-nssai":

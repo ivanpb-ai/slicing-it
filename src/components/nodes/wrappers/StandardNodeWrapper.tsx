@@ -1,15 +1,21 @@
 import { memo, useEffect } from "react";
 import { NodeData } from "@/types/nodeTypes";
-import { getBgColor, getBorderColor, getNodeShape, getPadding, getWidth } from "@/utils/nodeStyles";
+import {
+  getBgColor,
+  getBorderColor,
+  getNodeShape,
+  getPadding,
+  getWidth,
+  getClipPath,
+} from "@/utils/nodeStyles";
+
 import NetworkNode from "../NetworkNode";
 import RrpNode from "../RrpNode";
 import SnssaiNode from "../SnssaiNode";
 import DnnNode from "../DnnNode";
 import FiveQiNode from "../FiveQiNode";
 import RrpMemberNode from "../RrpMemberNode";
-
-// Add cell-area if you want to enumerate it here too
-// import CellAreaNode from "../CellAreaNode";
+// import CellAreaNode from "../CellAreaNode"; // Uncomment if used
 
 interface StandardNodeWrapperProps {
   id: string;
@@ -25,7 +31,6 @@ type IdKey =
   | "fiveQiId"
   | "rrpMemberId";
 
-// Shared enumeration logic for all node types
 function getNodeNumber(data: NodeData, id: string): number | undefined {
   const idKeys: IdKey[] = [
     "cellAreaId",
@@ -52,37 +57,80 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
     console.log(`StandardNodeWrapper: id=${id}, type=${data.type}, nodeNumber=${nodeNumber}`);
   }, [id, data.type, nodeNumber]);
 
-  const commonProps = {
-    id,
-    data: { ...data, nodeNumber }, // pass nodeNumber to all node types
-    bgColor: getBgColor(data.type),
-    borderColor: getBorderColor(data.type),
-    nodeShape: getNodeShape(data.type),
-    padding: getPadding(data.type),
-    width: getWidth(data.type),
-  };
+  // Compute styles and pass through props
+  const bgColor = getBgColor(data.type);
+  const borderColor = getBorderColor(data.type);
+  const nodeShape = getNodeShape(data.type);
+  const padding = getPadding(data.type);
+  const width = getWidth(data.type);
+  const clipPath = getClipPath(data.type); // <-- Dynamic shape
 
+  // Compose className and inline style. 
+  // You may adjust the base class "node-wrapper" to match your setup.
+  const className = [
+    "node-wrapper",
+    bgColor,
+    borderColor,
+    nodeShape,
+    padding,
+    width,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const style = clipPath !== "none" ? { clipPath } : undefined;
+
+  // Select and render the appropriate node type
   switch (data.type) {
-    // Uncomment if you want to enumerate cell-area nodes here
-    // case "cell-area":
-    //   return <CellAreaNode {...commonProps} />;
     case "network":
-      return <NetworkNode {...commonProps} />;
+      return (
+        <div className={className} style={style}>
+          <NetworkNode id={id} data={{ ...data, nodeNumber }} />
+        </div>
+      );
+    case "cell-area":
+      return (
+        <div className={className} style={style}>
+          {/* <CellAreaNode id={id} data={{ ...data, nodeNumber }} /> */}
+          {/* Temporary placeholder if you do not have a CellAreaNode component */}
+          <span>{data.label ?? "CELL-AREA"}</span>
+        </div>
+      );
     case "rrp":
-      return <RrpNode {...commonProps} />;
-    case "s-nssai":
-      return <SnssaiNode {...commonProps} />;
-    case "dnn":
-      return <DnnNode {...commonProps} />;
-    case "fiveqi":
-      return <FiveQiNode {...commonProps} />;
+      return (
+        <div className={className} style={style}>
+          <RrpNode id={id} data={{ ...data, nodeNumber }} />
+        </div>
+      );
     case "rrpmember":
-      return <RrpMemberNode {...commonProps} />;
+      return (
+        <div className={className} style={style}>
+          <RrpMemberNode id={id} data={{ ...data, nodeNumber }} />
+        </div>
+      );
+    case "s-nssai":
+      return (
+        <div className={className} style={style}>
+          <SnssaiNode id={id} data={{ ...data, nodeNumber }} />
+        </div>
+      );
+    case "dnn":
+      return (
+        <div className={className} style={style}>
+          <DnnNode id={id} data={{ ...data, nodeNumber }} />
+        </div>
+      );
+    case "fiveqi":
+      return (
+        <div className={className} style={style}>
+          <FiveQiNode id={id} data={{ ...data, nodeNumber }} />
+        </div>
+      );
     default:
-      return <div>Unknown node type: {data.type}</div>;
+      return (
+        <div className={className} style={style}>
+          <span>{data.label ?? "Node"}</span>
+        </div>
+      );
   }
 });
-
-StandardNodeWrapper.displayName = "StandardNodeWrapper";
-
-export default StandardNodeWrapper;
