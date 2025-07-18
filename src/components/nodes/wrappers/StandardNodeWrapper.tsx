@@ -91,9 +91,7 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
     case "cell-area":
       return (
         <div className={className} style={style}>
-          {/* <CellAreaNode id={id} data={{ ...data, nodeNumber }} /> */}
-          {/* Temporary placeholder if you do not have a CellAreaNode component */}
-          <span>{data.label ?? "CELL-AREA"}</span>
+          <CellAreaNode id={id} data={{ ...data, nodeNumber }} />
         </div>
       );
     case "rrp":

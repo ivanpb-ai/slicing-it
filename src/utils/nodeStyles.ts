@@ -111,7 +111,10 @@ export const getWidth = (nodeType: string, rrpPercentage?: number): string => {
 export const getClipPath = (nodeType: string): string => {
   console.log(nodeType, "clip-path:", getClipPath);
   switch (nodeType) {
+    case "network":         // Rectangle with rounded corners (approximation; adjust radius as needed)
+      return "inset(0% round 16px)";
     case "cell-area":
+      return "circle(50%)"; // Circle shape
     case "s-nssai":
       return "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"; // Hexagon
     case "rrp":
