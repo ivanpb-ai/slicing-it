@@ -28,10 +28,6 @@ const CustomNode = memo(({ id, data }: NodeProps<NodeData>) => {
     return () => clearTimeout(timer);
   }, [id, data]);
 
-  if (data && data.type === 'cell-area') {
-    return <CellAreaWrapper id={id} data={data} />;
-  }
-
   // For all other node types, use StandardNodeWrapper (which now enumerates all)
   return <StandardNodeWrapper id={id} data={data} />;
 });
