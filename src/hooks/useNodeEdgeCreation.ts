@@ -1,4 +1,3 @@
-
 import { useCallback } from 'react';
 import { Edge, MarkerType } from '@xyflow/react';
 
@@ -7,7 +6,7 @@ export const useNodeEdgeCreation = (
 ) => {
   const createEdgeBetweenNodes = useCallback(
     (sourceId: string, targetId: string) => {
-      console.log(`Creating edge from ${sourceId} to ${targetId}`);
+      console.log(`useNodeEdgeCreation: Creating edge from ${sourceId} to ${targetId}`);
       
       const edgeId = `e-${sourceId}-${targetId}`;
       

@@ -24,8 +24,8 @@ export interface NodeData {
   rrpPercentage?: number;
   rrpBands?: RrpBand[];
   rrpName?: string; // Add name field for RRP nodes
-  plmn?: number; // Single PLMN field instead of plmn1 and plmn2
-  plmnValue?: number; // Add PLMN value for RRPmember nodes
+  plmn?: string; // Single PLMN field instead of plmn1 and plmn2
+  plmnValue?: string; // Add PLMN value for RRPmember nodes
   notes?: string;
   qosValues?: QoSValues;
   // S-NSSAI specific fields
