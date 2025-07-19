@@ -10,6 +10,7 @@ import {
 } from "@/utils/nodeStyles";
 
 import NetworkNode from "../NetworkNode";
+import CellAreaNode from "../CellAreaNode";
 import RrpNode from "../RrpNode";
 import SnssaiNode from "../SnssaiNode";
 import DnnNode from "../DnnNode";
