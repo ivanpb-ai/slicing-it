@@ -1,4 +1,3 @@
-
 import { Edge, MarkerType } from '@xyflow/react';
 
 // Get initial edges

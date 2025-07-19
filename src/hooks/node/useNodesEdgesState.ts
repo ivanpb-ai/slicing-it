@@ -1,5 +1,3 @@
-
-import { useCallback } from 'react';
 import { Node, Edge, useReactFlow, useNodesState, useEdgesState } from '@xyflow/react';
 import { useSimpleEdgeManager } from '../edge/useSimpleEdgeManager';
 

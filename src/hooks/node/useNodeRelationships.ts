@@ -41,8 +41,8 @@ export const useNodeRelationships = () => {
         'rrp': ['rrpmember'],         
         'rrpmember': ['s-nssai'],     
         's-nssai': ['dnn'],           
-        'dnn': ['5qi'],               
-        '5qi': [],                    
+        'dnn': ['fiveqi'],               
+        'fiveqi': [],                    
       };
       
       const allowedChildren = validRelationships[parentType] || [];
@@ -79,8 +79,8 @@ export const useNodeRelationships = () => {
       'rrp': ['rrpmember'],
       'rrpmember': ['s-nssai'],
       's-nssai': ['dnn'],
-      'dnn': ['5qi'],
-      '5qi': [],
+      'dnn': ['fiveqi'],
+      'fiveqi': [],
     };
     
     return validChildrenTypes[parentType] || [];

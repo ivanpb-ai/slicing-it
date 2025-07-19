@@ -1,4 +1,3 @@
-
 // Counters for generating IDs - use numbers for consistent typing
 let dnnCounter = 1;
 let snssaiCounter = 1;
@@ -30,7 +29,7 @@ export const getNextCellAreaId = (): number => {
 };
 
 // Get the next RRP ID - return as number 
-export const getNextRrpId = (value: string): number => {
+export const getNextRrpId = (): number => {
   const id = rrpCounter;
   console.log(`Generated new RRP ID: ${id}`);
   rrpCounter++;

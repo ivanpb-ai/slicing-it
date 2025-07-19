@@ -1,4 +1,3 @@
-
 import { useCallback } from 'react';
 import { Node, XYPosition } from '@xyflow/react';
 import { NodeType } from '@/types/nodeTypes';
@@ -63,7 +62,7 @@ export const useSimpleChildNodeCreation = (
       console.log(`Creating RRPmember child with PLMN: ${fiveQIId || 'Unknown'}`);
     } else {
       id = getNodeId(type, fiveQIId);
-      if (type === '5qi') {
+      if (type === 'fiveqi') {
         extraData = { fiveQIId };
       } 
     }
