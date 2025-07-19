@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { Node, XYPosition } from '@xyflow/react';
-import { NodeType } from '@/types/nodeTypes';
-import { getNodeId } from '@/utils/flowData/idGenerator';
+import { NodeType } from '../../types/nodeTypes';
+import { getNodeId } from '../../utils/flowData/idGenerator';
 import { getNextCellAreaId, getNextDnnId, getNextRrpId, getNextSnssaiId } from '@/utils/flowData/idCounters';
 
 export const useSimpleChildNodeCreation = (
@@ -103,7 +103,7 @@ export const useSimpleChildNodeCreation = (
       
       // Create edge connection from parent to child after a short delay
       setTimeout(() => {
-        console.log(`Creating edge from ${parentId} to ${id}`);
+        console.log(`useSimpleChildNodeCreation: Creating edge from ${parentId} to ${id}`);
         addEdgeWithHandles(parentId, id, 'bottom-source', 'top-target');
       }, 50);
 
