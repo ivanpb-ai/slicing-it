@@ -1,15 +1,15 @@
 import { useState, useCallback, useRef } from 'react';
 import { Node, Edge, Connection, addEdge, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
-import { NodeType } from '@/types/nodeTypes';
+import { NodeType } from '../types/nodeTypes';
 import { useNodeCreation } from './node/useNodeCreation';
 import { useSimpleChildNodeCreation } from './node/useSimpleChildNodeCreation';
 import { useEdgeCreation } from './edge/useEdgeCreation';
 import { useNodeSelection } from './node/useNodeSelection';
 import { useNodeDuplication } from './node/useNodeDuplication';
-import { resetCounters} from '@/utils/flowData/idCounters';
+import { resetCounters} from '../utils/flowData/idCounters';
 
-import { EXAMPLE_GRAPH } from '@/data/exampleGraph';
+import { EXAMPLE_GRAPH } from '../data/exampleGraph';
 
 export const useNodeEditor = () => {
   const [nodes, setNodes] = useState<Node[]>([]);

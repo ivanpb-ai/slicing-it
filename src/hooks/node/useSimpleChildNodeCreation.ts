@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { Node, XYPosition } from '@xyflow/react';
 import { NodeType } from '../../types/nodeTypes';
 import { getNodeId } from '../../utils/flowData/idGenerator';
-import { getNextCellAreaId, getNextDnnId, getNextRrpId, getNextSnssaiId } from '@/utils/flowData/idCounters';
+import { getNextCellAreaId, getNextDnnId, getNextRrpId, getNextSnssaiId } from '../../utils/flowData/idCounters';
 
 export const useSimpleChildNodeCreation = (
   setNodes: React.Dispatch<React.SetStateAction<Node[]>>,

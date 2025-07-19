@@ -1,11 +1,11 @@
 
 import { useCallback } from 'react';
 import { Node, Edge, XYPosition } from '@xyflow/react';
-import { NodeType } from '@/types/nodeTypes';
-import { getNodeId } from '@/utils/flowData/idGenerator';
-import { getNextCellAreaId } from '@/utils/flowData/idCounters';
+import { NodeType } from '../types/nodeTypes';
+import { getNodeId } from '../utils/flowData/idGenerator';
+import { getNextCellAreaId } from '../utils/flowData/idCounters';
 import { useSimpleChildNodeCreation } from './node/useSimpleChildNodeCreation';
-import { findNonOverlappingPosition, getNodeDimensions } from '@/utils/flowData/positioning/nodeCollisionDetection';
+import { findNonOverlappingPosition, getNodeDimensions } from '../utils/flowData/positioning/nodeCollisionDetection';
 
 export const useNodeOperations = (
   nodes: Node[],
@@ -38,7 +38,7 @@ export const useNodeOperations = (
     } else {
       id = getNodeId(type, fiveQIId);
       
-      if (type === '5qi') {
+      if (type === 'fiveqi') {
         extraData = { fiveQIId };
       } else if (type === 'rrp') {
         extraData = { rrpPercentage: 100 };
@@ -85,8 +85,8 @@ export const useNodeOperations = (
       'rrp': ['rrpmember'],
       'rrpmember': ['s-nssai'],
       's-nssai': ['dnn'],
-      'dnn': ['5qi'],
-      '5qi': []
+      'dnn': ['fiveqi'],
+      'fiveqi': []
     };
     
     return childTypeMap[parentType] || [];

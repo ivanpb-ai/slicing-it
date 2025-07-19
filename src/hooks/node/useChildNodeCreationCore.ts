@@ -1,8 +1,8 @@
 
 import { useCallback } from 'react';
 import { Node, XYPosition } from '@xyflow/react';
-import { NodeType } from '@/types/nodeTypes';
-import { getNodeId } from '@/utils/flowData/idGenerator';
+import { NodeType } from '../../types/nodeTypes';
+import { getNodeId } from '../../utils/flowData/idGenerator';
 
 export const useChildNodeCreationCore = (
   setNodes: React.Dispatch<React.SetStateAction<Node[]>>,

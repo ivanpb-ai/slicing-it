@@ -30,9 +30,12 @@ export const useEdgeCreation = (setEdges: React.Dispatch<React.SetStateAction<Ed
         height: 12
       }
     };
+  console.log(`useEdgeCreation: Creating edge ${newEdge}`);
 
     setEdges(prevEdges => [...prevEdges, newEdge]);
   }, [setEdges]);
+  
 
   return { addEdgeWithHandles };
+
 };
