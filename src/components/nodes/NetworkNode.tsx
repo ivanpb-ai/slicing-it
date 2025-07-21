@@ -50,16 +50,15 @@ const NetworkNode = memo(({ data }: NetworkNodeProps) => {
       )}
       <div className="text-center text-xs mt-2 text-blue-600">Main entry point</div>
 
-      {/* Output handle at the bottom 
+      {/* Output handle at the bottom */}
       <Handle
         type="source"
         position={Position.Bottom}
         id="bottom-source"
         className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
-        style={{ bottom: -8 }}
+        /* style={{ bottom: -8 }} */
         isConnectable={true}
-      /> */}
-      <Handle type="source" position={Position.Bottom} isConnectable={true} />
+      /> 
     </div>
 
   );
