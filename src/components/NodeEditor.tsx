@@ -1,15 +1,15 @@
 import React, { useCallback, useRef } from 'react';
 import { ReactFlowProvider, useReactFlow } from '@xyflow/react';
-import { useNodeEditor } from '@/hooks/useNodeEditor';
-import { useNodeLayoutManager } from '@/hooks/node/useNodeLayoutManager';
-import { useLayoutOperations } from '@/hooks/flow/useLayoutOperations';
-import { useNodeDragDrop } from '@/hooks/useNodeDragDrop';
+import { useNodeEditor } from '../hooks/useNodeEditor';
+import { useNodeLayoutManager } from '../hooks/node/useNodeLayoutManager';
+import { useLayoutOperations } from '../hooks/flow/useLayoutOperations';
+import { useNodeDragDrop } from '../hooks/useNodeDragDrop';
 import FlowInstance from './flow/FlowInstance';
-import { SavedGraph } from '@/hooks/types';
-import type { GraphData } from '@/services/storage/GraphLocalStorageService';
-import { GraphLocalStorageService } from '@/services/storage/GraphLocalStorageService';
-import { GraphExportImportService } from '@/services/export/GraphExportImportService';
-import { NodeEditorProvider } from '@/contexts/NodeEditorContext';
+import { SavedGraph } from '../hooks/types';
+import type { GraphData } from '../services/storage/GraphLocalStorageService';
+import { GraphLocalStorageService } from '../services/storage/GraphLocalStorageService';
+import { GraphExportImportService } from '../services/export/GraphExportImportService';
+import { NodeEditorProvider } from '../contexts/NodeEditorContext';
 import { toast } from 'sonner';
 
 interface NodeEditorProps {

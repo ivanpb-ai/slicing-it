@@ -1,13 +1,15 @@
 
 import { memo } from "react";
-import { NodeData } from "@/types/nodeTypes";
-import { useRrpPlmn } from "@/hooks/node/useRrpPlmn";
-import { useRrpBands } from "@/hooks/node/useRrpBands";
-import { useRrpName } from "@/hooks/node/useRrpName";
-import { useNodeEditorContext } from "@/contexts/NodeEditorContext";
+import { NodeData } from "../../types/nodeTypes";
+import { useRrpPlmn } from "../../hooks/node/useRrpPlmn";
+import { useRrpBands } from "../../hooks/node/useRrpBands";
+import { useRrpName } from "../../hooks/node/useRrpName";
+import { useNodeEditorContext } from "../../contexts/NodeEditorContext";
 import { RrpNameField } from "./rrp/RrpNameField";
 import { RrpPlmnField } from "./rrp/RrpPlmnField";
 import { RrpBands } from "./rrp/RrpBands";
+import { Handle, Position } from "@xyflow/react";
+
 
 interface RrpNodeProps {
   data: NodeData;
@@ -53,6 +55,16 @@ const RrpNode = memo(({ data }: RrpNodeProps) => {
       <div className="w-full bg-green-100 border-b border-green-200 px-2 py-1 mb-2 rounded-t">
         <div className="text-sm font-semibold text-green-800 text-center">RRP#{displayId}</div>
       </div>
+
+      {/* Input handle at the top */}
+      <Handle
+        type="target"
+        position={Position.Top}
+        id="top-target"
+        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
+        style={{ top: -8 }}
+        isConnectable={true}
+      />
       
       {/* RRP Name */}
       <div className="mb-2">
@@ -90,7 +102,19 @@ const RrpNode = memo(({ data }: RrpNodeProps) => {
         onRemove={handleRemoveBand}
         onAdd={handleAddBand}
       />
+      <div className="text-xs text-center text-green-600 mt-1">
+        RRPmember nodes will be created from PLMN
+      </div>
       
+      {/* Output handle at the bottom */}
+      <Handle
+        type="source"
+        position={Position.Bottom}
+        id="bottom-source"
+        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
+        style={{ bottom: -8 }}
+        isConnectable={true}
+      />
       {/* Removed the percentage display that was here */}
     </div>
   );

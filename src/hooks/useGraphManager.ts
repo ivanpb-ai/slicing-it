@@ -2,8 +2,8 @@
 import { useCallback, useState } from 'react';
 import { Node, Edge, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
-import { GraphStorageService, GraphData, SavedGraph } from '@/services/storage/GraphStorageService';
-import { resetCounters, updateDnnCounter } from '@/utils/flowData/idCounters';
+import { GraphStorageService, GraphData, SavedGraph } from '../services/storage/GraphStorageService';
+import { resetCounters, updateDnnCounter } from '../utils/flowData/idCounters';
 
 export const useGraphManager = () => {
   const [isLoading, setIsLoading] = useState(false);

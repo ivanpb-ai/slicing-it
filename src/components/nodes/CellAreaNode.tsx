@@ -1,8 +1,10 @@
 
 import { useState, useEffect, useCallback, memo } from "react";
-import { NodeData } from "@/types/nodeTypes";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { NodeData } from "../../types/nodeTypes";
+import { Input } from "../../components/ui/input";
+import { Textarea } from "../../components/ui/textarea";
+import { Handle, Position } from "@xyflow/react";
+
 
 interface CellAreaNodeProps {
   data: NodeData;
@@ -76,6 +78,16 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
       <div className="w-full bg-blue-100 border-b border-blue-200 px-2 py-1 mb-2 rounded-t">
         <div className="text-sm font-semibold text-blue-800 text-center">TAC #{displayId}</div>
       </div>
+
+      {/* Input handle at the top */}
+      <Handle
+        type="target"
+        position={Position.Top}
+        id="top-target"
+        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
+        style={{ top: -8 }}
+        isConnectable={true}
+      />
       
       {isEditingDescription ? (
         <Input
@@ -103,6 +115,19 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
         className="cell-area-notes"
         rows={2}
       />
+
+      <div className="text-xs text-center text-green-600 mt-1">
+        Connect bottom handle to RRP nodes
+      </div>
+                {/* Output handle at the bottom */}
+                <Handle
+                  type="source"
+                  position={Position.Bottom}
+                  id="bottom-source"
+                  className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
+                  style={{ bottom: -8 }}
+                  isConnectable={true}
+                />
     </div>
   );
 });

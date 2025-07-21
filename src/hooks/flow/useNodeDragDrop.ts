@@ -2,7 +2,7 @@
 import { useCallback, useState, useRef } from 'react';
 import { XYPosition, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
-import { NodeType } from '@/types/nodeTypes';
+import { NodeType } from '../../types/nodeTypes';
 import { detectParentNodeFromDOM, detectParentNodeFromPosition } from './useParentNodeDetection';
 import { parseDragData } from './useDragDataParser';
 import { useNodeRelationships } from '../node/useNodeRelationships';

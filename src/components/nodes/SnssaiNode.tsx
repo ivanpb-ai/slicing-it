@@ -1,7 +1,7 @@
 
 import { useState, useCallback, memo } from "react";
 import { Handle, Position } from "@xyflow/react";
-import { NodeData } from "@/types/nodeTypes";
+import { NodeData } from "../../types/nodeTypes";
 
 interface SnssaiNodeProps {
   data: NodeData;
@@ -71,11 +71,8 @@ const SnssaiNode = memo(({ data }: SnssaiNodeProps) => {
         </div>
       </div>
       
-      <div className="text-xs text-center text-blue-600 mt-1">
-        Connect top handle to RRPmember's bottom handle
-      </div>
       <div className="text-xs text-center text-green-600 mt-1">
-        Drag from bottom handle to connect to DNN nodes
+        Connect bottom handle to DNN nodes
       </div>
       
       {/* Output handle at the bottom */}

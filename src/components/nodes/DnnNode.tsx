@@ -1,7 +1,7 @@
 
 import { useState, useCallback, memo, useRef, useEffect } from "react";
 import { Handle, Position } from "@xyflow/react";
-import { NodeData } from "@/types/nodeTypes";
+import { NodeData } from "../../types/nodeTypes";
 
 interface DnnNodeProps {
   data: NodeData;
@@ -87,9 +87,7 @@ const DnnNode = memo(({ data }: DnnNodeProps) => {
       <div className="text-xs text-center text-green-600 mt-1 font-semibold">
         Drag 5QI nodes onto this DNN to connect them
       </div>
-      <div className="text-xs text-center text-purple-600 mt-1">
-        5QI nodes will appear below this DNN
-      </div>
+
       
       {/* Output handle at the bottom */}
       <Handle

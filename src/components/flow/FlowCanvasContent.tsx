@@ -18,7 +18,7 @@ interface FlowCanvasContentProps {
   onDrop: React.DragEventHandler;
   onSelectionChange: any;
   hasSelectedElements: boolean;
-  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "5qi", fiveQIId?: string) => void;
+  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "fiveqi", fiveQIId?: string) => void;
   deleteSelected: () => void;
   duplicateSelected: () => void;
   handleClearCanvas: () => void;

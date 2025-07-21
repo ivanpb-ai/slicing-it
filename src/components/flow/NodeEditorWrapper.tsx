@@ -2,18 +2,18 @@
 import React, { useCallback, useRef, useEffect } from 'react';
 import { useReactFlow } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { useNodeEditor } from '@/hooks/useNodeEditor';
-import { SavedGraph } from '@/hooks/types';
-import { useNodeDragDrop } from '@/hooks/flow/useNodeDragDrop';
-import { useSaveLoadGraph } from '@/hooks/useSaveLoadGraph';
-import { useNodeInteraction } from '@/hooks/flow/useNodeInteraction';
-import { useFileOperations } from '@/hooks/flow/useFileOperations';
-import { NodeType } from '@/types/nodeTypes';
-import { useFlowEventHandlers } from '@/hooks/flow/useFlowEventHandlers';
+import { useNodeEditor } from '../../hooks/useNodeEditor';
+import { SavedGraph } from '../../hooks/types';
+import { useNodeDragDrop } from '../../hooks/flow/useNodeDragDrop';
+import { useSaveLoadGraph } from '../../hooks/useSaveLoadGraph';
+import { useNodeInteraction } from '../../hooks/flow/useNodeInteraction';
+import { useFileOperations } from '../../hooks/flow/useFileOperations';
+import { NodeType } from '../../types/nodeTypes';
+import { useFlowEventHandlers } from '../../hooks/flow/useFlowEventHandlers';
 import FlowInstance from './FlowInstance';
 import GraphPersistenceHandler from './GraphPersistenceHandler';
-import { NodeEditorProvider } from '@/contexts/NodeEditorContext';
-import type { GraphData } from '@/services/storage/GraphLocalStorageService';
+import { NodeEditorProvider } from '../../contexts/NodeEditorContext';
+import type { GraphData } from '../../services/storage/GraphLocalStorageService';
 import { toast } from 'sonner';
 
 interface NodeEditorWrapperProps {

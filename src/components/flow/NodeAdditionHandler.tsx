@@ -1,7 +1,7 @@
 
 import { useCallback, useState } from 'react';
 import { toast } from 'sonner';
-import { findNonOverlappingPosition, getNodeDimensions } from '@/utils/flowData/positioning/nodeCollisionDetection';
+import { findNonOverlappingPosition, getNodeDimensions } from '../../utils/flowData/positioning/nodeCollisionDetection';
 
 interface NodeAdditionHandlerProps {
   reactFlowInstance: any | null;

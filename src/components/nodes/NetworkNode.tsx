@@ -1,6 +1,7 @@
 
 import { memo, useEffect, useRef } from "react";
-import { NodeData } from "@/types/nodeTypes";
+import { Handle, Position } from "@xyflow/react";
+import { NodeData } from "../../types/nodeTypes";
 
 interface NetworkNodeProps {
   data: NodeData;
@@ -46,7 +47,22 @@ const NetworkNode = memo(({ data }: NetworkNodeProps) => {
         <div className="text-xs text-gray-600 mt-1 text-center">{data.description}</div>
       )}
       <div className="text-center text-xs mt-2 text-blue-600">Main entry point</div>
-    </div>
+
+      <div className="text-xs text-center text-green-600 mt-1">
+        Connect bottom handle to Cell Area/TAC nodes
+      </div>
+    
+          {/* Output handle at the bottom */}
+          <Handle
+            type="source"
+            position={Position.Bottom}
+            id="bottom-source"
+            className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
+            style={{ bottom: -8 }}
+            isConnectable={true}
+          />
+              </div>
+
   );
 });
 

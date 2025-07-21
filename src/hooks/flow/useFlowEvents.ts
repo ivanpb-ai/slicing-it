@@ -1,7 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useReactFlow } from '@xyflow/react';
-import { handleGraphLoaded, handleCanvasCleared, handleStorageGraphLoaded } from '@/utils/flowEvents';
+import { handleGraphLoaded, handleCanvasCleared, handleStorageGraphLoaded } from '../../utils/flowEvents';
 
 export function useFlowEvents() {
   const reactFlowInstance = useReactFlow();

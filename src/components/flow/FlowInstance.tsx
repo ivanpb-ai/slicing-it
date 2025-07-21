@@ -15,9 +15,9 @@ import FlowBackground from './FlowBackground';
 import FlowControls from './FlowControls';
 import EditorPanels from './EditorPanels';
 import FileImportInput from './FileImportInput';
-import { SavedGraph } from '@/hooks/types';
-import type { GraphData } from '@/services/storage/GraphLocalStorageService';
-import type { NodeData } from '@/types/nodeTypes';
+import { SavedGraph } from '../../hooks/types';
+import type { GraphData } from '../../services/storage/GraphLocalStorageService';
+import type { NodeData } from '../../types/nodeTypes';
 
 interface FlowInstanceProps {
   nodes: Node<NodeData>[];

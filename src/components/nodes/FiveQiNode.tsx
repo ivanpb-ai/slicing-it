@@ -1,7 +1,9 @@
 import { useEffect, useState, useRef, memo } from "react";
-import { NodeData } from "@/types/nodeTypes";
-import { Badge } from "@/components/ui/badge";
-import { getFiveQIValueById } from "@/utils/flowData/utils/fiveQIUtils";
+import { NodeData } from "../../types/nodeTypes";
+import { Badge } from "../../components/ui/badge";
+import { getFiveQIValueById } from "../../utils/flowData/utils/fiveQIUtils";
+import { Handle, Position } from "@xyflow/react";
+
 
 interface FiveQiNodeProps {
   data: NodeData;
@@ -86,11 +88,22 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
   console.log("Final QoS values for rendering:", displayValues);
   
   return (
+    
     <div className="text-xs text-gray-600 mt-1 text-center">
       {/* Header */}
       <div className="w-full bg-purple-100 border-b border-purple-200 px-2 py-1 mb-2 rounded-t">
         <div className="text-sm font-semibold text-purple-800 text-center">5QI</div>
       </div>
+
+            {/* Input handle at the top */}
+            <Handle
+              type="target"
+              position={Position.Top}
+              id="top-target"
+              className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
+              style={{ top: -8 }}
+              isConnectable={true}
+            />
       
       {/* Display prominent badge with 5QI value */}
       <Badge className="bg-purple-500 text-white hover:bg-purple-600 mb-2 px-5 py-2 text-sm font-semibold rounded-full">
@@ -115,6 +128,8 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
           <span className="text-gray-800">{displayValues.packetDelay}</span>
         </div>
       </div>
+
+      
     </div>
   );
 });
