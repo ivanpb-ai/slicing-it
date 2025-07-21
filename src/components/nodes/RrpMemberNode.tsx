@@ -15,7 +15,7 @@ const RrpMemberNode = memo(({ data }: RrpMemberNodeProps) => {
       <div className="w-full bg-teal-100 border-b border-teal-200 px-2 py-1 mb-2 rounded-t">
         <div className="text-sm font-semibold text-teal-800 text-center">RRP Member</div>
       </div>
-      
+    
       {/* Input handle at the top */}
       <Handle
         type="target"
@@ -28,13 +28,6 @@ const RrpMemberNode = memo(({ data }: RrpMemberNodeProps) => {
       <div className="text-sm font-semibold">
         PLMN: {data.plmnValue || 'Unknown'}
       </div>
-    </div>
-  );
-});
-      <div className="text-xs text-center text-green-600 mt-1">
-        Connect bottom handle to S-NSSAI nodes
-      </div>
-      
       {/* Output handle at the bottom */}
       <Handle
         type="source"
@@ -44,6 +37,10 @@ const RrpMemberNode = memo(({ data }: RrpMemberNodeProps) => {
         style={{ bottom: -8 }}
         isConnectable={true}
       />
+    </div>
+  );
+});
+
 RrpMemberNode.displayName = 'RrpMemberNode';
 
 export default RrpMemberNode;

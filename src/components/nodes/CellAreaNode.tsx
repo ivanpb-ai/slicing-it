@@ -116,9 +116,6 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
         rows={2}
       />
 
-      <div className="text-xs text-center text-green-600 mt-1">
-        Connect bottom handle to RRP nodes
-      </div>
                 {/* Output handle at the bottom */}
                 <Handle
                   type="source"

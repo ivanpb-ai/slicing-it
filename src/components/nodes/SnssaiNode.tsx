@@ -71,10 +71,6 @@ const SnssaiNode = memo(({ data }: SnssaiNodeProps) => {
         </div>
       </div>
       
-      <div className="text-xs text-center text-green-600 mt-1">
-        Connect bottom handle to DNN nodes
-      </div>
-      
       {/* Output handle at the bottom */}
       <Handle
         type="source"

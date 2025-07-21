@@ -48,10 +48,6 @@ const NetworkNode = memo(({ data }: NetworkNodeProps) => {
       )}
       <div className="text-center text-xs mt-2 text-blue-600">Main entry point</div>
 
-      <div className="text-xs text-center text-green-600 mt-1">
-        Connect bottom handle to Cell Area/TAC nodes
-      </div>
-    
           {/* Output handle at the bottom */}
           <Handle
             type="source"

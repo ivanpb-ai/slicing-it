@@ -102,9 +102,6 @@ const RrpNode = memo(({ data }: RrpNodeProps) => {
         onRemove={handleRemoveBand}
         onAdd={handleAddBand}
       />
-      <div className="text-xs text-center text-green-600 mt-1">
-        RRPmember nodes will be created from PLMN
-      </div>
       
       {/* Output handle at the bottom */}
       <Handle
