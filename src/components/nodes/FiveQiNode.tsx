@@ -89,11 +89,8 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
   
   return (
     
+    
     <div className="text-xs text-gray-600 mt-1 text-center">
-      {/* Header */}
-      <div className="w-full bg-purple-100 border-b border-purple-200 px-2 py-1 mb-2 rounded-t">
-        <div className="text-sm font-semibold text-purple-800 text-center">5QI</div>
-      </div>
 
             {/* Input handle at the top */}
             <Handle
@@ -104,6 +101,12 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
               style={{ top: -8 }}
               isConnectable={true}
             />
+      {/* Header */}
+      <div className="w-full bg-purple-100 border-b border-purple-200 px-2 py-1 mb-2 rounded-t">
+        <div className="text-sm font-semibold text-purple-800 text-center">5QI</div>
+      </div>
+
+
       
       {/* Display prominent badge with 5QI value */}
       <Badge className="bg-purple-500 text-white hover:bg-purple-600 mb-2 px-5 py-2 text-sm font-semibold rounded-full">
