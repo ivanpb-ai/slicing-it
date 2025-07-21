@@ -201,27 +201,6 @@ div[data-node-type="fiveqi"] {
 }
 */
 
-/* Force visible utilities remain */
-.react-flow__node[style*="visibility: hidden"],
-.react-flow__node[style*="display: none"],
-.react-flow__node[style*="opacity: 0"] {
-  visibility: visible !important;
-  display: flex !important;
-  opacity: 1 !important;
-  z-index: 1000 !important;
-}
-
-/* Keep other utility or layout styles as needed. */
-.node-wrapper {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  z-index: 1000 !important;
-  min-width: 150px;
-  min-height: 80px;
-  pointer-events: all !important;
-}
-
 /* No shape-specific clip-path here */
 }
 

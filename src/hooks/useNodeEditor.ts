@@ -145,7 +145,16 @@ export const useNodeEditor = () => {
         
         // Then set edges with delay to ensure nodes are rendered
         setTimeout(() => {
-          setEdges(graphData.edges || []);
+          if (Array.isArray(graphData.edges)) {
+             const validEdges: Edge[] = graphData.edges.map(edge => ({
+                   data: {},      // add missing optional fields if necessary
+                 ...edge,
+      }));
+         setEdges(validEdges);
+      }   else {
+         setEdges([]);
+        }
+
           
           // Fit view after loading
           setTimeout(() => {

@@ -9,7 +9,7 @@ export const useEdgeCreation = (setEdges: React.Dispatch<React.SetStateAction<Ed
     targetHandle: string = 'top-target'
   ) => {
     const edgeId = `${sourceId}-${targetId}`;
-    
+
     const newEdge: Edge = {
       id: edgeId,
       source: sourceId,
@@ -18,19 +18,21 @@ export const useEdgeCreation = (setEdges: React.Dispatch<React.SetStateAction<Ed
       targetHandle,
       type: 'default',
       animated: false,
-      style: { 
+      style: {
         stroke: '#2563eb',
         strokeWidth: 3,
-        opacity: 1
+        opacity: 1,
       },
       markerEnd: {
         type: MarkerType.ArrowClosed,
-        color: '#2563eb',
-        width: 12,
-        height: 12
-      }
-    };
-  console.log(`useEdgeCreation: Creating edge ${newEdge}`);
+      color: '#2563eb',
+      width: 12,
+      height: 12,
+  },
+  data: {}, // Add this to conform to EdgeBase constraint
+  };
+
+  console.log("useEdgeCreation: Creating edge", newEdge);
 
     setEdges(prevEdges => [...prevEdges, newEdge]);
   }, [setEdges]);
