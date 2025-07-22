@@ -89,8 +89,20 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
   
   return (
     
-    
-    <div className="text-xs text-gray-600 mt-1 text-center">
+      <div className="w-full h-full flex flex-col items-center relative">
+
+      {/* Input handle at the top */}
+      <Handle
+        type="target"
+        position={Position.Top}
+        id="top-target"
+        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-orange-500 !opacity-100 !z-50"
+        style={{ top: -8 }}
+        isConnectable={true}
+      />
+
+      
+      <div className="text-xs text-gray-600 mt-1 text-center">
 
       {/* Header */}
       <div className="w-full bg-purple-100 border-b border-purple-200 px-2 py-1 mb-2 rounded-t">
@@ -102,16 +114,6 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
       <Badge className="bg-purple-500 text-white hover:bg-purple-600 mb-2 px-5 py-2 text-sm font-semibold rounded-full">
         5QI: {fiveQIId || displayValues.value}
       </Badge>
-      
-            {/* Input handle at the top */}
-            <Handle
-              type="target"
-              position={Position.Top}
-              id="top-target"
-              className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
-              style={{ top: -8 }}
-              isConnectable={true}
-            />
       
       {/* Display QoS service/description */}
       <div className="mt-2 text-sm font-medium text-purple-800">
@@ -132,7 +134,8 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
         </div>
       </div>
 
-      
+          </div>
+
     </div>
   );
 });
