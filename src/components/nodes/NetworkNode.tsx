@@ -31,13 +31,9 @@ const NetworkNode = memo(({ data }: NetworkNodeProps) => {
   }, []);
 
   return (
-    <div 
-      ref={nodeRef}
-      className="node-content flex flex-col items-center justify-center p-2 bg-indigo-50 rounded-md w-full h-full"
-      style={{ visibility: 'visible', display: 'flex', opacity: 1 }}
-      data-node-type="network"
-      data-node-debug="true"
->
+    
+    <div className="w-full h-full flex flex-col items-center relative">
+
       {/* Output handle at the bottom */}
       <Handle
         type="source"
@@ -46,7 +42,15 @@ const NetworkNode = memo(({ data }: NetworkNodeProps) => {
         className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
         style={{ bottom: -8 }}
         isConnectable={true}
-      /> 
+      />
+    
+     <div 
+      ref={nodeRef}
+      className="node-content flex flex-col items-center justify-center p-2 bg-indigo-50 rounded-md w-full h-full"
+      style={{ visibility: 'visible', display: 'flex', opacity: 1 }}
+      data-node-type="network"
+      data-node-debug="true"
+>
 
       {/* Header */}
       <div className="w-full bg-indigo-100 border-b border-indigo-200 px-2 py-1 mb-2 rounded-t">
@@ -59,6 +63,7 @@ const NetworkNode = memo(({ data }: NetworkNodeProps) => {
       
       <div className="text-center text-xs mt-2 text-blue-600">Main entry point</div>
     </div>
+  </div>
 
   );
 });

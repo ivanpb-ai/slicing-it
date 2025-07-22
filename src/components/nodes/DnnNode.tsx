@@ -48,7 +48,7 @@ const DnnNode = memo(({ data }: DnnNodeProps) => {
         type="target"
         position={Position.Top}
         id="top-target"
-        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-orange-500 !opacity-100 !z-50"
+        className="!w-4 !h-4 !border-2 !rounded-full !border-white !b-orange-500 !opacity-100 !z-50"
         style={{ top: -8 }}
         isConnectable={true}
       />

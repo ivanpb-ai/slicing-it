@@ -73,16 +73,36 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
   const displayId = data.cellAreaId !== undefined && data.cellAreaId !== null ? data.cellAreaId : 1;
 
   return (
-    <div className="cell-area-content">
+    
+      <div className="w-full h-full flex flex-col items-center relative">
 
+      {/* Input handle at the top */}
+      <Handle
+        type="target"
+        position={Position.Top}
+        id="top-target"
+        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-orange-500 !opacity-100 !z-50"
+        style={{ top: -8 }}
+        isConnectable={true}
+      />
+
+      {/* Output handle at the bottom */}
+      <Handle
+        type="source"
+        position={Position.Bottom}
+        id="bottom-source"
+        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
+        style={{ bottom: -8 }}
+        isConnectable={true}
+      />
+    
+      <div className="cell-area-content">
 
       {/* Header - Shows "TAC #" with the cellAreaId */}
       <div className="w-full bg-blue-100 border-b border-blue-200 px-2 py-1 mb-2 rounded-t">
         <div className="text-sm font-semibold text-blue-800 text-center">TAC #{displayId}</div>
       </div>
 
-
-      
       {isEditingDescription ? (
         <Input
           type="text"
@@ -109,25 +129,8 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
         className="cell-area-notes"
         rows={2}
       />
-      {/* Input handle at the top */}
-      <Handle
-        type="target"
-        position={Position.Top}
-        id="top-target"
-        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
-        style={{ top: -8 }}
-        isConnectable={true}
-      />
-      {/* Output handle at the bottom */}
-                <Handle
-                  type="source"
-                  position={Position.Bottom}
-                  id="bottom-source"
-                  className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
-                  style={{ bottom: -8 }}
-                  isConnectable={true}
-                />             
     </div>
+  </div>
   );
 });
 

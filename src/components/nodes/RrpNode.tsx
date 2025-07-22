@@ -50,7 +50,30 @@ const RrpNode = memo(({ data }: RrpNodeProps) => {
   const displayId = data.rrpId !== undefined && data.rrpId !== null ? data.rrpId : 1;
 
   return (
-    <div className="text-xs text-gray-600 text-center">
+    
+      <div className="w-full h-full flex flex-col items-center relative">
+
+      {/* Input handle at the top */}
+      <Handle
+        type="target"
+        position={Position.Top}
+        id="top-target"
+        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-orange-500 !opacity-100 !z-50"
+        style={{ top: -8 }}
+        isConnectable={true}
+      />
+
+      {/* Output handle at the bottom */}
+      <Handle
+        type="source"
+        position={Position.Bottom}
+        id="bottom-source"
+        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
+        style={{ bottom: -8 }}
+        isConnectable={true}
+      />
+    
+      <div className="text-xs text-gray-600 text-center">
 
 
       {/* Header */}
@@ -94,29 +117,11 @@ const RrpNode = memo(({ data }: RrpNodeProps) => {
         onRemove={handleRemoveBand}
         onAdd={handleAddBand}
       />
-      {/* Input handle at the top */}
-      <Handle
-        type="target"
-        position={Position.Top}
-        id="top-target"
-        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
-        style={{ top: -8 }}
-        isConnectable={true}
-      />
-      {/* Output handle at the bottom */}
-      <Handle
-        type="source"
-        position={Position.Bottom}
-        id="bottom-source"
-        className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !opacity-100 !z-50"
-        style={{ bottom: -8 }}
-        isConnectable={true}
-      />
     
       {/* Removed the percentage display that was here */}
 
     </div>
-
+  </div>
       
   );
 });
