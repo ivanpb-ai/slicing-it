@@ -15,7 +15,8 @@ export interface NodeData {
   nodeId?: string;
   id?: number;
   parentId?: number;
-  fiveQIId?: string;
+  networkId?: number;
+  fiveQIId?: number;
   snssaiId?: number;
   dnnId?: number;
   rrpId?: number;

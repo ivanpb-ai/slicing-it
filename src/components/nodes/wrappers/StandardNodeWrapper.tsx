@@ -1,5 +1,5 @@
 import { memo, useEffect } from "react";
-import { NodeData } from "@/types/nodeTypes";
+import { NodeData } from "../../../types/nodeTypes";
 import {
   getBgColor,
   getBorderColor,
@@ -7,7 +7,7 @@ import {
   getPadding,
   getWidth,
   getClipPath,
-} from "@/utils/nodeStyles";
+} from "../../../utils/nodeStyles";
 
 import NetworkNode from "../NetworkNode";
 import CellAreaNode from "../CellAreaNode";
@@ -16,7 +16,6 @@ import SnssaiNode from "../SnssaiNode";
 import DnnNode from "../DnnNode";
 import FiveQiNode from "../FiveQiNode";
 import RrpMemberNode from "../RrpMemberNode";
-// import CellAreaNode from "../CellAreaNode"; // Uncomment if used
 
 interface StandardNodeWrapperProps {
   id: string;
@@ -24,31 +23,31 @@ interface StandardNodeWrapperProps {
 }
 
 type IdKey =
-  | "cellAreaId"
-  | "networkId"
-  | "rrpId"
-  | "snssaiId"
-  | "dnnId"
-  | "fiveQiId"
-  | "rrpMemberId";
+  "network" |
+  "cell-area" |
+  "rrp" |
+  "s-nssai" |
+  "dnn" |
+  "fiveqi" |
+  "rrpmember";
 
-function getNodeNumber(data: NodeData, id: string): number | undefined {
+function getNodeNumber(data: NodeData, id: string): number  {
   const idKeys: IdKey[] = [
-    "cellAreaId",
-    "networkId",
-    "rrpId",
-    "snssaiId",
-    "dnnId",
-    "fiveQiId",
-    "rrpMemberId",
+    "network",
+    "cell-area",
+    "rrp",
+    "s-nssai",
+    "dnn",
+    "fiveqi",
+    "rrpmember"
   ];
   for (const key of idKeys) {
     if (typeof data[key] === "number") return data[key];
   }
-  // Fallback: extract trailing number from ID
+  // Fallback
   const match = id.match(/(\d+)$/);
   if (match) return parseInt(match[1], 10);
-  return undefined;
+  return 0;
 }
 
 export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps) => {
