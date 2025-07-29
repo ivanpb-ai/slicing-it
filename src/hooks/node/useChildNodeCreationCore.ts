@@ -36,7 +36,7 @@ export const useChildNodeCreationCore = (
           cellAreaDescription: `Cell coverage area ${cellAreaId}`
         };
       }
-    } else if (type === '5qi') {
+    } else if (type === 'fiveqi') {
       extraData = { fiveQIId };
     } else if (type === 'rrp') {
       extraData = { rrpPercentage: 100 };

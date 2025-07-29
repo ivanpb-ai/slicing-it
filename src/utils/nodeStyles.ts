@@ -97,7 +97,7 @@ export const getWidth = (nodeType: string, rrpPercentage?: number): string => {
     case "rrpmember":
       return "min-w-[120px]";
     case "s-nssai":
-      return "min-w-[200px]";
+      return "min-w-[280px]";
     case "dnn":
       return "min-w-[180px]";
     case "fiveqi":
