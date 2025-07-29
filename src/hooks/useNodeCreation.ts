@@ -1,7 +1,7 @@
 
 import { useCallback } from 'react';
 import { Node, Edge, XYPosition } from '@xyflow/react';
-import { NodeType } from '@/types/nodeTypes';
+import { NodeType } from '../types/nodeTypes';
 import { useNodeOperations } from './useNodeOperations';
 import { useNodeCreationOperations } from './node/useNodeCreationOperations';
 import { useNodeState } from './useNodeState';

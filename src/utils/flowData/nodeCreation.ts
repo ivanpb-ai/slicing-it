@@ -1,7 +1,7 @@
 
 import { HIERARCHY_LEVELS, VERTICAL_SPACING, INITIAL_Y_OFFSET } from './layouts/constants';
 import { Node } from '@xyflow/react';
-import { NodeType } from '@/types/nodeTypes';
+import { NodeType } from '../../types/nodeTypes';
 
 export const createNode = (
   type: NodeType,

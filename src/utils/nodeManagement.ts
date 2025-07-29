@@ -1,7 +1,7 @@
 
 import { Node, Edge, MarkerType } from '@xyflow/react';
 import { toast } from "sonner";
-import { hasNetworkNode } from '@/utils/flowData/nodeCreation';
+import { hasNetworkNode } from '../utils/flowData/nodeCreation';
 
 // Delete selected nodes
 export const filterDeletedNodes = (

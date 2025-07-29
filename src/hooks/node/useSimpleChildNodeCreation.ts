@@ -80,7 +80,7 @@ export const useSimpleChildNodeCreation = (
         // Position RRPmember nodes directly below the parent RRP node
         childPosition = {
           x: parentNode.position.x,
-          y: parentNode.position.y + 150  // Position below with proper spacing for node height
+          y: parentNode.position.y + 450  // Position below with proper spacing for node height
         };
         console.log(`Positioning RRPmember node below parent RRP at:`, childPosition);
       }

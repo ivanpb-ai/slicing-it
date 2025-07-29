@@ -97,7 +97,7 @@ export const getWidth = (nodeType: string, rrpPercentage?: number): string => {
     case "rrpmember":
       return "min-w-[120px]";
     case "s-nssai":
-      return "min-w-[180px]";
+      return "min-w-[200px]";
     case "dnn":
       return "min-w-[180px]";
     case "fiveqi":
@@ -116,7 +116,7 @@ export const getClipPath = (nodeType: string): string => {
     case "cell-area":
       return "circle(50%)"; // Circle shape
     case "s-nssai":
-      return "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"; // Hexagon
+      return "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 25% 50%)"; // Hexagon
     case "rrp":
       return "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)"; // Pentagon
     case "dnn":
