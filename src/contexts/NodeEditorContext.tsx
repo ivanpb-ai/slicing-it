@@ -1,7 +1,7 @@
 
 import { createContext, useContext, ReactNode } from 'react';
 import { XYPosition } from '@xyflow/react';
-import { NodeType } from '@/types/nodeTypes';
+import { NodeType } from '../types/nodeTypes';
 
 interface NodeEditorContextType {
   createChildNode: (type: NodeType, position: XYPosition, parentId: string, fiveQIId?: string) => any;

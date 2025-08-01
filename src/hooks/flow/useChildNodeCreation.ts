@@ -1,6 +1,6 @@
 
 import { XYPosition } from '@xyflow/react';
-import { NodeType } from '@/types/nodeTypes';
+import { NodeType } from '../../types/nodeTypes';
 
 /**
  * Creates a child node with standard positioning and fixed edge length

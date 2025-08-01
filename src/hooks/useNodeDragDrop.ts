@@ -2,10 +2,10 @@
 import { useCallback, useState, useRef } from 'react';
 import { XYPosition, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
-import { NodeType } from '@/types/nodeTypes';
+import { NodeType } from '../types/nodeTypes';
 import { detectParentNodeFromDOM, detectParentNodeFromPosition } from './flow/useParentNodeDetection';
 import { parseDragData } from './flow/useDragDataParser';
-import { findNonOverlappingPosition, getNodeDimensions } from '@/utils/flowData/positioning/nodeCollisionDetection';
+import { findNonOverlappingPosition, getNodeDimensions } from '../utils/flowData/positioning/nodeCollisionDetection';
 import { useNodeRelationships } from './node/useNodeRelationships';
 
 // Standard drag and drop handling for all node types with collision prevention and hierarchy enforcement

@@ -1,6 +1,6 @@
 
 import { useCallback } from 'react';
-import { NodeType } from '@/types/nodeTypes';
+import { NodeType } from '../../types/nodeTypes';
 import { useChildNodeTypeResolver } from './interactions/useChildNodeTypeResolver';
 import { useNodePositioning } from './interactions/useNodePositioning';
 

@@ -2,8 +2,8 @@
 import { useCallback } from 'react';
 import { Node } from '@xyflow/react';
 import { toast } from "sonner";
-import { hasNetworkNode } from '@/utils/flowData/nodeCreation';
-import { NodeType } from '@/types/nodeTypes';
+import { hasNetworkNode } from '../../utils/flowData/nodeCreation';
+import { NodeType } from '../../types/nodeTypes';
 
 /**
  * Custom hook for validating node creation

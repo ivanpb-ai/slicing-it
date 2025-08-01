@@ -18,13 +18,13 @@ export const parseDragData = (dragDataString: string) => {
   }
   
   // Handle 5qi:ID format
-  if (dragDataString.includes('5qi:')) {
+  if (dragDataString.includes('fiveqi:')) {
     const parts = dragDataString.split(':');
     if (parts.length >= 2) {
       const fiveQIId = parts[1];
       console.log('parseDragData: Parsed 5QI format - ID:', fiveQIId);
       return {
-        nodeType: '5qi',
+        nodeType: 'fiveqi',
         fiveQIId: fiveQIId
       };
     }

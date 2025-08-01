@@ -2,7 +2,7 @@
 import { useCallback } from 'react';
 import { Node, Edge, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
-import { arrangeNodes, LayoutType } from '@/utils/flowData/layouts';
+import { arrangeNodes, LayoutType } from '../../utils/flowData/layouts';
 
 export const useNodeLayoutManager = (
   nodes: Node[],

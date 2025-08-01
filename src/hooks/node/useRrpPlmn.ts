@@ -1,18 +1,36 @@
 import { useState, useCallback } from "react";
-import { NodeData } from "@/types/nodeTypes";
+import { NodeData } from "../../types/nodeTypes";
+import { findNonOverlappingPosition, getNodeDimensions } from '../../utils/flowData/positioning/nodeCollisionDetection';
+import { XYPosition, useReactFlow } from '@xyflow/react';
+import { NodeType } from '../../types/nodeTypes';
 
-export const useRrpPlmn = (data: NodeData, createChildNode: (type: any, position: any, parentId: string, fiveQIId?: string) => any) => {
+
+
+export const useRrpPlmn = (data: NodeData, createChildNode: (type: NodeType, position: any, parentId: string, fiveQIId?: string) => any) => {
   const [isEditingPLMN, setIsEditingPLMN] = useState(false);
   const [plmn, setPLMN] = useState(data.plmn || '');
 
-  const createRrpMemberNode = useCallback((plmnValue: string, parentId: string) => {
+  const createRrpMemberNode = useCallback((plmnValue: string, parentId: string, type: string) => {
     console.log(`useRrpPlmn: createRrpMemberNode called with plmnValue="${plmnValue}", parentId="${parentId}"`);
     
     if (plmnValue && plmnValue.trim() !== '') {
       console.log(`useRrpPlmn: Creating RRPmember node for PLMN: ${plmnValue}`);
       
+      const reactFlowInstance = useReactFlow();
+      const existingNodes = reactFlowInstance.getNodes();
+      const dimensions = getNodeDimensions(type);
+      const parentNode = existingNodes.find(n => n.id === parentId);
+        
       // Position will be calculated in the createChildNode function to be below parent
-      const position = { x: 0, y: 0 }; // Will be recalculated in createChildNode
+                    const position = findNonOverlappingPosition(
+                      {
+                        x: parentNode.position.x + 20,
+                        y: parentNode.position.y + 100
+                      },
+                      existingNodes,
+                      dimensions.width,
+                      dimensions.height
+                    );
       
       try {
         // Pass the PLMN value as the fiveQIId parameter so it gets stored as plmnValue
@@ -44,7 +62,7 @@ export const useRrpPlmn = (data: NodeData, createChildNode: (type: any, position
     // Create child node when PLMN gets a value
     if (plmn && plmn.trim() !== '' && data.nodeId) {
       console.log(`useRrpPlmn: Calling createRrpMemberNode for PLMN`);
-      createRrpMemberNode(plmn, data.nodeId);
+      createRrpMemberNode(plmn, data.nodeId, data.type);
     } else {
       console.log(`useRrpPlmn: Not creating RRPmember for PLMN - plmn: "${plmn}", nodeId: "${data.nodeId}"`);
     }
@@ -63,3 +81,4 @@ export const useRrpPlmn = (data: NodeData, createChildNode: (type: any, position
     handlePLMNClick
   };
 };
+

@@ -2,7 +2,7 @@
 import { useCallback } from 'react';
 import { XYPosition, Node } from '@xyflow/react';
 import { toast } from "sonner";
-import { NodeType } from '@/types/nodeTypes';
+import { NodeType } from '../../types/nodeTypes';
 
 /**
  * Custom hook for node creation operations
