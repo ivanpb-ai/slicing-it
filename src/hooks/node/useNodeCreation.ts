@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 import { Node, XYPosition } from '@xyflow/react';
-import { NodeType } from '@/types/nodeTypes';
-import { getNodeId } from '@/utils/flowData/idGenerator';
-import { getNextCellAreaId, getNextRrpId, getNextDnnId, getNextSnssaiId } from '@/utils/flowData/idCounters';
+import { NodeType } from '../../types/nodeTypes';
+import { getNodeId } from '../../utils/flowData/idGenerator';
+import { getNextCellAreaId, getNextRrpId, getNextDnnId, getNextSnssaiId } from '../../utils/flowData/idCounters';
 
 export const useNodeCreation = (setNodes: React.Dispatch<React.SetStateAction<Node[]>>) => {
   const createNode = useCallback((

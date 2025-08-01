@@ -1,8 +1,8 @@
 
 import { useCallback } from 'react';
 import { Node, XYPosition } from '@xyflow/react';
-import { NodeType } from '@/types/nodeTypes';
-import { createNode } from '@/utils/flowData/nodeCreation';
+import { NodeType } from '../../types/nodeTypes';
+import { createNode } from '../../utils/flowData/nodeCreation';
 
 /**
  * Ultra-simplified hook for creating nodes - minimal operations
