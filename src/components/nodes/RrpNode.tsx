@@ -58,7 +58,14 @@ const RrpNode = memo(({ id, data }: RrpNodeProps) => {
   return (
      <div>
       <div className="w-full bg-green-100 border-b border-green-200 px-2 py-1 mb-2 rounded-t">
-        <div className="text-sm font-semibold text-green-800 text-center">{data.nodeId}</div>
+        <div className="w-full text-center text-xs text-gray-500 font-bold my-1 select-none">{data.rrpId}
+        {/* Header with RRP ID */}
+          {data.rrpId
+          ? `RRP #${data.rrpId}`
+          : data.nodeId
+          ? `Node ID: ${data.nodeId}`
+          : "RRP Node"}
+        </div>
       </div>
 
       {/* Top Handle */}
@@ -69,15 +76,6 @@ const RrpNode = memo(({ id, data }: RrpNodeProps) => {
         className="!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !z-50"
         style={{ top: -8 }}
       />
-
-      {/* Header with RRP ID */}
-      <div className="w-full text-center text-xs text-gray-500 font-bold my-1 select-none">
-        {data.rrpId
-          ? `RRP #${data.rrpId}`
-          : data.nodeId
-          ? `Node ID: ${data.nodeId}`
-          : "RRP Node"}
-      </div>
 
       {/* RRP Name field (editable) */}
       <div className="w-full text-center font-mono text-lg mb-2">
