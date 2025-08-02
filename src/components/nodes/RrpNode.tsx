@@ -77,17 +77,13 @@ export const RrpNode: React.FC<NodeProps<NodeData>> = ({ id, data }) => {
         style={{ top: -8 }}
       />
 
-{/* Header with RRP ID (restored) */}
-<div className="w-full text-center text-xs text-gray-500 font-mono my-1 select-none">
-  {data.rrpId
-    ? `RRP ID: ${data.rrpId}`
-    : data.nodeId
-    ? `Node ID: ${data.nodeId}`
-    : "RRP Node"}
-</div>
+      {/* Header */}
+      <div className="w-full bg-green-100 border-b border-green-200 px-2 py-1 mb-2 rounded-t">
+        <div className="text-sm font-semibold text-green-800 text-center">RRP#{data.rrpId}</div>
+      </div>
 
       {/* RRP Name (editable) */}
-      <div className="w-full text-center font-bold text-lg mb-2">
+      <div className="w-full text-center text-lg mb-2">
         {isEditingName ? (
           <input
             className="w-full px-1 py-0.5 border rounded"
