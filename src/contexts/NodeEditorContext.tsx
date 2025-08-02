@@ -1,10 +1,11 @@
 
 import { createContext, useContext, ReactNode } from 'react';
 import { XYPosition } from '@xyflow/react';
-import { NodeType } from '../types/nodeTypes';
+import { NodeType, NodeData } from '../types/nodeTypes';
 
 interface NodeEditorContextType {
   createChildNode: (type: NodeType, position: XYPosition, parentId: string, fiveQIId?: string) => any;
+  updateNodeData: (id: string, newData: NodeData) => void;
 }
 
 const NodeEditorContext = createContext<NodeEditorContextType | undefined>(undefined);
@@ -20,11 +21,12 @@ export const useNodeEditorContext = () => {
 interface NodeEditorProviderProps {
   children: ReactNode;
   createChildNode: (type: NodeType, position: XYPosition, parentId: string, fiveQIId?: string) => any;
+  updateNodeData: (id: string, newData: NodeData) => void;
 }
 
-export const NodeEditorProvider = ({ children, createChildNode }: NodeEditorProviderProps) => {
+export const NodeEditorProvider = ({ children, createChildNode, updateNodeData }: NodeEditorProviderProps) => {
   return (
-    <NodeEditorContext.Provider value={{ createChildNode }}>
+    <NodeEditorContext.Provider value={{ createChildNode, updateNodeData }}>
       {children}
     </NodeEditorContext.Provider>
   );

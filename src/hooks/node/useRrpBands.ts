@@ -1,6 +1,6 @@
 
 import { useState, useCallback } from "react";
-import { NodeData, RrpBand } from "@/types/nodeTypes";
+import { NodeData, RrpBand } from "../../types/nodeTypes";
 
 export const useRrpBands = (data: NodeData) => {
   const [rrpBands, setRrpBands] = useState<RrpBand[]>(data.rrpBands || []);
