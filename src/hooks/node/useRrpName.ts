@@ -1,6 +1,6 @@
-import { getNextRrpId } from '@/utils/flowData/idCounters';
+import { getNextRrpId } from '../../utils/flowData/idCounters';
 import { useState, useCallback, useEffect } from "react";
-import { NodeData } from "@/types/nodeTypes";
+import { NodeData } from "../../types/nodeTypes";
 
 export const useRrpName = (
   data: NodeData,

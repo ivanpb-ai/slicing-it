@@ -19,7 +19,7 @@ export interface NodeData {
   fiveQIId?: number;
   snssaiId?: number;
   dnnId?: number;
-  rrpId?: number;
+  rrpId?: string;
   cellAreaId?: number;
   cellAreaDescription?: string;
   rrpPercentage?: number;

@@ -161,17 +161,17 @@ export const EXAMPLE_GRAPH = {
       "selected": false
     },
     {
-      "id": "5qi-9",
+      "id": "fiveqi-9",
       "type": "customNode",
       "position": {
         "x": 539.9999999999997,
         "y": 1547.6666641235352
       },
       "data": {
-        "type": "5qi",
+        "type": "fiveqi",
         "label": "5QI Node",
         "parentId": "dnn-1",
-        "nodeId": "5qi-9",
+        "nodeId": "fiveqi-9",
         "fiveQIId": "9"
       },
       "selected": false
@@ -439,9 +439,9 @@ export const EXAMPLE_GRAPH = {
       "id": "xy-edge__s-nssai-2bottom-source-dnn-1top-target"
     },
     {
-      "id": "dnn-1-5qi-9",
+      "id": "dnn-1-fiveqi-9",
       "source": "dnn-1",
-      "target": "5qi-9",
+      "target": "fiveqi-9",
       "sourceHandle": "bottom-source",
       "targetHandle": "top-target",
       "type": "default",

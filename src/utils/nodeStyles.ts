@@ -90,7 +90,7 @@ export const getWidth = (nodeType: string, rrpPercentage?: number): string => {
     case "cell-area":
       return "min-w-[150px]";
     case "rrp":
-      const baseWidth = 180; 
+      const baseWidth = 200; 
       const percentage = rrpPercentage || 100;
       const scaledWidth = Math.max(baseWidth * (percentage / 100), 120);
       return `min-w-[${scaledWidth}px]`;
@@ -99,7 +99,7 @@ export const getWidth = (nodeType: string, rrpPercentage?: number): string => {
     case "s-nssai":
       return "min-w-[180px]";
     case "dnn":
-      return "min-w-[180px]";
+      return "min-w-[200px]";
     case "fiveqi":
       return "min-w-[160px]";
     default:
@@ -120,7 +120,7 @@ export const getClipPath = (nodeType: string): string => {
     case "rrp":
       return "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)"; // Pentagon
     case "dnn":
-      return "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"; // Diamond
+      return "polygon(50% 0%, 100% 50%, 100% 50%, 50%)"; // Diamond
     case "fiveqi":
       return "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"; // Octagon
     default:
