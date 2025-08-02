@@ -1,5 +1,5 @@
 
-import { QoSValues } from '@/types/nodeTypes';
+import { QoSValues } from '../../../types/nodeTypes';
 import { fiveQIValues } from '../data/fiveQIData';
 
 /**
@@ -47,7 +47,7 @@ export const getFiveQIValueById = (id: string): QoSValues | null => {
  * @param fiveQIValue The 5QI value to get the service name for
  * @returns A simplified service name suitable for use as a DNN name
  */
-export const getServiceNameFrom5QI = (fiveQIValue?: string): string => {
+export const getServiceNameFromFiveQI = (fiveQIValue?: string): string => {
   if (!fiveQIValue) return 'Unknown Service';
   
   const qos = fiveQIValues.find(q => q.value === fiveQIValue);

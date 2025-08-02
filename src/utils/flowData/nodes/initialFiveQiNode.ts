@@ -3,7 +3,7 @@ import { Node } from '@xyflow/react';
 import { fiveQIValues } from '../data/fiveQIData';
 
 export const createInitialFiveQiNode = (): Node => ({
-  id: '5qi-1',
+  id: 'fiveqi-1',
   type: 'customNode',
   position: { x: 250, y: 650 },
   data: {

@@ -15,9 +15,9 @@ export const useRrpName = (
   }, [data.rrpName]);
 
   const handleNameChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const newRrpName = getNextRrpId(e.target.value);
-    setRrpName(newRrpName);
-    if (onRrpNameChange) onRrpNameChange(newRrpName);
+    //const newRrpName = getNextRrpId(e.target.value);
+    //setRrpName(newRrpName);
+    if (onRrpNameChange) onRrpNameChange(rrpName);
     // Do NOT mutate data directly here
   }, [onRrpNameChange]);
 

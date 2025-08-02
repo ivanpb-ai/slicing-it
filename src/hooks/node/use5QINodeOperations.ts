@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { toast } from "sonner";
-import { getFiveQIValueById } from "@/utils/flowData/utils/fiveQIUtils";
-import { NodeType } from '@/types/nodeTypes';
+import { getFiveQIValueById } from "../../utils/flowData/utils/fiveQIUtils";
+import { NodeType } from '../../types/nodeTypes';
 
 /**
  * Custom hook for 5QI node specific operations

@@ -1,16 +1,16 @@
 
 import { useCallback } from 'react';
-import { toast } from "@/hooks/use-toast";
-import { getFiveQIValueById } from "@/utils/flowData/utils/fiveQIUtils";
+import { toast } from "../../hooks/use-toast";
+import { getFiveQIValueById } from "../../utils/flowData/utils/fiveQIUtils";
 
 /**
  * Custom hook to handle 5QI node creation
  */
-export function use5QINodeHandler() {
+export function useFiveQINodeHandler() {
   // Handle adding 5QI nodes with specific IDs
-  const handleAdd5QINode = useCallback((
+  const handleAddFiveQINode = useCallback((
     fiveQIId: string | undefined,
-    onAddNode: (type: "5qi", fiveQIId?: string) => void
+    onAddNode: (type: "fiveqi", fiveQIId?: string) => void
   ) => {
     console.log("use5QINodeHandler: Adding 5QI node with exact ID:", fiveQIId);
     
@@ -42,8 +42,8 @@ export function use5QINodeHandler() {
     console.log(`use5QINodeHandler: Verified 5QI ID: ${validFiveQIId}, found data:`, qosValue);
     
     // Pass the exact ID to onAddNode
-    onAddNode("5qi", validFiveQIId);
+    onAddNode("fiveqi", validFiveQIId);
   }, []);
 
-  return { handleAdd5QINode };
+  return { handleAddFiveQINode };
 }
