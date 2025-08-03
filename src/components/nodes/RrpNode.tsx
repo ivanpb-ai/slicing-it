@@ -61,7 +61,7 @@ const RrpNode = memo(({ data }: RrpNodeProps) => {
         style={{ top: -8 }}
         isConnectable={true}
       />
-
+      
       {/* Output handle at the bottom */}
       <Handle
         type="source"
@@ -71,7 +71,7 @@ const RrpNode = memo(({ data }: RrpNodeProps) => {
         style={{ bottom: -8 }}
         isConnectable={true}
       />
-      
+    
       {/* Header */}
       <div className="w-full bg-green-100 border-b border-green-200 px-2 py-1 mb-2 rounded-t">
         <div className="text-sm font-semibold text-green-800 text-center">RRP#{displayId}</div>
@@ -113,7 +113,12 @@ const RrpNode = memo(({ data }: RrpNodeProps) => {
         onRemove={handleRemoveBand}
         onAdd={handleAddBand}
       />
+
+      {/* Removed the percentage display that was here */}
+
     </div>
+
+      
   );
 });
 
