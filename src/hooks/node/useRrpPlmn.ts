@@ -1,95 +1,73 @@
 import { useState, useCallback } from "react";
-import { NodeData, NodeType } from "../../types/nodeTypes";
+import { NodeData } from "../../types/nodeTypes";
 import { findNonOverlappingPosition, getNodeDimensions } from '../../utils/flowData/positioning/nodeCollisionDetection';
 import { XYPosition, useReactFlow } from '@xyflow/react';
+import { NodeType } from '../../types/nodeTypes';
 
-export const useRrpPlmn = (
-  data: NodeData,
-  createChildNode: (type: NodeType, position: XYPosition, parentId: string, fiveQIId?: string) => any
-) => {
+
+
+export const useRrpPlmn = (data: NodeData, createChildNode: (type: NodeType, position: any, parentId: string, fiveQIId?: string) => any) => {
   const [isEditingPLMN, setIsEditingPLMN] = useState(false);
   const [plmn, setPLMN] = useState(data.plmn || '');
 
-  // Get reactFlowInstance at the hook top-level
-  const reactFlowInstance = useReactFlow();
-
-  // Create a new RrpMember node (child) for a given PLMN
-  const createRrpMemberNode = useCallback(
-    (plmnValue: string, parentId: string, type: string) => {
-      console.log(`useRrpPlmn: createRrpMemberNode called with plmnValue="${plmnValue}", parentId="${parentId}"`);
-      if (plmnValue && plmnValue.trim() !== '') {
-        console.log(`useRrpPlmn: Creating RRPmember node for PLMN: ${plmnValue}`);
-
-        const existingNodes = reactFlowInstance.getNodes();
-        const dimensions = getNodeDimensions(type);
-        const parentNode = existingNodes.find(n => n.id === parentId);
-
-        // Fallback: if parent not found, abort
-        if (!parentNode) {
-          console.warn(`useRrpPlmn: Parent node not found for id: ${parentId}`);
-          return;
-        }
-
-        const position = findNonOverlappingPosition(
-          {
-            x: parentNode.position.x + 20,
-            y: parentNode.position.y + 100,
-          },
-          existingNodes,
-          dimensions.width,
-          dimensions.height
-        );
-
-        try {
-          // Pass the PLMN value as the fiveQIId parameter so it gets stored as plmnValue
-          const newNode = createChildNode('rrpmember', position, parentId, plmnValue);
-          console.log(`useRrpPlmn: Successfully created RRPmember child node:`, newNode);
-
-          // Clear the PLMN input after successful creation
-          setPLMN('');
-
-          // If you really must update data.plmn, do it via a callback or prop update—NOT direct mutation.
-          // Example: if you have an onUpdate callback, call it here instead.
-        } catch (error) {
-          console.error('useRrpPlmn: Failed to create RRPmember child node:', error);
-        }
-      } else {
-        console.log(`useRrpPlmn: Skipping RRPmember creation - empty or invalid plmnValue: "${plmnValue}"`);
+  const createRrpMemberNode = useCallback((plmnValue: string, parentId: string, type: string) => {
+    console.log(`useRrpPlmn: createRrpMemberNode called with plmnValue="${plmnValue}", parentId="${parentId}"`);
+    
+    if (plmnValue && plmnValue.trim() !== '') {
+      console.log(`useRrpPlmn: Creating RRPmember node for PLMN: ${plmnValue}`);
+      
+      const reactFlowInstance = useReactFlow();
+      const existingNodes = reactFlowInstance.getNodes();
+      const dimensions = getNodeDimensions(type);
+      const parentNode = existingNodes.find(n => n.id === parentId);
+        
+      // Position will be calculated in the createChildNode function to be below parent
+                    const position = findNonOverlappingPosition(
+                      {
+                        x: parentNode.position.x + 20,
+                        y: parentNode.position.y + 100
+                      },
+                      existingNodes,
+                      dimensions.width,
+                      dimensions.height
+                    );
+      
+      try {
+        // Pass the PLMN value as the fiveQIId parameter so it gets stored as plmnValue
+        const newNode = createChildNode('rrpmember', position, parentId, plmnValue);
+        console.log(`useRrpPlmn: Successfully created RRPmember child node:`, newNode);
+        
+        // Clear the PLMN field from the parent RRP node and local state after successful creation
+        setPLMN('');
+        data.plmn = '';
+        console.log(`useRrpPlmn: Cleared PLMN field from parent RRP node`);
+      } catch (error) {
+        console.error('useRrpPlmn: Failed to create RRPmember child node:', error);
       }
-    },
-    [createChildNode, reactFlowInstance]
-  );
+    } else {
+      console.log(`useRrpPlmn: Skipping RRPmember creation - empty or invalid plmnValue: "${plmnValue}"`);
+    }
+  }, [createChildNode, data]);
 
-  // Handle change in the PLMN input field
-  const handlePLMNChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const newValue = e.target.value;
-      console.log(`useRrpPlmn: PLMN changed to: "${newValue}"`);
-      setPLMN(newValue);
+  const handlePLMNChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value;
+    console.log(`useRrpPlmn: PLMN changed to: "${newValue}"`);
+    setPLMN(newValue);
+    data.plmn = newValue;
+  }, [data]);
 
-      // Again, if there's a callback or state setter for propagating upward, use it here.
-      // For now, data.plmn is not mutated directly.
-    },
-    []
-  );
-
-  // Handle blur (when PLMN editing ends)
   const handlePLMNBlur = useCallback(() => {
     console.log(`useRrpPlmn: PLMN blur event - value: "${plmn}", nodeId: "${data.nodeId}"`);
     setIsEditingPLMN(false);
-
-    // Create child node when PLMN is present, and parent nodeId exists
+    // Create child node when PLMN gets a value
     if (plmn && plmn.trim() !== '' && data.nodeId) {
       console.log(`useRrpPlmn: Calling createRrpMemberNode for PLMN`);
       createRrpMemberNode(plmn, data.nodeId, data.type);
     } else {
-      console.log(
-        `useRrpPlmn: Not creating RRPmember for PLMN - plmn: "${plmn}", nodeId: "${data.nodeId}"`
-      );
+      console.log(`useRrpPlmn: Not creating RRPmember for PLMN - plmn: "${plmn}", nodeId: "${data.nodeId}"`);
     }
-  }, [plmn, data.nodeId, createRrpMemberNode, data.type]);
+  }, [plmn, data.nodeId, createRrpMemberNode]);
 
-  // Enter PLMN edit mode (on click)
   const handlePLMNClick = useCallback(() => {
     console.log(`useRrpPlmn: PLMN clicked - entering edit mode`);
     setIsEditingPLMN(true);
@@ -100,6 +78,7 @@ export const useRrpPlmn = (
     plmn,
     handlePLMNChange,
     handlePLMNBlur,
-    handlePLMNClick,
+    handlePLMNClick
   };
 };
+
