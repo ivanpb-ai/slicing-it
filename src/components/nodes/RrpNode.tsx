@@ -105,7 +105,11 @@ export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
 
       {/* PLMN editable */}
       <div className="w-full flex items-center gap-1 mb-2">
+<<<<<<< HEAD
         {/* <span className="text-xs text-gray-500">PLMN</span> */}
+=======
+        <span className="text-xs text-gray-500">PLMN</span>
+>>>>>>> bcc40536951cfeeefa5ab0b0ccde07f0e17da652
         {isEditingPLMN ? (
           <input
             className="w-24 px-1 py-0.5 border rounded"
