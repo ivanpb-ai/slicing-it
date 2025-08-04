@@ -1,4 +1,4 @@
-import { NodeType } from '@/types/nodeTypes';
+import { NodeType } from '../../types/nodeTypes';
 
 /**
  * Generates a unique ID for a node based on its type
@@ -12,8 +12,8 @@ export const getNodeId = (type: NodeType, fiveQIId?: string): string => {
   const randomSuffix = Math.floor(Math.random() * 10000);
   
   // If it's a 5QI node and we have a fiveQIId, use that in the ID
-  if (type === '5qi' && fiveQIId) {
-    return `5qi-${fiveQIId}`;
+  if (type === 'fiveqi' && fiveQIId) {
+    return `fiveqi-${fiveQIId}`;
   }
   
   // For cell-area nodes, create simpler IDs
@@ -50,7 +50,7 @@ export const getDisplayId = (nodeId: string): string => {
   }
   
   // For 5QI nodes, return the 5QI value
-  if (parts[0] === '5qi' && parts.length > 1) {
+  if (parts[0] === 'fiveqi' && parts.length > 1) {
     return parts[1];
   }
   

@@ -1,6 +1,6 @@
 
 import { Connection, NodeChange, EdgeChange, Node, Edge, MarkerType } from '@xyflow/react';
-import { ConnectionRules, NodeType } from '@/types/nodeTypes';
+import { ConnectionRules, NodeType } from '../types/nodeTypes';
 import { toast } from 'sonner';
 
 // Define the rules for node connections - updated to allow multiple S-NSSAI to DNN connections
@@ -24,9 +24,9 @@ export const connectionRules: ConnectionRules = {
   },
   'dnn': { 
     's-nssai': { sourceHandle: 'top-target', targetHandle: 'bottom-source' },
-    '5qi': { sourceHandle: 'bottom-source', targetHandle: 'top-target' } 
+    'fiveqi': { sourceHandle: 'bottom-source', targetHandle: 'top-target' } 
   },
-  '5qi': { 
+  'fiveqi': { 
     'dnn': { sourceHandle: 'top-target', targetHandle: 'bottom-source' }
   }
 };

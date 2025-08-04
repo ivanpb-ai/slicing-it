@@ -6,7 +6,7 @@ export const HIERARCHY_LEVELS: { [key: string]: number } = {
   'rrpmember': 3,
   's-nssai': 4,
   'dnn': 5,
-  '5qi': 6
+  'fiveqi': 6
 };
 
 export const VERTICAL_SPACING = 150;
@@ -22,5 +22,5 @@ export const VERTICAL_LEVEL_SPACINGS: { [key: string]: number } = {
   'rrp-rrpmember': 80,
   'network-cell-area': 140,
   'cell-area-rrp': 130,
-  'dnn-5qi': 100
+  'dnn-fiveqi': 100
 };

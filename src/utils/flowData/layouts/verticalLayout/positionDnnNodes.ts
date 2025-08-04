@@ -46,7 +46,7 @@ export const positionDnnNodes = (
       const children = childrenMap.get(node.id) || [];
       const fiveQiChildren = children.filter(childId => {
         const childNode = arrangedNodes.find(n => n.id === childId);
-        return childNode && childNode.data?.type === '5qi';
+        return childNode && childNode.data?.type === 'fiveqi';
       });
       
       if (fiveQiChildren.length > 0) {

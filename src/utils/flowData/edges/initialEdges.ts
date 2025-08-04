@@ -90,7 +90,7 @@ export const getInitialEdges = (): Edge[] => {
     {
       id: 'edge-5',
       source: 'dnn-1',
-      target: '5qi-1',
+      target: 'fiveqi-1',
       sourceHandle: 'bottom-source',
       targetHandle: 'top-target',
       type: 'straight',

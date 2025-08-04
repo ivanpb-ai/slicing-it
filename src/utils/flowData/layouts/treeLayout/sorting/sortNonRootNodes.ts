@@ -54,7 +54,7 @@ export function sortNonRootNodes(
             'rrp': 2,
             's-nssai': 3,
             'dnn': 4,
-            '5qi': 5
+            'fiveqi': 5
           };
           
           return (typeHierarchy[typeA] || 999) - (typeHierarchy[typeB] || 999);
