@@ -1,50 +1,23 @@
-import React from "react";
-import { memo } from "react";
-import { Handle, Position } from "@xyflow/react";
-import { NodeProps } from "@xyflow/react";
-import { NodeData, NodeType } from "../../types/nodeTypes";
+import React, { memo, useCallback } from "react";
+import { Handle, Position, NodeProps } from "@xyflow/react";
+import { NodeData } from "../../types/nodeTypes";
 import { useRrpPlmn } from "../../hooks/node/useRrpPlmn";
 import { useRrpName } from "../../hooks/node/useRrpName";
 import { useRrpBands } from "../../hooks/node/useRrpBands";
 import { RrpBands } from "./rrp/RrpBands";
-import { RrpNameField } from "./rrp/RrpNameField";
-import { RrpPlmnField } from "./rrp/RrpPlmnField";
 import { useNodeEditorContext } from "../../contexts/NodeEditorContext";
-
-
-
-
-/**
- * RrpNode component
- * - Editable rrpName (click div â†’ input)
- * - Editable PLMN (add RRPmember, input behaves the same)
- * - Connection handles on top/bottom
- * - Callbacks for persisting rrpName upward
- */
+import { RrpPlmnField } from "./rrp/RrpPlmnField";
 
 interface RrpNodeProps {
+  id: string;
   data: NodeData;
 }
 
-const RrpNode = memo(({ data }: RrpNodeProps) => {
-  const { createChildNode } = useNodeEditorContext();
-  
-  const {
-    isEditingPLMN,
-    plmn,
-    handlePLMNChange,
-    handlePLMNBlur,
-    handlePLMNClick
-  } = useRrpPlmn(data, createChildNode);
+export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
 
-  const {
-    isEditingName,
-    rrpName,
-    handleNameChange,
-    handleNameBlur,
-    handleNameClick
-  } = useRrpName(data);
+  const { createChildNode, updateNodeData } = useNodeEditorContext();
 
+  // Bands management
   const {
     rrpBands,
     editingBandIndex,
@@ -56,18 +29,13 @@ const RrpNode = memo(({ data }: RrpNodeProps) => {
     handleBandFieldBlur,
     handleRemoveBand
   } = useRrpBands(data);
-export const RrpNode: React.FC<NodeProps<NodeData>> = ({ id, data }) => {
-  // ---- Name Editing ----
-  // Parent callback to persist rrpName change
-  const handlePersistRrpName = React.useCallback(
+
+  // Name editing, propagates via updateNodeData
+  const handlePersistRrpName = useCallback(
     (newName: string) => {
-      // TODO: Call upstream function (e.g. onNodeDataChange) to persist new rrpName
-      // Example (if using context or passed update method):
-      // updateNodeData(id, { ...data, rrpName: newName });
-      // For now, log:
-      console.log(`Persist RRP name for node ${id}:`, newName);
+      updateNodeData(id, { ...data, rrpName: newName });
     },
-    [id, data]
+    [id, data, updateNodeData]
   );
 
   const {
@@ -78,22 +46,21 @@ export const RrpNode: React.FC<NodeProps<NodeData>> = ({ id, data }) => {
     handleNameClick,
   } = useRrpName(data, handlePersistRrpName);
 
-
+  // PLMN editing/member creation
   const {
     isEditingPLMN,
     plmn,
     handlePLMNChange,
     handlePLMNBlur,
-    handlePLMNClick,
-  } = useRrpPlmn(data);
+    handlePLMNClick
+  } = useRrpPlmn(data, createChildNode);
 
-  // ---- Render Node ----
   return (
     <div
       className="bg-white border-2 border-blue-500 rounded-xl shadow-md px-4 py-2 flex flex-col gap-1 items-center min-w-[180px] relative"
       style={{ minHeight: 80, minWidth: 180 }}
     >
-      {/* Handle at Top (target) */}
+      {/* Top Handle */}
       <Handle
         type="target"
         position={Position.Top}
@@ -104,10 +71,12 @@ export const RrpNode: React.FC<NodeProps<NodeData>> = ({ id, data }) => {
 
       {/* Header */}
       <div className="w-full bg-green-100 border-b border-green-200 px-2 py-1 mb-2 rounded-t">
-        <div className="text-sm font-semibold text-green-800 text-center">RRP#{data.rrpId}</div>
+        <div className="text-sm font-semibold text-green-800 text-center">
+          RRP#{data.rrpId}
+        </div>
       </div>
 
-      {/* RRP Name (editable) */}
+      {/* RRP Name */}
       <div className="w-full text-center text-lg mb-2">
         {isEditingName ? (
           <input
@@ -124,7 +93,7 @@ export const RrpNode: React.FC<NodeProps<NodeData>> = ({ id, data }) => {
             tabIndex={0}
             className="cursor-pointer outline-none focus:ring"
             onClick={handleNameClick}
-            onKeyDown={(e) => {
+            onKeyDown={e => {
               if (e.key === "Enter" || e.key === " ") handleNameClick();
             }}
             title="Click to edit RRP name"
@@ -134,9 +103,9 @@ export const RrpNode: React.FC<NodeProps<NodeData>> = ({ id, data }) => {
         )}
       </div>
 
-      {/* PLMN (editable/addable) */}
-      <div className="w-full flex items-center gap-1">
-        <span className="text-xs text-gray-500">PLMN</span>
+      {/* PLMN editable */}
+      <div className="w-full flex items-center gap-1 mb-2">
+        {/* <span className="text-xs text-gray-500">PLMN</span> */}
         {isEditingPLMN ? (
           <input
             className="w-24 px-1 py-0.5 border rounded"
@@ -152,30 +121,17 @@ export const RrpNode: React.FC<NodeProps<NodeData>> = ({ id, data }) => {
             tabIndex={0}
             className="ml-1 cursor-pointer outline-none hover:underline focus:ring text-blue-600 text-xs"
             onClick={handlePLMNClick}
-            onKeyDown={(e) => {
+            onKeyDown={e => {
               if (e.key === "Enter" || e.key === " ") handlePLMNClick();
             }}
-            title="Click to add PLMN and create RRP member"
+            title="Click to add PLMN and create RRPmember"
           >
             {plmn ? plmn : "Add PLMN (creates RRPmember)"}
           </span>
         )}
       </div>
 
-            {/* PLMN Field */}
-      <div className="mb-2">
-        <RrpPlmnField
-          label="PLMN"
-          value={plmn}
-          isEditing={isEditingPLMN}
-          onChange={handlePLMNChange}
-          onBlur={handlePLMNBlur}
-          onClick={handlePLMNClick}
-          placeholder="Click to add PLMN..."
-        />
-      </div>
-
-      {/* Band Fields */}
+      {/* RrpBands: pass all props */}
       <RrpBands
         bands={rrpBands}
         editingBandIndex={editingBandIndex}
@@ -188,7 +144,7 @@ export const RrpNode: React.FC<NodeProps<NodeData>> = ({ id, data }) => {
         onAdd={handleAddBand}
       />
 
-      {/* Handle at Bottom (source) */}
+      {/* Bottom Handle */}
       <Handle
         type="source"
         position={Position.Bottom}
@@ -199,6 +155,6 @@ export const RrpNode: React.FC<NodeProps<NodeData>> = ({ id, data }) => {
       />
     </div>
   );
-};
+});
 
 export default RrpNode;
