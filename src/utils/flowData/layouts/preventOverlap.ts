@@ -24,7 +24,7 @@ const getNodeTypePadding = (nodeType?: string): number => {
   switch (nodeType) {
     case 's-nssai': return 60;
     case 'dnn': return 55;
-    case '5qi': return 70;
+    case 'fiveqi': return 70;
     case 'network': return 50;
     case 'cell-area': return 120;
     case 'rrp': return 80;

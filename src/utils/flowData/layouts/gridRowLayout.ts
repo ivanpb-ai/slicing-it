@@ -61,7 +61,7 @@ export function arrangeNodesInGridRows(
     'rrp': 3,
     's-nssai': 4,
     'dnn': 5,
-    '5qi': 6,
+    'fiveqi': 6,
     'unknown': 7 // Default row for nodes with unknown type
   };
   

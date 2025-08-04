@@ -22,7 +22,7 @@ export const processNodesWithLayout = (
   }
   
   // Merge default options with provided options
-  const defaultOptions = getDefaultLayoutOptions();
+  const defaultOptions = getDefaultLayoutOptions;
   const mergedOptions = { ...defaultOptions, ...options };
   
   try {

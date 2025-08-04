@@ -1,22 +1,17 @@
 
 import { LayoutOptions } from './LayoutTypes';
 
-/**
- * Default layout options with absolute minimum edge length
- */
-export const getDefaultLayoutOptions = (): LayoutOptions => ({
-  type: 'tree',
-  spacing: 200,
-  nodeWidth: 180,
+export const getDefaultLayoutOptions = {
+  type: 'balanced-tree',
+  nodeWidth: 180,          // match your node size
   nodeHeight: 120,
-  marginX: 200,
-  marginY: 50,
+  horizontalSpacing: 60,   // reduce for compactness
+  verticalSpacing: 80,     // reduce for compactness
+  marginX: 40,             // less outer padding
+  marginY: 30,
   preventOverlap: true,
-  compactFactor: 0.9,
-  edgeShortenFactor: 0.9,
-  maxIterations: 100,
-  verticalSpacing: 100,      // Absolute minimum: 1px edge length
-  horizontalSpacing: 100,
-  levelHeight: 10,          // Absolute minimum: 1px edge length
-  minNodeDistance: 50
-});
+  edgeShortenFactor: 0.85, // shrink edge rendering
+  minNodeDistance: 10,     // minimum gap between nodes
+  levelHeight: 1,
+  maxIterations: 100
+};
