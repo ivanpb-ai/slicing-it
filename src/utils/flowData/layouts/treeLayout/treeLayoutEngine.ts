@@ -100,6 +100,33 @@ export const arrangeNodesInTreeLayout = (
       return handleLayoutError(new Error("Layout verification failed"), nodes);
     }
 
+  /**
+ * Moves every parent node horizontally to the center of its children.
+ * Should be called after children positions are computed for each parent.
+ */
+
+  const nodeMap = new Map(nodes.map(n => [n.id, n]));
+  // For every parent in the graph
+  for (const [parentId, childIds] of Object.entries(relationships.childrenMap)) {
+    if (!childIds || childIds.length === 0) continue;
+
+    // Gather all children's center x positions
+    const childXs = childIds
+      .map(id => nodeMap.get(id))
+      .filter(Boolean)
+      .map(child => child.position.x);
+
+    if (childXs.length === 0) continue;
+
+    // Center above children's x-span
+    const minX = Math.min(...childXs);
+    const maxX = Math.max(...childXs);
+    const parentNode = nodeMap.get(parentId);
+    if (parentNode) {
+      parentNode.position.x = (minX + maxX) / 2;
+    }
+  }
+
     const endTime = performance.now();
     console.log(`Tree layout completed in ${(endTime - startTime).toFixed(1)}ms with MINIMUM: 1px max edge constraint`);
 
