@@ -93,7 +93,8 @@ export const arrangeNodesInTreeLayout = (
       relationships,
       10 // Minimum: 1px vertical spacing
     );
-    
+    console.log(`finalNodes ${finalNodes}`);
+
     // 8. Verify the arrangement is valid
     if (!verifyNodeArrangement(nodes, finalNodes)) {
       console.warn("Tree layout verification failed, using fallback layout");
@@ -117,15 +118,18 @@ export const arrangeNodesInTreeLayout = (
       .map(child => child.position.x);
 
     if (childXs.length === 0) continue;
+    console.log(`childXs ${childXs}`);
 
     // Center above children's x-span
     const minX = Math.min(...childXs);
     const maxX = Math.max(...childXs);
     const parentNode = nodeMap.get(parentId);
+    console.log(`parentNode ${parentNode}`);
     if (parentNode) {
       parentNode.position.x = (minX + maxX) / 2;
     }
   }
+
 
     const endTime = performance.now();
     console.log(`Tree layout completed in ${(endTime - startTime).toFixed(1)}ms with MINIMUM: 1px max edge constraint`);
