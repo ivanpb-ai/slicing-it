@@ -63,7 +63,9 @@ export function positionChildNodes(
     console.log(`PERFECT Arrange: Positioning children of ${parentId} with 5px offset`);
     
     // Get parent's EXACT center X position (center of the node)
-    const parentCenterX = parentNode.position.x + (nodeWidth / 2);
+    //const parentCenterX = parentNode.position.x + (nodeWidth / 2);
+    const parentCenterX = parentNode.position.x;
+
     
     if (children.length === 1) {
       // Single child: position EXACTLY centered under parent
@@ -86,7 +88,9 @@ export function positionChildNodes(
       const totalWidth = totalChildrenWidth + totalSpacing;
       
       // Start position to EXACTLY center all children under parent
-      const startX = parentCenterX - (totalWidth / 2);
+      //const startX = parentCenterX - (totalWidth / 2);
+      const startX = parentCenterX;
+
       
       children.forEach((childId, index) => {
         const childNode = nodes.find(n => n.id === childId);
@@ -107,8 +111,10 @@ export function positionChildNodes(
         console.log(`PERFECT Arrange: Child center: ${childCenterX}, Parent center: ${parentCenterX}`);
         
         // Calculate and verify edge length (for debugging)
-        const parentCenterY = parentNode.position.y + (nodeHeight / 2);
-        const childCenterY = childNode.position.y + (nodeHeight / 2);
+        //const parentCenterY = parentNode.position.y + (nodeHeight / 2);
+        //const childCenterY = childNode.position.y + (nodeHeight / 2);
+        const parentCenterY = parentNode.position.y;
+        const childCenterY = childNode.position.y;
         const edgeLength = Math.sqrt(
           Math.pow(childCenterX - parentCenterX, 2) + 
           Math.pow(childCenterY - parentCenterY, 2)
