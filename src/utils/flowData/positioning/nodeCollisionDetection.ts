@@ -38,6 +38,7 @@ export const findNonOverlappingPosition = (
   if (existingNodes.length === 0) {
     return desiredPosition;
   }
+  console.log(`Desired position: ${JSON.stringify(desiredPosition)}`);
 
   let position = { ...desiredPosition };
   let attempts = 0;
@@ -62,6 +63,8 @@ export const findNonOverlappingPosition = (
       x: desiredPosition.x + radius * Math.cos(angle),
       y: desiredPosition.y + radius * Math.sin(angle)
     };
+    console.log(`Position: ${JSON.stringify(position.x)}`);
+    console.log(`Position: ${JSON.stringify(position.y)}`);
 
     attempts++;
   }
@@ -72,6 +75,7 @@ export const findNonOverlappingPosition = (
     x: fallbackX,
     y: desiredPosition.y
   };
+    console.log(`Desired position: ${JSON.stringify(fallbackX)}`);
 };
 
 /**
@@ -80,11 +84,11 @@ export const findNonOverlappingPosition = (
 export const getNodeDimensions = (nodeType: string): { width: number; height: number } => {
   switch (nodeType) {
     case 'rrp':
-      return { width: 180, height: 180 };
+      return { width: 180, height: 200 };
     case 'cell-area':
-      return { width: 150, height: 120 };
+      return { width: 150, height: 140 };
     case 'network':
-      return { width: 200, height: 140 };
+      return { width: 200, height: 120 };
     default:
       return { width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT };
   }
