@@ -99,7 +99,7 @@ export function positionChildNodes(
         // Position child based on its center
         childNode.position = { 
           //x: childCenterX - (nodeWidth / 2), // Position based on center calculation
-          x: childCenterX 
+          x: childCenterX, 
           y: childY
         };
         
