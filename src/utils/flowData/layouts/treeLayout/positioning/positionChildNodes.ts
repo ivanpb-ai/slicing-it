@@ -37,7 +37,7 @@ export function positionChildNodes(
   const {
     marginY = 50,
     spacing = 100,
-    nodeHeight = 120,
+    nodeHeight = 180,
     nodeWidth = 180,
     verticalSpacing = 1,
     minNodeDistance = 20

@@ -79,8 +79,8 @@ export const arrangeNodesInTreeLayout = (
       {
         ...options,
         horizontalSpacing,
-        verticalSpacing: 10,     // Minimum: Exactly 1px
-        levelHeight: 10,         // Minimum: Exactly 1px
+        verticalSpacing: 180,    
+        levelHeight: 180,         
         edgeCrossingReduction,
         edgeShortenFactor,
         minNodeDistance: 80
@@ -124,7 +124,7 @@ export const arrangeNodesInTreeLayout = (
     const minX = Math.min(...childXs);
     const maxX = Math.max(...childXs);
     const parentNode = nodeMap.get(parentId);
-    console.log(`parentNode ${parentNode}`);
+    console.log(`parentNode pos x ${parentNode.position.x}`);
     if (parentNode) {
       parentNode.position.x = (minX + maxX) / 2;
     }
