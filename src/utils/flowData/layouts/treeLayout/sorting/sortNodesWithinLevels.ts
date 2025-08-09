@@ -155,4 +155,6 @@ export function sortNodesWithinLevels(
   
   // Final pass: Apply advanced non-root node sorting
   sortNonRootNodes(levelNodes, relationships, allNodes);
+  console.log(`Edge crossing reduction  ${levelNodes}`);
+
 }

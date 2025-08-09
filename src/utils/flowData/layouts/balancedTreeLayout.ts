@@ -136,6 +136,7 @@ export const arrangeNodesInBalancedTree = (
           x: startX + index * (nodeWidth + horizontalSpacing) + nodeWidth / 2,
           y: marginY + level * (nodeHeight + verticalSpacing)
         };
+      console.log(`nodeToUpdate: ${JSON.stringify(nodeToUpdate.position)}`);
       }
     });
   });
