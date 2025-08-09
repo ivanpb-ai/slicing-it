@@ -59,7 +59,7 @@ export function positionChildNodes(
     if (children.length === 0) return;
 
     // ULTRA COMPACT: 5px vertical offset for maximum compactness
-    const childY = parentNode.position.y + 5;
+    const childY = parentNode.position.y + 180;
     console.log(`PERFECT Arrange: Positioning children of ${parentId} with 5px offset`);
     
     // Get parent's EXACT center X position (center of the node)
@@ -71,7 +71,8 @@ export function positionChildNodes(
       if (childNode) {
         // Position child so its center aligns with parent's center
         childNode.position = { 
-          x: parentCenterX - (nodeWidth / 2), // EXACT center alignment
+          //x: parentCenterX - (nodeWidth / 2), // EXACT center alignment
+          x: parentCenterX,
           y: childY
         };
         console.log(`PERFECT Arrange: Single child ${children[0]} EXACTLY centered under parent at:`, childNode.position);
@@ -92,11 +93,13 @@ export function positionChildNodes(
         if (!childNode) return;
         
         // Calculate child's center position
-        const childCenterX = startX + (index * (nodeWidth + minSpacing)) + (nodeWidth / 2);
-        
+        // const childCenterX = startX + (index * (nodeWidth + minSpacing)) + (nodeWidth / 2);
+        const childCenterX = parentNode.position.x;
+
         // Position child based on its center
         childNode.position = { 
-          x: childCenterX - (nodeWidth / 2), // Position based on center calculation
+          //x: childCenterX - (nodeWidth / 2), // Position based on center calculation
+          x: childCenterX 
           y: childY
         };
         
