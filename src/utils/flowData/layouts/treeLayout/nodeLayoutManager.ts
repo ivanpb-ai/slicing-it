@@ -45,7 +45,7 @@ export function positionAllNodes(
       nodeSpacingData,
       {
         ...options,
-        marginX: options.marginX || 300,
+        marginX: options.marginX || 100,
         spacing: (options.horizontalSpacing || 100) 
       }
     );
@@ -67,9 +67,9 @@ export function positionAllNodes(
     {
       ...options,
       marginY: options.marginY || 80,
-      verticalSpacing: 100,     // MINIMUM: Exactly 1px
+      verticalSpacing: 180,     
       minNodeDistance: options.minNodeDistance || 80,
-      edgeShortenFactor: options.edgeShortenFactor || 0.9,
+      edgeShortenFactor: options.edgeShortenFactor || 0.95,
       horizontalSpacing: (options.horizontalSpacing || 100) 
     }
   );

@@ -17,7 +17,7 @@ export function calculateNodeSpacing(
   const { levelNodes, nodeLevels } = levelData;
   const { 
     nodeWidth = 180, 
-    spacing = 200, 
+    spacing = 100, 
     minNodeDistance = 50 // Standard minimum distance
   } = options;
   
@@ -82,7 +82,9 @@ export function calculateNodeSpacing(
         // Add standard spacing between nodes except for the last node
         const calculatedSpacing = Math.max(spacing, minNodeDistance || 50);
         const spacingToAdd = index < nodesInLevel.length - 1 ? calculatedSpacing : 0;
-        return total + nodeSpace + spacingToAdd;
+        //return total + nodeSpace + spacingToAdd;
+        return total + nodeSpace;
+
       }, 0);
       
       levelWidths.set(level, levelWidth);
