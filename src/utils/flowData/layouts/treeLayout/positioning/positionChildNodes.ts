@@ -78,7 +78,7 @@ export function positionChildNodes(
           y: childY
         };
         console.log(`PERFECT Arrange: Single child ${children[0]} EXACTLY centered under parent at:`, childNode.position);
-        console.log(`PERFECT Arrange: Parent center: ${parentCenterX}, Child center: ${childNode.position.x + nodeWidth/2}`);
+        console.log(`PERFECT Arrange: Parent center: ${parentCenterX}, Child center: ${childNode.position.x}`);
       }
     } else {
       // Multiple children: PERFECT distribution for equal edge lengths
