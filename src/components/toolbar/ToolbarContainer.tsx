@@ -5,6 +5,7 @@ import NodeButtonsGrid from "./NodeButtonsGrid";
 import EditButtonsGrid from "./EditButtonsGrid";
 import CanvasButtonsGrid from "./CanvasButtonsGrid";
 import { Separator } from "@/components/ui/separator";
+import { LayoutType } from "@/utils/flowData/layouts";
 
 interface ToolbarContainerProps {
   onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "fiveqi", fiveQIId?: string) => void;
@@ -12,7 +13,7 @@ interface ToolbarContainerProps {
   onDuplicateSelected: () => void;
   onClearCanvas: () => void;
   onInitializeCanvas: () => void;
-  onArrangeLayout?: () => void;
+  onArrangeLayout?: (layoutType: LayoutType) => void;
   hasSelectedElements: boolean;
 }
 

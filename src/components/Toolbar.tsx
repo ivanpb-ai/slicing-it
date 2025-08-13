@@ -1,5 +1,6 @@
 
 import ToolbarContainer from "./toolbar/ToolbarContainer";
+import { LayoutType } from "@/utils/flowData/layouts";
 
 interface ToolbarProps {
   onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "fiveqi", fiveQIId?: string) => void;
@@ -7,7 +8,7 @@ interface ToolbarProps {
   onDuplicateSelected: () => void;
   onClearCanvas: () => void;
   onInitializeCanvas: () => void;
-  onArrangeLayout?: () => void;
+  onArrangeLayout?: (layoutType: LayoutType) => void;
   hasSelectedElements: boolean;
 }
 

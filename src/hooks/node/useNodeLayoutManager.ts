@@ -2,7 +2,7 @@
 import { useCallback } from 'react';
 import { Node, Edge, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
-import { arrangeNodes, LayoutType } from '../../utils/flowData/layouts';
+import { arrangeNodes, LayoutOptions, LayoutType } from '../../utils/flowData/layouts';
 
 export const useNodeLayoutManager = (
   nodes: Node[],
@@ -11,45 +11,62 @@ export const useNodeLayoutManager = (
 ) => {
   const { getZoom } = useReactFlow();
 
-  const arrangeNodesInLayout = useCallback(() => {
+  const arrangeNodesInLayout = useCallback((layoutType: LayoutType = 'tree') => {
     if (nodes.length === 0) {
       toast.info('No nodes to arrange');
       return;
     }
 
-    // Prevent layout recalculation during active drawing
     const isEdgeBeingCreated = document.querySelector('.react-flow__connection-path');
     if (isEdgeBeingCreated) {
       console.log('Avoiding layout arrangement during active edge creation');
       return;
     }
 
-    // Layout options using tree layout with PERFECT COMPACT spacing
-    const layoutOptions = {
-      type: 'tree' as LayoutType,
-      horizontalSpacing: 100,     // PERFECT COMPACT: Reduced from 150 to 100
-      verticalSpacing: 1,
+    const baseOptions: Partial<LayoutOptions> = {
       nodeWidth: 180,
       nodeHeight: 120,
-      marginX: 150,               // PERFECT COMPACT: Reduced from 200 to 150
-      marginY: 50,                // PERFECT COMPACT: Reduced from 80 to 50
-      preventOverlap: true,
-      edgeCrossingReduction: true,
-      edgeShortenFactor: 0.98,    // PERFECT COMPACT: Increased to make edges even shorter
-      minNodeDistance: 10,        // PERFECT COMPACT: Reduced from 20 to 10
-      preservePositions: false,
-      levelHeight: 1
+      marginX: 150,
+      marginY: 50,
     };
 
+    let layoutOptions: LayoutOptions;
+
+    switch (layoutType) {
+      case 'balanced-tree':
+        layoutOptions = {
+          ...baseOptions,
+          type: 'balanced-tree',
+          horizontalSpacing: 50,
+          verticalSpacing: 150,
+        };
+        break;
+      case 'tree':
+      default:
+        layoutOptions = {
+          ...baseOptions,
+          type: 'tree',
+          horizontalSpacing: 100,
+          verticalSpacing: 1,
+          preventOverlap: true,
+          edgeCrossingReduction: true,
+          edgeShortenFactor: 0.98,
+          minNodeDistance: 10,
+          preservePositions: false,
+          levelHeight: 1,
+        };
+        break;
+    }
+
     try {
-      console.log('Arranging nodes with PERFECT COMPACT tree layout');
+      console.log(`Arranging nodes with ${layoutType} layout`);
       
       const nodesCopy = nodes.map(node => ({...node}));
       const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
       
       if (arrangedNodes?.length > 0) {
         setNodes(arrangedNodes);
-        toast.success('Nodes arranged in perfect compact tree layout');
+        toast.success(`Nodes arranged in ${layoutType} layout`);
         
         requestAnimationFrame(() => {
           window.dispatchEvent(new CustomEvent('node-added'));
@@ -63,12 +80,12 @@ export const useNodeLayoutManager = (
       try {
         const fallbackNodes = arrangeNodes(nodes, edges, {
           type: 'grid' as LayoutType,
-          spacing: 100,              // PERFECT COMPACT: Reduced fallback spacing too
+          spacing: 100,
           preventOverlap: true,
-          verticalSpacing: 1
+          verticalSpacing: 1,
         });
         setNodes(fallbackNodes);
-        toast.warning('Using perfect compact fallback grid layout');
+        toast.warning('Using fallback grid layout');
       } catch (e) {
         console.error('Failed to apply fallback layout');
         toast.error('Failed to arrange nodes');

@@ -6,6 +6,7 @@ import SaveLoadMenu from '@/components/saveLoad/SaveLoadMenu';
 import { NodeType } from '@/types/nodeTypes';
 import type { GraphData } from '@/services/storage/GraphLocalStorageService';
 import { SavedGraph } from '@/hooks/types';
+import { LayoutType } from '@/utils/flowData/layouts';
 
 interface EditorPanelsProps {
   handleAddNode: (type: NodeType, fiveQIId?: string) => void;
@@ -13,7 +14,7 @@ interface EditorPanelsProps {
   duplicateSelected: () => void;
   clearCanvas: () => void;
   initializeCanvas: () => void;
-  arrangeLayout?: () => void;
+  arrangeLayout?: (layoutType: LayoutType) => void;
   hasSelectedElements: boolean;
   onSave: () => boolean;
   onLoad: () => boolean;

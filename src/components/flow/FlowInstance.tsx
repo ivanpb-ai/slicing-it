@@ -18,6 +18,7 @@ import FileImportInput from './FileImportInput';
 import { SavedGraph } from '../../hooks/types';
 import type { GraphData } from '../../services/storage/GraphLocalStorageService';
 import type { NodeData } from '../../types/nodeTypes';
+import { LayoutType } from '@/utils/flowData/layouts';
 
 interface FlowInstanceProps {
   nodes: Node<NodeData>[];
@@ -36,7 +37,7 @@ interface FlowInstanceProps {
   duplicateSelected: () => void;
   clearCanvas: () => void;
   initializeCanvas: () => void;
-  arrangeLayout?: () => void;
+  arrangeLayout?: (layoutType: LayoutType) => void;
   hasSelectedElements: boolean;
 
   onSave: () => boolean;

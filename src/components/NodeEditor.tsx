@@ -2,7 +2,6 @@ import React, { useCallback, useRef } from 'react';
 import { ReactFlowProvider, useReactFlow } from '@xyflow/react';
 import { useNodeEditor } from '../hooks/useNodeEditor';
 import { useNodeLayoutManager } from '../hooks/node/useNodeLayoutManager';
-import { useLayoutOperations } from '../hooks/flow/useLayoutOperations';
 import { useNodeDragDrop } from '../hooks/useNodeDragDrop';
 import FlowInstance from './flow/FlowInstance';
 import { SavedGraph } from '../hooks/types';
@@ -52,13 +51,6 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
 
   // Add layout management
   const { arrangeNodesInLayout } = useNodeLayoutManager(nodes, edges, setNodes);
-  const { handleArrangeLayout } = useLayoutOperations(
-    nodes,
-    edges,
-    setNodes,
-    setEdges,
-    arrangeNodesInLayout
-  );
 
   // Use the proper drag and drop handler
   const { onDragOver, onDrop } = useNodeDragDrop(
@@ -331,7 +323,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
           duplicateSelected={duplicateSelected}
           clearCanvas={clearCanvas}
           initializeCanvas={initializeCanvas}
-          arrangeLayout={handleArrangeLayout}
+          arrangeLayout={arrangeNodesInLayout}
           hasSelectedElements={hasSelectedElements}
           onSave={handleSaveGraph}
           onLoad={handleLoadGraph}
