@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, memo } from "react";
 import { NodeData } from "../../types/nodeTypes";
-import { Badge } from "../../components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { getFiveQIValueById } from "../../utils/flowData/utils/fiveQIUtils";
 import { Handle, Position } from "@xyflow/react";
 

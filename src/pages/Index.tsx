@@ -35,6 +35,13 @@ const Index = () => {
     }
   }, [isInitialized, isLoading]);
 
+  // Expose a function for Playwright to load data
+  useEffect(() => {
+    (window as any).loadGraphDataForTesting = (data: any) => {
+      handleLoadGraphFromData(data);
+    };
+  }, [handleLoadGraphFromData]);
+
   return (
     <div className="h-screen w-screen flex flex-col">
       <Header />

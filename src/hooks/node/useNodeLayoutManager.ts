@@ -11,7 +11,7 @@ export const useNodeLayoutManager = (
 ) => {
   const { getZoom } = useReactFlow();
 
-  const arrangeNodesInLayout = useCallback((layoutType: LayoutType = 'tree') => {
+  const arrangeNodesInLayout = useCallback((layoutType: LayoutType = 'balanced-tree') => {
     if (nodes.length === 0) {
       toast.info('No nodes to arrange');
       return;
