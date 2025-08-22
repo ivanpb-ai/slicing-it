@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { UploadCloud, FileCheck, AlertCircle, Download, FileText } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
+import { uploadFileToStorage, listStoredFiles } from '@/utils/supabaseStorage';
 import {
   Dialog,
   DialogContent,
@@ -40,39 +40,24 @@ const FileUpload = ({ onFileLoad }: FileUploadProps) => {
     setUploading(true);
     
     try {
-      console.log('Starting file upload to Supabase storage...');
+      console.log('Starting file upload...');
       // Create a unique file name
       const fileExt = file.name.split('.').pop();
       const fileName = `${Math.random().toString(36).substring(2, 15)}-${Date.now()}.${fileExt}`;
       
       console.log(`Uploading file with name: ${fileName}`);
       
-      // Upload the file to Supabase Storage
-      const { data, error } = await supabase.storage
-        .from('files')
-        .upload(fileName, file, {
-          cacheControl: '3600',
-          upsert: false
-        });
+      // Upload the file using the new API
+      const fileUrl = await uploadFileToStorage(file, fileName);
       
-      if (error) {
-        console.error('Supabase upload error:', error);
-        throw error;
+      if (fileUrl) {
+        console.log('Upload success, got URL:', fileUrl);
+        setUploadedFile(fileUrl);
+        toast.success('File uploaded successfully!');
+        
+        // Refresh the list of stored files
+        fetchStoredFiles();
       }
-      
-      console.log('Upload success, getting public URL...');
-      
-      // Get the public URL for the file
-      const { data: { publicUrl } } = supabase.storage
-        .from('files')
-        .getPublicUrl(fileName);
-      
-      console.log('Got public URL:', publicUrl);
-      setUploadedFile(publicUrl);
-      toast.success('File uploaded successfully!');
-      
-      // Refresh the list of stored files
-      fetchStoredFiles();
     } catch (error: any) {
       console.error('Error uploading file:', error);
       toast.error(error.message || 'Error uploading file');
@@ -84,21 +69,8 @@ const FileUpload = ({ onFileLoad }: FileUploadProps) => {
   const fetchStoredFiles = async () => {
     setLoading(true);
     try {
-      const { data, error } = await supabase.storage
-        .from('files')
-        .list();
-        
-      if (error) {
-        throw error;
-      }
-      
-      if (data) {
-        const fileList = data.map(file => ({
-          name: file.name,
-          url: supabase.storage.from('files').getPublicUrl(file.name).data.publicUrl
-        }));
-        setStoredFiles(fileList);
-      }
+      const files = await listStoredFiles();
+      setStoredFiles(files);
     } catch (error: any) {
       console.error('Error fetching stored files:', error);
       toast.error(error.message || 'Error fetching stored files');
@@ -146,7 +118,7 @@ const FileUpload = ({ onFileLoad }: FileUploadProps) => {
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Supabase Storage</DialogTitle>
+          <DialogTitle>File Storage</DialogTitle>
           <DialogDescription>
             Store and load graph files from the cloud
           </DialogDescription>
