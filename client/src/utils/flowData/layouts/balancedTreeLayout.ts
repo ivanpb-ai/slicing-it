@@ -10,8 +10,18 @@ interface BalancedTreeOptions {
   marginY?: number;
 }
 
+interface TreeNode {
+  id: string;
+  node: Node;
+  children: TreeNode[];
+  parent?: TreeNode;
+  level: number;
+  subtreeWidth: number;
+  position: { x: number; y: number };
+}
+
 /**
- * Creates a perfectly balanced symmetrical tree layout
+ * Creates a perfectly balanced symmetrical hierarchical tree layout
  */
 export const arrangeNodesInBalancedTree = (
   nodes: Node[],
@@ -23,123 +33,191 @@ export const arrangeNodesInBalancedTree = (
   const {
     nodeWidth = 180,
     nodeHeight = 120,
-    horizontalSpacing = 200,
-    verticalSpacing = 150,
-    marginX = 300,
+    horizontalSpacing = 250,
+    verticalSpacing = 180,
+    marginX = 400,
     marginY = 100
   } = options;
 
-  // Build parent-child relationships
+  console.log('Starting balanced tree layout with', nodes.length, 'nodes');
+
+  // Build parent-child relationships with multiple parent support
   const childrenMap: Record<string, string[]> = {};
-  const parentMap: Record<string, string> = {};
+  const allParentsMap: Record<string, string[]> = {};
+  const primaryParentMap: Record<string, string> = {};
   
   edges.forEach(edge => {
+    // Track all children
     if (!childrenMap[edge.source]) {
       childrenMap[edge.source] = [];
     }
     childrenMap[edge.source].push(edge.target);
-    parentMap[edge.target] = edge.source;
+    
+    // Track all parents
+    if (!allParentsMap[edge.target]) {
+      allParentsMap[edge.target] = [];
+    }
+    allParentsMap[edge.target].push(edge.source);
+    
+    // Set primary parent (first one encountered, or prefer based on node type)
+    if (!primaryParentMap[edge.target]) {
+      primaryParentMap[edge.target] = edge.source;
+    }
   });
 
   // Find root nodes (nodes with no parents)
-  const rootNodes = nodes.filter(node => !parentMap[node.id]);
+  const rootNodes = nodes.filter(node => !allParentsMap[node.id] || allParentsMap[node.id].length === 0);
   
   // If no root nodes found, treat the first node as root
   if (rootNodes.length === 0 && nodes.length > 0) {
     rootNodes.push(nodes[0]);
   }
 
-  // Calculate subtree sizes for balanced positioning
-  const subtreeSizes: Record<string, number> = {};
-  
-  const calculateSubtreeSize = (nodeId: string): number => {
-    if (subtreeSizes[nodeId] !== undefined) {
-      return subtreeSizes[nodeId];
-    }
-    
-    const children = childrenMap[nodeId] || [];
-    if (children.length === 0) {
-      subtreeSizes[nodeId] = 1;
-      return 1;
-    }
-    
-    const totalChildrenSize = children.reduce((sum, childId) => 
-      sum + calculateSubtreeSize(childId), 0
-    );
-    
-    subtreeSizes[nodeId] = Math.max(totalChildrenSize, 1);
-    return subtreeSizes[nodeId];
-  };
+  console.log('Found', rootNodes.length, 'root nodes');
 
-  // Calculate subtree sizes for all nodes
-  nodes.forEach(node => calculateSubtreeSize(node.id));
-
-  // Position nodes level by level
-  const positioned: Record<string, boolean> = {};
-  const levels: Record<number, Node[]> = {};
-  
-  // Assign levels
-  const assignLevel = (nodeId: string, level: number) => {
+  // Build tree structure
+  const buildTreeNode = (nodeId: string, level: number, parent?: TreeNode): TreeNode => {
     const node = nodes.find(n => n.id === nodeId);
-    if (!node || positioned[nodeId]) return;
-    
-    if (!levels[level]) levels[level] = [];
-    levels[level].push(node);
-    positioned[nodeId] = true;
-    
+    if (!node) {
+      throw new Error(`Node ${nodeId} not found`);
+    }
+
+    const treeNode: TreeNode = {
+      id: nodeId,
+      node,
+      children: [],
+      parent,
+      level,
+      subtreeWidth: 0,
+      position: { x: 0, y: 0 }
+    };
+
+    // Add children
     const children = childrenMap[nodeId] || [];
-    children.forEach(childId => assignLevel(childId, level + 1));
+    treeNode.children = children.map(childId => buildTreeNode(childId, level + 1, treeNode));
+
+    return treeNode;
   };
 
-  // Start from root nodes
-  rootNodes.forEach(rootNode => assignLevel(rootNode.id, 0));
+  // Create tree structures from each root
+  const trees = rootNodes.map(rootNode => buildTreeNode(rootNode.id, 0));
 
-  // Position nodes by level
-  const updatedNodes = nodes.map(node => ({ ...node }));
-  
-  Object.keys(levels).forEach(levelStr => {
-    const level = parseInt(levelStr);
-    const nodesInLevel = levels[level];
+  // Calculate subtree widths (bottom-up)
+  const calculateSubtreeWidth = (treeNode: TreeNode): number => {
+    if (treeNode.children.length === 0) {
+      treeNode.subtreeWidth = nodeWidth;
+      return nodeWidth;
+    }
+
+    const childrenWidth = treeNode.children.reduce((sum, child) => 
+      sum + calculateSubtreeWidth(child), 0
+    );
+    const spacingWidth = (treeNode.children.length - 1) * horizontalSpacing;
     
-    if (nodesInLevel.length === 0) return;
+    treeNode.subtreeWidth = Math.max(nodeWidth, childrenWidth + spacingWidth);
+    return treeNode.subtreeWidth;
+  };
+
+  // Calculate subtree widths for all trees
+  trees.forEach(tree => calculateSubtreeWidth(tree));
+
+  // Position nodes (top-down)
+  const positionSubtree = (treeNode: TreeNode, centerX: number) => {
+    // Position current node at center
+    treeNode.position = {
+      x: centerX,
+      y: marginY + treeNode.level * (nodeHeight + verticalSpacing)
+    };
+
+    if (treeNode.children.length === 0) return;
+
+    // Sort children by subtree width for better balance
+    const sortedChildren = [...treeNode.children].sort((a, b) => b.subtreeWidth - a.subtreeWidth);
+
+    // Calculate positions for children
+    const totalChildrenWidth = treeNode.children.reduce((sum, child) => sum + child.subtreeWidth, 0);
+    const totalSpacing = (treeNode.children.length - 1) * horizontalSpacing;
+    const totalWidth = totalChildrenWidth + totalSpacing;
     
-    // Sort nodes by subtree size for balanced appearance
-    nodesInLevel.sort((a, b) => (subtreeSizes[b.id] || 1) - (subtreeSizes[a.id] || 1));
+    let currentX = centerX - totalWidth / 2;
+
+    // For perfect symmetry, use center-out placement
+    const arrangedChildren: TreeNode[] = [];
     
-    // Calculate total width needed for this level
-    const totalWidth = nodesInLevel.length * nodeWidth + (nodesInLevel.length - 1) * horizontalSpacing;
-    const startX = marginX - totalWidth / 2;
-    
-    // For perfect symmetry, arrange largest subtrees in center
-    const arrangedNodes: Node[] = [];
-    
-    if (nodesInLevel.length === 1) {
-      arrangedNodes.push(nodesInLevel[0]);
+    if (sortedChildren.length === 1) {
+      arrangedChildren.push(sortedChildren[0]);
+    } else if (sortedChildren.length === 2) {
+      // For 2 children, place symmetrically
+      arrangedChildren.push(sortedChildren[0], sortedChildren[1]);
     } else {
-      // Place largest in center, then alternate left and right
-      arrangedNodes.push(nodesInLevel[0]); // Largest goes to center
+      // For more children, place largest in center, then alternate
+      const center = Math.floor(sortedChildren.length / 2);
+      arrangedChildren[center] = sortedChildren[0]; // Largest in center
       
-      for (let i = 1; i < nodesInLevel.length; i++) {
-        if (i % 2 === 1) {
-          arrangedNodes.unshift(nodesInLevel[i]); // Add to left
-        } else {
-          arrangedNodes.push(nodesInLevel[i]); // Add to right
+      let leftIndex = center - 1;
+      let rightIndex = center + 1;
+      
+      for (let i = 1; i < sortedChildren.length; i++) {
+        if (i % 2 === 1 && leftIndex >= 0) {
+          arrangedChildren[leftIndex] = sortedChildren[i];
+          leftIndex--;
+        } else if (rightIndex < sortedChildren.length) {
+          arrangedChildren[rightIndex] = sortedChildren[i];
+          rightIndex++;
+        } else if (leftIndex >= 0) {
+          arrangedChildren[leftIndex] = sortedChildren[i];
+          leftIndex--;
         }
       }
     }
-    
-    // Position the arranged nodes
-    arrangedNodes.forEach((node, index) => {
-      const nodeToUpdate = updatedNodes.find(n => n.id === node.id);
-      if (nodeToUpdate) {
-        nodeToUpdate.position = {
-          x: startX + index * (nodeWidth + horizontalSpacing) + nodeWidth / 2,
-          y: marginY + level * (nodeHeight + verticalSpacing)
-        };
-      console.log(`nodeToUpdate: ${JSON.stringify(nodeToUpdate.position)}`);
-      }
+
+    // Position children from left to right
+    arrangedChildren.forEach(child => {
+      const childCenterX = currentX + child.subtreeWidth / 2;
+      positionSubtree(child, childCenterX);
+      currentX += child.subtreeWidth + horizontalSpacing;
     });
+  };
+
+  // Calculate overall layout bounds
+  const totalTreesWidth = trees.reduce((sum, tree) => sum + tree.subtreeWidth, 0);
+  const totalSpacing = (trees.length - 1) * horizontalSpacing * 2;
+  const totalWidth = totalTreesWidth + totalSpacing;
+  
+  // Position each tree
+  let currentTreeX = marginX - totalWidth / 2;
+  trees.forEach(tree => {
+    const treeCenterX = currentTreeX + tree.subtreeWidth / 2;
+    positionSubtree(tree, treeCenterX);
+    currentTreeX += tree.subtreeWidth + horizontalSpacing * 2;
   });
+
+  // Collect all positioned nodes
+  const positionedNodes: { id: string; position: { x: number; y: number } }[] = [];
+  
+  const collectNodes = (treeNode: TreeNode) => {
+    positionedNodes.push({
+      id: treeNode.id,
+      position: treeNode.position
+    });
+    treeNode.children.forEach(child => collectNodes(child));
+  };
+
+  trees.forEach(tree => collectNodes(tree));
+
+  // Update original nodes with new positions
+  const updatedNodes = nodes.map(node => {
+    const positioned = positionedNodes.find(p => p.id === node.id);
+    if (positioned) {
+      return {
+        ...node,
+        position: positioned.position
+      };
+    }
+    return node;
+  });
+
+  console.log('Balanced tree layout completed. Positioned', positionedNodes.length, 'nodes');
 
   return updatedNodes;
 };

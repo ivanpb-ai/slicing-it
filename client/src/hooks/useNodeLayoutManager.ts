@@ -22,20 +22,22 @@ export const useNodeLayoutManager = (
       return;
     }
 
-    // Grid row layout options - organize nodes by type in specific rows
+    // Balanced tree layout options - create hierarchical, symmetrical layouts
     const layoutOptions = {
-      type: 'gridrows' as LayoutType, 
-      spacing: 50,
+      type: 'balanced-tree' as LayoutType, 
+      spacing: 250,
       nodeWidth: 180,
       nodeHeight: 120,
-      marginX: 100,
-      marginY: 80,
+      horizontalSpacing: 250,
+      verticalSpacing: 180,
+      marginX: 400,
+      marginY: 100,
       preventOverlap: true,
       edgeShortenFactor: 0.95
     };
 
     try {
-      console.log('Arranging nodes in grid rows by type');
+      console.log('Arranging nodes in balanced tree layout');
       
       // Create a shallow copy of nodes to avoid mutation issues
       const nodesCopy = nodes.map(node => ({...node, position: {...node.position}}));
@@ -45,7 +47,7 @@ export const useNodeLayoutManager = (
       
       if (arrangedNodes?.length > 0) {
         setNodes(arrangedNodes);
-        toast.success('Nodes arranged in grid layout by type');
+        toast.success('Nodes arranged in balanced hierarchical tree');
         
         // Delay event dispatch to ensure rendering completes
         setTimeout(() => {
