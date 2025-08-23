@@ -1,0 +1,63 @@
+PERFECT Arrange: Positioning children of network-1750337202178-7623 with 5px offset
+index-DbmUMb8K.js:198 PERFECT Arrange: Child cell-area-1 positioned at: {x: 150, y: 230}
+index-DbmUMb8K.js:198 PERFECT Arrange: Child center: 150, Parent center: 150
+index-DbmUMb8K.js:198 PERFECT Edge length from network-1750337202178-7623 to cell-area-1: 180
+index-DbmUMb8K.js:198 PERFECT Arrange: Child cell-area-2 positioned at: {x: 150, y: 230}
+index-DbmUMb8K.js:198 PERFECT Arrange: Child center: 150, Parent center: 150
+index-DbmUMb8K.js:198 PERFECT Edge length from network-1750337202178-7623 to cell-area-2: 180
+index-DbmUMb8K.js:198 PERFECT Arrange: Positioning children of cell-area-1 with 5px offset
+index-DbmUMb8K.js:198 PERFECT Arrange: Single child rrp-1750337216606-1118 EXACTLY centered under parent at: {x: 150, y: 410}
+index-DbmUMb8K.js:198 PERFECT Arrange: Parent center: 150, Child center: 150
+index-DbmUMb8K.js:198 PERFECT Arrange: Positioning children of rrp-1750337216606-1118 with 5px offset
+index-DbmUMb8K.js:198 PERFECT Arrange: Child rrpmember-1750337236107-7355 positioned at: {x: 150, y: 590}
+index-DbmUMb8K.js:198 PERFECT Arrange: Child center: 150, Parent center: 150
+index-DbmUMb8K.js:198 PERFECT Edge length from rrp-1750337216606-1118 to rrpmember-1750337236107-7355: 180
+index-DbmUMb8K.js:198 PERFECT Arrange: Child rrpmember-1750337242468-2761 positioned at: {x: 150, y: 590}
+index-DbmUMb8K.js:198 PERFECT Arrange: Child center: 150, Parent center: 150
+index-DbmUMb8K.js:198 PERFECT Edge length from rrp-1750337216606-1118 to rrpmember-1750337242468-2761: 180
+index-DbmUMb8K.js:198 PERFECT Arrange: Positioning children of rrpmember-1750337236107-7355 with 5px offset
+index-DbmUMb8K.js:198 PERFECT Arrange: Single child s-nssai-2 EXACTLY centered under parent at: {x: 150, y: 770}
+index-DbmUMb8K.js:198 PERFECT Arrange: Parent center: 150, Child center: 150
+index-DbmUMb8K.js:198 PERFECT Arrange: Positioning children of rrpmember-1750337242468-2761 with 5px offset
+index-DbmUMb8K.js:198 PERFECT Arrange: Single child s-nssai-1 EXACTLY centered under parent at: {x: 150, y: 770}
+index-DbmUMb8K.js:198 PERFECT Arrange: Parent center: 150, Child center: 150
+index-DbmUMb8K.js:198 PERFECT Arrange: Positioning children of s-nssai-1 with 5px offset
+index-DbmUMb8K.js:198 PERFECT Arrange: Single child dnn-1 EXACTLY centered under parent at: {x: 150, y: 950}
+index-DbmUMb8K.js:198 PERFECT Arrange: Parent center: 150, Child center: 150
+index-DbmUMb8K.js:198 PERFECT Arrange: Positioning children of dnn-1 with 5px offset
+index-DbmUMb8K.js:198 PERFECT Arrange: Single child fiveqi-9 EXACTLY centered under parent at: {x: 150, y: 1130}
+index-DbmUMb8K.js:198 PERFECT Arrange: Parent center: 150, Child center: 150
+index-DbmUMb8K.js:198 finalNodes [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+index-DbmUMb8K.js:198 childXs 387.9999999999999,804.9999999999999
+index-DbmUMb8K.js:198 parentNode pos x 586
+index-DbmUMb8K.js:198 childXs 599.9999999999998
+index-DbmUMb8K.js:198 parentNode pos x 387.9999999999999
+index-DbmUMb8K.js:198 childXs 599.9999999999998
+index-DbmUMb8K.js:198 parentNode pos x 804.9999999999999
+index-DbmUMb8K.js:198 childXs 839.9999999999998,417.9999999999998
+index-DbmUMb8K.js:198 parentNode pos x 599.9999999999998
+index-DbmUMb8K.js:198 childXs 329.99999999999966,751.9999999999997
+index-DbmUMb8K.js:198 parentNode pos x 417.9999999999998
+index-DbmUMb8K.js:198 childXs 329.99999999999966,751.9999999999997
+index-DbmUMb8K.js:198 parentNode pos x 839.9999999999998
+index-DbmUMb8K.js:198 childXs 611.9999999999995
+index-DbmUMb8K.js:198 parentNode pos x 329.99999999999966
+index-DbmUMb8K.js:198 childXs 611.9999999999995
+index-DbmUMb8K.js:198 parentNode pos x 751.9999999999997
+index-DbmUMb8K.js:198 childXs 539.9999999999997
+index-DbmUMb8K.js:198 parentNode pos x 611.9999999999995
+index-DbmUMb8K.js:198 Tree layout completed in 10.5ms with MINIMUM: 1px max edge constraint
+index-DbmUMb8K.js:198 Overlap prevention completed in 6 iterations
+index-DbmUMb8K.js:198 network clip-path: e=>{switch(console.log(e,"clip-path:",HS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-DbmUMb8K.js:198 cell-area clip-path: e=>{switch(console.log(e,"clip-path:",HS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-DbmUMb8K.js:198 rrp clip-path: e=>{switch(console.log(e,"clip-path:",HS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-DbmUMb8K.js:198 rrpmember clip-path: e=>{switch(console.log(e,"clip-path:",HS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-DbmUMb8K.js:198 s-nssai clip-path: e=>{switch(console.log(e,"clip-path:",HS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-DbmUMb8K.js:198 dnn clip-path: e=>{switch(console.log(e,"clip-path:",HS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-DbmUMb8K.js:198 fiveqi clip-path: e=>{switch(console.log(e,"clip-path:",HS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-DbmUMb8K.js:198 5QI Node rendering with data: {type: 'fiveqi', label: '5QI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+index-DbmUMb8K.js:198 5QI Node fiveQIId: 9
+index-DbmUMb8K.js:198 Looking up 5QI with ID: "9"
+index-DbmUMb8K.js:198 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-DbmUMb8K.js:198 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-DbmUMb8K.js:198 After arrangement: Found 10 visible nodes, expected 10
