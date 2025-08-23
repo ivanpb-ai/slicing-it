@@ -24,32 +24,29 @@ export const useNodeLayoutManager = (
       return;
     }
 
-    // Layout options using tree layout with PERFECT COMPACT spacing
+    // Layout options using balanced tree layout for optimal hierarchical arrangement
     const layoutOptions = {
-      type: 'tree' as LayoutType,
-      horizontalSpacing: 100,     // PERFECT COMPACT: Reduced from 150 to 100
-      verticalSpacing: 1,
+      type: 'balanced-tree' as LayoutType,
+      horizontalSpacing: 250,     // Optimal spacing for balanced tree
+      verticalSpacing: 180,       // Optimal vertical spacing
       nodeWidth: 180,
       nodeHeight: 120,
-      marginX: 150,               // PERFECT COMPACT: Reduced from 200 to 150
-      marginY: 50,                // PERFECT COMPACT: Reduced from 80 to 50
+      marginX: 400,               // Optimized margin for balanced tree
+      marginY: 100,               // Optimized margin for balanced tree
       preventOverlap: true,
-      edgeCrossingReduction: true,
-      edgeShortenFactor: 0.98,    // PERFECT COMPACT: Increased to make edges even shorter
-      minNodeDistance: 10,        // PERFECT COMPACT: Reduced from 20 to 10
-      preservePositions: false,
-      levelHeight: 1
+      edgeShortenFactor: 0.95,    // Optimal edge factor for balanced tree
+      minNodeDistance: 10
     };
 
     try {
-      console.log('Arranging nodes with PERFECT COMPACT tree layout');
+      console.log('Arranging nodes with balanced hierarchical tree layout');
       
       const nodesCopy = nodes.map(node => ({...node}));
       const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
       
       if (arrangedNodes?.length > 0) {
         setNodes(arrangedNodes);
-        toast.success('Nodes arranged in perfect compact tree layout');
+        toast.success('Nodes arranged in balanced hierarchical tree layout');
         
         requestAnimationFrame(() => {
           window.dispatchEvent(new CustomEvent('node-added'));

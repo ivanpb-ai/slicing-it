@@ -16,19 +16,18 @@ export const useCanvasOperations = (
   setEdges: React.Dispatch<React.SetStateAction<Edge[]>>,
   options: CanvasOperationsOptions = {}
 ) => {
-  // Ultra-optimized layout options for compact vertical tree layout
+  // Ultra-optimized layout options for compact balanced tree layout
   const defaultLayoutOptions: LayoutOptions = {
-    type: 'tree',
-    spacing: 180,        // Reduced horizontal spacing (was 230)
+    type: 'balanced-tree',
+    spacing: 250,        // Optimal spacing for balanced tree
     nodeWidth: 180,
     nodeHeight: 120,
-    marginX: 150,        // Further reduced margin (was 250)
-    marginY: 60,         // Further reduced margin (was 80)
-    compactFactor: 0.99, // Increased compactness (was 0.98)
+    marginX: 400,        // Optimized margin for balanced tree
+    marginY: 100,        // Optimized margin for balanced tree
     preventOverlap: true,
-    edgeShortenFactor: 0.55, // Fixed edge length of approximately 100px (55% shortening)
-    horizontalSpacing: 150,  // Added explicit horizontal spacing
-    verticalSpacing: 120     // Added explicit vertical spacing
+    edgeShortenFactor: 0.95, // Optimized edge factor for balanced tree
+    horizontalSpacing: 250,  // Horizontal spacing for balanced tree
+    verticalSpacing: 180     // Vertical spacing for balanced tree
   };
 
   // Merge default options with provided options
@@ -69,23 +68,22 @@ export const useCanvasOperations = (
         initialNodes,
         initialEdges,
         {
-          type: 'tree',
-          spacing: 180,        // Reduced horizontal spacing (was 230)
+          type: 'balanced-tree',
+          spacing: 250,        // Optimal spacing for balanced tree
           nodeWidth: 180,
           nodeHeight: 120,
-          marginX: 150,        // Further reduced margin (was 250)
-          marginY: 60,         // Further reduced margin (was 80)
-          compactFactor: 0.99, // Increased compactness (was 0.98)
+          marginX: 400,        // Optimized margin for balanced tree
+          marginY: 100,        // Optimized margin for balanced tree
           preventOverlap: true,
-          edgeShortenFactor: 0.55, // Fixed edge length of approximately 100px (55% shortening)
-          horizontalSpacing: 150,  // Added explicit horizontal spacing
-          verticalSpacing: 120     // Added explicit vertical spacing
+          edgeShortenFactor: 0.95, // Optimized edge factor for balanced tree
+          horizontalSpacing: 250,  // Horizontal spacing for balanced tree
+          verticalSpacing: 180     // Vertical spacing for balanced tree
         }
       );
       
       if (arrangedNodes.length > 0) {
         setNodes(arrangedNodes);
-        toast.success('Canvas initialized with ultra-compact tree layout and fixed edge lengths');
+        toast.success('Canvas initialized with balanced hierarchical tree layout');
         // Dispatch events for ensuring visibility
         window.dispatchEvent(new CustomEvent('ensure-nodes-visible'));
         window.dispatchEvent(new CustomEvent('force-edge-redraw'));

@@ -94,19 +94,21 @@ export const useGraphLoading = (
       console.log(`  - Processed nodes: ${processedGraph.nodes.length}`);
       console.log(`  - Processed edges: ${processedGraph.edges.length}`);
       
-      // Auto-arrange the nodes with balanced hierarchical tree layout before loading them
+      // Auto-arrange the nodes with improved balanced hierarchical tree layout before loading them
       const arrangedNodes = arrangeNodes(
         processedGraph.nodes,
         processedGraph.edges,
         {
-          type: 'tree',         // Use tree layout for hierarchical arrangement
-          spacing: 250,         // Increased spacing for clearer visualization
-          compactFactor: 1.0,   // Full spacing for clear hierarchical levels
+          type: 'balanced-tree', // Use improved balanced tree layout for hierarchical arrangement
+          spacing: 250,          // Increased spacing for clearer visualization
+          horizontalSpacing: 250,
+          verticalSpacing: 180,
           nodeWidth: 180,
           nodeHeight: 120,
-          marginX: 300,         // Wider margins for better centering
-          marginY: 150,         // Larger top margin for hierarchy
-          edgeShortenFactor: 0.5 // Add edge shortening factor
+          marginX: 400,          // Wider margins for better centering
+          marginY: 100,          // Top margin for hierarchy
+          preventOverlap: true,
+          edgeShortenFactor: 0.95
         }
       );
       
@@ -199,19 +201,21 @@ export const useGraphLoading = (
       console.log(`  - Processed nodes: ${processedGraph.nodes.length}`);
       console.log(`  - Processed edges: ${processedGraph.edges.length}`);
       
-      // Auto-arrange the nodes with balanced hierarchical tree layout before loading them
+      // Auto-arrange the nodes with improved balanced hierarchical tree layout before loading them
       const arrangedNodes = arrangeNodes(
         processedGraph.nodes,
         processedGraph.edges,
         {
-          type: 'tree',         // Use tree layout for hierarchical arrangement
-          spacing: 250,         // Increased spacing for clearer visualization
-          compactFactor: 1.0,   // Full spacing for clear hierarchical levels
+          type: 'balanced-tree', // Use improved balanced tree layout for hierarchical arrangement
+          spacing: 250,          // Increased spacing for clearer visualization
+          horizontalSpacing: 250,
+          verticalSpacing: 180,
           nodeWidth: 180,
           nodeHeight: 120,
-          marginX: 300,         // Wider margins for better centering
-          marginY: 150,         // Larger top margin for hierarchy
-          edgeShortenFactor: 0.5 // Add edge shortening factor
+          marginX: 400,          // Wider margins for better centering
+          marginY: 100,          // Top margin for hierarchy
+          preventOverlap: true,
+          edgeShortenFactor: 0.95
         }
       );
       
