@@ -39,6 +39,7 @@ export const useNodeLayoutManager = (
     };
 
     try {
+      console.log('🔥 DEBUG: useNodeLayoutManager called with layoutOptions:', layoutOptions);
       console.log('🌳 BALANCED TREE: Arranging nodes with balanced hierarchical tree layout');
       
       const nodesCopy = nodes.map(node => ({...node}));

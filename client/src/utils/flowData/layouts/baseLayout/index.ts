@@ -14,6 +14,8 @@ export const arrangeNodes = (
   viewportWidth?: number,
   viewportHeight?: number
 ): Node[] => {
+  console.log('🔥 DEBUG: arrangeNodes called with options:', options);
+  
   // Create a deep copy of nodes to avoid mutation issues
   const nodesCopy = nodes.map(node => ({...node, position: {...node.position}}));
   
