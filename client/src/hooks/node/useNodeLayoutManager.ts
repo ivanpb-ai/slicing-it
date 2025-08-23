@@ -39,9 +39,8 @@ export const useNodeLayoutManager = (
     };
 
     try {
-      console.log('🔥🔥🔥 TIMESTAMP: ' + Date.now() + ' - NEW LAYOUT SYSTEM 🔥🔥🔥');
-      console.log('layoutOptions:', layoutOptions);
-      alert('TIMESTAMP: ' + Date.now() + ' - NEW LAYOUT SYSTEM RUNNING!');
+      console.log('✅ BALANCED TREE: Starting layout arrangement with improved spacing');
+      console.log('Layout options:', layoutOptions);
       
       const nodesCopy = nodes.map(node => ({...node}));
       const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
