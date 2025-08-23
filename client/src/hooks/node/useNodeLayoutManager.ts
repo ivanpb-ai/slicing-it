@@ -39,9 +39,9 @@ export const useNodeLayoutManager = (
     };
 
     try {
-      console.log('🔥🔥🔥 FORCE CACHE CLEAR - THIS IS THE NEW LAYOUT SYSTEM 🔥🔥🔥');
+      console.log('🔥🔥🔥 TIMESTAMP: ' + Date.now() + ' - NEW LAYOUT SYSTEM 🔥🔥🔥');
       console.log('layoutOptions:', layoutOptions);
-      alert('NEW LAYOUT SYSTEM RUNNING!');
+      alert('TIMESTAMP: ' + Date.now() + ' - NEW LAYOUT SYSTEM RUNNING!');
       
       const nodesCopy = nodes.map(node => ({...node}));
       const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
