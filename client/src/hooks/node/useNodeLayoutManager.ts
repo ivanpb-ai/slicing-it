@@ -39,8 +39,9 @@ export const useNodeLayoutManager = (
     };
 
     try {
-      console.log('🚀 CACHE BUSTER: useNodeLayoutManager called with layoutOptions:', layoutOptions);
-      console.log('✅ NEW LAYOUT SYSTEM: Arranging nodes with balanced hierarchical tree layout');
+      console.log('🔥🔥🔥 FORCE CACHE CLEAR - THIS IS THE NEW LAYOUT SYSTEM 🔥🔥🔥');
+      console.log('layoutOptions:', layoutOptions);
+      alert('NEW LAYOUT SYSTEM RUNNING!');
       
       const nodesCopy = nodes.map(node => ({...node}));
       const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
