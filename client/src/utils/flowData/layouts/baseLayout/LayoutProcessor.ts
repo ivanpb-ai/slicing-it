@@ -29,6 +29,8 @@ export const processNodesWithLayout = (
     // Choose layout based on type
     let arrangedNodes: Node[] = [];
     
+    console.log(`LayoutProcessor: Using layout type '${mergedOptions.type}' from options:`, mergedOptions);
+    
     switch (mergedOptions.type) {
       case 'balanced-tree':
         // Use the new balanced tree layout

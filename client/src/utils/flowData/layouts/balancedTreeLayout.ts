@@ -39,7 +39,7 @@ export const arrangeNodesInBalancedTree = (
     marginY = 100
   } = options;
 
-  console.log('Starting balanced tree layout with', nodes.length, 'nodes');
+  console.log('✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with', nodes.length, 'nodes');
 
   // Build parent-child relationships with multiple parent support
   const childrenMap: Record<string, string[]> = {};
