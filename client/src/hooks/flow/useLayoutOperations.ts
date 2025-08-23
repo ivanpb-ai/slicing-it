@@ -30,7 +30,7 @@ export const useLayoutOperations = (
     }
     
     // Show a toast to indicate the operation is starting
-    toast.info('Arranging nodes in ultra-compact layout...', {
+    toast.info('Arranging nodes in balanced hierarchical tree layout...', {
       duration: 2000,
       position: 'top-center'
     });
@@ -58,7 +58,7 @@ export const useLayoutOperations = (
             setNodes(nodesBackup);
             setEdges(edgesBackup);
           } else {
-            toast.success(`Successfully arranged ${visibleNodes.length} nodes in ultra-compact layout with fixed edge lengths`);
+            toast.success(`Successfully arranged ${visibleNodes.length} nodes in balanced hierarchical tree layout`);
           }
         }
       }, 300);
