@@ -29,11 +29,11 @@ export const arrangeNodesInTreeLayout = (
   edges: any[],
   options: TreeLayoutOptions = {}
 ): Node[] => {
-  // MINIMUM: All vertical spacing must be exactly 1px
+  // BALANCED: Use optimal spacing for hierarchical tree layout
   const {
-    horizontalSpacing = 100,
-    verticalSpacing = 10,     // Minimum: 1px edge length
-    levelHeight = 10,         // Minimum: 1px edge length
+    horizontalSpacing = 300,   // Much wider horizontal spacing for balance
+    verticalSpacing = 200,     // Optimal vertical spacing for readability
+    levelHeight = 200,         // Optimal level height for clear hierarchy
     preservePositions = false,
     centerWidth = 1400,
     edgeCrossingReduction = true,
@@ -47,7 +47,7 @@ export const arrangeNodesInTreeLayout = (
       return nodes;
     }
 
-    console.log(`Tree layout starting with ${nodes.length} nodes - ENFORCING MINIMUM: 1px max edge length`);
+    console.log(`🌳 BALANCED TREE: Starting optimized hierarchical layout with ${nodes.length} nodes`);
     const startTime = performance.now();
     
     // 1. Create a fresh copy of nodes without preserving positions
