@@ -5,7 +5,7 @@ import { NodeSpacingData } from './types';
 import { NodeLevelData } from '../types';
 
 /**
- * Position child nodes with PERFECT centering for equal edge lengths
+ * Position child nodes with balanced centering for equal edge lengths
  */
 export function positionChildNodes(
   nodes: Node[],
@@ -50,7 +50,7 @@ export function positionChildNodes(
     return levelA - levelB;
   });
 
-  // Position each parent's children with PERFECT centering
+  // Position each parent's children with balanced spacing
   sortedParentNodes.forEach((parentNode) => {
     const parentId = parentNode.id;
     const parentLevel = nodeLevels[parentId] || 0;
@@ -81,7 +81,7 @@ export function positionChildNodes(
         console.log(`🌳 BALANCED TREE: Parent center: ${parentCenterX}, Child center: ${childNode.position.x}`);
       }
     } else {
-      // Multiple children: PERFECT distribution for equal edge lengths
+      // Multiple children: balanced distribution for equal edge lengths
       const minSpacing = 10; // Minimal spacing between children
       const totalChildrenWidth = children.length * nodeWidth;
       const totalSpacing = minSpacing * (children.length - 1);
