@@ -41,12 +41,30 @@ export const arrangeNodesInBalancedTree = (
 
   console.log('✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with', nodes.length, 'nodes');
 
-  // Build parent-child relationships with multiple parent support
+  // Create node ID set for validation
+  const nodeIds = new Set(nodes.map(node => node.id));
+  console.log('Available node IDs:', Array.from(nodeIds));
+
+  // Filter edges to only include those with valid nodes
+  const validEdges = edges.filter(edge => {
+    const sourceExists = nodeIds.has(edge.source);
+    const targetExists = nodeIds.has(edge.target);
+    
+    if (!sourceExists || !targetExists) {
+      console.warn(`Skipping invalid edge: ${edge.source} -> ${edge.target} (source exists: ${sourceExists}, target exists: ${targetExists})`);
+    }
+    
+    return sourceExists && targetExists;
+  });
+
+  console.log(`Filtered edges: ${edges.length} -> ${validEdges.length} valid edges`);
+
+  // Build parent-child relationships with multiple parent support using only valid edges
   const childrenMap: Record<string, string[]> = {};
   const allParentsMap: Record<string, string[]> = {};
   const primaryParentMap: Record<string, string> = {};
   
-  edges.forEach(edge => {
+  validEdges.forEach(edge => {
     // Track all children
     if (!childrenMap[edge.source]) {
       childrenMap[edge.source] = [];

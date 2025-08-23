@@ -1,0 +1,139 @@
+MainContentWithGraphOperations: edges updated 0
+index-DQks1b25.js:239 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+index-DQks1b25.js:239 Index component: nodes state updated, count: 0
+index-DQks1b25.js:239 Index component: edges state updated, count: 0
+index-DQks1b25.js:238 FlowInstance: ReactFlow initialized
+content.js:361 Background Response (check_popup_status) {data: 'enabled'}
+content.js:379 Background Response (check_my_tracking)
+content.js:238 Background Response (checkHasCashback)
+index-DQks1b25.js:198 useNodeEditor: Initializing canvas with hardcoded graph
+index-DQks1b25.js:198 Loading graph with 10 nodes and 14 edges
+index-DQks1b25.js:198 Resetting all ID counters to 1
+index-DQks1b25.js:198 network clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-DQks1b25.js:198 cell-area clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-DQks1b25.js:198 rrp clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-DQks1b25.js:198 rrpmember clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-DQks1b25.js:198 s-nssai clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-DQks1b25.js:198 dnn clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-DQks1b25.js:198 fiveqi clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-DQks1b25.js:198 5QI Node rendering with data: {type: 'fiveqi', label: '5QI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+index-DQks1b25.js:198 5QI Node fiveQIId: 9
+index-DQks1b25.js:198 Looking up 5QI with ID: "9"
+index-DQks1b25.js:198 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-DQks1b25.js:198 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-DQks1b25.js:198 StandardNodeWrapper: id=network-1750337202178-7623, type=network, nodeNumber=7623
+index-DQks1b25.js:198 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+index-DQks1b25.js:198 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+index-DQks1b25.js:198 StandardNodeWrapper: id=rrp-1750337216606-1118, type=rrp, nodeNumber=1118
+index-DQks1b25.js:198 StandardNodeWrapper: id=rrpmember-1750337236107-7355, type=rrpmember, nodeNumber=7355
+index-DQks1b25.js:198 StandardNodeWrapper: id=rrpmember-1750337242468-2761, type=rrpmember, nodeNumber=2761
+index-DQks1b25.js:198 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+index-DQks1b25.js:198 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+index-DQks1b25.js:198 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+index-DQks1b25.js:198 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+index-DQks1b25.js:198 useLayoutOperations: Arranging layout for 10 nodes
+index-DQks1b25.js:198 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+index-DQks1b25.js:198 Layout options: {type: 'balanced-tree', horizontalSpacing: 250, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+index-DQks1b25.js:198 🔥 DEBUG: arrangeNodes called with options: {type: 'balanced-tree', horizontalSpacing: 250, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+index-DQks1b25.js:198 LayoutProcessor: Using layout type 'balanced-tree' from options: {type: 'balanced-tree', nodeWidth: 180, nodeHeight: 120, horizontalSpacing: 250, verticalSpacing: 180, …}
+index-DQks1b25.js:198 ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 10 nodes
+index-DQks1b25.js:198 Found 1 root nodes
+index-DQks1b25.js:198 Node rrpmember-1750337329538-3864 not found
+p @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+p @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+p @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+p @ index-DQks1b25.js:198
+Vj @ index-DQks1b25.js:198
+Jj @ index-DQks1b25.js:198
+N0 @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+Uk.test.n.<computed> @ index-DQks1b25.js:40
+HN @ index-DQks1b25.js:37
+GN @ index-DQks1b25.js:37
+WN @ index-DQks1b25.js:37
+rg @ index-DQks1b25.js:37
+rw @ index-DQks1b25.js:37
+(anonymous) @ index-DQks1b25.js:37
+dh @ index-DQks1b25.js:40
+_v @ index-DQks1b25.js:37
+od @ index-DQks1b25.js:37
+Fp @ index-DQks1b25.js:37
+a2 @ index-DQks1b25.js:37Understand this error
+index-DQks1b25.js:198 Error building tree structure: Error: Node rrpmember-1750337329538-3864 not found
+    at p (index-DQks1b25.js:198:29638)
+    at index-DQks1b25.js:198:29962
+    at Array.map (<anonymous>)
+    at p (index-DQks1b25.js:198:29955)
+    at index-DQks1b25.js:198:29962
+    at Array.map (<anonymous>)
+    at p (index-DQks1b25.js:198:29955)
+    at index-DQks1b25.js:198:29962
+    at Array.map (<anonymous>)
+    at p (index-DQks1b25.js:198:29955)
+Vj @ index-DQks1b25.js:198
+Jj @ index-DQks1b25.js:198
+N0 @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+Uk.test.n.<computed> @ index-DQks1b25.js:40
+HN @ index-DQks1b25.js:37
+GN @ index-DQks1b25.js:37
+WN @ index-DQks1b25.js:37
+rg @ index-DQks1b25.js:37
+rw @ index-DQks1b25.js:37
+(anonymous) @ index-DQks1b25.js:37
+dh @ index-DQks1b25.js:40
+_v @ index-DQks1b25.js:37
+od @ index-DQks1b25.js:37
+Fp @ index-DQks1b25.js:37
+a2 @ index-DQks1b25.js:37Understand this error
+index-DQks1b25.js:198 Layout arrangement failed, using fallback: Error: Node rrpmember-1750337329538-3864 not found
+    at p (index-DQks1b25.js:198:29638)
+    at index-DQks1b25.js:198:29962
+    at Array.map (<anonymous>)
+    at p (index-DQks1b25.js:198:29955)
+    at index-DQks1b25.js:198:29962
+    at Array.map (<anonymous>)
+    at p (index-DQks1b25.js:198:29955)
+    at index-DQks1b25.js:198:29962
+    at Array.map (<anonymous>)
+    at p (index-DQks1b25.js:198:29955)
+Jj @ index-DQks1b25.js:198
+N0 @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+Uk.test.n.<computed> @ index-DQks1b25.js:40
+HN @ index-DQks1b25.js:37
+GN @ index-DQks1b25.js:37
+WN @ index-DQks1b25.js:37
+rg @ index-DQks1b25.js:37
+rw @ index-DQks1b25.js:37
+(anonymous) @ index-DQks1b25.js:37
+dh @ index-DQks1b25.js:40
+_v @ index-DQks1b25.js:37
+od @ index-DQks1b25.js:37
+Fp @ index-DQks1b25.js:37
+a2 @ index-DQks1b25.js:37Understand this error
+index-DQks1b25.js:198 Using fallback layout due to layout algorithm failure
+xj @ index-DQks1b25.js:198
+Jj @ index-DQks1b25.js:198
+N0 @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+(anonymous) @ index-DQks1b25.js:198
+Uk.test.n.<computed> @ index-DQks1b25.js:40
+HN @ index-DQks1b25.js:37
+GN @ index-DQks1b25.js:37
+WN @ index-DQks1b25.js:37
+rg @ index-DQks1b25.js:37
+rw @ index-DQks1b25.js:37
+(anonymous) @ index-DQks1b25.js:37
+dh @ index-DQks1b25.js:40
+_v @ index-DQks1b25.js:37
+od @ index-DQks1b25.js:37
+Fp @ index-DQks1b25.js:37
+a2 @ index-DQks1b25.js:37Understand this warning
+index-DQks1b25.js:198 After arrangement: Found 10 visible nodes, expected 10
