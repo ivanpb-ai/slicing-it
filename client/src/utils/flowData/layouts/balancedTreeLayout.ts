@@ -75,12 +75,29 @@ export const arrangeNodesInBalancedTree = (
 
   console.log('Found', rootNodes.length, 'root nodes');
 
-  // Build tree structure
-  const buildTreeNode = (nodeId: string, level: number, parent?: TreeNode): TreeNode => {
+  // Build tree structure with cycle detection
+  const buildTreeNode = (nodeId: string, level: number, visited: Set<string> = new Set(), parent?: TreeNode): TreeNode => {
     const node = nodes.find(n => n.id === nodeId);
     if (!node) {
+      console.error(`Node ${nodeId} not found`);
       throw new Error(`Node ${nodeId} not found`);
     }
+
+    // Prevent infinite cycles
+    if (visited.has(nodeId)) {
+      console.warn(`Cycle detected at node ${nodeId}, skipping children`);
+      return {
+        id: nodeId,
+        node,
+        children: [],
+        parent,
+        level,
+        subtreeWidth: 0,
+        position: { x: 0, y: 0 }
+      };
+    }
+
+    visited.add(nodeId);
 
     const treeNode: TreeNode = {
       id: nodeId,
@@ -92,15 +109,26 @@ export const arrangeNodesInBalancedTree = (
       position: { x: 0, y: 0 }
     };
 
-    // Add children
+    // Add children with cycle protection
     const children = childrenMap[nodeId] || [];
-    treeNode.children = children.map(childId => buildTreeNode(childId, level + 1, treeNode));
+    treeNode.children = children.map(childId => 
+      buildTreeNode(childId, level + 1, new Set(visited), treeNode)
+    );
 
     return treeNode;
   };
 
-  // Create tree structures from each root
-  const trees = rootNodes.map(rootNode => buildTreeNode(rootNode.id, 0));
+  // Create tree structures from each root with error handling
+  const trees: TreeNode[] = [];
+  try {
+    for (const rootNode of rootNodes) {
+      const tree = buildTreeNode(rootNode.id, 0);
+      trees.push(tree);
+    }
+  } catch (error) {
+    console.error('Error building tree structure:', error);
+    throw error;
+  }
 
   // Calculate subtree widths (bottom-up)
   const calculateSubtreeWidth = (treeNode: TreeNode): number => {
