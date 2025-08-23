@@ -39,7 +39,7 @@ export const useNodeLayoutManager = (
     };
 
     try {
-      console.log('Arranging nodes with balanced hierarchical tree layout');
+      console.log('🌳 BALANCED TREE: Arranging nodes with balanced hierarchical tree layout');
       
       const nodesCopy = nodes.map(node => ({...node}));
       const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
@@ -60,12 +60,12 @@ export const useNodeLayoutManager = (
       try {
         const fallbackNodes = arrangeNodes(nodes, edges, {
           type: 'grid' as LayoutType,
-          spacing: 100,              // PERFECT COMPACT: Reduced fallback spacing too
+          spacing: 100,              // Fallback grid spacing
           preventOverlap: true,
           verticalSpacing: 1
         });
         setNodes(fallbackNodes);
-        toast.warning('Using perfect compact fallback grid layout');
+        toast.warning('Using fallback grid layout');
       } catch (e) {
         console.error('Failed to apply fallback layout');
         toast.error('Failed to arrange nodes');

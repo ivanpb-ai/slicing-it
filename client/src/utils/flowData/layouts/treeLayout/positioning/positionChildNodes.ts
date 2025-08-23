@@ -60,7 +60,7 @@ export function positionChildNodes(
 
     // ULTRA COMPACT: 5px vertical offset for maximum compactness
     const childY = parentNode.position.y + 180;
-    console.log(`PERFECT Arrange: Positioning children of ${parentId} with 5px offset`);
+    console.log(`🌳 BALANCED TREE: Positioning children of ${parentId} with optimized spacing`);
     
     // Get parent's EXACT center X position (center of the node)
     //const parentCenterX = parentNode.position.x + (nodeWidth / 2);
@@ -77,8 +77,8 @@ export function positionChildNodes(
           x: parentCenterX,
           y: childY
         };
-        console.log(`PERFECT Arrange: Single child ${children[0]} EXACTLY centered under parent at:`, childNode.position);
-        console.log(`PERFECT Arrange: Parent center: ${parentCenterX}, Child center: ${childNode.position.x}`);
+        console.log(`🌳 BALANCED TREE: Single child ${children[0]} centered under parent at:`, childNode.position);
+        console.log(`🌳 BALANCED TREE: Parent center: ${parentCenterX}, Child center: ${childNode.position.x}`);
       }
     } else {
       // Multiple children: PERFECT distribution for equal edge lengths
@@ -107,8 +107,8 @@ export function positionChildNodes(
           y: childY
         };
         
-        console.log(`PERFECT Arrange: Child ${childId} positioned at:`, childNode.position);
-        console.log(`PERFECT Arrange: Child center: ${childCenterX}, Parent center: ${parentCenterX}`);
+        console.log(`🌳 BALANCED TREE: Child ${childId} positioned at:`, childNode.position);
+        console.log(`🌳 BALANCED TREE: Child center: ${childCenterX}, Parent center: ${parentCenterX}`);
         
         // Calculate and verify edge length (for debugging)
         //const parentCenterY = parentNode.position.y + (nodeHeight / 2);
@@ -119,7 +119,7 @@ export function positionChildNodes(
           Math.pow(childCenterX - parentCenterX, 2) + 
           Math.pow(childCenterY - parentCenterY, 2)
         );
-        console.log(`PERFECT Edge length from ${parentId} to ${childId}:`, edgeLength);
+        console.log(`🌳 BALANCED TREE: Edge length from ${parentId} to ${childId}:`, edgeLength);
       });
     }
   });
