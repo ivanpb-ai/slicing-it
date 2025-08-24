@@ -318,6 +318,7 @@ export const arrangeNodesInBalancedTree = (
   });
 
   console.log('Balanced tree layout completed. Positioned', positionedNodes.length, 'nodes');
+  console.log('Final calculated positions before returning:', updatedNodes.map(n => ({ id: n.id, x: n.position.x, y: n.position.y })));
 
   return updatedNodes;
 };

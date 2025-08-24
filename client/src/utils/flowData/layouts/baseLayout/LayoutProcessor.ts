@@ -89,7 +89,8 @@ export const processNodesWithLayout = (
     }
     
     // Apply overlap prevention as a post-processing step if requested
-    if (mergedOptions.preventOverlap) {
+    // Skip overlap prevention for balanced-tree layout to preserve symmetry
+    if (mergedOptions.preventOverlap && mergedOptions.type !== 'balanced-tree') {
       return preventNodeOverlap(
         arrangedNodes, 
         mergedOptions.nodeWidth || 180, 
