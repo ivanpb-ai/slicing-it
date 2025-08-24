@@ -150,8 +150,9 @@ export const arrangeNodesInBalancedTree = (
     const nodesInLevel = nodesByLevel[level];
     const nodeCount = nodesInLevel.length;
     
-    // Calculate Y position for this level
+    // Calculate Y position for this level (ensure proper vertical spacing)
     const y = marginY + level * verticalSpacing;
+    console.log(`Level ${level} -> Y position: ${y}`);
     
     if (level === 0) {
       // Root level: center at origin
@@ -206,8 +207,10 @@ export const arrangeNodesInBalancedTree = (
             nodePositions.push({ nodeId, x: 0 });
           });
         } else if (groupKey === 'multiParent') {
-          // Multiple-parent nodes: position each individually based on their parents
-          siblings.forEach(nodeId => {
+          // Multiple-parent nodes: calculate average position, then spread if multiple siblings
+          if (siblings.length === 1) {
+            // Single multi-parent child: center between parents
+            const nodeId = siblings[0];
             const parents = allParentsMap[nodeId] || [];
             const parentPositions = parents
               .map(parentId => nodePositionMap[parentId])
@@ -215,13 +218,41 @@ export const arrangeNodesInBalancedTree = (
             
             if (parentPositions.length > 0) {
               const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
-              console.log(`Multi-parent child ${nodeId} with parents at:`, parentPositions.map(p => p.x), `-> avgX=${avgX}`);
+              console.log(`Single multi-parent child ${nodeId} with parents at:`, parentPositions.map(p => p.x), `-> avgX=${avgX}`);
               nodePositions.push({ nodeId, x: avgX });
             } else {
-              console.log(`Multi-parent child ${nodeId} with no valid parents -> x=0`);
+              console.log(`Single multi-parent child ${nodeId} with no valid parents -> x=0`);
               nodePositions.push({ nodeId, x: 0 });
             }
-          });
+          } else {
+            // Multiple multi-parent children: find common center and spread around it
+            const allParentPositions: number[] = [];
+            siblings.forEach(nodeId => {
+              const parents = allParentsMap[nodeId] || [];
+              const parentPositions = parents
+                .map(parentId => nodePositionMap[parentId])
+                .filter(pos => pos);
+              parentPositions.forEach(pos => allParentPositions.push(pos.x));
+            });
+            
+            // Calculate center point of all parent positions
+            const centerX = allParentPositions.length > 0 
+              ? allParentPositions.reduce((sum, x) => sum + x, 0) / allParentPositions.length 
+              : 0;
+            
+            // Spread siblings around the center
+            const siblingCount = siblings.length;
+            const totalWidth = (siblingCount - 1) * horizontalSpacing;
+            const startX = centerX - totalWidth / 2;
+            
+            console.log(`Spreading ${siblingCount} multi-parent siblings around center x=${centerX}`);
+            
+            siblings.forEach((nodeId, index) => {
+              const x = startX + index * horizontalSpacing;
+              console.log(`  Multi-parent sibling ${nodeId} -> x=${x}`);
+              nodePositions.push({ nodeId, x });
+            });
+          }
         } else if (siblings.length === 1) {
           // Single child: handle based on its parents
           const nodeId = siblings[0];
