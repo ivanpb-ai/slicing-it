@@ -1,0 +1,99 @@
+MainContentWithGraphOperations: edges updated 0
+index-CoFMaNo9.js:239 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+index-CoFMaNo9.js:239 Index component: nodes state updated, count: 0
+index-CoFMaNo9.js:239 Index component: edges state updated, count: 0
+index-CoFMaNo9.js:238 FlowInstance: ReactFlow initialized
+content.js:361 Background Response (check_popup_status) {data: 'enabled'}
+content.js:379 Background Response (check_my_tracking)
+content.js:238 Background Response (checkHasCashback)
+index-CoFMaNo9.js:198 useNodeEditor: Initializing canvas with hardcoded graph
+index-CoFMaNo9.js:198 Loading graph with 10 nodes and 14 edges
+index-CoFMaNo9.js:198 Resetting all ID counters to 1
+index-CoFMaNo9.js:198 network clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-CoFMaNo9.js:198 cell-area clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-CoFMaNo9.js:198 rrp clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-CoFMaNo9.js:198 rrpmember clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-CoFMaNo9.js:198 s-nssai clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-CoFMaNo9.js:198 dnn clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-CoFMaNo9.js:198 fiveqi clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-CoFMaNo9.js:198 5QI Node rendering with data: {type: 'fiveqi', label: '5QI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+index-CoFMaNo9.js:198 5QI Node fiveQIId: 9
+index-CoFMaNo9.js:198 Looking up 5QI with ID: "9"
+index-CoFMaNo9.js:198 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-CoFMaNo9.js:198 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-CoFMaNo9.js:198 StandardNodeWrapper: id=network-1750337202178-7623, type=network, nodeNumber=7623
+index-CoFMaNo9.js:198 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+index-CoFMaNo9.js:198 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+index-CoFMaNo9.js:198 StandardNodeWrapper: id=rrp-1750337216606-1118, type=rrp, nodeNumber=1118
+index-CoFMaNo9.js:198 StandardNodeWrapper: id=rrpmember-1750337236107-7355, type=rrpmember, nodeNumber=7355
+index-CoFMaNo9.js:198 StandardNodeWrapper: id=rrpmember-1750337242468-2761, type=rrpmember, nodeNumber=2761
+index-CoFMaNo9.js:198 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+index-CoFMaNo9.js:198 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+index-CoFMaNo9.js:198 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+index-CoFMaNo9.js:198 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+index-CoFMaNo9.js:198 useLayoutOperations: Arranging layout for 10 nodes
+index-CoFMaNo9.js:198 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+index-CoFMaNo9.js:198 Layout options: {type: 'balanced-tree', horizontalSpacing: 250, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+index-CoFMaNo9.js:198 🔥 DEBUG: arrangeNodes called with options: {type: 'balanced-tree', horizontalSpacing: 250, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+index-CoFMaNo9.js:198 LayoutProcessor: Using layout type 'balanced-tree' from options: {type: 'balanced-tree', nodeWidth: 180, nodeHeight: 120, horizontalSpacing: 250, verticalSpacing: 180, …}
+index-CoFMaNo9.js:198 ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 10 nodes
+index-CoFMaNo9.js:198 Available node IDs: (10) ['network-1750337202178-7623', 'cell-area-1', 'cell-area-2', 'rrp-1750337216606-1118', 'rrpmember-1750337236107-7355', 'rrpmember-1750337242468-2761', 's-nssai-1', 's-nssai-2', 'dnn-1', 'fiveqi-9']
+index-CoFMaNo9.js:198  Skipping invalid edge: rrp-1750337216606-1118 -> rrpmember-1750337329538-3864 (source exists: true, target exists: false)
+(anonymous) @ index-CoFMaNo9.js:198
+Vj @ index-CoFMaNo9.js:198
+Jj @ index-CoFMaNo9.js:198
+N0 @ index-CoFMaNo9.js:198
+(anonymous) @ index-CoFMaNo9.js:198
+(anonymous) @ index-CoFMaNo9.js:198
+Uk.test.n.<computed> @ index-CoFMaNo9.js:40
+HN @ index-CoFMaNo9.js:37
+GN @ index-CoFMaNo9.js:37
+WN @ index-CoFMaNo9.js:37
+rg @ index-CoFMaNo9.js:37
+rw @ index-CoFMaNo9.js:37
+(anonymous) @ index-CoFMaNo9.js:37
+dh @ index-CoFMaNo9.js:40
+Pv @ index-CoFMaNo9.js:37
+od @ index-CoFMaNo9.js:37
+Fp @ index-CoFMaNo9.js:37
+a2 @ index-CoFMaNo9.js:37
+index-CoFMaNo9.js:198 Filtered edges: 14 -> 13 valid edges
+index-CoFMaNo9.js:198 Found 1 root nodes
+index-CoFMaNo9.js:198 Level assignments: {network-1750337202178-7623: {…}, cell-area-1: {…}, rrp-1750337216606-1118: {…}, rrpmember-1750337236107-7355: {…}, s-nssai-1: {…}, …}
+index-CoFMaNo9.js:198 Balanced tree layout completed. Positioned 10 nodes
+index-CoFMaNo9.js:198  Could not completely resolve all node overlaps after 100 iterations
+Zj @ index-CoFMaNo9.js:198
+Jj @ index-CoFMaNo9.js:198
+N0 @ index-CoFMaNo9.js:198
+(anonymous) @ index-CoFMaNo9.js:198
+(anonymous) @ index-CoFMaNo9.js:198
+Uk.test.n.<computed> @ index-CoFMaNo9.js:40
+HN @ index-CoFMaNo9.js:37
+GN @ index-CoFMaNo9.js:37
+WN @ index-CoFMaNo9.js:37
+rg @ index-CoFMaNo9.js:37
+rw @ index-CoFMaNo9.js:37
+(anonymous) @ index-CoFMaNo9.js:37
+dh @ index-CoFMaNo9.js:40
+Pv @ index-CoFMaNo9.js:37
+od @ index-CoFMaNo9.js:37
+Fp @ index-CoFMaNo9.js:37
+a2 @ index-CoFMaNo9.js:37
+index-CoFMaNo9.js:198 network clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-CoFMaNo9.js:198 cell-area clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-CoFMaNo9.js:198 rrp clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-CoFMaNo9.js:198 rrpmember clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-CoFMaNo9.js:198 s-nssai clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-CoFMaNo9.js:198 dnn clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-CoFMaNo9.js:198 fiveqi clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-CoFMaNo9.js:198 5QI Node rendering with data: {type: 'fiveqi', label: '5QI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+index-CoFMaNo9.js:198 5QI Node fiveQIId: 9
+index-CoFMaNo9.js:198 Looking up 5QI with ID: "9"
+index-CoFMaNo9.js:198 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-CoFMaNo9.js:198 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
+index-CoFMaNo9.js:198 After arrangement: Found 10 visible nodes, expected 10

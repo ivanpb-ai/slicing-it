@@ -136,6 +136,7 @@ export const arrangeNodesInBalancedTree = (
   });
   
   console.log('Level assignments:', nodePositions);
+  console.log('Parent-child relationships:', allParentsMap);
 
   // No need for subtree width calculation in DAG layout
 
@@ -176,24 +177,32 @@ export const arrangeNodesInBalancedTree = (
       nodesInLevel.forEach(nodeId => {
         // Find parent positions for this node
         const parents = allParentsMap[nodeId] || [];
+        console.log(`Positioning node ${nodeId} with parents:`, parents);
         
         if (parents.length === 0) {
           // No parents (orphan): place at origin
+          console.log(`  -> No parents, placing at origin`);
           nodePositions.push({ nodeId, x: 0 });
         } else if (parents.length === 1) {
           // Single parent: align under parent
           const parentPos = nodePositionMap[parents[0]];
-          nodePositions.push({ nodeId, x: parentPos ? parentPos.x : 0 });
+          const x = parentPos ? parentPos.x : 0;
+          console.log(`  -> Single parent ${parents[0]} at x=${parentPos?.x}, placing child at x=${x}`);
+          nodePositions.push({ nodeId, x });
         } else {
           // Multiple parents: center between them
           const parentPositions = parents
             .map(parentId => nodePositionMap[parentId])
             .filter(pos => pos);
           
+          console.log(`  -> Multiple parents:`, parentPositions);
+          
           if (parentPositions.length > 0) {
             const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
+            console.log(`  -> Centering between parents at avgX=${avgX}`);
             nodePositions.push({ nodeId, x: avgX });
           } else {
+            console.log(`  -> No valid parent positions, placing at origin`);
             nodePositions.push({ nodeId, x: 0 });
           }
         }
