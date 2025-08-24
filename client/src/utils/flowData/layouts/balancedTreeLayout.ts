@@ -175,7 +175,7 @@ export const arrangeNodesInBalancedTree = (
       // Non-root levels: group by parent and position siblings symmetrically
       const siblingGroups: Record<string, string[]> = {};
       
-      // Group nodes by their primary parent (for single parent) or by 'multiParent' key (for multiple parents)
+      // Group nodes by their primary parent (except S-NSSAI and DNN which need special multi-parent handling)
       nodesInLevel.forEach(nodeId => {
         const parents = allParentsMap[nodeId] || [];
         let groupKey;
@@ -185,7 +185,13 @@ export const arrangeNodesInBalancedTree = (
         } else if (parents.length === 1) {
           groupKey = parents[0]; // Single parent - group by parent
         } else {
-          groupKey = 'multiParent'; // Multiple parents - separate group for individual positioning
+          // Only use multiParent for S-NSSAI and DNN nodes that need spreading
+          if (nodeId.includes('s-nssai') || nodeId.includes('dnn')) {
+            groupKey = 'multiParent'; 
+          } else {
+            // RRP and other multi-parent nodes: use first parent for grouping
+            groupKey = parents[0];
+          }
         }
         
         if (!siblingGroups[groupKey]) {
@@ -265,7 +271,7 @@ export const arrangeNodesInBalancedTree = (
             console.log(`Single child ${nodeId} under parent ${parents[0]} -> x=${x}`);
             nodePositions.push({ nodeId, x });
           } else {
-            // Multiple parents: center between them
+            // Multiple parents: center between them (for RRP and other nodes)
             const parentPositions = parents
               .map(parentId => nodePositionMap[parentId])
               .filter(pos => pos);
