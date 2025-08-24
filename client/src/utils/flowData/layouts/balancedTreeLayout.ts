@@ -139,11 +139,12 @@ export const arrangeNodesInBalancedTree = (
 
   // No need for subtree width calculation in DAG layout
 
-  // Position nodes by level with perfect symmetry
+  // Position nodes by level with perfect symmetry and parent-child alignment
   const positionedNodes: { id: string; position: { x: number; y: number } }[] = [];
+  const nodePositionMap: Record<string, { x: number; y: number }> = {};
   
-  // Position each level symmetrically
-  Object.keys(nodesByLevel).forEach(levelStr => {
+  // Position each level, considering parent positions for alignment
+  Object.keys(nodesByLevel).sort((a, b) => parseInt(a) - parseInt(b)).forEach(levelStr => {
     const level = parseInt(levelStr);
     const nodesInLevel = nodesByLevel[level];
     const nodeCount = nodesInLevel.length;
@@ -151,23 +152,61 @@ export const arrangeNodesInBalancedTree = (
     // Calculate Y position for this level
     const y = marginY + level * verticalSpacing;
     
-    if (nodeCount === 1) {
-      // Single node: center at origin
-      positionedNodes.push({
-        id: nodesInLevel[0],
-        position: { x: 0, y }
-      });
-    } else {
-      // Multiple nodes: distribute symmetrically around origin
-      const totalWidth = (nodeCount - 1) * horizontalSpacing;
-      const startX = -totalWidth / 2;
-      
-      nodesInLevel.forEach((nodeId, index) => {
-        const x = startX + index * horizontalSpacing;
-        positionedNodes.push({
-          id: nodeId,
-          position: { x, y }
+    if (level === 0) {
+      // Root level: center at origin
+      if (nodeCount === 1) {
+        const position = { x: 0, y };
+        positionedNodes.push({ id: nodesInLevel[0], position });
+        nodePositionMap[nodesInLevel[0]] = position;
+      } else {
+        // Multiple roots: distribute symmetrically
+        const totalWidth = (nodeCount - 1) * horizontalSpacing;
+        const startX = -totalWidth / 2;
+        
+        nodesInLevel.forEach((nodeId, index) => {
+          const position = { x: startX + index * horizontalSpacing, y };
+          positionedNodes.push({ id: nodeId, position });
+          nodePositionMap[nodeId] = position;
         });
+      }
+    } else {
+      // Non-root levels: position based on parent positions
+      const nodePositions: { nodeId: string; x: number }[] = [];
+      
+      nodesInLevel.forEach(nodeId => {
+        // Find parent positions for this node
+        const parents = allParentsMap[nodeId] || [];
+        
+        if (parents.length === 0) {
+          // No parents (orphan): place at origin
+          nodePositions.push({ nodeId, x: 0 });
+        } else if (parents.length === 1) {
+          // Single parent: align under parent
+          const parentPos = nodePositionMap[parents[0]];
+          nodePositions.push({ nodeId, x: parentPos ? parentPos.x : 0 });
+        } else {
+          // Multiple parents: center between them
+          const parentPositions = parents
+            .map(parentId => nodePositionMap[parentId])
+            .filter(pos => pos);
+          
+          if (parentPositions.length > 0) {
+            const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
+            nodePositions.push({ nodeId, x: avgX });
+          } else {
+            nodePositions.push({ nodeId, x: 0 });
+          }
+        }
+      });
+      
+      // Sort by X position for consistent ordering
+      nodePositions.sort((a, b) => a.x - b.x);
+      
+      // Add to positioned nodes
+      nodePositions.forEach(({ nodeId, x }) => {
+        const position = { x, y };
+        positionedNodes.push({ id: nodeId, position });
+        nodePositionMap[nodeId] = position;
       });
     }
   });
