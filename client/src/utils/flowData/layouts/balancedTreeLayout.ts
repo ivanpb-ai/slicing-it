@@ -167,7 +167,7 @@ export const arrangeNodesInBalancedTree = (
   // Calculate subtree widths for all trees
   trees.forEach(tree => calculateSubtreeWidth(tree));
 
-  // Position nodes (top-down)
+  // Position nodes (top-down) with perfect symmetry
   const positionSubtree = (treeNode: TreeNode, centerX: number) => {
     // Position current node at center
     treeNode.position = {
@@ -177,66 +177,46 @@ export const arrangeNodesInBalancedTree = (
 
     if (treeNode.children.length === 0) return;
 
-    // Sort children by subtree width for better balance
-    const sortedChildren = [...treeNode.children].sort((a, b) => b.subtreeWidth - a.subtreeWidth);
-
-    // Calculate positions for children
-    const totalChildrenWidth = treeNode.children.reduce((sum, child) => sum + child.subtreeWidth, 0);
-    const totalSpacing = (treeNode.children.length - 1) * horizontalSpacing;
-    const totalWidth = totalChildrenWidth + totalSpacing;
+    // For perfect symmetry, use consistent spacing and center alignment
+    const childCount = treeNode.children.length;
     
-    let currentX = centerX - totalWidth / 2;
-
-    // For perfect symmetry, use center-out placement
-    const arrangedChildren: TreeNode[] = [];
-    
-    if (sortedChildren.length === 1) {
-      arrangedChildren.push(sortedChildren[0]);
-    } else if (sortedChildren.length === 2) {
-      // For 2 children, place symmetrically
-      arrangedChildren.push(sortedChildren[0], sortedChildren[1]);
+    if (childCount === 1) {
+      // Single child: center under parent
+      positionSubtree(treeNode.children[0], centerX);
     } else {
-      // For more children, place largest in center, then alternate
-      const center = Math.floor(sortedChildren.length / 2);
-      arrangedChildren[center] = sortedChildren[0]; // Largest in center
+      // Multiple children: distribute symmetrically around center
+      const totalChildrenSpacing = (childCount - 1) * horizontalSpacing;
+      const startX = centerX - totalChildrenSpacing / 2;
       
-      let leftIndex = center - 1;
-      let rightIndex = center + 1;
+      // Sort children by their original order for consistency
+      const orderedChildren = [...treeNode.children];
       
-      for (let i = 1; i < sortedChildren.length; i++) {
-        if (i % 2 === 1 && leftIndex >= 0) {
-          arrangedChildren[leftIndex] = sortedChildren[i];
-          leftIndex--;
-        } else if (rightIndex < sortedChildren.length) {
-          arrangedChildren[rightIndex] = sortedChildren[i];
-          rightIndex++;
-        } else if (leftIndex >= 0) {
-          arrangedChildren[leftIndex] = sortedChildren[i];
-          leftIndex--;
-        }
-      }
+      // For even number of children, place symmetrically around center
+      // For odd number, place one at center
+      orderedChildren.forEach((child, index) => {
+        const childX = startX + index * horizontalSpacing;
+        positionSubtree(child, childX);
+      });
     }
-
-    // Position children from left to right
-    arrangedChildren.forEach(child => {
-      const childCenterX = currentX + child.subtreeWidth / 2;
-      positionSubtree(child, childCenterX);
-      currentX += child.subtreeWidth + horizontalSpacing;
-    });
   };
 
-  // Calculate overall layout bounds
-  const totalTreesWidth = trees.reduce((sum, tree) => sum + tree.subtreeWidth, 0);
-  const totalSpacing = (trees.length - 1) * horizontalSpacing * 2;
-  const totalWidth = totalTreesWidth + totalSpacing;
+  // Calculate overall layout bounds and center the entire graph
+  const totalTrees = trees.length;
   
-  // Position each tree
-  let currentTreeX = marginX - totalWidth / 2;
-  trees.forEach(tree => {
-    const treeCenterX = currentTreeX + tree.subtreeWidth / 2;
-    positionSubtree(tree, treeCenterX);
-    currentTreeX += tree.subtreeWidth + horizontalSpacing * 2;
-  });
+  if (totalTrees === 1) {
+    // Single tree: center it perfectly
+    positionSubtree(trees[0], 0);
+  } else {
+    // Multiple trees: distribute symmetrically around center
+    const treeSpacing = horizontalSpacing * 3; // Larger spacing between separate trees
+    const totalTreesSpacing = (totalTrees - 1) * treeSpacing;
+    const startX = -totalTreesSpacing / 2;
+    
+    trees.forEach((tree, index) => {
+      const treeCenterX = startX + index * treeSpacing;
+      positionSubtree(tree, treeCenterX);
+    });
+  }
 
   // Collect all positioned nodes
   const positionedNodes: { id: string; position: { x: number; y: number } }[] = [];
