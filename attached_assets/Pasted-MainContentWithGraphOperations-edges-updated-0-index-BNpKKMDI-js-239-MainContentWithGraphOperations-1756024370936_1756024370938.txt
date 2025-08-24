@@ -1,0 +1,60 @@
+MainContentWithGraphOperations: edges updated 0
+index-BNpKKMDI.js:239 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+index-BNpKKMDI.js:239 Index component: nodes state updated, count: 0
+index-BNpKKMDI.js:239 Index component: edges state updated, count: 0
+index-BNpKKMDI.js:238 FlowInstance: ReactFlow initialized
+content.js:361 Background Response (check_popup_status) Object
+content.js:379 Background Response (check_my_tracking)
+content.js:238 Background Response (checkHasCashback)
+index-BNpKKMDI.js:198 useNodeEditor: Initializing canvas with hardcoded graph
+index-BNpKKMDI.js:198 Loading graph with 10 nodes and 14 edges
+index-BNpKKMDI.js:198 Resetting all ID counters to 1
+index-BNpKKMDI.js:198 network clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-BNpKKMDI.js:198 cell-area clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-BNpKKMDI.js:198 rrp clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-BNpKKMDI.js:198 rrpmember clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-BNpKKMDI.js:198 s-nssai clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-BNpKKMDI.js:198 dnn clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-BNpKKMDI.js:198 fiveqi clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-BNpKKMDI.js:198 5QI Node rendering with data: Object
+index-BNpKKMDI.js:198 5QI Node fiveQIId: 9
+index-BNpKKMDI.js:198 Looking up 5QI with ID: "9"
+index-BNpKKMDI.js:198 Found matching 5QI for ID "9": Object
+index-BNpKKMDI.js:198 Final QoS values for rendering: Object
+index-BNpKKMDI.js:198 StandardNodeWrapper: id=network-1750337202178-7623, type=network, nodeNumber=7623
+index-BNpKKMDI.js:198 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+index-BNpKKMDI.js:198 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+index-BNpKKMDI.js:198 StandardNodeWrapper: id=rrp-1750337216606-1118, type=rrp, nodeNumber=1118
+index-BNpKKMDI.js:198 StandardNodeWrapper: id=rrpmember-1750337236107-7355, type=rrpmember, nodeNumber=7355
+index-BNpKKMDI.js:198 StandardNodeWrapper: id=rrpmember-1750337242468-2761, type=rrpmember, nodeNumber=2761
+index-BNpKKMDI.js:198 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+index-BNpKKMDI.js:198 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+index-BNpKKMDI.js:198 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+index-BNpKKMDI.js:198 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+index-BNpKKMDI.js:198 useLayoutOperations: Arranging layout for 10 nodes
+index-BNpKKMDI.js:198 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+index-BNpKKMDI.js:198 Layout options: Object
+index-BNpKKMDI.js:198 🔥 DEBUG: arrangeNodes called with options: Object
+index-BNpKKMDI.js:198 LayoutProcessor: Using layout type 'balanced-tree' from options: Object
+index-BNpKKMDI.js:198 ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 10 nodes
+index-BNpKKMDI.js:198 Available node IDs: Array(10)
+index-BNpKKMDI.js:198 Skipping invalid edge: rrp-1750337216606-1118 -> rrpmember-1750337329538-3864 (source exists: true, target exists: false)
+(anonymous) @ index-BNpKKMDI.js:198Understand this warning
+index-BNpKKMDI.js:198 Filtered edges: 14 -> 13 valid edges
+index-BNpKKMDI.js:198 Found 1 root nodes
+index-BNpKKMDI.js:198 Balanced tree layout completed. Positioned 33 nodes
+index-BNpKKMDI.js:198 Could not completely resolve all node overlaps after 100 iterations
+Zj @ index-BNpKKMDI.js:198Understand this warning
+index-BNpKKMDI.js:198 network clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-BNpKKMDI.js:198 cell-area clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-BNpKKMDI.js:198 rrp clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-BNpKKMDI.js:198 rrpmember clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+2index-BNpKKMDI.js:198 s-nssai clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-BNpKKMDI.js:198 dnn clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-BNpKKMDI.js:198 fiveqi clip-path: e=>{switch(console.log(e,"clip-path:",YS),e){case"network":return"inset(0% round 16px)";case"cell-area":return"circle(50%)";case"s-nssai":return"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, …
+index-BNpKKMDI.js:198 5QI Node rendering with data: Object
+index-BNpKKMDI.js:198 5QI Node fiveQIId: 9
+index-BNpKKMDI.js:198 Looking up 5QI with ID: "9"
+index-BNpKKMDI.js:198 Found matching 5QI for ID "9": Object
+index-BNpKKMDI.js:198 Final QoS values for rendering: Object
+index-BNpKKMDI.js:198 After arrangement: Found 10 visible nodes, expected 10
