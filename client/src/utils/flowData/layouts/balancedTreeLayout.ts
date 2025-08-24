@@ -206,7 +206,9 @@ export const arrangeNodesInBalancedTree = (
             nodePositions.push({ nodeId, x: 0 });
           });
         } else if (groupKey === 'multiParent') {
-          // Multiple-parent nodes: position each individually based on their specific parents
+          // Multiple-parent nodes: position each individually, but spread if they overlap
+          const calculatedPositions: Array<{ nodeId: string; x: number }> = [];
+          
           siblings.forEach(nodeId => {
             const parents = allParentsMap[nodeId] || [];
             const parentPositions = parents
@@ -216,12 +218,38 @@ export const arrangeNodesInBalancedTree = (
             if (parentPositions.length > 0) {
               const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
               console.log(`Multi-parent child ${nodeId} with parents at:`, parentPositions.map(p => p.x), `-> avgX=${avgX}`);
-              nodePositions.push({ nodeId, x: avgX });
+              calculatedPositions.push({ nodeId, x: avgX });
             } else {
               console.log(`Multi-parent child ${nodeId} with no valid parents -> x=0`);
-              nodePositions.push({ nodeId, x: 0 });
+              calculatedPositions.push({ nodeId, x: 0 });
             }
           });
+          
+          // Check for overlapping positions and spread them if needed
+          if (calculatedPositions.length > 1) {
+            const uniqueXValues = Array.from(new Set(calculatedPositions.map(p => p.x)));
+            if (uniqueXValues.length < calculatedPositions.length) {
+              // Some nodes have the same x position - spread them around the center
+              const centerX = calculatedPositions.reduce((sum, p) => sum + p.x, 0) / calculatedPositions.length;
+              const siblingCount = calculatedPositions.length;
+              const spacing = horizontalSpacing * 0.6; // Smaller spacing to keep them close
+              const totalWidth = (siblingCount - 1) * spacing;
+              const startX = centerX - totalWidth / 2;
+              
+              console.log(`Spreading ${siblingCount} overlapping multi-parent nodes around center x=${centerX}`);
+              calculatedPositions.forEach((item, index) => {
+                const spreadX = startX + index * spacing;
+                console.log(`  Spread multi-parent ${item.nodeId}: ${item.x} -> ${spreadX}`);
+                nodePositions.push({ nodeId: item.nodeId, x: spreadX });
+              });
+            } else {
+              // No overlaps, use calculated positions
+              nodePositions.push(...calculatedPositions);
+            }
+          } else {
+            // Single node, use calculated position
+            nodePositions.push(...calculatedPositions);
+          }
         } else if (siblings.length === 1) {
           // Single child: handle based on its parents
           const nodeId = siblings[0];
