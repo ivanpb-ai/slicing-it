@@ -167,55 +167,82 @@ export const arrangeNodesInBalancedTree = (
   // Calculate subtree widths for all trees
   trees.forEach(tree => calculateSubtreeWidth(tree));
 
-  // Position nodes (top-down) with perfect symmetry
+  // Position nodes with perfect geometric symmetry and uniform edge lengths
   const positionSubtree = (treeNode: TreeNode, centerX: number) => {
-    // Position current node at center
+    // Position current node at exact center
     treeNode.position = {
       x: centerX,
-      y: marginY + treeNode.level * (nodeHeight + verticalSpacing)
+      y: marginY + treeNode.level * verticalSpacing
     };
 
-    if (treeNode.children.length === 0) return;
-
-    // For perfect symmetry, use consistent spacing and center alignment
     const childCount = treeNode.children.length;
-    
+    if (childCount === 0) return;
+
+    // Calculate perfect symmetrical positions for children
     if (childCount === 1) {
-      // Single child: center under parent
+      // Single child: directly below parent at same X
       positionSubtree(treeNode.children[0], centerX);
     } else {
-      // Multiple children: distribute symmetrically around center
-      const totalChildrenSpacing = (childCount - 1) * horizontalSpacing;
-      const startX = centerX - totalChildrenSpacing / 2;
+      // Multiple children: create perfect symmetrical arc
+      // Use uniform spacing to ensure all parent-child edges are same length
+      const uniformSpacing = horizontalSpacing;
       
-      // Sort children by their original order for consistency
-      const orderedChildren = [...treeNode.children];
-      
-      // For even number of children, place symmetrically around center
-      // For odd number, place one at center
-      orderedChildren.forEach((child, index) => {
-        const childX = startX + index * horizontalSpacing;
-        positionSubtree(child, childX);
-      });
+      if (childCount === 2) {
+        // Two children: perfect symmetry around parent
+        const offset = uniformSpacing / 2;
+        positionSubtree(treeNode.children[0], centerX - offset);
+        positionSubtree(treeNode.children[1], centerX + offset);
+      } else if (childCount % 2 === 1) {
+        // Odd number: center child at parent X, others symmetrically
+        const centerIndex = Math.floor(childCount / 2);
+        treeNode.children.forEach((child, index) => {
+          const distanceFromCenter = index - centerIndex;
+          const childX = centerX + distanceFromCenter * uniformSpacing;
+          positionSubtree(child, childX);
+        });
+      } else {
+        // Even number: no center child, symmetrical around parent
+        const halfSpacing = uniformSpacing / 2;
+        treeNode.children.forEach((child, index) => {
+          const distanceFromCenter = index - (childCount - 1) / 2;
+          const childX = centerX + distanceFromCenter * uniformSpacing;
+          positionSubtree(child, childX);
+        });
+      }
     }
   };
 
-  // Calculate overall layout bounds and center the entire graph
+  // Position all trees with perfect centering around origin (0,0)
   const totalTrees = trees.length;
   
   if (totalTrees === 1) {
-    // Single tree: center it perfectly
+    // Single tree: center perfectly at origin
     positionSubtree(trees[0], 0);
   } else {
-    // Multiple trees: distribute symmetrically around center
-    const treeSpacing = horizontalSpacing * 3; // Larger spacing between separate trees
-    const totalTreesSpacing = (totalTrees - 1) * treeSpacing;
-    const startX = -totalTreesSpacing / 2;
+    // Multiple trees: distribute with perfect symmetry around origin
+    const treeSpacing = horizontalSpacing * 4; // Consistent spacing between trees
     
-    trees.forEach((tree, index) => {
-      const treeCenterX = startX + index * treeSpacing;
-      positionSubtree(tree, treeCenterX);
-    });
+    if (totalTrees === 2) {
+      // Two trees: perfect symmetry around origin
+      const offset = treeSpacing / 2;
+      positionSubtree(trees[0], -offset);
+      positionSubtree(trees[1], offset);
+    } else if (totalTrees % 2 === 1) {
+      // Odd number: center tree at origin, others symmetrical
+      const centerIndex = Math.floor(totalTrees / 2);
+      trees.forEach((tree, index) => {
+        const distanceFromCenter = index - centerIndex;
+        const treeX = distanceFromCenter * treeSpacing;
+        positionSubtree(tree, treeX);
+      });
+    } else {
+      // Even number: symmetrical around origin
+      trees.forEach((tree, index) => {
+        const distanceFromCenter = index - (totalTrees - 1) / 2;
+        const treeX = distanceFromCenter * treeSpacing;
+        positionSubtree(tree, treeX);
+      });
+    }
   }
 
   // Collect all positioned nodes
