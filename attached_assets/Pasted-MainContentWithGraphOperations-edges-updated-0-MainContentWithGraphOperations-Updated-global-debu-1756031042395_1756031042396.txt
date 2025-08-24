@@ -1,0 +1,197 @@
+MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ FlowInstance: ReactFlow initialized
+ useNodeEditor: Initializing canvas with hardcoded graph
+ Loading graph with 10 nodes and 14 edges
+ Resetting all ID counters to 1
+2 network clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+4 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+2 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+4 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+4 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+2 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+2 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ StandardNodeWrapper: id=network-1750337202178-7623, type=network, nodeNumber=7623
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ StandardNodeWrapper: id=rrp-1750337216606-1118, type=rrp, nodeNumber=1118
+ StandardNodeWrapper: id=rrpmember-1750337236107-7355, type=rrpmember, nodeNumber=7355
+ StandardNodeWrapper: id=rrpmember-1750337242468-2761, type=rrpmember, nodeNumber=2761
+ StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+ StandardNodeWrapper: id=network-1750337202178-7623, type=network, nodeNumber=7623
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ StandardNodeWrapper: id=rrp-1750337216606-1118, type=rrp, nodeNumber=1118
+ StandardNodeWrapper: id=rrpmember-1750337236107-7355, type=rrpmember, nodeNumber=7355
+ StandardNodeWrapper: id=rrpmember-1750337242468-2761, type=rrpmember, nodeNumber=2761
+ StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+ useLayoutOperations: Arranging layout for 10 nodes
+ ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+ Layout options: Object
+ 🔥 DEBUG: arrangeNodes called with options: Object
+ LayoutProcessor: Using layout type 'balanced-tree' from options: Object
+ ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 10 nodes
+ Available node IDs: Array(10)
+ Skipping invalid edge: rrp-1750337216606-1118 -> rrpmember-1750337329538-3864 (source exists: true, target exists: false)
+Mt.forEach.n.<computed> @ eruda.js:2Understand this warning
+ Filtered edges: 14 -> 13 valid edges
+ Found 1 root nodes
+ Level assignments: Object
+ Parent-child relationships: Object
+ Level 1 sibling groups: Object
+ Spreading 2 siblings around parent network-1750337202178-7623 at x=0
+   Sibling cell-area-1 -> x=-125
+   Sibling cell-area-2 -> x=125
+ Level 2 sibling groups: Object
+ Single child rrp-1750337216606-1118 with multiple parents -> avgX=0
+ Level 3 sibling groups: Object
+ Spreading 2 siblings around parent rrp-1750337216606-1118 at x=0
+   Sibling rrpmember-1750337236107-7355 -> x=-125
+   Sibling rrpmember-1750337242468-2761 -> x=125
+ Level 4 sibling groups: Object
+ Single child s-nssai-1 with multiple parents -> avgX=0
+ Single child s-nssai-2 with multiple parents -> avgX=0
+ Level 5 sibling groups: Object
+ Single child dnn-1 with multiple parents -> avgX=0
+ Level 6 sibling groups: Object
+ Single child fiveqi-9 under parent dnn-1 -> x=0
+ Balanced tree layout completed. Positioned 10 nodes
+ Overlap prevention completed in 7 iterations
+2 network clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+4 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+2 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+4 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+4 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+2 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+2 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ After arrangement: Found 10 visible nodes, expected 10

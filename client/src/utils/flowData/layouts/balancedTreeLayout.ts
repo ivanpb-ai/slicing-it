@@ -174,14 +174,23 @@ export const arrangeNodesInBalancedTree = (
       // Non-root levels: group by parent and position siblings symmetrically
       const siblingGroups: Record<string, string[]> = {};
       
-      // Group nodes by their primary parent
+      // Group nodes by their primary parent (for single parent) or by 'multiParent' key (for multiple parents)
       nodesInLevel.forEach(nodeId => {
         const parents = allParentsMap[nodeId] || [];
-        const primaryParent = parents.length > 0 ? parents[0] : 'orphan';
-        if (!siblingGroups[primaryParent]) {
-          siblingGroups[primaryParent] = [];
+        let groupKey;
+        
+        if (parents.length === 0) {
+          groupKey = 'orphan';
+        } else if (parents.length === 1) {
+          groupKey = parents[0]; // Single parent - group by parent
+        } else {
+          groupKey = 'multiParent'; // Multiple parents - separate group for individual positioning
         }
-        siblingGroups[primaryParent].push(nodeId);
+        
+        if (!siblingGroups[groupKey]) {
+          siblingGroups[groupKey] = [];
+        }
+        siblingGroups[groupKey].push(nodeId);
       });
       
       console.log(`Level ${level} sibling groups:`, siblingGroups);
@@ -189,12 +198,29 @@ export const arrangeNodesInBalancedTree = (
       const nodePositions: { nodeId: string; x: number }[] = [];
       
       // Position each sibling group
-      Object.entries(siblingGroups).forEach(([parentId, siblings]) => {
-        if (parentId === 'orphan') {
+      Object.entries(siblingGroups).forEach(([groupKey, siblings]) => {
+        if (groupKey === 'orphan') {
           // Orphan nodes: place at origin
           siblings.forEach(nodeId => {
             console.log(`Orphan node ${nodeId} -> x=0`);
             nodePositions.push({ nodeId, x: 0 });
+          });
+        } else if (groupKey === 'multiParent') {
+          // Multiple-parent nodes: position each individually based on their parents
+          siblings.forEach(nodeId => {
+            const parents = allParentsMap[nodeId] || [];
+            const parentPositions = parents
+              .map(parentId => nodePositionMap[parentId])
+              .filter(pos => pos);
+            
+            if (parentPositions.length > 0) {
+              const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
+              console.log(`Multi-parent child ${nodeId} with parents at:`, parentPositions.map(p => p.x), `-> avgX=${avgX}`);
+              nodePositions.push({ nodeId, x: avgX });
+            } else {
+              console.log(`Multi-parent child ${nodeId} with no valid parents -> x=0`);
+              nodePositions.push({ nodeId, x: 0 });
+            }
           });
         } else if (siblings.length === 1) {
           // Single child: handle based on its parents
@@ -215,15 +241,16 @@ export const arrangeNodesInBalancedTree = (
             
             if (parentPositions.length > 0) {
               const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
-              console.log(`Single child ${nodeId} with multiple parents -> avgX=${avgX}`);
+              console.log(`Single child ${nodeId} with multiple parents:`, parentPositions.map(p => p.x), `-> avgX=${avgX}`);
               nodePositions.push({ nodeId, x: avgX });
             } else {
+              console.log(`Single child ${nodeId} with no valid parent positions -> x=0`);
               nodePositions.push({ nodeId, x: 0 });
             }
           }
         } else {
-          // Multiple siblings: spread around parent position
-          const parentPos = nodePositionMap[parentId];
+          // Multiple siblings with same single parent: spread around parent position
+          const parentPos = nodePositionMap[groupKey];
           const centerX = parentPos ? parentPos.x : 0;
           
           // Calculate symmetric positions
@@ -231,7 +258,7 @@ export const arrangeNodesInBalancedTree = (
           const totalWidth = (siblingCount - 1) * horizontalSpacing;
           const startX = centerX - totalWidth / 2;
           
-          console.log(`Spreading ${siblingCount} siblings around parent ${parentId} at x=${centerX}`);
+          console.log(`Spreading ${siblingCount} siblings around parent ${groupKey} at x=${centerX}`);
           
           siblings.forEach((nodeId, index) => {
             const x = startX + index * horizontalSpacing;
