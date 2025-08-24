@@ -3,10 +3,10 @@ export const HIERARCHY_LEVELS: { [key: string]: number } = {
   'network': 0,
   'cell-area': 1,
   'rrp': 2,
-  'rrpmember': 3,
-  's-nssai': 4,
-  'dnn': 5,
-  'fiveqi': 6
+  'rrpmember': 2,  // Same level as RRP
+  's-nssai': 3,    // Moved up one level
+  'dnn': 4,        // Moved up one level  
+  'fiveqi': 5      // Moved up one level
 };
 
 export const VERTICAL_SPACING = 150;
