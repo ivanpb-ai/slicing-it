@@ -102,19 +102,37 @@ export const arrangeNodesInBalancedTree = (
     if (visited.has(nodeId)) return;
     visited.add(nodeId);
     
+    // Special case: RRPmember nodes should be at the same level as their RRP parent
+    const node = nodes.find(n => n.id === nodeId);
+    const nodeType = node?.data?.type as string;
+    
+    let actualLevel = level;
+    if (nodeType === 'rrpmember') {
+      // Find the RRP parent and use its level
+      const rrpParent = allParentsMap[nodeId]?.find(parentId => {
+        const parentNode = nodes.find(n => n.id === parentId);
+        return parentNode?.data?.type === 'rrp';
+      });
+      
+      if (rrpParent && nodePositions[rrpParent]) {
+        actualLevel = nodePositions[rrpParent].level;
+        console.log(`Special case: RRPmember ${nodeId} positioned at same level as RRP parent (level ${actualLevel})`);
+      }
+    }
+    
     // Only assign level if it's deeper than current level (handles multiple parents)
-    if (!nodePositions[nodeId] || nodePositions[nodeId].level < level) {
+    if (!nodePositions[nodeId] || nodePositions[nodeId].level < actualLevel) {
       // Remove from old level if reassigning
       if (nodePositions[nodeId]) {
         const oldLevel = nodePositions[nodeId].level;
         nodesByLevel[oldLevel] = nodesByLevel[oldLevel]?.filter(id => id !== nodeId) || [];
       }
       
-      nodePositions[nodeId] = { level, orderInLevel: 0 };
+      nodePositions[nodeId] = { level: actualLevel, orderInLevel: 0 };
       
-      if (!nodesByLevel[level]) nodesByLevel[level] = [];
-      if (!nodesByLevel[level].includes(nodeId)) {
-        nodesByLevel[level].push(nodeId);
+      if (!nodesByLevel[actualLevel]) nodesByLevel[actualLevel] = [];
+      if (!nodesByLevel[actualLevel].includes(nodeId)) {
+        nodesByLevel[actualLevel].push(nodeId);
       }
     }
     
