@@ -153,13 +153,29 @@ export const EXAMPLE_GRAPH = {
         "type": "dnn",
         "label": "DNN Node",
         "parentId": "s-nssai-1",
-        "parentId": "s-nssai-2",
         "nodeId": "dnn-1",
         "dnnId": "1",
         "dnnCustomName": "telia.test.ns"
       },
       "selected": false
     },
+  {
+    "id": "dnn-1",
+    "type": "customNode",
+    "position": {
+      "x": 611.9999999999995,
+      "y": 1355.6666641235352
+    },
+    "data": {
+      "type": "dnn",
+      "label": "DNN Node",
+      "parentId": "s-nssai-2",
+      "nodeId": "dnn-1",
+      "dnnId": "1",
+      "dnnCustomName": "telia.test.ns"
+    },
+    "selected": false
+  },
     {
       "id": "fiveqi-9",
       "type": "customNode",
