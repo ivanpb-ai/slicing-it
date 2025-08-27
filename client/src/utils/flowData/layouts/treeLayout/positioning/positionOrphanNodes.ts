@@ -15,15 +15,15 @@ export function positionOrphanNodes(
   options: TreeLayoutOptions
 ): void {
   const { parentMap } = relationships;
-  const { nodeWidth = 180, nodeHeight = 120, marginY = 18, spacing = 280, verticalSpacing = 1 } = options;
+  const { nodeWidth = 180, nodeHeight = 120, marginY = 100, spacing = 280, verticalSpacing = 200 } = options;
   
   // Find orphan nodes in this level
   const orphanNodes = nodesInLevel.filter(node => !parentMap[node.id]);
   
   if (orphanNodes.length === 0) return;
   
-  // Calculate Y position for this level using EXACTLY 1px (minimum) spacing
-  const y = marginY + level * 1; // MINIMUM: 1px constraint
+  // Calculate Y position for this level using proper vertical spacing
+  const y = marginY + level * verticalSpacing;
   
   // Position orphans at the rightmost part of the canvas
   const usedWidth = Math.max(...Object.values(levelPositions[level]).map(x => x), 0);

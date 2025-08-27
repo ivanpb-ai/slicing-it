@@ -1,0 +1,104 @@
+MainContentWithGraphOperations: edges updated 0
+eruda.js:2 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+eruda.js:2 Index component: nodes state updated, count: 0
+eruda.js:2 Index component: edges state updated, count: 0
+eruda.js:2 MainContentWithGraphOperations: edges updated 0
+eruda.js:2 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+eruda.js:2 Index component: nodes state updated, count: 0
+eruda.js:2 Index component: edges state updated, count: 0
+eruda.js:2 FlowInstance: ReactFlow initialized
+eruda.js:2 [vite] hot updated: /src/components/nodes/rrp/RrpPlmnField.tsx
+2eruda.js:2 [vite] hot updated: /src/index.css?v=92EsWaQCXGns3nXe6x6EV
+eruda.js:2 [vite] hot updated: /src/components/nodes/RrpNode.tsx
+16slicing-it:1  Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
+eruda.js:2 [vite] hot updated: /src/index.css?v=92EsWaQCXGns3nXe6x6EV
+eruda.js:2 [vite] hot updated: /src/components/NodeEditor.tsx
+eruda.js:2  [React Flow]: It looks like you've created a new nodeTypes or edgeTypes object. If this wasn't on purpose please define the nodeTypes/edgeTypes outside of the component or memoize them. Help: https://reactflow.dev/error#002
+Mt.forEach.n.<computed> @ Console.js:61
+devWarn @ index.js:624
+(anonymous) @ index.js:3062
+commitHookEffectListMount @ react-dom.development.js:23189
+commitPassiveMountOnFiber @ react-dom.development.js:24965
+commitPassiveMountEffects_complete @ react-dom.development.js:24930
+commitPassiveMountEffects_begin @ react-dom.development.js:24917
+commitPassiveMountEffects @ react-dom.development.js:24905
+flushPassiveEffectsImpl @ react-dom.development.js:27078
+flushPassiveEffects @ react-dom.development.js:27023
+commitRootImpl @ react-dom.development.js:26974
+commitRoot @ react-dom.development.js:26721
+performSyncWorkOnRoot @ react-dom.development.js:26156
+flushSyncCallbacks @ react-dom.development.js:12042
+flushSync @ react-dom.development.js:26240
+scheduleRefresh @ react-dom.development.js:27834
+(anonymous) @ @react-refresh:228
+performReactRefresh @ @react-refresh:217
+(anonymous) @ @react-refresh:608
+setTimeout
+(anonymous) @ @react-refresh:598
+validateRefreshBoundaryAndEnqueueUpdate @ @react-refresh:648
+(anonymous) @ NodeEditor.tsx:358
+(anonymous) @ client:34
+(anonymous) @ client:218
+(anonymous) @ client:193
+queueUpdate @ client:193
+await in queueUpdate
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+eruda.js:2 [vite] hot updated: /src/index.css?v=92EsWaQCXGns3nXe6x6EV
+eruda.js:2 [vite] hot updated: /src/components/NodeEditor.tsx
+eruda.js:2  Warning: React has detected a change in the order of Hooks called by NodeEditorContent. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://reactjs.org/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useContext                 useContext
+2. useMemo                    useMemo
+3. useMemo                    useMemo
+4. useContext                 useContext
+5. useMemo                    useMemo
+6. useContext                 useContext
+7. useContext                 useContext
+8. useRef                     useRef
+9. useMemo                    useMemo
+10. useSyncExternalStore      useSyncExternalStore
+11. useEffect                 useEffect
+12. useDebugValue             useDebugValue
+13. useDebugValue             useDebugValue
+14. useMemo                   useMemo
+15. useMemo                   useMemo
+16. useRef                    useRef
+17. useState                  useState
+18. useState                  useState
+19. useContext                useContext
+20. useMemo                   useMemo
+21. useMemo                   useMemo
+22. useContext                useContext
+23. useMemo                   useMemo
+24. useContext                useContext
+25. useContext                useContext
+26. useRef                    useRef
+27. useMemo                   useMemo
+28. useSyncExternalStore      useSyncExternalStore
+29. useEffect                 useEffect
+30. useDebugValue             useDebugValue
+31. useDebugValue             useDebugValue
+32. useMemo                   useMemo
+33. useMemo                   useMemo
+34. useCallback               useCallback
+35. useCallback               useCallback
+36. useCallback               useCallback
+37. useState                  useState
+38. useCallback               useCallback
+39. useCallback               useCallback
+40. useCallback               useCallback
+41. useCallback               useCallback
+42. useCallback               useCallback
+43. useCallback               useCallback
+44. useCallback               useCallback
+45. useCallback               useCallback
+46. useCallback               useCallback
+47. useCallback               useCallback
+48. useCallback               useCallback
+49. useCallback               useCallback
+50. useContext                useCallback
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

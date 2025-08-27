@@ -86,7 +86,7 @@ export function positionAllNodes(
       {
         ...options,
         marginY: options.marginY || 80,
-        verticalSpacing: 100  // MINIMUM: Exactly 1px
+        verticalSpacing: 200  // Proper vertical spacing
       }
     );
   });

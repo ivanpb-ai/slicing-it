@@ -29,11 +29,11 @@ export const arrangeNodesInTreeLayout = (
   edges: any[],
   options: TreeLayoutOptions = {}
 ): Node[] => {
-  // MINIMUM: All vertical spacing must be exactly 1px
+  // Use proper spacing for hierarchical tree layout
   const {
-    horizontalSpacing = 100,
-    verticalSpacing = 10,     // Minimum: 1px edge length
-    levelHeight = 10,         // Minimum: 1px edge length
+    horizontalSpacing = 300,
+    verticalSpacing = 200,     // Proper vertical spacing for readability
+    levelHeight = 200,         // Proper level height for clear hierarchy
     preservePositions = false,
     centerWidth = 1400,
     edgeCrossingReduction = true,
@@ -47,7 +47,7 @@ export const arrangeNodesInTreeLayout = (
       return nodes;
     }
 
-    console.log(`Tree layout starting with ${nodes.length} nodes - ENFORCING MINIMUM: 1px max edge length`);
+    console.log(`Tree layout starting with ${nodes.length} nodes - using proper spacing`);
     const startTime = performance.now();
     
     // 1. Create a fresh copy of nodes without preserving positions
@@ -57,7 +57,7 @@ export const arrangeNodesInTreeLayout = (
     const relationships = buildNodeRelationships(initialNodes, edges);
     const { rootNodes } = relationships;
     
-    console.log(`Tree layout: Found ${rootNodes.length} root nodes - applying 1px edge constraint`);
+    console.log(`Tree layout: Found ${rootNodes.length} root nodes - applying proper spacing`);
 
     // 3. Assign levels to all nodes for proper hierarchy
     const levelData = assignNodeLevels(initialNodes, relationships);
@@ -70,7 +70,7 @@ export const arrangeNodesInTreeLayout = (
       sortNodesWithinLevels(levelData, relationships, subtreeData, initialNodes);
     }
 
-    // 6. Position all nodes with MINIMUM 1px spacing
+    // 6. Position all nodes with proper spacing
     const positionedNodes = positionAllNodes(
       initialNodes,
       relationships,
@@ -87,11 +87,11 @@ export const arrangeNodesInTreeLayout = (
       }
     );
     
-    // 7. Apply post-processing with MINIMUM 1px vertical spacing
+    // 7. Apply post-processing with proper vertical spacing
     const finalNodes = processNodesAfterLayout(
       positionedNodes,
       relationships,
-      10 // Minimum: 1px vertical spacing
+      verticalSpacing // Use proper vertical spacing
     );
     console.log(`finalNodes ${finalNodes}`);
 

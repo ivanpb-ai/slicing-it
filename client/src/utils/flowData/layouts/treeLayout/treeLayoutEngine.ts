@@ -57,7 +57,7 @@ export const arrangeNodesInTreeLayout = (
     const relationships = buildNodeRelationships(initialNodes, edges);
     const { rootNodes } = relationships;
     
-    console.log(`Tree layout: Found ${rootNodes.length} root nodes - applying 1px edge constraint`);
+    console.log(`Tree layout: Found ${rootNodes.length} root nodes - applying proper spacing`);
 
     // 3. Assign levels to all nodes for proper hierarchy
     const levelData = assignNodeLevels(initialNodes, relationships);
@@ -70,7 +70,7 @@ export const arrangeNodesInTreeLayout = (
       sortNodesWithinLevels(levelData, relationships, subtreeData, initialNodes);
     }
 
-    // 6. Position all nodes with MINIMUM 1px spacing
+    // 6. Position all nodes with proper spacing
     const positionedNodes = positionAllNodes(
       initialNodes,
       relationships,
@@ -87,11 +87,11 @@ export const arrangeNodesInTreeLayout = (
       }
     );
     
-    // 7. Apply post-processing with MINIMUM 1px vertical spacing
+    // 7. Apply post-processing with proper vertical spacing
     const finalNodes = processNodesAfterLayout(
       positionedNodes,
       relationships,
-      10 // Minimum: 1px vertical spacing
+      verticalSpacing // Use proper vertical spacing (200px)
     );
     console.log(`finalNodes ${finalNodes}`);
 

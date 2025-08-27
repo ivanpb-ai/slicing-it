@@ -14,7 +14,7 @@ export const arrangeNodesVertically = (
   } = {}
 ): Node[] => {
   const {
-    spacing = 1, // MINIMUM: Max 1px edge length
+    spacing = 250, // Proper spacing for readability
     marginX = 300,
     marginY = 150,
     nodeWidth = 180,
@@ -42,7 +42,7 @@ export const arrangeNodesVertically = (
     nodesByLevel,
     hierarchyInfo,
     {
-      spacing: 1, // MINIMUM: Max 1px edge length
+      spacing: 250, // Proper spacing for readability
       marginX,
       marginY,
       nodeWidth,
