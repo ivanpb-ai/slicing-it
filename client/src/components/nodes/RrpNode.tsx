@@ -103,32 +103,17 @@ export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
         )}
       </div>
 
-      {/* PLMN editable */}
-      <div className="w-full flex items-center gap-1 mb-2">
-        {/* <span className="text-xs text-gray-500">PLMN</span> */}
-        {isEditingPLMN ? (
-          <input
-            className="w-24 px-1 py-0.5 border rounded"
-            value={plmn}
-            onChange={handlePLMNChange}
-            onBlur={handlePLMNBlur}
-            autoFocus
-            maxLength={12}
-            placeholder="Enter PLMN"
-          />
-        ) : (
-          <span
-            tabIndex={0}
-            className="ml-1 cursor-pointer outline-none hover:underline focus:ring text-blue-600 text-xs"
-            onClick={handlePLMNClick}
-            onKeyDown={e => {
-              if (e.key === "Enter" || e.key === " ") handlePLMNClick();
-            }}
-            title="Click to add PLMN and create RRPmember"
-          >
-            {plmn ? plmn : "Add PLMN (creates RRPmember)"}
-          </span>
-        )}
+      {/* PLMN Field */}
+      <div className="w-full text-center mb-2">
+        <RrpPlmnField
+          label="PLMN"
+          value={plmn}
+          isEditing={isEditingPLMN}
+          onChange={handlePLMNChange}
+          onBlur={handlePLMNBlur}
+          onClick={handlePLMNClick}
+          placeholder="Add PLMN (creates RRPmember)"
+        />
       </div>
 
       {/* RrpBands: pass all props */}
