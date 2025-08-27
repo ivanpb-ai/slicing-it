@@ -6,7 +6,7 @@ interface RrpPlmnFieldProps {
   value: string;
   isEditing: boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlur: () => void;
+  onBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
   onClick: () => void;
   placeholder: string;
 }

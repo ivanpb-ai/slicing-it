@@ -77,20 +77,21 @@ const position = findNonOverlappingPosition(
   );
 
   // Handle blur (when PLMN editing ends)
-  const handlePLMNBlur = useCallback(() => {
-    console.log(`useRrpPlmn: PLMN blur event - value: "${plmn}", nodeId: "${data.nodeId}"`);
+  const handlePLMNBlur = useCallback((e: React.FocusEvent<HTMLInputElement>) => {
+    const currentValue = e.target.value;
+    console.log(`useRrpPlmn: PLMN blur event - value: "${currentValue}", nodeId: "${data.nodeId}"`);
     setIsEditingPLMN(false);
 
     // Create child node when PLMN is present, and parent nodeId exists
-    if (plmn && plmn.trim() !== '' && data.nodeId) {
+    if (currentValue && currentValue.trim() !== '' && data.nodeId) {
       console.log(`useRrpPlmn: Calling createRrpMemberNode for PLMN`);
-      createRrpMemberNode(plmn, data.nodeId, data.type);
+      createRrpMemberNode(currentValue, data.nodeId, data.type);
     } else {
       console.log(
-        `useRrpPlmn: Not creating RRPmember for PLMN - plmn: "${plmn}", nodeId: "${data.nodeId}"`
+        `useRrpPlmn: Not creating RRPmember for PLMN - plmn: "${currentValue}", nodeId: "${data.nodeId}"`
       );
     }
-  }, [plmn, data.nodeId, createRrpMemberNode, data.type]);
+  }, [data.nodeId, createRrpMemberNode, data.type]);
 
   // Enter PLMN edit mode (on click)
   const handlePLMNClick = useCallback(() => {
