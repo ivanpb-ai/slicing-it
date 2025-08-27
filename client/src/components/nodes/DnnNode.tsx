@@ -8,6 +8,7 @@ interface DnnNodeProps {
 }
 
 const DnnNode = memo(({ data }: DnnNodeProps) => {
+  console.log('🔴 DNN COMPONENT LOADED - nodeId:', data.nodeId, 'dnnCustomName:', data.dnnCustomName, 'full data:', data);
   const [isEditing, setIsEditing] = useState(false);
   const [customName, setCustomName] = useState(data.dnnCustomName || '');
   
