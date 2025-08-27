@@ -9,6 +9,7 @@ import { SavedGraph } from '../hooks/types';
 import type { GraphData } from '../services/storage/GraphLocalStorageService';
 import { GraphLocalStorageService } from '../services/storage/GraphLocalStorageService';
 import { GraphExportImportService } from '../services/export/GraphExportImportService';
+import { GraphNodeProcessor } from '../services/processing/GraphNodeProcessor';
 import { NodeEditorProvider } from '../contexts/NodeEditorContext';
 import { toast } from 'sonner';
 
@@ -170,13 +171,19 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
       }
       
-      // Set nodes first
+      // Process the nodes and edges properly before loading
+      const processedNodes = GraphNodeProcessor.prepareNodesForLoading(graphData.nodes || []);
+      const processedEdges = GraphNodeProcessor.prepareEdgesForLoading(graphData.edges || []);
+      
+      console.log(`Processed ${processedNodes.length} nodes and ${processedEdges.length} edges for loading`);
+      
+      // Set processed nodes first
       setTimeout(() => {
-        setNodes(graphData.nodes || []);
+        setNodes(processedNodes);
         
-        // Then set edges with delay to ensure nodes are rendered
+        // Then set processed edges with delay to ensure nodes are rendered
         setTimeout(() => {
-          setEdges(graphData.edges || []);
+          setEdges(processedEdges);
           
           // Fit view after loading
           setTimeout(() => {
