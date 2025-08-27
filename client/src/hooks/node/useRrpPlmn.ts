@@ -16,6 +16,7 @@ export const useRrpPlmn = (
   // Handle change in the PLMN input field
   const handlePLMNChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
+      console.log('useRrpPlmn: PLMN value changed:', e.target.value);
       setPLMN(e.target.value);
     },
     []
@@ -24,10 +25,12 @@ export const useRrpPlmn = (
   // Handle blur (when PLMN editing ends)
   const handlePLMNBlur = useCallback((e: React.FocusEvent<HTMLInputElement>) => {
     const currentValue = e.target.value;
+    console.log('useRrpPlmn: PLMN blur event, value:', currentValue);
     setIsEditingPLMN(false);
 
     // Create child node when PLMN is present, and parent nodeId exists
     if (currentValue && currentValue.trim() !== '' && data.nodeId) {
+      console.log('useRrpPlmn: Creating RRP-member node...');
       if (reactFlowInstance) {
         const existingNodes = reactFlowInstance.getNodes();
         const parentNode = existingNodes.find(n => n.id === data.nodeId);
@@ -39,14 +42,20 @@ export const useRrpPlmn = (
             y: parentNode.position.y + 350
           };
           
+          console.log('useRrpPlmn: Calling createChildNode with position:', childPosition);
           createChildNode('rrpmember', childPosition, data.nodeId, currentValue);
+        } else {
+          console.warn('useRrpPlmn: Parent node not found');
         }
       }
+    } else {
+      console.log('useRrpPlmn: Not creating node - empty value or missing nodeId');
     }
   }, [data.nodeId, createChildNode, reactFlowInstance]);
 
   // Enter PLMN edit mode (on click)
   const handlePLMNClick = useCallback(() => {
+    console.log('useRrpPlmn: PLMN click handler called');
     setIsEditingPLMN(true);
   }, []);
 
