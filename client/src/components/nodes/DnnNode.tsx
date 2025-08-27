@@ -16,7 +16,13 @@ const DnnNode = memo(({ data }: DnnNodeProps) => {
   
   // Update local state when the prop changes (but not on every render)
   useEffect(() => {
+    console.log('DNN useEffect dnnCustomName:', { 
+      dataDnnCustomName: data.dnnCustomName, 
+      prevName: prevCustomNameRef.current, 
+      currentLocalState: customName 
+    });
     if (data.dnnCustomName !== prevCustomNameRef.current) {
+      console.log('DNN: Setting customName from data:', data.dnnCustomName);
       setCustomName(data.dnnCustomName || '');
       prevCustomNameRef.current = data.dnnCustomName;
     }
@@ -24,7 +30,13 @@ const DnnNode = memo(({ data }: DnnNodeProps) => {
   
   // Additional effect to ensure sync on component mount/data object changes
   useEffect(() => {
+    console.log('DNN useEffect data object changed:', { 
+      dnnCustomName: data.dnnCustomName, 
+      currentCustomName: customName,
+      nodeId: data.nodeId 
+    });
     if (data.dnnCustomName && customName !== data.dnnCustomName) {
+      console.log('DNN: Force syncing customName to:', data.dnnCustomName);
       setCustomName(data.dnnCustomName);
     }
   }, [data]);
