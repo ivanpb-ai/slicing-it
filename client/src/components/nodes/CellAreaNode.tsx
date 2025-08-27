@@ -17,14 +17,17 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
   );
   const [notes, setNotes] = useState(data.notes || "");
 
-  // Effect to set default description if not provided
+  // Sync local state with loaded data, but don't override existing saved data
   useEffect(() => {
-    if (!data.cellAreaDescription) {
+    if (data.cellAreaDescription !== undefined) {
+      setCellDescription(data.cellAreaDescription);
+    } else if (!data.cellAreaDescription) {
+      // Only set default if no saved data exists
       const newDescription = "Cell Area Description";
       setCellDescription(newDescription);
       data.cellAreaDescription = newDescription;
     }
-  }, [data]);
+  }, [data.cellAreaDescription]);
 
   // Ensure visibility and store node ID reference
   useEffect(() => {

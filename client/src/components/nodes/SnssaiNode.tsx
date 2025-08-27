@@ -1,5 +1,5 @@
 
-import { useState, useCallback, memo } from "react";
+import { useState, useCallback, memo, useEffect, useRef } from "react";
 import { Handle, Position } from "@xyflow/react";
 import { NodeData } from "../../types/nodeTypes";
 
@@ -10,6 +10,25 @@ interface SnssaiNodeProps {
 const SnssaiNode = memo(({ data }: SnssaiNodeProps) => {
   const [sd, setSd] = useState(data.sd || '');
   const [sst, setSst] = useState(data.sst || '');
+  
+  // Use refs to track previous values and sync with loaded data
+  const prevSdRef = useRef(data.sd);
+  const prevSstRef = useRef(data.sst);
+  
+  // Update local state when the data props change (e.g., after loading)
+  useEffect(() => {
+    if (data.sd !== prevSdRef.current) {
+      setSd(data.sd || '');
+      prevSdRef.current = data.sd;
+    }
+  }, [data.sd]);
+  
+  useEffect(() => {
+    if (data.sst !== prevSstRef.current) {
+      setSst(data.sst || '');
+      prevSstRef.current = data.sst;
+    }
+  }, [data.sst]);
 
   const handleSdChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
