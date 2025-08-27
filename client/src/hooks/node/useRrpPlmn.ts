@@ -92,10 +92,10 @@ const position = findNonOverlappingPosition(
         const parentNode = existingNodes.find(n => n.id === data.nodeId);
         
         if (parentNode) {
-          // Position RRP-member at level 3 (RRP is at level 2)
+          // Position RRP-member directly below RRP with longer edge
           const childPosition = {
-            x: parentNode.position.x,
-            y: parentNode.position.y + 250  // Proper vertical spacing for hierarchy
+            x: parentNode.position.x,  // Directly centered under parent
+            y: parentNode.position.y + 350  // Longer vertical spacing for better visual separation
           };
           
           console.log(`useRrpPlmn: Calling createChildNode with PLMN: "${currentValue}" at position:`, childPosition);
