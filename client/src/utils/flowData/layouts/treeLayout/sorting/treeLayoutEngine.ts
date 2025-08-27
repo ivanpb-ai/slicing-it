@@ -115,7 +115,7 @@ export const arrangeNodesInTreeLayout = (
     const childXs = childIds
       .map(id => nodeMap.get(id))
       .filter(Boolean)
-      .map(child => child.position.x);
+      .map(child => child!.position.x);
 
     if (childXs.length === 0) continue;
     console.log(`childXs ${childXs}`);
@@ -124,8 +124,8 @@ export const arrangeNodesInTreeLayout = (
     const minX = Math.min(...childXs);
     const maxX = Math.max(...childXs);
     const parentNode = nodeMap.get(parentId);
-    console.log(`parentNode pos x ${parentNode.position.x}`);
     if (parentNode) {
+      console.log(`parentNode pos x ${parentNode.position.x}`);
       parentNode.position.x = (minX + maxX) / 2;
     }
   }
