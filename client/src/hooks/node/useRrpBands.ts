@@ -1,8 +1,10 @@
 
 import { useState, useCallback } from "react";
 import { NodeData, RrpBand } from "../../types/nodeTypes";
+import { useNodeEditorContext } from "../../contexts/NodeEditorContext";
 
 export const useRrpBands = (data: NodeData) => {
+  const { updateNodeData } = useNodeEditorContext();
   const [rrpBands, setRrpBands] = useState<RrpBand[]>(data.rrpBands || []);
   const [editingBandIndex, setEditingBandIndex] = useState<number | null>(null);
   const [editingField, setEditingField] = useState<'name' | 'dl' | 'ul' | null>(null);
@@ -12,11 +14,11 @@ export const useRrpBands = (data: NodeData) => {
     const newBand: RrpBand = { name: '', dl: 50, ul: 50 };
     const newBands = [...rrpBands, newBand];
     setRrpBands(newBands);
-    data.rrpBands = newBands;
+    updateNodeData(data.nodeId, { ...data, rrpBands: newBands });
     setEditingBandIndex(newBands.length - 1);
     setEditingField('name');
     setEditValue('');
-  }, [rrpBands, data]);
+  }, [rrpBands, data, updateNodeData]);
 
   const handleBandFieldEdit = useCallback((index: number, field: 'name' | 'dl' | 'ul') => {
     setEditingBandIndex(index);
@@ -40,19 +42,19 @@ export const useRrpBands = (data: NodeData) => {
         }
       }
       setRrpBands(newBands);
-      data.rrpBands = newBands;
+      updateNodeData(data.nodeId, { ...data, rrpBands: newBands });
     }
     setEditingBandIndex(null);
     setEditingField(null);
-  }, [editingBandIndex, editingField, editValue, rrpBands, data]);
+  }, [editingBandIndex, editingField, editValue, rrpBands, data, updateNodeData]);
 
   const handleRemoveBand = useCallback((index: number) => {
     const newBands = rrpBands.filter((_, i) => i !== index);
     setRrpBands(newBands);
-    data.rrpBands = newBands;
+    updateNodeData(data.nodeId, { ...data, rrpBands: newBands });
     setEditingBandIndex(null);
     setEditingField(null);
-  }, [rrpBands, data]);
+  }, [rrpBands, data, updateNodeData]);
 
   return {
     rrpBands,
