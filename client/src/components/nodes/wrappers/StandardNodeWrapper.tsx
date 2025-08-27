@@ -98,7 +98,7 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
     case "rrp":
       return (
         <div className={className} style={style}>
-          <RrpNode id={id} data={{ ...data, nodeNumber }} />
+          <RrpNode data={{ ...data, nodeNumber }} />
         </div>
       );
     case "rrpmember":
@@ -114,6 +114,7 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
         </div>
       );
     case "dnn":
+      console.log(`StandardNodeWrapper: Rendering DNN node with id=${id}, nodeNumber=${nodeNumber}`);
       return (
         <div className={className} style={style}>
           <DnnNode data={{ ...data, nodeNumber }} />
