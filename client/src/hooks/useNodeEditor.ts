@@ -172,6 +172,17 @@ export const useNodeEditor = () => {
     }
   }, [reactFlowInstance]);
 
+  // Update node data function
+  const updateNodeData = useCallback((id: string, newData: any) => {
+    setNodes((nds) => 
+      nds.map((node) => 
+        node.id === id 
+          ? { ...node, data: { ...node.data, ...newData } }
+          : node
+      )
+    );
+  }, []);
+
   return {
     nodes,
     edges,
@@ -184,6 +195,7 @@ export const useNodeEditor = () => {
     selectedElements,
     addNode,
     createChildNode,
+    updateNodeData,
     deleteSelected,
     duplicateSelected: duplicateSelectedNodes,
     clearCanvas,

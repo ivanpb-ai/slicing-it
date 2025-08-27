@@ -44,6 +44,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     selectedElements,
     addNode,
     createChildNode,
+    updateNodeData,
     deleteSelected,
     duplicateSelected,
     clearCanvas,
@@ -313,7 +314,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   }, [nodes, edges, reactFlowInstance, setNodes, setEdges]);
 
   return (
-    <NodeEditorProvider createChildNode={createChildNode}>
+    <NodeEditorProvider createChildNode={createChildNode} updateNodeData={updateNodeData}>
       <div ref={reactFlowWrapper} className="h-full w-full">
         <FlowInstance
           nodes={nodes}
