@@ -99,19 +99,21 @@ export const useCanvasOperations = (
       return;
     }
     
-    toast.info('Arranging nodes in compact grid layout by type...');
+    toast.info('Arranging nodes in balanced hierarchical tree layout...');
     
     try {
-      // Use the new grid row layout algorithm with 80% smaller grid squares and fixed ~100px edge lengths
+      // Use balanced tree layout with proper spacing for readability
       const arrangedNodes = arrangeNodes(nodes, edges, {
-        type: 'gridrows',
-        spacing: 10,         // Reduced from 50
-        nodeWidth: 40,       // Reduced from 180
-        nodeHeight: 40,      // Reduced from 120
-        marginX: 20,         // Reduced from 100
-        marginY: 16,         // Reduced from 80
+        type: 'balanced-tree',
+        spacing: 250,        // Proper spacing for readability
+        nodeWidth: 180,      // Standard node width
+        nodeHeight: 120,     // Standard node height
+        marginX: 400,        // Proper margin
+        marginY: 100,        // Proper margin
+        horizontalSpacing: 300,
+        verticalSpacing: 200,
         preventOverlap: true,
-        edgeShortenFactor: 0.55 // Fixed edge length of approximately 100px (55% shortening)
+        edgeShortenFactor: 0.9
       });
       
       if (!arrangedNodes || arrangedNodes.length === 0) {
@@ -141,7 +143,7 @@ export const useCanvasOperations = (
       // Set the nodes with the updated positions
       setNodes(updatedNodes);
       
-      toast.success('Nodes arranged in compact grid layout by type');
+      toast.success('Nodes arranged in balanced hierarchical tree layout');
       
       // Dispatch event for further processing
       setTimeout(() => {
