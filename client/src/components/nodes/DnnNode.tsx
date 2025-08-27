@@ -2,13 +2,14 @@
 import { useState, useCallback, memo, useRef, useEffect } from "react";
 import { Handle, Position } from "@xyflow/react";
 import { NodeData } from "../../types/nodeTypes";
+import { useNodeEditorContext } from "../../contexts/NodeEditorContext";
 
 interface DnnNodeProps {
   data: NodeData;
 }
 
 const DnnNode = memo(({ data }: DnnNodeProps) => {
-  console.log('🔴 DNN COMPONENT LOADED - nodeId:', data.nodeId, 'dnnCustomName:', data.dnnCustomName, 'full data:', data);
+  const { updateNodeData } = useNodeEditorContext();
   const [isEditing, setIsEditing] = useState(false);
   const [customName, setCustomName] = useState(data.dnnCustomName || '');
   
@@ -46,9 +47,9 @@ const DnnNode = memo(({ data }: DnnNodeProps) => {
     const newValue = e.target.value;
     setCustomName(newValue);
     
-    // Safe to update data in an event handler
-    data.dnnCustomName = newValue;
-  }, [data]);
+    // Use updateNodeData to properly persist the change
+    updateNodeData(data.nodeId, { ...data, dnnCustomName: newValue });
+  }, [data, updateNodeData]);
 
   const handleBlur = useCallback(() => {
     setIsEditing(false);
