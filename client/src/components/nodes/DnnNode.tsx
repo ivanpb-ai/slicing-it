@@ -8,7 +8,6 @@ interface DnnNodeProps {
 }
 
 const DnnNode = memo(({ data }: DnnNodeProps) => {
-  console.log('🔵 DNN COMPONENT STARTING - nodeId:', data.nodeId, 'type:', data.type);
   const [isEditing, setIsEditing] = useState(false);
   const [customName, setCustomName] = useState(data.dnnCustomName || '');
   

@@ -16,12 +16,14 @@ export class GraphNodeProcessor {
         x: typeof node.position?.x === 'number' ? node.position.x : 0,
         y: typeof node.position?.y === 'number' ? node.position.y : 0
       },
-      // Ensure data field is properly structured
+      // Ensure data field is properly structured while preserving all existing fields
       data: {
         ...(node.data || {}),
+        // Only override these fields if they're missing, but preserve all other fields
         label: node.data?.label || node.id || 'Unnamed Node',
         type: node.data?.type || 'generic',
         description: node.data?.description || 'Node'
+        // This preserves dnnCustomName, snssaiCustomName, etc.
       }
     }));
   }
