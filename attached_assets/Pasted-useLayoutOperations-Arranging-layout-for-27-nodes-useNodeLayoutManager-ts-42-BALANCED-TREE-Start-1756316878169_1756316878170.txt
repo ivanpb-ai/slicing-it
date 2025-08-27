@@ -1,0 +1,54 @@
+useLayoutOperations: Arranging layout for 27 nodes
+useNodeLayoutManager.ts:42 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+useNodeLayoutManager.ts:43 Layout options: {type: 'balanced-tree', horizontalSpacing: 250, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+index.ts:17 🔥 DEBUG: arrangeNodes called with options: {type: 'balanced-tree', horizontalSpacing: 250, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+useNodeLayoutManager.ts:62  Layout error: TypeError: getDefaultLayoutOptions is not a function
+    at processNodesWithLayout (LayoutProcessor.ts:25:26)
+    at arrangeNodes (index.ts:23:10)
+    at useNodeLayoutManager.ts:46:29
+    at useLayoutOperations.ts:44:7
+    at overrideProps.<computed> (slot.tsx:140:26)
+    at HTMLUnknownElement.callCallback2 (react-dom.development.js:4164:14)
+    at Object.invokeGuardedCallbackDev (react-dom.development.js:4213:16)
+    at invokeGuardedCallback (react-dom.development.js:4277:31)
+    at invokeGuardedCallbackAndCatchFirstError (react-dom.development.js:4291:25)
+    at executeDispatch (react-dom.development.js:9041:3)
+(anonymous) @ useNodeLayoutManager.ts:62
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+index.ts:17 🔥 DEBUG: arrangeNodes called with options: {type: 'grid', spacing: 250, preventOverlap: true, verticalSpacing: 200, horizontalSpacing: 300, …}
+useNodeLayoutManager.ts:79  Failed to apply fallback layout
+(anonymous) @ useNodeLayoutManager.ts:79
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+useLayoutOperations.ts:50 After arrangement: Found 27 visible nodes, expected 27

@@ -1,7 +1,7 @@
 
 import { LayoutOptions } from './LayoutTypes';
 
-export const getDefaultLayoutOptions = {
+export const getDefaultLayoutOptions: LayoutOptions = {
   type: 'balanced-tree',
   nodeWidth: 180,          // match your node size
   nodeHeight: 120,
