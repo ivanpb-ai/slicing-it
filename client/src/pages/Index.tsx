@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import Header from "@/components/layout/Header";
 import MainContent from "@/components/layout/MainContent";
 import { toast } from "sonner";
+import { removeOrphanedEdges } from "@/utils/edgeCleanup";
 
 const Index = () => {
   const [nodes, setNodes] = useState<Node[]>([]);
@@ -55,6 +56,19 @@ const Index = () => {
     }
   }, [nodes]);
   
+  // Clean up orphaned edges when nodes or edges change
+  useEffect(() => {
+    if (nodes.length > 0 && edges.length > 0) {
+      const cleanedEdges = removeOrphanedEdges(edges, nodes);
+      if (cleanedEdges.length !== edges.length) {
+        const removedCount = edges.length - cleanedEdges.length;
+        console.log(`Automatically removed ${removedCount} orphaned edges`);
+        setEdges(cleanedEdges);
+        toast.success(`Cleaned up ${removedCount} orphaned edges`);
+      }
+    }
+  }, [nodes, edges]);
+
   // Debug effect to monitor edges changes
   useEffect(() => {
     console.log(`Index component: edges state updated, count: ${edges.length}`);

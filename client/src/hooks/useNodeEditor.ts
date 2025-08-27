@@ -8,6 +8,7 @@ import { useEdgeCreation } from './edge/useEdgeCreation';
 import { useNodeSelection } from './node/useNodeSelection';
 import { useNodeDuplication } from './node/useNodeDuplication';
 import { resetCounters} from '../utils/flowData/idCounters';
+import { cleanupOrphanedEdges } from '../utils/edgeCleanup';
 
 import { EXAMPLE_GRAPH } from '../data/exampleGraph';
 
@@ -105,6 +106,16 @@ export const useNodeEditor = () => {
     duplicateSelected();
   }, [duplicateSelected]);
 
+  // Clean up orphaned edges
+  const cleanupEdges = useCallback(() => {
+    const removedCount = cleanupOrphanedEdges(nodes, edges, setEdges);
+    if (removedCount > 0) {
+      toast.success(`Removed ${removedCount} orphaned edges`);
+    } else {
+      toast.info('No orphaned edges found');
+    }
+  }, [nodes, edges]);
+
   const clearCanvas = useCallback(() => {
     setNodes([]);
     setEdges([]);
@@ -199,6 +210,7 @@ export const useNodeEditor = () => {
     deleteSelected,
     duplicateSelected: duplicateSelectedNodes,
     clearCanvas,
+    cleanupEdges,
     initializeCanvas
   };
 };
