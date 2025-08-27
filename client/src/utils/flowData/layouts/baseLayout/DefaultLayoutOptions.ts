@@ -12,6 +12,6 @@ export const getDefaultLayoutOptions: LayoutOptions = {
   preventOverlap: true,
   edgeShortenFactor: 0.95, // optimal edge factor for balanced tree
   minNodeDistance: 10,     // minimum gap between nodes
-  levelHeight: 1,
+  levelHeight: 200,
   maxIterations: 100
 };
