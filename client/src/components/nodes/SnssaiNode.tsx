@@ -2,12 +2,14 @@
 import { useState, useCallback, memo, useEffect, useRef } from "react";
 import { Handle, Position } from "@xyflow/react";
 import { NodeData } from "../../types/nodeTypes";
+import { useNodeEditorContext } from "../../contexts/NodeEditorContext";
 
 interface SnssaiNodeProps {
   data: NodeData;
 }
 
 const SnssaiNode = memo(({ data }: SnssaiNodeProps) => {
+  const { updateNodeData } = useNodeEditorContext();
   const [sd, setSd] = useState(data.sd || '');
   const [sst, setSst] = useState(data.sst || '');
   
@@ -33,14 +35,14 @@ const SnssaiNode = memo(({ data }: SnssaiNodeProps) => {
   const handleSdChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
     setSd(newValue);
-    data.sd = newValue;
-  }, [data]);
+    updateNodeData(data.nodeId, { ...data, sd: newValue });
+  }, [data, updateNodeData]);
 
   const handleSstChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
     setSst(newValue);
-    data.sst = newValue;
-  }, [data]);
+    updateNodeData(data.nodeId, { ...data, sst: newValue });
+  }, [data, updateNodeData]);
 
   // Format the S-NSSAI ID properly - ensure it shows a number
   const displayId = data.snssaiId !== undefined && data.snssaiId !== null ? data.snssaiId : 1;

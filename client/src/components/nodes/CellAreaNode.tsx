@@ -4,6 +4,7 @@ import { NodeData } from "../../types/nodeTypes";
 import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
 import { Handle, Position } from "@xyflow/react";
+import { useNodeEditorContext } from "../../contexts/NodeEditorContext";
 
 
 interface CellAreaNodeProps {
@@ -11,6 +12,7 @@ interface CellAreaNodeProps {
 }
 
 const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
+  const { updateNodeData } = useNodeEditorContext();
   const [isEditingDescription, setIsEditingDescription] = useState(false);
   const [cellDescription, setCellDescription] = useState(
     data.cellAreaDescription || "Cell Area Description"
@@ -25,7 +27,7 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
       // Only set default if no saved data exists
       const newDescription = "Cell Area Description";
       setCellDescription(newDescription);
-      data.cellAreaDescription = newDescription;
+      updateNodeData(data.nodeId, { ...data, cellAreaDescription: newDescription });
     }
   }, [data.cellAreaDescription]);
 
@@ -55,8 +57,8 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
   const handleDescriptionChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
     setCellDescription(newValue);
-    data.cellAreaDescription = newValue;
-  }, [data]);
+    updateNodeData(data.nodeId, { ...data, cellAreaDescription: newValue });
+  }, [data, updateNodeData]);
 
   const handleDescriptionBlur = useCallback(() => {
     setIsEditingDescription(false);
@@ -69,8 +71,8 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
   const handleNotesChange = useCallback((e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newValue = e.target.value;
     setNotes(newValue);
-    data.notes = newValue;
-  }, [data]);
+    updateNodeData(data.nodeId, { ...data, notes: newValue });
+  }, [data, updateNodeData]);
 
   // Format the cell area ID properly - ensure it shows a number
   const displayId = data.cellAreaId !== undefined && data.cellAreaId !== null ? data.cellAreaId : 1;
