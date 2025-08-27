@@ -85,13 +85,13 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
     case "network":
       return (
         <div className={className} style={style}>
-          <NetworkNode id={id} data={{ ...data, nodeNumber }} />
+          <NetworkNode data={{ ...data, nodeNumber }} />
         </div>
       );
     case "cell-area":
       return (
         <div className={className} style={style}>
-          <CellAreaNode id={id} data={{ ...data, nodeNumber }} />
+          <CellAreaNode data={{ ...data, nodeNumber }} />
         </div>
       );
     case "rrp":
@@ -103,25 +103,25 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
     case "rrpmember":
       return (
         <div className={className} style={style}>
-          <RrpMemberNode id={id} data={{ ...data, nodeNumber }} />
+          <RrpMemberNode data={{ ...data, nodeNumber }} />
         </div>
       );
     case "s-nssai":
       return (
         <div className={className} style={style}>
-          <SnssaiNode id={id} data={{ ...data, nodeNumber }} />
+          <SnssaiNode data={{ ...data, nodeNumber }} />
         </div>
       );
     case "dnn":
       return (
         <div className={className} style={style}>
-          <DnnNode id={id} data={{ ...data, nodeNumber }} />
+          <DnnNode data={{ ...data, nodeNumber }} />
         </div>
       );
     case "fiveqi":
       return (
         <div className={className} style={style}>
-          <FiveQiNode id={id} data={{ ...data, nodeNumber }} />
+          <FiveQiNode data={{ ...data, nodeNumber }} />
         </div>
       );
     default:
