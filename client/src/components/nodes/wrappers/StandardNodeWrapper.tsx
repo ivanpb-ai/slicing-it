@@ -58,12 +58,13 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
   }, [id, data.type, nodeNumber]);
 
   // Compute styles and pass through props
-  const bgColor = getBgColor(data.type);
-  const borderColor = getBorderColor(data.type);
-  const nodeShape = getNodeShape(data.type);
-  const padding = getPadding(data.type);
-  const width = getWidth(data.type);
-  const clipPath = getClipPath(data.type); // <-- Dynamic shape
+  const nodeType = data.type || 'generic';
+  const bgColor = getBgColor(nodeType);
+  const borderColor = getBorderColor(nodeType);
+  const nodeShape = getNodeShape(nodeType);
+  const padding = getPadding(nodeType);
+  const width = getWidth(nodeType);
+  const clipPath = getClipPath(nodeType); // <-- Dynamic shape
 
   // Compose className and inline style. 
   // You may adjust the base class "node-wrapper" to match your setup.

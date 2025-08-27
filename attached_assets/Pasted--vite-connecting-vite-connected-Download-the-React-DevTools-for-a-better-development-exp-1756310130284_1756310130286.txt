@@ -1,0 +1,1948 @@
+ [vite] connecting...
+ [vite] connected.
+ Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+  Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
+
+Check the render method of `Primitive.button.SlotClone`.
+    at DropdownMenu (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=19dd7dd3:2183:5)
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:2005:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:190:13
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Popper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:1997:11)
+    at Tooltip (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:98:5)
+    at div
+    at FiveQINodeButton (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/buttons/FiveQINodeButton.tsx:35:9)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at div
+    at NodeButtonsGrid (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/NodeButtonsGrid.tsx:30:28)
+    at div
+    at ToolbarContainer (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/ToolbarContainer.tsx:25:3)
+    at Toolbar
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at EditorPanels (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/EditorPanels.tsx:21:3)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ chunk-WERSD76P.js?v=19dd7dd3:521
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ FlowInstance: ReactFlow initialized
+ Background Response (check_popup_status) Object
+ Background Response (check_my_tracking)
+ Background Response (checkHasCashback)
+ NodeEditor: Load triggered
+ Available graphs for loading: 1
+ Loading graph "test1" with 25 nodes and 47 edges
+ Processed 25 nodes and 47 edges for loading
+ network clip-path: 
+ network clip-path: 
+ cell-area clip-path: 
+ cell-area clip-path: 
+ cell-area clip-path: 
+ cell-area clip-path: 
+ rrp clip-path: 
+ rrp clip-path: 
+ rrp clip-path: 
+ rrp clip-path: 
+ rrp clip-path: 
+ rrp clip-path: 
+ rrpmember clip-path: 
+ rrpmember clip-path: 
+ rrpmember clip-path: 
+ rrpmember clip-path: 
+ rrpmember clip-path: 
+ rrpmember clip-path: 
+ s-nssai clip-path: 
+ s-nssai clip-path: 
+ s-nssai clip-path: 
+ s-nssai clip-path: 
+ s-nssai clip-path: 
+ s-nssai clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ dnn clip-path: 
+ fiveqi clip-path: 
+ fiveqi clip-path: 
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ fiveqi clip-path: 
+ fiveqi clip-path: 
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ fiveqi clip-path: 
+ fiveqi clip-path: 
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 67
+ Looking up 5QI with ID: "67"
+fiveQIUtils.ts:33 Found matching 5QI for ID "67": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+fiveQIUtils.ts:24 Looking up 5QI with ID: "67"
+fiveQIUtils.ts:33 Found matching 5QI for ID "67": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=network-1756298418290-5901, type=network, nodeNumber=5901
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrpmember-1756298522116-122, type=rrpmember, nodeNumber=122
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrpmember-1756298528108-7394, type=rrpmember, nodeNumber=7394
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrpmember-1756298536993-2136, type=rrpmember, nodeNumber=2136
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+DnnNode.tsx:19 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:19 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:19 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:19 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+DnnNode.tsx:19 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+DnnNode.tsx:19 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=fiveqi-67, type=fiveqi, nodeNumber=67
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=fiveqi-7, type=fiveqi, nodeNumber=7
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrpmember-1756308464766-6154, type=rrpmember, nodeNumber=6154
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrpmember-1756308508069-4882, type=rrpmember, nodeNumber=4882
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrpmember-1756308538723-1337, type=rrpmember, nodeNumber=1337
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=network-1756298418290-5901, type=network, nodeNumber=5901
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrpmember-1756298522116-122, type=rrpmember, nodeNumber=122
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrpmember-1756298528108-7394, type=rrpmember, nodeNumber=7394
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=rrpmember-1756298536993-2136, type=rrpmember, nodeNumber=2136
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+StandardNodeWrapper.tsx?t=1756309976610:55 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+ StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+ StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+ StandardNodeWrapper: id=fiveqi-67, type=fiveqi, nodeNumber=67
+ StandardNodeWrapper: id=fiveqi-7, type=fiveqi, nodeNumber=7
+ StandardNodeWrapper: id=rrpmember-1756308464766-6154, type=rrpmember, nodeNumber=6154
+ StandardNodeWrapper: id=rrpmember-1756308508069-4882, type=rrpmember, nodeNumber=4882
+ StandardNodeWrapper: id=rrpmember-1756308538723-1337, type=rrpmember, nodeNumber=1337
+  Warning: Encountered two children with the same key, `network-1756298418290-5901-cell-area-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ chunk-WERSD76P.js?v=19dd7dd3:521
+  Warning: Encountered two children with the same key, `network-1756298418290-5901-cell-area-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ chunk-WERSD76P.js?v=19dd7dd3:521
+  Warning: Encountered two children with the same key, `cell-area-1-rrp-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ chunk-WERSD76P.js?v=19dd7dd3:521
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-2-rrp-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-2-rrp-3`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `rrpmember-1756298536993-2136-s-nssai-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `rrpmember-1756298522116-122-s-nssai-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `rrpmember-1756298528108-7394-s-nssai-3`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `s-nssai-1-dnn-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `s-nssai-2-dnn-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `s-nssai-3-dnn-3`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `s-nssai-1-dnn-4`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `s-nssai-3-dnn-5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `s-nssai-1-dnn-6`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `dnn-6-fiveqi-79`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `dnn-4-fiveqi-9`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `dnn-1-fiveqi-67`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `dnn-3-fiveqi-7`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756309976610:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756309976610:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756309976610:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756309976610:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+client:223 [vite] hot updated: /src/components/nodes/wrappers/StandardNodeWrapper.tsx
+client:223 [vite] hot updated: /src/index.css?v=Nuz8cUdyBR8WbZdaH_cAD
+nodeStyles.ts:112 network clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 network clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+fiveQIUtils.ts:24 Looking up 5QI with ID: "67"
+fiveQIUtils.ts:33 Found matching 5QI for ID "67": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+fiveQIUtils.ts:24 Looking up 5QI with ID: "67"
+fiveQIUtils.ts:33 Found matching 5QI for ID "67": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=network-1756298418290-5901, type=network, nodeNumber=5901
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=rrpmember-1756298522116-122, type=rrpmember, nodeNumber=122
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=rrpmember-1756298528108-7394, type=rrpmember, nodeNumber=7394
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=rrpmember-1756298536993-2136, type=rrpmember, nodeNumber=2136
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:33 DNN useEffect data object changed: ObjectcurrentCustomName: ""dnnCustomName: undefinednodeId: "dnn-2"[[Prototype]]: Object
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=fiveqi-67, type=fiveqi, nodeNumber=67
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=fiveqi-7, type=fiveqi, nodeNumber=7
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=rrpmember-1756308464766-6154, type=rrpmember, nodeNumber=6154
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=rrpmember-1756308508069-4882, type=rrpmember, nodeNumber=4882
+StandardNodeWrapper.tsx?t=1756310039606:55 StandardNodeWrapper: id=rrpmember-1756308538723-1337, type=rrpmember, nodeNumber=1337
+client:223 [vite] hot updated: /src/components/nodes/wrappers/StandardNodeWrapper.tsx
+client:223 [vite] hot updated: /src/index.css?v=Nuz8cUdyBR8WbZdaH_cAD
+nodeStyles.ts:112 network clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 network clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 s-nssai clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 dnn clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+fiveQIUtils.ts:24 Looking up 5QI with ID: "67"
+fiveQIUtils.ts:33 Found matching 5QI for ID "67": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+fiveQIUtils.ts:24 Looking up 5QI with ID: "67"
+fiveQIUtils.ts:33 Found matching 5QI for ID "67": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 fiveqi clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+FiveQiNode.tsx:22 5QI Node rendering with data: Object
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:88 Final QoS values for rendering: Object
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756298418290-5901, type=network, nodeNumber=5901
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298522116-122, type=rrpmember, nodeNumber=122
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298528108-7394, type=rrpmember, nodeNumber=7394
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298536993-2136, type=rrpmember, nodeNumber=2136
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+DnnNode.tsx:33 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-67, type=fiveqi, nodeNumber=67
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-7, type=fiveqi, nodeNumber=7
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756308464766-6154, type=rrpmember, nodeNumber=6154
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756308508069-4882, type=rrpmember, nodeNumber=4882
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756308538723-1337, type=rrpmember, nodeNumber=1337
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
