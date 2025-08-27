@@ -85,7 +85,7 @@ const position = findNonOverlappingPosition(
     // Create child node when PLMN is present, and parent nodeId exists
     if (currentValue && currentValue.trim() !== '' && data.nodeId) {
       console.log(`useRrpPlmn: Calling createRrpMemberNode for PLMN`);
-      createRrpMemberNode(currentValue, data.nodeId, data.type);
+      createRrpMemberNode(currentValue, data.nodeId, data.type || 'rrpmember');
     } else {
       console.log(
         `useRrpPlmn: Not creating RRPmember for PLMN - plmn: "${currentValue}", nodeId: "${data.nodeId}"`
