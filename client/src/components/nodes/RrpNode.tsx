@@ -104,7 +104,8 @@ export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
       </div>
 
       {/* PLMN Field */}
-      <div className="w-full text-center mb-2">
+      <div className="w-full text-center mb-2 border-2 border-blue-300 p-1">
+        <div className="text-xs text-gray-500 mb-1">PLMN Field Debug:</div>
         <RrpPlmnField
           label="PLMN"
           value={plmn}
