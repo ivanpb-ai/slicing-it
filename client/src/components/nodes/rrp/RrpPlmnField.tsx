@@ -36,8 +36,11 @@ export const RrpPlmnField = memo(({
 
   return (
     <div 
-      className="flex items-center justify-center cursor-pointer hover:bg-gray-100/50 p-1 rounded mt-1"
-      onClick={onClick}
+      className="flex items-center justify-center cursor-pointer hover:bg-gray-100/50 p-1 rounded mt-1 border-2 border-red-200"
+      onClick={(e) => {
+        console.log('RrpPlmnField: Clicked!', e);
+        onClick();
+      }}
     >
       {value ? `${label}: ${value}` : placeholder}
     </div>
