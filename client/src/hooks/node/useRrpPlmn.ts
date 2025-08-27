@@ -112,9 +112,10 @@ const position = findNonOverlappingPosition(
 
   // Enter PLMN edit mode (on click)
   const handlePLMNClick = useCallback(() => {
-    console.log(`useRrpPlmn: PLMN clicked - entering edit mode`);
+    console.log(`useRrpPlmn: PLMN clicked - entering edit mode for node: ${data.nodeId}`);
+    console.log(`useRrpPlmn: createChildNode function available:`, typeof createChildNode);
     setIsEditingPLMN(true);
-  }, []);
+  }, [data.nodeId, createChildNode]);
 
   return {
     isEditingPLMN,
