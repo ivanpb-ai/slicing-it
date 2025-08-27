@@ -86,23 +86,11 @@ const position = findNonOverlappingPosition(
     if (currentValue && currentValue.trim() !== '' && data.nodeId) {
       console.log(`useRrpPlmn: Creating RRPmember node using context createChildNode`);
       
-      // Use context's createChildNode function directly
-      if (reactFlowInstance) {
-        const existingNodes = reactFlowInstance.getNodes();
-        const parentNode = existingNodes.find(n => n.id === data.nodeId);
-        
-        if (parentNode) {
-          const position = {
-            x: parentNode.position.x,
-            y: parentNode.position.y + 200
-          };
-          
-          console.log(`useRrpPlmn: Calling createChildNode with PLMN: "${currentValue}"`);
-          createChildNode('rrpmember', position, data.nodeId, currentValue);
-        } else {
-          console.warn(`useRrpPlmn: Parent node not found for id: ${data.nodeId}`);
-        }
-      }
+      // Use context's createChildNode function directly - let it handle positioning
+      console.log(`useRrpPlmn: Calling createChildNode with PLMN: "${currentValue}"`);
+      // Use a simple position that will be overridden by the layout system
+      const tempPosition = { x: 0, y: 0 };
+      createChildNode('rrpmember', tempPosition, data.nodeId, currentValue);
     } else {
       console.log(
         `useRrpPlmn: Not creating RRPmember for PLMN - plmn: "${currentValue}", nodeId: "${data.nodeId}"`
