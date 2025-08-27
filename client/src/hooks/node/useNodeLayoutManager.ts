@@ -45,6 +45,9 @@ export const useNodeLayoutManager = (
       const nodesCopy = nodes.map(node => ({...node}));
       const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
       
+      console.log('✅ Received arranged nodes:', arrangedNodes?.length, 'nodes');
+      console.log('Sample positions:', arrangedNodes?.slice(0, 3).map(n => ({ id: n.id, x: n.position.x, y: n.position.y })));
+      
       if (arrangedNodes?.length > 0) {
         setNodes(arrangedNodes);
         toast.success('Nodes arranged in balanced hierarchical tree layout');
@@ -61,9 +64,14 @@ export const useNodeLayoutManager = (
       try {
         const fallbackNodes = arrangeNodes(nodes, edges, {
           type: 'grid' as LayoutType,
-          spacing: 100,              // Fallback grid spacing
+          spacing: 250,              // Proper fallback spacing
           preventOverlap: true,
-          verticalSpacing: 1
+          verticalSpacing: 200,      // Proper vertical spacing instead of 1px!
+          horizontalSpacing: 300,    // Proper horizontal spacing
+          nodeWidth: 180,
+          nodeHeight: 120,
+          marginX: 400,
+          marginY: 100
         });
         setNodes(fallbackNodes);
         toast.warning('Using fallback grid layout');
