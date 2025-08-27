@@ -25,7 +25,7 @@ export const useRrpPlmn = (
   // Handle blur (when PLMN editing ends)
   const handlePLMNBlur = useCallback((e: React.FocusEvent<HTMLInputElement>) => {
     const currentValue = e.target.value;
-    console.log('useRrpPlmn: PLMN blur event, value:', currentValue);
+    console.log('useRrpPlmn: PLMN blur event for nodeId:', data.nodeId, 'value:', currentValue);
     setIsEditingPLMN(false);
 
     // Create child node when PLMN is present, and parent nodeId exists
@@ -55,9 +55,9 @@ export const useRrpPlmn = (
 
   // Enter PLMN edit mode (on click)
   const handlePLMNClick = useCallback(() => {
-    console.log('useRrpPlmn: PLMN click handler called');
+    console.log('useRrpPlmn: PLMN click handler called for nodeId:', data.nodeId);
     setIsEditingPLMN(true);
-  }, []);
+  }, [data.nodeId]);
 
   return {
     isEditingPLMN,

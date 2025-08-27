@@ -38,7 +38,7 @@ export const RrpPlmnField = memo(({
     <div 
       className="flex items-center justify-center cursor-pointer hover:bg-gray-100/50 p-1 rounded mt-1 bg-yellow-100 border border-orange-300"
       onClick={(e) => {
-        console.log('RrpPlmnField: Click detected!', { value, isEditing });
+        console.log('RrpPlmnField: Click detected!', { value, isEditing, label });
         e.stopPropagation();
         onClick();
       }}

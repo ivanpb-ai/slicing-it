@@ -1,0 +1,1907 @@
+client:495 [vite] connecting...
+client:618 [vite] connected.
+react-dom.development.js:29895 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+react-dom.development.js:86  Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
+
+Check the render method of `Primitive.button.SlotClone`.
+    at DropdownMenu (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=19dd7dd3:2183:5)
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:2005:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:190:13
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Popper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:1997:11)
+    at Tooltip (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:98:5)
+    at div
+    at FiveQINodeButton (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/buttons/FiveQINodeButton.tsx:35:9)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at div
+    at NodeButtonsGrid (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/NodeButtonsGrid.tsx:30:28)
+    at div
+    at ToolbarContainer (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/ToolbarContainer.tsx:25:3)
+    at Toolbar
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at EditorPanels (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/EditorPanels.tsx:21:3)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+validateFunctionComponentInDev @ react-dom.development.js:20222
+mountIndeterminateComponent @ react-dom.development.js:20189
+beginWork @ react-dom.development.js:21626
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performConcurrentWorkOnRoot @ react-dom.development.js:25777
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
+Index.tsx:146 MainContentWithGraphOperations: edges updated 0
+Index.tsx:153 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:44 Index component: nodes state updated, count: 0
+Index.tsx:60 Index component: edges state updated, count: 0
+Index.tsx:146 MainContentWithGraphOperations: edges updated 0
+Index.tsx:153 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:44 Index component: nodes state updated, count: 0
+Index.tsx:60 Index component: edges state updated, count: 0
+FlowInstance.tsx:155 FlowInstance: ReactFlow initialized
+content.js:361 Background Response (check_popup_status) {data: 'enabled'}
+content.js:379 Background Response (check_my_tracking)
+content.js:238 Background Response (checkHasCashback)
+NodeButton.tsx:34 NodeButton: Started dragging network button
+NodeButton.tsx:42 NodeButton: Set drag data to: network
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "network" at position: {x: 402, y: -53.333343505859375}
+useDragDataParser.ts:3 parseDragData: Processing drag data: network
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: network
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 9
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 9
+useParentNodeDetection.ts:47 detectParentNodeFromDOM: No parent node found in DOM elements
+useParentNodeDetection.ts:55 detectParentNodeFromPosition: Checking position: {x: 402, y: -53.333343505859375}
+useParentNodeDetection.ts:56 detectParentNodeFromPosition: Available nodes: []
+useParentNodeDetection.ts:92 detectParentNodeFromPosition: No parent node found at position
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: none
+useNodeDragDrop.ts:160 useNodeDragDrop: Creating standalone network node at safe position: {x: 402, y: -53.333343505859375}
+useNodeEditor.ts:78 useNodeEditor: Adding network node at position: {x: 402, y: -53.333343505859375}
+nodeStyles.ts:112 network clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 network clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756297604685-7822, type=network, nodeNumber=7822
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756297604685-7822, type=network, nodeNumber=7822
+NodeButton.tsx:34 NodeButton: Started dragging cell-area button
+NodeButton.tsx:42 NodeButton: Set drag data to: cell-area
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "cell-area" at position: {x: 523.5657963943745, y: -126.46191957394284}
+useDragDataParser.ts:3 parseDragData: Processing drag data: cell-area
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: cell-area
+ useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+ Desired position: {"x":523.5657963943745,"y":-126.46191957394284}
+ Position: 583.5657963943745
+ Position: -126.46191957394284
+ Position: 523.5657963943745
+ Position: -66.46191957394284
+ Position: 463.5657963943745
+ Position: -126.46191957394282
+ Position: 523.5657963943745
+ Position: -186.46191957394285
+ Position: 583.5657963943745
+ Position: -126.46191957394285
+ Position: 523.5657963943745
+ Position: -66.46191957394284
+nodeCollisionDetection.ts:66 Position: 463.5657963943745
+nodeCollisionDetection.ts:67 Position: -126.46191957394281
+nodeCollisionDetection.ts:66 Position: 523.5657963943745
+nodeCollisionDetection.ts:67 Position: -186.46191957394285
+nodeCollisionDetection.ts:66 Position: 643.5657963943745
+nodeCollisionDetection.ts:67 Position: -126.4619195739429
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 643.5657963943745, y: -126.4619195739429}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 14
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 14
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: network-1756297604685-7822
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: network-1756297604685-7822
+useNodeRelationships.ts:35 Validating relationship: network -> cell-area
+useNodeRelationships.ts:64 Valid relationship confirmed: network -> cell-area
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child cell-area node under parent network-1756297604685-7822
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: network
+nodeCollisionDetection.ts:41 Desired position: {"x":422,"y":46.666656494140625}
+nodeCollisionDetection.ts:66 Position: 482
+nodeCollisionDetection.ts:67 Position: 46.666656494140625
+nodeCollisionDetection.ts:66 Position: 422
+nodeCollisionDetection.ts:67 Position: 106.66665649414062
+nodeCollisionDetection.ts:66 Position: 362
+nodeCollisionDetection.ts:67 Position: 46.66665649414063
+nodeCollisionDetection.ts:66 Position: 422
+nodeCollisionDetection.ts:67 Position: -13.333343505859375
+nodeCollisionDetection.ts:66 Position: 482
+nodeCollisionDetection.ts:67 Position: 46.66665649414061
+nodeCollisionDetection.ts:66 Position: 422
+nodeCollisionDetection.ts:67 Position: 106.66665649414062
+nodeCollisionDetection.ts:66 Position: 362
+nodeCollisionDetection.ts:67 Position: 46.666656494140646
+nodeCollisionDetection.ts:66 Position: 422
+nodeCollisionDetection.ts:67 Position: -13.333343505859375
+nodeCollisionDetection.ts:66 Position: 542
+nodeCollisionDetection.ts:67 Position: 46.66665649414057
+nodeCollisionDetection.ts:66 Position: 422.00000000000006
+nodeCollisionDetection.ts:67 Position: 166.66665649414062
+nodeCollisionDetection.ts:66 Position: 302
+nodeCollisionDetection.ts:67 Position: 46.666656494140696
+nodeCollisionDetection.ts:66 Position: 421.9999999999997
+nodeCollisionDetection.ts:67 Position: -73.33334350585938
+nodeCollisionDetection.ts:66 Position: 542
+nodeCollisionDetection.ts:67 Position: 46.66665649414054
+nodeCollisionDetection.ts:66 Position: 421.9999999999999
+nodeCollisionDetection.ts:67 Position: 166.66665649414062
+nodeCollisionDetection.ts:66 Position: 302
+nodeCollisionDetection.ts:67 Position: 46.666656494140724
+nodeCollisionDetection.ts:66 Position: 421.99999999999966
+nodeCollisionDetection.ts:67 Position: -73.33334350585938
+nodeCollisionDetection.ts:66 Position: 602
+nodeCollisionDetection.ts:67 Position: 46.66665649414045
+nodeCollisionDetection.ts:66 Position: 421.9999999999999
+nodeCollisionDetection.ts:67 Position: 226.66665649414062
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 421.9999999999999, y: 226.66665649414062}
+idCounters.ts:26 Generated new Cell Area ID: 1
+useSimpleChildNodeCreation.ts:29 Creating child cell-area with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child cell-area node with ID: cell-area-1 under parent: network-1756297604685-7822
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756297604685-7822 to cell-area-1
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'network-1756297604685-7822-cell-area-1', source: 'network-1756297604685-7822', target: 'cell-area-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756297604685-7822 to cell-area-1
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'network-1756297604685-7822-cell-area-1', source: 'network-1756297604685-7822', target: 'cell-area-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+NodeButton.tsx:34 NodeButton: Started dragging cell-area button
+NodeButton.tsx:42 NodeButton: Set drag data to: cell-area
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "cell-area" at position: {x: 528.1129460939056, y: -124.94620300743244}
+useDragDataParser.ts:3 parseDragData: Processing drag data: cell-area
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: cell-area
+ useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+ Desired position: {"x":528.1129460939056,"y":-124.94620300743244}
+ Position: 588.1129460939056
+ Position: -124.94620300743244
+ Position: 528.1129460939056
+ Position: -64.94620300743244
+ Position: 468.11294609390563
+ Position: -124.94620300743243
+ Position: 528.1129460939056
+ Position: -184.94620300743244
+ Position: 588.1129460939056
+ Position: -124.94620300743246
+ Position: 528.1129460939056
+ Position: -64.94620300743244
+ Position: 468.11294609390563
+ Position: -124.94620300743242
+ Position: 528.1129460939056
+ Position: -184.94620300743244
+ Position: 648.1129460939056
+ Position: -124.9462030074325
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 648.1129460939056, y: -124.9462030074325}
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: network-1756297604685-7822
+ useNodeDragDrop: Detected parent: network-1756297604685-7822
+ Validating relationship: network -> cell-area
+ Valid relationship confirmed: network -> cell-area
+ useNodeDragDrop: Creating child cell-area node under parent network-1756297604685-7822
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: network
+nodeCollisionDetection.ts:41 Desired position: {"x":422,"y":46.666656494140625}
+nodeCollisionDetection.ts:66 Position: 482
+nodeCollisionDetection.ts:67 Position: 46.666656494140625
+nodeCollisionDetection.ts:66 Position: 422
+nodeCollisionDetection.ts:67 Position: 106.66665649414062
+nodeCollisionDetection.ts:66 Position: 362
+nodeCollisionDetection.ts:67 Position: 46.66665649414063
+nodeCollisionDetection.ts:66 Position: 422
+nodeCollisionDetection.ts:67 Position: -13.333343505859375
+nodeCollisionDetection.ts:66 Position: 482
+nodeCollisionDetection.ts:67 Position: 46.66665649414061
+nodeCollisionDetection.ts:66 Position: 422
+nodeCollisionDetection.ts:67 Position: 106.66665649414062
+nodeCollisionDetection.ts:66 Position: 362
+nodeCollisionDetection.ts:67 Position: 46.666656494140646
+nodeCollisionDetection.ts:66 Position: 422
+nodeCollisionDetection.ts:67 Position: -13.333343505859375
+nodeCollisionDetection.ts:66 Position: 542
+nodeCollisionDetection.ts:67 Position: 46.66665649414057
+nodeCollisionDetection.ts:66 Position: 422.00000000000006
+nodeCollisionDetection.ts:67 Position: 166.66665649414062
+nodeCollisionDetection.ts:66 Position: 302
+nodeCollisionDetection.ts:67 Position: 46.666656494140696
+nodeCollisionDetection.ts:66 Position: 421.9999999999997
+nodeCollisionDetection.ts:67 Position: -73.33334350585938
+nodeCollisionDetection.ts:66 Position: 542
+nodeCollisionDetection.ts:67 Position: 46.66665649414054
+nodeCollisionDetection.ts:66 Position: 421.9999999999999
+nodeCollisionDetection.ts:67 Position: 166.66665649414062
+nodeCollisionDetection.ts:66 Position: 302
+nodeCollisionDetection.ts:67 Position: 46.666656494140724
+nodeCollisionDetection.ts:66 Position: 421.99999999999966
+nodeCollisionDetection.ts:67 Position: -73.33334350585938
+nodeCollisionDetection.ts:66 Position: 602
+nodeCollisionDetection.ts:67 Position: 46.66665649414045
+nodeCollisionDetection.ts:66 Position: 421.9999999999999
+nodeCollisionDetection.ts:67 Position: 226.66665649414062
+nodeCollisionDetection.ts:66 Position: 242
+nodeCollisionDetection.ts:67 Position: 46.666656494140824
+nodeCollisionDetection.ts:66 Position: 421.9999999999995
+nodeCollisionDetection.ts:67 Position: -133.33334350585938
+nodeCollisionDetection.ts:66 Position: 602
+nodeCollisionDetection.ts:67 Position: 46.666656494140405
+nodeCollisionDetection.ts:66 Position: 421.9999999999999
+nodeCollisionDetection.ts:67 Position: 226.66665649414062
+nodeCollisionDetection.ts:66 Position: 242
+nodeCollisionDetection.ts:67 Position: 46.666656494141506
+nodeCollisionDetection.ts:66 Position: 421.99999999999943
+nodeCollisionDetection.ts:67 Position: -133.33334350585938
+nodeCollisionDetection.ts:66 Position: 662
+nodeCollisionDetection.ts:67 Position: 46.66665649414027
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 662, y: 46.66665649414027}
+idCounters.ts:26 Generated new Cell Area ID: 2
+useSimpleChildNodeCreation.ts:29 Creating child cell-area with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child cell-area node with ID: cell-area-2 under parent: network-1756297604685-7822
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756297604685-7822 to cell-area-2
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'network-1756297604685-7822-cell-area-2', source: 'network-1756297604685-7822', target: 'cell-area-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756297604685-7822 to cell-area-2
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'network-1756297604685-7822-cell-area-2', source: 'network-1756297604685-7822', target: 'cell-area-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+NodeButton.tsx:34 NodeButton: Started dragging rrp button
+NodeButton.tsx:42 NodeButton: Set drag data to: rrp
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "rrp" at position: {x: 550.8486945915616, y: 164.5556611960535}
+useDragDataParser.ts:3 parseDragData: Processing drag data: rrp
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: rrp
+ useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+ Desired position: {"x":550.8486945915616,"y":164.5556611960535}
+ Position: 610.8486945915616
+ Position: 164.5556611960535
+ Position: 550.8486945915616
+ Position: 224.5556611960535
+ Position: 490.84869459156164
+ Position: 164.5556611960535
+ Position: 550.8486945915616
+ Position: 104.5556611960535
+ Position: 610.8486945915616
+ Position: 164.55566119605348
+ Position: 550.8486945915616
+ Position: 224.5556611960535
+ Position: 490.84869459156164
+ Position: 164.55566119605353
+ Position: 550.8486945915616
+ Position: 104.5556611960535
+ Position: 670.8486945915616
+ Position: 164.55566119605345
+ Position: 550.8486945915618
+ Position: 284.5556611960535
+ Position: 430.84869459156164
+ Position: 164.5556611960536
+ Position: 550.8486945915613
+ Position: 44.55566119605351
+ Position: 670.8486945915616
+ Position: 164.55566119605342
+ Position: 550.8486945915615
+ Position: 284.5556611960535
+ Position: 430.84869459156164
+ Position: 164.55566119605362
+ Position: 550.8486945915613
+ Position: 44.55566119605351
+ Position: 730.8486945915616
+ Position: 164.55566119605334
+ Position: 550.8486945915615
+ Position: 344.5556611960535
+ Position: 370.84869459156164
+ Position: 164.5556611960537
+ Position: 550.8486945915611
+ Position: -15.444338803946493
+ Position: 730.8486945915616
+ Position: 164.55566119605328
+ Position: 550.8486945915615
+ Position: 344.5556611960535
+ Position: 370.84869459156164
+ Position: 164.5556611960544
+ Position: 550.8486945915611
+ Position: -15.444338803946493
+ Position: 790.8486945915616
+ Position: 164.55566119605317
+ Position: 550.8486945915615
+ Position: 404.5556611960535
+ Position: 310.84869459156164
+ Position: 164.55566119605302
+ Position: 550.8486945915608
+ Position: -75.4443388039465
+ Position: 790.8486945915616
+ Position: 164.5556611960531
+ Position: 550.8486945915616
+ Position: 404.5556611960535
+ Position: 310.84869459156164
+ Position: 164.5556611960548
+nodeCollisionDetection.ts:66 Position: 550.8486945915607
+nodeCollisionDetection.ts:67 Position: -75.4443388039465
+nodeCollisionDetection.ts:66 Position: 850.8486945915616
+nodeCollisionDetection.ts:67 Position: 164.5556611960529
+nodeCollisionDetection.ts:66 Position: 550.8486945915618
+nodeCollisionDetection.ts:67 Position: 464.5556611960535
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 550.8486945915618, y: 464.5556611960535}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 14
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 14
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: cell-area-1
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: cell-area-1
+useNodeRelationships.ts:35 Validating relationship: cell-area -> rrp
+useNodeRelationships.ts:64 Valid relationship confirmed: cell-area -> rrp
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child rrp node under parent cell-area-1
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: cell-area
+nodeCollisionDetection.ts:41 Desired position: {"x":441.9999999999999,"y":326.6666564941406}
+nodeCollisionDetection.ts:66 Position: 501.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.6666564941406
+nodeCollisionDetection.ts:66 Position: 441.9999999999999
+nodeCollisionDetection.ts:67 Position: 386.6666564941406
+nodeCollisionDetection.ts:66 Position: 381.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.6666564941406
+nodeCollisionDetection.ts:66 Position: 441.9999999999999
+nodeCollisionDetection.ts:67 Position: 266.6666564941406
+nodeCollisionDetection.ts:66 Position: 501.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.6666564941406
+nodeCollisionDetection.ts:66 Position: 441.9999999999999
+nodeCollisionDetection.ts:67 Position: 386.6666564941406
+nodeCollisionDetection.ts:66 Position: 381.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.6666564941406
+nodeCollisionDetection.ts:66 Position: 441.9999999999999
+nodeCollisionDetection.ts:67 Position: 266.6666564941406
+nodeCollisionDetection.ts:66 Position: 561.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.66665649414057
+nodeCollisionDetection.ts:66 Position: 441.99999999999994
+nodeCollisionDetection.ts:67 Position: 446.6666564941406
+nodeCollisionDetection.ts:66 Position: 321.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.6666564941407
+nodeCollisionDetection.ts:66 Position: 441.9999999999996
+nodeCollisionDetection.ts:67 Position: 206.66665649414062
+nodeCollisionDetection.ts:66 Position: 561.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.6666564941405
+nodeCollisionDetection.ts:66 Position: 441.9999999999998
+nodeCollisionDetection.ts:67 Position: 446.6666564941406
+nodeCollisionDetection.ts:66 Position: 321.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.66665649414074
+nodeCollisionDetection.ts:66 Position: 441.99999999999955
+nodeCollisionDetection.ts:67 Position: 206.66665649414062
+nodeCollisionDetection.ts:66 Position: 621.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.66665649414045
+nodeCollisionDetection.ts:66 Position: 441.9999999999998
+nodeCollisionDetection.ts:67 Position: 506.6666564941406
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 441.9999999999998, y: 506.6666564941406}
+idCounters.ts:34 Generated new RRP ID: 1
+useSimpleChildNodeCreation.ts:54 Creating RRP with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child rrp node with ID: rrp-1 under parent: cell-area-1
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-1
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'cell-area-1-rrp-1', source: 'cell-area-1', target: 'rrp-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-1
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'cell-area-1-rrp-1', source: 'cell-area-1', target: 'rrp-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-1-rrp-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+NodeButton.tsx:34 NodeButton: Started dragging rrp button
+NodeButton.tsx:42 NodeButton: Set drag data to: rrp
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "rrp" at position: {x: 767.5961636025485, y: -74.92755631258932}
+useDragDataParser.ts:3 parseDragData: Processing drag data: rrp
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: rrp
+ useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+ Desired position: {"x":767.5961636025485,"y":-74.92755631258932}
+ Position: 827.5961636025485
+ Position: -74.92755631258932
+ Position: 767.5961636025485
+ Position: -14.927556312589317
+ Position: 707.5961636025485
+ Position: -74.9275563125893
+ Position: 767.5961636025485
+ Position: -134.92755631258933
+ Position: 827.5961636025485
+ Position: -74.92755631258933
+ Position: 767.5961636025485
+ Position: -14.927556312589317
+nodeCollisionDetection.ts:66 Position: 707.5961636025485
+nodeCollisionDetection.ts:67 Position: -74.92755631258929
+nodeCollisionDetection.ts:66 Position: 767.5961636025485
+nodeCollisionDetection.ts:67 Position: -134.92755631258933
+nodeCollisionDetection.ts:66 Position: 887.5961636025485
+nodeCollisionDetection.ts:67 Position: -74.92755631258937
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 887.5961636025485, y: -74.92755631258937}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 15
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 15
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: cell-area-2
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: cell-area-2
+useNodeRelationships.ts:35 Validating relationship: cell-area -> rrp
+useNodeRelationships.ts:64 Valid relationship confirmed: cell-area -> rrp
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child rrp node under parent cell-area-2
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: cell-area
+nodeCollisionDetection.ts:41 Desired position: {"x":682,"y":146.66665649414028}
+nodeCollisionDetection.ts:66 Position: 742
+nodeCollisionDetection.ts:67 Position: 146.66665649414028
+nodeCollisionDetection.ts:66 Position: 682
+nodeCollisionDetection.ts:67 Position: 206.66665649414028
+nodeCollisionDetection.ts:66 Position: 622
+nodeCollisionDetection.ts:67 Position: 146.66665649414028
+nodeCollisionDetection.ts:66 Position: 682
+nodeCollisionDetection.ts:67 Position: 86.66665649414028
+nodeCollisionDetection.ts:66 Position: 742
+nodeCollisionDetection.ts:67 Position: 146.66665649414026
+nodeCollisionDetection.ts:66 Position: 682
+nodeCollisionDetection.ts:67 Position: 206.66665649414028
+nodeCollisionDetection.ts:66 Position: 622
+nodeCollisionDetection.ts:67 Position: 146.6666564941403
+nodeCollisionDetection.ts:66 Position: 682
+nodeCollisionDetection.ts:67 Position: 86.66665649414028
+nodeCollisionDetection.ts:66 Position: 802
+nodeCollisionDetection.ts:67 Position: 146.66665649414023
+nodeCollisionDetection.ts:66 Position: 682.0000000000001
+nodeCollisionDetection.ts:67 Position: 266.6666564941403
+nodeCollisionDetection.ts:66 Position: 562
+nodeCollisionDetection.ts:67 Position: 146.66665649414037
+nodeCollisionDetection.ts:66 Position: 681.9999999999997
+nodeCollisionDetection.ts:67 Position: 26.666656494140284
+nodeCollisionDetection.ts:66 Position: 802
+nodeCollisionDetection.ts:67 Position: 146.6666564941402
+nodeCollisionDetection.ts:66 Position: 681.9999999999999
+nodeCollisionDetection.ts:67 Position: 266.6666564941403
+nodeCollisionDetection.ts:66 Position: 562
+nodeCollisionDetection.ts:67 Position: 146.6666564941404
+nodeCollisionDetection.ts:66 Position: 681.9999999999997
+nodeCollisionDetection.ts:67 Position: 26.666656494140284
+nodeCollisionDetection.ts:66 Position: 862
+nodeCollisionDetection.ts:67 Position: 146.6666564941401
+nodeCollisionDetection.ts:66 Position: 681.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.6666564941403
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 681.9999999999999, y: 326.6666564941403}
+idCounters.ts:34 Generated new RRP ID: 2
+useSimpleChildNodeCreation.ts:54 Creating RRP with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child rrp node with ID: rrp-2 under parent: cell-area-2
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-2 to rrp-2
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'cell-area-2-rrp-2', source: 'cell-area-2', target: 'rrp-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-2 to rrp-2
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'cell-area-2-rrp-2', source: 'cell-area-2', target: 'rrp-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-1-rrp-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-2-rrp-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+RrpPlmnField.tsx:41 RrpPlmnField: Click detected! {value: '', isEditing: false}
+useRrpPlmn.ts:58 useRrpPlmn: PLMN click handler called
+useRrpPlmn.ts:19 useRrpPlmn: PLMN value changed: 3
+useRrpPlmn.ts:19 useRrpPlmn: PLMN value changed: 
+useRrpPlmn.ts:19 useRrpPlmn: PLMN value changed: 2
+useRrpPlmn.ts:19 useRrpPlmn: PLMN value changed: 24
+useRrpPlmn.ts:19 useRrpPlmn: PLMN value changed: 240
+useRrpPlmn.ts:19 useRrpPlmn: PLMN value changed: 240 
+useRrpPlmn.ts:19 useRrpPlmn: PLMN value changed: 240 0
+useRrpPlmn.ts:19 useRrpPlmn: PLMN value changed: 240 01
+useRrpPlmn.ts:28 useRrpPlmn: PLMN blur event, value: 240 01
+useRrpPlmn.ts:33 useRrpPlmn: Creating RRP-member node...
+useRrpPlmn.ts:45 useRrpPlmn: Calling createChildNode with position: {x: 441.9999999999998, y: 856.6666564941406}
+useSimpleChildNodeCreation.ts:62 Creating RRPmember child with PLMN: 240 01
+useSimpleChildNodeCreation.ts:70 Creating child rrpmember node with ID: rrpmember-1756297628564-7329 under parent: rrp-1
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrpmember clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756297628564-7329, type=rrpmember, nodeNumber=7329
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756297628564-7329, type=rrpmember, nodeNumber=7329
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrp-1 to rrpmember-1756297628564-7329
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'rrp-1-rrpmember-1756297628564-7329', source: 'rrp-1', target: 'rrpmember-1756297628564-7329', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-1-rrp-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-2-rrp-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+NodeEditor.tsx:111 Node double-clicked: {id: 'rrp-2', type: 'customNode', position: {…}, data: {…}, selected: true}
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+NodeButton.tsx:34 NodeButton: Started dragging rrp button
+NodeButton.tsx:42 NodeButton: Set drag data to: rrp
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "rrp" at position: {x: 805.4890777653085, y: -14.298893652173522}
+useDragDataParser.ts:3 parseDragData: Processing drag data: rrp
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: rrp
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+nodeCollisionDetection.ts:41 Desired position: {"x":805.4890777653085,"y":-14.298893652173522}
+nodeCollisionDetection.ts:66 Position: 865.4890777653085
+nodeCollisionDetection.ts:67 Position: -14.298893652173522
+nodeCollisionDetection.ts:66 Position: 805.4890777653085
+nodeCollisionDetection.ts:67 Position: 45.70110634782648
+nodeCollisionDetection.ts:66 Position: 745.4890777653085
+nodeCollisionDetection.ts:67 Position: -14.298893652173515
+nodeCollisionDetection.ts:66 Position: 805.4890777653085
+nodeCollisionDetection.ts:67 Position: -74.29889365217352
+nodeCollisionDetection.ts:66 Position: 865.4890777653085
+nodeCollisionDetection.ts:67 Position: -14.298893652173536
+nodeCollisionDetection.ts:66 Position: 805.4890777653085
+nodeCollisionDetection.ts:67 Position: 45.70110634782648
+nodeCollisionDetection.ts:66 Position: 745.4890777653085
+nodeCollisionDetection.ts:67 Position: -14.2988936521735
+nodeCollisionDetection.ts:66 Position: 805.4890777653085
+nodeCollisionDetection.ts:67 Position: -74.29889365217352
+nodeCollisionDetection.ts:66 Position: 925.4890777653085
+nodeCollisionDetection.ts:67 Position: -14.29889365217358
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 925.4890777653085, y: -14.29889365217358}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 14
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 14
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: cell-area-2
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: cell-area-2
+useNodeRelationships.ts:35 Validating relationship: cell-area -> rrp
+useNodeRelationships.ts:64 Valid relationship confirmed: cell-area -> rrp
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child rrp node under parent cell-area-2
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: cell-area
+nodeCollisionDetection.ts:41 Desired position: {"x":682,"y":146.66665649414028}
+nodeCollisionDetection.ts:66 Position: 742
+nodeCollisionDetection.ts:67 Position: 146.66665649414028
+nodeCollisionDetection.ts:66 Position: 682
+nodeCollisionDetection.ts:67 Position: 206.66665649414028
+nodeCollisionDetection.ts:66 Position: 622
+nodeCollisionDetection.ts:67 Position: 146.66665649414028
+nodeCollisionDetection.ts:66 Position: 682
+nodeCollisionDetection.ts:67 Position: 86.66665649414028
+nodeCollisionDetection.ts:66 Position: 742
+nodeCollisionDetection.ts:67 Position: 146.66665649414026
+nodeCollisionDetection.ts:66 Position: 682
+nodeCollisionDetection.ts:67 Position: 206.66665649414028
+nodeCollisionDetection.ts:66 Position: 622
+nodeCollisionDetection.ts:67 Position: 146.6666564941403
+nodeCollisionDetection.ts:66 Position: 682
+nodeCollisionDetection.ts:67 Position: 86.66665649414028
+nodeCollisionDetection.ts:66 Position: 802
+nodeCollisionDetection.ts:67 Position: 146.66665649414023
+nodeCollisionDetection.ts:66 Position: 682.0000000000001
+nodeCollisionDetection.ts:67 Position: 266.6666564941403
+nodeCollisionDetection.ts:66 Position: 562
+nodeCollisionDetection.ts:67 Position: 146.66665649414037
+nodeCollisionDetection.ts:66 Position: 681.9999999999997
+nodeCollisionDetection.ts:67 Position: 26.666656494140284
+nodeCollisionDetection.ts:66 Position: 802
+nodeCollisionDetection.ts:67 Position: 146.6666564941402
+nodeCollisionDetection.ts:66 Position: 681.9999999999999
+nodeCollisionDetection.ts:67 Position: 266.6666564941403
+nodeCollisionDetection.ts:66 Position: 562
+nodeCollisionDetection.ts:67 Position: 146.6666564941404
+nodeCollisionDetection.ts:66 Position: 681.9999999999997
+nodeCollisionDetection.ts:67 Position: 26.666656494140284
+nodeCollisionDetection.ts:66 Position: 862
+nodeCollisionDetection.ts:67 Position: 146.6666564941401
+nodeCollisionDetection.ts:66 Position: 681.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.6666564941403
+nodeCollisionDetection.ts:66 Position: 502
+nodeCollisionDetection.ts:67 Position: 146.66665649414048
+nodeCollisionDetection.ts:66 Position: 681.9999999999994
+nodeCollisionDetection.ts:67 Position: -33.333343505859716
+nodeCollisionDetection.ts:66 Position: 862
+nodeCollisionDetection.ts:67 Position: 146.66665649414006
+nodeCollisionDetection.ts:66 Position: 681.9999999999999
+nodeCollisionDetection.ts:67 Position: 326.6666564941403
+nodeCollisionDetection.ts:66 Position: 502
+nodeCollisionDetection.ts:67 Position: 146.66665649414117
+nodeCollisionDetection.ts:66 Position: 681.9999999999994
+nodeCollisionDetection.ts:67 Position: -33.333343505859716
+nodeCollisionDetection.ts:66 Position: 922
+nodeCollisionDetection.ts:67 Position: 146.66665649413994
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 922, y: 146.66665649413994}
+idCounters.ts:34 Generated new RRP ID: 3
+useSimpleChildNodeCreation.ts:54 Creating RRP with ID: 3
+useSimpleChildNodeCreation.ts:70 Creating child rrp node with ID: rrp-3 under parent: cell-area-2
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-2 to rrp-3
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'cell-area-2-rrp-3', source: 'cell-area-2', target: 'rrp-3', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-2 to rrp-3
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'cell-area-2-rrp-3', source: 'cell-area-2', target: 'rrp-3', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `network-1756297604685-7822-cell-area-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-1-rrp-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-2-rrp-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-2-rrp-3`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at EdgeRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8420:34)
+    at div
+    at Viewport (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8430:31)
+    at div
+    at Pane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7272:17)
+    at div
+    at ZoomPane (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7153:21)
+    at FlowRendererComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:7733:44)
+    at GraphViewComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8564:31)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx?t=1756297534854:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1756297534854:30:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756297534854:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:148:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756297534854:26:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFragment @ react-dom.development.js:19543
+beginWork @ react-dom.development.js:21679
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+commitRootImpl @ react-dom.development.js:26998
+commitRoot @ react-dom.development.js:26721
+finishConcurrentRender @ react-dom.development.js:26020
+performConcurrentWorkOnRoot @ react-dom.development.js:25848
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 rrp clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
