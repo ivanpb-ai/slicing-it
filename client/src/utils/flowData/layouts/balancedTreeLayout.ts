@@ -171,140 +171,52 @@ export const arrangeNodesInBalancedTree = (
         });
       }
     } else {
-      // Non-root levels: group by parent and position siblings symmetrically
-      const siblingGroups: Record<string, string[]> = {};
+      // Non-root levels: SIMPLIFIED UNIFORM SPACING
+      // Calculate ideal X position for each node, then apply uniform spacing
+      const nodeWithIdealX: Array<{ nodeId: string; idealX: number }> = [];
       
-      // Group nodes by their primary parent (for single parent) or by 'multiParent' key (for multiple parents)
       nodesInLevel.forEach(nodeId => {
         const parents = allParentsMap[nodeId] || [];
-        let groupKey;
         
         if (parents.length === 0) {
-          groupKey = 'orphan';
-        } else if (parents.length === 1) {
-          groupKey = parents[0]; // Single parent - group by parent
+          // Orphan nodes go to center
+          nodeWithIdealX.push({ nodeId, idealX: 0 });
         } else {
-          groupKey = 'multiParent'; // Multiple parents - separate group for individual positioning
-        }
-        
-        if (!siblingGroups[groupKey]) {
-          siblingGroups[groupKey] = [];
-        }
-        siblingGroups[groupKey].push(nodeId);
-      });
-      
-      console.log(`Level ${level} sibling groups:`, siblingGroups);
-      
-      const nodePositions: { nodeId: string; x: number }[] = [];
-      
-      // Position each sibling group
-      Object.entries(siblingGroups).forEach(([groupKey, siblings]) => {
-        if (groupKey === 'orphan') {
-          // Orphan nodes: place at origin
-          siblings.forEach(nodeId => {
-            console.log(`Orphan node ${nodeId} -> x=0`);
-            nodePositions.push({ nodeId, x: 0 });
-          });
-        } else if (groupKey === 'multiParent') {
-          // Multiple-parent nodes: position each individually, but spread if they overlap
-          const calculatedPositions: Array<{ nodeId: string; x: number }> = [];
+          // Calculate ideal position based on parent positions
+          const parentPositions = parents
+            .map(parentId => nodePositionMap[parentId])
+            .filter(pos => pos);
           
-          siblings.forEach(nodeId => {
-            const parents = allParentsMap[nodeId] || [];
-            const parentPositions = parents
-              .map(parentId => nodePositionMap[parentId])
-              .filter(pos => pos);
-            
-            if (parentPositions.length > 0) {
-              const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
-              console.log(`Multi-parent child ${nodeId} with parents at:`, parentPositions.map(p => p.x), `-> avgX=${avgX}`);
-              calculatedPositions.push({ nodeId, x: avgX });
-            } else {
-              console.log(`Multi-parent child ${nodeId} with no valid parents -> x=0`);
-              calculatedPositions.push({ nodeId, x: 0 });
-            }
-          });
-          
-          // Check for overlapping positions and spread them if needed
-          if (calculatedPositions.length > 1) {
-            const uniqueXValues = Array.from(new Set(calculatedPositions.map(p => p.x)));
-            if (uniqueXValues.length < calculatedPositions.length) {
-              // Some nodes have the same x position - spread them around the center
-              const centerX = calculatedPositions.reduce((sum, p) => sum + p.x, 0) / calculatedPositions.length;
-              const siblingCount = calculatedPositions.length;
-              const spacing = Math.max(horizontalSpacing, 500); // Ensure minimum 500px spacing for clear separation
-              const totalWidth = (siblingCount - 1) * spacing;
-              const startX = centerX - totalWidth / 2;
-              
-              console.log(`Spreading ${siblingCount} overlapping multi-parent nodes around center x=${centerX}`);
-              calculatedPositions.forEach((item, index) => {
-                const spreadX = startX + index * spacing;
-                console.log(`  Spread multi-parent ${item.nodeId}: ${item.x} -> ${spreadX}`);
-                nodePositions.push({ nodeId: item.nodeId, x: spreadX });
-              });
-            } else {
-              // No overlaps, use calculated positions
-              nodePositions.push(...calculatedPositions);
-            }
+          if (parentPositions.length > 0) {
+            const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
+            nodeWithIdealX.push({ nodeId, idealX: avgX });
           } else {
-            // Single node, use calculated position
-            nodePositions.push(...calculatedPositions);
+            nodeWithIdealX.push({ nodeId, idealX: 0 });
           }
-        } else if (siblings.length === 1) {
-          // Single child: handle based on its parents
-          const nodeId = siblings[0];
-          const parents = allParentsMap[nodeId] || [];
-          
-          if (parents.length === 1) {
-            // Single parent: align under parent
-            const parentPos = nodePositionMap[parents[0]];
-            const x = parentPos ? parentPos.x : 0;
-            console.log(`Single child ${nodeId} under parent ${parents[0]} -> x=${x}`);
-            nodePositions.push({ nodeId, x });
-          } else {
-            // Multiple parents: center between them
-            const parentPositions = parents
-              .map(parentId => nodePositionMap[parentId])
-              .filter(pos => pos);
-            
-            if (parentPositions.length > 0) {
-              const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
-              console.log(`Single child ${nodeId} with multiple parents:`, parentPositions.map(p => p.x), `-> avgX=${avgX}`);
-              nodePositions.push({ nodeId, x: avgX });
-            } else {
-              console.log(`Single child ${nodeId} with no valid parent positions -> x=0`);
-              nodePositions.push({ nodeId, x: 0 });
-            }
-          }
-        } else {
-          // Multiple siblings with same single parent: spread around parent position
-          const parentPos = nodePositionMap[groupKey];
-          const centerX = parentPos ? parentPos.x : 0;
-          
-          // Calculate symmetric positions with guaranteed spacing
-          const siblingCount = siblings.length;
-          const effectiveSpacing = Math.max(horizontalSpacing, 550); // Minimum 550px for siblings to prevent overlap
-          const totalWidth = (siblingCount - 1) * effectiveSpacing;
-          const startX = centerX - totalWidth / 2;
-          
-          console.log(`Spreading ${siblingCount} siblings around parent ${groupKey} at x=${centerX}`);
-          
-          siblings.forEach((nodeId, index) => {
-            const x = startX + index * effectiveSpacing;
-            console.log(`  Sibling ${nodeId} -> x=${x} (spacing: ${effectiveSpacing}px)`);
-            nodePositions.push({ nodeId, x });
-          });
         }
       });
       
-      // Sort by X position for consistent ordering
-      nodePositions.sort((a, b) => a.x - b.x);
+      // Sort by ideal X position to maintain logical order
+      nodeWithIdealX.sort((a, b) => a.idealX - b.idealX);
       
-      // Add to positioned nodes
-      nodePositions.forEach(({ nodeId, x }) => {
+      // APPLY UNIFORM SPACING TO ALL NODES AT THIS LEVEL
+      // This eliminates the inconsistent spacing that was causing the problem
+      const nodeCount = nodeWithIdealX.length;
+      const uniformSpacing = Math.max(horizontalSpacing, 450); // Consistent 450px minimum spacing
+      const totalWidth = (nodeCount - 1) * uniformSpacing;
+      
+      // Center the entire level around x=0
+      const startX = -totalWidth / 2;
+      
+      console.log(`Level ${level}: Positioning ${nodeCount} nodes with uniform ${uniformSpacing}px spacing`);
+      
+      // Position all nodes with consistent spacing
+      nodeWithIdealX.forEach(({ nodeId }, index) => {
+        const x = startX + index * uniformSpacing;
         const position = { x, y };
         positionedNodes.push({ id: nodeId, position });
         nodePositionMap[nodeId] = position;
+        console.log(`  Node ${nodeId} -> x=${x}`);
       });
     }
   });
