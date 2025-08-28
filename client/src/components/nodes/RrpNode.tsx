@@ -15,67 +15,46 @@ interface RrpNodeProps {
 
 export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
 
-  // TEMPORARILY DISABLE CONTEXT TO ISOLATE ERROR
-  // const { createChildNode, updateNodeData } = useNodeEditorContext();
-  
-  console.log('RrpNode rendering with id:', id, 'data:', data);
+  const { createChildNode, updateNodeData } = useNodeEditorContext();
 
-  // Bands management - TEMPORARILY DISABLED
-  // const {
-  //   rrpBands,
-  //   editingBandIndex,
-  //   editingField,
-  //   editValue,
-  //   handleAddBand,
-  //   handleBandFieldEdit,
-  //   handleBandFieldChange,
-  //   handleBandFieldBlur,
-  //   handleRemoveBand
-  // } = useRrpBands(data);
-  
-  // Temporary dummy values
-  const rrpBands: any[] = [];
-  const editingBandIndex: number | null = null;
-  const editingField: 'name' | 'dl' | 'ul' | null = null;
-  const editValue = '';
-  const handleAddBand = () => {};
-  const handleBandFieldEdit = () => {};
-  const handleBandFieldChange = () => {};
-  const handleBandFieldBlur = () => {};
-  const handleRemoveBand = () => {};
+  const {
+    rrpBands,
+    editingBandIndex,
+    editingField,
+    editValue,
+    handleAddBand,
+    handleBandFieldEdit,
+    handleBandFieldChange,
+    handleBandFieldBlur,
+    handleRemoveBand
+  } = useRrpBands(data);
 
-  // TEMPORARILY REMOVE ALL CALLBACKS
+  // Name editing, propagates via updateNodeData
+  const handlePersistRrpName = useCallback(
+    (newName: string) => {
+      if (id && updateNodeData && typeof updateNodeData === 'function') {
+        updateNodeData(id, { ...data, rrpName: newName });
+      }
+    },
+    [id, data, updateNodeData]
+  );
 
-  // const {
-  //   isEditingName,
-  //   rrpName,
-  //   handleNameChange,
-  //   handleNameBlur,
-  //   handleNameClick,
-  // } = useRrpName(data, handlePersistRrpName);
-  
-  // Temporary dummy values for useRrpName
-  const isEditingName = false;
-  const rrpName = data.rrpName || 'RRP Name';
-  const handleNameChange = () => {};
-  const handleNameBlur = () => {};
-  const handleNameClick = () => {};
+  const {
+    isEditingName,
+    rrpName,
+    handleNameChange,
+    handleNameBlur,
+    handleNameClick,
+  } = useRrpName(data, handlePersistRrpName);
 
-  // PLMN editing/member creation - TEMPORARILY DISABLED
-  // const {
-  //   isEditingPLMN,
-  //   plmn,
-  //   handlePLMNChange,
-  //   handlePLMNBlur,
-  //   handlePLMNClick
-  // } = useRrpPlmn(data, createChildNode);
-  
-  // Temporary dummy values
-  const isEditingPLMN = false;
-  const plmn = '';
-  const handlePLMNChange = () => {};
-  const handlePLMNBlur = () => {};
-  const handlePLMNClick = () => {};
+  // PLMN editing/member creation
+  const {
+    isEditingPLMN,
+    plmn,
+    handlePLMNChange,
+    handlePLMNBlur,
+    handlePLMNClick
+  } = useRrpPlmn(data, createChildNode);
 
   return (
     <div

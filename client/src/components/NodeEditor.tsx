@@ -329,7 +329,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
-          onNodeDoubleClick={() => {}} // NO-OP FUNCTION TO TEST
+          onNodeDoubleClick={handleNodeDoubleClick}
           onSelectionChange={handleSelectionChange}
           onPaneClick={handlePaneClick}
           onDragOver={onDragOver}

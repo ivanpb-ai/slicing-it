@@ -32,7 +32,15 @@ export const useRrpPlmn = (
         const existingNodes = reactFlowInstance.getNodes();
         const parentNode = existingNodes.find(n => n.id === data.nodeId);
         
-        if (parentNode) {
+        // Check if an RRP member child already exists for this parent
+        const existingRrpMember = existingNodes.find(n => 
+          n.data.type === 'rrpmember' && n.data.parentId === data.nodeId
+        );
+        
+        if (parentNode && !existingRrpMember) {
+          // Only create child if none exists yet
+          console.log(`Creating RRP member child for parent ${data.nodeId} with PLMN: ${currentValue}`);
+          
           // Position RRP-member directly below RRP with proper spacing
           const childPosition = {
             x: parentNode.position.x,
@@ -42,6 +50,8 @@ export const useRrpPlmn = (
           if (createChildNode) {
             createChildNode('rrpmember', childPosition, data.nodeId, currentValue);
           }
+        } else if (existingRrpMember) {
+          console.log(`RRP member child already exists for parent ${data.nodeId}, skipping creation`);
         }
       }
     }
