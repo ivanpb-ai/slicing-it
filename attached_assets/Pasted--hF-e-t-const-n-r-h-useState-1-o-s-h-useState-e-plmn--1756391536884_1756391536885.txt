@@ -1,0 +1,354 @@
+, hF = (e, t) => {
+    const [n,r] = h.useState(!1)
+      , [o,s] = h.useState(e.plmn || "")
+      , i = ln()
+      , a = h.useCallback( (u, f, p) => {
+        if (console.log(`useRrpPlmn: createRrpMemberNode called with plmnValue="${u}", parentId="${f}"`),
+        u && u.trim() !== "") {
+            console.log(`useRrpPlmn: Creating RRPmember node for PLMN: ${u}`);
+            const v = i.getNodes()
+              , m = US(p)
+              , w = v.find(b => b.id === f);
+            if (!w) {
+                console.warn(`useRrpPlmn: Parent node not found for id: ${f}`);
+                return
+            }
+            const g = document.querySelector(`[data-id="${w.id}"]`)
+              , x = (g == null ? void 0 : g.offsetHeight) || 100
+              , y = zl({
+                x: w.position.x + 20,
+                y: w.position.y + x + 30
+            }, v, m.width, m.height);
+            try {
+                const b = t("rrpmember", y, f, u);
+                console.log("useRrpPlmn: Successfully created RRPmember child node:", b),
+                s("")
+            } catch (b) {
+                console.error("useRrpPlmn: Failed to create RRPmember child node:", b)
+            }
+        } else
+            console.log(`useRrpPlmn: Skipping RRPmember creation - empty or invalid plmnValue: "${u}"`)
+    }
+    , [t, i])
+      , l = h.useCallback(u => {
+        const f = u.target.value;
+        console.log(`useRrpPlmn: PLMN changed to: "${f}"`),
+        s(f)
+    }
+    , [])
+      , c = h.useCallback( () => {
+        console.log(`useRrpPlmn: PLMN blur event - value: "${o}", nodeId: "${e.nodeId}"`),
+        r(!1),
+        o && o.trim() !== "" && e.nodeId ? (console.log("useRrpPlmn: Calling createRrpMemberNode for PLMN"),
+        a(o, e.nodeId, e.type)) : console.log(`useRrpPlmn: Not creating RRPmember for PLMN - plmn: "${o}", nodeId: "${e.nodeId}"`)
+    }
+    , [o, e.nodeId, a, e.type])
+      , d = h.useCallback( () => {
+        console.log("useRrpPlmn: PLMN clicked - entering edit mode"),
+        r(!0)
+    }
+    , []);
+    return {
+        isEditingPLMN: n,
+        plmn: o,
+        handlePLMNChange: l,
+        handlePLMNBlur: c,
+        handlePLMNClick: d
+    }
+}
+  , mF = (e, t) => {
+    const [n,r] = h.useState(!1)
+      , [o,s] = h.useState(e.rrpName || "Enter RRP name");
+    h.useEffect( () => {
+        s(e.rrpName || "Enter RRP name")
+    }
+    , [e.rrpName]);
+    const i = h.useCallback(c => {
+        s(c.target.value)
+    }
+    , [])
+      , a = h.useCallback( () => {
+        r(!1),
+        t && t(o.trim())
+    }
+    , [t, o])
+      , l = h.useCallback( () => {
+        r(!0)
+    }
+    , []);
+    return {
+        isEditingName: n,
+        rrpName: o,
+        handleNameChange: i,
+        handleNameBlur: a,
+        handleNameClick: l
+    }
+}
+  , gF = e => {
+    const [t,n] = h.useState(e.rrpBands || [])
+      , [r,o] = h.useState(null)
+      , [s,i] = h.useState(null)
+      , [a,l] = h.useState("")
+      , c = h.useCallback( () => {
+        const v = {
+            name: "",
+            dl: 50,
+            ul: 50
+        }
+          , m = [...t, v];
+        n(m),
+        e.rrpBands = m,
+        o(m.length - 1),
+        i("name"),
+        l("")
+    }
+    , [t, e])
+      , d = h.useCallback( (v, m) => {
+        o(v),
+        i(m),
+        l(t[v][m].toString())
+    }
+    , [t])
+      , u = h.useCallback(v => {
+        l(v.target.value)
+    }
+    , [])
+      , f = h.useCallback( () => {
+        if (r !== null && s) {
+            const v = [...t];
+            if (s === "name")
+                v[r].name = a;
+            else {
+                const m = parseInt(a, 10);
+                !isNaN(m) && m >= 0 && m <= 100 && (v[r][s] = m)
+            }
+            n(v),
+            e.rrpBands = v
+        }
+        o(null),
+        i(null)
+    }
+    , [r, s, a, t, e])
+      , p = h.useCallback(v => {
+        const m = t.filter( (w, g) => g !== v);
+        n(m),
+        e.rrpBands = m,
+        o(null),
+        i(null)
+    }
+    , [t, e]);
+    return {
+        rrpBands: t,
+        editingBandIndex: r,
+        editingField: s,
+        editValue: a,
+        handleAddBand: c,
+        handleBandFieldEdit: d,
+        handleBandFieldChange: u,
+        handleBandFieldBlur: f,
+        handleRemoveBand: p
+    }
+}
+  , QS = h.memo( ({band: e, index: t, editingBandIndex: n, editingField: r, editValue: o, onFieldEdit: s, onFieldChange: i, onFieldBlur: a, onRemove: l}) => {
+    const c = e.name ? `Band ${t + 1}: ${e.name}` : `Band ${t + 1}`;
+    return S.jsxs("div", {
+        className: "border border-gray-200 rounded p-1.5 mt-1",
+        children: [S.jsxs("div", {
+            className: "flex items-center justify-between mb-1",
+            children: [n === t && r === "name" ? S.jsx("input", {
+                type: "text",
+                value: o,
+                onChange: i,
+                onBlur: a,
+                placeholder: "Band name...",
+                className: "text-xs p-1 flex-1 border border-gray-300 rounded text-center",
+                autoFocus: !0
+            }) : S.jsx("div", {
+                className: "flex-1 cursor-pointer hover:bg-gray-100/50 p-1 rounded text-center",
+                onClick: () => s(t, "name"),
+                children: c
+            }), S.jsx("button", {
+                onClick: () => l(t),
+                className: "ml-1 text-red-500 hover:text-red-700",
+                children: S.jsx($w, {
+                    className: "h-3 w-3"
+                })
+            })]
+        }), S.jsxs("div", {
+            className: "grid grid-cols-2 gap-1.5",
+            children: [S.jsxs("div", {
+                children: [S.jsx("div", {
+                    className: "text-xs text-gray-500 mb-0.5",
+                    children: "DL %"
+                }), n === t && r === "dl" ? S.jsx("input", {
+                    type: "number",
+                    min: "0",
+                    max: "100",
+                    value: o,
+                    onChange: i,
+                    onBlur: a,
+                    className: "text-xs p-1 w-full border border-gray-300 rounded text-center",
+                    autoFocus: !0
+                }) : S.jsxs("div", {
+                    className: "cursor-pointer hover:bg-gray-100/50 p-1 rounded text-center",
+                    onClick: () => s(t, "dl"),
+                    children: [e.dl, "%"]
+                })]
+            }), S.jsxs("div", {
+                children: [S.jsx("div", {
+                    className: "text-xs text-gray-500 mb-0.5",
+                    children: "UL %"
+                }), n === t && r === "ul" ? S.jsx("input", {
+                    type: "number",
+                    min: "0",
+                    max: "100",
+                    value: o,
+                    onChange: i,
+                    onBlur: a,
+                    className: "text-xs p-1 w-full border border-gray-300 rounded text-center",
+                    autoFocus: !0
+                }) : S.jsxs("div", {
+                    className: "cursor-pointer hover:bg-gray-100/50 p-1 rounded text-center",
+                    onClick: () => s(t, "ul"),
+                    children: [e.ul, "%"]
+                })]
+            })]
+        })]
+    })
+}
+);
+QS.displayName = "RrpBandItem";
+const qS = h.memo( ({bands: e, editingBandIndex: t, editingField: n, editValue: r, onFieldEdit: o, onFieldChange: s, onFieldBlur: i, onRemove: a, onAdd: l}) => S.jsxs("div", {
+    className: "mt-1",
+    children: [e.map( (c, d) => S.jsx(QS, {
+        band: c,
+        index: d,
+        editingBandIndex: t,
+        editingField: n,
+        editValue: r,
+        onFieldEdit: o,
+        onFieldChange: s,
+        onFieldBlur: i,
+        onRemove: a
+    }, d)), S.jsxs("button", {
+        onClick: l,
+        className: "flex items-center justify-center w-full mt-1 p-1.5 border border-dashed border-gray-300 rounded hover:bg-gray-50 cursor-pointer",
+        children: [S.jsx(WP, {
+            className: "h-3 w-3 mr-1"
+        }), S.jsx("span", {
+            className: "text-xs",
+            children: "Add Band"
+        })]
+    })]
+}));
+qS.displayName = "RrpBands";
+const ZS = h.createContext(void 0)
+  , yF = () => {
+    const e = h.useContext(ZS);
+    if (!e)
+        throw new Error("useNodeEditorContext must be used within a NodeEditorProvider");
+    return e
+}
+  , vF = ({children: e, createChildNode: t, updateNodeData: n}) => S.jsx(ZS.Provider, {
+    value: {
+        createChildNode: t,
+        updateNodeData: n
+    },
+    children: e
+})
+  , xF = h.memo( ({id: e, data: t}) => {
+    const {createChildNode: n, updateNodeData: r} = yF()
+      , {rrpBands: o, editingBandIndex: s, editingField: i, editValue: a, handleAddBand: l, handleBandFieldEdit: c, handleBandFieldChange: d, handleBandFieldBlur: u, handleRemoveBand: f} = gF(t)
+      , p = h.useCallback(P => {
+        r(e, {
+            ...t,
+            rrpName: P
+        })
+    }
+    , [e, t, r])
+      , {isEditingName: v, rrpName: m, handleNameChange: w, handleNameBlur: g, handleNameClick: x} = mF(t, p)
+      , {isEditingPLMN: y, plmn: b, handlePLMNChange: E, handlePLMNBlur: C, handlePLMNClick: N} = hF(t, n);
+    return S.jsxs("div", {
+        className: "bg-white border-2 border-blue-500 rounded-xl shadow-md px-4 py-2 flex flex-col gap-1 items-center min-w-[180px] relative",
+        style: {
+            minHeight: 80,
+            minWidth: 180
+        },
+        children: [S.jsx(nt, {
+            type: "target",
+            position: J.Top,
+            id: "top-target",
+            className: "!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !z-50",
+            style: {
+                top: -8
+            }
+        }), S.jsx("div", {
+            className: "w-full bg-green-100 border-b border-green-200 px-2 py-1 mb-2 rounded-t",
+            children: S.jsxs("div", {
+                className: "text-sm font-semibold text-green-800 text-center",
+                children: ["RRP#", t.rrpId]
+            })
+        }), S.jsx("div", {
+            className: "w-full text-center text-lg mb-2",
+            children: v ? S.jsx("input", {
+                className: "w-full px-1 py-0.5 border rounded",
+                value: m,
+                onChange: w,
+                onBlur: g,
+                autoFocus: !0,
+                maxLength: 48,
+                placeholder: "Enter RRP name"
+            }) : S.jsx("span", {
+                tabIndex: 0,
+                className: "cursor-pointer outline-none focus:ring",
+                onClick: x,
+                onKeyDown: P => {
+                    (P.key === "Enter" || P.key === " ") && x()
+                }
+                ,
+                title: "Click to edit RRP name",
+                children: m || "Click to set RRP name"
+            })
+        }), S.jsx("div", {
+            className: "w-full flex items-center gap-1 mb-2",
+            children: y ? S.jsx("input", {
+                className: "w-24 px-1 py-0.5 border rounded",
+                value: b,
+                onChange: E,
+                onBlur: C,
+                autoFocus: !0,
+                maxLength: 12,
+                placeholder: "Enter PLMN"
+            }) : S.jsx("span", {
+                tabIndex: 0,
+                className: "ml-1 cursor-pointer outline-none hover:underline focus:ring text-blue-600 text-xs",
+                onClick: N,
+                onKeyDown: P => {
+                    (P.key === "Enter" || P.key === " ") && N()
+                }
+                ,
+                title: "Click to add PLMN and create RRPmember",
+                children: b || "Add PLMN (creates RRPmember)"
+            })
+        }), S.jsx(qS, {
+            bands: o,
+            editingBandIndex: s,
+            editingField: i,
+            editValue: a,
+            onFieldEdit: c,
+            onFieldChange: d,
+            onFieldBlur: u,
+            onRemove: f,
+            onAdd: l
+        }), S.jsx(nt, {
+            type: "source",
+            position: J.Bottom,
+            id: "bottom-source",
+            className: "!w-4 !h-4 !border-2 !rounded-full !border-white !bg-blue-500 !z-50",
+            style: {
+                bottom: -8
+            },
+            isConnectable: !0
+        })]
+    })
+}
