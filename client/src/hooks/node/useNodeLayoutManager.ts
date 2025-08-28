@@ -9,7 +9,7 @@ export const useNodeLayoutManager = (
   edges: Edge[],
   setNodes: React.Dispatch<React.SetStateAction<Node[]>>,
 ) => {
-  const { getZoom } = useReactFlow();
+  const reactFlowInstance = useReactFlow();
 
   const arrangeNodesInLayout = useCallback(() => {
     if (nodes.length === 0) {
@@ -60,9 +60,16 @@ export const useNodeLayoutManager = (
         setNodes(arrangedNodes);
         toast.success('Nodes arranged in balanced hierarchical tree layout');
         
-        // Verify layout was applied
+        // Force viewport to show all positioned nodes
         setTimeout(() => {
-          console.log('✅ Layout applied successfully');
+          console.log('✅ Layout applied - fitting view to show all nodes');
+          if (reactFlowInstance) {
+            reactFlowInstance.fitView({ 
+              padding: 50,
+              maxZoom: 1.2,
+              minZoom: 0.1 
+            });
+          }
         }, 100);
         
         requestAnimationFrame(() => {
