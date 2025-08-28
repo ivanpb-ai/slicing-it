@@ -152,6 +152,7 @@ export const arrangeNodesInBalancedTree = (
     
     // Calculate Y position for this level
     const y = marginY + level * verticalSpacing;
+    console.log(`🎯 Level ${level}: Y position = ${marginY} + ${level} * ${verticalSpacing} = ${y}`);
     
     if (level === 0) {
       // Root level: center at origin

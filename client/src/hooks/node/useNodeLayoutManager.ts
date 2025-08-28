@@ -42,21 +42,8 @@ export const useNodeLayoutManager = (
       console.log('✅ BALANCED TREE: Starting layout arrangement with improved spacing');
       console.log('Layout options:', layoutOptions);
       
-      // SIMPLE TEST: Create nodes with obvious spacing to test if ReactFlow respects positions
-      const testNodes = nodes.map((node, index) => ({
-        ...node,
-        position: {
-          x: index * 300,  // 300px apart horizontally 
-          y: index * 200   // 200px apart vertically
-        }
-      }));
-      
-      console.log('🧪 SIMPLE TEST: Setting nodes with obvious spacing:');
-      testNodes.slice(0, 5).forEach((node, i) => {
-        console.log(`  Node ${i}: x=${node.position.x}, y=${node.position.y}`);
-      });
-      
-      const arrangedNodes = testNodes;
+      const nodesCopy = nodes.map(node => ({...node}));
+      const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
       
       console.log('✅ Received arranged nodes:', arrangedNodes?.length, 'nodes');
       console.log('Sample positions:', arrangedNodes?.slice(0, 3).map(n => ({ id: n.id, x: n.position.x, y: n.position.y })));
