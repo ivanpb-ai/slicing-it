@@ -167,9 +167,9 @@ export const useNodeEditor = () => {
         }
 
           
-          // Fit view after loading
+          // Fit view after loading (unless prevented by manual layout)
           setTimeout(() => {
-            if (reactFlowInstance) {
+            if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
               reactFlowInstance.fitView({ padding: 0.2 });
             }
             toast.success('Example graph (example) loaded successfully');

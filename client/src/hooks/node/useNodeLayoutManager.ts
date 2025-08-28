@@ -49,6 +49,9 @@ export const useNodeLayoutManager = (
       console.log('Sample positions:', arrangedNodes?.slice(0, 3).map(n => ({ id: n.id, x: n.position.x, y: n.position.y })));
       
       if (arrangedNodes?.length > 0) {
+        // Set flag to prevent automatic fitView calls that would override our layout
+        window.sessionStorage.setItem('prevent-fitview', 'true');
+        
         setNodes(arrangedNodes);
         toast.success('Nodes arranged in balanced hierarchical tree layout');
         
@@ -56,6 +59,11 @@ export const useNodeLayoutManager = (
           window.dispatchEvent(new CustomEvent('node-added'));
           window.dispatchEvent(new CustomEvent('layout-changed'));
           window.dispatchEvent(new CustomEvent('force-cell-visibility'));
+          
+          // Clear the flag after events are processed
+          setTimeout(() => {
+            window.sessionStorage.removeItem('prevent-fitview');
+          }, 1000);
         });
       }
     } catch (error) {
