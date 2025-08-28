@@ -41,15 +41,19 @@ export const fitNodesToViewport = (
   // Use the smaller scale to maintain aspect ratio
   const scale = Math.min(scaleX, scaleY);
   
-  // Apply scaling and centering
-  if (scale < 1 || minX < padding || minY < padding) {
+  // Apply scaling and centering - BUT DON'T SCALE DOWN PROPERLY SPACED LAYOUTS
+  // Only scale if nodes are too cramped (minX/minY negative) but preserve proper spacing
+  if (minX < padding || minY < padding) {
+    const offsetX = Math.max(0, padding - minX);
+    const offsetY = Math.max(0, padding - minY);
+    
     return nodes.map(node => {
-      const newX = (node.position.x - minX) * scale + padding;
-      const newY = (node.position.y - minY) * scale + padding;
-      
       return {
         ...node,
-        position: { x: newX, y: newY }
+        position: { 
+          x: node.position.x + offsetX, 
+          y: node.position.y + offsetY 
+        }
       };
     });
   }
