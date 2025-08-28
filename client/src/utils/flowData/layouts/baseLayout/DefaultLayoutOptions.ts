@@ -5,8 +5,8 @@ export const getDefaultLayoutOptions: LayoutOptions = {
   type: 'balanced-tree',
   nodeWidth: 180,          // match your node size
   nodeHeight: 120,
-  horizontalSpacing: 250,  // optimal spacing for balanced tree
-  verticalSpacing: 180,    // optimal vertical spacing for balanced tree
+  horizontalSpacing: 650,  // optimal spacing for balanced tree
+  verticalSpacing: 500,    // optimal vertical spacing for balanced tree
   marginX: 400,            // wider margins for better balanced tree centering
   marginY: 100,            // optimal top margin for balanced tree
   preventOverlap: true,

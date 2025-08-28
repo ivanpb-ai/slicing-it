@@ -19,15 +19,15 @@ export const useCanvasOperations = (
   // Ultra-optimized layout options for compact balanced tree layout
   const defaultLayoutOptions: LayoutOptions = {
     type: 'balanced-tree',
-    spacing: 250,        // Optimal spacing for balanced tree
+    spacing: 650,        // Optimal spacing for balanced tree
     nodeWidth: 180,
     nodeHeight: 120,
     marginX: 400,        // Optimized margin for balanced tree
     marginY: 100,        // Optimized margin for balanced tree
     preventOverlap: true,
     edgeShortenFactor: 0.95, // Optimized edge factor for balanced tree
-    horizontalSpacing: 250,  // Horizontal spacing for balanced tree
-    verticalSpacing: 180     // Vertical spacing for balanced tree
+    horizontalSpacing: 650,  // Horizontal spacing for balanced tree
+    verticalSpacing: 500     // Vertical spacing for balanced tree
   };
 
   // Merge default options with provided options
@@ -69,15 +69,15 @@ export const useCanvasOperations = (
         initialEdges,
         {
           type: 'balanced-tree',
-          spacing: 250,        // Optimal spacing for balanced tree
+          spacing: 650,        // Optimal spacing for balanced tree
           nodeWidth: 180,
           nodeHeight: 120,
           marginX: 400,        // Optimized margin for balanced tree
           marginY: 100,        // Optimized margin for balanced tree
           preventOverlap: true,
           edgeShortenFactor: 0.95, // Optimized edge factor for balanced tree
-          horizontalSpacing: 250,  // Horizontal spacing for balanced tree
-          verticalSpacing: 180     // Vertical spacing for balanced tree
+          horizontalSpacing: 650,  // Horizontal spacing for balanced tree
+          verticalSpacing: 500     // Vertical spacing for balanced tree
         }
       );
       
@@ -105,13 +105,13 @@ export const useCanvasOperations = (
       // Use balanced tree layout with proper spacing for readability
       const arrangedNodes = arrangeNodes(nodes, edges, {
         type: 'balanced-tree',
-        spacing: 250,        // Proper spacing for readability
+        spacing: 650,        // Proper spacing for readability
         nodeWidth: 180,      // Standard node width
         nodeHeight: 120,     // Standard node height
         marginX: 400,        // Proper margin
         marginY: 100,        // Proper margin
-        horizontalSpacing: 300,
-        verticalSpacing: 200,
+        horizontalSpacing: 650,
+        verticalSpacing: 500,
         preventOverlap: true,
         edgeShortenFactor: 0.9
       });

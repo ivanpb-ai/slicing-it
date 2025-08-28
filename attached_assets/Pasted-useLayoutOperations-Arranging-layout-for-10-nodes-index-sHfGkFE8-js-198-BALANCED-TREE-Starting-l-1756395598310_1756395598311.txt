@@ -1,0 +1,30 @@
+useLayoutOperations: Arranging layout for 10 nodes
+index-sHfGkFE8.js:198 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+index-sHfGkFE8.js:198 Layout options: {type: 'balanced-tree', horizontalSpacing: 250, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+index-sHfGkFE8.js:198 🔥 DEBUG: arrangeNodes called with options: {type: 'balanced-tree', horizontalSpacing: 250, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+index-sHfGkFE8.js:198 LayoutProcessor: Using layout type 'balanced-tree' from options: {type: 'balanced-tree', nodeWidth: 180, nodeHeight: 120, horizontalSpacing: 250, verticalSpacing: 180, …}
+index-sHfGkFE8.js:198 ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 10 nodes
+index-sHfGkFE8.js:198 Available node IDs: (10) ['network-1756395521578-4828', 'cell-area-1', 'rrp-1', 'rrpmember-1756395535095-6943', 's-nssai-1', 'dnn-1', 's-nssai-2', 'dnn-2', 'fiveqi-3', 'fiveqi-59']
+index-sHfGkFE8.js:198 Filtered edges: 9 -> 9 valid edges
+index-sHfGkFE8.js:198 Found 1 root nodes
+index-sHfGkFE8.js:198 Level assignments: {network-1756395521578-4828: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1756395535095-6943: {…}, s-nssai-1: {…}, …}
+index-sHfGkFE8.js:198 Parent-child relationships: {cell-area-1: Array(1), rrp-1: Array(1), rrpmember-1756395535095-6943: Array(1), s-nssai-1: Array(1), dnn-1: Array(1), …}
+index-sHfGkFE8.js:198 Level 1 sibling groups: {network-1756395521578-4828: Array(1)}
+index-sHfGkFE8.js:198 Single child cell-area-1 under parent network-1756395521578-4828 -> x=0
+index-sHfGkFE8.js:198 Level 2 sibling groups: {cell-area-1: Array(1)}
+index-sHfGkFE8.js:198 Single child rrp-1 under parent cell-area-1 -> x=0
+index-sHfGkFE8.js:198 Level 3 sibling groups: {rrp-1: Array(1)}
+index-sHfGkFE8.js:198 Single child rrpmember-1756395535095-6943 under parent rrp-1 -> x=0
+index-sHfGkFE8.js:198 Level 4 sibling groups: {rrpmember-1756395535095-6943: Array(2)}
+index-sHfGkFE8.js:198 Spreading 2 siblings around parent rrpmember-1756395535095-6943 at x=0
+index-sHfGkFE8.js:198   Sibling s-nssai-1 -> x=-125
+index-sHfGkFE8.js:198   Sibling s-nssai-2 -> x=125
+index-sHfGkFE8.js:198 Level 5 sibling groups: {s-nssai-1: Array(1), s-nssai-2: Array(1)}
+index-sHfGkFE8.js:198 Single child dnn-1 under parent s-nssai-1 -> x=-125
+index-sHfGkFE8.js:198 Single child dnn-2 under parent s-nssai-2 -> x=125
+index-sHfGkFE8.js:198 Level 6 sibling groups: {dnn-1: Array(1), dnn-2: Array(1)}
+index-sHfGkFE8.js:198 Single child fiveqi-3 under parent dnn-1 -> x=-125
+index-sHfGkFE8.js:198 Single child fiveqi-59 under parent dnn-2 -> x=125
+index-sHfGkFE8.js:198 Balanced tree layout completed. Positioned 10 nodes
+index-sHfGkFE8.js:198 Final calculated positions before returning: (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+index-sHfGkFE8.js:198 After arrangement: Found 10 visible nodes, expected 10
