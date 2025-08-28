@@ -40,6 +40,7 @@ export const arrangeNodesInBalancedTree = (
   } = options;
 
   console.log('✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with', nodes.length, 'nodes');
+  console.log('✅ SPACING SETTINGS: verticalSpacing =', verticalSpacing, 'horizontalSpacing =', horizontalSpacing);
 
   // Create node ID set for validation
   const nodeIds = new Set(nodes.map(node => node.id));
@@ -152,6 +153,7 @@ export const arrangeNodesInBalancedTree = (
     
     // Calculate Y position for this level
     const y = marginY + level * verticalSpacing;
+    console.log(`Level ${level}: Y position = ${y} (marginY: ${marginY} + level: ${level} * verticalSpacing: ${verticalSpacing})`);
     
     if (level === 0) {
       // Root level: center at origin
