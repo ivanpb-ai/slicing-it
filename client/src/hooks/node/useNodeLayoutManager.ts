@@ -24,17 +24,17 @@ export const useNodeLayoutManager = (
       return;
     }
 
-    // Layout options using balanced tree layout for optimal hierarchical arrangement
+    // Layout options using balanced tree layout with DRAMATIC spacing for testing
     const layoutOptions = {
       type: 'balanced-tree' as LayoutType,
-      horizontalSpacing: 250,     // Optimal spacing for balanced tree
-      verticalSpacing: 180,       // Optimal vertical spacing
+      horizontalSpacing: 400,     // DRAMATIC horizontal spacing 
+      verticalSpacing: 300,       // DRAMATIC vertical spacing - should be very obvious
       nodeWidth: 180,
       nodeHeight: 120,
-      marginX: 400,               // Optimized margin for balanced tree
-      marginY: 100,               // Optimized margin for balanced tree
+      marginX: 100,               // Smaller margin to keep nodes centered
+      marginY: 50,                // Smaller margin to keep nodes centered  
       preventOverlap: true,
-      edgeShortenFactor: 0.95,    // Optimal edge factor for balanced tree
+      edgeShortenFactor: 0.95,    
       minNodeDistance: 10
     };
 
