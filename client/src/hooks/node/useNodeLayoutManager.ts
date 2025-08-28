@@ -105,7 +105,7 @@ export const useNodeLayoutManager = (
         toast.error('Failed to arrange nodes');
       }
     }
-  }, [nodes, edges, setNodes, getZoom]);
+  }, [nodes, edges, setNodes, reactFlowInstance]);
 
   return { arrangeNodesInLayout };
 };
