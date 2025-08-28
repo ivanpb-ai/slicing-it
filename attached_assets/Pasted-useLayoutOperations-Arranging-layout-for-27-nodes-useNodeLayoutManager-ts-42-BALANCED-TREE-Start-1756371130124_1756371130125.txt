@@ -1,0 +1,432 @@
+useLayoutOperations: Arranging layout for 27 nodes
+useNodeLayoutManager.ts:42 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+useNodeLayoutManager.ts:43 Layout options: {type: 'balanced-tree', horizontalSpacing: 600, verticalSpacing: 300, nodeWidth: 180, nodeHeight: 120, …}
+index.ts:17 🔥 DEBUG: arrangeNodes called with options: {type: 'balanced-tree', horizontalSpacing: 600, verticalSpacing: 300, nodeWidth: 180, nodeHeight: 120, …}
+LayoutProcessor.ts:32 LayoutProcessor: Using layout type 'balanced-tree' from options: {type: 'balanced-tree', nodeWidth: 180, nodeHeight: 120, horizontalSpacing: 600, verticalSpacing: 300, …}
+balancedTreeLayout.ts:42 ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 27 nodes
+balancedTreeLayout.ts:46 Available node IDs: (25) ['network-1756298418290-5901', 'cell-area-1', 'cell-area-2', 'rrp-1', 'rrp-2', 'rrp-3', 'rrpmember-1756298522116-122', 'rrpmember-1756298528108-7394', 'rrpmember-1756298536993-2136', 's-nssai-1', 's-nssai-2', 'dnn-1', 'dnn-2', 'dnn-3', 'dnn-4', 'dnn-5', 'dnn-6', 'fiveqi-79', 'fiveqi-9', 'fiveqi-67', 'fiveqi-7', 's-nssai-4', 'rrpmember-1756313013671-6351', 'rrpmember-1756313029003-77', 'rrpmember-1756313334883-4722']
+balancedTreeLayout.ts:54  Skipping invalid edge: rrp-1 -> rrpmember-1756298507800-2365 (source exists: true, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrp-3 -> rrpmember-1756298519318-7602 (source exists: true, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+2balancedTreeLayout.ts:54  Skipping invalid edge: rrpmember-1756298528108-7394 -> s-nssai-3 (source exists: true, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+2balancedTreeLayout.ts:54  Skipping invalid edge: s-nssai-3 -> dnn-3 (source exists: false, target exists: true)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+2balancedTreeLayout.ts:54  Skipping invalid edge: s-nssai-3 -> dnn-5 (source exists: false, target exists: true)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrp-1 -> rrpmember-1756308464766-6154 (source exists: true, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrp-3 -> rrpmember-1756308508069-4882 (source exists: true, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrp-2 -> rrpmember-1756308538723-1337 (source exists: true, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrpmember-1756308538723-1337 -> s-nssai-3 (source exists: false, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrpmember-1756298522116-122 -> s-nssai-3 (source exists: true, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrpmember-1756308508069-4882 -> s-nssai-3 (source exists: false, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrp-1 -> rrpmember-1756312442206-6666 (source exists: true, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrpmember-1756312442206-6666 -> s-nssai-3 (source exists: false, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrpmember-1756308508069-4882 -> dnn-2 (source exists: false, target exists: true)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrpmember-1756308538723-1337 -> s-nssai-4 (source exists: false, target exists: true)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrpmember-1756312442206-6666 -> dnn-2 (source exists: false, target exists: true)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:60 Filtered edges: 65 -> 46 valid edges
+balancedTreeLayout.ts:94 Found 1 root nodes
+balancedTreeLayout.ts:138 Level assignments: {network-1756298418290-5901: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1756298536993-2136: {…}, s-nssai-1: {…}, …}
+balancedTreeLayout.ts:139 Parent-child relationships: {cell-area-1: Array(2), cell-area-2: Array(2), rrp-1: Array(2), rrp-2: Array(2), rrp-3: Array(3), …}
+balancedTreeLayout.ts:196 Level 1 sibling groups: {multiParent: Array(2)}
+balancedTreeLayout.ts:220 Multi-parent child cell-area-1 with parents at: (2) [0, 0] -> avgX=0
+balancedTreeLayout.ts:220 Multi-parent child cell-area-2 with parents at: (2) [0, 0] -> avgX=0
+balancedTreeLayout.ts:239 Spreading 2 overlapping multi-parent nodes around center x=0
+balancedTreeLayout.ts:242   Spread multi-parent cell-area-1: 0 -> -180
+balancedTreeLayout.ts:242   Spread multi-parent cell-area-2: 0 -> 180
+balancedTreeLayout.ts:196 Level 2 sibling groups: {multiParent: Array(3)}
+balancedTreeLayout.ts:220 Multi-parent child rrp-1 with parents at: (2) [-180, -180] -> avgX=-180
+balancedTreeLayout.ts:220 Multi-parent child rrp-3 with parents at: (3) [180, 180, -180] -> avgX=60
+balancedTreeLayout.ts:220 Multi-parent child rrp-2 with parents at: (2) [180, 180] -> avgX=180
+balancedTreeLayout.ts:196 Level 3 sibling groups: {rrp-1: Array(2), rrp-3: Array(2), rrp-2: Array(2)}
+balancedTreeLayout.ts:289 Spreading 2 siblings around parent rrp-1 at x=-180 with 600px spacing
+balancedTreeLayout.ts:293   Sibling rrpmember-1756298536993-2136 -> x=-480
+balancedTreeLayout.ts:293   Sibling rrpmember-1756313029003-77 -> x=120
+balancedTreeLayout.ts:289 Spreading 2 siblings around parent rrp-3 at x=60 with 600px spacing
+balancedTreeLayout.ts:293   Sibling rrpmember-1756298522116-122 -> x=-240
+balancedTreeLayout.ts:293   Sibling rrpmember-1756313013671-6351 -> x=360
+balancedTreeLayout.ts:289 Spreading 2 siblings around parent rrp-2 at x=180 with 600px spacing
+balancedTreeLayout.ts:293   Sibling rrpmember-1756298528108-7394 -> x=-120
+balancedTreeLayout.ts:293   Sibling rrpmember-1756313334883-4722 -> x=480
+balancedTreeLayout.ts:196 Level 4 sibling groups: {multiParent: Array(3)}
+balancedTreeLayout.ts:220 Multi-parent child s-nssai-1 with parents at: (2) [-480, -480] -> avgX=-480
+balancedTreeLayout.ts:220 Multi-parent child s-nssai-2 with parents at: (4) [-240, -240, 360, 120] -> avgX=0
+balancedTreeLayout.ts:220 Multi-parent child s-nssai-4 with parents at: (2) [-120, 480] -> avgX=180
+balancedTreeLayout.ts:196 Level 5 sibling groups: {multiParent: Array(4), s-nssai-4: Array(2)}
+balancedTreeLayout.ts:220 Multi-parent child dnn-1 with parents at: (2) [-480, -480] -> avgX=-480
+balancedTreeLayout.ts:220 Multi-parent child dnn-4 with parents at: (2) [-480, -480] -> avgX=-480
+balancedTreeLayout.ts:220 Multi-parent child dnn-6 with parents at: (2) [-480, -480] -> avgX=-480
+balancedTreeLayout.ts:220 Multi-parent child dnn-2 with parents at: (3) [0, 0, 180] -> avgX=60
+balancedTreeLayout.ts:239 Spreading 4 overlapping multi-parent nodes around center x=-345
+balancedTreeLayout.ts:242   Spread multi-parent dnn-1: -480 -> -885
+balancedTreeLayout.ts:242   Spread multi-parent dnn-4: -480 -> -525
+balancedTreeLayout.ts:242   Spread multi-parent dnn-6: -480 -> -165
+balancedTreeLayout.ts:242   Spread multi-parent dnn-2: 60 -> 195
+balancedTreeLayout.ts:289 Spreading 2 siblings around parent s-nssai-4 at x=180 with 600px spacing
+balancedTreeLayout.ts:293   Sibling dnn-3 -> x=-120
+balancedTreeLayout.ts:293   Sibling dnn-5 -> x=480
+balancedTreeLayout.ts:196 Level 6 sibling groups: {multiParent: Array(4)}
+balancedTreeLayout.ts:220 Multi-parent child fiveqi-67 with parents at: (2) [-885, -885] -> avgX=-885
+balancedTreeLayout.ts:220 Multi-parent child fiveqi-9 with parents at: (2) [-525, -525] -> avgX=-525
+balancedTreeLayout.ts:220 Multi-parent child fiveqi-79 with parents at: (2) [-165, -165] -> avgX=-165
+balancedTreeLayout.ts:220 Multi-parent child fiveqi-7 with parents at: (4) [-120, -120, 480, 195] -> avgX=108.75
+balancedTreeLayout.ts:323 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 25 nodes
+balancedTreeLayout.ts:324 🎯 Final Y spacing used: 300 px
+balancedTreeLayout.ts:325 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+useNodeLayoutManager.ts:48 ✅ Received arranged nodes: 27 nodes
+useNodeLayoutManager.ts:49 Sample positions: (3) [{…}, {…}, {…}]
+useNodeLayoutManager.ts:55 🎯 SETTING NODES WITH CALCULATED POSITIONS:
+useNodeLayoutManager.ts:57   network-1756298418290-5901: x=0, y=50
+useNodeLayoutManager.ts:57   cell-area-1: x=-180, y=350
+useNodeLayoutManager.ts:57   cell-area-2: x=180, y=350
+useNodeLayoutManager.ts:57   rrp-1: x=-180, y=650
+useNodeLayoutManager.ts:57   rrp-2: x=180, y=650
