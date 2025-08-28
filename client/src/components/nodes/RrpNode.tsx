@@ -15,15 +15,10 @@ interface RrpNodeProps {
 
 export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
 
-  const { createChildNode, updateNodeData } = useNodeEditorContext();
+  // TEMPORARILY DISABLE CONTEXT TO ISOLATE ERROR
+  // const { createChildNode, updateNodeData } = useNodeEditorContext();
   
-  // Defensive check to ensure functions exist
-  if (!createChildNode || !updateNodeData) {
-    console.error('RrpNode: Missing required functions from NodeEditorContext', { 
-      createChildNode: !!createChildNode, 
-      updateNodeData: !!updateNodeData 
-    });
-  }
+  console.log('RrpNode rendering with id:', id, 'data:', data);
 
   // Bands management - TEMPORARILY DISABLED
   // const {
@@ -49,17 +44,7 @@ export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
   const handleBandFieldBlur = () => {};
   const handleRemoveBand = () => {};
 
-  // Name editing, propagates via updateNodeData
-  const handlePersistRrpName = useCallback(
-    (newName: string) => {
-      console.log('handlePersistRrpName called with:', newName);
-      // Temporarily disabled to isolate the error
-      // if (id && updateNodeData && typeof updateNodeData === 'function') {
-      //   updateNodeData(id, { ...data, rrpName: newName });
-      // }
-    },
-    [id, data, updateNodeData]
-  );
+  // TEMPORARILY REMOVE ALL CALLBACKS
 
   // const {
   //   isEditingName,
