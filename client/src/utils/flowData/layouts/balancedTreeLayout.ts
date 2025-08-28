@@ -34,7 +34,7 @@ export const arrangeNodesInBalancedTree = (
     nodeWidth = 180,
     nodeHeight = 120,
     horizontalSpacing = 250,
-    verticalSpacing = 300,  // Increased from 180 to 300 for better RRP member spacing
+    verticalSpacing = 400,  // Increased to 400px for much better vertical spacing
     marginX = 400,
     marginY = 100
   } = options;
@@ -202,7 +202,7 @@ export const arrangeNodesInBalancedTree = (
       // APPLY UNIFORM SPACING TO ALL NODES AT THIS LEVEL
       // This eliminates the inconsistent spacing that was causing the problem
       const nodeCount = nodeWithIdealX.length;
-      const uniformSpacing = Math.max(horizontalSpacing, 550); // Increased from 450px to 550px for better node clearance
+      const uniformSpacing = Math.max(horizontalSpacing, 650); // Increased to 650px to eliminate all horizontal overlap
       const totalWidth = (nodeCount - 1) * uniformSpacing;
       
       // Center the entire level around x=0

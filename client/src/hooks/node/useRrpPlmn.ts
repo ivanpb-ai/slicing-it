@@ -43,7 +43,7 @@ export const useRrpPlmn = (
           
           const childPosition = {
             x: parentNode.position.x + (existingRrpMembers.length * 200), // Spread horizontally
-            y: parentNode.position.y + 300  // Reduced from 350 to 300 to match layout algorithm
+            y: parentNode.position.y + 400  // Increased to 400 to match new layout spacing
           };
           
           if (createChildNode) {

@@ -27,8 +27,8 @@ export const useNodeLayoutManager = (
     // Layout options with proper spacing to prevent overlap
     const layoutOptions = {
       type: 'balanced-tree' as LayoutType,
-      horizontalSpacing: 600,     // MAXIMIZED: Prevent any possible overlap between nodes
-      verticalSpacing: 180,       // Good vertical spacing between levels  
+      horizontalSpacing: 650,     // Increased to prevent overlap of DNN/5QI nodes
+      verticalSpacing: 400,       // Increased to properly space RRP members from parents
       nodeWidth: 180,
       nodeHeight: 120,
       marginX: 100,
