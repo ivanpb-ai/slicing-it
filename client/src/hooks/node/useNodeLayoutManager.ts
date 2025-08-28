@@ -42,23 +42,10 @@ export const useNodeLayoutManager = (
       console.log('✅ BALANCED TREE: Starting layout arrangement with improved spacing');
       console.log('Layout options:', layoutOptions);
       
-      // DIRECT MANUAL POSITIONING - bypass all complex algorithms
-      console.log('🔧 MANUAL TEST: Setting nodes in simple grid with obvious spacing');
-      const arrangedNodes = nodes.map((node, index) => ({
-        ...node,
-        position: {
-          x: (index % 3) * 400,        // 3 columns, 400px apart
-          y: Math.floor(index / 3) * 200  // Rows 200px apart
-        }
-      }));
+      const nodesCopy = nodes.map(node => ({...node}));
+      const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
       
-      console.log('🔧 MANUAL positions set:');
-      arrangedNodes.slice(0, 9).forEach((node, i) => {
-        console.log(`  ${node.id}: x=${node.position.x}, y=${node.position.y}`);
-      });
-      
-      console.log('✅ Received arranged nodes:', arrangedNodes?.length, 'nodes');
-      console.log('Sample positions:', arrangedNodes?.slice(0, 3).map(n => ({ id: n.id, x: n.position.x, y: n.position.y })));
+      console.log('✅ Balanced tree layout completed:', arrangedNodes?.length, 'nodes positioned in hierarchy');
       
       if (arrangedNodes?.length > 0) {
         // Set flag to prevent automatic fitView calls that would override our layout

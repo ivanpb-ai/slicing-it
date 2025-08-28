@@ -286,7 +286,7 @@ export const arrangeNodesInBalancedTree = (
           const totalWidth = (siblingCount - 1) * horizontalSpacing;
           const startX = centerX - totalWidth / 2;
           
-          console.log(`Spreading ${siblingCount} siblings around parent ${groupKey} at x=${centerX} with ${horizontalSpacing}px spacing`);
+          console.log(`Spreading ${siblingCount} siblings around parent ${groupKey} at x=${centerX}`);
           
           siblings.forEach((nodeId, index) => {
             const x = startX + index * horizontalSpacing;
