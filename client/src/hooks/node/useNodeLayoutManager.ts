@@ -52,8 +52,24 @@ export const useNodeLayoutManager = (
         // Set flag to prevent automatic fitView calls that would override our layout
         window.sessionStorage.setItem('prevent-fitview', 'true');
         
+        console.log('🎯 SETTING NODES WITH CALCULATED POSITIONS:');
+        arrangedNodes.slice(0, 5).forEach(node => {
+          console.log(`  ${node.id}: x=${node.position.x}, y=${node.position.y}`);
+        });
+        
         setNodes(arrangedNodes);
         toast.success('Nodes arranged in balanced hierarchical tree layout');
+        
+        // Check positions after a short delay to see if they're being overridden
+        setTimeout(() => {
+          console.log('🔍 CHECKING POSITIONS AFTER 100ms:');
+          const currentNodes = document.querySelectorAll('[data-id]');
+          Array.from(currentNodes).slice(0, 5).forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const id = el.getAttribute('data-id');
+            console.log(`  ${id}: DOM x=${rect.left}, y=${rect.top}`);
+          });
+        }, 100);
         
         requestAnimationFrame(() => {
           window.dispatchEvent(new CustomEvent('node-added'));

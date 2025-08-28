@@ -185,12 +185,14 @@ export const handleStorageGraphLoaded = debounce((reactFlowInstance: ReactFlowIn
     // Wait for storage graphs with simplified sequence
     setTimeout(() => {
       try {
-        // Fit view with a simple approach
-        reactFlowInstance.fitView({ 
-          padding: 0.2,
-          includeHiddenNodes: false,
-          duration: 500
-        });
+        // Fit view with a simple approach (unless prevented by manual layout)
+        if (!window.sessionStorage.getItem('prevent-fitview')) {
+          reactFlowInstance.fitView({ 
+            padding: 0.2,
+            includeHiddenNodes: false,
+            duration: 500
+          });
+        }
         
         // Reset processing flag
         setTimeout(() => {

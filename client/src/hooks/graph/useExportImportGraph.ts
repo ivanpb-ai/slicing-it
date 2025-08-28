@@ -145,11 +145,13 @@ export const useExportImportGraph = (
               if (reactFlowInstance) {
                 setTimeout(() => {
                   console.log('Fitting view after importing graph (delayed)');
-                  reactFlowInstance.fitView({ 
-                    padding: 0.2,
-                    includeHiddenNodes: false,
-                    duration: 800
-                  });
+                  if (!window.sessionStorage.getItem('prevent-fitview')) {
+                    reactFlowInstance.fitView({ 
+                      padding: 0.2,
+                      includeHiddenNodes: false,
+                      duration: 800
+                    });
+                  }
                 }, 500);
               }
             }, 200);

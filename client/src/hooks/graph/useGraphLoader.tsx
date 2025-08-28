@@ -150,7 +150,7 @@ export const useGraphLoader = (
       
       // Fit view after nodes and edges are set
       setTimeout(() => {
-        if (reactFlowInstance) {
+        if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
           console.log('Fitting view after graph loading');
           reactFlowInstance.fitView({
             padding: 0.2,
