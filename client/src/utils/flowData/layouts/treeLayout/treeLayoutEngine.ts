@@ -31,9 +31,9 @@ export const arrangeNodesInTreeLayout = (
 ): Node[] => {
   // BALANCED: Use optimal spacing for hierarchical tree layout
   const {
-    horizontalSpacing = 300,   // Much wider horizontal spacing for balance
-    verticalSpacing = 200,     // Optimal vertical spacing for readability
-    levelHeight = 200,         // Optimal level height for clear hierarchy
+    horizontalSpacing = 650,   // Increased horizontal spacing to prevent overlap
+    verticalSpacing = 500,     // Increased vertical spacing for better hierarchy separation
+    levelHeight = 500,         // Increased level height to match vertical spacing
     preservePositions = false,
     centerWidth = 1400,
     edgeCrossingReduction = true,
@@ -79,8 +79,8 @@ export const arrangeNodesInTreeLayout = (
       {
         ...options,
         horizontalSpacing,
-        verticalSpacing: 180,    
-        levelHeight: 180,         
+        verticalSpacing: verticalSpacing,    // Use the actual verticalSpacing parameter
+        levelHeight: levelHeight,            // Use the actual levelHeight parameter
         edgeCrossingReduction,
         edgeShortenFactor,
         minNodeDistance: 80
@@ -91,7 +91,7 @@ export const arrangeNodesInTreeLayout = (
     const finalNodes = processNodesAfterLayout(
       positionedNodes,
       relationships,
-      verticalSpacing // Use proper vertical spacing (200px)
+      verticalSpacing // Use proper vertical spacing (500px)
     );
     console.log(`finalNodes ${finalNodes}`);
 

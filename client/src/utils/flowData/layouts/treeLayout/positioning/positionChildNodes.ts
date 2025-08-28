@@ -36,10 +36,10 @@ export function positionChildNodes(
   
   const {
     marginY = 50,
-    spacing = 100,
+    spacing = 200,
     nodeHeight = 180,
     nodeWidth = 180,
-    verticalSpacing = 200,
+    verticalSpacing = 500,
     minNodeDistance = 20
   } = options;
 
@@ -59,7 +59,7 @@ export function positionChildNodes(
     if (children.length === 0) return;
 
     // PROPER SPACING: Use adequate vertical offset for readability
-    const childY = parentNode.position.y + 200;
+    const childY = parentNode.position.y + verticalSpacing;
     console.log(`🌳 BALANCED TREE: Positioning children of ${parentId} with optimized spacing`);
     
     // Get parent's EXACT center X position (center of the node)
