@@ -38,7 +38,7 @@ export const processNodesWithLayout = (
           nodeWidth: mergedOptions.nodeWidth,
           nodeHeight: mergedOptions.nodeHeight,
           horizontalSpacing: mergedOptions.horizontalSpacing || mergedOptions.spacing,
-          verticalSpacing: mergedOptions.verticalSpacing || 150,
+          verticalSpacing: mergedOptions.verticalSpacing || 500,
           marginX: mergedOptions.marginX,
           marginY: mergedOptions.marginY
         });

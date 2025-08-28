@@ -202,7 +202,7 @@ export const arrangeNodesInBalancedTree = (
       // APPLY UNIFORM SPACING TO ALL NODES AT THIS LEVEL
       // This eliminates the inconsistent spacing that was causing the problem
       const nodeCount = nodeWithIdealX.length;
-      const uniformSpacing = Math.max(horizontalSpacing, 650); // Increased to 650px to eliminate all horizontal overlap
+      const uniformSpacing = Math.max(horizontalSpacing, 750); // Increased to 750px to eliminate all horizontal overlap
       const totalWidth = (nodeCount - 1) * uniformSpacing;
       
       // Center the entire level around x=0
