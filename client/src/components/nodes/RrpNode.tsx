@@ -16,6 +16,14 @@ interface RrpNodeProps {
 export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
 
   const { createChildNode, updateNodeData } = useNodeEditorContext();
+  
+  // Defensive check to ensure functions exist
+  if (!createChildNode || !updateNodeData) {
+    console.error('RrpNode: Missing required functions from NodeEditorContext', { 
+      createChildNode: !!createChildNode, 
+      updateNodeData: !!updateNodeData 
+    });
+  }
 
   // Bands management
   const {
@@ -33,7 +41,7 @@ export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
   // Name editing, propagates via updateNodeData
   const handlePersistRrpName = useCallback(
     (newName: string) => {
-      if (id && updateNodeData) {
+      if (id && updateNodeData && typeof updateNodeData === 'function') {
         updateNodeData(id, { ...data, rrpName: newName });
       }
     },
