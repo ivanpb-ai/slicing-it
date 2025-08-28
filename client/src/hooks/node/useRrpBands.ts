@@ -14,7 +14,9 @@ export const useRrpBands = (data: NodeData) => {
     const newBand: RrpBand = { name: '', dl: 50, ul: 50 };
     const newBands = [...rrpBands, newBand];
     setRrpBands(newBands);
-    updateNodeData(data.nodeId, { ...data, rrpBands: newBands });
+    if (data.nodeId) {
+      updateNodeData(data.nodeId, { ...data, rrpBands: newBands });
+    }
     setEditingBandIndex(newBands.length - 1);
     setEditingField('name');
     setEditValue('');
@@ -42,7 +44,9 @@ export const useRrpBands = (data: NodeData) => {
         }
       }
       setRrpBands(newBands);
+      if (data.nodeId) {
       updateNodeData(data.nodeId, { ...data, rrpBands: newBands });
+    }
     }
     setEditingBandIndex(null);
     setEditingField(null);
@@ -51,7 +55,9 @@ export const useRrpBands = (data: NodeData) => {
   const handleRemoveBand = useCallback((index: number) => {
     const newBands = rrpBands.filter((_, i) => i !== index);
     setRrpBands(newBands);
-    updateNodeData(data.nodeId, { ...data, rrpBands: newBands });
+    if (data.nodeId) {
+      updateNodeData(data.nodeId, { ...data, rrpBands: newBands });
+    }
     setEditingBandIndex(null);
     setEditingField(null);
   }, [rrpBands, data, updateNodeData]);
