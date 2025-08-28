@@ -100,9 +100,9 @@ export const useGraphLoading = (
         processedGraph.edges,
         {
           type: 'balanced-tree', // Use improved balanced tree layout for hierarchical arrangement
-          spacing: 250,          // Increased spacing for clearer visualization
-          horizontalSpacing: 250,
-          verticalSpacing: 180,
+          spacing: 650,          // Increased spacing for clearer visualization
+          horizontalSpacing: 650,
+          verticalSpacing: 500,
           nodeWidth: 180,
           nodeHeight: 120,
           marginX: 400,          // Wider margins for better centering
@@ -207,9 +207,9 @@ export const useGraphLoading = (
         processedGraph.edges,
         {
           type: 'balanced-tree', // Use improved balanced tree layout for hierarchical arrangement
-          spacing: 250,          // Increased spacing for clearer visualization
-          horizontalSpacing: 250,
-          verticalSpacing: 180,
+          spacing: 650,          // Increased spacing for clearer visualization
+          horizontalSpacing: 650,
+          verticalSpacing: 500,
           nodeWidth: 180,
           nodeHeight: 120,
           marginX: 400,          // Wider margins for better centering
