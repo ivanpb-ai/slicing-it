@@ -25,25 +25,38 @@ export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
     });
   }
 
-  // Bands management
-  const {
-    rrpBands,
-    editingBandIndex,
-    editingField,
-    editValue,
-    handleAddBand,
-    handleBandFieldEdit,
-    handleBandFieldChange,
-    handleBandFieldBlur,
-    handleRemoveBand
-  } = useRrpBands(data);
+  // Bands management - TEMPORARILY DISABLED
+  // const {
+  //   rrpBands,
+  //   editingBandIndex,
+  //   editingField,
+  //   editValue,
+  //   handleAddBand,
+  //   handleBandFieldEdit,
+  //   handleBandFieldChange,
+  //   handleBandFieldBlur,
+  //   handleRemoveBand
+  // } = useRrpBands(data);
+  
+  // Temporary dummy values
+  const rrpBands: any[] = [];
+  const editingBandIndex: number | null = null;
+  const editingField: 'name' | 'dl' | 'ul' | null = null;
+  const editValue = '';
+  const handleAddBand = () => {};
+  const handleBandFieldEdit = () => {};
+  const handleBandFieldChange = () => {};
+  const handleBandFieldBlur = () => {};
+  const handleRemoveBand = () => {};
 
   // Name editing, propagates via updateNodeData
   const handlePersistRrpName = useCallback(
     (newName: string) => {
-      if (id && updateNodeData && typeof updateNodeData === 'function') {
-        updateNodeData(id, { ...data, rrpName: newName });
-      }
+      console.log('handlePersistRrpName called with:', newName);
+      // Temporarily disabled to isolate the error
+      // if (id && updateNodeData && typeof updateNodeData === 'function') {
+      //   updateNodeData(id, { ...data, rrpName: newName });
+      // }
     },
     [id, data, updateNodeData]
   );
