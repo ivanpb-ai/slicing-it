@@ -39,7 +39,9 @@ export const useRrpPlmn = (
             y: parentNode.position.y + 350
           };
           
-          createChildNode('rrpmember', childPosition, data.nodeId, currentValue);
+          if (createChildNode) {
+            createChildNode('rrpmember', childPosition, data.nodeId, currentValue);
+          }
         }
       }
     }

@@ -33,7 +33,9 @@ export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
   // Name editing, propagates via updateNodeData
   const handlePersistRrpName = useCallback(
     (newName: string) => {
-      updateNodeData(id, { ...data, rrpName: newName });
+      if (id && updateNodeData) {
+        updateNodeData(id, { ...data, rrpName: newName });
+      }
     },
     [id, data, updateNodeData]
   );
