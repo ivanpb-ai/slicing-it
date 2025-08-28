@@ -232,7 +232,7 @@ export const arrangeNodesInBalancedTree = (
               // Some nodes have the same x position - spread them around the center
               const centerX = calculatedPositions.reduce((sum, p) => sum + p.x, 0) / calculatedPositions.length;
               const siblingCount = calculatedPositions.length;
-              const spacing = Math.max(horizontalSpacing * 0.8, 250); // Ensure minimum 250px spacing
+              const spacing = Math.max(horizontalSpacing, 350); // Ensure minimum 350px spacing for clear separation
               const totalWidth = (siblingCount - 1) * spacing;
               const startX = centerX - totalWidth / 2;
               
@@ -281,16 +281,17 @@ export const arrangeNodesInBalancedTree = (
           const parentPos = nodePositionMap[groupKey];
           const centerX = parentPos ? parentPos.x : 0;
           
-          // Calculate symmetric positions
+          // Calculate symmetric positions with guaranteed spacing
           const siblingCount = siblings.length;
-          const totalWidth = (siblingCount - 1) * horizontalSpacing;
+          const effectiveSpacing = Math.max(horizontalSpacing, 400); // Minimum 400px for siblings
+          const totalWidth = (siblingCount - 1) * effectiveSpacing;
           const startX = centerX - totalWidth / 2;
           
           console.log(`Spreading ${siblingCount} siblings around parent ${groupKey} at x=${centerX}`);
           
           siblings.forEach((nodeId, index) => {
-            const x = startX + index * horizontalSpacing;
-            console.log(`  Sibling ${nodeId} -> x=${x}`);
+            const x = startX + index * effectiveSpacing;
+            console.log(`  Sibling ${nodeId} -> x=${x} (spacing: ${effectiveSpacing}px)`);
             nodePositions.push({ nodeId, x });
           });
         }
