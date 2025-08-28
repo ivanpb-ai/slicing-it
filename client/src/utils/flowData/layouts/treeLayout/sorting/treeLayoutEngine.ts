@@ -79,8 +79,8 @@ export const arrangeNodesInTreeLayout = (
       {
         ...options,
         horizontalSpacing,
-        verticalSpacing: 500,    
-        levelHeight: 500,         
+        verticalSpacing: 650,    
+        levelHeight: 650,         
         edgeCrossingReduction,
         edgeShortenFactor,
         minNodeDistance: 80
