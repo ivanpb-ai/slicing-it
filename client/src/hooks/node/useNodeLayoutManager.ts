@@ -24,10 +24,10 @@ export const useNodeLayoutManager = (
       return;
     }
 
-    // Layout options with proper balanced tree spacing
+    // Layout options with proper spacing to prevent overlap
     const layoutOptions = {
       type: 'balanced-tree' as LayoutType,
-      horizontalSpacing: 400,     // Sufficient spacing to prevent node overlap (nodes are 180px wide)
+      horizontalSpacing: 500,     // INCREASED: Ensure clear gaps between 180px wide nodes
       verticalSpacing: 180,       // Good vertical spacing between levels  
       nodeWidth: 180,
       nodeHeight: 120,
@@ -35,7 +35,7 @@ export const useNodeLayoutManager = (
       marginY: 100,
       preventOverlap: true,
       edgeShortenFactor: 0.95,    
-      minNodeDistance: 50         // Increased to prevent any overlapping
+      minNodeDistance: 50         
     };
 
     try {

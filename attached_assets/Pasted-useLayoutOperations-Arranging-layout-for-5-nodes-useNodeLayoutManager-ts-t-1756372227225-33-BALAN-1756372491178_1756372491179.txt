@@ -1,0 +1,175 @@
+useLayoutOperations: Arranging layout for 5 nodes
+useNodeLayoutManager.ts?t=1756372227225:33 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+useNodeLayoutManager.ts?t=1756372227225:34 Layout options: {type: 'balanced-tree', horizontalSpacing: 300, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+index.ts:17 🔥 DEBUG: arrangeNodes called with options: {type: 'balanced-tree', horizontalSpacing: 300, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+LayoutProcessor.ts:32 LayoutProcessor: Using layout type 'balanced-tree' from options: {type: 'balanced-tree', nodeWidth: 180, nodeHeight: 120, horizontalSpacing: 300, verticalSpacing: 180, …}
+balancedTreeLayout.ts:11 ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 5 nodes
+balancedTreeLayout.ts:13 Available node IDs: (5) ['network-1756372256995-9227', 'cell-area-1', 'cell-area-2', 'rrp-1', 'rrp-2']
+balancedTreeLayout.ts:22 Filtered edges: 8 -> 8 valid edges
+balancedTreeLayout.ts:43 Found 1 root nodes
+balancedTreeLayout.ts:71 Level assignments: {network-1756372256995-9227: {…}, cell-area-1: {…}, rrp-1: {…}, cell-area-2: {…}, rrp-2: {…}}
+balancedTreeLayout.ts:72 Parent-child relationships: {cell-area-1: Array(2), cell-area-2: Array(2), rrp-1: Array(2), rrp-2: Array(2)}
+balancedTreeLayout.ts:111 Level 1 sibling groups: {multiParent: Array(2)}
+balancedTreeLayout.ts:126 Multi-parent child cell-area-1 with parents at: (2) [0, 0] -> avgX=0
+balancedTreeLayout.ts:126 Multi-parent child cell-area-2 with parents at: (2) [0, 0] -> avgX=0
+balancedTreeLayout.ts:141 Spreading 2 overlapping multi-parent nodes around center x=0
+balancedTreeLayout.ts:144   Spread multi-parent cell-area-1: 0 -> -90
+balancedTreeLayout.ts:144   Spread multi-parent cell-area-2: 0 -> 90
+balancedTreeLayout.ts:111 Level 2 sibling groups: {multiParent: Array(2)}
+balancedTreeLayout.ts:126 Multi-parent child rrp-1 with parents at: (2) [-90, -90] -> avgX=-90
+balancedTreeLayout.ts:126 Multi-parent child rrp-2 with parents at: (2) [90, 90] -> avgX=90
+balancedTreeLayout.ts:204 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 5 nodes
+balancedTreeLayout.ts:205 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:206 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+useNodeLayoutManager.ts?t=1756372227225:37 ✅ Balanced tree layout completed: 5 nodes positioned in hierarchy
+useNodeLayoutManager.ts?t=1756372227225:40 🎯 SETTING NODES WITH CALCULATED POSITIONS:
+useNodeLayoutManager.ts?t=1756372227225:42   network-1756372256995-9227: x=0, y=100
+useNodeLayoutManager.ts?t=1756372227225:42   cell-area-1: x=-90, y=280
+useNodeLayoutManager.ts?t=1756372227225:42   cell-area-2: x=90, y=280
+useNodeLayoutManager.ts?t=1756372227225:42   rrp-1: x=-90, y=460
+useNodeLayoutManager.ts?t=1756372227225:42   rrp-2: x=90, y=460
+useNodeLayoutManager.ts?t=1756372227225:47 ✅ Layout applied - fitting view to show proper spacing
+useLayoutOperations.ts:50 After arrangement: Found 5 visible nodes, expected 5
+client:223 [vite] hot updated: /src/index.css?v=4MWJBDWqEBKfTtC8a-3gZ
+client:223 [vite] hot updated: /src/components/NodeEditor.tsx
+client:223 [vite] hot updated: /src/index.css?v=4MWJBDWqEBKfTtC8a-3gZ
+client:223 [vite] hot updated: /src/components/NodeEditor.tsx
+ToolbarContainer.tsx:84 Clear canvas button clicked in Toolbar
+idCounters.ts:104 Resetting all ID counters to 1
+NodeButton.tsx:28 NodeButton: Clicked on network button
+NodeEditor.tsx:101 NodeEditor: Adding network node at position: {x: 534.527933140552, y: 400.9422662980674}
+useNodeEditor.ts:79 useNodeEditor: Adding network node at position: {x: 534.527933140552, y: 400.9422662980674}
+nodeStyles.ts:112 network clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 network clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756372405861-2883, type=network, nodeNumber=2883
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756372405861-2883, type=network, nodeNumber=2883
+NodeButton.tsx:34 NodeButton: Started dragging cell-area button
+NodeButton.tsx:42 NodeButton: Set drag data to: cell-area
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "cell-area" at position: {x: 628, y: 382.6666564941406}
+useDragDataParser.ts:3 parseDragData: Processing drag data: cell-area
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: cell-area
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+nodeCollisionDetection.ts:41 Desired position: {"x":628,"y":382.6666564941406}
+nodeCollisionDetection.ts:66 Position: 688
+nodeCollisionDetection.ts:67 Position: 382.6666564941406
+nodeCollisionDetection.ts:66 Position: 628
+nodeCollisionDetection.ts:67 Position: 442.6666564941406
+nodeCollisionDetection.ts:66 Position: 568
+nodeCollisionDetection.ts:67 Position: 382.6666564941406
+nodeCollisionDetection.ts:66 Position: 628
+nodeCollisionDetection.ts:67 Position: 322.6666564941406
+nodeCollisionDetection.ts:66 Position: 688
+nodeCollisionDetection.ts:67 Position: 382.6666564941406
+nodeCollisionDetection.ts:66 Position: 628
+nodeCollisionDetection.ts:67 Position: 442.6666564941406
+nodeCollisionDetection.ts:66 Position: 568
+nodeCollisionDetection.ts:67 Position: 382.6666564941406
+nodeCollisionDetection.ts:66 Position: 628
+nodeCollisionDetection.ts:67 Position: 322.6666564941406
+nodeCollisionDetection.ts:66 Position: 748
+nodeCollisionDetection.ts:67 Position: 382.66665649414057
+nodeCollisionDetection.ts:66 Position: 628.0000000000001
+nodeCollisionDetection.ts:67 Position: 502.6666564941406
+nodeCollisionDetection.ts:66 Position: 508
+nodeCollisionDetection.ts:67 Position: 382.6666564941407
+nodeCollisionDetection.ts:66 Position: 627.9999999999997
+nodeCollisionDetection.ts:67 Position: 262.6666564941406
+nodeCollisionDetection.ts:66 Position: 748
+nodeCollisionDetection.ts:67 Position: 382.6666564941405
+nodeCollisionDetection.ts:66 Position: 627.9999999999999
+nodeCollisionDetection.ts:67 Position: 502.6666564941406
+nodeCollisionDetection.ts:66 Position: 508
+nodeCollisionDetection.ts:67 Position: 382.66665649414074
+nodeCollisionDetection.ts:66 Position: 627.9999999999997
+nodeCollisionDetection.ts:67 Position: 262.6666564941406
+nodeCollisionDetection.ts:66 Position: 808
+nodeCollisionDetection.ts:67 Position: 382.66665649414045
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 808, y: 382.66665649414045}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 14
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 14
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: network-1756372405861-2883
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: network-1756372405861-2883
+useNodeRelationships.ts:35 Validating relationship: network -> cell-area
+useNodeRelationships.ts:64 Valid relationship confirmed: network -> cell-area
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child cell-area node under parent network-1756372405861-2883
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: network
+nodeCollisionDetection.ts:41 Desired position: {"x":554.527933140552,"y":500.9422662980674}
+nodeCollisionDetection.ts:66 Position: 614.527933140552
+nodeCollisionDetection.ts:67 Position: 500.9422662980674
+nodeCollisionDetection.ts:66 Position: 554.527933140552
+nodeCollisionDetection.ts:67 Position: 560.9422662980674
+nodeCollisionDetection.ts:66 Position: 494.527933140552
+nodeCollisionDetection.ts:67 Position: 500.9422662980674
+nodeCollisionDetection.ts:66 Position: 554.527933140552
+nodeCollisionDetection.ts:67 Position: 440.9422662980674
+nodeCollisionDetection.ts:66 Position: 614.527933140552
+nodeCollisionDetection.ts:67 Position: 500.9422662980674
+nodeCollisionDetection.ts:66 Position: 554.527933140552
+nodeCollisionDetection.ts:67 Position: 560.9422662980674
+nodeCollisionDetection.ts:66 Position: 494.527933140552
+nodeCollisionDetection.ts:67 Position: 500.9422662980674
+nodeCollisionDetection.ts:66 Position: 554.527933140552
+nodeCollisionDetection.ts:67 Position: 440.9422662980674
+nodeCollisionDetection.ts:66 Position: 674.527933140552
+nodeCollisionDetection.ts:67 Position: 500.94226629806735
+nodeCollisionDetection.ts:66 Position: 554.5279331405521
+nodeCollisionDetection.ts:67 Position: 620.9422662980674
+nodeCollisionDetection.ts:66 Position: 434.527933140552
+nodeCollisionDetection.ts:67 Position: 500.94226629806747
+nodeCollisionDetection.ts:66 Position: 554.5279331405517
+nodeCollisionDetection.ts:67 Position: 380.9422662980674
+nodeCollisionDetection.ts:66 Position: 674.527933140552
+nodeCollisionDetection.ts:67 Position: 500.9422662980673
+nodeCollisionDetection.ts:66 Position: 554.5279331405519
+nodeCollisionDetection.ts:67 Position: 620.9422662980674
+nodeCollisionDetection.ts:66 Position: 434.527933140552
+nodeCollisionDetection.ts:67 Position: 500.9422662980675
+nodeCollisionDetection.ts:66 Position: 554.5279331405517
+nodeCollisionDetection.ts:67 Position: 380.9422662980674
+nodeCollisionDetection.ts:66 Position: 734.527933140552
+nodeCollisionDetection.ts:67 Position: 500.94226629806724
+nodeCollisionDetection.ts:66 Position: 554.5279331405519
+nodeCollisionDetection.ts:67 Position: 680.9422662980674
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 554.5279331405519, y: 680.9422662980674}
+idCounters.ts:26 Generated new Cell Area ID: 1
+useSimpleChildNodeCreation.ts:29 Creating child cell-area with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child cell-area node with ID: cell-area-1 under parent: network-1756372405861-2883
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+nodeStyles.ts:112 cell-area clip-path: (nodeType) => {
+  console.log(nodeType, "clip-path:", getClipPath);
+  switch (nodeType) {
+    case "network":
+      return "inset(0% round 16px)";
+    case "cell-area":
+      return "circle(50%)";
+  …
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756372405861-2883 to cell-area-1
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'network-1756372405861-2883-cell-area-1', source: 'network-1756372405861-2883', target: 'cell-area-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756372405861-2883 to cell-area-1
+useEdgeCreation.ts:35 useEdgeCreation: Creating edge {id: 'network-1756372405861-2883-cell-area-1', source: 'network-1756372405861-2883', target: 'cell-area-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
