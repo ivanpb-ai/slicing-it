@@ -60,14 +60,22 @@ export const useNodeLayoutManager = (
         setNodes(arrangedNodes);
         toast.success('Nodes arranged in balanced hierarchical tree layout');
         
-        // Check positions after a short delay to see if they're being overridden
+        // Check if ReactFlow is respecting our positions
         setTimeout(() => {
+          console.log('🔍 CHECKING ACTUAL NODE STATE AFTER 100ms:');
+          const reactFlowWrapper = document.querySelector('.react-flow__viewport');
+          if (reactFlowWrapper) {
+            console.log('🔍 ReactFlow viewport transform:', reactFlowWrapper.getAttribute('style'));
+          }
+          
+          // Check the actual node positions in React state
           console.log('🔍 CHECKING POSITIONS AFTER 100ms:');
           const currentNodes = document.querySelectorAll('[data-id]');
           Array.from(currentNodes).slice(0, 5).forEach(el => {
             const rect = el.getBoundingClientRect();
             const id = el.getAttribute('data-id');
-            console.log(`  ${id}: DOM x=${rect.left}, y=${rect.top}`);
+            const transform = (el as HTMLElement).style.transform;
+            console.log(`  ${id}: DOM x=${rect.left}, y=${rect.top}, transform=${transform}`);
           });
         }, 100);
         
