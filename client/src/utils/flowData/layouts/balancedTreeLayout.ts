@@ -232,7 +232,7 @@ export const arrangeNodesInBalancedTree = (
               // Some nodes have the same x position - spread them around the center
               const centerX = calculatedPositions.reduce((sum, p) => sum + p.x, 0) / calculatedPositions.length;
               const siblingCount = calculatedPositions.length;
-              const spacing = horizontalSpacing * 0.6; // Smaller spacing to keep them close
+              const spacing = Math.max(horizontalSpacing * 0.8, 250); // Ensure minimum 250px spacing
               const totalWidth = (siblingCount - 1) * spacing;
               const startX = centerX - totalWidth / 2;
               

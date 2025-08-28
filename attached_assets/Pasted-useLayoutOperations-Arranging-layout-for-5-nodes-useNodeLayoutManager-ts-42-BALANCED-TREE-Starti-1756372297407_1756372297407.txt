@@ -1,0 +1,32 @@
+useLayoutOperations: Arranging layout for 5 nodes
+useNodeLayoutManager.ts:42 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+useNodeLayoutManager.ts:43 Layout options: {type: 'balanced-tree', horizontalSpacing: 300, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+index.ts:17 🔥 DEBUG: arrangeNodes called with options: {type: 'balanced-tree', horizontalSpacing: 300, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+LayoutProcessor.ts:32 LayoutProcessor: Using layout type 'balanced-tree' from options: {type: 'balanced-tree', nodeWidth: 180, nodeHeight: 120, horizontalSpacing: 300, verticalSpacing: 180, …}
+balancedTreeLayout.ts:42 ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 5 nodes
+balancedTreeLayout.ts:46 Available node IDs: (5) ['network-1756372256995-9227', 'cell-area-1', 'cell-area-2', 'rrp-1', 'rrp-2']
+balancedTreeLayout.ts:60 Filtered edges: 8 -> 8 valid edges
+balancedTreeLayout.ts:94 Found 1 root nodes
+balancedTreeLayout.ts:138 Level assignments: {network-1756372256995-9227: {…}, cell-area-1: {…}, rrp-1: {…}, cell-area-2: {…}, rrp-2: {…}}
+balancedTreeLayout.ts:139 Parent-child relationships: {cell-area-1: Array(2), cell-area-2: Array(2), rrp-1: Array(2), rrp-2: Array(2)}
+balancedTreeLayout.ts:196 Level 1 sibling groups: {multiParent: Array(2)}
+balancedTreeLayout.ts:220 Multi-parent child cell-area-1 with parents at: (2) [0, 0] -> avgX=0
+balancedTreeLayout.ts:220 Multi-parent child cell-area-2 with parents at: (2) [0, 0] -> avgX=0
+balancedTreeLayout.ts:239 Spreading 2 overlapping multi-parent nodes around center x=0
+balancedTreeLayout.ts:242   Spread multi-parent cell-area-1: 0 -> -90
+balancedTreeLayout.ts:242   Spread multi-parent cell-area-2: 0 -> 90
+balancedTreeLayout.ts:196 Level 2 sibling groups: {multiParent: Array(2)}
+balancedTreeLayout.ts:220 Multi-parent child rrp-1 with parents at: (2) [-90, -90] -> avgX=-90
+balancedTreeLayout.ts:220 Multi-parent child rrp-2 with parents at: (2) [90, 90] -> avgX=90
+balancedTreeLayout.ts:323 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 5 nodes
+balancedTreeLayout.ts:324 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:325 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+useNodeLayoutManager.ts:48 ✅ Balanced tree layout completed: 5 nodes positioned in hierarchy
+useNodeLayoutManager.ts:54 🎯 SETTING NODES WITH CALCULATED POSITIONS:
+useNodeLayoutManager.ts:56   network-1756372256995-9227: x=0, y=100
+useNodeLayoutManager.ts:56   cell-area-1: x=-90, y=280
+useNodeLayoutManager.ts:56   cell-area-2: x=90, y=280
+useNodeLayoutManager.ts:56   rrp-1: x=-90, y=460
+useNodeLayoutManager.ts:56   rrp-2: x=90, y=460
+useNodeLayoutManager.ts:64 ✅ Layout applied - fitting view to show proper spacing
+useLayoutOperations.ts:50 After arrangement: Found 5 visible nodes, expected 5
