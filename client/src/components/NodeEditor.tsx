@@ -166,8 +166,8 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       setNodes([]);
       setEdges([]);
       
-      // Reset viewport
-      if (reactFlowInstance) {
+      // Reset viewport (unless prevented by manual layout)
+      if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
         reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
       }
       
@@ -231,8 +231,8 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       setNodes([]);
       setEdges([]);
       
-      // Reset viewport
-      if (reactFlowInstance) {
+      // Reset viewport (unless prevented by manual layout)
+      if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
         reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
       }
       

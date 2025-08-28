@@ -28,9 +28,11 @@ export const handleGraphLoaded = debounce((reactFlowInstance: ReactFlowInstance)
   isProcessingEvent = true;
   console.log('Graph loaded event detected, updating view');
   
-  // First ensure the viewport is reset
-  console.log('Resetting viewport in response to graph-loaded event');
-  reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+  // First ensure the viewport is reset (unless prevented by manual layout)
+  if (!window.sessionStorage.getItem('prevent-fitview')) {
+    console.log('Resetting viewport in response to graph-loaded event');
+    reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+  }
   
   // Then fit view with a delay to ensure nodes are rendered
   setTimeout(() => {
@@ -64,9 +66,11 @@ export const handleCanvasCleared = debounce((reactFlowInstance: ReactFlowInstanc
   
   isProcessingEvent = true;
   console.log('Canvas cleared event detected, resetting ReactFlow');
-  // Reset ReactFlow instance view after canvas is cleared
-  console.log('Resetting viewport in response to canvas-cleared event');
-  reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+  // Reset ReactFlow instance view after canvas is cleared (unless prevented by manual layout)
+  if (!window.sessionStorage.getItem('prevent-fitview')) {
+    console.log('Resetting viewport in response to canvas-cleared event');
+    reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+  }
   
   // Reset processing flag
   setTimeout(() => {
