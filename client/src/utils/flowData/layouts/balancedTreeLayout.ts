@@ -152,7 +152,6 @@ export const arrangeNodesInBalancedTree = (
     
     // Calculate Y position for this level
     const y = marginY + level * verticalSpacing;
-    console.log(`🎯 Level ${level}: Y position = ${marginY} + ${level} * ${verticalSpacing} = ${y}`);
     
     if (level === 0) {
       // Root level: center at origin
@@ -287,12 +286,11 @@ export const arrangeNodesInBalancedTree = (
           const totalWidth = (siblingCount - 1) * horizontalSpacing;
           const startX = centerX - totalWidth / 2;
           
-          console.log(`🔥 HORIZONTAL: Spreading ${siblingCount} siblings around parent ${groupKey} at x=${centerX}`);
-          console.log(`🔥 HORIZONTAL: Using spacing=${horizontalSpacing}px, totalWidth=${totalWidth}, startX=${startX}`);
+          console.log(`Spreading ${siblingCount} siblings around parent ${groupKey} at x=${centerX} with ${horizontalSpacing}px spacing`);
           
           siblings.forEach((nodeId, index) => {
             const x = startX + index * horizontalSpacing;
-            console.log(`🔥 HORIZONTAL: Sibling ${nodeId} -> x=${x} (index=${index})`);
+            console.log(`  Sibling ${nodeId} -> x=${x}`);
             nodePositions.push({ nodeId, x });
           });
         }
