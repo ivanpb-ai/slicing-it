@@ -3,7 +3,7 @@ import React, { useCallback } from 'react';
 import { Node, Edge, useReactFlow, MarkerType } from '@xyflow/react';
 import { toast } from 'sonner';
 import { useGraphLoadingState } from './useGraphLoadingState';
-import { updateDnnCounter, resetCounters } from '@/utils/flowData/idCounters';
+import { resetCounters } from '@/utils/flowData/idCounters';
 import type { GraphData } from '@/services/storage/GraphLocalStorageService';
 import { GraphNodeProcessor } from '@/services/processing/GraphNodeProcessor';
 

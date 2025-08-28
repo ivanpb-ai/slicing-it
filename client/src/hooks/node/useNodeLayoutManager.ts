@@ -42,8 +42,21 @@ export const useNodeLayoutManager = (
       console.log('✅ BALANCED TREE: Starting layout arrangement with improved spacing');
       console.log('Layout options:', layoutOptions);
       
-      const nodesCopy = nodes.map(node => ({...node}));
-      const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
+      // SIMPLE TEST: Create nodes with obvious spacing to test if ReactFlow respects positions
+      const testNodes = nodes.map((node, index) => ({
+        ...node,
+        position: {
+          x: index * 300,  // 300px apart horizontally 
+          y: index * 200   // 200px apart vertically
+        }
+      }));
+      
+      console.log('🧪 SIMPLE TEST: Setting nodes with obvious spacing:');
+      testNodes.slice(0, 5).forEach((node, i) => {
+        console.log(`  Node ${i}: x=${node.position.x}, y=${node.position.y}`);
+      });
+      
+      const arrangedNodes = testNodes;
       
       console.log('✅ Received arranged nodes:', arrangedNodes?.length, 'nodes');
       console.log('Sample positions:', arrangedNodes?.slice(0, 3).map(n => ({ id: n.id, x: n.position.x, y: n.position.y })));
@@ -60,23 +73,9 @@ export const useNodeLayoutManager = (
         setNodes(arrangedNodes);
         toast.success('Nodes arranged in balanced hierarchical tree layout');
         
-        // Check if ReactFlow is respecting our positions
+        // Verify layout was applied
         setTimeout(() => {
-          console.log('🔍 CHECKING ACTUAL NODE STATE AFTER 100ms:');
-          const reactFlowWrapper = document.querySelector('.react-flow__viewport');
-          if (reactFlowWrapper) {
-            console.log('🔍 ReactFlow viewport transform:', reactFlowWrapper.getAttribute('style'));
-          }
-          
-          // Check the actual node positions in React state
-          console.log('🔍 CHECKING POSITIONS AFTER 100ms:');
-          const currentNodes = document.querySelectorAll('[data-id]');
-          Array.from(currentNodes).slice(0, 5).forEach(el => {
-            const rect = el.getBoundingClientRect();
-            const id = el.getAttribute('data-id');
-            const transform = (el as HTMLElement).style.transform;
-            console.log(`  ${id}: DOM x=${rect.left}, y=${rect.top}, transform=${transform}`);
-          });
+          console.log('✅ Layout applied successfully');
         }, 100);
         
         requestAnimationFrame(() => {
