@@ -27,7 +27,7 @@ export const useNodeLayoutManager = (
     // Layout options using balanced tree layout with DRAMATIC spacing for testing
     const layoutOptions = {
       type: 'balanced-tree' as LayoutType,
-      horizontalSpacing: 400,     // DRAMATIC horizontal spacing 
+      horizontalSpacing: 600,     // EVEN MORE DRAMATIC horizontal spacing 
       verticalSpacing: 300,       // DRAMATIC vertical spacing - should be very obvious
       nodeWidth: 180,
       nodeHeight: 120,

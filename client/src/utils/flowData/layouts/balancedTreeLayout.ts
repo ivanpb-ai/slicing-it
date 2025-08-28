@@ -287,11 +287,12 @@ export const arrangeNodesInBalancedTree = (
           const totalWidth = (siblingCount - 1) * horizontalSpacing;
           const startX = centerX - totalWidth / 2;
           
-          console.log(`Spreading ${siblingCount} siblings around parent ${groupKey} at x=${centerX}`);
+          console.log(`🔥 HORIZONTAL: Spreading ${siblingCount} siblings around parent ${groupKey} at x=${centerX}`);
+          console.log(`🔥 HORIZONTAL: Using spacing=${horizontalSpacing}px, totalWidth=${totalWidth}, startX=${startX}`);
           
           siblings.forEach((nodeId, index) => {
             const x = startX + index * horizontalSpacing;
-            console.log(`  Sibling ${nodeId} -> x=${x}`);
+            console.log(`🔥 HORIZONTAL: Sibling ${nodeId} -> x=${x} (index=${index})`);
             nodePositions.push({ nodeId, x });
           });
         }
