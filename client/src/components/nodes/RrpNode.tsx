@@ -61,22 +61,36 @@ export const RrpNode = memo(({ id, data }: RrpNodeProps) => {
     [id, data, updateNodeData]
   );
 
-  const {
-    isEditingName,
-    rrpName,
-    handleNameChange,
-    handleNameBlur,
-    handleNameClick,
-  } = useRrpName(data, handlePersistRrpName);
+  // const {
+  //   isEditingName,
+  //   rrpName,
+  //   handleNameChange,
+  //   handleNameBlur,
+  //   handleNameClick,
+  // } = useRrpName(data, handlePersistRrpName);
+  
+  // Temporary dummy values for useRrpName
+  const isEditingName = false;
+  const rrpName = data.rrpName || 'RRP Name';
+  const handleNameChange = () => {};
+  const handleNameBlur = () => {};
+  const handleNameClick = () => {};
 
-  // PLMN editing/member creation
-  const {
-    isEditingPLMN,
-    plmn,
-    handlePLMNChange,
-    handlePLMNBlur,
-    handlePLMNClick
-  } = useRrpPlmn(data, createChildNode);
+  // PLMN editing/member creation - TEMPORARILY DISABLED
+  // const {
+  //   isEditingPLMN,
+  //   plmn,
+  //   handlePLMNChange,
+  //   handlePLMNBlur,
+  //   handlePLMNClick
+  // } = useRrpPlmn(data, createChildNode);
+  
+  // Temporary dummy values
+  const isEditingPLMN = false;
+  const plmn = '';
+  const handlePLMNChange = () => {};
+  const handlePLMNBlur = () => {};
+  const handlePLMNClick = () => {};
 
   return (
     <div
