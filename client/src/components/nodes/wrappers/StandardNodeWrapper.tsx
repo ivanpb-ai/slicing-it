@@ -98,7 +98,11 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
     case "rrp":
       return (
         <div className={className} style={style}>
-          <RrpNode id={id} data={{ ...data, nodeNumber }} />
+          <div className="bg-white border-2 border-blue-500 rounded-xl shadow-md px-4 py-2 flex flex-col gap-1 items-center min-w-[180px]">
+            <div className="text-sm font-bold">RRP Node</div>
+            <div className="text-xs">ID: {id}</div>
+            <div className="text-xs">RRP#{data.rrpId || 'N/A'}</div>
+          </div>
         </div>
       );
     case "rrpmember":
