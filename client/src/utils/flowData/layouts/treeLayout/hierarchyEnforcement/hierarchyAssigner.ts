@@ -35,7 +35,7 @@ export function assignHierarchicalPositions(nodes: Node[], verticalSpacing: numb
     
     // Calculate Y position based on hierarchy level with updated spacing
     const hierarchyLevel = HIERARCHY_LEVELS[nodeType];
-    const baseYPosition = 50 + (hierarchyLevel * 200); // Updated from 100px to 200px
+    const baseYPosition = 50 + (hierarchyLevel * 100); // Much shorter for compact edges
     
     // Get all nodes of this type to calculate horizontal position
     const nodesOfThisType = nodesByType[nodeType] || [];
@@ -43,7 +43,7 @@ export function assignHierarchicalPositions(nodes: Node[], verticalSpacing: numb
     
     // Calculate horizontal spacing based on number of nodes in this layer
     const totalNodesInType = nodesOfThisType.length;
-    const horizontalSpacing = 200;
+    const horizontalSpacing = 800; // Use consistent horizontal spacing
     const totalWidth = totalNodesInType * horizontalSpacing;
     const startX = 150 - (totalWidth / 2) + (horizontalSpacing / 2);
     
