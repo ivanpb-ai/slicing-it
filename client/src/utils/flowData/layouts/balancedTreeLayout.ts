@@ -161,7 +161,27 @@ export const arrangeNodesInBalancedTree = (
   
   sortedLevels.forEach(level => {
     const nodesInLevel = nodesByLevel[level];
-    const y = 100 + level * 350;  // Further increased to prevent RRP-member overlap with parent
+    
+    // Calculate dynamic Y position based on previous level's node heights
+    let y = 100; // Start position
+    if (level > 0) {
+      // Find the maximum height of nodes in the previous level
+      const prevLevelNodes = nodesByLevel[level - 1] || [];
+      let maxPrevLevelHeight = 120; // Default node height
+      
+      // For RRP nodes with lots of content, estimate larger height
+      prevLevelNodes.forEach(nodeId => {
+        const node = nodes.find(n => n.id === nodeId);
+        if (node && node.data.type === 'rrp') {
+          // Estimate height based on content - RRP nodes with bands can be much taller
+          const hasContent = node.data.extraData || node.data.bands || false;
+          maxPrevLevelHeight = Math.max(maxPrevLevelHeight, hasContent ? 280 : 120);
+        }
+      });
+      
+      // Use dynamic spacing: base spacing + max height of previous level + buffer
+      y = 100 + (level - 1) * 350 + maxPrevLevelHeight + 100; // 100px buffer for clear separation
+    }
     
     console.log(`\n=== LEVEL ${level} (Y=${y}) ===`);
     console.log(`Nodes to position: ${nodesInLevel.join(', ')}`);
