@@ -171,52 +171,48 @@ export const arrangeNodesInBalancedTree = (
         });
       }
     } else {
-      // Non-root levels: SIMPLIFIED UNIFORM SPACING
-      // Calculate ideal X position for each node, then apply uniform spacing
-      const nodeWithIdealX: Array<{ nodeId: string; idealX: number }> = [];
-      
+      // Non-root levels: PARENT-CHILD ALIGNMENT WITH SPACING
+      // Position nodes directly under their parents when possible
       nodesInLevel.forEach(nodeId => {
         const parents = allParentsMap[nodeId] || [];
         
         if (parents.length === 0) {
           // Orphan nodes go to center
-          nodeWithIdealX.push({ nodeId, idealX: 0 });
+          const position = { x: 0, y };
+          positionedNodes.push({ id: nodeId, position });
+          nodePositionMap[nodeId] = position;
+          console.log(`  Orphan node ${nodeId} -> x=0`);
+        } else if (parents.length === 1) {
+          // Single parent: position directly below parent
+          const parentPos = nodePositionMap[parents[0]];
+          if (parentPos) {
+            const position = { x: parentPos.x, y };
+            positionedNodes.push({ id: nodeId, position });
+            nodePositionMap[nodeId] = position;
+            console.log(`  Node ${nodeId} aligned under parent at x=${parentPos.x}`);
+          } else {
+            const position = { x: 0, y };
+            positionedNodes.push({ id: nodeId, position });
+            nodePositionMap[nodeId] = position;
+          }
         } else {
-          // Calculate ideal position based on parent positions
+          // Multiple parents: position at average of parent positions
           const parentPositions = parents
             .map(parentId => nodePositionMap[parentId])
             .filter(pos => pos);
           
           if (parentPositions.length > 0) {
             const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
-            nodeWithIdealX.push({ nodeId, idealX: avgX });
+            const position = { x: avgX, y };
+            positionedNodes.push({ id: nodeId, position });
+            nodePositionMap[nodeId] = position;
+            console.log(`  Node ${nodeId} positioned at average of parents x=${avgX}`);
           } else {
-            nodeWithIdealX.push({ nodeId, idealX: 0 });
+            const position = { x: 0, y };
+            positionedNodes.push({ id: nodeId, position });
+            nodePositionMap[nodeId] = position;
           }
         }
-      });
-      
-      // Sort by ideal X position to maintain logical order
-      nodeWithIdealX.sort((a, b) => a.idealX - b.idealX);
-      
-      // APPLY UNIFORM SPACING TO ALL NODES AT THIS LEVEL
-      // This eliminates the inconsistent spacing that was causing the problem
-      const nodeCount = nodeWithIdealX.length;
-      const uniformSpacing = Math.max(horizontalSpacing, 900); // Increased to 900px to eliminate all horizontal overlap
-      const totalWidth = (nodeCount - 1) * uniformSpacing;
-      
-      // Center the entire level around x=0
-      const startX = -totalWidth / 2;
-      
-      console.log(`Level ${level}: Positioning ${nodeCount} nodes with uniform ${uniformSpacing}px spacing`);
-      
-      // Position all nodes with consistent spacing
-      nodeWithIdealX.forEach(({ nodeId }, index) => {
-        const x = startX + index * uniformSpacing;
-        const position = { x, y };
-        positionedNodes.push({ id: nodeId, position });
-        nodePositionMap[nodeId] = position;
-        console.log(`  Node ${nodeId} -> x=${x}`);
       });
     }
   });
