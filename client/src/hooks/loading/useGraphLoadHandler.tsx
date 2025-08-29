@@ -116,20 +116,20 @@ export function useGraphLoadHandler(
       
       console.log(`Processed ${processedNodes.length} nodes and ${processedEdges.length} edges for loading`);
       
-      // Apply improved symmetrical layout algorithm with stronger overlap prevention
+      // Apply balanced tree layout for proper RRP-member positioning
       const arrangedNodes = arrangeNodes(
         processedNodes,
         processedEdges,
         {
-          type: 'vertical',
-          spacing: 220,        // Increased spacing for better hierarchy
-          compactFactor: 0.7,  // Adjusted for improved symmetry
+          type: 'balanced-tree',
+          horizontalSpacing: 800,
+          verticalSpacing: 150,
           nodeWidth: 180,
           nodeHeight: 120,
-          marginX: 300,        // Wider margins for better centering
-          marginY: 120,        // Larger top margin
-          preventOverlap: true, // Force overlap prevention
-          edgeShortenFactor: 0.9 // Updated to 90% shortening
+          marginX: 100,
+          marginY: 100,
+          preventOverlap: true,
+          edgeShortenFactor: 0.95
         }
       );
       

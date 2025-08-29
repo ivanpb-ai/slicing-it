@@ -96,15 +96,15 @@ export const useFileOperations = ({
         processedNodes,
         processedEdges,
         {
-          type: 'vertical',
-          spacing: 113, // Use the correct 3cm spacing
-          compactFactor: 0.7,
+          type: 'balanced-tree',
+          horizontalSpacing: 800,
+          verticalSpacing: 150,
           nodeWidth: 180,
           nodeHeight: 120,
-          marginX: 300,
-          marginY: 120,
+          marginX: 100,
+          marginY: 100,
           preventOverlap: true,
-          edgeShortenFactor: 0.9
+          edgeShortenFactor: 0.95
         }
       );
 

@@ -27,15 +27,15 @@ const GraphLoader = (props: GraphLoaderProps) => {
         domNodes,
         [], // No edges for DOM-captured nodes
         {
-          type: 'vertical',
-          spacing: 220,        // Increased spacing for better hierarchy visibility
-          compactFactor: 0.7,  // Adjusted for better symmetry
+          type: 'balanced-tree',
+          horizontalSpacing: 800,
+          verticalSpacing: 150,
           nodeWidth: 180,
           nodeHeight: 120,
-          marginX: 300,        // Wider margins for better centering
-          marginY: 120,        // Larger top margin
-          preventOverlap: true, // Always enable overlap prevention
-          edgeShortenFactor: 0.5 // Add edge shortening factor
+          marginX: 100,
+          marginY: 100,
+          preventOverlap: true,
+          edgeShortenFactor: 0.95
         }
       );
     }
