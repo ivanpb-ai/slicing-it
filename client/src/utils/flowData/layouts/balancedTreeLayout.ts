@@ -161,7 +161,7 @@ export const arrangeNodesInBalancedTree = (
   
   sortedLevels.forEach(level => {
     const nodesInLevel = nodesByLevel[level];
-    const y = 100 + level * 250;  // Increased vertical spacing between levels
+    const y = 100 + level * 350;  // Further increased to prevent RRP-member overlap with parent
     
     console.log(`\n=== LEVEL ${level} (Y=${y}) ===`);
     console.log(`Nodes to position: ${nodesInLevel.join(', ')}`);
