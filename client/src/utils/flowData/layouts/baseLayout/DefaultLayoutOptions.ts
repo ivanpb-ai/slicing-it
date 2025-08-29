@@ -10,7 +10,7 @@ export const getDefaultLayoutOptions: LayoutOptions = {
   marginX: 400,            // wider margins for better balanced tree centering
   marginY: 100,            // optimal top margin for balanced tree
   preventOverlap: true,
-  edgeShortenFactor: 0.95, // optimal edge factor for balanced tree
+  edgeShortenFactor: 0.7,  // shortened edges for more compact connections
   minNodeDistance: 10,     // minimum gap between nodes
   levelHeight: 200,
   maxIterations: 100

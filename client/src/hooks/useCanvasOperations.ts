@@ -25,7 +25,7 @@ export const useCanvasOperations = (
     marginX: 400,        // Optimized margin for balanced tree
     marginY: 100,        // Optimized margin for balanced tree
     preventOverlap: true,
-    edgeShortenFactor: 0.95, // Optimized edge factor for balanced tree
+    edgeShortenFactor: 0.7,  // Shortened edges for more compact connections
     horizontalSpacing: 800,  // Horizontal spacing for balanced tree
     verticalSpacing: 650     // Vertical spacing for balanced tree
   };
@@ -75,7 +75,7 @@ export const useCanvasOperations = (
           marginX: 400,        // Optimized margin for balanced tree
           marginY: 100,        // Optimized margin for balanced tree
           preventOverlap: true,
-          edgeShortenFactor: 0.95, // Optimized edge factor for balanced tree
+          edgeShortenFactor: 0.7,  // Shortened edges for more compact connections
           horizontalSpacing: 800,  // Horizontal spacing for balanced tree
           verticalSpacing: 650     // Vertical spacing for balanced tree
         }
@@ -113,7 +113,7 @@ export const useCanvasOperations = (
         horizontalSpacing: 800,
         verticalSpacing: 650,
         preventOverlap: true,
-        edgeShortenFactor: 0.9
+        edgeShortenFactor: 0.7
       });
       
       if (!arrangedNodes || arrangedNodes.length === 0) {

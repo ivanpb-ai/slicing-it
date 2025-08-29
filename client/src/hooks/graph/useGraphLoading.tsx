@@ -108,7 +108,7 @@ export const useGraphLoading = (
           marginX: 400,          // Wider margins for better centering
           marginY: 100,          // Top margin for hierarchy
           preventOverlap: true,
-          edgeShortenFactor: 0.95
+          edgeShortenFactor: 0.7
         }
       );
       
@@ -215,7 +215,7 @@ export const useGraphLoading = (
           marginX: 400,          // Wider margins for better centering
           marginY: 100,          // Top margin for hierarchy
           preventOverlap: true,
-          edgeShortenFactor: 0.95
+          edgeShortenFactor: 0.7
         }
       );
       
