@@ -152,119 +152,76 @@ export const arrangeNodesInBalancedTree = (
 
   // No need for subtree width calculation in DAG layout
 
-  // Position nodes by level with perfect symmetry and parent-child alignment
+  // SIMPLE HIERARCHICAL POSITIONING ALGORITHM
   const positionedNodes: { id: string; position: { x: number; y: number } }[] = [];
   const nodePositionMap: Record<string, { x: number; y: number }> = {};
   
-  // Position each level, considering parent positions for alignment
-  Object.keys(nodesByLevel).sort((a, b) => parseInt(a) - parseInt(b)).forEach(levelStr => {
-    const level = parseInt(levelStr);
+  // Process levels in order
+  const sortedLevels = Object.keys(nodesByLevel).map(l => parseInt(l)).sort((a, b) => a - b);
+  
+  sortedLevels.forEach(level => {
     const nodesInLevel = nodesByLevel[level];
-    const nodeCount = nodesInLevel.length;
+    const y = 100 + level * 140;
     
-    // Calculate Y position for this level
-    const y = 100 + level * 140;  // Better spacing: 100px start + 140px between levels
+    console.log(`\n=== LEVEL ${level} (Y=${y}) ===`);
+    console.log(`Nodes to position: ${nodesInLevel.join(', ')}`);
     
     if (level === 0) {
-      // Root level: center at origin
-      if (nodeCount === 1) {
-        const position = { x: 0, y };
-        positionedNodes.push({ id: nodesInLevel[0], position });
-        nodePositionMap[nodesInLevel[0]] = position;
-      } else {
-        // Multiple roots: distribute symmetrically
-        const totalWidth = (nodeCount - 1) * horizontalSpacing;
-        const startX = -totalWidth / 2;
-        
-        nodesInLevel.forEach((nodeId, index) => {
-          const position = { x: startX + index * horizontalSpacing, y };
-          positionedNodes.push({ id: nodeId, position });
-          nodePositionMap[nodeId] = position;
-        });
-      }
-    } else {
-      // Non-root levels: BALANCED PARENT-CHILD POSITIONING
-      // First, group nodes by their parents to handle multiple children
-      const nodesByParent: Record<string, string[]> = {};
-      const orphanNodes: string[] = [];
-      
+      // Root level: center everything at x=0
       nodesInLevel.forEach(nodeId => {
-        const parents = allParentsMap[nodeId] || [];
-        if (parents.length === 0) {
-          orphanNodes.push(nodeId);
-        } else if (parents.length === 1) {
-          const parentId = parents[0];
-          if (!nodesByParent[parentId]) nodesByParent[parentId] = [];
-          nodesByParent[parentId].push(nodeId);
-        } else {
-          // Multiple parents - position at average of parent positions
-          const parentPositions = parents
-            .map(parentId => nodePositionMap[parentId])
-            .filter(pos => pos);
-          
-          if (parentPositions.length > 0) {
-            const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
-            const position = { x: avgX, y };
-            positionedNodes.push({ id: nodeId, position });
-            nodePositionMap[nodeId] = position;
-            console.log(`  Multi-parent node ${nodeId} positioned at average x=${avgX}`);
-          } else {
-            orphanNodes.push(nodeId);
-          }
-        }
-      });
-      
-      // Position children of each parent
-      Object.keys(nodesByParent).forEach(parentId => {
-        const children = nodesByParent[parentId];
-        const parentPos = nodePositionMap[parentId];
-        
-        if (!parentPos) return;
-        
-        if (children.length === 1) {
-          // Single child: center under parent
-          const position = { x: parentPos.x, y };
-          positionedNodes.push({ id: children[0], position });
-          nodePositionMap[children[0]] = position;
-          console.log(`  Single child ${children[0]} centered under parent at x=${parentPos.x}`);
-        } else {
-          // Multiple children: For RRP-member nodes, position them directly under parent
-          // For other nodes, spread them horizontally
-          const isRrpMemberChildren = children.some(childId => childId.includes('rrpmember'));
-          
-          if (isRrpMemberChildren) {
-            // RRP-member nodes: ALL positioned directly below parent at SAME X coordinate
-            // This creates perfectly vertical alignment with identical edge lengths
-            children.forEach((childId, index) => {
-              const position = { x: parentPos.x, y: y + (index * 30) }; // Stack vertically with small offset to avoid complete overlap
-              positionedNodes.push({ id: childId, position });
-              nodePositionMap[childId] = position;
-              console.log(`  RRP-member ${childId} positioned VERTICALLY below parent at x=${parentPos.x}, y=${position.y}`);
-            });
-          } else {
-            // Other nodes: spread horizontally around parent
-            const childSpacing = 300;
-            const totalWidth = (children.length - 1) * childSpacing;
-            const startX = parentPos.x - totalWidth / 2;
-            
-            children.forEach((childId, index) => {
-              const x = startX + index * childSpacing;
-              const position = { x, y };
-              positionedNodes.push({ id: childId, position });
-              nodePositionMap[childId] = position;
-              console.log(`  Child ${childId} positioned at x=${x} (${index + 1} of ${children.length})`);
-            });
-          }
-        }
-      });
-      
-      // Position orphan nodes
-      orphanNodes.forEach((nodeId, index) => {
-        const x = index * 400; // Spread orphans horizontally
-        const position = { x, y };
+        const position = { x: 0, y };
         positionedNodes.push({ id: nodeId, position });
         nodePositionMap[nodeId] = position;
-        console.log(`  Orphan node ${nodeId} positioned at x=${x}`);
+        console.log(`✓ Root ${nodeId} at (0, ${y})`);
+      });
+    } else {
+      // Position based on parents
+      nodesInLevel.forEach(nodeId => {
+        const parents = allParentsMap[nodeId] || [];
+        console.log(`\nPositioning ${nodeId} - Parents: ${parents.join(', ')}`);
+        
+        if (parents.length === 0) {
+          // No parents: center at x=0
+          const position = { x: 0, y };
+          positionedNodes.push({ id: nodeId, position });
+          nodePositionMap[nodeId] = position;
+          console.log(`✓ Orphan ${nodeId} at (0, ${y})`);
+        } else {
+          // Position based on first parent for simplicity
+          const parentPos = nodePositionMap[parents[0]];
+          if (parentPos) {
+            // Check how many siblings this node has
+            const siblings = (childrenMap[parents[0]] || []).filter(child => 
+              nodesByLevel[level] && nodesByLevel[level].includes(child)
+            );
+            
+            if (siblings.length === 1) {
+              // Single child: directly under parent
+              const position = { x: parentPos.x, y };
+              positionedNodes.push({ id: nodeId, position });
+              nodePositionMap[nodeId] = position;
+              console.log(`✓ Single child ${nodeId} under parent at (${parentPos.x}, ${y})`);
+            } else {
+              // Multiple siblings: spread them around parent
+              const nodeIndex = siblings.indexOf(nodeId);
+              const spacing = 250;
+              const totalWidth = (siblings.length - 1) * spacing;
+              const startX = parentPos.x - totalWidth / 2;
+              const x = startX + nodeIndex * spacing;
+              
+              const position = { x, y };
+              positionedNodes.push({ id: nodeId, position });
+              nodePositionMap[nodeId] = position;
+              console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y})`);
+            }
+          } else {
+            // Parent not positioned yet, use center
+            const position = { x: 0, y };
+            positionedNodes.push({ id: nodeId, position });
+            nodePositionMap[nodeId] = position;
+            console.log(`✓ Fallback ${nodeId} at (0, ${y})`);
+          }
+        }
       });
     }
   });
