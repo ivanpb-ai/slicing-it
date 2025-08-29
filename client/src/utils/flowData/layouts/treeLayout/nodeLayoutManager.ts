@@ -67,7 +67,7 @@ export function positionAllNodes(
     {
       ...options,
       marginY: options.marginY || 80,
-      verticalSpacing: 300,     
+      verticalSpacing: 150,     
       minNodeDistance: options.minNodeDistance || 80,
       edgeShortenFactor: options.edgeShortenFactor || 0.95,
       horizontalSpacing: (options.horizontalSpacing || 100) 

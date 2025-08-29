@@ -102,7 +102,7 @@ export const useGraphLoading = (
           type: 'balanced-tree', // Use improved balanced tree layout for hierarchical arrangement
           spacing: 800,          // Increased spacing for clearer visualization
           horizontalSpacing: 800,
-          verticalSpacing: 300,
+          verticalSpacing: 150,
           nodeWidth: 180,
           nodeHeight: 120,
           marginX: 400,          // Wider margins for better centering
@@ -209,7 +209,7 @@ export const useGraphLoading = (
           type: 'balanced-tree', // Use improved balanced tree layout for hierarchical arrangement
           spacing: 800,          // Increased spacing for clearer visualization
           horizontalSpacing: 800,
-          verticalSpacing: 300,
+          verticalSpacing: 150,
           nodeWidth: 180,
           nodeHeight: 120,
           marginX: 400,          // Wider margins for better centering

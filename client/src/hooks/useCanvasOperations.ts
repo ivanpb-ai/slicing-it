@@ -27,7 +27,7 @@ export const useCanvasOperations = (
     preventOverlap: true,
     edgeShortenFactor: 0.95,
     horizontalSpacing: 800,  // Horizontal spacing for balanced tree
-    verticalSpacing: 300     // Reduced for shorter edges
+    verticalSpacing: 150     // Much shorter for compact edges
   };
 
   // Merge default options with provided options
@@ -77,7 +77,7 @@ export const useCanvasOperations = (
           preventOverlap: true,
           edgeShortenFactor: 0.95,
           horizontalSpacing: 800,  // Horizontal spacing for balanced tree
-          verticalSpacing: 300     // Reduced for shorter edges
+          verticalSpacing: 150     // Much shorter for compact edges
         }
       );
       
@@ -111,7 +111,7 @@ export const useCanvasOperations = (
         marginX: 400,        // Proper margin
         marginY: 100,        // Proper margin
         horizontalSpacing: 800,
-        verticalSpacing: 300,
+        verticalSpacing: 150,
         preventOverlap: true,
         edgeShortenFactor: 0.9
       });

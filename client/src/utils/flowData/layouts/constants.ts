@@ -16,11 +16,11 @@ export const INITIAL_X_OFFSET = 50;
 
 // Add the missing VERTICAL_LEVEL_SPACINGS export
 export const VERTICAL_LEVEL_SPACINGS: { [key: string]: number } = {
-  'default': 120,
-  'rrpmember-s-nssai': 113, // Max 3cm (113px) spacing for RRPmember to S-NSSAI connections
-  's-nssai-dnn': 113, // Max 3cm (113px) spacing for S-NSSAI to DNN connections
-  'rrp-rrpmember': 80,
-  'network-cell-area': 140,
-  'cell-area-rrp': 130,
-  'dnn-fiveqi': 100
+  'default': 150,
+  'rrpmember-s-nssai': 150, // Consistent spacing for all connections
+  's-nssai-dnn': 150, // Consistent spacing for all connections
+  'rrp-rrpmember': 150, // Same as default for consistent edge lengths
+  'network-cell-area': 150,
+  'cell-area-rrp': 150,
+  'dnn-fiveqi': 150
 };
