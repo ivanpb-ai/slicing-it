@@ -151,7 +151,7 @@ export const arrangeNodesInBalancedTree = (
     const nodeCount = nodesInLevel.length;
     
     // Calculate Y position for this level
-    const y = 50 + level * 80;  // Much more compact: 50px start + 80px between levels
+    const y = 100 + level * 140;  // Better spacing: 100px start + 140px between levels
     
     if (level === 0) {
       // Root level: center at origin
