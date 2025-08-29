@@ -238,9 +238,10 @@ export const arrangeNodesInBalancedTree = (
                 nodePositionMap[nodeId] = position;
                 console.log(`✓ RRP-member ${nodeId} positioned close to parent at (${x}, ${y}) - tight cluster`);
               } else {
-                // Other siblings: spread them around parent
+                // Other siblings: spread them around parent with proper spacing
                 const nodeIndex = siblings.indexOf(nodeId);
-                const spacing = 250;
+                const isDnnNode = nodeId.includes('dnn-');
+                const spacing = isDnnNode ? 400 : 250; // Wider spacing for DNN nodes
                 const totalWidth = (siblings.length - 1) * spacing;
                 const startX = parentPos.x - totalWidth / 2;
                 const x = startX + nodeIndex * spacing;
@@ -248,7 +249,7 @@ export const arrangeNodesInBalancedTree = (
                 const position = { x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y})`);
+                console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px`);
               }
             }
           } else {
