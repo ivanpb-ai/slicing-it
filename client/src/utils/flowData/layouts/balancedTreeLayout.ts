@@ -246,9 +246,9 @@ export const arrangeNodesInBalancedTree = (
                 let spacing = 350; // Default spacing
                 if (isDnnNode) {
                   if (siblings.length <= 3) {
-                    spacing = 400; // Moderate spacing for 3 or fewer DNN nodes
+                    spacing = 500; // Much wider spacing for 3 or fewer DNN nodes
                   } else {
-                    spacing = 350; // Tighter spacing for more DNN nodes
+                    spacing = 450; // Wider spacing for more DNN nodes
                   }
                 }
                 
