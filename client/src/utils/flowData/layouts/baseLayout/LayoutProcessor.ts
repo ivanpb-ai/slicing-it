@@ -34,7 +34,7 @@ export const processNodesWithLayout = (
     switch (mergedOptions.type) {
       case 'balanced-tree':
         // Use the new balanced tree layout
-        arrangedNodes = arrangeNodesInBalancedTree(nodes, edges, {
+        const balancedResult = arrangeNodesInBalancedTree(nodes, edges, {
           nodeWidth: mergedOptions.nodeWidth,
           nodeHeight: mergedOptions.nodeHeight,
           horizontalSpacing: mergedOptions.horizontalSpacing || mergedOptions.spacing,
@@ -42,6 +42,8 @@ export const processNodesWithLayout = (
           marginX: mergedOptions.marginX,
           marginY: mergedOptions.marginY
         });
+        arrangedNodes = balancedResult.nodes;
+        // TODO: Handle cleaned edges from balancedResult.cleanedEdges
         break;
         
       case 'gridrows':

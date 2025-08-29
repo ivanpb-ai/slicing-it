@@ -27,8 +27,8 @@ export const arrangeNodesInBalancedTree = (
   nodes: Node[],
   edges: Edge[],
   options: BalancedTreeOptions = {}
-): Node[] => {
-  if (nodes.length === 0) return nodes;
+): { nodes: Node[], cleanedEdges: Edge[] } => {
+  if (nodes.length === 0) return { nodes, cleanedEdges: edges };
 
   const {
     nodeWidth = 180,
@@ -45,16 +45,17 @@ export const arrangeNodesInBalancedTree = (
   const nodeIds = new Set(nodes.map(node => node.id));
   console.log('Available node IDs:', Array.from(nodeIds));
 
-  // Filter edges to only include those with valid nodes
+  // Filter edges to only include those with valid nodes and clean up invalid ones
   const validEdges = edges.filter(edge => {
     const sourceExists = nodeIds.has(edge.source);
     const targetExists = nodeIds.has(edge.target);
     
     if (!sourceExists || !targetExists) {
-      console.warn(`Skipping invalid edge: ${edge.source} -> ${edge.target} (source exists: ${sourceExists}, target exists: ${targetExists})`);
+      console.log(`🧹 CLEANED: Removing invalid edge ${edge.source} -> ${edge.target} (source: ${sourceExists}, target: ${targetExists})`);
+      return false;
     }
     
-    return sourceExists && targetExists;
+    return true;
   });
 
   console.log(`Filtered edges: ${edges.length} -> ${validEdges.length} valid edges`);
@@ -242,14 +243,11 @@ export const arrangeNodesInBalancedTree = (
                 const nodeIndex = siblings.indexOf(nodeId);
                 const isDnnNode = nodeId.includes('dnn-');
                 
-                // For DNN nodes, use adaptive spacing based on number of siblings
+                // For DNN nodes, use much wider spacing to prevent any overlap
                 let spacing = 350; // Default spacing
                 if (isDnnNode) {
-                  if (siblings.length <= 3) {
-                    spacing = 500; // Much wider spacing for 3 or fewer DNN nodes
-                  } else {
-                    spacing = 450; // Wider spacing for more DNN nodes
-                  }
+                  spacing = 600; // Very wide spacing for all DNN nodes to ensure no overlap
+                  console.log(`🔧 DNN spacing set to ${spacing}px for ${siblings.length} siblings`);
                 }
                 
                 const totalWidth = (siblings.length - 1) * spacing;
@@ -307,6 +305,7 @@ export const arrangeNodesInBalancedTree = (
   console.log('🎯 BALANCED TREE LAYOUT COMPLETED. Positioned', positionedNodes.length, 'nodes');
   console.log('🎯 Final Y spacing used:', verticalSpacing, 'px');
   console.log('🎯 Final calculated positions:', updatedNodes.slice(0, 5).map(n => ({ id: n.id, x: n.position.x, y: n.position.y })));
+  console.log(`🧹 Cleaned ${edges.length - validEdges.length} invalid edges`);
 
-  return updatedNodes;
+  return { nodes: updatedNodes, cleanedEdges: validEdges };
 };
