@@ -241,7 +241,7 @@ export const arrangeNodesInBalancedTree = (
                 // Other siblings: spread them around parent with proper spacing
                 const nodeIndex = siblings.indexOf(nodeId);
                 const isDnnNode = nodeId.includes('dnn-');
-                const spacing = isDnnNode ? 600 : 350; // Much wider spacing for all nodes
+                const spacing = isDnnNode ? 450 : 350; // Balanced spacing for DNN nodes
                 const totalWidth = (siblings.length - 1) * spacing;
                 const startX = parentPos.x - totalWidth / 2;
                 const x = startX + nodeIndex * spacing;
