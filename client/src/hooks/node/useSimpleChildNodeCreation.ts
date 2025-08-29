@@ -76,14 +76,14 @@ export const useSimpleChildNodeCreation = (
     setNodes(prevNodes => {
       const parentNode = prevNodes.find(n => n.id === parentId);
       
-      //if (type === 'rrpmember' && parentNode) {
-        // Position RRPmember nodes directly below the parent RRP node
-        //childPosition = {
-        //  x: parentNode.position.x,
-        //  y: parentNode.position.y + 250  // Position below with proper spacing for node height
-        //};
-        //console.log(`Positioning RRPmember node below parent RRP at:`, childPosition);
-      //}
+      if (type === 'rrpmember' && parentNode) {
+        // Position RRPmember nodes directly below the parent RRP node with proper spacing
+        childPosition = {
+          x: parentNode.position.x,
+          y: parentNode.position.y + 150  // 150px spacing for balanced tree layout
+        };
+        console.log(`✅ Positioning RRPmember node below parent RRP at:`, childPosition);
+      }
       
       const newNode: Node = {
         id,
