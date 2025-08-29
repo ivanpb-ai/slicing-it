@@ -206,11 +206,17 @@ export const arrangeNodesInBalancedTree = (
               const isRrpMember = nodeId.includes('rrpmember');
               
               if (isRrpMember) {
-                // RRP-member nodes: ALWAYS position directly under parent, never spread horizontally
-                const position = { x: parentPos.x, y };
+                // RRP-member nodes: Position very close to parent with minimal horizontal separation
+                const nodeIndex = siblings.indexOf(nodeId);
+                const tightSpacing = 50; // Very tight spacing to keep consistent edge lengths
+                const totalWidth = (siblings.length - 1) * tightSpacing;
+                const startX = parentPos.x - totalWidth / 2;
+                const x = startX + nodeIndex * tightSpacing;
+                
+                const position = { x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ RRP-member ${nodeId} positioned DIRECTLY under parent at (${parentPos.x}, ${y})`);
+                console.log(`✓ RRP-member ${nodeId} positioned close to parent at (${x}, ${y}) - tight cluster`);
               } else {
                 // Other siblings: spread them around parent
                 const nodeIndex = siblings.indexOf(nodeId);
