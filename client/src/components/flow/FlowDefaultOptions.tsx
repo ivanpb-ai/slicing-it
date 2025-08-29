@@ -18,7 +18,7 @@ const FlowDefaultOptions: React.FC<FlowDefaultOptionsProps> = ({ children }) => 
     data: {
       curvature: 0, 
       shortened: true,
-      shortenFactor: 0.55, // Updated to fixed edge length of approximately 100px (55% shortening)
+      shortenFactor: 0.75, // Increased shortening for more compact edges (75% shortening)
       persistent: true,
       permanent: true,
       preserveEdge: true,

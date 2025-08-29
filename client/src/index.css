@@ -119,9 +119,14 @@ body {
   @apply hidden;
 }
 
-/* Shortened edge style */
+/* Shortened edge style - more compact edges */
 .react-flow__edge-path.shortened {
   stroke-dasharray: 5, 2;
+}
+
+/* Make all edges more compact */
+.react-flow__edge-path {
+  @apply stroke-gray-400 stroke-[2px];
 }
 
 .nodeToolbar {
