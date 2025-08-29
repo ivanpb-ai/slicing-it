@@ -263,9 +263,27 @@ export const arrangeNodesInBalancedTree = (
     }
   });
 
-  // Update original nodes with new positions
+  // Calculate the bounds of all positioned nodes to center the entire graph
+  const allXPositions = positionedNodes.map(p => p.position.x);
+  const minX = Math.min(...allXPositions);
+  const maxX = Math.max(...allXPositions);
+  const graphWidth = maxX - minX;
+  const graphCenterX = (minX + maxX) / 2;
+  
+  // Shift all nodes so the graph center is at X=0
+  const centeredNodes = positionedNodes.map(p => ({
+    ...p,
+    position: {
+      x: p.position.x - graphCenterX,
+      y: p.position.y
+    }
+  }));
+  
+  console.log(`🎯 Graph centering: minX=${minX}, maxX=${maxX}, width=${graphWidth}, centerOffset=${graphCenterX}`);
+
+  // Update original nodes with centered positions
   const updatedNodes = nodes.map(node => {
-    const positioned = positionedNodes.find(p => p.id === node.id);
+    const positioned = centeredNodes.find(p => p.id === node.id);
     if (positioned) {
       return {
         ...node,
