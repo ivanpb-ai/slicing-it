@@ -87,12 +87,13 @@ export const arrangeNodesInTreeLayout = (
       }
     );
     
-    // 7. Apply post-processing with proper vertical spacing
-    const finalNodes = processNodesAfterLayout(
-      positionedNodes,
-      relationships,
-      verticalSpacing // Use proper vertical spacing
-    );
+    // 7. Skip post-processing to avoid overriding balanced tree positions
+    // const finalNodes = processNodesAfterLayout(
+    //   positionedNodes,
+    //   relationships,
+    //   verticalSpacing
+    // );
+    const finalNodes = positionedNodes;
     console.log(`finalNodes ${finalNodes}`);
 
     // 8. Verify the arrangement is valid
