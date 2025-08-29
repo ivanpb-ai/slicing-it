@@ -171,48 +171,61 @@ export const arrangeNodesInBalancedTree = (
         });
       }
     } else {
-      // Non-root levels: PARENT-CHILD ALIGNMENT WITH SPACING
-      // Position nodes directly under their parents when possible
+      // Non-root levels: BALANCED PARENT-CHILD POSITIONING
+      // First, group nodes by their parents to handle multiple children
+      const nodesByParent: Record<string, string[]> = {};
+      const orphanNodes: string[] = [];
+      
       nodesInLevel.forEach(nodeId => {
         const parents = allParentsMap[nodeId] || [];
-        
         if (parents.length === 0) {
-          // Orphan nodes go to center
-          const position = { x: 0, y };
-          positionedNodes.push({ id: nodeId, position });
-          nodePositionMap[nodeId] = position;
-          console.log(`  Orphan node ${nodeId} -> x=0`);
+          orphanNodes.push(nodeId);
         } else if (parents.length === 1) {
-          // Single parent: position directly below parent
-          const parentPos = nodePositionMap[parents[0]];
-          if (parentPos) {
-            const position = { x: parentPos.x, y };
-            positionedNodes.push({ id: nodeId, position });
-            nodePositionMap[nodeId] = position;
-            console.log(`  Node ${nodeId} aligned under parent at x=${parentPos.x}`);
-          } else {
-            const position = { x: 0, y };
-            positionedNodes.push({ id: nodeId, position });
-            nodePositionMap[nodeId] = position;
-          }
+          const parentId = parents[0];
+          if (!nodesByParent[parentId]) nodesByParent[parentId] = [];
+          nodesByParent[parentId].push(nodeId);
         } else {
-          // Multiple parents: position at average of parent positions
-          const parentPositions = parents
-            .map(parentId => nodePositionMap[parentId])
-            .filter(pos => pos);
-          
-          if (parentPositions.length > 0) {
-            const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
-            const position = { x: avgX, y };
-            positionedNodes.push({ id: nodeId, position });
-            nodePositionMap[nodeId] = position;
-            console.log(`  Node ${nodeId} positioned at average of parents x=${avgX}`);
-          } else {
-            const position = { x: 0, y };
-            positionedNodes.push({ id: nodeId, position });
-            nodePositionMap[nodeId] = position;
-          }
+          // Multiple parents - treat as orphan for now
+          orphanNodes.push(nodeId);
         }
+      });
+      
+      // Position children of each parent
+      Object.keys(nodesByParent).forEach(parentId => {
+        const children = nodesByParent[parentId];
+        const parentPos = nodePositionMap[parentId];
+        
+        if (!parentPos) return;
+        
+        if (children.length === 1) {
+          // Single child: center under parent
+          const position = { x: parentPos.x, y };
+          positionedNodes.push({ id: children[0], position });
+          nodePositionMap[children[0]] = position;
+          console.log(`  Single child ${children[0]} centered under parent at x=${parentPos.x}`);
+        } else {
+          // Multiple children: spread horizontally around parent
+          const childSpacing = 400; // Spacing between siblings
+          const totalWidth = (children.length - 1) * childSpacing;
+          const startX = parentPos.x - totalWidth / 2;
+          
+          children.forEach((childId, index) => {
+            const x = startX + index * childSpacing;
+            const position = { x, y };
+            positionedNodes.push({ id: childId, position });
+            nodePositionMap[childId] = position;
+            console.log(`  Child ${childId} positioned at x=${x} (${index + 1} of ${children.length})`);
+          });
+        }
+      });
+      
+      // Position orphan nodes
+      orphanNodes.forEach((nodeId, index) => {
+        const x = index * 400; // Spread orphans horizontally
+        const position = { x, y };
+        positionedNodes.push({ id: nodeId, position });
+        nodePositionMap[nodeId] = position;
+        console.log(`  Orphan node ${nodeId} positioned at x=${x}`);
       });
     }
   });
