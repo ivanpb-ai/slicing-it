@@ -202,17 +202,28 @@ export const arrangeNodesInBalancedTree = (
               nodePositionMap[nodeId] = position;
               console.log(`✓ Single child ${nodeId} under parent at (${parentPos.x}, ${y})`);
             } else {
-              // Multiple siblings: spread them around parent
-              const nodeIndex = siblings.indexOf(nodeId);
-              const spacing = 250;
-              const totalWidth = (siblings.length - 1) * spacing;
-              const startX = parentPos.x - totalWidth / 2;
-              const x = startX + nodeIndex * spacing;
+              // Multiple siblings: SPECIAL CASE for RRP-member nodes
+              const isRrpMember = nodeId.includes('rrpmember');
               
-              const position = { x, y };
-              positionedNodes.push({ id: nodeId, position });
-              nodePositionMap[nodeId] = position;
-              console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y})`);
+              if (isRrpMember) {
+                // RRP-member nodes: ALWAYS position directly under parent, never spread horizontally
+                const position = { x: parentPos.x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ RRP-member ${nodeId} positioned DIRECTLY under parent at (${parentPos.x}, ${y})`);
+              } else {
+                // Other siblings: spread them around parent
+                const nodeIndex = siblings.indexOf(nodeId);
+                const spacing = 250;
+                const totalWidth = (siblings.length - 1) * spacing;
+                const startX = parentPos.x - totalWidth / 2;
+                const x = startX + nodeIndex * spacing;
+                
+                const position = { x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y})`);
+              }
             }
           } else {
             // Parent not positioned yet, use center
