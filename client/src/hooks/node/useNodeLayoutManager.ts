@@ -59,18 +59,30 @@ export const useNodeLayoutManager = (
         setNodes(arrangedNodes);
         toast.success('Nodes arranged in balanced hierarchical tree layout');
         
-        // Force viewport to show all positioned nodes with proper zoom
+        // Add verification after setNodes
         setTimeout(() => {
-          console.log('✅ Layout applied - fitting view to show proper spacing');
           if (reactFlowInstance) {
-            reactFlowInstance.fitView({ 
-              padding: 100,
-              maxZoom: 0.8,     // Prevent zooming too close
-              minZoom: 0.2,     // Allow zooming out to see full layout
-              duration: 500     // Smooth transition
+            const currentNodes = reactFlowInstance.getNodes();
+            console.log('🔍 VERIFICATION: Nodes after setNodes call:');
+            currentNodes.slice(0, 5).forEach(node => {
+              console.log(`  ${node.id}: x=${node.position.x}, y=${node.position.y}`);
             });
           }
-        }, 200);
+        }, 100);
+        
+        // DO NOT call fitView - it might be repositioning nodes
+        // Force viewport to show all positioned nodes with proper zoom
+        // setTimeout(() => {
+        //   console.log('✅ Layout applied - fitting view to show proper spacing');
+        //   if (reactFlowInstance) {
+        //     reactFlowInstance.fitView({ 
+        //       padding: 100,
+        //       maxZoom: 0.8,     // Prevent zooming too close
+        //       minZoom: 0.2,     // Allow zooming out to see full layout
+        //       duration: 500     // Smooth transition
+        //     });
+        //   }
+        // }, 200);
         
         requestAnimationFrame(() => {
           window.dispatchEvent(new CustomEvent('node-added'));

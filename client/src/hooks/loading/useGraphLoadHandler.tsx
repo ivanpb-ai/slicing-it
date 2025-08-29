@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useEffect } from 'react';
 import { Node, Edge } from '@xyflow/react';
 import { toast } from 'sonner';
-import { resetCounters, updateDnnCounter } from '@/utils/flowData/idCounters';
+import { resetCounters } from '@/utils/flowData/idCounters';
 import type { GraphData } from '@/services/storage/GraphLocalStorageService';
 import { GraphLoadingService } from '@/services/loading/GraphLoadingService';
 import { GraphNodeProcessor } from '@/services/processing/GraphNodeProcessor';
@@ -93,10 +93,7 @@ export function useGraphLoadHandler(
       // Reset counters to avoid ID conflicts
       resetCounters();
       
-      // Update counters based on the loaded nodes
-      if (graphData.nodes && graphData.nodes.length > 0) {
-        updateDnnCounter(graphData.nodes);
-      }
+      // Counters reset for clean loading
       
       // 1. Clear existing nodes/edges first to ensure a clean slate
       setNodes([]);

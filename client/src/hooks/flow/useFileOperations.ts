@@ -2,7 +2,7 @@
 import { useCallback } from 'react';
 import { Node, Edge, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
-import { resetCounters, updateDnnCounter } from '@/utils/flowData/idCounters';
+import { resetCounters } from '@/utils/flowData/idCounters';
 import { GraphExportImportService } from '@/services/export/GraphExportImportService';
 import { arrangeNodes } from '@/utils/flowData/layoutAlgorithms';
 
@@ -54,7 +54,6 @@ export const useFileOperations = ({
 
       // Reset counters to avoid ID conflicts
       resetCounters();
-      updateDnnCounter(graphData.nodes);
 
       // Clear existing canvas first
       console.log('useFileOperations: Clearing existing nodes and edges');
