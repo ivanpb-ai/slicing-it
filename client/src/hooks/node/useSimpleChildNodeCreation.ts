@@ -77,10 +77,10 @@ export const useSimpleChildNodeCreation = (
       const parentNode = prevNodes.find(n => n.id === parentId);
       
       if (type === 'rrpmember' && parentNode) {
-        // Position RRPmember nodes directly below the parent RRP node with proper spacing
+        // Position RRPmember nodes directly below the parent RRP node with clear separation
         childPosition = {
           x: parentNode.position.x,
-          y: parentNode.position.y + 150  // 150px spacing for balanced tree layout
+          y: parentNode.position.y + 200  // Increased to 200px for clear visual separation
         };
         console.log(`✅ Positioning RRPmember node below parent RRP at:`, childPosition);
       }

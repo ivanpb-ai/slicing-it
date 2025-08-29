@@ -42,8 +42,8 @@ export const useRrpPlmn = (
           );
           
           const childPosition = {
-            x: parentNode.position.x + (existingRrpMembers.length * 25), // Small horizontal offset for multiple members
-            y: parentNode.position.y + 150  // 150px spacing matching balanced tree layout
+            x: parentNode.position.x + (existingRrpMembers.length * 50), // Increased horizontal offset to prevent overlap
+            y: parentNode.position.y + 200  // Increased vertical spacing to ensure clear separation
           };
           
           console.log(`✅ PLMN: Positioning RRP-member #${existingRrpMembers.length + 1} at:`, childPosition);
