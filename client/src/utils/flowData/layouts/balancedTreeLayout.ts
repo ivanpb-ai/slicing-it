@@ -137,6 +137,18 @@ export const arrangeNodesInBalancedTree = (
   
   console.log('Level assignments:', nodePositions);
   console.log('Parent-child relationships:', allParentsMap);
+  
+  // DEBUG: Log specific RRP-member relationships
+  Object.keys(allParentsMap).forEach(nodeId => {
+    if (nodeId.includes('rrpmember')) {
+      console.log(`🔍 RRP-member ${nodeId} has parents:`, allParentsMap[nodeId]);
+    }
+  });
+  Object.keys(childrenMap).forEach(nodeId => {
+    if (nodeId.includes('rrp-') && !nodeId.includes('rrpmember')) {
+      console.log(`🔍 RRP ${nodeId} has children:`, childrenMap[nodeId]);
+    }
+  });
 
   // No need for subtree width calculation in DAG layout
 
