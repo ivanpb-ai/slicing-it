@@ -241,7 +241,17 @@ export const arrangeNodesInBalancedTree = (
                 // Other siblings: spread them around parent with proper spacing
                 const nodeIndex = siblings.indexOf(nodeId);
                 const isDnnNode = nodeId.includes('dnn-');
-                const spacing = isDnnNode ? 450 : 350; // Balanced spacing for DNN nodes
+                
+                // For DNN nodes, use adaptive spacing based on number of siblings
+                let spacing = 350; // Default spacing
+                if (isDnnNode) {
+                  if (siblings.length <= 3) {
+                    spacing = 400; // Moderate spacing for 3 or fewer DNN nodes
+                  } else {
+                    spacing = 350; // Tighter spacing for more DNN nodes
+                  }
+                }
+                
                 const totalWidth = (siblings.length - 1) * spacing;
                 const startX = parentPos.x - totalWidth / 2;
                 const x = startX + nodeIndex * spacing;
@@ -249,7 +259,7 @@ export const arrangeNodesInBalancedTree = (
                 const position = { x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px`);
+                console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
               }
             }
           } else {
