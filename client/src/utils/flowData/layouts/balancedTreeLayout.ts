@@ -228,18 +228,32 @@ export const arrangeNodesInBalancedTree = (
           nodePositionMap[children[0]] = position;
           console.log(`  Single child ${children[0]} centered under parent at x=${parentPos.x}`);
         } else {
-          // Multiple children: spread horizontally around parent with tighter spacing
-          const childSpacing = 300; // Reduced spacing between siblings for better alignment
-          const totalWidth = (children.length - 1) * childSpacing;
-          const startX = parentPos.x - totalWidth / 2;
+          // Multiple children: For RRP-member nodes, position them directly under parent
+          // For other nodes, spread them horizontally
+          const isRrpMemberChildren = children.some(childId => childId.includes('rrpmember'));
           
-          children.forEach((childId, index) => {
-            const x = startX + index * childSpacing;
-            const position = { x, y };
-            positionedNodes.push({ id: childId, position });
-            nodePositionMap[childId] = position;
-            console.log(`  Child ${childId} positioned at x=${x} (${index + 1} of ${children.length})`);
-          });
+          if (isRrpMemberChildren) {
+            // RRP-member nodes: position all directly under parent for consistent edge lengths
+            children.forEach((childId, index) => {
+              const position = { x: parentPos.x, y };
+              positionedNodes.push({ id: childId, position });
+              nodePositionMap[childId] = position;
+              console.log(`  RRP-member ${childId} positioned directly under parent at x=${parentPos.x}`);
+            });
+          } else {
+            // Other nodes: spread horizontally around parent
+            const childSpacing = 300;
+            const totalWidth = (children.length - 1) * childSpacing;
+            const startX = parentPos.x - totalWidth / 2;
+            
+            children.forEach((childId, index) => {
+              const x = startX + index * childSpacing;
+              const position = { x, y };
+              positionedNodes.push({ id: childId, position });
+              nodePositionMap[childId] = position;
+              console.log(`  Child ${childId} positioned at x=${x} (${index + 1} of ${children.length})`);
+            });
+          }
         }
       });
       

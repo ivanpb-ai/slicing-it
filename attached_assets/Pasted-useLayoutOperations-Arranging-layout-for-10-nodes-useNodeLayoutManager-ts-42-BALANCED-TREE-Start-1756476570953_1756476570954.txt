@@ -1,0 +1,81 @@
+useLayoutOperations: Arranging layout for 10 nodes
+useNodeLayoutManager.ts:42 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+useNodeLayoutManager.ts:43 Layout options: {type: 'balanced-tree', horizontalSpacing: 800, verticalSpacing: 150, nodeWidth: 180, nodeHeight: 120, …}
+index.ts:17 🔥 DEBUG: arrangeNodes called with options: {type: 'balanced-tree', horizontalSpacing: 800, verticalSpacing: 150, nodeWidth: 180, nodeHeight: 120, …}
+LayoutProcessor.ts:32 LayoutProcessor: Using layout type 'balanced-tree' from options: {type: 'balanced-tree', nodeWidth: 180, nodeHeight: 120, horizontalSpacing: 800, verticalSpacing: 150, …}
+balancedTreeLayout.ts:42 ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 10 nodes
+balancedTreeLayout.ts:46 Available node IDs: (10) ['network-1750337202178-7623', 'cell-area-1', 'cell-area-2', 'rrp-1750337216606-1118', 'rrpmember-1750337236107-7355', 'rrpmember-1750337242468-2761', 's-nssai-1', 's-nssai-2', 'dnn-1', 'fiveqi-9']
+balancedTreeLayout.ts:54  Skipping invalid edge: cell-area-1 -> rrp-1750337216606-1119 (source exists: true, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:54  Skipping invalid edge: rrp-1750337216606-1118 -> rrpmember-1750337329538-3864 (source exists: true, target exists: false)
+(anonymous) @ balancedTreeLayout.ts:54
+arrangeNodesInBalancedTree @ balancedTreeLayout.ts:49
+processNodesWithLayout @ LayoutProcessor.ts:37
+arrangeNodes @ index.ts:23
+(anonymous) @ useNodeLayoutManager.ts:46
+(anonymous) @ useLayoutOperations.ts:44
+overrideProps.<computed> @ slot.tsx:140
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+balancedTreeLayout.ts:60 Filtered edges: 12 -> 10 valid edges
+balancedTreeLayout.ts:94 Found 1 root nodes
+balancedTreeLayout.ts:138 Level assignments: {network-1750337202178-7623: {…}, cell-area-1: {…}, rrp-1750337216606-1118: {…}, rrpmember-1750337236107-7355: {…}, s-nssai-2: {…}, …}
+balancedTreeLayout.ts:139 Parent-child relationships: {cell-area-1: Array(1), cell-area-2: Array(1), rrp-1750337216606-1118: Array(1), rrpmember-1750337236107-7355: Array(1), rrpmember-1750337242468-2761: Array(1), …}
+balancedTreeLayout.ts:144 🔍 RRP-member rrpmember-1750337236107-7355 has parents: ['rrp-1750337216606-1118']
+balancedTreeLayout.ts:144 🔍 RRP-member rrpmember-1750337242468-2761 has parents: ['rrp-1750337216606-1118']
+balancedTreeLayout.ts:149 🔍 RRP rrp-1750337216606-1118 has children: (2) ['rrpmember-1750337236107-7355', 'rrpmember-1750337242468-2761']
+balancedTreeLayout.ts:241   Child cell-area-1 positioned at x=-150 (1 of 2)
+balancedTreeLayout.ts:241   Child cell-area-2 positioned at x=150 (2 of 2)
+balancedTreeLayout.ts:229   Single child rrp-1750337216606-1118 centered under parent at x=-150
+balancedTreeLayout.ts:241   Child rrpmember-1750337236107-7355 positioned at x=-300 (1 of 2)
+balancedTreeLayout.ts:241   Child rrpmember-1750337242468-2761 positioned at x=0 (2 of 2)
+balancedTreeLayout.ts:229   Single child s-nssai-2 centered under parent at x=-300
+balancedTreeLayout.ts:229   Single child s-nssai-1 centered under parent at x=0
+balancedTreeLayout.ts:210   Multi-parent node dnn-1 positioned at average x=-150
+balancedTreeLayout.ts:229   Single child fiveqi-9 centered under parent at x=-150
+balancedTreeLayout.ts:269 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 10 nodes
+balancedTreeLayout.ts:270 🎯 Final Y spacing used: 150 px
+balancedTreeLayout.ts:271 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+useNodeLayoutManager.ts:48 ✅ Balanced tree layout completed: 10 nodes positioned in hierarchy
+useNodeLayoutManager.ts:54 🎯 SETTING NODES WITH CALCULATED POSITIONS:
+useNodeLayoutManager.ts:56   network-1750337202178-7623: x=0, y=100
+useNodeLayoutManager.ts:56   cell-area-1: x=-150, y=240
+useNodeLayoutManager.ts:56   cell-area-2: x=150, y=240
+useNodeLayoutManager.ts:56   rrp-1750337216606-1118: x=-150, y=380
+useNodeLayoutManager.ts:56   rrpmember-1750337236107-7355: x=-300, y=520
+useNodeLayoutManager.ts:64 ✅ Layout applied - fitting view to show proper spacing
+useLayoutOperations.ts:50 After arrangement: Found 10 visible nodes, expected 10
