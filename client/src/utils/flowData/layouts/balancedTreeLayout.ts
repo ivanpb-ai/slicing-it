@@ -185,8 +185,20 @@ export const arrangeNodesInBalancedTree = (
           if (!nodesByParent[parentId]) nodesByParent[parentId] = [];
           nodesByParent[parentId].push(nodeId);
         } else {
-          // Multiple parents - treat as orphan for now
-          orphanNodes.push(nodeId);
+          // Multiple parents - position at average of parent positions
+          const parentPositions = parents
+            .map(parentId => nodePositionMap[parentId])
+            .filter(pos => pos);
+          
+          if (parentPositions.length > 0) {
+            const avgX = parentPositions.reduce((sum, pos) => sum + pos.x, 0) / parentPositions.length;
+            const position = { x: avgX, y };
+            positionedNodes.push({ id: nodeId, position });
+            nodePositionMap[nodeId] = position;
+            console.log(`  Multi-parent node ${nodeId} positioned at average x=${avgX}`);
+          } else {
+            orphanNodes.push(nodeId);
+          }
         }
       });
       
@@ -204,8 +216,8 @@ export const arrangeNodesInBalancedTree = (
           nodePositionMap[children[0]] = position;
           console.log(`  Single child ${children[0]} centered under parent at x=${parentPos.x}`);
         } else {
-          // Multiple children: spread horizontally around parent
-          const childSpacing = 400; // Spacing between siblings
+          // Multiple children: spread horizontally around parent with tighter spacing
+          const childSpacing = 300; // Reduced spacing between siblings for better alignment
           const totalWidth = (children.length - 1) * childSpacing;
           const startX = parentPos.x - totalWidth / 2;
           
