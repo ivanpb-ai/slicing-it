@@ -11,7 +11,7 @@ import { assignHierarchicalPositions } from "./hierarchyEnforcement/hierarchyAss
 export function enforceStrictHierarchy(
   nodes: Node[], 
   relationships: NodeRelationships,
-  verticalSpacing: number = 150
+  verticalSpacing: number = 100
 ): Node[] {
   // Get a fresh copy of nodes
   let updatedNodes = nodes.map(node => ({...node, position: {...node.position}}));

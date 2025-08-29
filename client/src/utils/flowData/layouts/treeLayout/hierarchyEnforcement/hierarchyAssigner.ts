@@ -6,7 +6,7 @@ import { HIERARCHY_LEVELS } from "../../constants";
  * Assigns strict Y positions based on node type tier
  * This ensures each node type is in its own horizontal layer
  */
-export function assignHierarchicalPositions(nodes: Node[], verticalSpacing: number): Node[] {
+export function assignHierarchicalPositions(nodes: Node[], verticalSpacing: number = 150): Node[] {
   // Group nodes by their type
   const nodesByType: Record<string, Node[]> = {};
   
@@ -35,7 +35,7 @@ export function assignHierarchicalPositions(nodes: Node[], verticalSpacing: numb
     
     // Calculate Y position based on hierarchy level with updated spacing
     const hierarchyLevel = HIERARCHY_LEVELS[nodeType];
-    const baseYPosition = 50 + (hierarchyLevel * 100); // Much shorter for compact edges
+    const baseYPosition = 50 + (hierarchyLevel * verticalSpacing); // Use actual verticalSpacing parameter
     
     // Get all nodes of this type to calculate horizontal position
     const nodesOfThisType = nodesByType[nodeType] || [];
