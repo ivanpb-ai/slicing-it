@@ -34,7 +34,7 @@ export const useNodeLayoutManager = (
       marginX: 100,
       marginY: 100,
       preventOverlap: true,
-      edgeShortenFactor: 0.7,     // Shortened edges for more compact connections
+      edgeShortenFactor: 0.95,
       minNodeDistance: 50         
     };
 
