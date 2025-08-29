@@ -228,7 +228,7 @@ export const arrangeNodesInBalancedTree = (
               if (isRrpMember) {
                 // RRP-member nodes: Position below parent with proper horizontal separation
                 const nodeIndex = siblings.indexOf(nodeId);
-                const tightSpacing = 80; // Better spacing to prevent overlap
+                const tightSpacing = 150; // Much wider spacing to prevent overlap
                 const totalWidth = (siblings.length - 1) * tightSpacing;
                 const startX = parentPos.x - totalWidth / 2;
                 const x = startX + nodeIndex * tightSpacing;
@@ -241,7 +241,7 @@ export const arrangeNodesInBalancedTree = (
                 // Other siblings: spread them around parent with proper spacing
                 const nodeIndex = siblings.indexOf(nodeId);
                 const isDnnNode = nodeId.includes('dnn-');
-                const spacing = isDnnNode ? 400 : 250; // Wider spacing for DNN nodes
+                const spacing = isDnnNode ? 600 : 350; // Much wider spacing for all nodes
                 const totalWidth = (siblings.length - 1) * spacing;
                 const startX = parentPos.x - totalWidth / 2;
                 const x = startX + nodeIndex * spacing;
