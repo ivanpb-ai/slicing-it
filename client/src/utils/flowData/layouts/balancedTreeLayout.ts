@@ -34,7 +34,7 @@ export const arrangeNodesInBalancedTree = (
     nodeWidth = 180,
     nodeHeight = 120,
     horizontalSpacing = 800,
-    verticalSpacing = 120,  // Compact edges - reduced further
+    verticalSpacing = 200,  // Increased for better visual separation
     marginX = 400,
     marginY = 100
   } = options;
@@ -161,7 +161,7 @@ export const arrangeNodesInBalancedTree = (
   
   sortedLevels.forEach(level => {
     const nodesInLevel = nodesByLevel[level];
-    const y = 100 + level * 140;
+    const y = 100 + level * 250;  // Increased vertical spacing between levels
     
     console.log(`\n=== LEVEL ${level} (Y=${y}) ===`);
     console.log(`Nodes to position: ${nodesInLevel.join(', ')}`);
@@ -206,9 +206,9 @@ export const arrangeNodesInBalancedTree = (
               const isRrpMember = nodeId.includes('rrpmember');
               
               if (isRrpMember) {
-                // RRP-member nodes: Position very close to parent with minimal horizontal separation
+                // RRP-member nodes: Position below parent with proper horizontal separation
                 const nodeIndex = siblings.indexOf(nodeId);
-                const tightSpacing = 50; // Very tight spacing to keep consistent edge lengths
+                const tightSpacing = 80; // Better spacing to prevent overlap
                 const totalWidth = (siblings.length - 1) * tightSpacing;
                 const startX = parentPos.x - totalWidth / 2;
                 const x = startX + nodeIndex * tightSpacing;

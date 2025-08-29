@@ -77,12 +77,12 @@ export const useSimpleChildNodeCreation = (
       const parentNode = prevNodes.find(n => n.id === parentId);
       
       if (type === 'rrpmember' && parentNode) {
-        // Position RRPmember nodes directly below the parent RRP node with clear separation
+        // Let the balanced tree layout handle positioning - just use a default position
         childPosition = {
           x: parentNode.position.x,
-          y: parentNode.position.y + 200  // Increased to 200px for clear visual separation
+          y: parentNode.position.y + 50  // Temporary - layout will override
         };
-        console.log(`✅ Positioning RRPmember node below parent RRP at:`, childPosition);
+        console.log(`✅ Creating RRPmember (balanced tree layout will position it)`, childPosition);
       }
       
       const newNode: Node = {

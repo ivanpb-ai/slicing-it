@@ -35,18 +35,14 @@ export const useRrpPlmn = (
         if (parentNode) {
           console.log(`Creating RRP member child for parent ${data.nodeId} with PLMN: ${currentValue}`);
           
-          // Position RRP-member directly below RRP with proper spacing
-          // For multiple children, position them close together below the parent
-          const existingRrpMembers = existingNodes.filter(n => 
-            n.data.type === 'rrpmember' && n.data.parentId === data.nodeId
-          );
-          
+          // Let the balanced tree layout handle positioning - just use a default position
+          // The layout system will automatically position RRP-members correctly
           const childPosition = {
-            x: parentNode.position.x + (existingRrpMembers.length * 50), // Increased horizontal offset to prevent overlap
-            y: parentNode.position.y + 200  // Increased vertical spacing to ensure clear separation
+            x: parentNode.position.x,
+            y: parentNode.position.y + 50  // Temporary position - layout will override
           };
           
-          console.log(`✅ PLMN: Positioning RRP-member #${existingRrpMembers.length + 1} at:`, childPosition);
+          console.log(`✅ PLMN: Creating RRP-member (layout will position it properly)`, childPosition);
           
           if (createChildNode) {
             createChildNode('rrpmember', childPosition, data.nodeId, currentValue);
