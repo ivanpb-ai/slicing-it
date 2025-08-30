@@ -272,6 +272,8 @@ export const arrangeNodesInBalancedTree = (
                 // React Flow positions nodes by their top-left corner, so we need to offset to get visual center
                 const parentVisualCenterX = parentPos.x + nodeWidth / 2;
                 console.log(`🔍 VISUAL CENTER: Parent ${parents[0]} visual center at ${parentVisualCenterX} (position: ${parentPos.x} + nodeWidth/2: ${nodeWidth/2})`);
+                console.log(`🔍 SIBLINGS DEBUG: ${siblings.join(', ')} (${siblings.length} total)`);
+                console.log(`🔍 NODE INDEX: ${nodeId} is at index ${nodeIndex} in siblings list`);
                 
                 // Center children symmetrically around parent's VISUAL center, then offset back to top-left positioning
                 const totalWidth = (siblings.length - 1) * tightSpacing;
@@ -336,17 +338,28 @@ export const arrangeNodesInBalancedTree = (
                       const isSNssaiNode = nodeId.includes('s-nssai-');
                       
                       if (isSNssaiNode && level === sNssaiLevel) {
-                        // SPECIAL CASE: Position ALL S-NSSAI nodes with consistent spacing for uniform layout
-                        const nodeIndex = allSNssaiNodes.indexOf(nodeId);
-                        const sNssaiSpacing = 400; // Consistent spacing for S-NSSAI nodes to prevent overlaps
-                        const totalSNssaiWidth = (allSNssaiNodes.length - 1) * sNssaiSpacing;
-                        const startX = 0 - totalSNssaiWidth / 2; // Center around X=0
-                        const x = startX + nodeIndex * sNssaiSpacing;
+                        // S-NSSAI nodes: Position symmetrically below parent centered around parent's VISUAL center
+                        const nodeIndex = siblings.indexOf(nodeId);
+                        const sNssaiSpacing = 150; // Spacing between S-NSSAI nodes
+                        
+                        // Calculate parent's VISUAL center (position + half of node width)
+                        const parentVisualCenterX = parentPos.x + nodeWidth / 2;
+                        console.log(`🔍 S-NSSAI VISUAL CENTER: Parent ${parents[0]} visual center at ${parentVisualCenterX} (position: ${parentPos.x} + nodeWidth/2: ${nodeWidth/2})`);
+                        
+                        // Center children symmetrically around parent's VISUAL center
+                        const totalWidth = (siblings.length - 1) * sNssaiSpacing;
+                        const childrenCenterX = parentVisualCenterX;
+                        const startX = childrenCenterX - totalWidth / 2;
+                        const childX = startX + nodeIndex * sNssaiSpacing;
+                        
+                        // Convert back to top-left positioning for React Flow
+                        const x = childX - nodeWidth / 2;
                         
                         const position = { x, y };
                         positionedNodes.push({ id: nodeId, position });
                         nodePositionMap[nodeId] = position;
-                        console.log(`🎯 S-NSSAI ${nodeId} (${nodeIndex + 1}/${allSNssaiNodes.length}) unified at (${x}, ${y}) - spacing: ${sNssaiSpacing}px`);
+                        console.log(`✓ S-NSSAI ${nodeId} positioned symmetrically at (${x}, ${y}) - visual center under parent visual center at ${parentVisualCenterX}`);
+                        console.log(`🔍 S-NSSAI CALCULATION: childrenCenterX=${childrenCenterX}, startX=${startX}, childX=${childX}, final x=${x}`);
                       } else {
                         // Other siblings: spread them around parent with proper spacing
                         const nodeIndex = siblings.indexOf(nodeId);
