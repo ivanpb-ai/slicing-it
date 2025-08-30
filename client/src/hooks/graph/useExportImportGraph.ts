@@ -18,56 +18,36 @@ export const useExportImportGraph = (
   // Export the current graph as JSON
   const exportGraph = useCallback((graphName?: string): string | null => {
     try {
-      if (graphName) {
-        // Export a saved graph
-        const savedGraphs = JSON.parse(localStorage.getItem('savedGraphs') || '{}');
-        if (!savedGraphs[graphName]) {
-          toast.error(`Graph "${graphName}" not found`);
-          return null;
-        }
+      // ALWAYS export the current graph, use graphName as the filename
+      const fileName = graphName 
+        ? `${graphName.replace(/\s+/g, '_')}_${Date.now()}.json`
+        : `graph_export_${Date.now()}.json`;
         
-        // Create file name from graph name
-        const fileName = `${graphName.replace(/\s+/g, '_')}_${Date.now()}.json`;
-        
-        // Create download link
-        const dataStr = JSON.stringify(savedGraphs[graphName], null, 2);
-        const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
-        
-        // Create and trigger download
-        const downloadLink = document.createElement('a');
-        downloadLink.setAttribute('href', dataUri);
-        downloadLink.setAttribute('download', fileName);
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-        
-        toast.success(`Graph "${graphName}" exported successfully`);
-        return dataStr;
+      console.log('🔍 useExportImportGraph.ts: Exporting current graph with', nodes?.length || 0, 'nodes');
+      
+      // Export current graph with all current nodes and edges
+      const dataStr = JSON.stringify({ 
+        nodes: nodes || [], 
+        edges: edges || [], 
+        exportTime: Date.now() 
+      }, null, 2);
+      
+      const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
+      
+      // Create and trigger download
+      const downloadLink = document.createElement('a');
+      downloadLink.setAttribute('href', dataUri);
+      downloadLink.setAttribute('download', fileName);
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+      
+      if (nodes && nodes.length > 0) {
+        toast.success(`Graph exported as ${fileName} with ${nodes.length} nodes`);
       } else {
-        // Export current graph - ensuring we always have nodes and edges arrays
-        const fileName = `graph_export_${Date.now()}.json`;
-        const dataStr = JSON.stringify({ 
-          nodes: nodes || [], 
-          edges: edges || [], 
-          exportTime: Date.now() 
-        }, null, 2);
-        const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
-        
-        // Create and trigger download
-        const downloadLink = document.createElement('a');
-        downloadLink.setAttribute('href', dataUri);
-        downloadLink.setAttribute('download', fileName);
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-        
-        if (nodes && nodes.length > 0) {
-          toast.success('Current graph exported successfully');
-        } else {
-          toast.success('Empty graph exported successfully');
-        }
-        return dataStr;
+        toast.success('Empty graph exported successfully');
       }
+      return dataStr;
     } catch (error) {
       console.error('Error exporting graph:', error);
       toast.error('Failed to export graph');
