@@ -309,28 +309,17 @@ export const arrangeNodesInBalancedTree = (
                   const isRrpNode = nodeId.includes('rrp-') && !nodeId.includes('rrpmember');
                   
                   if (isRrpNode && level === rrpLevel) {
-                    // RRP nodes: Position symmetrically below parent centered around parent's VISUAL center
-                    const nodeIndex = siblings.indexOf(nodeId);
-                    const rrpSpacing = 300; // Spacing between RRP nodes under same parent
-                    
-                    // Calculate parent's VISUAL center (position + half of node width)
-                    const parentVisualCenterX = parentPos.x + nodeWidth / 2;
-                    console.log(`🔍 RRP VISUAL CENTER: Parent ${parents[0]} visual center at ${parentVisualCenterX} (position: ${parentPos.x} + nodeWidth/2: ${nodeWidth/2})`);
-                    
-                    // Center children symmetrically around parent's VISUAL center
-                    const totalWidth = (siblings.length - 1) * rrpSpacing;
-                    const childrenCenterX = parentVisualCenterX;
-                    const startX = childrenCenterX - totalWidth / 2;
-                    const childX = startX + nodeIndex * rrpSpacing;
-                    
-                    // Convert back to top-left positioning for React Flow
-                    const x = childX - nodeWidth / 2;
+                    // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
+                    const nodeIndex = allRrpNodes.indexOf(nodeId);
+                    const rrpSpacing = 400; // Consistent spacing for RRP nodes
+                    const totalRrpWidth = (allRrpNodes.length - 1) * rrpSpacing;
+                    const startX = 0 - totalRrpWidth / 2; // Center around X=0
+                    const x = startX + nodeIndex * rrpSpacing;
                     
                     const position = { x, y };
                     positionedNodes.push({ id: nodeId, position });
                     nodePositionMap[nodeId] = position;
-                    console.log(`✓ RRP ${nodeId} positioned symmetrically at (${x}, ${y}) - visual center under parent visual center at ${parentVisualCenterX}`);
-                    console.log(`🔍 RRP CALCULATION: childrenCenterX=${childrenCenterX}, startX=${startX}, childX=${childX}, final x=${x}`);
+                    console.log(`🎯 RRP ${nodeId} (${nodeIndex + 1}/${allRrpNodes.length}) unified at (${x}, ${y}) - spacing: ${rrpSpacing}px`);
                   } else {
                     const isCellAreaNode = nodeId.includes('cell-area-');
                     
