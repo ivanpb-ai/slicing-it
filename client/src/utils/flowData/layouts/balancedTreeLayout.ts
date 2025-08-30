@@ -157,17 +157,20 @@ export const arrangeNodesInBalancedTree = (
   const positionedNodes: { id: string; position: { x: number; y: number } }[] = [];
   const nodePositionMap: Record<string, { x: number; y: number }> = {};
   
-  // Pre-process to find all DNN, RRP, and cell-area nodes and their levels
+  // Pre-process to find all DNN, RRP, cell-area, and S-NSSAI nodes and their levels
   const allDnnNodes: string[] = [];
   const allRrpNodes: string[] = [];
   const allCellAreaNodes: string[] = [];
+  const allSNssaiNodes: string[] = [];
   let dnnLevel = -1;
   let rrpLevel = -1;
   let cellAreaLevel = -1;
+  let sNssaiLevel = -1;
   Object.entries(nodesByLevel).forEach(([levelStr, nodesInLevel]) => {
     const dnnNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('dnn-'));
     const rrpNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('rrp-') && !nodeId.includes('rrpmember'));
     const cellAreaNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('cell-area-'));
+    const sNssaiNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('s-nssai-'));
     
     if (dnnNodesInLevel.length > 0) {
       allDnnNodes.push(...dnnNodesInLevel);
@@ -181,10 +184,15 @@ export const arrangeNodesInBalancedTree = (
       allCellAreaNodes.push(...cellAreaNodesInLevel);
       cellAreaLevel = parseInt(levelStr);
     }
+    if (sNssaiNodesInLevel.length > 0) {
+      allSNssaiNodes.push(...sNssaiNodesInLevel);
+      sNssaiLevel = parseInt(levelStr);
+    }
   });
   console.log(`🎯 Found ${allDnnNodes.length} DNN nodes at level ${dnnLevel}: ${allDnnNodes.join(', ')}`);
   console.log(`🎯 Found ${allRrpNodes.length} RRP nodes at level ${rrpLevel}: ${allRrpNodes.join(', ')}`);
   console.log(`🎯 Found ${allCellAreaNodes.length} cell-area nodes at level ${cellAreaLevel}: ${allCellAreaNodes.join(', ')}`);
+  console.log(`🎯 Found ${allSNssaiNodes.length} S-NSSAI nodes at level ${sNssaiLevel}: ${allSNssaiNodes.join(', ')}`);
   
   // Process levels in order
   const sortedLevels = Object.keys(nodesByLevel).map(l => parseInt(l)).sort((a, b) => a - b);
@@ -313,18 +321,34 @@ export const arrangeNodesInBalancedTree = (
                       nodePositionMap[nodeId] = position;
                       console.log(`🎯 CELL-AREA ${nodeId} (${nodeIndex + 1}/${allCellAreaNodes.length}) unified at (${x}, ${y}) - spacing: ${cellAreaSpacing}px`);
                     } else {
-                      // Other siblings: spread them around parent with proper spacing
-                      const nodeIndex = siblings.indexOf(nodeId);
-                      const spacing = 350; // Default spacing
+                      const isSNssaiNode = nodeId.includes('s-nssai-');
                       
-                      const totalWidth = (siblings.length - 1) * spacing;
-                      const startX = parentPos.x - totalWidth / 2;
-                      const x = startX + nodeIndex * spacing;
-                      
-                      const position = { x, y };
-                      positionedNodes.push({ id: nodeId, position });
-                      nodePositionMap[nodeId] = position;
-                      console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
+                      if (isSNssaiNode && level === sNssaiLevel) {
+                        // SPECIAL CASE: Position ALL S-NSSAI nodes with consistent spacing for uniform layout
+                        const nodeIndex = allSNssaiNodes.indexOf(nodeId);
+                        const sNssaiSpacing = 400; // Consistent spacing for S-NSSAI nodes to prevent overlaps
+                        const totalSNssaiWidth = (allSNssaiNodes.length - 1) * sNssaiSpacing;
+                        const startX = 0 - totalSNssaiWidth / 2; // Center around X=0
+                        const x = startX + nodeIndex * sNssaiSpacing;
+                        
+                        const position = { x, y };
+                        positionedNodes.push({ id: nodeId, position });
+                        nodePositionMap[nodeId] = position;
+                        console.log(`🎯 S-NSSAI ${nodeId} (${nodeIndex + 1}/${allSNssaiNodes.length}) unified at (${x}, ${y}) - spacing: ${sNssaiSpacing}px`);
+                      } else {
+                        // Other siblings: spread them around parent with proper spacing
+                        const nodeIndex = siblings.indexOf(nodeId);
+                        const spacing = 350; // Default spacing
+                        
+                        const totalWidth = (siblings.length - 1) * spacing;
+                        const startX = parentPos.x - totalWidth / 2;
+                        const x = startX + nodeIndex * spacing;
+                        
+                        const position = { x, y };
+                        positionedNodes.push({ id: nodeId, position });
+                        nodePositionMap[nodeId] = position;
+                        console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
+                      }
                     }
                   }
                 }
