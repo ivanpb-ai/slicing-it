@@ -61,6 +61,39 @@ export const useExportImportGraph = (
         } catch (e) {
           console.error('🔍 useExportImportGraph.ts: Error accessing debug state:', e);
         }
+        
+        // Last resort: Try to get data directly from ReactFlow instance
+        console.log('🔍 useExportImportGraph.ts: Trying to get data from ReactFlow instance...');
+        if (reactFlowInstance) {
+          try {
+            const flowNodes = reactFlowInstance.getNodes();
+            const flowEdges = reactFlowInstance.getEdges();
+            console.log('🔍 useExportImportGraph.ts: ReactFlow instance has', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
+            
+            if (flowNodes.length > 0) {
+              console.log('🔍 useExportImportGraph.ts: Using ReactFlow instance data for export');
+              const dataStr = JSON.stringify({ 
+                nodes: flowNodes || [], 
+                edges: flowEdges || [], 
+                exportTime: Date.now() 
+              }, null, 2);
+              
+              const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
+              
+              const downloadLink = document.createElement('a');
+              downloadLink.setAttribute('href', dataUri);
+              downloadLink.setAttribute('download', fileName);
+              document.body.appendChild(downloadLink);
+              downloadLink.click();
+              document.body.removeChild(downloadLink);
+              
+              toast.success(`Graph exported as ${fileName} with ${flowNodes.length} nodes from ReactFlow instance`);
+              return dataStr;
+            }
+          } catch (e) {
+            console.error('🔍 useExportImportGraph.ts: Error accessing ReactFlow instance:', e);
+          }
+        }
       }
       
       // Export current graph with all current nodes and edges
