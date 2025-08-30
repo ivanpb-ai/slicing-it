@@ -264,9 +264,11 @@ export const arrangeNodesInBalancedTree = (
               const isRrpMember = nodeId.includes('rrpmember');
               
               if (isRrpMember) {
-                // RRP-member nodes: Position below parent with proper horizontal separation
+                // RRP-member nodes: Position symmetrically below parent centered around parent's X position
                 const nodeIndex = siblings.indexOf(nodeId);
-                const tightSpacing = 150; // Much wider spacing to prevent overlap
+                const tightSpacing = 150; // Spacing between RRP-member nodes
+                
+                // Center children symmetrically around parent's X position
                 const totalWidth = (siblings.length - 1) * tightSpacing;
                 const startX = parentPos.x - totalWidth / 2;
                 const x = startX + nodeIndex * tightSpacing;
@@ -274,7 +276,7 @@ export const arrangeNodesInBalancedTree = (
                 const position = { x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ RRP-member ${nodeId} positioned close to parent at (${x}, ${y}) - tight cluster`);
+                console.log(`✓ RRP-member ${nodeId} positioned symmetrically at (${x}, ${y}) - centered under parent at ${parentPos.x}`);
               } else {
                 const isDnnNode = nodeId.includes('dnn-');
                 
