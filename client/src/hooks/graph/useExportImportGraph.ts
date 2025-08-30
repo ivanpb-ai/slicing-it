@@ -99,17 +99,85 @@ export const useExportImportGraph = (
           console.warn('🔍 useExportImportGraph.ts: ReactFlow instance is null/undefined');
         }
         
-        // Ultimate fallback: Check if there are any React Flow elements in DOM
-        console.log('🔍 useExportImportGraph.ts: Checking DOM for React Flow elements...');
+        // Ultimate fallback: Extract graph data directly from DOM elements
+        console.log('🔍 useExportImportGraph.ts: Attempting DOM extraction...');
         try {
           const nodeElements = document.querySelectorAll('[data-id]');
           console.log('🔍 useExportImportGraph.ts: Found', nodeElements.length, 'DOM elements with data-id');
           
           if (nodeElements.length > 0) {
-            console.warn('🔍 useExportImportGraph.ts: Found visual elements but cannot access data - this indicates a state synchronization issue');
+            console.log('🔍 useExportImportGraph.ts: Extracting graph data from DOM...');
+            
+            const extractedNodes: any[] = [];
+            const extractedEdges: any[] = [];
+            
+            nodeElements.forEach((element: Element) => {
+              const dataId = element.getAttribute('data-id');
+              if (!dataId) return;
+              
+              // Check if this is a node (has position transform) or edge
+              const transform = (element as HTMLElement).style.transform;
+              const isNode = transform && transform.includes('translate');
+              
+              if (isNode) {
+                // Extract position from transform
+                const translateMatch = transform.match(/translate\(([^,]+),([^\)]+)\)/);
+                const x = translateMatch ? parseFloat(translateMatch[1]) : 0;
+                const y = translateMatch ? parseFloat(translateMatch[2]) : 0;
+                
+                // Extract node type and label from DOM
+                const classList = Array.from(element.classList);
+                const textContent = element.textContent || '';
+                
+                extractedNodes.push({
+                  id: dataId,
+                  type: classList.find(cls => cls.includes('node')) || 'default',
+                  position: { x, y },
+                  data: { 
+                    label: textContent.trim() || dataId,
+                    extractedFromDOM: true 
+                  }
+                });
+              } else if (element.classList.contains('react-flow__edge') || dataId.includes('-')) {
+                // Try to extract edge source/target
+                const parts = dataId.split('-');
+                if (parts.length >= 2) {
+                  extractedEdges.push({
+                    id: dataId,
+                    source: parts[0],
+                    target: parts[1],
+                    data: { extractedFromDOM: true }
+                  });
+                }
+              }
+            });
+            
+            console.log('🔍 useExportImportGraph.ts: Extracted', extractedNodes.length, 'nodes and', extractedEdges.length, 'edges from DOM');
+            
+            if (extractedNodes.length > 0) {
+              const extractedData = {
+                nodes: extractedNodes,
+                edges: extractedEdges,
+                extractionMethod: 'DOM_SCRAPING',
+                extractionTime: Date.now()
+              };
+              
+              const dataStr = JSON.stringify(extractedData, null, 2);
+              const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
+              
+              const downloadLink = document.createElement('a');
+              downloadLink.setAttribute('href', dataUri);
+              downloadLink.setAttribute('download', fileName);
+              document.body.appendChild(downloadLink);
+              downloadLink.click();
+              document.body.removeChild(downloadLink);
+              
+              toast.success(`Graph extracted from DOM: ${extractedNodes.length} nodes, ${extractedEdges.length} edges`);
+              return dataStr;
+            }
           }
         } catch (e) {
-          console.error('🔍 useExportImportGraph.ts: Error checking DOM elements:', e);
+          console.error('🔍 useExportImportGraph.ts: Error extracting from DOM:', e);
         }
       }
       
