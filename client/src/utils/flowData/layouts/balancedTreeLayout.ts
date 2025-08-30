@@ -277,6 +277,7 @@ export const arrangeNodesInBalancedTree = (
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
                 console.log(`✓ RRP-member ${nodeId} positioned symmetrically at (${x}, ${y}) - centered under parent at ${parentPos.x}`);
+                console.log(`🔍 DEBUG: nodeIndex=${nodeIndex}, siblings=${siblings.length}, totalWidth=${totalWidth}, startX=${startX}`);
               } else {
                 const isDnnNode = nodeId.includes('dnn-');
                 
