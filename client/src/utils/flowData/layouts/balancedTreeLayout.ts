@@ -266,7 +266,7 @@ export const arrangeNodesInBalancedTree = (
               if (isRrpMember) {
                 // RRP-member nodes: Position symmetrically below parent centered around parent's VISUAL center
                 const nodeIndex = siblings.indexOf(nodeId);
-                const tightSpacing = 150; // Spacing between RRP-member nodes
+                const tightSpacing = 200; // Increased spacing between RRP-member nodes for better symmetry
                 
                 // Calculate parent's VISUAL center (position + half of node width)
                 // React Flow positions nodes by their top-left corner, so we need to offset to get visual center
@@ -289,6 +289,7 @@ export const arrangeNodesInBalancedTree = (
                 nodePositionMap[nodeId] = position;
                 console.log(`✓ RRP-member ${nodeId} positioned symmetrically at (${x}, ${y}) - visual center under parent visual center at ${parentVisualCenterX}`);
                 console.log(`🔍 CALCULATION: childrenCenterX=${childrenCenterX}, startX=${startX}, childX=${childX}, final x=${x}`);
+                console.log(`🔍 VERIFICATION: Child visual centers should be: ${x + nodeWidth/2} (position ${x} + ${nodeWidth/2})`);
               } else {
                 const isDnnNode = nodeId.includes('dnn-');
                 
@@ -340,7 +341,7 @@ export const arrangeNodesInBalancedTree = (
                       if (isSNssaiNode && level === sNssaiLevel) {
                         // S-NSSAI nodes: Position symmetrically below parent centered around parent's VISUAL center
                         const nodeIndex = siblings.indexOf(nodeId);
-                        const sNssaiSpacing = 150; // Spacing between S-NSSAI nodes
+                        const sNssaiSpacing = 300; // Increased spacing between S-NSSAI nodes for better visual separation
                         
                         // Calculate parent's VISUAL center (position + half of node width)
                         const parentVisualCenterX = parentPos.x + nodeWidth / 2;
