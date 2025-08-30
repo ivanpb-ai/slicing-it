@@ -12,21 +12,38 @@ export class GraphExportImportService {
   // Export graph to JSON file
   static exportGraphToFile(name: string | undefined, nodes: Node[], edges: Edge[]): string | null {
     try {
+      const startTime = performance.now();
+      console.log('🔍 GraphExportImportService: Starting export with', nodes.length, 'nodes and', edges.length, 'edges');
+      
       // Create file name
       const fileName = `${name || 'graph'}_${new Date().toISOString().split('T')[0]}.json`;
+      console.log('🔍 GraphExportImportService: Filename:', fileName);
       
-      // Create graph data
+      // Create graph data with timing
+      const cloneStartTime = performance.now();
+      const clonedNodes = this.deepClone(nodes);
+      const nodesCloneTime = performance.now();
+      console.log('🔍 GraphExportImportService: Node cloning took', nodesCloneTime - cloneStartTime, 'ms');
+      
+      const clonedEdges = this.deepClone(edges);
+      const edgesCloneTime = performance.now();
+      console.log('🔍 GraphExportImportService: Edge cloning took', edgesCloneTime - nodesCloneTime, 'ms');
+      
       const graphData = {
-        nodes: this.deepClone(nodes),
-        edges: this.deepClone(edges),
+        nodes: clonedNodes,
+        edges: clonedEdges,
         exportTime: Date.now(),
         timestamp: Date.now()
       };
       
       // Create JSON string
+      const stringifyStartTime = performance.now();
       const dataString = JSON.stringify(graphData, null, 2);
+      const stringifyEndTime = performance.now();
+      console.log('🔍 GraphExportImportService: JSON.stringify took', stringifyEndTime - stringifyStartTime, 'ms');
       
       // Create blob and download
+      const blobStartTime = performance.now();
       const blob = new Blob([dataString], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
       
@@ -36,6 +53,8 @@ export class GraphExportImportService {
       a.click();
       
       URL.revokeObjectURL(url);
+      const endTime = performance.now();
+      console.log('🔍 GraphExportImportService: Total export time:', endTime - startTime, 'ms');
       return url;
     } catch (error) {
       console.error('GraphExportImportService: Error exporting graph:', error);

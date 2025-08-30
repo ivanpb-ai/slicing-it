@@ -11,18 +11,26 @@ export const useExportImportGraph = (
 ) => {
   // Export graph to file
   const exportGraph = (name?: string): string | null => {
-    // Add debugging to see what nodes we have
+    const startTime = performance.now();
+    console.log('🔍 Export Debug: Starting export at', startTime);
     console.log('🔍 Export Debug: nodes =', nodes?.length || 0, 'edges =', edges?.length || 0);
     
     if (!nodes || nodes.length === 0) {
       console.warn('Export: No nodes found in state');
       // Try to get nodes from global debug state as fallback
       try {
+        console.log('🔍 Export Debug: Trying to access global debug nodes...');
         // @ts-ignore - This is for debugging only
         const debugNodes = window.__DEBUG_NODE_EDITOR_NODES;
+        console.log('🔍 Export Debug: Debug nodes found:', debugNodes?.length || 0);
+        
         if (debugNodes && debugNodes.length > 0) {
           console.log('Export: Found', debugNodes.length, 'nodes in global debug state');
+          console.log('🔍 Export Debug: Calling GraphPersistenceService.exportGraphToFile...');
           const exportedData = GraphPersistenceService.exportGraphToFile(name, debugNodes, edges || []);
+          const endTime = performance.now();
+          console.log('🔍 Export Debug: Export completed in', endTime - startTime, 'ms');
+          
           if (exportedData) {
             toast.success('Graph exported successfully');
             return exportedData;
@@ -37,13 +45,19 @@ export const useExportImportGraph = (
     }
     
     try {
+      console.log('🔍 Export Debug: Starting main export path with', nodes.length, 'nodes');
+      const exportStartTime = performance.now();
       const exportedData = GraphPersistenceService.exportGraphToFile(name, nodes, edges || []);
+      const exportEndTime = performance.now();
+      console.log('🔍 Export Debug: GraphPersistenceService.exportGraphToFile took', exportEndTime - exportStartTime, 'ms');
       
       if (!exportedData) {
         toast.error('Failed to export graph');
         return null;
       }
       
+      const totalEndTime = performance.now();
+      console.log('🔍 Export Debug: Total export time:', totalEndTime - startTime, 'ms');
       toast.success('Graph exported successfully');
       return exportedData;
     } catch (error) {
