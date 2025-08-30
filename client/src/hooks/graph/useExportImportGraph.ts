@@ -23,7 +23,45 @@ export const useExportImportGraph = (
         ? `${graphName.replace(/\s+/g, '_')}_${Date.now()}.json`
         : `graph_export_${Date.now()}.json`;
         
-      console.log('🔍 useExportImportGraph.ts: Exporting current graph with', nodes?.length || 0, 'nodes');
+      console.log('🔍 useExportImportGraph.ts: Exporting current graph with', nodes?.length || 0, 'nodes and', edges?.length || 0, 'edges');
+      console.log('🔍 useExportImportGraph.ts: Nodes state:', nodes);
+      console.log('🔍 useExportImportGraph.ts: Edges state:', edges);
+      
+      // Try to get nodes from global debug state if current state is empty
+      if ((!nodes || nodes.length === 0)) {
+        console.log('🔍 useExportImportGraph.ts: Trying to get nodes from global debug state...');
+        try {
+          // @ts-ignore - This is for debugging only
+          const debugNodes = window.__DEBUG_NODE_EDITOR_NODES;
+          // @ts-ignore - This is for debugging only  
+          const debugEdges = window.__DEBUG_LAST_EDGES;
+          console.log('🔍 useExportImportGraph.ts: Debug nodes found:', debugNodes?.length || 0);
+          console.log('🔍 useExportImportGraph.ts: Debug edges found:', debugEdges?.length || 0);
+          
+          if (debugNodes && debugNodes.length > 0) {
+            console.log('🔍 useExportImportGraph.ts: Using debug nodes for export');
+            const dataStr = JSON.stringify({ 
+              nodes: debugNodes || [], 
+              edges: debugEdges || [], 
+              exportTime: Date.now() 
+            }, null, 2);
+            
+            const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
+            
+            const downloadLink = document.createElement('a');
+            downloadLink.setAttribute('href', dataUri);
+            downloadLink.setAttribute('download', fileName);
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+            
+            toast.success(`Graph exported as ${fileName} with ${debugNodes.length} nodes from debug state`);
+            return dataStr;
+          }
+        } catch (e) {
+          console.error('🔍 useExportImportGraph.ts: Error accessing debug state:', e);
+        }
+      }
       
       // Export current graph with all current nodes and edges
       const dataStr = JSON.stringify({ 
