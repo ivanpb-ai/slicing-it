@@ -157,14 +157,17 @@ export const arrangeNodesInBalancedTree = (
   const positionedNodes: { id: string; position: { x: number; y: number } }[] = [];
   const nodePositionMap: Record<string, { x: number; y: number }> = {};
   
-  // Pre-process to find all DNN and RRP nodes and their levels
+  // Pre-process to find all DNN, RRP, and cell-area nodes and their levels
   const allDnnNodes: string[] = [];
   const allRrpNodes: string[] = [];
+  const allCellAreaNodes: string[] = [];
   let dnnLevel = -1;
   let rrpLevel = -1;
+  let cellAreaLevel = -1;
   Object.entries(nodesByLevel).forEach(([levelStr, nodesInLevel]) => {
     const dnnNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('dnn-'));
     const rrpNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('rrp-') && !nodeId.includes('rrpmember'));
+    const cellAreaNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('cell-area-'));
     
     if (dnnNodesInLevel.length > 0) {
       allDnnNodes.push(...dnnNodesInLevel);
@@ -174,9 +177,14 @@ export const arrangeNodesInBalancedTree = (
       allRrpNodes.push(...rrpNodesInLevel);
       rrpLevel = parseInt(levelStr);
     }
+    if (cellAreaNodesInLevel.length > 0) {
+      allCellAreaNodes.push(...cellAreaNodesInLevel);
+      cellAreaLevel = parseInt(levelStr);
+    }
   });
   console.log(`🎯 Found ${allDnnNodes.length} DNN nodes at level ${dnnLevel}: ${allDnnNodes.join(', ')}`);
   console.log(`🎯 Found ${allRrpNodes.length} RRP nodes at level ${rrpLevel}: ${allRrpNodes.join(', ')}`);
+  console.log(`🎯 Found ${allCellAreaNodes.length} cell-area nodes at level ${cellAreaLevel}: ${allCellAreaNodes.join(', ')}`);
   
   // Process levels in order
   const sortedLevels = Object.keys(nodesByLevel).map(l => parseInt(l)).sort((a, b) => a - b);
@@ -290,18 +298,34 @@ export const arrangeNodesInBalancedTree = (
                     nodePositionMap[nodeId] = position;
                     console.log(`🎯 RRP ${nodeId} (${nodeIndex + 1}/${allRrpNodes.length}) unified at (${x}, ${y}) - spacing: ${rrpSpacing}px`);
                   } else {
-                    // Other siblings: spread them around parent with proper spacing
-                    const nodeIndex = siblings.indexOf(nodeId);
-                    const spacing = 350; // Default spacing
+                    const isCellAreaNode = nodeId.includes('cell-area-');
                     
-                    const totalWidth = (siblings.length - 1) * spacing;
-                    const startX = parentPos.x - totalWidth / 2;
-                    const x = startX + nodeIndex * spacing;
-                    
-                    const position = { x, y };
-                    positionedNodes.push({ id: nodeId, position });
-                    nodePositionMap[nodeId] = position;
-                    console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
+                    if (isCellAreaNode && level === cellAreaLevel) {
+                      // SPECIAL CASE: Position ALL cell-area nodes with consistent spacing for uniform edge lengths
+                      const nodeIndex = allCellAreaNodes.indexOf(nodeId);
+                      const cellAreaSpacing = 400; // Consistent spacing for cell-area nodes
+                      const totalCellAreaWidth = (allCellAreaNodes.length - 1) * cellAreaSpacing;
+                      const startX = 0 - totalCellAreaWidth / 2; // Center around X=0
+                      const x = startX + nodeIndex * cellAreaSpacing;
+                      
+                      const position = { x, y };
+                      positionedNodes.push({ id: nodeId, position });
+                      nodePositionMap[nodeId] = position;
+                      console.log(`🎯 CELL-AREA ${nodeId} (${nodeIndex + 1}/${allCellAreaNodes.length}) unified at (${x}, ${y}) - spacing: ${cellAreaSpacing}px`);
+                    } else {
+                      // Other siblings: spread them around parent with proper spacing
+                      const nodeIndex = siblings.indexOf(nodeId);
+                      const spacing = 350; // Default spacing
+                      
+                      const totalWidth = (siblings.length - 1) * spacing;
+                      const startX = parentPos.x - totalWidth / 2;
+                      const x = startX + nodeIndex * spacing;
+                      
+                      const position = { x, y };
+                      positionedNodes.push({ id: nodeId, position });
+                      nodePositionMap[nodeId] = position;
+                      console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
+                    }
                   }
                 }
               }
