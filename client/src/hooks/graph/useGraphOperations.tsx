@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Node, Edge } from '@xyflow/react';
 import { useLocalGraphPersistence } from './useLocalGraphPersistence';
 import { useCloudGraphPersistence } from './useCloudGraphPersistence';
-import { useExportImportGraph } from './useExportImportGraph';
+import { useExportImportGraph } from './useExportImportGraph.ts';
 import type { GraphData } from '@/services/storage/GraphLocalStorageService';
 
 export const useGraphOperations = (
@@ -30,7 +30,7 @@ export const useGraphOperations = (
   const { 
     exportGraph, 
     importGraph 
-  } = useExportImportGraph(nodes, edges);
+  } = useExportImportGraph(nodes, edges, setNodes, setEdges);
   
   // State for loading status
   const [isLoading, setIsLoading] = useState(false);

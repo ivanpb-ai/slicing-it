@@ -17,6 +17,8 @@ export const useExportImportGraph = (
 
   // Export the current graph as JSON
   const exportGraph = useCallback((graphName?: string): string | null => {
+    console.log('🔍 useExportImportGraph.ts: Export function called with graphName:', graphName);
+    console.log('🔍 useExportImportGraph.ts: ReactFlow instance available:', !!reactFlowInstance);
     try {
       // ALWAYS export the current graph, use graphName as the filename
       const fileName = graphName 
@@ -93,6 +95,21 @@ export const useExportImportGraph = (
           } catch (e) {
             console.error('🔍 useExportImportGraph.ts: Error accessing ReactFlow instance:', e);
           }
+        } else {
+          console.warn('🔍 useExportImportGraph.ts: ReactFlow instance is null/undefined');
+        }
+        
+        // Ultimate fallback: Check if there are any React Flow elements in DOM
+        console.log('🔍 useExportImportGraph.ts: Checking DOM for React Flow elements...');
+        try {
+          const nodeElements = document.querySelectorAll('[data-id]');
+          console.log('🔍 useExportImportGraph.ts: Found', nodeElements.length, 'DOM elements with data-id');
+          
+          if (nodeElements.length > 0) {
+            console.warn('🔍 useExportImportGraph.ts: Found visual elements but cannot access data - this indicates a state synchronization issue');
+          }
+        } catch (e) {
+          console.error('🔍 useExportImportGraph.ts: Error checking DOM elements:', e);
         }
       }
       
