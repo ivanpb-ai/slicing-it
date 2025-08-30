@@ -14,28 +14,27 @@ const FileImportInput: React.FC<FileImportInputProps> = ({ onImport, inputRef })
 const handleImportGraph = (event: React.ChangeEvent<HTMLInputElement>) => {
   const files = event.target.files;
   if (!files || files.length === 0) return;
-  onImport(files[0]);
+  
+  const file = files[0];
+  console.log(`FileImportInput: Processing file: ${file.name}, type: ${file.type}, size: ${file.size}`);
+  
+  // Validate file type
+  if (file.type !== 'application/json' && !file.name.endsWith('.json')) {
+    console.error('FileImportInput: Invalid file type:', file.type);
+    return;
+  }
+  
+  try {
+    // Call the import handler
+    onImport(file);
+    console.log('FileImportInput: Successfully called onImport handler');
+  } catch (error) {
+    console.error('FileImportInput: Error calling onImport:', error);
+  }
+  
   // Reset so the same file can be selected again
   event.target.value = '';
-
-
-    const file = files[0];
-    console.log(`FileImportInput: Processing file: ${file.name}, type: ${file.type}, size: ${file.size}`);
-    
-    // Validate file type
-    if (file.type !== 'application/json' && !file.name.endsWith('.json')) {
-      console.error('FileImportInput: Invalid file type:', file.type);
-      return;
-    }
-    
-    try {
-      // Call the import handler directly
-      onImport(file);
-      console.log('FileImportInput: Successfully called onImport handler');
-    } catch (error) {
-      console.error('FileImportInput: Error calling onImport:', error);
-    }
-  };
+};
   
   return (
     <input 
