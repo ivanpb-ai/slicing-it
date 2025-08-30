@@ -256,7 +256,7 @@ export const arrangeNodesInBalancedTree = (
                 if (isDnnNode && level === dnnLevel) {
                   // SPECIAL CASE: Position ALL DNN nodes as one unified horizontal group
                   const nodeIndex = allDnnNodes.indexOf(nodeId);
-                  const dnnSpacing = 700; // Very wide spacing for all DNN nodes
+                  const dnnSpacing = 400; // Balanced spacing for all DNN nodes - not too wide, not overlapping
                   const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
                   const startX = 0 - totalDnnWidth / 2; // Center around X=0
                   const x = startX + nodeIndex * dnnSpacing;
