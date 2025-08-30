@@ -157,17 +157,26 @@ export const arrangeNodesInBalancedTree = (
   const positionedNodes: { id: string; position: { x: number; y: number } }[] = [];
   const nodePositionMap: Record<string, { x: number; y: number }> = {};
   
-  // Pre-process to find all DNN nodes and their level
+  // Pre-process to find all DNN and RRP nodes and their levels
   const allDnnNodes: string[] = [];
+  const allRrpNodes: string[] = [];
   let dnnLevel = -1;
+  let rrpLevel = -1;
   Object.entries(nodesByLevel).forEach(([levelStr, nodesInLevel]) => {
     const dnnNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('dnn-'));
+    const rrpNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('rrp-') && !nodeId.includes('rrpmember'));
+    
     if (dnnNodesInLevel.length > 0) {
       allDnnNodes.push(...dnnNodesInLevel);
       dnnLevel = parseInt(levelStr);
     }
+    if (rrpNodesInLevel.length > 0) {
+      allRrpNodes.push(...rrpNodesInLevel);
+      rrpLevel = parseInt(levelStr);
+    }
   });
   console.log(`🎯 Found ${allDnnNodes.length} DNN nodes at level ${dnnLevel}: ${allDnnNodes.join(', ')}`);
+  console.log(`🎯 Found ${allRrpNodes.length} RRP nodes at level ${rrpLevel}: ${allRrpNodes.join(', ')}`);
   
   // Process levels in order
   const sortedLevels = Object.keys(nodesByLevel).map(l => parseInt(l)).sort((a, b) => a - b);
@@ -266,18 +275,34 @@ export const arrangeNodesInBalancedTree = (
                   nodePositionMap[nodeId] = position;
                   console.log(`🎯 DNN ${nodeId} (${nodeIndex + 1}/${allDnnNodes.length}) unified at (${x}, ${y}) - spacing: ${dnnSpacing}px`);
                 } else {
-                  // Other siblings: spread them around parent with proper spacing
-                  const nodeIndex = siblings.indexOf(nodeId);
-                  const spacing = 350; // Default spacing
+                  const isRrpNode = nodeId.includes('rrp-') && !nodeId.includes('rrpmember');
                   
-                  const totalWidth = (siblings.length - 1) * spacing;
-                  const startX = parentPos.x - totalWidth / 2;
-                  const x = startX + nodeIndex * spacing;
-                  
-                  const position = { x, y };
-                  positionedNodes.push({ id: nodeId, position });
-                  nodePositionMap[nodeId] = position;
-                  console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
+                  if (isRrpNode && level === rrpLevel) {
+                    // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
+                    const nodeIndex = allRrpNodes.indexOf(nodeId);
+                    const rrpSpacing = 400; // Consistent spacing for RRP nodes
+                    const totalRrpWidth = (allRrpNodes.length - 1) * rrpSpacing;
+                    const startX = 0 - totalRrpWidth / 2; // Center around X=0
+                    const x = startX + nodeIndex * rrpSpacing;
+                    
+                    const position = { x, y };
+                    positionedNodes.push({ id: nodeId, position });
+                    nodePositionMap[nodeId] = position;
+                    console.log(`🎯 RRP ${nodeId} (${nodeIndex + 1}/${allRrpNodes.length}) unified at (${x}, ${y}) - spacing: ${rrpSpacing}px`);
+                  } else {
+                    // Other siblings: spread them around parent with proper spacing
+                    const nodeIndex = siblings.indexOf(nodeId);
+                    const spacing = 350; // Default spacing
+                    
+                    const totalWidth = (siblings.length - 1) * spacing;
+                    const startX = parentPos.x - totalWidth / 2;
+                    const x = startX + nodeIndex * spacing;
+                    
+                    const position = { x, y };
+                    positionedNodes.push({ id: nodeId, position });
+                    nodePositionMap[nodeId] = position;
+                    console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
+                  }
                 }
               }
             }
