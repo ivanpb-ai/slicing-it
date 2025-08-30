@@ -157,6 +157,18 @@ export const arrangeNodesInBalancedTree = (
   const positionedNodes: { id: string; position: { x: number; y: number } }[] = [];
   const nodePositionMap: Record<string, { x: number; y: number }> = {};
   
+  // Pre-process to find all DNN nodes and their level
+  const allDnnNodes: string[] = [];
+  let dnnLevel = -1;
+  Object.entries(nodesByLevel).forEach(([levelStr, nodesInLevel]) => {
+    const dnnNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('dnn-'));
+    if (dnnNodesInLevel.length > 0) {
+      allDnnNodes.push(...dnnNodesInLevel);
+      dnnLevel = parseInt(levelStr);
+    }
+  });
+  console.log(`🎯 Found ${allDnnNodes.length} DNN nodes at level ${dnnLevel}: ${allDnnNodes.join(', ')}`);
+  
   // Process levels in order
   const sortedLevels = Object.keys(nodesByLevel).map(l => parseInt(l)).sort((a, b) => a - b);
   
@@ -239,25 +251,34 @@ export const arrangeNodesInBalancedTree = (
                 nodePositionMap[nodeId] = position;
                 console.log(`✓ RRP-member ${nodeId} positioned close to parent at (${x}, ${y}) - tight cluster`);
               } else {
-                // Other siblings: spread them around parent with proper spacing
-                const nodeIndex = siblings.indexOf(nodeId);
                 const isDnnNode = nodeId.includes('dnn-');
                 
-                // For DNN nodes, use much wider spacing to prevent any overlap
-                let spacing = 350; // Default spacing
-                if (isDnnNode) {
-                  spacing = 600; // Very wide spacing for all DNN nodes to ensure no overlap
-                  console.log(`🔧 DNN spacing set to ${spacing}px for ${siblings.length} siblings`);
+                if (isDnnNode && level === dnnLevel) {
+                  // SPECIAL CASE: Position ALL DNN nodes as one unified horizontal group
+                  const nodeIndex = allDnnNodes.indexOf(nodeId);
+                  const dnnSpacing = 700; // Very wide spacing for all DNN nodes
+                  const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
+                  const startX = 0 - totalDnnWidth / 2; // Center around X=0
+                  const x = startX + nodeIndex * dnnSpacing;
+                  
+                  const position = { x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`🎯 DNN ${nodeId} (${nodeIndex + 1}/${allDnnNodes.length}) unified at (${x}, ${y}) - spacing: ${dnnSpacing}px`);
+                } else {
+                  // Other siblings: spread them around parent with proper spacing
+                  const nodeIndex = siblings.indexOf(nodeId);
+                  const spacing = 350; // Default spacing
+                  
+                  const totalWidth = (siblings.length - 1) * spacing;
+                  const startX = parentPos.x - totalWidth / 2;
+                  const x = startX + nodeIndex * spacing;
+                  
+                  const position = { x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
                 }
-                
-                const totalWidth = (siblings.length - 1) * spacing;
-                const startX = parentPos.x - totalWidth / 2;
-                const x = startX + nodeIndex * spacing;
-                
-                const position = { x, y };
-                positionedNodes.push({ id: nodeId, position });
-                nodePositionMap[nodeId] = position;
-                console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
               }
             }
           } else {
