@@ -125,16 +125,32 @@ export const useExportImportGraph = (
                 const x = translateMatch ? parseFloat(translateMatch[1]) : 0;
                 const y = translateMatch ? parseFloat(translateMatch[2]) : 0;
                 
-                // Extract node type and label from DOM
+                // Extract node data from DOM attributes and content
                 const classList = Array.from(element.classList);
                 const textContent = element.textContent || '';
                 
+                // Try to determine the actual node type from DOM structure
+                let nodeType = 'customNode'; // Default to the application's custom node type
+                let nodeDataType = 'generic';
+                
+                // Look for specific node type indicators in the DOM
+                if (textContent.includes('MCC') || textContent.includes('MNC')) {
+                  nodeDataType = 'plmn';
+                } else if (textContent.includes('S-NSSAI') || textContent.includes('SST')) {
+                  nodeDataType = 's-nssai';
+                } else if (textContent.includes('RRP')) {
+                  nodeDataType = 'rrp-member';
+                } else if (textContent.includes('gNB') || textContent.includes('eNB')) {
+                  nodeDataType = 'gnb';
+                }
+                
                 extractedNodes.push({
                   id: dataId,
-                  type: classList.find(cls => cls.includes('node')) || 'default',
+                  type: nodeType, // Always use customNode
                   position: { x, y },
                   data: { 
                     label: textContent.trim() || dataId,
+                    type: nodeDataType,
                     extractedFromDOM: true 
                   }
                 });

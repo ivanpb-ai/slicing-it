@@ -236,20 +236,47 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
       }
       
-      // Set nodes first
+      // Process nodes to ensure correct type and structure
+      const processedNodes = graphData.nodes.map(node => ({
+        ...node,
+        type: 'customNode', // Force correct node type
+        position: {
+          x: typeof node.position?.x === 'number' ? node.position.x : 0,
+          y: typeof node.position?.y === 'number' ? node.position.y : 0
+        },
+        data: {
+          ...(node.data || {}),
+          label: node.data?.label || node.id || 'Unnamed Node',
+          type: node.data?.type || 'generic'
+        }
+      }));
+
+      // Process edges to ensure correct structure and styling
+      const processedEdges = (graphData.edges || []).map(edge => ({
+        ...edge,
+        id: edge.id || `e-${edge.source}-${edge.target}-${Date.now()}`,
+        source: String(edge.source),
+        target: String(edge.target),
+        type: edge.type || 'default',
+        style: edge.style || { stroke: '#2563eb', strokeWidth: 3 }
+      }));
+
+      console.log(`NodeEditor: Processed ${processedNodes.length} nodes and ${processedEdges.length} edges`);
+
+      // Set processed nodes first
       setTimeout(() => {
-        setNodes(graphData.nodes || []);
+        setNodes(processedNodes);
         
-        // Then set edges with delay to ensure nodes are rendered
+        // Then set processed edges with delay to ensure nodes are rendered
         setTimeout(() => {
-          setEdges(graphData.edges || []);
+          setEdges(processedEdges);
           
           // Fit view after loading
           setTimeout(() => {
             if (reactFlowInstance) {
               reactFlowInstance.fitView({ padding: 0.2 });
             }
-            toast.success(`Graph imported successfully`);
+            toast.success(`Graph imported successfully with ${processedNodes.length} nodes and ${processedEdges.length} edges`);
           }, 200);
         }, 100);
       }, 50);
