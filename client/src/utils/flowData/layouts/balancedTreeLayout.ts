@@ -264,20 +264,29 @@ export const arrangeNodesInBalancedTree = (
               const isRrpMember = nodeId.includes('rrpmember');
               
               if (isRrpMember) {
-                // RRP-member nodes: Position symmetrically below parent centered around parent's X position
+                // RRP-member nodes: Position symmetrically below parent centered around parent's VISUAL center
                 const nodeIndex = siblings.indexOf(nodeId);
                 const tightSpacing = 150; // Spacing between RRP-member nodes
                 
-                // Center children symmetrically around parent's X position
+                // Calculate parent's VISUAL center (position + half of node width)
+                // React Flow positions nodes by their top-left corner, so we need to offset to get visual center
+                const parentVisualCenterX = parentPos.x + nodeWidth / 2;
+                console.log(`🔍 VISUAL CENTER: Parent ${parents[0]} visual center at ${parentVisualCenterX} (position: ${parentPos.x} + nodeWidth/2: ${nodeWidth/2})`);
+                
+                // Center children symmetrically around parent's VISUAL center, then offset back to top-left positioning
                 const totalWidth = (siblings.length - 1) * tightSpacing;
-                const startX = parentPos.x - totalWidth / 2;
-                const x = startX + nodeIndex * tightSpacing;
+                const childrenCenterX = parentVisualCenterX;  // Center children around parent's visual center
+                const startX = childrenCenterX - totalWidth / 2;
+                const childX = startX + nodeIndex * tightSpacing;
+                
+                // Convert back to top-left positioning for React Flow
+                const x = childX - nodeWidth / 2;
                 
                 const position = { x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ RRP-member ${nodeId} positioned symmetrically at (${x}, ${y}) - centered under parent at ${parentPos.x}`);
-                console.log(`🔍 DEBUG: nodeIndex=${nodeIndex}, siblings=${siblings.length}, totalWidth=${totalWidth}, startX=${startX}`);
+                console.log(`✓ RRP-member ${nodeId} positioned symmetrically at (${x}, ${y}) - visual center under parent visual center at ${parentVisualCenterX}`);
+                console.log(`🔍 CALCULATION: childrenCenterX=${childrenCenterX}, startX=${startX}, childX=${childX}, final x=${x}`);
               } else {
                 const isDnnNode = nodeId.includes('dnn-');
                 
