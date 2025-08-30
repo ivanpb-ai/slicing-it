@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Node, Edge } from '@xyflow/react';
-import { toast } from '@/components/ui/use-toast';
+import { toast } from 'sonner';
 import { GraphPersistenceService } from '@/services/graphPersistenceService';
 import type { GraphData } from '@/services/storage/GraphLocalStorageService';
 
@@ -11,8 +11,28 @@ export const useExportImportGraph = (
 ) => {
   // Export graph to file
   const exportGraph = (name?: string): string | null => {
+    // Add debugging to see what nodes we have
+    console.log('🔍 Export Debug: nodes =', nodes?.length || 0, 'edges =', edges?.length || 0);
+    
     if (!nodes || nodes.length === 0) {
-      toast.warning('Cannot export an empty graph');
+      console.warn('Export: No nodes found in state');
+      // Try to get nodes from global debug state as fallback
+      try {
+        // @ts-ignore - This is for debugging only
+        const debugNodes = window.__DEBUG_NODE_EDITOR_NODES;
+        if (debugNodes && debugNodes.length > 0) {
+          console.log('Export: Found', debugNodes.length, 'nodes in global debug state');
+          const exportedData = GraphPersistenceService.exportGraphToFile(name, debugNodes, edges || []);
+          if (exportedData) {
+            toast.success('Graph exported successfully');
+            return exportedData;
+          }
+        }
+      } catch (e) {
+        console.error('Export: Failed to access debug nodes:', e);
+      }
+      
+      toast.warning('Cannot export an empty graph - no nodes found');
       return null;
     }
     
