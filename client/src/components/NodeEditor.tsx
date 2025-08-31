@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useEffect } from 'react';
-import { ReactFlowProvider, useReactFlow, Node, Edge, applyNodeChanges } from '@xyflow/react';
+import { ReactFlowProvider, useReactFlow } from '@xyflow/react';
 import { useNodeEditor } from '../hooks/useNodeEditor';
 import { useNodeLayoutManager } from '../hooks/node/useNodeLayoutManager';
 import { useLayoutOperations } from '../hooks/flow/useLayoutOperations';
@@ -15,10 +15,6 @@ import { toast } from 'sonner';
 import { EXAMPLE_GRAPH } from '../data/exampleGraph';
 
 interface NodeEditorProps {
-  nodes?: Node[];
-  edges?: Edge[];
-  setNodes?: React.Dispatch<React.SetStateAction<Node[]>>;
-  setEdges?: React.Dispatch<React.SetStateAction<Edge[]>>;
   saveGraph: () => boolean;
   loadGraph: () => boolean;
   deleteGraph: (name: string) => boolean;
@@ -28,10 +24,6 @@ interface NodeEditorProps {
 }
 
 const NodeEditorContent: React.FC<NodeEditorProps> = ({
-  nodes: propNodes,
-  edges: propEdges,
-  setNodes: propSetNodes,
-  setEdges: propSetEdges,
   saveGraph,
   loadGraph,
   deleteGraph,
@@ -43,11 +35,11 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   const reactFlowWrapper = useRef<HTMLDivElement>(null);
 
   const {
-    nodes: localNodes,
-    edges: localEdges,
-    setNodes: localSetNodes,
-    setEdges: localSetEdges,
-    onNodesChange: localOnNodesChange,
+    nodes,
+    edges,
+    setNodes,
+    setEdges,
+    onNodesChange,
     onEdgesChange,
     onConnect,
     onSelectionChange,
@@ -60,23 +52,6 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     clearCanvas,
     initializeCanvas
   } = useNodeEditor();
-
-  // Use prop state if available and not empty, otherwise fall back to local state
-  const nodes = (propNodes !== undefined && propNodes.length > 0) ? propNodes : localNodes;
-  const edges = (propEdges !== undefined && propEdges.length > 0) ? propEdges : localEdges;
-  const setNodes = propSetNodes || localSetNodes;
-  const setEdges = propSetEdges || localSetEdges;
-  
-  // CRITICAL FIX: Use correct onNodesChange handler for the active state
-  const onNodesChange = useCallback((changes: any) => {
-    if (propSetNodes && propNodes !== undefined) {
-      // Using prop state - need to update prop state
-      propSetNodes((nds) => applyNodeChanges(changes, nds));
-    } else {
-      // Using local state - delegate to local handler
-      localOnNodesChange(changes);
-    }
-  }, [propSetNodes, propNodes, localOnNodesChange]);
   
 
 
