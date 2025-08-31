@@ -67,8 +67,6 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   const setNodes = propSetNodes || localSetNodes;
   const setEdges = propSetEdges || localSetEdges;
   
-  // Debug: Log which state system is being used
-  console.log(`NodeEditor: Using ${propNodes !== undefined ? 'PROPS' : 'LOCAL'} state - nodes: ${nodes.length}, edges: ${edges.length}`);
 
   // Debug logging to track state source
   useEffect(() => {
@@ -250,9 +248,16 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
       }
       
-      // Process the nodes and edges properly before loading
-      const processedNodes = GraphNodeProcessor.prepareNodesForLoading(graphData.nodes || []);
-      const processedEdges = GraphNodeProcessor.prepareEdgesForLoading(graphData.edges || []);
+      // OPTIMIZED: Skip heavy processing during load, use nodes/edges directly
+      const processedNodes = (graphData.nodes || []).map(node => ({
+        ...node,
+        type: 'customNode',
+        position: node.position || { x: 0, y: 0 }
+      }));
+      const processedEdges = (graphData.edges || []).map(edge => ({
+        ...edge,
+        type: edge.type || 'default'
+      }));
       
       console.log(`Processed ${processedNodes.length} nodes and ${processedEdges.length} edges for loading`);
       
