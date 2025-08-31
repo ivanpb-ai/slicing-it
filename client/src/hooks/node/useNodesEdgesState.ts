@@ -1,5 +1,5 @@
 import { Node, Edge, useReactFlow, useNodesState, useEdgesState } from '@xyflow/react';
-import { useSimpleEdgeManager } from '../edge/useSimpleEdgeManager';
+import { useUnifiedEdgeManager } from '../edge/useUnifiedEdgeManager';
 
 export const useNodesEdgesState = () => {
   const reactFlowInstance = useReactFlow();
@@ -7,8 +7,8 @@ export const useNodesEdgesState = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   
-  // Use simple edge manager with handle support
-  const { onConnect, addEdgeWithHandles } = useSimpleEdgeManager(edges, setEdges);
+  // Use unified edge manager to prevent duplicate edges
+  const { onConnect, addEdgeWithHandles } = useUnifiedEdgeManager(setEdges);
 
   return {
     nodes,

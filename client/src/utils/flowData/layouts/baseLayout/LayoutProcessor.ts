@@ -43,7 +43,8 @@ export const processNodesWithLayout = (
           marginY: mergedOptions.marginY
         });
         arrangedNodes = balancedResult.nodes;
-        // TODO: Handle cleaned edges from balancedResult.cleanedEdges
+        // Store cleaned edges in global variable for use by the calling function
+        (window as any).__CLEANED_EDGES__ = balancedResult.cleanedEdges;
         break;
         
       case 'gridrows':

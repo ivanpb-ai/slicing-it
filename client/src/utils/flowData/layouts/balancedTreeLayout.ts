@@ -260,17 +260,26 @@ export const arrangeNodesInBalancedTree = (
             const isSNssaiNode = nodeId.includes('s-nssai-');
             
             if (isDnnNode && level === dnnLevel) {
-              // SPECIAL CASE: Position ALL DNN nodes as one unified horizontal group
-              const nodeIndex = allDnnNodes.indexOf(nodeId);
-              const dnnSpacing = 400; // Balanced spacing for all DNN nodes - not too wide, not overlapping
-              const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
-              const startX = 0 - totalDnnWidth / 2; // Center around X=0
-              const x = startX + nodeIndex * dnnSpacing;
-              
-              const position = { x, y };
-              positionedNodes.push({ id: nodeId, position });
-              nodePositionMap[nodeId] = position;
-              console.log(`🎯 DNN ${nodeId} (${nodeIndex + 1}/${allDnnNodes.length}) unified at (${x}, ${y}) - spacing: ${dnnSpacing}px`);
+              // Position DNN nodes close to their parent instead of unified horizontal group
+              if (siblings.length === 1) {
+                // Single DNN child: position directly under parent
+                const position = { x: parentPos.x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ Single DNN ${nodeId} centered under parent at (${parentPos.x}, ${y})`);
+              } else {
+                // Multiple DNN siblings: spread around parent with close spacing
+                const nodeIndex = siblings.indexOf(nodeId);
+                const spacing = 250; // Closer spacing to keep near parent
+                const totalWidth = (siblings.length - 1) * spacing;
+                const startX = parentPos.x - totalWidth / 2;
+                const x = startX + nodeIndex * spacing;
+                
+                const position = { x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ DNN ${nodeId} positioned near parent at (${x}, ${y})`);
+              }
             } else if (isRrpNode && level === rrpLevel) {
               // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
               const nodeIndex = allRrpNodes.indexOf(nodeId);
@@ -296,17 +305,26 @@ export const arrangeNodesInBalancedTree = (
               nodePositionMap[nodeId] = position;
               console.log(`🎯 CELL-AREA ${nodeId} (${nodeIndex + 1}/${allCellAreaNodes.length}) unified at (${x}, ${y}) - spacing: ${cellAreaSpacing}px`);
             } else if (isSNssaiNode && level === sNssaiLevel) {
-              // SPECIAL CASE: Position ALL S-NSSAI nodes with unified spacing to prevent overlaps
-              const nodeIndex = allSNssaiNodes.indexOf(nodeId);
-              const sNssaiSpacing = 400; // Consistent spacing for S-NSSAI nodes to prevent overlaps
-              const totalSNssaiWidth = (allSNssaiNodes.length - 1) * sNssaiSpacing;
-              const startX = 0 - totalSNssaiWidth / 2; // Center around X=0
-              const x = startX + nodeIndex * sNssaiSpacing;
-              
-              const position = { x, y };
-              positionedNodes.push({ id: nodeId, position });
-              nodePositionMap[nodeId] = position;
-              console.log(`🎯 S-NSSAI ${nodeId} (${nodeIndex + 1}/${allSNssaiNodes.length}) unified at (${x}, ${y}) - spacing: ${sNssaiSpacing}px`);
+              // Position S-NSSAI nodes close to their parent instead of unified horizontal group
+              if (siblings.length === 1) {
+                // Single S-NSSAI child: position directly under parent
+                const position = { x: parentPos.x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ Single S-NSSAI ${nodeId} centered under parent at (${parentPos.x}, ${y})`);
+              } else {
+                // Multiple S-NSSAI siblings: spread around parent with close spacing
+                const nodeIndex = siblings.indexOf(nodeId);
+                const spacing = 250; // Closer spacing to keep near parent
+                const totalWidth = (siblings.length - 1) * spacing;
+                const startX = parentPos.x - totalWidth / 2;
+                const x = startX + nodeIndex * spacing;
+                
+                const position = { x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ S-NSSAI ${nodeId} positioned near parent at (${x}, ${y})`);
+              }
             } else if (siblings.length === 1) {
               // Single child: directly under parent (only for nodes that don't have special handling)
               const position = { x: parentPos.x, y };
@@ -318,32 +336,29 @@ export const arrangeNodesInBalancedTree = (
               const isRrpMember = nodeId.includes('rrpmember');
               
               if (isRrpMember) {
-                // RRP-member nodes: Position symmetrically below parent centered around parent's VISUAL center
+                // RRP-member nodes: Position symmetrically BELOW parent (not at same level)
                 const nodeIndex = siblings.indexOf(nodeId);
-                const tightSpacing = 200; // Increased spacing between RRP-member nodes for better symmetry
+                const tightSpacing = 200; // Spacing between RRP-member nodes
                 
-                // Calculate parent's VISUAL center (position + half of node width)
-                // React Flow positions nodes by their top-left corner, so we need to offset to get visual center
+                // Calculate parent's VISUAL center
                 const parentVisualCenterX = parentPos.x + nodeWidth / 2;
-                console.log(`🔍 VISUAL CENTER: Parent ${parents[0]} visual center at ${parentVisualCenterX} (position: ${parentPos.x} + nodeWidth/2: ${nodeWidth/2})`);
-                console.log(`🔍 SIBLINGS DEBUG: ${siblings.join(', ')} (${siblings.length} total)`);
-                console.log(`🔍 NODE INDEX: ${nodeId} is at index ${nodeIndex} in siblings list`);
                 
-                // Center children symmetrically around parent's VISUAL center, then offset back to top-left positioning
+                // Position RRP members BELOW the parent with additional spacing
+                const rrpMemberY = parentPos.y + 180; // Position below parent, not at same level
+                
+                // Center children symmetrically around parent's VISUAL center
                 const totalWidth = (siblings.length - 1) * tightSpacing;
-                const childrenCenterX = parentVisualCenterX;  // Center children around parent's visual center
+                const childrenCenterX = parentVisualCenterX;
                 const startX = childrenCenterX - totalWidth / 2;
                 const childX = startX + nodeIndex * tightSpacing;
                 
                 // Convert back to top-left positioning for React Flow
                 const x = childX - nodeWidth / 2;
                 
-                const position = { x, y };
+                const position = { x, y: rrpMemberY };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ RRP-member ${nodeId} positioned symmetrically at (${x}, ${y}) - visual center under parent visual center at ${parentVisualCenterX}`);
-                console.log(`🔍 CALCULATION: childrenCenterX=${childrenCenterX}, startX=${startX}, childX=${childX}, final x=${x}`);
-                console.log(`🔍 VERIFICATION: Child visual centers should be: ${x + nodeWidth/2} (position ${x} + ${nodeWidth/2})`);
+                console.log(`✓ RRP-member ${nodeId} positioned BELOW parent at (${x}, ${rrpMemberY})`);
               } else {
                 // Other siblings: spread them around parent with proper spacing
                 const nodeIndex = siblings.indexOf(nodeId);
