@@ -14,7 +14,10 @@ export const useNodeLayoutManager = (
   const reactFlowInstance = useReactFlow();
 
   const arrangeNodesInLayout = useCallback(() => {
+    console.log('🎯 useNodeLayoutManager: arrangeNodesInLayout called with', nodes.length, 'nodes');
+    
     if (nodes.length === 0) {
+      console.log('🎯 useNodeLayoutManager: No nodes to arrange');
       toast.info('No nodes to arrange');
       return;
     }

@@ -19,9 +19,11 @@ export const useLayoutOperations = (
   
   // Handle arranging layout with improved error handling
   const handleArrangeLayout = useCallback(() => {
-    console.log(`useLayoutOperations: Arranging layout for ${nodes.length} nodes`);
+    console.log(`🔥 ARRANGE BUTTON CLICKED: ${nodes.length} nodes to arrange`);
+    console.log('🔥 Nodes:', nodes.map(n => ({ id: n.id, type: n.data?.type, pos: n.position })));
     
     if (nodes.length === 0) {
+      console.log('🔥 NO NODES - stopping');
       toast.info('No nodes to arrange', {
         duration: 2000,
         position: 'top-center'
@@ -40,8 +42,10 @@ export const useLayoutOperations = (
     const edgesBackup = [...edges];
     
     try {
+      console.log('🔥 CALLING arrangeNodesInLayout()...');
       // Call the arrange function
       arrangeNodesInLayout();
+      console.log('🔥 arrangeNodesInLayout() RETURNED');
       
       // Check arrangement success immediately without delay for better performance
       if (reactFlowInstance) {

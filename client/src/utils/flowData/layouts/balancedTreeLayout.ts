@@ -28,7 +28,11 @@ export const arrangeNodesInBalancedTree = (
   edges: Edge[],
   options: BalancedTreeOptions = {}
 ): { nodes: Node[], cleanedEdges: Edge[] } => {
-  if (nodes.length === 0) return { nodes, cleanedEdges: edges };
+  console.log('🌟 arrangeNodesInBalancedTree: ENTRY POINT with', nodes.length, 'nodes');
+  if (nodes.length === 0) {
+    console.log('🌟 arrangeNodesInBalancedTree: No nodes, returning early');
+    return { nodes, cleanedEdges: edges };
+  }
 
   const {
     nodeWidth = 180,
