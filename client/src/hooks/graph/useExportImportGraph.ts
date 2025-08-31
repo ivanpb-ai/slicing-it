@@ -134,26 +134,68 @@ export const useExportImportGraph = (
                 let nodeType = 'customNode'; // Default to the application's custom node type
                 let nodeDataType = 'generic';
                 
-                // Look for specific node type indicators in the DOM
-                if (textContent.includes('MCC') || textContent.includes('MNC')) {
-                  nodeDataType = 'plmn';
-                } else if (textContent.includes('S-NSSAI') || textContent.includes('SST')) {
-                  nodeDataType = 's-nssai';
-                } else if (textContent.includes('RRP')) {
-                  nodeDataType = 'rrp-member';
-                } else if (textContent.includes('gNB') || textContent.includes('eNB')) {
-                  nodeDataType = 'gnb';
+                // Look for data-node-type attribute first (most reliable)
+                const nodeTypeAttr = element.getAttribute('data-node-type');
+                if (nodeTypeAttr) {
+                  nodeDataType = nodeTypeAttr;
+                } else {
+                  // Fallback: analyze text content and ID patterns
+                  if (dataId.startsWith('network')) {
+                    nodeDataType = 'network';
+                  } else if (dataId.startsWith('cell-area')) {
+                    nodeDataType = 'cell-area';
+                  } else if (dataId.startsWith('rrp-') && !dataId.startsWith('rrpmember')) {
+                    nodeDataType = 'rrp';
+                  } else if (dataId.startsWith('rrpmember') || textContent.includes('RRP Member')) {
+                    nodeDataType = 'rrpmember';
+                  } else if (dataId.startsWith('s-nssai') || textContent.includes('S-NSSAI')) {
+                    nodeDataType = 's-nssai';
+                  } else if (dataId.startsWith('dnn')) {
+                    nodeDataType = 'dnn';
+                  } else if (dataId.startsWith('fiveqi') || textContent.includes('5QI')) {
+                    nodeDataType = 'fiveqi';
+                  }
+                }
+                
+                // Extract additional data from the DOM
+                const nodeData: any = {
+                  label: textContent.trim() || dataId,
+                  type: nodeDataType,
+                  extractedFromDOM: true
+                };
+                
+                // For specific node types, try to extract additional relevant data
+                if (nodeDataType === 'network') {
+                  // Look for network-specific data
+                  const networkMatch = dataId.match(/network-(\d+)/);
+                  if (networkMatch) {
+                    nodeData.network = parseInt(networkMatch[1]);
+                  }
+                } else if (nodeDataType === 'cell-area') {
+                  // Look for cell area number
+                  const cellMatch = dataId.match(/cell-area-(\d+)/);
+                  if (cellMatch) {
+                    nodeData['cell-area'] = parseInt(cellMatch[1]);
+                  }
+                } else if (nodeDataType === 'dnn') {
+                  // Look for DNN number
+                  const dnnMatch = dataId.match(/dnn-(\d+)/);
+                  if (dnnMatch) {
+                    nodeData.dnn = parseInt(dnnMatch[1]);
+                  }
+                } else if (nodeDataType === 'fiveqi') {
+                  // Look for 5QI number
+                  const fiveqiMatch = dataId.match(/fiveqi-(\d+)/);
+                  if (fiveqiMatch) {
+                    nodeData.fiveqi = parseInt(fiveqiMatch[1]);
+                  }
                 }
                 
                 extractedNodes.push({
                   id: dataId,
                   type: nodeType, // Always use customNode
                   position: { x, y },
-                  data: { 
-                    label: textContent.trim() || dataId,
-                    type: nodeDataType,
-                    extractedFromDOM: true 
-                  }
+                  data: nodeData
                 });
               // Skip non-node elements
               }
@@ -163,9 +205,13 @@ export const useExportImportGraph = (
             const edgeElements = document.querySelectorAll('.react-flow__edge');
             console.log('🔍 useExportImportGraph.ts: Found', edgeElements.length, 'edge elements');
             
+            const edgeIdSet = new Set(); // Track unique edge IDs to prevent duplicates
+            
             edgeElements.forEach((edgeElement: Element) => {
               const edgeId = edgeElement.getAttribute('data-id');
-              if (!edgeId || edgeId.includes('xy-edge__')) return; // Skip internal ReactFlow edges
+              if (!edgeId || edgeId.includes('xy-edge__') || edgeIdSet.has(edgeId)) return; // Skip internal ReactFlow edges and duplicates
+              
+              edgeIdSet.add(edgeId);
               
               // Try to parse the edge ID to get source and target
               // Edge IDs typically follow pattern: sourceId-targetId
