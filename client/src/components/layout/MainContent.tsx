@@ -53,6 +53,7 @@ const MainContent = ({
 
   const handleExport = () => {
     console.log('MainContent: Export triggered');
+    console.log('MainContent: Current state - nodes:', nodes.length, 'edges:', edges.length);
     const name = window.prompt('Enter a name for the exported file (optional):');
     return exportGraph(name || undefined);
   };

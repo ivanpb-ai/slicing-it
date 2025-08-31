@@ -1,0 +1,61 @@
+SaveLoadMenu.tsx:47 SaveLoadMenu: Import button clicked
+FileImportInput.tsx:52 FileImportInput: Force reset input before dialog
+FileImportInput.tsx:56 FileImportInput: Input reset completed
+MainContent.tsx:55 MainContent: Export triggered
+useExportImportGraph.ts:20 🔍 useExportImportGraph.ts: Export function called with graphName: test1exp12
+useExportImportGraph.ts:21 🔍 useExportImportGraph.ts: ReactFlow instance available: true
+useExportImportGraph.ts:28 🔍 useExportImportGraph.ts: Exporting current graph with 0 nodes and 0 edges
+useExportImportGraph.ts:31 🔍 useExportImportGraph.ts: Checking ReactFlow instance... true
+useExportImportGraph.ts:36 🔍 useExportImportGraph.ts: ReactFlow instance has 0 nodes and 0 edges
+useExportImportGraph.ts:59  🔍 useExportImportGraph.ts: ReactFlow instance has no nodes, falling to next priority
+(anonymous) @ useExportImportGraph.ts:59
+handleExport @ MainContent.tsx:57
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+useExportImportGraph.ts:69 🔍 useExportImportGraph.ts: Checking props state - nodes: 0 edges: 0
+useExportImportGraph.ts:91  🔍 useExportImportGraph.ts: No props state available, nodes: 0
+(anonymous) @ useExportImportGraph.ts:91
+handleExport @ MainContent.tsx:57
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+useExportImportGraph.ts:96 🔍 useExportImportGraph.ts: Trying to get nodes from global debug state...
+useExportImportGraph.ts:102 🔍 useExportImportGraph.ts: Debug nodes found: 0
+useExportImportGraph.ts:103 🔍 useExportImportGraph.ts: Debug edges found: 0
+useExportImportGraph.ts:132 🔍 useExportImportGraph.ts: Attempting DOM extraction...
+useExportImportGraph.ts:135 🔍 useExportImportGraph.ts: Found 116 DOM elements with data-id
+useExportImportGraph.ts:138 🔍 useExportImportGraph.ts: Extracting graph data from DOM...
+useExportImportGraph.ts:256 🔍 useExportImportGraph.ts: Found 46 edge elements
+useExportImportGraph.ts:356 🔍 useExportImportGraph.ts: Extracted 25 nodes and 21 edges from DOM
+react-dom.development.js:4161 [Violation] 'click' handler took 9041ms
+[Violation] 'click' handler took 9041ms
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again

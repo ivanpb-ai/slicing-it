@@ -27,7 +27,33 @@ export const useExportImportGraph = (
         
       console.log('🔍 useExportImportGraph.ts: Exporting current graph with', nodes?.length || 0, 'nodes and', edges?.length || 0, 'edges');
       
-      // PRIORITY 1: Try ReactFlow instance first (most complete and accurate)
+      // PRIORITY 1: Use props state first (most current and reliable)
+      console.log('🔍 useExportImportGraph.ts: Checking props state - nodes:', nodes?.length || 0, 'edges:', edges?.length || 0);
+      if (nodes && nodes.length > 0) {
+        console.log('🔍 useExportImportGraph.ts: Using props state for export (PRIORITY 1)');
+        const dataStr = JSON.stringify({ 
+          nodes: nodes || [], 
+          edges: edges || [], 
+          exportTime: Date.now(),
+          exportMethod: 'PROPS_STATE'
+        }, null, 2);
+        
+        const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
+        
+        const downloadLink = document.createElement('a');
+        downloadLink.setAttribute('href', dataUri);
+        downloadLink.setAttribute('download', fileName);
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+        
+        toast.success(`Graph exported as ${fileName} with ${nodes.length} nodes and ${edges?.length || 0} edges from props state`);
+        return dataStr;
+      } else {
+        console.warn('🔍 useExportImportGraph.ts: No props state available, nodes:', nodes?.length || 0);
+      }
+      
+      // PRIORITY 2: Try ReactFlow instance as fallback (for timing issues)
       console.log('🔍 useExportImportGraph.ts: Checking ReactFlow instance...', !!reactFlowInstance);
       if (reactFlowInstance) {
         try {
@@ -36,7 +62,7 @@ export const useExportImportGraph = (
           console.log('🔍 useExportImportGraph.ts: ReactFlow instance has', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
           
           if (flowNodes.length > 0) {
-            console.log('🔍 useExportImportGraph.ts: Using ReactFlow instance data for export (PRIORITY 1)');
+            console.log('🔍 useExportImportGraph.ts: Using ReactFlow instance data for export (PRIORITY 2)');
             const dataStr = JSON.stringify({ 
               nodes: flowNodes || [], 
               edges: flowEdges || [], 
@@ -63,32 +89,6 @@ export const useExportImportGraph = (
         }
       } else {
         console.warn('🔍 useExportImportGraph.ts: No ReactFlow instance available');
-      }
-      
-      // PRIORITY 2: Use props state if ReactFlow instance fails
-      console.log('🔍 useExportImportGraph.ts: Checking props state - nodes:', nodes?.length || 0, 'edges:', edges?.length || 0);
-      if (nodes && nodes.length > 0) {
-        console.log('🔍 useExportImportGraph.ts: Using props state for export (PRIORITY 2)');
-        const dataStr = JSON.stringify({ 
-          nodes: nodes || [], 
-          edges: edges || [], 
-          exportTime: Date.now(),
-          exportMethod: 'PROPS_STATE'
-        }, null, 2);
-        
-        const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
-        
-        const downloadLink = document.createElement('a');
-        downloadLink.setAttribute('href', dataUri);
-        downloadLink.setAttribute('download', fileName);
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-        
-        toast.success(`Graph exported as ${fileName} with ${nodes.length} nodes and ${edges?.length || 0} edges from props state`);
-        return dataStr;
-      } else {
-        console.warn('🔍 useExportImportGraph.ts: No props state available, nodes:', nodes?.length || 0);
       }
       
       // PRIORITY 3: Try debug state as fallback
