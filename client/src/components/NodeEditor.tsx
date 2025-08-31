@@ -285,20 +285,22 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       console.log(`Processed ${processedNodes.length} nodes and ${processedEdges.length} edges for loading`);
       console.log('NodeEditor: Processed nodes for load:', processedNodes.map(n => ({id: n.id, type: n.data?.type || n.type})));
       
-      // CRITICAL FIX: Wait for ReactFlow instance, then use it like arrange function
+      // CRITICAL FIX: Force ReactFlow to treat loaded nodes as completely new
+      // Clear everything first to reset ReactFlow's internal state
       if (reactFlowInstance) {
-        console.log('NodeEditor: Using ReactFlow instance for load');
-        reactFlowInstance.setNodes(processedNodes);
-        reactFlowInstance.setEdges(processedEdges);
-        
-        // Force immediate synchronization with component state
-        setNodes(processedNodes);
-        setEdges(processedEdges);
-      } else {
-        console.log('NodeEditor: ReactFlow instance not available, using component state');
-        setNodes(processedNodes);
-        setEdges(processedEdges);
+        console.log('NodeEditor: Resetting ReactFlow state for clean load');
+        reactFlowInstance.setNodes([]);
+        reactFlowInstance.setEdges([]);
       }
+      setNodes([]);
+      setEdges([]);
+      
+      // Wait a frame for complete reset, then load as new nodes
+      setTimeout(() => {
+        console.log('NodeEditor: Loading nodes as fresh entities');
+        setNodes(processedNodes);
+        setEdges(processedEdges);
+      }, 50);
       
       // Minimal delay only for DOM rendering, then fit view
       setTimeout(() => {
