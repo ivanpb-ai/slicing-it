@@ -63,8 +63,7 @@ export function positionChildNodes(
     console.log(`🌳 BALANCED TREE: Positioning children of ${parentId} with optimized spacing`);
     
     // Get parent's EXACT center X position (center of the node)
-    //const parentCenterX = parentNode.position.x + (nodeWidth / 2);
-    const parentCenterX = parentNode.position.x;
+    const parentCenterX = parentNode.position.x + (nodeWidth / 2);
 
     
     if (children.length === 1) {
@@ -73,8 +72,7 @@ export function positionChildNodes(
       if (childNode) {
         // Position child so its center aligns with parent's center
         childNode.position = { 
-          //x: parentCenterX - (nodeWidth / 2), // EXACT center alignment
-          x: parentCenterX,
+          x: parentCenterX - (nodeWidth / 2), // EXACT center alignment
           y: childY
         };
         console.log(`🌳 BALANCED TREE: Single child ${children[0]} centered under parent at:`, childNode.position);
@@ -82,28 +80,25 @@ export function positionChildNodes(
       }
     } else {
       // Multiple children: balanced distribution for equal edge lengths
-      const minSpacing = 10; // Minimal spacing between children
+      const minSpacing = 200; // Increased spacing to prevent overlap
       const totalChildrenWidth = children.length * nodeWidth;
       const totalSpacing = minSpacing * (children.length - 1);
       const totalWidth = totalChildrenWidth + totalSpacing;
       
       // Start position to EXACTLY center all children under parent
-      //const startX = parentCenterX - (totalWidth / 2);
-      const startX = parentCenterX;
+      const startX = parentCenterX - (totalWidth / 2);
 
       
       children.forEach((childId, index) => {
         const childNode = nodes.find(n => n.id === childId);
         if (!childNode) return;
         
-        // Calculate child's center position
-        // const childCenterX = startX + (index * (nodeWidth + minSpacing)) + (nodeWidth / 2);
-        const childCenterX = parentNode.position.x;
-
+        // CRITICAL FIX: Calculate proper child position with spacing
+        const childCenterX = startX + (index * (nodeWidth + minSpacing)) + (nodeWidth / 2);
+        
         // Position child based on its center
         childNode.position = { 
-          //x: childCenterX - (nodeWidth / 2), // Position based on center calculation
-          x: childCenterX, 
+          x: childCenterX - (nodeWidth / 2), // Position based on center calculation
           y: childY
         };
         
