@@ -75,7 +75,12 @@ export const useNodeLayoutManager = (
             data: { ...node.data } // Force data object recreation
           }));
           
-          setNodes(forceUpdatedNodes);
+          // CRITICAL FIX: Use ReactFlow instance to update nodes to maintain interactivity
+          if (reactFlowInstance) {
+            reactFlowInstance.setNodes(forceUpdatedNodes);
+          } else {
+            setNodes(forceUpdatedNodes);
+          }
           
           // Update edges with cleaned edges if setEdges is available
           if (setEdges && balancedResult.cleanedEdges) {
@@ -85,7 +90,12 @@ export const useNodeLayoutManager = (
             );
             
             console.log(`🧹 Updating edges: ${edges.length} -> ${uniqueEdges.length} (filtered duplicates)`);
-            setEdges(uniqueEdges);
+            // CRITICAL FIX: Use ReactFlow instance to update edges to maintain interactivity  
+            if (reactFlowInstance) {
+              reactFlowInstance.setEdges(uniqueEdges);
+            } else {
+              setEdges(uniqueEdges);
+            }
           }
           
           // Event dispatch removed - was causing unresponsiveness
@@ -102,7 +112,12 @@ export const useNodeLayoutManager = (
           );
           
           console.log(`🧹 Regular layout - filtered duplicates: ${arrangedNodes.length} -> ${uniqueNodes.length} nodes`);
-          setNodes(uniqueNodes);
+          // CRITICAL FIX: Use ReactFlow instance for regular layouts too
+          if (reactFlowInstance) {
+            reactFlowInstance.setNodes(uniqueNodes);
+          } else {
+            setNodes(uniqueNodes);
+          }
           return uniqueNodes;
         }
       }
@@ -125,7 +140,12 @@ export const useNodeLayoutManager = (
           marginX: 400,
           marginY: 100
         });
-        setNodes(fallbackNodes);
+        // CRITICAL FIX: Use ReactFlow instance for fallback too
+        if (reactFlowInstance) {
+          reactFlowInstance.setNodes(fallbackNodes);
+        } else {
+          setNodes(fallbackNodes);
+        }
         toast.warning('Using fallback grid layout');
       } catch (e) {
         console.error('Failed to apply fallback layout');
