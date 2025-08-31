@@ -305,6 +305,28 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
           reactFlowInstance.fitView({ padding: 0.2 });
         }
+        
+        // CRITICAL FIX: Force ReactFlow to initialize node interactivity
+        // Trigger a position change for each node to register them as interactive
+        setTimeout(() => {
+          if (reactFlowInstance) {
+            const currentNodes = reactFlowInstance.getNodes();
+            const refreshedNodes = currentNodes.map(node => ({
+              ...node,
+              position: { 
+                x: node.position.x + 0.01, // Tiny position change
+                y: node.position.y + 0.01 
+              }
+            }));
+            reactFlowInstance.setNodes(refreshedNodes);
+            
+            // Immediately restore exact positions
+            setTimeout(() => {
+              reactFlowInstance.setNodes(currentNodes);
+            }, 10);
+          }
+        }, 100);
+        
         toast.success(`Graph "${name}" loaded successfully`);
       }, 200);
       
