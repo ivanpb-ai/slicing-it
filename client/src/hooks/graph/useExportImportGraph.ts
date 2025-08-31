@@ -26,10 +26,64 @@ export const useExportImportGraph = (
         : `graph_export_${Date.now()}.json`;
         
       console.log('🔍 useExportImportGraph.ts: Exporting current graph with', nodes?.length || 0, 'nodes and', edges?.length || 0, 'edges');
-      console.log('🔍 useExportImportGraph.ts: Nodes state:', nodes);
-      console.log('🔍 useExportImportGraph.ts: Edges state:', edges);
       
-      // Try to get nodes from global debug state if current state is empty
+      // PRIORITY 1: Try ReactFlow instance first (most complete and accurate)
+      if (reactFlowInstance) {
+        try {
+          const flowNodes = reactFlowInstance.getNodes();
+          const flowEdges = reactFlowInstance.getEdges();
+          console.log('🔍 useExportImportGraph.ts: ReactFlow instance has', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
+          
+          if (flowNodes.length > 0) {
+            console.log('🔍 useExportImportGraph.ts: Using ReactFlow instance data for export (PRIORITY 1)');
+            const dataStr = JSON.stringify({ 
+              nodes: flowNodes || [], 
+              edges: flowEdges || [], 
+              exportTime: Date.now(),
+              exportMethod: 'REACTFLOW_INSTANCE'
+            }, null, 2);
+            
+            const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
+            
+            const downloadLink = document.createElement('a');
+            downloadLink.setAttribute('href', dataUri);
+            downloadLink.setAttribute('download', fileName);
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+            
+            toast.success(`Graph exported as ${fileName} with ${flowNodes.length} nodes and ${flowEdges.length} edges from ReactFlow instance`);
+            return dataStr;
+          }
+        } catch (e) {
+          console.error('🔍 useExportImportGraph.ts: Error accessing ReactFlow instance:', e);
+        }
+      }
+      
+      // PRIORITY 2: Use props state if ReactFlow instance fails
+      if (nodes && nodes.length > 0) {
+        console.log('🔍 useExportImportGraph.ts: Using props state for export (PRIORITY 2)');
+        const dataStr = JSON.stringify({ 
+          nodes: nodes || [], 
+          edges: edges || [], 
+          exportTime: Date.now(),
+          exportMethod: 'PROPS_STATE'
+        }, null, 2);
+        
+        const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
+        
+        const downloadLink = document.createElement('a');
+        downloadLink.setAttribute('href', dataUri);
+        downloadLink.setAttribute('download', fileName);
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+        
+        toast.success(`Graph exported as ${fileName} with ${nodes.length} nodes and ${edges?.length || 0} edges from props state`);
+        return dataStr;
+      }
+      
+      // PRIORITY 3: Try debug state as fallback
       if ((!nodes || nodes.length === 0)) {
         console.log('🔍 useExportImportGraph.ts: Trying to get nodes from global debug state...');
         try {
@@ -64,43 +118,7 @@ export const useExportImportGraph = (
           console.error('🔍 useExportImportGraph.ts: Error accessing debug state:', e);
         }
         
-        // Last resort: Try to get data directly from ReactFlow instance
-        console.log('🔍 useExportImportGraph.ts: Trying to get data from ReactFlow instance...');
-        if (reactFlowInstance) {
-          try {
-            const flowNodes = reactFlowInstance.getNodes();
-            const flowEdges = reactFlowInstance.getEdges();
-            console.log('🔍 useExportImportGraph.ts: ReactFlow instance has', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
-            
-            if (flowNodes.length > 0 && flowEdges.length > 0) {
-              console.log('🔍 useExportImportGraph.ts: Using ReactFlow instance data for export');
-              const dataStr = JSON.stringify({ 
-                nodes: flowNodes || [], 
-                edges: flowEdges || [], 
-                exportTime: Date.now(),
-                exportMethod: 'REACTFLOW_INSTANCE'
-              }, null, 2);
-              
-              const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
-              
-              const downloadLink = document.createElement('a');
-              downloadLink.setAttribute('href', dataUri);
-              downloadLink.setAttribute('download', fileName);
-              document.body.appendChild(downloadLink);
-              downloadLink.click();
-              document.body.removeChild(downloadLink);
-              
-              toast.success(`Graph exported as ${fileName} with ${flowNodes.length} nodes and ${flowEdges.length} edges from ReactFlow instance`);
-              return dataStr;
-            } else if (flowNodes.length > 0) {
-              console.log('🔍 useExportImportGraph.ts: ReactFlow has nodes but no edges, falling back to DOM extraction for edges');
-            }
-          } catch (e) {
-            console.error('🔍 useExportImportGraph.ts: Error accessing ReactFlow instance:', e);
-          }
-        } else {
-          console.warn('🔍 useExportImportGraph.ts: ReactFlow instance is null/undefined');
-        }
+        // NOTE: ReactFlow instance already tried as PRIORITY 1 above
         
         // Ultimate fallback: Extract graph data directly from DOM elements
         console.log('🔍 useExportImportGraph.ts: Attempting DOM extraction...');
@@ -487,19 +505,19 @@ export const useExportImportGraph = (
               };
               
               // Get nodes by type
-              const rrpMembers = processedNodes.filter(n => n.data.type === 'rrpmember');
-              const sNssaiNodes = processedNodes.filter(n => n.data.type === 's-nssai');
-              const dnnNodes = processedNodes.filter(n => n.data.type === 'dnn');
-              const fiveqiNodes = processedNodes.filter(n => n.data.type === 'fiveqi');
+              const rrpMembers = processedNodes.filter((n: Node) => n.data.type === 'rrpmember');
+              const sNssaiNodes = processedNodes.filter((n: Node) => n.data.type === 's-nssai');
+              const dnnNodes = processedNodes.filter((n: Node) => n.data.type === 'dnn');
+              const fiveqiNodes = processedNodes.filter((n: Node) => n.data.type === 'fiveqi');
               
               // Connect RRP Members to S-NSSAI nodes (if missing)
-              rrpMembers.forEach(rrpMember => {
+              rrpMembers.forEach((rrpMember: Node) => {
                 const hasConnection = allEdges.some(edge => 
-                  edge.source === rrpMember.id && sNssaiNodes.some(s => s.id === edge.target)
+                  edge.source === rrpMember.id && sNssaiNodes.some((s: Node) => s.id === edge.target)
                 );
                 if (!hasConnection && sNssaiNodes.length > 0) {
                   // Connect to appropriate S-NSSAI based on position or pattern
-                  const targetSNssai = sNssaiNodes.find(s => 
+                  const targetSNssai = sNssaiNodes.find((s: Node) => 
                     Math.abs(s.position.x - rrpMember.position.x) < 200
                   ) || sNssaiNodes[0];
                   addEdgeIfMissing(rrpMember.id, targetSNssai.id);
@@ -507,34 +525,34 @@ export const useExportImportGraph = (
               });
               
               // Connect S-NSSAI nodes to DNN nodes (if missing)
-              sNssaiNodes.forEach(sNssai => {
+              sNssaiNodes.forEach((sNssai: Node) => {
                 const hasConnection = allEdges.some(edge => 
-                  edge.source === sNssai.id && dnnNodes.some(d => d.id === edge.target)
+                  edge.source === sNssai.id && dnnNodes.some((d: Node) => d.id === edge.target)
                 );
                 if (!hasConnection && dnnNodes.length > 0) {
                   // Connect to nearby DNN nodes
-                  const nearbyDnns = dnnNodes.filter(d => 
+                  const nearbyDnns = dnnNodes.filter((d: Node) => 
                     Math.abs(d.position.x - sNssai.position.x) < 400
                   );
                   const targetDnns = nearbyDnns.length > 0 ? nearbyDnns : [dnnNodes[0]];
-                  targetDnns.forEach(dnn => {
+                  targetDnns.forEach((dnn: Node) => {
                     addEdgeIfMissing(sNssai.id, dnn.id);
                   });
                 }
               });
               
               // Connect DNN nodes to 5QI nodes (if missing)
-              dnnNodes.forEach(dnn => {
+              dnnNodes.forEach((dnn: Node) => {
                 const hasConnection = allEdges.some(edge => 
-                  edge.source === dnn.id && fiveqiNodes.some(f => f.id === edge.target)
+                  edge.source === dnn.id && fiveqiNodes.some((f: Node) => f.id === edge.target)
                 );
                 if (!hasConnection && fiveqiNodes.length > 0) {
                   // Connect to nearby 5QI nodes
-                  const nearby5Qis = fiveqiNodes.filter(f => 
+                  const nearby5Qis = fiveqiNodes.filter((f: Node) => 
                     Math.abs(f.position.x - dnn.position.x) < 300
                   );
                   const target5Qis = nearby5Qis.length > 0 ? nearby5Qis : [fiveqiNodes[0]];
-                  target5Qis.forEach(fiveqi => {
+                  target5Qis.forEach((fiveqi: Node) => {
                     addEdgeIfMissing(dnn.id, fiveqi.id);
                   });
                 }
