@@ -250,6 +250,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       }
       
       console.log(`Loading graph "${name}" with ${graphData.nodes.length} nodes and ${graphData.edges?.length || 0} edges`);
+      console.log('NodeEditor: Loaded nodes:', graphData.nodes.map(n => ({id: n.id, type: n.data?.type || n.type})));
       
       // CRITICAL FIX: Clear existing state using ReactFlow instance
       if (reactFlowInstance) {
@@ -277,6 +278,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       }));
       
       console.log(`Processed ${processedNodes.length} nodes and ${processedEdges.length} edges for loading`);
+      console.log('NodeEditor: Processed nodes for load:', processedNodes.map(n => ({id: n.id, type: n.data?.type || n.type})));
       
       // CRITICAL FIX: Use ReactFlow instance to maintain interactivity after load
       if (reactFlowInstance) {
@@ -357,6 +359,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     }
     
     console.log(`NodeEditor: Attempting to save ${currentNodes.length} nodes and ${currentEdges.length} edges`);
+    console.log('NodeEditor: Nodes being saved:', currentNodes.map(n => ({id: n.id, type: n.data?.type || n.type})));
     
     // Direct save using the actual graph data
     try {
