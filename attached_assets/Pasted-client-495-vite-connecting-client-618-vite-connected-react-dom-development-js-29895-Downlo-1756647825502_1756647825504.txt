@@ -1,0 +1,2645 @@
+client:495 [vite] connecting...
+client:618 [vite] connected.
+react-dom.development.js:29895 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+react-dom.development.js:86  Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
+
+Check the render method of `Primitive.button.SlotClone`.
+    at DropdownMenu (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=19dd7dd3:2183:5)
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:2005:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:190:13
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Popper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:1997:11)
+    at Tooltip (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:98:5)
+    at div
+    at FiveQINodeButton (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/buttons/FiveQINodeButton.tsx:35:9)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at div
+    at NodeButtonsGrid (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/NodeButtonsGrid.tsx:30:28)
+    at div
+    at ToolbarContainer (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/ToolbarContainer.tsx:25:3)
+    at Toolbar
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at EditorPanels (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/EditorPanels.tsx:21:3)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx:31:10)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+validateFunctionComponentInDev @ react-dom.development.js:20222
+mountIndeterminateComponent @ react-dom.development.js:20189
+beginWork @ react-dom.development.js:21626
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performConcurrentWorkOnRoot @ react-dom.development.js:25777
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+FlowInstance.tsx:83 FlowInstance: Rendering with 0 nodes, 0 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 0, edges: 0
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
+FlowInstance.tsx:83 FlowInstance: Rendering with 0 nodes, 0 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 0, edges: 0
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
+FlowInstance.tsx:149 FlowInstance: ReactFlow initialized
+FlowInstance.tsx:157 FlowInstance: Registered ReactFlow instance globally
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
+content.js:361 Background Response (check_popup_status) {data: 'enabled'}
+content.js:379 Background Response (check_my_tracking)
+content.js:238 Background Response (checkHasCashback)
+NodeButton.tsx:34 NodeButton: Started dragging network button
+NodeButton.tsx:42 NodeButton: Set drag data to: network
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "network" at position: {x: 592, y: -40.333343505859375}
+useDragDataParser.ts:3 parseDragData: Processing drag data: network
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: network
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 9
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 9
+useParentNodeDetection.ts:47 detectParentNodeFromDOM: No parent node found in DOM elements
+useParentNodeDetection.ts:55 detectParentNodeFromPosition: Checking position: {x: 592, y: -40.333343505859375}
+useParentNodeDetection.ts:56 detectParentNodeFromPosition: Available nodes: []
+useParentNodeDetection.ts:92 detectParentNodeFromPosition: No parent node found at position
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: none
+useNodeDragDrop.ts:160 useNodeDragDrop: Creating standalone network node at safe position: {x: 592, y: -40.333343505859375}
+useNodeEditor.ts:83 useNodeEditor: Adding network node at position: {x: 592, y: -40.333343505859375}
+FlowInstance.tsx:83 FlowInstance: Rendering with 1 nodes, 0 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756647736178-8873', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 1, edges: 0
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756647736178-8873, type=network, nodeNumber=8873
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756647736178-8873, type=network, nodeNumber=8873
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 1, edges: 0
+NodeButton.tsx:34 NodeButton: Started dragging cell-area button
+NodeButton.tsx:42 NodeButton: Set drag data to: cell-area
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "cell-area" at position: {x: 663, y: -61.333343505859375}
+useDragDataParser.ts:3 parseDragData: Processing drag data: cell-area
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: cell-area
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+nodeCollisionDetection.ts:41 Desired position: {"x":663,"y":-61.333343505859375}
+nodeCollisionDetection.ts:66 Position: 723
+ Position: -61.333343505859375
+ Position: 663
+ Position: -1.333343505859375
+ Position: 603
+ Position: -61.33334350585937
+ Position: 663
+ Position: -121.33334350585938
+ Position: 723
+ Position: -61.33334350585939
+ Position: 663
+ Position: -1.333343505859375
+ Position: 603
+ Position: -61.333343505859354
+ Position: 663
+ Position: -121.33334350585938
+ Position: 783
+ Position: -61.33334350585943
+ Position: 663.0000000000001
+ Position: 58.666656494140625
+ Position: 543
+ Position: -61.333343505859304
+ Position: 662.9999999999997
+ Position: -181.33334350585938
+ Position: 783
+ Position: -61.33334350585946
+ Position: 662.9999999999999
+ Position: 58.666656494140625
+ Position: 543
+ Position: -61.333343505859276
+ Position: 662.9999999999997
+ Position: -181.33334350585938
+ Position: 843
+ Position: -61.33334350585955
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 843, y: -61.33334350585955}
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: network-1756647736178-8873
+ useNodeDragDrop: Detected parent: network-1756647736178-8873
+ Validating relationship: network -> cell-area
+ Valid relationship confirmed: network -> cell-area
+ useNodeDragDrop: Creating child cell-area node under parent network-1756647736178-8873
+ useNodeDragDrop: Parent node found: network
+ Desired position: {"x":612,"y":59.666656494140625}
+ Position: 672
+nodeCollisionDetection.ts:67 Position: 59.666656494140625
+nodeCollisionDetection.ts:66 Position: 612
+nodeCollisionDetection.ts:67 Position: 119.66665649414062
+nodeCollisionDetection.ts:66 Position: 552
+nodeCollisionDetection.ts:67 Position: 59.66665649414063
+nodeCollisionDetection.ts:66 Position: 612
+nodeCollisionDetection.ts:67 Position: -0.333343505859375
+nodeCollisionDetection.ts:66 Position: 672
+nodeCollisionDetection.ts:67 Position: 59.66665649414061
+nodeCollisionDetection.ts:66 Position: 612
+nodeCollisionDetection.ts:67 Position: 119.66665649414062
+nodeCollisionDetection.ts:66 Position: 552
+nodeCollisionDetection.ts:67 Position: 59.666656494140646
+nodeCollisionDetection.ts:66 Position: 612
+nodeCollisionDetection.ts:67 Position: -0.333343505859375
+nodeCollisionDetection.ts:66 Position: 732
+nodeCollisionDetection.ts:67 Position: 59.66665649414057
+nodeCollisionDetection.ts:66 Position: 612.0000000000001
+nodeCollisionDetection.ts:67 Position: 179.66665649414062
+nodeCollisionDetection.ts:66 Position: 492
+nodeCollisionDetection.ts:67 Position: 59.666656494140696
+nodeCollisionDetection.ts:66 Position: 611.9999999999997
+nodeCollisionDetection.ts:67 Position: -60.333343505859375
+nodeCollisionDetection.ts:66 Position: 732
+nodeCollisionDetection.ts:67 Position: 59.66665649414054
+nodeCollisionDetection.ts:66 Position: 611.9999999999999
+nodeCollisionDetection.ts:67 Position: 179.66665649414062
+nodeCollisionDetection.ts:66 Position: 492
+nodeCollisionDetection.ts:67 Position: 59.666656494140724
+nodeCollisionDetection.ts:66 Position: 611.9999999999997
+nodeCollisionDetection.ts:67 Position: -60.333343505859375
+nodeCollisionDetection.ts:66 Position: 792
+nodeCollisionDetection.ts:67 Position: 59.66665649414045
+nodeCollisionDetection.ts:66 Position: 611.9999999999999
+nodeCollisionDetection.ts:67 Position: 239.66665649414062
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 611.9999999999999, y: 239.66665649414062}
+idCounters.ts:26 Generated new Cell Area ID: 1
+useSimpleChildNodeCreation.ts:29 Creating child cell-area with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child cell-area node with ID: cell-area-1 under parent: network-1756647736178-8873
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 0 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756647736178-8873', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756647736178-8873 to cell-area-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-network-1756647736178-8873-cell-area-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1756647736178-8873-cell-area-1', source: 'network-1756647736178-8873', target: 'cell-area-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 1
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756647736178-8873 to cell-area-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-network-1756647736178-8873-cell-area-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1756647736178-8873-cell-area-1', source: 'network-1756647736178-8873', target: 'cell-area-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge network-1756647736178-8873->cell-area-1 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge network-1756647736178-8873->cell-area-1 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 1 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756647736178-8873', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 1
+NodeButton.tsx:34 NodeButton: Started dragging cell-area button
+NodeButton.tsx:42 NodeButton: Set drag data to: cell-area
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "cell-area" at position: {x: 689.038359314533, y: -124.10336867253652}
+ parseDragData: Processing drag data: cell-area
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: cell-area
+ useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+ Desired position: {"x":689.038359314533,"y":-124.10336867253652}
+ Position: 749.038359314533
+ Position: -124.10336867253652
+ Position: 689.038359314533
+ Position: -64.10336867253652
+ Position: 629.038359314533
+ Position: -124.1033686725365
+ Position: 689.038359314533
+ Position: -184.10336867253653
+ Position: 749.038359314533
+ Position: -124.10336867253653
+ Position: 689.038359314533
+ Position: -64.10336867253652
+ Position: 629.038359314533
+ Position: -124.10336867253649
+ Position: 689.038359314533
+ Position: -184.10336867253653
+ Position: 809.038359314533
+ Position: -124.10336867253658
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 809.038359314533, y: -124.10336867253658}
+ useNodeDragDrop: Elements at drop point: 13
+ detectParentNodeFromDOM: Checking elements at point: 13
+ detectParentNodeFromDOM: Found parent node container with ID: network-1756647736178-8873
+ useNodeDragDrop: Detected parent: network-1756647736178-8873
+ Validating relationship: network -> cell-area
+ Valid relationship confirmed: network -> cell-area
+ useNodeDragDrop: Creating child cell-area node under parent network-1756647736178-8873
+ useNodeDragDrop: Parent node found: network
+ Desired position: {"x":612,"y":59.666656494140625}
+ Position: 672
+ Position: 59.666656494140625
+ Position: 612
+ Position: 119.66665649414062
+ Position: 552
+ Position: 59.66665649414063
+ Position: 612
+ Position: -0.333343505859375
+ Position: 672
+ Position: 59.66665649414061
+ Position: 612
+ Position: 119.66665649414062
+ Position: 552
+ Position: 59.666656494140646
+nodeCollisionDetection.ts:66 Position: 612
+nodeCollisionDetection.ts:67 Position: -0.333343505859375
+nodeCollisionDetection.ts:66 Position: 732
+nodeCollisionDetection.ts:67 Position: 59.66665649414057
+nodeCollisionDetection.ts:66 Position: 612.0000000000001
+nodeCollisionDetection.ts:67 Position: 179.66665649414062
+nodeCollisionDetection.ts:66 Position: 492
+nodeCollisionDetection.ts:67 Position: 59.666656494140696
+nodeCollisionDetection.ts:66 Position: 611.9999999999997
+nodeCollisionDetection.ts:67 Position: -60.333343505859375
+nodeCollisionDetection.ts:66 Position: 732
+nodeCollisionDetection.ts:67 Position: 59.66665649414054
+nodeCollisionDetection.ts:66 Position: 611.9999999999999
+nodeCollisionDetection.ts:67 Position: 179.66665649414062
+nodeCollisionDetection.ts:66 Position: 492
+nodeCollisionDetection.ts:67 Position: 59.666656494140724
+nodeCollisionDetection.ts:66 Position: 611.9999999999997
+nodeCollisionDetection.ts:67 Position: -60.333343505859375
+nodeCollisionDetection.ts:66 Position: 792
+nodeCollisionDetection.ts:67 Position: 59.66665649414045
+nodeCollisionDetection.ts:66 Position: 611.9999999999999
+nodeCollisionDetection.ts:67 Position: 239.66665649414062
+nodeCollisionDetection.ts:66 Position: 432
+nodeCollisionDetection.ts:67 Position: 59.666656494140824
+nodeCollisionDetection.ts:66 Position: 611.9999999999994
+nodeCollisionDetection.ts:67 Position: -120.33334350585938
+nodeCollisionDetection.ts:66 Position: 792
+nodeCollisionDetection.ts:67 Position: 59.666656494140405
+nodeCollisionDetection.ts:66 Position: 611.9999999999999
+nodeCollisionDetection.ts:67 Position: 239.66665649414062
+nodeCollisionDetection.ts:66 Position: 432
+nodeCollisionDetection.ts:67 Position: 59.666656494141506
+nodeCollisionDetection.ts:66 Position: 611.9999999999994
+nodeCollisionDetection.ts:67 Position: -120.33334350585938
+nodeCollisionDetection.ts:66 Position: 852
+nodeCollisionDetection.ts:67 Position: 59.66665649414027
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 852, y: 59.66665649414027}
+idCounters.ts:26 Generated new Cell Area ID: 2
+useSimpleChildNodeCreation.ts:29 Creating child cell-area with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child cell-area node with ID: cell-area-2 under parent: network-1756647736178-8873
+FlowInstance.tsx:83 FlowInstance: Rendering with 3 nodes, 1 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756647736178-8873', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 3, edges: 1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 3, edges: 1
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756647736178-8873 to cell-area-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-network-1756647736178-8873-cell-area-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1756647736178-8873-cell-area-2', source: 'network-1756647736178-8873', target: 'cell-area-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 2
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756647736178-8873 to cell-area-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-network-1756647736178-8873-cell-area-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1756647736178-8873-cell-area-2', source: 'network-1756647736178-8873', target: 'cell-area-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge network-1756647736178-8873->cell-area-2 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge network-1756647736178-8873->cell-area-2 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 3 nodes, 2 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756647736178-8873', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+NodeButton.tsx:34 NodeButton: Started dragging rrp button
+NodeButton.tsx:42 NodeButton: Set drag data to: rrp
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "rrp" at position: {x: 767.8556207730737, y: 159.33562926490794}
+ parseDragData: Processing drag data: rrp
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: rrp
+ useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+ Desired position: {"x":767.8556207730737,"y":159.33562926490794}
+ Position: 827.8556207730737
+ Position: 159.33562926490794
+ Position: 767.8556207730737
+ Position: 219.33562926490794
+ Position: 707.8556207730737
+ Position: 159.33562926490794
+ Position: 767.8556207730737
+ Position: 99.33562926490794
+ Position: 827.8556207730737
+ Position: 159.3356292649079
+ Position: 767.8556207730737
+ Position: 219.33562926490794
+ Position: 707.8556207730737
+ Position: 159.33562926490796
+ Position: 767.8556207730737
+ Position: 99.33562926490794
+ Position: 887.8556207730737
+ Position: 159.33562926490788
+ Position: 767.8556207730738
+ Position: 279.33562926490794
+ Position: 647.8556207730737
+ Position: 159.33562926490802
+ Position: 767.8556207730734
+ Position: 39.335629264907936
+ Position: 887.8556207730737
+ Position: 159.33562926490785
+ Position: 767.8556207730736
+ Position: 279.33562926490794
+ Position: 647.8556207730737
+ Position: 159.33562926490805
+ Position: 767.8556207730734
+ Position: 39.335629264907936
+ Position: 947.8556207730737
+ Position: 159.33562926490777
+ Position: 767.8556207730736
+ Position: 339.33562926490794
+ Position: 587.8556207730737
+ Position: 159.33562926490814
+ Position: 767.8556207730732
+ Position: -20.664370735092064
+ Position: 947.8556207730737
+ Position: 159.3356292649077
+ Position: 767.8556207730736
+ Position: 339.33562926490794
+ Position: 587.8556207730737
+ Position: 159.33562926490882
+ Position: 767.8556207730732
+ Position: -20.664370735092064
+ Position: 1007.8556207730737
+ Position: 159.3356292649076
+ Position: 767.8556207730736
+ Position: 399.33562926490794
+ Position: 527.8556207730737
+ Position: 159.33562926490745
+ Position: 767.8556207730729
+ Position: -80.66437073509206
+ Position: 1007.8556207730737
+ Position: 159.33562926490754
+ Position: 767.8556207730737
+ Position: 399.33562926490794
+ Position: 527.8556207730737
+ Position: 159.33562926490924
+ Position: 767.8556207730728
+ Position: -80.66437073509206
+ Position: 1067.8556207730737
+ Position: 159.33562926490734
+ Position: 767.8556207730738
+ Position: 459.33562926490794
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 767.8556207730738, y: 459.33562926490794}
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: cell-area-1
+ useNodeDragDrop: Detected parent: cell-area-1
+ Validating relationship: cell-area -> rrp
+ Valid relationship confirmed: cell-area -> rrp
+ useNodeDragDrop: Creating child rrp node under parent cell-area-1
+ useNodeDragDrop: Parent node found: cell-area
+nodeCollisionDetection.ts:41 Desired position: {"x":631.9999999999999,"y":339.6666564941406}
+nodeCollisionDetection.ts:66 Position: 691.9999999999999
+nodeCollisionDetection.ts:67 Position: 339.6666564941406
+nodeCollisionDetection.ts:66 Position: 631.9999999999999
+nodeCollisionDetection.ts:67 Position: 399.6666564941406
+nodeCollisionDetection.ts:66 Position: 571.9999999999999
+nodeCollisionDetection.ts:67 Position: 339.6666564941406
+nodeCollisionDetection.ts:66 Position: 631.9999999999999
+nodeCollisionDetection.ts:67 Position: 279.6666564941406
+nodeCollisionDetection.ts:66 Position: 691.9999999999999
+nodeCollisionDetection.ts:67 Position: 339.6666564941406
+nodeCollisionDetection.ts:66 Position: 631.9999999999999
+nodeCollisionDetection.ts:67 Position: 399.6666564941406
+nodeCollisionDetection.ts:66 Position: 571.9999999999999
+nodeCollisionDetection.ts:67 Position: 339.6666564941406
+nodeCollisionDetection.ts:66 Position: 631.9999999999999
+nodeCollisionDetection.ts:67 Position: 279.6666564941406
+nodeCollisionDetection.ts:66 Position: 751.9999999999999
+nodeCollisionDetection.ts:67 Position: 339.66665649414057
+nodeCollisionDetection.ts:66 Position: 632
+nodeCollisionDetection.ts:67 Position: 459.6666564941406
+nodeCollisionDetection.ts:66 Position: 511.9999999999999
+nodeCollisionDetection.ts:67 Position: 339.6666564941407
+nodeCollisionDetection.ts:66 Position: 631.9999999999995
+nodeCollisionDetection.ts:67 Position: 219.66665649414062
+nodeCollisionDetection.ts:66 Position: 751.9999999999999
+nodeCollisionDetection.ts:67 Position: 339.6666564941405
+nodeCollisionDetection.ts:66 Position: 631.9999999999998
+nodeCollisionDetection.ts:67 Position: 459.6666564941406
+nodeCollisionDetection.ts:66 Position: 511.9999999999999
+nodeCollisionDetection.ts:67 Position: 339.66665649414074
+nodeCollisionDetection.ts:66 Position: 631.9999999999995
+nodeCollisionDetection.ts:67 Position: 219.66665649414062
+nodeCollisionDetection.ts:66 Position: 811.9999999999999
+nodeCollisionDetection.ts:67 Position: 339.66665649414045
+nodeCollisionDetection.ts:66 Position: 631.9999999999998
+nodeCollisionDetection.ts:67 Position: 519.6666564941406
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 631.9999999999998, y: 519.6666564941406}
+idCounters.ts:34 Generated new RRP ID: 1
+useSimpleChildNodeCreation.ts:54 Creating RRP with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child rrp node with ID: rrp-1 under parent: cell-area-1
+FlowInstance.tsx:83 FlowInstance: Rendering with 4 nodes, 2 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 4, edges: 2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 4, edges: 2
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-cell-area-1-rrp-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-cell-area-1-rrp-1', source: 'cell-area-1', target: 'rrp-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 3
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-cell-area-1-rrp-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-cell-area-1-rrp-1', source: 'cell-area-1', target: 'rrp-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge cell-area-1->rrp-1 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge cell-area-1->rrp-1 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 4 nodes, 3 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 4, edges: 3
+NodeButton.tsx:34 NodeButton: Started dragging rrp button
+NodeButton.tsx:42 NodeButton: Set drag data to: rrp
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "rrp" at position: {x: 961.8673412864047, y: 16.85827201293051}
+useDragDataParser.ts:3 parseDragData: Processing drag data: rrp
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: rrp
+ useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+ Desired position: {"x":961.8673412864047,"y":16.85827201293051}
+ Position: 1021.8673412864047
+ Position: 16.85827201293051
+ Position: 961.8673412864047
+ Position: 76.85827201293051
+ Position: 901.8673412864047
+ Position: 16.858272012930517
+ Position: 961.8673412864047
+ Position: -43.14172798706949
+ Position: 1021.8673412864047
+ Position: 16.858272012930495
+ Position: 961.8673412864047
+ Position: 76.85827201293051
+ Position: 901.8673412864047
+ Position: 16.85827201293053
+ Position: 961.8673412864047
+ Position: -43.14172798706949
+ Position: 1081.8673412864046
+ Position: 16.85827201293045
+ Position: 961.8673412864048
+ Position: 136.8582720129305
+ Position: 841.8673412864047
+ Position: 16.858272012930584
+ Position: 961.8673412864043
+ Position: -103.14172798706949
+ Position: 1081.8673412864046
+ Position: 16.85827201293042
+ Position: 961.8673412864046
+ Position: 136.8582720129305
+ Position: 841.8673412864047
+ Position: 16.858272012930613
+ Position: 961.8673412864043
+ Position: -103.14172798706949
+ Position: 1141.8673412864046
+ Position: 16.858272012930332
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 1141.8673412864046, y: 16.858272012930332}
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: cell-area-2
+ useNodeDragDrop: Detected parent: cell-area-2
+ Validating relationship: cell-area -> rrp
+ Valid relationship confirmed: cell-area -> rrp
+ useNodeDragDrop: Creating child rrp node under parent cell-area-2
+ useNodeDragDrop: Parent node found: cell-area
+ Desired position: {"x":872,"y":159.66665649414028}
+ Position: 932
+nodeCollisionDetection.ts:67 Position: 159.66665649414028
+nodeCollisionDetection.ts:66 Position: 872
+nodeCollisionDetection.ts:67 Position: 219.66665649414028
+nodeCollisionDetection.ts:66 Position: 812
+nodeCollisionDetection.ts:67 Position: 159.66665649414028
+nodeCollisionDetection.ts:66 Position: 872
+nodeCollisionDetection.ts:67 Position: 99.66665649414028
+nodeCollisionDetection.ts:66 Position: 932
+nodeCollisionDetection.ts:67 Position: 159.66665649414026
+nodeCollisionDetection.ts:66 Position: 872
+nodeCollisionDetection.ts:67 Position: 219.66665649414028
+nodeCollisionDetection.ts:66 Position: 812
+nodeCollisionDetection.ts:67 Position: 159.6666564941403
+nodeCollisionDetection.ts:66 Position: 872
+nodeCollisionDetection.ts:67 Position: 99.66665649414028
+nodeCollisionDetection.ts:66 Position: 992
+nodeCollisionDetection.ts:67 Position: 159.66665649414023
+nodeCollisionDetection.ts:66 Position: 872.0000000000001
+nodeCollisionDetection.ts:67 Position: 279.6666564941403
+nodeCollisionDetection.ts:66 Position: 752
+nodeCollisionDetection.ts:67 Position: 159.66665649414037
+nodeCollisionDetection.ts:66 Position: 871.9999999999997
+nodeCollisionDetection.ts:67 Position: 39.666656494140284
+nodeCollisionDetection.ts:66 Position: 992
+nodeCollisionDetection.ts:67 Position: 159.6666564941402
+nodeCollisionDetection.ts:66 Position: 871.9999999999999
+nodeCollisionDetection.ts:67 Position: 279.6666564941403
+nodeCollisionDetection.ts:66 Position: 752
+nodeCollisionDetection.ts:67 Position: 159.6666564941404
+nodeCollisionDetection.ts:66 Position: 871.9999999999997
+nodeCollisionDetection.ts:67 Position: 39.666656494140284
+nodeCollisionDetection.ts:66 Position: 1052
+nodeCollisionDetection.ts:67 Position: 159.6666564941401
+nodeCollisionDetection.ts:66 Position: 871.9999999999999
+nodeCollisionDetection.ts:67 Position: 339.6666564941403
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 871.9999999999999, y: 339.6666564941403}
+idCounters.ts:34 Generated new RRP ID: 2
+useSimpleChildNodeCreation.ts:54 Creating RRP with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child rrp node with ID: rrp-2 under parent: cell-area-2
+FlowInstance.tsx:83 FlowInstance: Rendering with 5 nodes, 3 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 5, edges: 3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 5, edges: 3
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-2 to rrp-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-cell-area-2-rrp-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-cell-area-2-rrp-2', source: 'cell-area-2', target: 'rrp-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 4
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-2 to rrp-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-cell-area-2-rrp-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-cell-area-2-rrp-2', source: 'cell-area-2', target: 'rrp-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge cell-area-2->rrp-2 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge cell-area-2->rrp-2 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 5 nodes, 4 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 5, edges: 4
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 5, edges: 4
+useRrpPlmn.ts:36 Creating RRP member child for parent rrp-1 with PLMN: fdfd
+useRrpPlmn.ts:45 ✅ PLMN: Creating RRP-member (layout will position it properly) {x: 631.9999999999998, y: 569.6666564941406}
+useSimpleChildNodeCreation.ts:62 Creating RRPmember child with PLMN: fdfd
+useSimpleChildNodeCreation.ts:70 Creating child rrpmember node with ID: rrpmember-1756647748122-5846 under parent: rrp-1
+useSimpleChildNodeCreation.ts:85 ✅ Creating RRPmember (balanced tree layout will position it) {x: 631.9999999999998, y: 569.6666564941406}
+FlowInstance.tsx:83 FlowInstance: Rendering with 6 nodes, 4 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 6, edges: 4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756647748122-5846, type=rrpmember, nodeNumber=5846
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756647748122-5846, type=rrpmember, nodeNumber=5846
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 6, edges: 4
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrp-1 to rrpmember-1756647748122-5846
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrp-1-rrpmember-1756647748122-5846
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrp-1-rrpmember-1756647748122-5846', source: 'rrp-1', target: 'rrpmember-1756647748122-5846', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 5
+FlowInstance.tsx:83 FlowInstance: Rendering with 6 nodes, 5 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 6, edges: 5
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 6, edges: 5
+useRrpPlmn.ts:36 Creating RRP member child for parent rrp-2 with PLMN: dfdf
+useRrpPlmn.ts:45 ✅ PLMN: Creating RRP-member (layout will position it properly) {x: 871.9999999999999, y: 389.6666564941403}
+useSimpleChildNodeCreation.ts:62 Creating RRPmember child with PLMN: dfdf
+useSimpleChildNodeCreation.ts:70 Creating child rrpmember node with ID: rrpmember-1756647750095-3631 under parent: rrp-2
+useSimpleChildNodeCreation.ts:85 ✅ Creating RRPmember (balanced tree layout will position it) {x: 871.9999999999999, y: 389.6666564941403}
+FlowInstance.tsx:83 FlowInstance: Rendering with 7 nodes, 5 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 7, edges: 5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756647750095-3631, type=rrpmember, nodeNumber=3631
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756647750095-3631, type=rrpmember, nodeNumber=3631
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 7, edges: 5
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrp-2 to rrpmember-1756647750095-3631
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrp-2-rrpmember-1756647750095-3631
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrp-2-rrpmember-1756647750095-3631', source: 'rrp-2', target: 'rrpmember-1756647750095-3631', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 6
+FlowInstance.tsx:83 FlowInstance: Rendering with 7 nodes, 6 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 7, edges: 6
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 7, edges: 6
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 7, edges: 6
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 7, edges: 6
+useRrpPlmn.ts:36 Creating RRP member child for parent rrp-2 with PLMN: dfdf
+useRrpPlmn.ts:45 ✅ PLMN: Creating RRP-member (layout will position it properly) {x: 871.9999999999999, y: 389.6666564941403}
+useSimpleChildNodeCreation.ts:62 Creating RRPmember child with PLMN: dfdf
+useSimpleChildNodeCreation.ts:70 Creating child rrpmember node with ID: rrpmember-1756647753176-9380 under parent: rrp-2
+useSimpleChildNodeCreation.ts:85 ✅ Creating RRPmember (balanced tree layout will position it) {x: 871.9999999999999, y: 389.6666564941403}
+FlowInstance.tsx:83 FlowInstance: Rendering with 8 nodes, 6 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 6
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756647753176-9380, type=rrpmember, nodeNumber=9380
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756647753176-9380, type=rrpmember, nodeNumber=9380
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 6
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrp-2 to rrpmember-1756647753176-9380
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrp-2-rrpmember-1756647753176-9380
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrp-2-rrpmember-1756647753176-9380', source: 'rrp-2', target: 'rrpmember-1756647753176-9380', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 7
+FlowInstance.tsx:83 FlowInstance: Rendering with 8 nodes, 7 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 8, edges: 7
+NodeButton.tsx:34 NodeButton: Started dragging s-nssai button
+NodeButton.tsx:42 NodeButton: Set drag data to: s-nssai
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "s-nssai" at position: {x: 614.7682475555234, y: 658.0063796468289}
+useDragDataParser.ts:3 parseDragData: Processing drag data: s-nssai
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: s-nssai
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+nodeCollisionDetection.ts:41 Desired position: {"x":614.7682475555234,"y":658.0063796468289}
+ Position: 674.7682475555234
+ Position: 658.0063796468289
+ Position: 614.7682475555234
+ Position: 718.0063796468289
+ Position: 554.7682475555234
+ Position: 658.0063796468289
+ Position: 614.7682475555234
+ Position: 598.0063796468289
+ Position: 674.7682475555234
+ Position: 658.0063796468289
+ Position: 614.7682475555234
+ Position: 718.0063796468289
+ Position: 554.7682475555234
+ Position: 658.0063796468289
+ Position: 614.7682475555234
+ Position: 598.0063796468289
+ Position: 734.7682475555234
+ Position: 658.0063796468288
+ Position: 614.7682475555235
+ Position: 778.0063796468289
+ Position: 494.76824755552343
+ Position: 658.006379646829
+ Position: 614.7682475555231
+ Position: 538.0063796468289
+ Position: 734.7682475555234
+ Position: 658.0063796468288
+ Position: 614.7682475555233
+ Position: 778.0063796468289
+ Position: 494.76824755552343
+ Position: 658.006379646829
+ Position: 614.7682475555231
+ Position: 538.0063796468289
+ Position: 794.7682475555234
+ Position: 658.0063796468287
+ Position: 614.7682475555233
+ Position: 838.0063796468289
+ Position: 434.76824755552343
+ Position: 658.0063796468291
+ Position: 614.7682475555229
+ Position: 478.0063796468289
+ Position: 794.7682475555234
+ Position: 658.0063796468287
+ Position: 614.7682475555233
+ Position: 838.0063796468289
+ Position: 434.76824755552343
+ Position: 658.0063796468298
+ Position: 614.7682475555229
+ Position: 478.0063796468289
+ Position: 854.7682475555234
+ Position: 658.0063796468286
+ Position: 614.7682475555233
+ Position: 898.0063796468289
+ Position: 374.76824755552343
+ Position: 658.0063796468285
+ Position: 614.7682475555226
+ Position: 418.0063796468289
+ Position: 854.7682475555234
+ Position: 658.0063796468285
+ Position: 614.7682475555234
+ Position: 898.0063796468289
+ Position: 374.76824755552343
+ Position: 658.0063796468302
+ Position: 614.7682475555225
+ Position: 418.0063796468289
+ Position: 914.7682475555234
+ Position: 658.0063796468283
+ Position: 614.7682475555235
+ Position: 958.0063796468289
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 614.7682475555235, y: 958.0063796468289}
+ useNodeDragDrop: Elements at drop point: 11
+ detectParentNodeFromDOM: Checking elements at point: 11
+ detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1756647748122-5846
+ useNodeDragDrop: Detected parent: rrpmember-1756647748122-5846
+ Validating relationship: rrpmember -> s-nssai
+ Valid relationship confirmed: rrpmember -> s-nssai
+ useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1756647748122-5846
+ useNodeDragDrop: Parent node found: rrpmember
+nodeCollisionDetection.ts:41 Desired position: {"x":532.2583912456784,"y":822.7540297116908}
+nodeCollisionDetection.ts:66 Position: 592.2583912456784
+nodeCollisionDetection.ts:67 Position: 822.7540297116908
+nodeCollisionDetection.ts:66 Position: 532.2583912456784
+nodeCollisionDetection.ts:67 Position: 882.7540297116908
+nodeCollisionDetection.ts:66 Position: 472.25839124567835
+nodeCollisionDetection.ts:67 Position: 822.7540297116908
+nodeCollisionDetection.ts:66 Position: 532.2583912456784
+nodeCollisionDetection.ts:67 Position: 762.7540297116908
+nodeCollisionDetection.ts:66 Position: 592.2583912456784
+nodeCollisionDetection.ts:67 Position: 822.7540297116908
+nodeCollisionDetection.ts:66 Position: 532.2583912456784
+nodeCollisionDetection.ts:67 Position: 882.7540297116908
+nodeCollisionDetection.ts:66 Position: 472.25839124567835
+nodeCollisionDetection.ts:67 Position: 822.7540297116908
+nodeCollisionDetection.ts:66 Position: 532.2583912456784
+nodeCollisionDetection.ts:67 Position: 762.7540297116908
+nodeCollisionDetection.ts:66 Position: 652.2583912456784
+nodeCollisionDetection.ts:67 Position: 822.7540297116907
+nodeCollisionDetection.ts:66 Position: 532.2583912456785
+nodeCollisionDetection.ts:67 Position: 942.7540297116908
+nodeCollisionDetection.ts:66 Position: 412.25839124567835
+nodeCollisionDetection.ts:67 Position: 822.7540297116909
+nodeCollisionDetection.ts:66 Position: 532.258391245678
+nodeCollisionDetection.ts:67 Position: 702.7540297116908
+nodeCollisionDetection.ts:66 Position: 652.2583912456784
+nodeCollisionDetection.ts:67 Position: 822.7540297116907
+nodeCollisionDetection.ts:66 Position: 532.2583912456782
+nodeCollisionDetection.ts:67 Position: 942.7540297116908
+nodeCollisionDetection.ts:66 Position: 412.25839124567835
+nodeCollisionDetection.ts:67 Position: 822.7540297116909
+nodeCollisionDetection.ts:66 Position: 532.258391245678
+nodeCollisionDetection.ts:67 Position: 702.7540297116908
+nodeCollisionDetection.ts:66 Position: 712.2583912456784
+nodeCollisionDetection.ts:67 Position: 822.7540297116906
+nodeCollisionDetection.ts:66 Position: 532.2583912456782
+nodeCollisionDetection.ts:67 Position: 1002.7540297116908
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 532.2583912456782, y: 1002.7540297116908}
+idCounters.ts:18 Generated new S-NSSAI ID: 1
+useSimpleChildNodeCreation.ts:45 Creating child S-NSSAI with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child s-nssai node with ID: s-nssai-1 under parent: rrpmember-1756647748122-5846
+FlowInstance.tsx:83 FlowInstance: Rendering with 9 nodes, 7 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 9, edges: 7
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 9, edges: 7
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrpmember-1756647748122-5846 to s-nssai-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1756647748122-5846-s-nssai-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrpmember-1756647748122-5846-s-nssai-1', source: 'rrpmember-1756647748122-5846', target: 's-nssai-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 8
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrpmember-1756647748122-5846 to s-nssai-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1756647748122-5846-s-nssai-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrpmember-1756647748122-5846-s-nssai-1', source: 'rrpmember-1756647748122-5846', target: 's-nssai-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1756647748122-5846->s-nssai-1 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1756647748122-5846->s-nssai-1 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 9 nodes, 8 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 9, edges: 8
+NodeButton.tsx:34 NodeButton: Started dragging s-nssai button
+NodeButton.tsx:42 NodeButton: Set drag data to: s-nssai
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "s-nssai" at position: {x: 880.0186466948431, y: 561.0005193901634}
+useDragDataParser.ts:3 parseDragData: Processing drag data: s-nssai
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: s-nssai
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+nodeCollisionDetection.ts:41 Desired position: {"x":880.0186466948431,"y":561.0005193901634}
+nodeCollisionDetection.ts:66 Position: 940.0186466948431
+nodeCollisionDetection.ts:67 Position: 561.0005193901634
+nodeCollisionDetection.ts:66 Position: 880.0186466948431
+ Position: 621.0005193901634
+ Position: 820.0186466948431
+ Position: 561.0005193901634
+ Position: 880.0186466948431
+ Position: 501.0005193901634
+ Position: 940.0186466948431
+ Position: 561.0005193901634
+ Position: 880.0186466948431
+ Position: 621.0005193901634
+ Position: 820.0186466948431
+ Position: 561.0005193901634
+ Position: 880.0186466948431
+ Position: 501.0005193901634
+ Position: 1000.0186466948431
+ Position: 561.0005193901633
+ Position: 880.0186466948433
+ Position: 681.0005193901634
+ Position: 760.0186466948431
+ Position: 561.0005193901635
+ Position: 880.0186466948428
+ Position: 441.0005193901634
+ Position: 1000.0186466948431
+ Position: 561.0005193901633
+ Position: 880.018646694843
+ Position: 681.0005193901634
+ Position: 760.0186466948431
+ Position: 561.0005193901635
+ Position: 880.0186466948428
+ Position: 441.0005193901634
+ Position: 1060.018646694843
+ Position: 561.0005193901632
+ Position: 880.018646694843
+ Position: 741.0005193901634
+ Position: 700.0186466948431
+ Position: 561.0005193901636
+ Position: 880.0186466948426
+ Position: 381.0005193901634
+ Position: 1060.018646694843
+ Position: 561.0005193901632
+ Position: 880.018646694843
+ Position: 741.0005193901634
+ Position: 700.0186466948431
+ Position: 561.0005193901643
+ Position: 880.0186466948426
+ Position: 381.0005193901634
+ Position: 1120.018646694843
+ Position: 561.000519390163
+ Position: 880.018646694843
+ Position: 801.0005193901634
+ Position: 640.0186466948431
+ Position: 561.0005193901629
+ Position: 880.0186466948423
+ Position: 321.0005193901634
+ Position: 1120.018646694843
+ Position: 561.0005193901629
+ Position: 880.0186466948431
+ Position: 801.0005193901634
+ Position: 640.0186466948431
+ Position: 561.0005193901646
+ Position: 880.0186466948422
+ Position: 321.0005193901634
+ Position: 1180.018646694843
+ Position: 561.0005193901628
+ Position: 880.0186466948433
+ Position: 861.0005193901634
+ Position: 580.0186466948431
+ Position: 561.0005193901629
+ Position: 880.018646694842
+ Position: 261.0005193901634
+ Position: 1180.018646694843
+ Position: 561.0005193901627
+ Position: 880.0186466948433
+ Position: 861.0005193901634
+ Position: 580.0186466948431
+ Position: 561.0005193901652
+ Position: 880.0186466948419
+ Position: 261.0005193901634
+ Position: 1240.018646694843
+ Position: 561.0005193901625
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 1240.018646694843, y: 561.0005193901625}
+ useNodeDragDrop: Elements at drop point: 13
+ detectParentNodeFromDOM: Checking elements at point: 13
+ detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1756647753176-9380
+ useNodeDragDrop: Detected parent: rrpmember-1756647753176-9380
+ Validating relationship: rrpmember -> s-nssai
+ Valid relationship confirmed: rrpmember -> s-nssai
+ useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1756647753176-9380
+ useNodeDragDrop: Parent node found: rrpmember
+ Desired position: {"x":849.5599361377086,"y":745.8227562343975}
+nodeCollisionDetection.ts:66 Position: 909.5599361377086
+nodeCollisionDetection.ts:67 Position: 745.8227562343975
+nodeCollisionDetection.ts:66 Position: 849.5599361377086
+nodeCollisionDetection.ts:67 Position: 805.8227562343975
+nodeCollisionDetection.ts:66 Position: 789.5599361377086
+nodeCollisionDetection.ts:67 Position: 745.8227562343975
+nodeCollisionDetection.ts:66 Position: 849.5599361377086
+nodeCollisionDetection.ts:67 Position: 685.8227562343975
+nodeCollisionDetection.ts:66 Position: 909.5599361377086
+nodeCollisionDetection.ts:67 Position: 745.8227562343975
+nodeCollisionDetection.ts:66 Position: 849.5599361377086
+nodeCollisionDetection.ts:67 Position: 805.8227562343975
+nodeCollisionDetection.ts:66 Position: 789.5599361377086
+nodeCollisionDetection.ts:67 Position: 745.8227562343975
+nodeCollisionDetection.ts:66 Position: 849.5599361377086
+nodeCollisionDetection.ts:67 Position: 685.8227562343975
+nodeCollisionDetection.ts:66 Position: 969.5599361377086
+nodeCollisionDetection.ts:67 Position: 745.8227562343974
+nodeCollisionDetection.ts:66 Position: 849.5599361377087
+nodeCollisionDetection.ts:67 Position: 865.8227562343975
+nodeCollisionDetection.ts:66 Position: 729.5599361377086
+nodeCollisionDetection.ts:67 Position: 745.8227562343976
+nodeCollisionDetection.ts:66 Position: 849.5599361377083
+nodeCollisionDetection.ts:67 Position: 625.8227562343975
+nodeCollisionDetection.ts:66 Position: 969.5599361377086
+nodeCollisionDetection.ts:67 Position: 745.8227562343974
+nodeCollisionDetection.ts:66 Position: 849.5599361377085
+nodeCollisionDetection.ts:67 Position: 865.8227562343975
+nodeCollisionDetection.ts:66 Position: 729.5599361377086
+nodeCollisionDetection.ts:67 Position: 745.8227562343976
+nodeCollisionDetection.ts:66 Position: 849.5599361377083
+nodeCollisionDetection.ts:67 Position: 625.8227562343975
+nodeCollisionDetection.ts:66 Position: 1029.5599361377085
+nodeCollisionDetection.ts:67 Position: 745.8227562343973
+nodeCollisionDetection.ts:66 Position: 849.5599361377085
+nodeCollisionDetection.ts:67 Position: 925.8227562343975
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 849.5599361377085, y: 925.8227562343975}
+idCounters.ts:18 Generated new S-NSSAI ID: 2
+useSimpleChildNodeCreation.ts:45 Creating child S-NSSAI with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child s-nssai node with ID: s-nssai-2 under parent: rrpmember-1756647753176-9380
+FlowInstance.tsx:83 FlowInstance: Rendering with 10 nodes, 8 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 10, edges: 8
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 10, edges: 8
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrpmember-1756647753176-9380 to s-nssai-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1756647753176-9380-s-nssai-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrpmember-1756647753176-9380-s-nssai-2', source: 'rrpmember-1756647753176-9380', target: 's-nssai-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 9
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrpmember-1756647753176-9380 to s-nssai-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1756647753176-9380-s-nssai-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrpmember-1756647753176-9380-s-nssai-2', source: 'rrpmember-1756647753176-9380', target: 's-nssai-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1756647753176-9380->s-nssai-2 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1756647753176-9380->s-nssai-2 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 10 nodes, 9 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 10, edges: 9
+NodeButton.tsx:34 NodeButton: Started dragging s-nssai button
+NodeButton.tsx:42 NodeButton: Set drag data to: s-nssai
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "s-nssai" at position: {x: 1124.0490139030173, y: 615.5663157845378}
+useDragDataParser.ts:3 parseDragData: Processing drag data: s-nssai
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: s-nssai
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+nodeCollisionDetection.ts:41 Desired position: {"x":1124.0490139030173,"y":615.5663157845378}
+nodeCollisionDetection.ts:66 Position: 1184.0490139030173
+nodeCollisionDetection.ts:67 Position: 615.5663157845378
+nodeCollisionDetection.ts:66 Position: 1124.0490139030173
+nodeCollisionDetection.ts:67 Position: 675.5663157845378
+nodeCollisionDetection.ts:66 Position: 1064.0490139030173
+ Position: 615.5663157845378
+ Position: 1124.0490139030173
+ Position: 555.5663157845378
+ Position: 1184.0490139030173
+ Position: 615.5663157845378
+ Position: 1124.0490139030173
+ Position: 675.5663157845378
+ Position: 1064.0490139030173
+ Position: 615.5663157845378
+ Position: 1124.0490139030173
+ Position: 555.5663157845378
+ Position: 1244.0490139030173
+ Position: 615.5663157845377
+ Position: 1124.0490139030173
+ Position: 735.5663157845378
+ Position: 1004.0490139030173
+ Position: 615.5663157845379
+ Position: 1124.049013903017
+ Position: 495.5663157845378
+ Position: 1244.0490139030173
+ Position: 615.5663157845377
+ Position: 1124.049013903017
+ Position: 735.5663157845378
+ Position: 1004.0490139030173
+ Position: 615.5663157845379
+ Position: 1124.049013903017
+ Position: 495.5663157845378
+ Position: 1304.0490139030173
+ Position: 615.5663157845376
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 1304.0490139030173, y: 615.5663157845376}
+ useNodeDragDrop: Elements at drop point: 10
+ detectParentNodeFromDOM: Checking elements at point: 10
+ detectParentNodeFromDOM: Found direct node element with ID: rrpmember-1756647750095-3631
+ useNodeDragDrop: Detected parent: rrpmember-1756647750095-3631
+ Validating relationship: rrpmember -> s-nssai
+ Valid relationship confirmed: rrpmember -> s-nssai
+ useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1756647750095-3631
+ useNodeDragDrop: Parent node found: rrpmember
+ Desired position: {"x":1058.7288223161436,"y":776.1370875646055}
+ Position: 1118.7288223161436
+ Position: 776.1370875646055
+ Position: 1058.7288223161436
+ Position: 836.1370875646055
+ Position: 998.7288223161436
+ Position: 776.1370875646055
+ Position: 1058.7288223161436
+ Position: 716.1370875646055
+ Position: 1118.7288223161436
+ Position: 776.1370875646055
+ Position: 1058.7288223161436
+ Position: 836.1370875646055
+ Position: 998.7288223161436
+ Position: 776.1370875646055
+ Position: 1058.7288223161436
+nodeCollisionDetection.ts:67 Position: 716.1370875646055
+nodeCollisionDetection.ts:66 Position: 1178.7288223161436
+nodeCollisionDetection.ts:67 Position: 776.1370875646054
+nodeCollisionDetection.ts:66 Position: 1058.7288223161436
+nodeCollisionDetection.ts:67 Position: 896.1370875646055
+nodeCollisionDetection.ts:66 Position: 938.7288223161436
+nodeCollisionDetection.ts:67 Position: 776.1370875646056
+nodeCollisionDetection.ts:66 Position: 1058.7288223161434
+nodeCollisionDetection.ts:67 Position: 656.1370875646055
+nodeCollisionDetection.ts:66 Position: 1178.7288223161436
+nodeCollisionDetection.ts:67 Position: 776.1370875646054
+nodeCollisionDetection.ts:66 Position: 1058.7288223161434
+nodeCollisionDetection.ts:67 Position: 896.1370875646055
+nodeCollisionDetection.ts:66 Position: 938.7288223161436
+nodeCollisionDetection.ts:67 Position: 776.1370875646056
+nodeCollisionDetection.ts:66 Position: 1058.7288223161434
+nodeCollisionDetection.ts:67 Position: 656.1370875646055
+nodeCollisionDetection.ts:66 Position: 1238.7288223161436
+nodeCollisionDetection.ts:67 Position: 776.1370875646053
+nodeCollisionDetection.ts:66 Position: 1058.7288223161434
+nodeCollisionDetection.ts:67 Position: 956.1370875646055
+nodeCollisionDetection.ts:66 Position: 878.7288223161436
+nodeCollisionDetection.ts:67 Position: 776.1370875646057
+nodeCollisionDetection.ts:66 Position: 1058.7288223161431
+nodeCollisionDetection.ts:67 Position: 596.1370875646055
+nodeCollisionDetection.ts:66 Position: 1238.7288223161436
+nodeCollisionDetection.ts:67 Position: 776.1370875646053
+nodeCollisionDetection.ts:66 Position: 1058.7288223161436
+nodeCollisionDetection.ts:67 Position: 956.1370875646055
+nodeCollisionDetection.ts:66 Position: 878.7288223161436
+nodeCollisionDetection.ts:67 Position: 776.1370875646064
+nodeCollisionDetection.ts:66 Position: 1058.728822316143
+nodeCollisionDetection.ts:67 Position: 596.1370875646055
+nodeCollisionDetection.ts:66 Position: 1298.7288223161436
+nodeCollisionDetection.ts:67 Position: 776.1370875646052
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 1298.7288223161436, y: 776.1370875646052}
+idCounters.ts:18 Generated new S-NSSAI ID: 3
+useSimpleChildNodeCreation.ts:45 Creating child S-NSSAI with ID: 3
+useSimpleChildNodeCreation.ts:70 Creating child s-nssai node with ID: s-nssai-3 under parent: rrpmember-1756647750095-3631
+FlowInstance.tsx:83 FlowInstance: Rendering with 11 nodes, 9 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 11, edges: 9
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 11, edges: 9
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrpmember-1756647750095-3631 to s-nssai-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1756647750095-3631-s-nssai-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrpmember-1756647750095-3631-s-nssai-3', source: 'rrpmember-1756647750095-3631', target: 's-nssai-3', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 10
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrpmember-1756647750095-3631 to s-nssai-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1756647750095-3631-s-nssai-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrpmember-1756647750095-3631-s-nssai-3', source: 'rrpmember-1756647750095-3631', target: 's-nssai-3', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1756647750095-3631->s-nssai-3 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1756647750095-3631->s-nssai-3 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 11 nodes, 10 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 11, edges: 10
+NodeButton.tsx:34 NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: {x: 608.7053812894817, y: 944.4768107172943}
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ Desired position: {"x":608.7053812894817,"y":944.4768107172943}
+ Position: 668.7053812894817
+ Position: 944.4768107172943
+ Position: 608.7053812894817
+ Position: 1004.4768107172943
+ Position: 548.7053812894817
+ Position: 944.4768107172943
+ Position: 608.7053812894817
+ Position: 884.4768107172943
+ Position: 668.7053812894817
+ Position: 944.4768107172943
+ Position: 608.7053812894817
+ Position: 1004.4768107172943
+ Position: 548.7053812894817
+ Position: 944.4768107172943
+ Position: 608.7053812894817
+ Position: 884.4768107172943
+ Position: 728.7053812894817
+ Position: 944.4768107172941
+ Position: 608.7053812894818
+ Position: 1064.4768107172943
+ Position: 488.7053812894817
+ Position: 944.4768107172944
+ Position: 608.7053812894814
+ Position: 824.4768107172943
+ Position: 728.7053812894817
+ Position: 944.4768107172941
+ Position: 608.7053812894816
+ Position: 1064.4768107172943
+ Position: 488.7053812894817
+ Position: 944.4768107172944
+ Position: 608.7053812894814
+ Position: 824.4768107172943
+ Position: 788.7053812894817
+ Position: 944.476810717294
+ Position: 608.7053812894816
+ Position: 1124.4768107172943
+ Position: 428.7053812894817
+ Position: 944.4768107172945
+ Position: 608.7053812894811
+ Position: 764.4768107172943
+ Position: 788.7053812894817
+ Position: 944.476810717294
+ Position: 608.7053812894816
+ Position: 1124.4768107172943
+ Position: 428.7053812894817
+ Position: 944.4768107172952
+ Position: 608.7053812894811
+ Position: 764.4768107172943
+ Position: 848.7053812894817
+ Position: 944.4768107172939
+ Position: 608.7053812894816
+ Position: 1184.4768107172943
+ Position: 368.7053812894817
+ Position: 944.4768107172938
+ Position: 608.7053812894809
+ Position: 704.4768107172943
+ Position: 848.7053812894817
+ Position: 944.4768107172938
+ Position: 608.7053812894817
+ Position: 1184.4768107172943
+ Position: 368.7053812894817
+ Position: 944.4768107172955
+ Position: 608.7053812894808
+ Position: 704.4768107172943
+ Position: 908.7053812894817
+ Position: 944.4768107172937
+ Position: 608.7053812894818
+ Position: 1244.4768107172943
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 608.7053812894818, y: 1244.4768107172943}
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-1
+ useNodeDragDrop: Detected parent: s-nssai-1
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-1
+ useNodeDragDrop: Parent node found: s-nssai
+ Desired position: {"x":552.2583912456782,"y":1102.7540297116907}
+ Position: 612.2583912456782
+ Position: 1102.7540297116907
+ Position: 552.2583912456782
+nodeCollisionDetection.ts:67 Position: 1162.7540297116907
+nodeCollisionDetection.ts:66 Position: 492.25839124567824
+nodeCollisionDetection.ts:67 Position: 1102.7540297116907
+nodeCollisionDetection.ts:66 Position: 552.2583912456782
+nodeCollisionDetection.ts:67 Position: 1042.7540297116907
+nodeCollisionDetection.ts:66 Position: 612.2583912456782
+nodeCollisionDetection.ts:67 Position: 1102.7540297116907
+nodeCollisionDetection.ts:66 Position: 552.2583912456782
+nodeCollisionDetection.ts:67 Position: 1162.7540297116907
+nodeCollisionDetection.ts:66 Position: 492.25839124567824
+nodeCollisionDetection.ts:67 Position: 1102.7540297116907
+nodeCollisionDetection.ts:66 Position: 552.2583912456782
+nodeCollisionDetection.ts:67 Position: 1042.7540297116907
+nodeCollisionDetection.ts:66 Position: 672.2583912456782
+nodeCollisionDetection.ts:67 Position: 1102.7540297116907
+nodeCollisionDetection.ts:66 Position: 552.2583912456784
+nodeCollisionDetection.ts:67 Position: 1222.7540297116907
+nodeCollisionDetection.ts:66 Position: 432.25839124567824
+nodeCollisionDetection.ts:67 Position: 1102.7540297116907
+nodeCollisionDetection.ts:66 Position: 552.2583912456779
+nodeCollisionDetection.ts:67 Position: 982.7540297116907
+nodeCollisionDetection.ts:66 Position: 672.2583912456782
+nodeCollisionDetection.ts:67 Position: 1102.7540297116907
+nodeCollisionDetection.ts:66 Position: 552.2583912456781
+nodeCollisionDetection.ts:67 Position: 1222.7540297116907
+nodeCollisionDetection.ts:66 Position: 432.25839124567824
+nodeCollisionDetection.ts:67 Position: 1102.7540297116907
+nodeCollisionDetection.ts:66 Position: 552.2583912456779
+nodeCollisionDetection.ts:67 Position: 982.7540297116907
+nodeCollisionDetection.ts:66 Position: 732.2583912456782
+nodeCollisionDetection.ts:67 Position: 1102.7540297116905
+nodeCollisionDetection.ts:66 Position: 552.2583912456781
+nodeCollisionDetection.ts:67 Position: 1282.7540297116907
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 552.2583912456781, y: 1282.7540297116907}
+idCounters.ts:10 Generated new DNN ID: 1
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-1 under parent: s-nssai-1
+FlowInstance.tsx:83 FlowInstance: Rendering with 12 nodes, 10 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 12, edges: 10
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 12, edges: 10
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from s-nssai-1 to dnn-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-1-dnn-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-1-dnn-1', source: 's-nssai-1', target: 'dnn-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 11
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from s-nssai-1 to dnn-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-1-dnn-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-1-dnn-1', source: 's-nssai-1', target: 'dnn-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-1->dnn-1 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-1->dnn-1 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 12 nodes, 11 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 12, edges: 11
+NodeButton.tsx:34 NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: {x: 916.3958442910925, y: 850.5023835936496}
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ Desired position: {"x":916.3958442910925,"y":850.5023835936496}
+ Position: 976.3958442910925
+ Position: 850.5023835936496
+ Position: 916.3958442910925
+ Position: 910.5023835936496
+ Position: 856.3958442910925
+ Position: 850.5023835936496
+ Position: 916.3958442910925
+ Position: 790.5023835936496
+ Position: 976.3958442910925
+ Position: 850.5023835936496
+ Position: 916.3958442910925
+ Position: 910.5023835936496
+ Position: 856.3958442910925
+ Position: 850.5023835936496
+ Position: 916.3958442910925
+ Position: 790.5023835936496
+ Position: 1036.3958442910925
+ Position: 850.5023835936495
+ Position: 916.3958442910927
+ Position: 970.5023835936496
+ Position: 796.3958442910925
+ Position: 850.5023835936497
+ Position: 916.3958442910922
+ Position: 730.5023835936496
+ Position: 1036.3958442910925
+ Position: 850.5023835936495
+ Position: 916.3958442910924
+ Position: 970.5023835936496
+ Position: 796.3958442910925
+ Position: 850.5023835936497
+ Position: 916.3958442910922
+ Position: 730.5023835936496
+ Position: 1096.3958442910925
+ Position: 850.5023835936494
+ Position: 916.3958442910924
+ Position: 1030.5023835936495
+ Position: 736.3958442910925
+ Position: 850.5023835936498
+ Position: 916.395844291092
+ Position: 670.5023835936496
+ Position: 1096.3958442910925
+ Position: 850.5023835936494
+ Position: 916.3958442910924
+ Position: 1030.5023835936495
+ Position: 736.3958442910925
+ Position: 850.5023835936505
+ Position: 916.395844291092
+ Position: 670.5023835936496
+ Position: 1156.3958442910925
+ Position: 850.5023835936493
+ Position: 916.3958442910924
+ Position: 1090.5023835936495
+ Position: 676.3958442910925
+ Position: 850.5023835936491
+ Position: 916.3958442910917
+ Position: 610.5023835936496
+ Position: 1156.3958442910925
+ Position: 850.5023835936491
+ Position: 916.3958442910925
+ Position: 1090.5023835936495
+ Position: 676.3958442910925
+ Position: 850.5023835936508
+ Position: 916.3958442910916
+ Position: 610.5023835936496
+ Position: 1216.3958442910925
+ Position: 850.502383593649
+ Position: 916.3958442910927
+ Position: 1150.5023835936495
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 916.3958442910927, y: 1150.5023835936495}
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-2
+ useNodeDragDrop: Detected parent: s-nssai-2
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-2
+ useNodeDragDrop: Parent node found: s-nssai
+ Desired position: {"x":869.5599361377085,"y":1025.8227562343975}
+ Position: 929.5599361377085
+ Position: 1025.8227562343975
+ Position: 869.5599361377085
+ Position: 1085.8227562343975
+nodeCollisionDetection.ts:66 Position: 809.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343975
+nodeCollisionDetection.ts:66 Position: 869.5599361377085
+nodeCollisionDetection.ts:67 Position: 965.8227562343975
+nodeCollisionDetection.ts:66 Position: 929.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343975
+nodeCollisionDetection.ts:66 Position: 869.5599361377085
+nodeCollisionDetection.ts:67 Position: 1085.8227562343975
+nodeCollisionDetection.ts:66 Position: 809.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343975
+nodeCollisionDetection.ts:66 Position: 869.5599361377085
+nodeCollisionDetection.ts:67 Position: 965.8227562343975
+nodeCollisionDetection.ts:66 Position: 989.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343975
+nodeCollisionDetection.ts:66 Position: 869.5599361377086
+nodeCollisionDetection.ts:67 Position: 1145.8227562343975
+nodeCollisionDetection.ts:66 Position: 749.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343975
+nodeCollisionDetection.ts:66 Position: 869.5599361377082
+nodeCollisionDetection.ts:67 Position: 905.8227562343975
+nodeCollisionDetection.ts:66 Position: 989.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343975
+nodeCollisionDetection.ts:66 Position: 869.5599361377084
+nodeCollisionDetection.ts:67 Position: 1145.8227562343975
+nodeCollisionDetection.ts:66 Position: 749.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343975
+nodeCollisionDetection.ts:66 Position: 869.5599361377082
+nodeCollisionDetection.ts:67 Position: 905.8227562343975
+nodeCollisionDetection.ts:66 Position: 1049.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343973
+nodeCollisionDetection.ts:66 Position: 869.5599361377084
+nodeCollisionDetection.ts:67 Position: 1205.8227562343975
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 869.5599361377084, y: 1205.8227562343975}
+idCounters.ts:10 Generated new DNN ID: 2
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-2 under parent: s-nssai-2
+FlowInstance.tsx:83 FlowInstance: Rendering with 13 nodes, 11 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 13, edges: 11
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 13, edges: 11
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-2-dnn-2', source: 's-nssai-2', target: 'dnn-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 12
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-2-dnn-2', source: 's-nssai-2', target: 'dnn-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-2->dnn-2 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-2->dnn-2 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 13 nodes, 12 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 13, edges: 12
+NodeButton.tsx:34 NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: {x: 1371.110814244212, y: 733.7922079723489}
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: dnn
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+nodeCollisionDetection.ts:41 Desired position: {"x":1371.110814244212,"y":733.7922079723489}
+nodeCollisionDetection.ts:66 Position: 1431.110814244212
+nodeCollisionDetection.ts:67 Position: 733.7922079723489
+ Position: 1371.110814244212
+ Position: 793.7922079723489
+ Position: 1311.110814244212
+ Position: 733.7922079723489
+ Position: 1371.110814244212
+ Position: 673.7922079723489
+ Position: 1431.110814244212
+ Position: 733.7922079723489
+ Position: 1371.110814244212
+ Position: 793.7922079723489
+ Position: 1311.110814244212
+ Position: 733.7922079723489
+ Position: 1371.110814244212
+ Position: 673.7922079723489
+ Position: 1491.110814244212
+ Position: 733.7922079723488
+ Position: 1371.110814244212
+ Position: 853.7922079723489
+ Position: 1251.110814244212
+ Position: 733.792207972349
+ Position: 1371.1108142442117
+ Position: 613.7922079723489
+ Position: 1491.110814244212
+ Position: 733.7922079723488
+ Position: 1371.1108142442117
+ Position: 853.7922079723489
+ Position: 1251.110814244212
+ Position: 733.792207972349
+ Position: 1371.1108142442117
+ Position: 613.7922079723489
+ Position: 1551.110814244212
+ Position: 733.7922079723487
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 1551.110814244212, y: 733.7922079723487}
+ useNodeDragDrop: Elements at drop point: 13
+ detectParentNodeFromDOM: Checking elements at point: 13
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-3
+ useNodeDragDrop: Detected parent: s-nssai-3
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-3
+ useNodeDragDrop: Parent node found: s-nssai
+ Desired position: {"x":1318.7288223161436,"y":876.1370875646052}
+ Position: 1378.7288223161436
+ Position: 876.1370875646052
+ Position: 1318.7288223161436
+ Position: 936.1370875646052
+ Position: 1258.7288223161436
+nodeCollisionDetection.ts:67 Position: 876.1370875646052
+nodeCollisionDetection.ts:66 Position: 1318.7288223161436
+nodeCollisionDetection.ts:67 Position: 816.1370875646052
+nodeCollisionDetection.ts:66 Position: 1378.7288223161436
+nodeCollisionDetection.ts:67 Position: 876.1370875646052
+nodeCollisionDetection.ts:66 Position: 1318.7288223161436
+nodeCollisionDetection.ts:67 Position: 936.1370875646052
+nodeCollisionDetection.ts:66 Position: 1258.7288223161436
+nodeCollisionDetection.ts:67 Position: 876.1370875646052
+nodeCollisionDetection.ts:66 Position: 1318.7288223161436
+nodeCollisionDetection.ts:67 Position: 816.1370875646052
+nodeCollisionDetection.ts:66 Position: 1438.7288223161436
+nodeCollisionDetection.ts:67 Position: 876.137087564605
+nodeCollisionDetection.ts:66 Position: 1318.7288223161436
+nodeCollisionDetection.ts:67 Position: 996.1370875646052
+nodeCollisionDetection.ts:66 Position: 1198.7288223161436
+nodeCollisionDetection.ts:67 Position: 876.1370875646053
+nodeCollisionDetection.ts:66 Position: 1318.7288223161434
+nodeCollisionDetection.ts:67 Position: 756.1370875646052
+nodeCollisionDetection.ts:66 Position: 1438.7288223161436
+nodeCollisionDetection.ts:67 Position: 876.137087564605
+nodeCollisionDetection.ts:66 Position: 1318.7288223161434
+nodeCollisionDetection.ts:67 Position: 996.1370875646052
+nodeCollisionDetection.ts:66 Position: 1198.7288223161436
+nodeCollisionDetection.ts:67 Position: 876.1370875646053
+nodeCollisionDetection.ts:66 Position: 1318.7288223161434
+nodeCollisionDetection.ts:67 Position: 756.1370875646052
+nodeCollisionDetection.ts:66 Position: 1498.7288223161436
+nodeCollisionDetection.ts:67 Position: 876.1370875646049
+nodeCollisionDetection.ts:66 Position: 1318.7288223161434
+nodeCollisionDetection.ts:67 Position: 1056.1370875646053
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 1318.7288223161434, y: 1056.1370875646053}
+idCounters.ts:10 Generated new DNN ID: 3
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 3
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-3 under parent: s-nssai-3
+FlowInstance.tsx:83 FlowInstance: Rendering with 14 nodes, 12 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 14, edges: 12
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 14, edges: 12
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from s-nssai-3 to dnn-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-3-dnn-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-3-dnn-3', source: 's-nssai-3', target: 'dnn-3', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 13
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from s-nssai-3 to dnn-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-3-dnn-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-3-dnn-3', source: 's-nssai-3', target: 'dnn-3', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-3->dnn-3 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-3->dnn-3 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 14 nodes, 13 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 14, edges: 13
+NodeButton.tsx:34 NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: {x: 1014.9174211142684, y: 848.9866670271392}
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ Desired position: {"x":1014.9174211142684,"y":848.9866670271392}
+ Position: 1074.9174211142686
+ Position: 848.9866670271392
+ Position: 1014.9174211142684
+ Position: 908.9866670271392
+ Position: 954.9174211142684
+ Position: 848.9866670271392
+ Position: 1014.9174211142684
+ Position: 788.9866670271392
+ Position: 1074.9174211142686
+ Position: 848.9866670271392
+ Position: 1014.9174211142684
+ Position: 908.9866670271392
+ Position: 954.9174211142684
+ Position: 848.9866670271392
+ Position: 1014.9174211142684
+ Position: 788.9866670271392
+ Position: 1134.9174211142686
+ Position: 848.9866670271391
+ Position: 1014.9174211142686
+ Position: 968.9866670271392
+ Position: 894.9174211142684
+ Position: 848.9866670271393
+ Position: 1014.9174211142681
+ Position: 728.9866670271392
+ Position: 1134.9174211142686
+ Position: 848.9866670271391
+ Position: 1014.9174211142683
+ Position: 968.9866670271392
+ Position: 894.9174211142684
+ Position: 848.9866670271393
+ Position: 1014.9174211142681
+ Position: 728.9866670271392
+ Position: 1194.9174211142686
+ Position: 848.986667027139
+ Position: 1014.9174211142683
+ Position: 1028.9866670271392
+ Position: 834.9174211142684
+ Position: 848.9866670271394
+ Position: 1014.9174211142679
+ Position: 668.9866670271392
+ Position: 1194.9174211142686
+ Position: 848.986667027139
+ Position: 1014.9174211142683
+ Position: 1028.9866670271392
+ Position: 834.9174211142684
+ Position: 848.9866670271401
+ Position: 1014.9174211142679
+ Position: 668.9866670271392
+ Position: 1254.9174211142686
+ Position: 848.9866670271389
+ Position: 1014.9174211142683
+ Position: 1088.9866670271392
+ Position: 774.9174211142684
+ Position: 848.9866670271388
+ Position: 1014.9174211142677
+ Position: 608.9866670271392
+ Position: 1254.9174211142686
+ Position: 848.9866670271388
+ Position: 1014.9174211142684
+ Position: 1088.9866670271392
+ Position: 774.9174211142684
+ Position: 848.9866670271405
+ Position: 1014.9174211142675
+ Position: 608.9866670271392
+ Position: 1314.9174211142686
+ Position: 848.9866670271387
+ Position: 1014.9174211142686
+ Position: 1148.9866670271392
+ Position: 714.9174211142684
+ Position: 848.9866670271388
+ Position: 1014.9174211142673
+ Position: 548.9866670271392
+ Position: 1314.9174211142686
+ Position: 848.9866670271385
+ Position: 1014.9174211142686
+ Position: 1148.9866670271392
+ Position: 714.9174211142684
+ Position: 848.986667027141
+ Position: 1014.9174211142672
+ Position: 548.9866670271392
+ Position: 1374.9174211142686
+ Position: 848.9866670271383
+ Position: 1014.9174211142713
+ Position: 1208.9866670271392
+ Position: 654.9174211142684
+ Position: 848.9866670271389
+ Position: 1014.9174211142669
+ Position: 488.9866670271392
+ Position: 1374.9174211142686
+ Position: 848.9866670271357
+ Position: 1014.9174211142688
+ Position: 1208.9866670271392
+ Position: 654.9174211142684
+ Position: 848.9866670271415
+ Position: 1014.9174211142694
+ Position: 488.9866670271392
+ Position: 1434.9174211142686
+ Position: 848.986667027138
+ Position: 1014.917421114272
+ Position: 1268.9866670271392
+ useNodeDragDrop: Adjusted position to prevent overlap: {x: 1548.7288223161434, y: 848.9866670271392}
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-2
+ useNodeDragDrop: Detected parent: s-nssai-2
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-2
+ useNodeDragDrop: Parent node found: s-nssai
+ Desired position: {"x":869.5599361377085,"y":1025.8227562343975}
+ Position: 929.5599361377085
+ Position: 1025.8227562343975
+ Position: 869.5599361377085
+ Position: 1085.8227562343975
+ Position: 809.5599361377085
+ Position: 1025.8227562343975
+ Position: 869.5599361377085
+ Position: 965.8227562343975
+ Position: 929.5599361377085
+ Position: 1025.8227562343975
+ Position: 869.5599361377085
+ Position: 1085.8227562343975
+ Position: 809.5599361377085
+ Position: 1025.8227562343975
+ Position: 869.5599361377085
+ Position: 965.8227562343975
+ Position: 989.5599361377085
+ Position: 1025.8227562343975
+ Position: 869.5599361377086
+ Position: 1145.8227562343975
+ Position: 749.5599361377085
+ Position: 1025.8227562343975
+ Position: 869.5599361377082
+ Position: 905.8227562343975
+ Position: 989.5599361377085
+ Position: 1025.8227562343975
+ Position: 869.5599361377084
+ Position: 1145.8227562343975
+ Position: 749.5599361377085
+ Position: 1025.8227562343975
+ Position: 869.5599361377082
+ Position: 905.8227562343975
+ Position: 1049.5599361377085
+ Position: 1025.8227562343973
+ Position: 869.5599361377084
+ Position: 1205.8227562343975
+ Position: 689.5599361377085
+ Position: 1025.8227562343977
+ Position: 869.559936137708
+ Position: 845.8227562343975
+ Position: 1049.5599361377085
+ Position: 1025.8227562343973
+ Position: 869.5599361377084
+ Position: 1205.8227562343975
+ Position: 689.5599361377085
+ Position: 1025.8227562343984
+ Position: 869.559936137708
+ Position: 845.8227562343975
+ Position: 1109.5599361377085
+ Position: 1025.822756234397
+ Position: 869.5599361377084
+ Position: 1265.8227562343975
+ Position: 629.5599361377085
+ Position: 1025.822756234397
+ Position: 869.5599361377077
+ Position: 785.8227562343975
+ Position: 1109.5599361377085
+ Position: 1025.822756234397
+ Position: 869.5599361377085
+ Position: 1265.8227562343975
+ Position: 629.5599361377085
+ Position: 1025.8227562343989
+ Position: 869.5599361377076
+ Position: 785.8227562343975
+ Position: 1169.5599361377085
+ Position: 1025.8227562343968
+ Position: 869.5599361377086
+nodeCollisionDetection.ts:67 Position: 1325.8227562343975
+nodeCollisionDetection.ts:66 Position: 569.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.822756234397
+nodeCollisionDetection.ts:66 Position: 869.5599361377074
+nodeCollisionDetection.ts:67 Position: 725.8227562343975
+nodeCollisionDetection.ts:66 Position: 1169.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343968
+nodeCollisionDetection.ts:66 Position: 869.5599361377086
+nodeCollisionDetection.ts:67 Position: 1325.8227562343975
+nodeCollisionDetection.ts:66 Position: 569.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343993
+nodeCollisionDetection.ts:66 Position: 869.5599361377073
+nodeCollisionDetection.ts:67 Position: 725.8227562343975
+nodeCollisionDetection.ts:66 Position: 1229.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343966
+nodeCollisionDetection.ts:66 Position: 869.5599361377114
+nodeCollisionDetection.ts:67 Position: 1385.8227562343975
+nodeCollisionDetection.ts:66 Position: 509.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.822756234397
+nodeCollisionDetection.ts:66 Position: 869.5599361377069
+nodeCollisionDetection.ts:67 Position: 665.8227562343975
+nodeCollisionDetection.ts:66 Position: 1229.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343939
+nodeCollisionDetection.ts:66 Position: 869.5599361377089
+nodeCollisionDetection.ts:67 Position: 1385.8227562343975
+nodeCollisionDetection.ts:66 Position: 509.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343998
+nodeCollisionDetection.ts:66 Position: 869.5599361377094
+nodeCollisionDetection.ts:67 Position: 665.8227562343975
+nodeCollisionDetection.ts:66 Position: 1289.5599361377085
+nodeCollisionDetection.ts:67 Position: 1025.8227562343964
+nodeCollisionDetection.ts:66 Position: 869.559936137712
+nodeCollisionDetection.ts:67 Position: 1445.8227562343975
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 1548.7288223161434, y: 1025.8227562343975}
+idCounters.ts:10 Generated new DNN ID: 4
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 4
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-4 under parent: s-nssai-2
+FlowInstance.tsx:83 FlowInstance: Rendering with 15 nodes, 13 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 13
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-4'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-4'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 13
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-4
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-4
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-2-dnn-4', source: 's-nssai-2', target: 'dnn-4', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 14
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-4
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-4
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-2-dnn-4', source: 's-nssai-2', target: 'dnn-4', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-2->dnn-4 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-2->dnn-4 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 15 nodes, 14 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+useLayoutOperations.ts:22 useLayoutOperations: Arranging layout for 15 nodes
+useNodeLayoutManager.ts:44 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+useNodeLayoutManager.ts:45 Layout options: {type: 'balanced-tree', horizontalSpacing: 400, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+balancedTreeLayout.ts:46 Available node IDs: (15) ['network-1756647736178-8873', 'cell-area-1', 'cell-area-2', 'rrp-1', 'rrp-2', 'rrpmember-1756647748122-5846', 'rrpmember-1756647750095-3631', 'rrpmember-1756647753176-9380', 's-nssai-1', 's-nssai-2', 's-nssai-3', 'dnn-1', 'dnn-2', 'dnn-3', 'dnn-4']
+balancedTreeLayout.ts:61 Filtered edges: 14 -> 14 valid edges
+balancedTreeLayout.ts:95 Found 1 root nodes
+balancedTreeLayout.ts:139 Level assignments: {network-1756647736178-8873: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1756647748122-5846: {…}, s-nssai-1: {…}, …}
+balancedTreeLayout.ts:140 Parent-child relationships: {cell-area-1: Array(1), cell-area-2: Array(1), rrp-1: Array(1), rrp-2: Array(1), rrpmember-1756647748122-5846: Array(1), …}
+balancedTreeLayout.ts:325 ✓ Single RRP-member rrpmember-1756647748122-5846 positioned BELOW parent at (-200, 850)
+balancedTreeLayout.ts:346 ✓ RRP-member rrpmember-1756647750095-3631 positioned BELOW parent at (100, 850)
+balancedTreeLayout.ts:346 ✓ RRP-member rrpmember-1756647753176-9380 positioned BELOW parent at (300, 850)
+balancedTreeLayout.ts:297 ✓ Single S-NSSAI s-nssai-1 centered under parent at (-200, 1370)
+balancedTreeLayout.ts:297 ✓ Single S-NSSAI s-nssai-3 centered under parent at (100, 1370)
+balancedTreeLayout.ts:297 ✓ Single S-NSSAI s-nssai-2 centered under parent at (300, 1370)
+balancedTreeLayout.ts:397 🎯 Graph centering: minX=-200, maxX=425, width=625, centerOffset=112.5
+balancedTreeLayout.ts:411 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 15 nodes
+balancedTreeLayout.ts:412 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:413 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+balancedTreeLayout.ts:414 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:62 🧹 Layout returned 15 nodes and 14 cleaned edges (was 14)
+useNodeLayoutManager.ts:70 🧹 Filtered duplicates: 15 -> 15 nodes
+useNodeLayoutManager.ts:82 🧹 Updating edges: 14 -> 14 (filtered duplicates)
+useLayoutOperations.ts:50 After arrangement: Found 15 visible nodes, expected 15
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 15, edges: 14
+Index.tsx:160 MainContentWithGraphOperations: edges updated 14
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 14 edges
+Index.tsx:45 Index component: nodes state updated, count: 15
+Index.tsx:47 Index component: First node: {"id":"network-1756647736178-8873","type":"customNode","position":{"x":-112.5,"y":100},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1756647736178-8873"}}
+Index.tsx:74 Index component: edges state updated, count: 14
+Index.tsx:76 Index component: First edge: {"id":"unified-network-1756647736178-8873-cell-area-1","source":"network-1756647736178-8873","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 14 edges
