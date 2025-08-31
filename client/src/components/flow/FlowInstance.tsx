@@ -79,19 +79,15 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Enhanced logging for debugging
-  // useEffect(() => {
-  //  console.log(`FlowInstance: Rendering with ${nodes.length} nodes, ${edges.length} edges`);
-  //  edges.forEach(e => {
-  //    console.log(`FlowInstance: Edge ${e.id}`, {
-  //      source: e.source,
-  //      target: e.target,
-  //      sourceHandle: e.sourceHandle,
-  //      targetHandle: e.targetHandle,
-  //      style: e.style,
-  //      type: e.type,
-  //    });
-  //  });
-  //}, [nodes, edges]);
+  useEffect(() => {
+    console.log(`FlowInstance: Rendering with ${nodes.length} nodes, ${edges.length} edges`);
+    if (nodes.length > 0) {
+      console.log('FlowInstance: First node:', nodes[0]);
+    }
+    if (edges.length > 0) {
+      console.log('FlowInstance: First edge:', edges[0]);
+    }
+  }, [nodes, edges]);
 
   const handleFileImport = () => {
     if (fileInputRef.current) {

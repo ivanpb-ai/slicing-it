@@ -1,5 +1,5 @@
-import React, { useCallback, useRef } from 'react';
-import { ReactFlowProvider, useReactFlow } from '@xyflow/react';
+import React, { useCallback, useRef, useEffect } from 'react';
+import { ReactFlowProvider, useReactFlow, Node, Edge } from '@xyflow/react';
 import { useNodeEditor } from '../hooks/useNodeEditor';
 import { useNodeLayoutManager } from '../hooks/node/useNodeLayoutManager';
 import { useLayoutOperations } from '../hooks/flow/useLayoutOperations';
@@ -14,6 +14,10 @@ import { NodeEditorProvider } from '../contexts/NodeEditorContext';
 import { toast } from 'sonner';
 
 interface NodeEditorProps {
+  nodes?: Node[];
+  edges?: Edge[];
+  setNodes?: React.Dispatch<React.SetStateAction<Node[]>>;
+  setEdges?: React.Dispatch<React.SetStateAction<Edge[]>>;
   saveGraph: () => boolean;
   loadGraph: () => boolean;
   deleteGraph: (name: string) => boolean;
@@ -23,6 +27,10 @@ interface NodeEditorProps {
 }
 
 const NodeEditorContent: React.FC<NodeEditorProps> = ({
+  nodes: propNodes,
+  edges: propEdges,
+  setNodes: propSetNodes,
+  setEdges: propSetEdges,
   saveGraph,
   loadGraph,
   deleteGraph,
@@ -34,10 +42,10 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   const reactFlowWrapper = useRef<HTMLDivElement>(null);
 
   const {
-    nodes,
-    edges,
-    setNodes,
-    setEdges,
+    nodes: localNodes,
+    edges: localEdges,
+    setNodes: localSetNodes,
+    setEdges: localSetEdges,
     onNodesChange,
     onEdgesChange,
     onConnect,
@@ -51,6 +59,18 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     clearCanvas,
     initializeCanvas
   } = useNodeEditor();
+
+  // Use prop state if available, otherwise fall back to local state
+  const nodes = propNodes !== undefined ? propNodes : localNodes;
+  const edges = propEdges !== undefined ? propEdges : localEdges;
+  const setNodes = propSetNodes || localSetNodes;
+  const setEdges = propSetEdges || localSetEdges;
+
+  // Debug logging to track state source
+  useEffect(() => {
+    const source = propNodes !== undefined ? 'PROPS' : 'LOCAL';
+    console.log(`NodeEditor: Using ${source} state - nodes: ${nodes.length}, edges: ${edges.length}`);
+  }, [nodes, edges, propNodes]);
 
   // Add layout management
   const { arrangeNodesInLayout } = useNodeLayoutManager(nodes, edges, setNodes);

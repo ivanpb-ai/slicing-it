@@ -80,6 +80,10 @@ const MainContent = ({
       
       <ReactFlowProvider>
         <NodeEditor 
+          nodes={nodes}
+          edges={edges}
+          setNodes={setNodes}
+          setEdges={setEdges}
           saveGraph={handleSave}
           loadGraph={handleLoad}
           exportGraph={handleExport}
