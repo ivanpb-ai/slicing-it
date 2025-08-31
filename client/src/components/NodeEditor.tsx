@@ -256,23 +256,17 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       
       console.log(`Processed ${processedNodes.length} nodes and ${processedEdges.length} edges for loading`);
       
-      // Set processed nodes first
+      // FIXED: Set nodes and edges immediately to prevent unresponsiveness
+      setNodes(processedNodes);
+      setEdges(processedEdges);
+      
+      // Minimal delay only for DOM rendering, then fit view
       setTimeout(() => {
-        setNodes(processedNodes);
-        
-        // Then set processed edges with delay to ensure nodes are rendered
-        setTimeout(() => {
-          setEdges(processedEdges);
-          
-          // Fit view after loading (unless prevented by manual layout)
-          setTimeout(() => {
-            if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
-              reactFlowInstance.fitView({ padding: 0.2 });
-            }
-            toast.success(`Graph "${name}" loaded successfully`);
-          }, 200);
-        }, 100);
-      }, 50);
+        if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
+          reactFlowInstance.fitView({ padding: 0.2 });
+        }
+        toast.success(`Graph "${name}" loaded successfully`);
+      }, 100);
       
       return true;
     } catch (error) {
