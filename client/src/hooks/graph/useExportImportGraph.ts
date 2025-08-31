@@ -329,10 +329,18 @@ export const useExportImportGraph = (
               }
             }));
             
-            setNodes(processedNodes);
-            setEdges(parsedData.edges);
+            console.log('Processed nodes with types:', processedNodes.map(n => ({ id: n.id, type: n.type, dataType: n.data?.type })));
             
-            // Dispatch event after setting nodes/edges
+            // Set nodes first and wait for them to render before setting edges
+            setNodes(processedNodes);
+            
+            // Wait longer for nodes to fully render before setting edges
+            setTimeout(() => {
+              console.log('Setting imported edges:', parsedData.edges.length);
+              setEdges(parsedData.edges);
+            }, 300);
+            
+            // Dispatch event after setting edges
             setTimeout(() => {
               console.log('Dispatching graph-loaded event after import');
               window.dispatchEvent(new CustomEvent('graph-loaded'));
@@ -350,7 +358,7 @@ export const useExportImportGraph = (
                   }
                 }, 500);
               }
-            }, 200);
+            }, 500);
           }, 100);
           
           toast.success('Graph imported successfully');
