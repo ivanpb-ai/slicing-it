@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef } from 'react';
-import { Node, Edge, Connection, useReactFlow } from '@xyflow/react';
+import { Node, Edge, Connection, useReactFlow, applyNodeChanges } from '@xyflow/react';
 import { toast } from 'sonner';
 import { NodeType } from '../types/nodeTypes';
 import { useNodeCreation } from './node/useNodeCreation';
@@ -28,39 +28,9 @@ export const useNodeEditor = () => {
 
   const onNodesChange = useCallback((changes: any) => {
     console.log('useNodeEditor: onNodesChange called with changes:', changes);
-    setNodes((nds) => {
-      const updatedNodes = nds.map(node => {
-        const change = changes.find((c: any) => c.id === node.id);
-        if (change) {
-          console.log(`useNodeEditor: Processing change for node ${change.id}:`, change);
-          if (change.type === 'position' && change.position) {
-            // CRITICAL FIX: Preserve ALL node properties during position update
-            return { 
-              ...node, 
-              position: change.position,
-              // Force React to recognize this as a new object for re-render
-              __updateKey: Date.now()
-            };
-          }
-          if (change.type === 'select') {
-            return { ...node, selected: change.selected };
-          }
-          if (change.type === 'remove') {
-            return null;
-          }
-          if (change.type === 'dimensions') {
-            return { ...node, measured: change.dimensions };
-          }
-          if (change.type === 'replace') {
-            // Handle ReactFlow replace events
-            return { ...node, ...change.item };
-          }
-        }
-        return node;
-      }).filter(Boolean) as Node[];
-      
-      return updatedNodes;
-    });
+    console.log('useNodeEditor: Delegating to applyNodeChanges');
+    // CRITICAL FIX: Use ReactFlow's built-in applyNodeChanges for proper handling
+    setNodes((nds) => applyNodeChanges(changes, nds));
   }, []);
 
   const onEdgesChange = useCallback((changes: any) => {
