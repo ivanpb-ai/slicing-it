@@ -14,7 +14,10 @@ export const useNodeLayoutManager = (
   const reactFlowInstance = useReactFlow();
 
   const arrangeNodesInLayout = useCallback(() => {
-    if (nodes.length === 0) {
+    // Get fresh nodes from ReactFlow instance to avoid stale closure
+    const currentNodes = reactFlowInstance?.getNodes() || nodes;
+    
+    if (currentNodes.length === 0) {
       toast.info('No nodes to arrange');
       return;
     }
@@ -43,12 +46,12 @@ export const useNodeLayoutManager = (
     try {
       
       // AGGRESSIVE duplicate filtering - this prevents React key warnings
-      const uniqueInputNodes = nodes.filter((node, index) => 
-        nodes.findIndex(n => n.id === node.id) === index
+      const uniqueInputNodes = currentNodes.filter((node, index) => 
+        currentNodes.findIndex(n => n.id === node.id) === index
       );
       
-      if (nodes.length !== uniqueInputNodes.length) {
-        console.log(`🧹 Pre-layout duplicate filtering: ${nodes.length} -> ${uniqueInputNodes.length} nodes`);
+      if (currentNodes.length !== uniqueInputNodes.length) {
+        console.log(`🧹 Pre-layout duplicate filtering: ${currentNodes.length} -> ${uniqueInputNodes.length} nodes`);
       }
       
       const nodesCopy = uniqueInputNodes.map(node => ({...node}));
@@ -112,7 +115,7 @@ export const useNodeLayoutManager = (
       console.error('Layout error:', error);
       
       try {
-        const fallbackNodes = arrangeNodes(nodes, edges, {
+        const fallbackNodes = arrangeNodes(currentNodes, edges, {
           type: 'grid' as LayoutType,
           spacing: 250,              // Proper fallback spacing
           preventOverlap: true,
@@ -130,7 +133,7 @@ export const useNodeLayoutManager = (
         toast.error('Failed to arrange nodes');
       }
     }
-  }, [nodes, edges, setNodes, reactFlowInstance]);
+  }, [edges, setNodes, setEdges]); // FIXED: Removed nodes to prevent infinite callback recreation
 
   return { arrangeNodesInLayout };
 };
