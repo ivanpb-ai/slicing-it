@@ -257,8 +257,8 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         id: edge.id || `e-${edge.source}-${edge.target}-${Date.now()}`,
         source: String(edge.source),
         target: String(edge.target),
-        sourceHandle: edge.sourceHandle || 'bottom', // Default source handle
-        targetHandle: edge.targetHandle || 'top',    // Default target handle
+        sourceHandle: edge.sourceHandle || 'bottom-source', // Correct handle ID
+        targetHandle: edge.targetHandle || 'top-target',    // Correct handle ID
         type: edge.type || 'default',
         style: edge.style || { stroke: '#2563eb', strokeWidth: 3 }
       }));
