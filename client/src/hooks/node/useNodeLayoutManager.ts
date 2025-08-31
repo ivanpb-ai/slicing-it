@@ -3,6 +3,7 @@ import { useCallback } from 'react';
 import { Node, Edge, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
 import { arrangeNodes, LayoutType } from '../../utils/flowData/layouts';
+import { arrangeNodesInBalancedTree } from '../../utils/flowData/layouts/balancedTreeLayout';
 
 export const useNodeLayoutManager = (
   nodes: Node[],
@@ -47,38 +48,51 @@ export const useNodeLayoutManager = (
       
       // Special handling for balanced-tree layout that returns cleaned edges
       if (layoutOptions.type === 'balanced-tree') {
-        const balancedResult = require('../../utils/flowData/layouts/balancedTreeLayout').arrangeNodesInBalancedTree(nodesCopy, edges, layoutOptions);
+        const balancedResult = arrangeNodesInBalancedTree(nodesCopy, edges, layoutOptions);
         
         console.log(`🧹 Layout returned ${balancedResult.nodes.length} nodes and ${balancedResult.cleanedEdges.length} cleaned edges (was ${edges.length})`);
         
         if (balancedResult.nodes?.length > 0) {
-          setNodes(balancedResult.nodes);
+          // Ensure no duplicate nodes
+          const uniqueNodes = balancedResult.nodes.filter((node, index, arr) => 
+            arr.findIndex(n => n.id === node.id) === index
+          );
+          
+          console.log(`🧹 Filtered duplicates: ${balancedResult.nodes.length} -> ${uniqueNodes.length} nodes`);
+          
+          setNodes(uniqueNodes);
           
           // Update edges with cleaned edges if setEdges is available
           if (setEdges && balancedResult.cleanedEdges) {
-            console.log(`🧹 Updating edges: ${edges.length} -> ${balancedResult.cleanedEdges.length}`);
-            setEdges(balancedResult.cleanedEdges);
+            // Ensure no duplicate edges
+            const uniqueEdges = balancedResult.cleanedEdges.filter((edge, index, arr) => 
+              arr.findIndex(e => e.id === edge.id) === index
+            );
+            
+            console.log(`🧹 Updating edges: ${edges.length} -> ${uniqueEdges.length} (filtered duplicates)`);
+            setEdges(uniqueEdges);
           }
           
-          return balancedResult.nodes;
+          return uniqueNodes;
         }
       } else {
         // Use normal arrangement for other layout types
         const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
         if (arrangedNodes?.length > 0) {
-          setNodes(arrangedNodes);
-          return arrangedNodes;
+          // Ensure no duplicate nodes for non-balanced layouts too
+          const uniqueNodes = arrangedNodes.filter((node, index, arr) => 
+            arr.findIndex(n => n.id === node.id) === index
+          );
+          
+          console.log(`🧹 Regular layout - filtered duplicates: ${arrangedNodes.length} -> ${uniqueNodes.length} nodes`);
+          setNodes(uniqueNodes);
+          return uniqueNodes;
         }
       }
       
-      // Handle success for special layouts
-      toast.success('Nodes arranged in balanced hierarchical tree layout');
-      
-      requestAnimationFrame(() => {
-        window.dispatchEvent(new CustomEvent('node-added'));
-        window.dispatchEvent(new CustomEvent('layout-changed'));
-        window.dispatchEvent(new CustomEvent('force-cell-visibility'));
-      });
+      // If we reach here, no layout was applied
+      console.warn('No layout was applied - this should not happen');
+      toast.warning('Layout arrangement did not complete');
     } catch (error) {
       console.error('Layout error:', error);
       
