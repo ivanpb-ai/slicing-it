@@ -144,20 +144,23 @@ export const arrangeNodesInBalancedTree = (
   const positionedNodes: { id: string; position: { x: number; y: number } }[] = [];
   const nodePositionMap: Record<string, { x: number; y: number }> = {};
   
-  // Pre-process to find all DNN, RRP, cell-area, and S-NSSAI nodes and their levels
+  // Pre-process to find all DNN, RRP, cell-area, S-NSSAI, and 5QI nodes and their levels
   const allDnnNodes: string[] = [];
   const allRrpNodes: string[] = [];
   const allCellAreaNodes: string[] = [];
   const allSNssaiNodes: string[] = [];
+  const allFiveQiNodes: string[] = [];
   let dnnLevel = -1;
   let rrpLevel = -1;
   let cellAreaLevel = -1;
   let sNssaiLevel = -1;
+  let fiveQiLevel = -1;
   Object.entries(nodesByLevel).forEach(([levelStr, nodesInLevel]) => {
     const dnnNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('dnn-'));
     const rrpNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('rrp-') && !nodeId.includes('rrpmember'));
     const cellAreaNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('cell-area-'));
     const sNssaiNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('s-nssai-'));
+    const fiveQiNodesInLevel = nodesInLevel.filter(nodeId => nodeId.includes('fiveqi-'));
     
     if (dnnNodesInLevel.length > 0) {
       allDnnNodes.push(...dnnNodesInLevel);
@@ -174,6 +177,10 @@ export const arrangeNodesInBalancedTree = (
     if (sNssaiNodesInLevel.length > 0) {
       allSNssaiNodes.push(...sNssaiNodesInLevel);
       sNssaiLevel = parseInt(levelStr);
+    }
+    if (fiveQiNodesInLevel.length > 0) {
+      allFiveQiNodes.push(...fiveQiNodesInLevel);
+      fiveQiLevel = parseInt(levelStr);
     }
   });
   // Simplified node counting for performance
@@ -238,28 +245,20 @@ export const arrangeNodesInBalancedTree = (
             const isRrpNode = nodeId.includes('rrp-') && !nodeId.includes('rrpmember');
             const isCellAreaNode = nodeId.includes('cell-area-');
             const isSNssaiNode = nodeId.includes('s-nssai-');
+            const isFiveQiNode = nodeId.includes('fiveqi-');
             
             if (isDnnNode && level === dnnLevel) {
-              // Position DNN nodes close to their parent instead of unified horizontal group
-              if (siblings.length === 1) {
-                // Single DNN child: position directly under parent
-                const position = { x: parentPos.x, y };
-                positionedNodes.push({ id: nodeId, position });
-                nodePositionMap[nodeId] = position;
-                // Single DNN positioned
-              } else {
-                // Multiple DNN siblings: spread around parent with close spacing
-                const nodeIndex = siblings.indexOf(nodeId);
-                const spacing = 250; // Closer spacing to keep near parent
-                const totalWidth = (siblings.length - 1) * spacing;
-                const startX = parentPos.x - totalWidth / 2;
-                const x = startX + nodeIndex * spacing;
-                
-                const position = { x, y };
-                positionedNodes.push({ id: nodeId, position });
-                nodePositionMap[nodeId] = position;
-                // Multiple DNN positioned
-              }
+              // SPECIAL CASE: Position ALL DNN nodes with consistent spacing across the entire level
+              const nodeIndex = allDnnNodes.indexOf(nodeId);
+              const dnnSpacing = 300; // Consistent spacing for DNN nodes
+              const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
+              const startX = 0 - totalDnnWidth / 2; // Center around X=0
+              const x = startX + nodeIndex * dnnSpacing;
+              
+              const position = { x, y };
+              positionedNodes.push({ id: nodeId, position });
+              nodePositionMap[nodeId] = position;
+              console.log(`✓ DNN node ${nodeId} positioned at (${x}, ${y})`)
             } else if (isRrpNode && level === rrpLevel) {
               // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
               const nodeIndex = allRrpNodes.indexOf(nodeId);
@@ -305,6 +304,18 @@ export const arrangeNodesInBalancedTree = (
                 nodePositionMap[nodeId] = position;
                 console.log(`✓ S-NSSAI ${nodeId} positioned near parent at (${x}, ${y})`);
               }
+            } else if (isFiveQiNode && level === fiveQiLevel) {
+              // SPECIAL CASE: Position ALL 5QI nodes with consistent spacing across the entire level
+              const nodeIndex = allFiveQiNodes.indexOf(nodeId);
+              const fiveQiSpacing = 250; // Tight spacing for 5QI nodes
+              const totalFiveQiWidth = (allFiveQiNodes.length - 1) * fiveQiSpacing;
+              const startX = 0 - totalFiveQiWidth / 2; // Center around X=0
+              const x = startX + nodeIndex * fiveQiSpacing;
+              
+              const position = { x, y };
+              positionedNodes.push({ id: nodeId, position });
+              nodePositionMap[nodeId] = position;
+              console.log(`✓ 5QI node ${nodeId} positioned at (${x}, ${y})`);
             } else {
               // Check for RRP-member nodes first (both single and multiple)
               const isRrpMember = nodeId.includes('rrpmember');
