@@ -1,6 +1,6 @@
 
 import { useCallback } from 'react';
-import { Node, Edge } from '@xyflow/react';
+import { Node, Edge, useReactFlow } from '@xyflow/react';
 import { arrangeNodes, LayoutOptions } from '@/utils/flowData/layouts';
 import { toast } from 'sonner';
 import { getInitialNodes, getInitialEdges } from '@/utils/flowData/initialNodes';
@@ -16,6 +16,8 @@ export const useCanvasOperations = (
   setEdges: React.Dispatch<React.SetStateAction<Edge[]>>,
   options: CanvasOperationsOptions = {}
 ) => {
+  const reactFlowInstance = useReactFlow();
+  
   // Ultra-optimized layout options for compact balanced tree layout
   const defaultLayoutOptions: LayoutOptions = {
     type: 'balanced-tree',
@@ -45,9 +47,14 @@ export const useCanvasOperations = (
       return;
     }
     
-    // Force immediate state clearing
-    setNodes([]);
-    setEdges([]);
+    // CRITICAL FIX: Use ReactFlow instance to maintain interactivity
+    if (reactFlowInstance) {
+      reactFlowInstance.setNodes([]);
+      reactFlowInstance.setEdges([]);
+    } else {
+      setNodes([]);
+      setEdges([]);
+    }
     
     // Dispatch clear event
     window.dispatchEvent(new CustomEvent('canvas-cleared'));
@@ -65,9 +72,14 @@ export const useCanvasOperations = (
     const initialNodes = getInitialNodes();
     const initialEdges = getInitialEdges();
     
-    // First set the initial nodes and edges
-    setNodes(initialNodes);
-    setEdges(initialEdges);
+    // CRITICAL FIX: Use ReactFlow instance for initialization
+    if (reactFlowInstance) {
+      reactFlowInstance.setNodes(initialNodes);
+      reactFlowInstance.setEdges(initialEdges);
+    } else {
+      setNodes(initialNodes);
+      setEdges(initialEdges);
+    }
     
     // Arrange immediately without delay for better performance
     const arrangedNodes = arrangeNodes(
@@ -88,7 +100,12 @@ export const useCanvasOperations = (
     );
     
     if (arrangedNodes.length > 0) {
-      setNodes(arrangedNodes);
+      // CRITICAL FIX: Use ReactFlow instance for arranged nodes
+      if (reactFlowInstance) {
+        reactFlowInstance.setNodes(arrangedNodes);
+      } else {
+        setNodes(arrangedNodes);
+      }
       toast.success('Canvas initialized with balanced hierarchical tree layout');
     }
     
@@ -142,8 +159,12 @@ export const useCanvasOperations = (
         };
       });
       
-      // Set the nodes with the updated positions
-      setNodes(updatedNodes);
+      // CRITICAL FIX: Use ReactFlow instance for arrange
+      if (reactFlowInstance) {
+        reactFlowInstance.setNodes(updatedNodes);
+      } else {
+        setNodes(updatedNodes);
+      }
       
       toast.success('Nodes arranged in balanced hierarchical tree layout');
       

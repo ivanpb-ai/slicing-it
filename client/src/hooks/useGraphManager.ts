@@ -58,9 +58,14 @@ export const useGraphManager = () => {
       
       console.log(`Setting ${uniqueNodes.length} unique nodes and ${uniqueEdges.length} unique edges`);
       
-      // Set nodes and edges immediately without delays for better performance
-      setNodes(uniqueNodes);
-      setEdges(uniqueEdges);
+      // CRITICAL FIX: Use ReactFlow instance to maintain interactivity after load
+      if (reactFlowInstance) {
+        reactFlowInstance.setNodes(uniqueNodes);
+        reactFlowInstance.setEdges(uniqueEdges);
+      } else {
+        setNodes(uniqueNodes);
+        setEdges(uniqueEdges);
+      }
       
       // Trigger events and finish
       window.dispatchEvent(new CustomEvent('graph-loaded'));
@@ -119,12 +124,21 @@ export const useGraphManager = () => {
       // Set nodes first
       setTimeout(() => {
         console.log(`Setting ${graphData.nodes.length} imported nodes`);
-        setNodes(graphData.nodes);
+        // CRITICAL FIX: Use ReactFlow instance for import
+        if (reactFlowInstance) {
+          reactFlowInstance.setNodes(graphData.nodes);
+        } else {
+          setNodes(graphData.nodes);
+        }
         
         // Then set edges
         setTimeout(() => {
           console.log(`Setting ${graphData.edges.length} imported edges`);
-          setEdges(graphData.edges);
+          if (reactFlowInstance) {
+            reactFlowInstance.setEdges(graphData.edges);
+          } else {
+            setEdges(graphData.edges);
+          }
           
           // Notify and reset loading
           window.dispatchEvent(new CustomEvent('graph-loaded'));
