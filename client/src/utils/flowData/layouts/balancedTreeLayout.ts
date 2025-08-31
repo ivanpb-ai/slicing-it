@@ -135,6 +135,9 @@ export const arrangeNodesInBalancedTree = (
   
   console.log('Level assignments:', nodePositions);
   console.log('Parent-child relationships:', allParentsMap);
+  console.log(`🔧 DEBUG: Found ${allDnnNodes.length} DNN nodes:`, allDnnNodes);
+  console.log(`🔧 DEBUG: Found ${allFiveQiNodes.length} 5QI nodes:`, allFiveQiNodes);
+  console.log(`🔧 DEBUG: DNN level: ${dnnLevel}, 5QI level: ${fiveQiLevel}`);
   
   // Removed excessive debug logging for performance
 
@@ -258,7 +261,7 @@ export const arrangeNodesInBalancedTree = (
               const position = { x, y };
               positionedNodes.push({ id: nodeId, position });
               nodePositionMap[nodeId] = position;
-              console.log(`✓ DNN node ${nodeId} positioned at (${x}, ${y})`)
+              console.log(`🔧 DNN GLOBAL: ${nodeId} at index ${nodeIndex}/${allDnnNodes.length} positioned at (${x}, ${y}), spacing=${dnnSpacing}`);
             } else if (isRrpNode && level === rrpLevel) {
               // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
               const nodeIndex = allRrpNodes.indexOf(nodeId);
@@ -315,7 +318,7 @@ export const arrangeNodesInBalancedTree = (
               const position = { x, y };
               positionedNodes.push({ id: nodeId, position });
               nodePositionMap[nodeId] = position;
-              console.log(`✓ 5QI node ${nodeId} positioned at (${x}, ${y})`);
+              console.log(`🔧 5QI GLOBAL: ${nodeId} at index ${nodeIndex}/${allFiveQiNodes.length} positioned at (${x}, ${y}), spacing=${fiveQiSpacing}`);
             } else {
               // Check for RRP-member nodes first (both single and multiple)
               const isRrpMember = nodeId.includes('rrpmember');
@@ -351,7 +354,7 @@ export const arrangeNodesInBalancedTree = (
                   const position = { x, y: rrpMemberY };
                   positionedNodes.push({ id: nodeId, position });
                   nodePositionMap[nodeId] = position;
-                  console.log(`✓ RRP-member ${nodeId} positioned BELOW parent at (${x}, ${rrpMemberY})`);
+                  console.log(`🔧 RRP-MEMBER: ${nodeId} positioned at (${x}, ${rrpMemberY}) - parent at (${parentPos.x}, ${parentPos.y})`);
                 }
               } else if (siblings.length === 1) {
                 // Single child: directly under parent (for non-RRP member nodes)
