@@ -342,18 +342,30 @@ export const arrangeNodesInBalancedTree = (
                   const nodeIndex = siblings.indexOf(nodeId);
                   const tightSpacing = 200; // Spacing between RRP-member nodes
                   
-                  // Center children around parent center with visual offset
-                  const totalWidth = (siblings.length - 1) * tightSpacing;
+                  // Center children around parent center with correct calculation
+                  const parentCenterX = parentPos.x + 90; // Parent's visual center
                   
-                  // Calculate parent's visual center (parent.x is top-left, we need center)
-                  const parentCenterX = parentPos.x + 90; // Half of RRP node width (180px / 2)
+                  let x: number;
+                  let childCenterX: number;
                   
-                  // Spread children symmetrically around parent's visual center
-                  const startX = parentCenterX - totalWidth / 2;
-                  const childCenterX = startX + nodeIndex * tightSpacing;
-                  
-                  // Convert back to top-left positioning (subtract half of child width)
-                  const x = childCenterX - 90; // Half of RRP member node width (180px / 2)
+                  // For symmetric positioning around parent center
+                  if (siblings.length === 2) {
+                    // For 2 children: position them equally spaced around parent center
+                    const halfSpacing = tightSpacing / 2; // 100px each side of center
+                    childCenterX = nodeIndex === 0 
+                      ? parentCenterX - halfSpacing  // First child to the left
+                      : parentCenterX + halfSpacing; // Second child to the right
+                    
+                    // Convert to top-left positioning
+                    x = childCenterX - 90; // Subtract half node width
+                    console.log(`🎯 CENTERING: Parent center ${parentCenterX}, child ${nodeIndex} center ${childCenterX}, final x ${x}`);
+                  } else {
+                    // For other counts, use the original logic
+                    const totalWidth = (siblings.length - 1) * tightSpacing;
+                    const startX = parentCenterX - totalWidth / 2;
+                    childCenterX = startX + nodeIndex * tightSpacing;
+                    x = childCenterX - 90;
+                  }
                   
                   const position = { x, y: rrpMemberY };
                   positionedNodes.push({ id: nodeId, position });
