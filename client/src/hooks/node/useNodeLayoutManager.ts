@@ -14,10 +14,7 @@ export const useNodeLayoutManager = (
   const reactFlowInstance = useReactFlow();
 
   const arrangeNodesInLayout = useCallback(() => {
-    console.log('🎯 useNodeLayoutManager: arrangeNodesInLayout called with', nodes.length, 'nodes');
-    
     if (nodes.length === 0) {
-      console.log('🎯 useNodeLayoutManager: No nodes to arrange');
       toast.info('No nodes to arrange');
       return;
     }
@@ -86,8 +83,7 @@ export const useNodeLayoutManager = (
             setEdges(uniqueEdges);
           }
           
-          // Dispatch notification immediately for better performance
-          window.dispatchEvent(new CustomEvent('nodes-arranged'));
+          // Event dispatch removed - was causing unresponsiveness
           
           return uniqueNodes;
         }

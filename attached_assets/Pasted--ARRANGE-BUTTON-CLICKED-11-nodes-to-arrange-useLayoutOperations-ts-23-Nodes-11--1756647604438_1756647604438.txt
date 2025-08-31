@@ -1,0 +1,34 @@
+🔥 ARRANGE BUTTON CLICKED: 11 nodes to arrange
+useLayoutOperations.ts:23 🔥 Nodes: (11) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+useLayoutOperations.ts:45 🔥 CALLING arrangeNodesInLayout()...
+useNodeLayoutManager.ts:17 🎯 useNodeLayoutManager: arrangeNodesInLayout called with 11 nodes
+useNodeLayoutManager.ts:47 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+useNodeLayoutManager.ts:48 Layout options: {type: 'balanced-tree', horizontalSpacing: 400, verticalSpacing: 180, nodeWidth: 180, nodeHeight: 120, …}
+balancedTreeLayout.ts:31 🌟 arrangeNodesInBalancedTree: ENTRY POINT with 11 nodes
+balancedTreeLayout.ts:50 Available node IDs: (11) ['network-1756647518237-9431', 'cell-area-1', 'cell-area-2', 'rrp-1', 'rrp-2', 'rrpmember-1756647528622-7585', 'rrpmember-1756647531060-8103', 's-nssai-1', 's-nssai-2', 'dnn-1', 'dnn-2']
+balancedTreeLayout.ts:65 Filtered edges: 10 -> 10 valid edges
+balancedTreeLayout.ts:99 Found 1 root nodes
+balancedTreeLayout.ts:143 Level assignments: {network-1756647518237-9431: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1756647528622-7585: {…}, s-nssai-1: {…}, …}
+balancedTreeLayout.ts:144 Parent-child relationships: {cell-area-1: Array(1), cell-area-2: Array(1), rrp-1: Array(1), rrp-2: Array(1), rrpmember-1756647528622-7585: Array(1), …}
+balancedTreeLayout.ts:329 ✓ Single RRP-member rrpmember-1756647528622-7585 positioned BELOW parent at (-200, 850)
+balancedTreeLayout.ts:329 ✓ Single RRP-member rrpmember-1756647531060-8103 positioned BELOW parent at (200, 850)
+balancedTreeLayout.ts:301 ✓ Single S-NSSAI s-nssai-1 centered under parent at (-200, 1370)
+balancedTreeLayout.ts:301 ✓ Single S-NSSAI s-nssai-2 centered under parent at (200, 1370)
+balancedTreeLayout.ts:401 🎯 Graph centering: minX=-200, maxX=200, width=400, centerOffset=0
+balancedTreeLayout.ts:415 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 11 nodes
+balancedTreeLayout.ts:416 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:417 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+balancedTreeLayout.ts:418 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:65 🧹 Layout returned 11 nodes and 10 cleaned edges (was 10)
+useNodeLayoutManager.ts:73 🧹 Filtered duplicates: 11 -> 11 nodes
+useNodeLayoutManager.ts:85 🧹 Updating edges: 10 -> 10 (filtered duplicates)
+useLayoutOperations.ts:48 🔥 arrangeNodesInLayout() RETURNED
+useLayoutOperations.ts:54 After arrangement: Found 11 visible nodes, expected 11
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 11, edges: 10
+Index.tsx:160 MainContentWithGraphOperations: edges updated 10
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 10 edges
+Index.tsx:45 Index component: nodes state updated, count: 11
+Index.tsx:47 Index component: First node: {"id":"network-1756647518237-9431","type":"customNode","position":{"x":0,"y":100},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1756647518237-9431"}}
+Index.tsx:74 Index component: edges state updated, count: 10
+Index.tsx:76 Index component: First edge: {"id":"unified-network-1756647518237-9431-cell-area-1","source":"network-1756647518237-9431","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 10 edges
