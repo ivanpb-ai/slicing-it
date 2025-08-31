@@ -184,10 +184,7 @@ export const arrangeNodesInBalancedTree = (
     }
   });
   
-  // Debug logging after initialization
-  console.log(`🔧 DEBUG: Found ${allDnnNodes.length} DNN nodes:`, allDnnNodes);
-  console.log(`🔧 DEBUG: Found ${allFiveQiNodes.length} 5QI nodes:`, allFiveQiNodes);
-  console.log(`🔧 DEBUG: DNN level: ${dnnLevel}, 5QI level: ${fiveQiLevel}`);
+  // Node collections initialized for layout processing
   
   // Simplified node counting for performance
   
@@ -264,7 +261,7 @@ export const arrangeNodesInBalancedTree = (
               const position = { x, y };
               positionedNodes.push({ id: nodeId, position });
               nodePositionMap[nodeId] = position;
-              console.log(`🔧 DNN GLOBAL: ${nodeId} at index ${nodeIndex}/${allDnnNodes.length} positioned at (${x}, ${y}), spacing=${dnnSpacing}`);
+              // DNN node positioned with global spacing
             } else if (isRrpNode && level === rrpLevel) {
               // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
               const nodeIndex = allRrpNodes.indexOf(nodeId);
@@ -321,7 +318,7 @@ export const arrangeNodesInBalancedTree = (
               const position = { x, y };
               positionedNodes.push({ id: nodeId, position });
               nodePositionMap[nodeId] = position;
-              console.log(`🔧 5QI GLOBAL: ${nodeId} at index ${nodeIndex}/${allFiveQiNodes.length} positioned at (${x}, ${y}), spacing=${fiveQiSpacing}`);
+              // 5QI node positioned with global spacing
             } else {
               // Check for RRP-member nodes first (both single and multiple)
               const isRrpMember = nodeId.includes('rrpmember');
@@ -336,7 +333,7 @@ export const arrangeNodesInBalancedTree = (
                   const position = { x: parentPos.x, y: rrpMemberY };
                   positionedNodes.push({ id: nodeId, position });
                   nodePositionMap[nodeId] = position;
-                  console.log(`✓ Single RRP-member ${nodeId} positioned BELOW parent at (${parentPos.x}, ${rrpMemberY})`);
+                  // Single RRP member positioned below parent
                 } else {
                   // Multiple RRP members: spread symmetrically below parent
                   const nodeIndex = siblings.indexOf(nodeId);
@@ -358,7 +355,7 @@ export const arrangeNodesInBalancedTree = (
                     
                     // Convert to top-left positioning
                     x = childCenterX - 90; // Subtract half node width
-                    console.log(`🎯 CENTERING: Parent center ${parentCenterX}, child ${nodeIndex} center ${childCenterX}, final x ${x}`);
+                    // Children positioned symmetrically around parent center
                   } else {
                     // For other counts, use the original logic
                     const totalWidth = (siblings.length - 1) * tightSpacing;
@@ -370,7 +367,7 @@ export const arrangeNodesInBalancedTree = (
                   const position = { x, y: rrpMemberY };
                   positionedNodes.push({ id: nodeId, position });
                   nodePositionMap[nodeId] = position;
-                  console.log(`🔧 RRP-MEMBER: ${nodeId} positioned at (${x}, ${rrpMemberY}) - parent center at (${parentCenterX}, ${parentPos.y}), child center at (${childCenterX})`);
+                  // RRP member positioned below parent
                 }
               } else if (siblings.length === 1) {
                 // Single child: directly under parent (for non-RRP member nodes)
