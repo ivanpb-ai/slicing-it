@@ -1,0 +1,1000 @@
+ Position: 903.4253280577307
+ Position: 972.6862929139845
+ Position: 1083.425328057731
+ Position: 792.6862929139846
+ Position: 903.4253280577318
+ Position: 972.6862929139841
+ Position: 723.4253280577309
+ Position: 1212.6862929139847
+ Position: 903.4253280577306
+ Position: 972.6862929139845
+ Position: 1143.425328057731
+ Position: 732.6862929139846
+ Position: 903.4253280577304
+ Position: 972.6862929139838
+ Position: 663.4253280577309
+ Position: 1212.6862929139847
+ Position: 903.4253280577304
+ Position: 972.6862929139846
+ Position: 1143.425328057731
+ Position: 732.6862929139846
+ Position: 903.4253280577321
+ Position: 972.6862929139837
+ Position: 663.4253280577309
+ Position: 1272.6862929139847
+ Position: 903.4253280577303
+ Position: 972.6862929139847
+ Position: 1203.425328057731
+ Position: 672.6862929139846
+ Position: 903.4253280577304
+ Position: 972.6862929139835
+ Position: 603.4253280577309
+ Position: 1272.6862929139847
+ Position: 903.4253280577302
+ Position: 972.6862929139847
+ Position: 1203.425328057731
+ Position: 672.6862929139846
+ Position: 903.4253280577327
+ Position: 972.6862929139834
+ Position: 603.4253280577309
+ Position: 1332.6862929139847
+ Position: 903.42532805773
+ Position: 972.6862929139875
+ Position: 1263.425328057731
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-2
+ useNodeDragDrop: Detected parent: s-nssai-2
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-2
+ useNodeDragDrop: Parent node found: s-nssai
+ Desired position: {"x":897.6537754816804,"y":1063.6538480148224}
+ Position: 957.6537754816804
+ Position: 1063.6538480148224
+ Position: 897.6537754816804
+ Position: 1123.6538480148224
+ Position: 837.6537754816804
+ Position: 1063.6538480148224
+ Position: 897.6537754816804
+ Position: 1003.6538480148224
+ Position: 957.6537754816804
+ Position: 1063.6538480148224
+ Position: 897.6537754816804
+ Position: 1123.6538480148224
+ Position: 837.6537754816804
+ Position: 1063.6538480148224
+ Position: 897.6537754816804
+ Position: 1003.6538480148224
+ Position: 1017.6537754816804
+ Position: 1063.6538480148224
+ Position: 897.6537754816806
+ Position: 1183.6538480148224
+ Position: 777.6537754816804
+ Position: 1063.6538480148224
+ Position: 897.6537754816801
+ Position: 943.6538480148224
+ Position: 1017.6537754816804
+ Position: 1063.6538480148224
+ Position: 897.6537754816803
+ Position: 1183.6538480148224
+ Position: 777.6537754816804
+ Position: 1063.6538480148224
+ Position: 897.6537754816801
+ Position: 943.6538480148224
+ Position: 1077.6537754816804
+ Position: 1063.6538480148222
+ Position: 897.6537754816803
+ Position: 1243.6538480148224
+ useNodeDragDrop: Child position calculated: Object
+ Generated new DNN ID: 3
+ Creating child DNN with ID: 3
+ Creating child dnn node with ID: dnn-3 under parent: s-nssai-2
+ FlowInstance: Rendering with 17 nodes, 15 edges
+ NodeEditor: Using PROPS state - nodes: 17, edges: 15
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+ NodeEditor: Using PROPS state - nodes: 17, edges: 15
+ useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-3
+ UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-3
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 16
+ useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-3
+ UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-3
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge s-nssai-2->dnn-3 already exists
+ UnifiedEdgeManager: Edge s-nssai-2->dnn-3 already exists
+ FlowInstance: Rendering with 17 nodes, 16 edges
+ NodeEditor: Using PROPS state - nodes: 17, edges: 16
+ NodeButton: Started dragging dnn button
+ NodeButton: Set drag data to: dnn
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+ parseDragData: Processing drag data: dnn
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ Desired position: {"x":1212.9582483837148,"y":966.1049686150519}
+ Position: 1272.9582483837148
+ Position: 966.1049686150519
+ Position: 1212.9582483837148
+ Position: 1026.1049686150518
+ Position: 1152.9582483837148
+ Position: 966.1049686150519
+ Position: 1212.9582483837148
+ Position: 906.1049686150519
+ Position: 1272.9582483837148
+ Position: 966.1049686150519
+ Position: 1212.9582483837148
+ Position: 1026.1049686150518
+ Position: 1152.9582483837148
+ Position: 966.1049686150519
+ Position: 1212.9582483837148
+ Position: 906.1049686150519
+ Position: 1332.9582483837148
+ Position: 966.1049686150518
+ Position: 1212.9582483837148
+ Position: 1086.1049686150518
+ Position: 1092.9582483837148
+ Position: 966.104968615052
+ Position: 1212.9582483837146
+ Position: 846.1049686150519
+ Position: 1332.9582483837148
+ Position: 966.1049686150518
+ Position: 1212.9582483837146
+ Position: 1086.1049686150518
+ Position: 1092.9582483837148
+ Position: 966.104968615052
+ Position: 1212.9582483837146
+ Position: 846.1049686150519
+ Position: 1392.9582483837148
+ Position: 966.1049686150517
+ Position: 1212.9582483837146
+ Position: 1146.1049686150518
+ Position: 1032.9582483837148
+ Position: 966.1049686150521
+ Position: 1212.9582483837144
+ Position: 786.1049686150519
+ Position: 1392.9582483837148
+ Position: 966.1049686150517
+ Position: 1212.9582483837148
+ Position: 1146.1049686150518
+ Position: 1032.9582483837148
+ Position: 966.1049686150528
+ Position: 1212.9582483837141
+ Position: 786.1049686150519
+ Position: 1452.9582483837148
+ Position: 966.1049686150516
+ Position: 1212.9582483837148
+ Position: 1206.1049686150518
+ Position: 972.9582483837148
+ Position: 966.1049686150515
+ Position: 1212.958248383714
+ Position: 726.1049686150519
+ Position: 1452.9582483837148
+ Position: 966.1049686150515
+ Position: 1212.9582483837148
+ Position: 1206.1049686150518
+ Position: 972.9582483837148
+ Position: 966.1049686150532
+ Position: 1212.958248383714
+ Position: 726.1049686150519
+ Position: 1512.9582483837148
+ Position: 966.1049686150513
+ Position: 1212.9582483837148
+ Position: 1266.1049686150518
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-6
+ useNodeDragDrop: Detected parent: s-nssai-6
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-6
+ useNodeDragDrop: Parent node found: s-nssai
+ Desired position: {"x":1123.9969219386728,"y":1121.9127468882302}
+ Position: 1183.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386728
+ Position: 1181.9127468882302
+ Position: 1063.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386728
+ Position: 1061.9127468882302
+ Position: 1183.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386728
+ Position: 1181.9127468882302
+ Position: 1063.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386728
+ Position: 1061.9127468882302
+ Position: 1243.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386728
+ Position: 1241.9127468882302
+ Position: 1003.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386726
+ Position: 1001.9127468882302
+ Position: 1243.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386726
+ Position: 1241.9127468882302
+ Position: 1003.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386726
+ Position: 1001.9127468882302
+ Position: 1303.9969219386728
+ Position: 1121.91274688823
+ Position: 1123.9969219386726
+ Position: 1301.9127468882302
+ useNodeDragDrop: Child position calculated: Object
+ Generated new DNN ID: 4
+ Creating child DNN with ID: 4
+ Creating child dnn node with ID: dnn-4 under parent: s-nssai-6
+ FlowInstance: Rendering with 18 nodes, 16 edges
+ NodeEditor: Using PROPS state - nodes: 18, edges: 16
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+ NodeEditor: Using PROPS state - nodes: 18, edges: 16
+ useSimpleChildNodeCreation: Creating edge from s-nssai-6 to dnn-4
+ UnifiedEdgeManager: Creating edge unified-s-nssai-6-dnn-4
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 17
+ useSimpleChildNodeCreation: Creating edge from s-nssai-6 to dnn-4
+ UnifiedEdgeManager: Creating edge unified-s-nssai-6-dnn-4
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge s-nssai-6->dnn-4 already exists
+ UnifiedEdgeManager: Edge s-nssai-6->dnn-4 already exists
+ FlowInstance: Rendering with 18 nodes, 17 edges
+ NodeEditor: Using PROPS state - nodes: 18, edges: 17
+ NodeButton: Started dragging dnn button
+ NodeButton: Set drag data to: dnn
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+ parseDragData: Processing drag data: dnn
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ Desired position: {"x":1256.485776548521,"y":966.1049686150519}
+ Position: 1316.485776548521
+ Position: 966.1049686150519
+ Position: 1256.485776548521
+ Position: 1026.1049686150518
+ Position: 1196.485776548521
+ Position: 966.1049686150519
+ Position: 1256.485776548521
+ Position: 906.1049686150519
+ Position: 1316.485776548521
+ Position: 966.1049686150519
+ Position: 1256.485776548521
+ Position: 1026.1049686150518
+ Position: 1196.485776548521
+ Position: 966.1049686150519
+ Position: 1256.485776548521
+ Position: 906.1049686150519
+ Position: 1376.485776548521
+ Position: 966.1049686150518
+ Position: 1256.485776548521
+ Position: 1086.1049686150518
+ Position: 1136.485776548521
+ Position: 966.104968615052
+ Position: 1256.4857765485208
+ Position: 846.1049686150519
+ Position: 1376.485776548521
+ Position: 966.1049686150518
+ Position: 1256.4857765485208
+ Position: 1086.1049686150518
+ Position: 1136.485776548521
+ Position: 966.104968615052
+ Position: 1256.4857765485208
+ Position: 846.1049686150519
+ Position: 1436.485776548521
+ Position: 966.1049686150517
+ Position: 1256.4857765485208
+ Position: 1146.1049686150518
+ Position: 1076.485776548521
+ Position: 966.1049686150521
+ Position: 1256.4857765485206
+ Position: 786.1049686150519
+ Position: 1436.485776548521
+ Position: 966.1049686150517
+ Position: 1256.485776548521
+ Position: 1146.1049686150518
+ Position: 1076.485776548521
+ Position: 966.1049686150528
+ Position: 1256.4857765485203
+ Position: 786.1049686150519
+ Position: 1496.485776548521
+ Position: 966.1049686150516
+ Position: 1256.485776548521
+ Position: 1206.1049686150518
+ Position: 1016.485776548521
+ Position: 966.1049686150515
+ Position: 1256.48577654852
+ Position: 726.1049686150519
+ Position: 1496.485776548521
+ Position: 966.1049686150515
+ Position: 1256.485776548521
+ Position: 1206.1049686150518
+ Position: 1016.485776548521
+ Position: 966.1049686150532
+ Position: 1256.48577654852
+ Position: 726.1049686150519
+ Position: 1556.485776548521
+ Position: 966.1049686150513
+ Position: 1256.485776548521
+ Position: 1266.1049686150518
+ Position: 956.485776548521
+ Position: 966.1049686150515
+ Position: 1256.4857765485199
+ Position: 666.1049686150519
+ Position: 1556.485776548521
+ Position: 966.1049686150512
+ Position: 1256.4857765485212
+ Position: 1266.1049686150518
+ Position: 956.485776548521
+ Position: 966.1049686150537
+ Position: 1256.4857765485199
+ Position: 666.1049686150519
+ Position: 1616.485776548521
+ Position: 966.104968615051
+ Position: 1256.4857765485237
+ Position: 1326.1049686150518
+ Position: 896.485776548521
+ Position: 966.1049686150516
+ Position: 1256.4857765485194
+ Position: 606.1049686150519
+ Position: 1616.485776548521
+ Position: 966.1049686150484
+ Position: 1256.4857765485215
+ Position: 1326.1049686150518
+ Position: 896.485776548521
+ Position: 966.1049686150542
+ Position: 1256.485776548522
+ Position: 606.1049686150519
+ Position: 1676.485776548521
+ Position: 966.1049686150507
+ Position: 1256.4857765485244
+ Position: 1386.1049686150518
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-6
+ useNodeDragDrop: Detected parent: s-nssai-6
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-6
+ useNodeDragDrop: Parent node found: s-nssai
+ Desired position: {"x":1123.9969219386728,"y":1121.9127468882302}
+ Position: 1183.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386728
+ Position: 1181.9127468882302
+ Position: 1063.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386728
+ Position: 1061.9127468882302
+ Position: 1183.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386728
+ Position: 1181.9127468882302
+ Position: 1063.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386728
+ Position: 1061.9127468882302
+ Position: 1243.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386728
+ Position: 1241.9127468882302
+ Position: 1003.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386726
+ Position: 1001.9127468882302
+ Position: 1243.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386726
+ Position: 1241.9127468882302
+ Position: 1003.9969219386728
+ Position: 1121.9127468882302
+ Position: 1123.9969219386726
+ Position: 1001.9127468882302
+ Position: 1303.9969219386728
+ Position: 1121.91274688823
+ Position: 1123.9969219386726
+ Position: 1301.9127468882302
+ Position: 943.9969219386728
+ Position: 1121.9127468882305
+ Position: 1123.9969219386724
+ Position: 941.9127468882302
+ Position: 1303.9969219386728
+ Position: 1121.91274688823
+ Position: 1123.9969219386728
+ Position: 1301.9127468882302
+ Position: 943.9969219386728
+ Position: 1121.9127468882311
+ Position: 1123.9969219386721
+ Position: 941.9127468882302
+ Position: 1363.9969219386728
+ Position: 1121.9127468882298
+ useNodeDragDrop: Child position calculated: Object
+ Generated new DNN ID: 5
+ Creating child DNN with ID: 5
+ Creating child dnn node with ID: dnn-5 under parent: s-nssai-6
+ FlowInstance: Rendering with 19 nodes, 17 edges
+ NodeEditor: Using PROPS state - nodes: 19, edges: 17
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+ NodeEditor: Using PROPS state - nodes: 19, edges: 17
+ useSimpleChildNodeCreation: Creating edge from s-nssai-6 to dnn-5
+ UnifiedEdgeManager: Creating edge unified-s-nssai-6-dnn-5
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 18
+ useSimpleChildNodeCreation: Creating edge from s-nssai-6 to dnn-5
+ UnifiedEdgeManager: Creating edge unified-s-nssai-6-dnn-5
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge s-nssai-6->dnn-5 already exists
+ UnifiedEdgeManager: Edge s-nssai-6->dnn-5 already exists
+ FlowInstance: Rendering with 19 nodes, 18 edges
+ NodeEditor: Using PROPS state - nodes: 19, edges: 18
+ NodeButton: Started dragging dnn button
+ NodeButton: Set drag data to: dnn
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+ parseDragData: Processing drag data: dnn
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ Desired position: {"x":1394.0327655493088,"y":652.7067658284471}
+ Position: 1454.0327655493088
+ Position: 652.7067658284471
+ Position: 1394.0327655493088
+ Position: 712.7067658284471
+ Position: 1334.0327655493088
+ Position: 652.7067658284471
+ Position: 1394.0327655493088
+ Position: 592.7067658284471
+ Position: 1454.0327655493088
+ Position: 652.7067658284471
+ Position: 1394.0327655493088
+ Position: 712.7067658284471
+ Position: 1334.0327655493088
+ Position: 652.7067658284471
+ Position: 1394.0327655493088
+ Position: 592.7067658284471
+ Position: 1514.0327655493088
+ Position: 652.706765828447
+ Position: 1394.0327655493088
+ Position: 772.7067658284471
+ Position: 1274.0327655493088
+ Position: 652.7067658284473
+ Position: 1394.0327655493086
+ Position: 532.7067658284471
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 13
+ detectParentNodeFromDOM: Checking elements at point: 13
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-3
+ useNodeDragDrop: Detected parent: s-nssai-3
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-3
+ useNodeDragDrop: Parent node found: s-nssai
+ Desired position: {"x":1363.9969219386728,"y":881.9127468882299}
+ Position: 1423.9969219386728
+ Position: 881.9127468882299
+ Position: 1363.9969219386728
+ Position: 941.9127468882299
+ Position: 1303.9969219386728
+ Position: 881.9127468882299
+ Position: 1363.9969219386728
+ Position: 821.9127468882299
+ Position: 1423.9969219386728
+ Position: 881.9127468882299
+ Position: 1363.9969219386728
+ Position: 941.9127468882299
+ Position: 1303.9969219386728
+ Position: 881.9127468882299
+ Position: 1363.9969219386728
+ Position: 821.9127468882299
+ Position: 1483.9969219386728
+ Position: 881.9127468882298
+ Position: 1363.9969219386728
+ Position: 1001.9127468882299
+ Position: 1243.9969219386728
+ Position: 881.91274688823
+ Position: 1363.9969219386726
+ Position: 761.9127468882299
+ Position: 1483.9969219386728
+ Position: 881.9127468882298
+ Position: 1363.9969219386726
+ Position: 1001.9127468882299
+ Position: 1243.9969219386728
+ Position: 881.91274688823
+ Position: 1363.9969219386726
+ Position: 761.9127468882299
+ Position: 1543.9969219386728
+ Position: 881.9127468882297
+ Position: 1363.9969219386726
+ Position: 1061.9127468882298
+ Position: 1183.9969219386728
+ Position: 881.9127468882301
+ Position: 1363.9969219386724
+ Position: 701.9127468882299
+ Position: 1543.9969219386728
+ Position: 881.9127468882297
+ Position: 1363.9969219386728
+ Position: 1061.9127468882298
+ Position: 1183.9969219386728
+ Position: 881.9127468882308
+ Position: 1363.9969219386721
+ Position: 701.9127468882299
+ Position: 1603.9969219386728
+ Position: 881.9127468882295
+ Position: 1363.9969219386728
+ Position: 1121.9127468882298
+ Position: 1123.9969219386728
+ Position: 881.9127468882294
+ Position: 1363.996921938672
+ Position: 641.9127468882299
+ Position: 1603.9969219386728
+ Position: 881.9127468882294
+ Position: 1363.9969219386728
+ Position: 1121.9127468882298
+ Position: 1123.9969219386728
+ Position: 881.9127468882311
+ Position: 1363.996921938672
+ Position: 641.9127468882299
+ Position: 1663.9969219386728
+ Position: 881.9127468882293
+ Position: 1363.9969219386728
+ Position: 1181.9127468882298
+ Position: 1063.9969219386728
+ Position: 881.9127468882294
+ Position: 1363.9969219386717
+ Position: 581.9127468882299
+ Position: 1663.9969219386728
+ Position: 881.9127468882292
+ Position: 1363.996921938673
+ Position: 1181.9127468882298
+ Position: 1063.9969219386728
+ Position: 881.9127468882317
+ Position: 1363.9969219386717
+ Position: 581.9127468882299
+ Position: 1723.9969219386728
+ Position: 881.912746888229
+ Position: 1363.9969219386755
+ Position: 1241.9127468882298
+ Position: 1003.9969219386728
+ Position: 881.9127468882295
+ Position: 1363.9969219386712
+ Position: 521.9127468882299
+ useNodeDragDrop: Child position calculated: Object
+ Generated new DNN ID: 6
+ Creating child DNN with ID: 6
+ Creating child dnn node with ID: dnn-6 under parent: s-nssai-3
+ FlowInstance: Rendering with 20 nodes, 18 edges
+ NodeEditor: Using PROPS state - nodes: 20, edges: 18
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+ NodeEditor: Using PROPS state - nodes: 20, edges: 18
+ useSimpleChildNodeCreation: Creating edge from s-nssai-3 to dnn-6
+ UnifiedEdgeManager: Creating edge unified-s-nssai-3-dnn-6
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 19
+ useSimpleChildNodeCreation: Creating edge from s-nssai-3 to dnn-6
+ UnifiedEdgeManager: Creating edge unified-s-nssai-3-dnn-6
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge s-nssai-3->dnn-6 already exists
+ UnifiedEdgeManager: Edge s-nssai-3->dnn-6 already exists
+ FlowInstance: Rendering with 20 nodes, 19 edges
+ NodeEditor: Using PROPS state - nodes: 20, edges: 19
+ NodeButton: Started dragging dnn button
+ NodeButton: Set drag data to: dnn
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+ parseDragData: Processing drag data: dnn
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ Desired position: {"x":1665.6445412976996,"y":736.2796199048751}
+ Position: 1725.6445412976996
+ Position: 736.2796199048751
+ Position: 1665.6445412976996
+ Position: 796.2796199048751
+ Position: 1605.6445412976996
+ Position: 736.2796199048751
+ Position: 1665.6445412976996
+ Position: 676.2796199048751
+ Position: 1725.6445412976996
+ Position: 736.2796199048751
+ Position: 1665.6445412976996
+ Position: 796.2796199048751
+ Position: 1605.6445412976996
+ Position: 736.2796199048751
+ Position: 1665.6445412976996
+ Position: 676.2796199048751
+ Position: 1785.6445412976996
+ Position: 736.279619904875
+ Position: 1665.6445412976996
+ Position: 856.2796199048751
+ Position: 1545.6445412976996
+ Position: 736.2796199048752
+ Position: 1665.6445412976993
+ Position: 616.2796199048751
+ Position: 1785.6445412976996
+ Position: 736.279619904875
+ Position: 1665.6445412976993
+ Position: 856.2796199048751
+ Position: 1545.6445412976996
+ Position: 736.2796199048752
+ Position: 1665.6445412976993
+ Position: 616.2796199048751
+ Position: 1845.6445412976996
+ Position: 736.2796199048748
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-5
+ useNodeDragDrop: Detected parent: s-nssai-5
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-5
+ useNodeDragDrop: Parent node found: s-nssai
+ Desired position: {"x":1593.9969219386728,"y":883.6538480148225}
+ Position: 1653.9969219386728
+ Position: 883.6538480148225
+ Position: 1593.9969219386728
+ Position: 943.6538480148225
+ Position: 1533.9969219386728
+ Position: 883.6538480148225
+ Position: 1593.9969219386728
+ Position: 823.6538480148225
+ Position: 1653.9969219386728
+ Position: 883.6538480148225
+ Position: 1593.9969219386728
+ Position: 943.6538480148225
+ Position: 1533.9969219386728
+ Position: 883.6538480148225
+ Position: 1593.9969219386728
+ Position: 823.6538480148225
+ Position: 1713.9969219386728
+ Position: 883.6538480148224
+ Position: 1593.9969219386728
+ Position: 1003.6538480148225
+ Position: 1473.9969219386728
+ Position: 883.6538480148226
+ Position: 1593.9969219386726
+ Position: 763.6538480148225
+ Position: 1713.9969219386728
+ Position: 883.6538480148224
+ Position: 1593.9969219386726
+ Position: 1003.6538480148225
+ Position: 1473.9969219386728
+ Position: 883.6538480148226
+ Position: 1593.9969219386726
+ Position: 763.6538480148225
+ Position: 1773.9969219386728
+ Position: 883.6538480148223
+ Position: 1593.9969219386726
+ Position: 1063.6538480148224
+ useNodeDragDrop: Child position calculated: Object
+ Generated new DNN ID: 7
+ Creating child DNN with ID: 7
+ Creating child dnn node with ID: dnn-7 under parent: s-nssai-5
+ FlowInstance: Rendering with 21 nodes, 19 edges
+ NodeEditor: Using PROPS state - nodes: 21, edges: 19
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-7, type=dnn, nodeNumber=7
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-7, type=dnn, nodeNumber=7
+ NodeEditor: Using PROPS state - nodes: 21, edges: 19
+ useSimpleChildNodeCreation: Creating edge from s-nssai-5 to dnn-7
+ UnifiedEdgeManager: Creating edge unified-s-nssai-5-dnn-7
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 20
+ useSimpleChildNodeCreation: Creating edge from s-nssai-5 to dnn-7
+ UnifiedEdgeManager: Creating edge unified-s-nssai-5-dnn-7
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge s-nssai-5->dnn-7 already exists
+ UnifiedEdgeManager: Edge s-nssai-5->dnn-7 already exists
+ FlowInstance: Rendering with 21 nodes, 20 edges
+ NodeEditor: Using PROPS state - nodes: 21, edges: 20
+ NodeButton: Started dragging dnn button
+ NodeButton: Set drag data to: dnn
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+ parseDragData: Processing drag data: dnn
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ Desired position: {"x":1423.631484701377,"y":732.7974176516906}
+ Position: 1483.631484701377
+ Position: 732.7974176516906
+ Position: 1423.631484701377
+ Position: 792.7974176516906
+ Position: 1363.631484701377
+ Position: 732.7974176516906
+ Position: 1423.631484701377
+ Position: 672.7974176516906
+ Position: 1483.631484701377
+ Position: 732.7974176516906
+ Position: 1423.631484701377
+ Position: 792.7974176516906
+ Position: 1363.631484701377
+ Position: 732.7974176516906
+ Position: 1423.631484701377
+ Position: 672.7974176516906
+ Position: 1543.631484701377
+ Position: 732.7974176516905
+ Position: 1423.631484701377
+ Position: 852.7974176516906
+ Position: 1303.631484701377
+ Position: 732.7974176516907
+ Position: 1423.6314847013768
+ Position: 612.7974176516906
+ Position: 1543.631484701377
+ Position: 732.7974176516905
+ Position: 1423.6314847013768
+ Position: 852.7974176516906
+ Position: 1303.631484701377
+ Position: 732.7974176516907
+ Position: 1423.6314847013768
+ Position: 612.7974176516906
+ Position: 1603.631484701377
+ Position: 732.7974176516904
+ Position: 1423.6314847013768
+ Position: 912.7974176516906
+ Position: 1243.631484701377
+ Position: 732.7974176516908
+ Position: 1423.6314847013766
+ Position: 552.7974176516906
+ Position: 1603.631484701377
+ Position: 732.7974176516904
+ Position: 1423.631484701377
+ Position: 912.7974176516906
+ Position: 1243.631484701377
+ Position: 732.7974176516915
+ Position: 1423.6314847013764
+ Position: 552.7974176516906
+ Position: 1663.631484701377
+ Position: 732.7974176516902
+ Position: 1423.631484701377
+ Position: 972.7974176516906
+ Position: 1183.631484701377
+ Position: 732.7974176516901
+ Position: 1423.6314847013762
+ Position: 492.7974176516906
+ Position: 1663.631484701377
+ Position: 732.7974176516901
+ Position: 1423.631484701377
+ Position: 972.7974176516906
+ Position: 1183.631484701377
+ Position: 732.7974176516918
+ Position: 1423.6314847013762
+ Position: 492.7974176516906
+ Position: 1723.631484701377
+ Position: 732.79741765169
+ Position: 1423.631484701377
+ Position: 1032.7974176516905
+ Position: 1123.631484701377
+ Position: 732.7974176516901
+ Position: 1423.631484701376
+ Position: 432.7974176516906
+ Position: 1723.631484701377
+ Position: 732.7974176516899
+ Position: 1423.6314847013773
+ Position: 1032.7974176516905
+ Position: 1123.631484701377
+ Position: 732.7974176516924
+ Position: 1423.631484701376
+ Position: 432.7974176516906
+ Position: 1783.631484701377
+ Position: 732.7974176516897
+ Position: 1423.6314847013798
+ Position: 1092.7974176516905
+ Position: 1063.631484701377
+ Position: 732.7974176516902
+ Position: 1423.6314847013755
+ Position: 372.7974176516906
+ Position: 1783.631484701377
+ Position: 732.797417651687
+ Position: 1423.6314847013775
+ Position: 1092.7974176516905
+ Position: 1063.631484701377
+ Position: 732.7974176516929
+ Position: 1423.631484701378
+ Position: 372.7974176516906
+ Position: 1843.631484701377
+ Position: 732.7974176516893
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-3
+ useNodeDragDrop: Detected parent: s-nssai-3
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-3
+ useNodeDragDrop: Parent node found: s-nssai
+ Desired position: {"x":1363.9969219386728,"y":881.9127468882299}
+ Position: 1423.9969219386728
+ Position: 881.9127468882299
+ Position: 1363.9969219386728
+ Position: 941.9127468882299
+ Position: 1303.9969219386728
+ Position: 881.9127468882299
+ Position: 1363.9969219386728
+ Position: 821.9127468882299
+ Position: 1423.9969219386728
+ Position: 881.9127468882299
+ Position: 1363.9969219386728
+ Position: 941.9127468882299
+ Position: 1303.9969219386728
+ Position: 881.9127468882299
+ Position: 1363.9969219386728
+ Position: 821.9127468882299
+ Position: 1483.9969219386728
+ Position: 881.9127468882298
+ Position: 1363.9969219386728
+ Position: 1001.9127468882299
+ Position: 1243.9969219386728
+ Position: 881.91274688823
+ Position: 1363.9969219386726
+ Position: 761.9127468882299
+ Position: 1483.9969219386728
+ Position: 881.9127468882298
+ Position: 1363.9969219386726
+ Position: 1001.9127468882299
+ Position: 1243.9969219386728
+ Position: 881.91274688823
+ Position: 1363.9969219386726
+ Position: 761.9127468882299
+ Position: 1543.9969219386728
+ Position: 881.9127468882297
+ Position: 1363.9969219386726
+ Position: 1061.9127468882298
+ Position: 1183.9969219386728
+ Position: 881.9127468882301
+ Position: 1363.9969219386724
+ Position: 701.9127468882299
+ Position: 1543.9969219386728
+ Position: 881.9127468882297
+ Position: 1363.9969219386728
+ Position: 1061.9127468882298
+ Position: 1183.9969219386728
+ Position: 881.9127468882308
+ Position: 1363.9969219386721
+ Position: 701.9127468882299
+ Position: 1603.9969219386728
+ Position: 881.9127468882295
+ Position: 1363.9969219386728
+ Position: 1121.9127468882298
+ Position: 1123.9969219386728
+ Position: 881.9127468882294
+ Position: 1363.996921938672
+ Position: 641.9127468882299
+ Position: 1603.9969219386728
+ Position: 881.9127468882294
+ Position: 1363.9969219386728
+ Position: 1121.9127468882298
+ Position: 1123.9969219386728
+ Position: 881.9127468882311
+ Position: 1363.996921938672
+ Position: 641.9127468882299
+ Position: 1663.9969219386728
+ Position: 881.9127468882293
+ Position: 1363.9969219386728
+ Position: 1181.9127468882298
+ Position: 1063.9969219386728
+ Position: 881.9127468882294
+ Position: 1363.9969219386717
+ Position: 581.9127468882299
+ Position: 1663.9969219386728
+ Position: 881.9127468882292
+ Position: 1363.996921938673
+ Position: 1181.9127468882298
+ Position: 1063.9969219386728
+ Position: 881.9127468882317
+ Position: 1363.9969219386717
+ Position: 581.9127468882299
+ Position: 1723.9969219386728
+ Position: 881.912746888229
+ Position: 1363.9969219386755
+ Position: 1241.9127468882298
+ Position: 1003.9969219386728
+ Position: 881.9127468882295
+ Position: 1363.9969219386712
+ Position: 521.9127468882299
+ Position: 1723.9969219386728
+ Position: 881.9127468882264
+ Position: 1363.9969219386733
+ Position: 1241.9127468882298
+ Position: 1003.9969219386728
+ Position: 881.9127468882322
+ Position: 1363.9969219386737
+ Position: 521.9127468882299
+ Position: 1783.9969219386728
+ Position: 881.9127468882286
+ useNodeDragDrop: Child position calculated: Object
+ Generated new DNN ID: 8
+ Creating child DNN with ID: 8
+ Creating child dnn node with ID: dnn-8 under parent: s-nssai-3
+FlowInstance.tsx:83 FlowInstance: Rendering with 22 nodes, 20 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 22, edges: 20
+DnnNode.tsx:21 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-8, type=dnn, nodeNumber=8
+DnnNode.tsx:21 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-8, type=dnn, nodeNumber=8
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 22, edges: 20
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from s-nssai-3 to dnn-8
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-3-dnn-8
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 21
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from s-nssai-3 to dnn-8
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-3-dnn-8
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-3->dnn-8 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-3->dnn-8 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 22 nodes, 21 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 22, edges: 21
+NodeEditor.tsx:306 NodeEditor: Save triggered with 22 nodes and 21 edges
+NodeEditor.tsx:334 NodeEditor: Attempting to save 22 nodes and 21 edges
+useLayoutOperations.ts:22 useLayoutOperations: Arranging layout for 22 nodes
+useNodeLayoutManager.ts:44 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+useNodeLayoutManager.ts:45 Layout options: Object
+balancedTreeLayout.ts:46 Available node IDs: Array(22)
+balancedTreeLayout.ts:61 Filtered edges: 21 -> 21 valid edges
+balancedTreeLayout.ts:95 Found 1 root nodes
+balancedTreeLayout.ts:139 Level assignments: Object
+balancedTreeLayout.ts:140 Parent-child relationships: Object
+balancedTreeLayout.ts:325 ✓ Single RRP-member rrpmember-1756647926425-3975 positioned BELOW parent at (-200, 850)
+balancedTreeLayout.ts:346 ✓ RRP-member rrpmember-1756647928782-1723 positioned BELOW parent at (100, 850)
+balancedTreeLayout.ts:346 ✓ RRP-member rrpmember-1756647933037-3305 positioned BELOW parent at (300, 850)
+balancedTreeLayout.ts:309 ✓ S-NSSAI s-nssai-1 positioned near parent at (-325, 1370)
+balancedTreeLayout.ts:309 ✓ S-NSSAI s-nssai-4 positioned near parent at (-75, 1370)
+balancedTreeLayout.ts:309 ✓ S-NSSAI s-nssai-2 positioned near parent at (-25, 1370)
+balancedTreeLayout.ts:309 ✓ S-NSSAI s-nssai-5 positioned near parent at (225, 1370)
+balancedTreeLayout.ts:309 ✓ S-NSSAI s-nssai-3 positioned near parent at (175, 1370)
+balancedTreeLayout.ts:309 ✓ S-NSSAI s-nssai-6 positioned near parent at (425, 1370)
+balancedTreeLayout.ts:397 🎯 Graph centering: minX=-325, maxX=550, width=875, centerOffset=112.5
+balancedTreeLayout.ts:411 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 22 nodes
+balancedTreeLayout.ts:412 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:413 🎯 Final calculated positions: Array(5)
+balancedTreeLayout.ts:414 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:62 🧹 Layout returned 22 nodes and 21 cleaned edges (was 21)
+useNodeLayoutManager.ts:70 🧹 Filtered duplicates: 22 -> 22 nodes
+useNodeLayoutManager.ts:82 🧹 Updating edges: 21 -> 21 (filtered duplicates)
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 22, edges: 21
+Index.tsx:160 MainContentWithGraphOperations: edges updated 21
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 21 edges
+Index.tsx:45 Index component: nodes state updated, count: 22
+Index.tsx:47 Index component: First node: {"id":"network-1756647915436-2494","type":"customNode","position":{"x":-112.5,"y":100},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1756647915436-2494"}}
+Index.tsx:74 Index component: edges state updated, count: 21
+Index.tsx:76 Index component: First edge: {"id":"unified-network-1756647915436-2494-cell-area-1","source":"network-1756647915436-2494","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 21 edges

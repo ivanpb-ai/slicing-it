@@ -19,7 +19,7 @@ export const useLayoutOperations = (
   
   // Handle arranging layout with improved error handling
   const handleArrangeLayout = useCallback(() => {
-    console.log(`useLayoutOperations: Arranging layout for ${nodes.length} nodes`);
+    console.log(`🎯 useLayoutOperations: ARRANGE FUNCTION CALLED with ${nodes.length} nodes`);
     
     if (nodes.length === 0) {
       toast.info('No nodes to arrange', {
