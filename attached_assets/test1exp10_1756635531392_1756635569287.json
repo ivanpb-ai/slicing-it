@@ -1,0 +1,677 @@
+{
+  "nodes": [
+    {
+      "id": "network-1756298418290-5901",
+      "type": "customNode",
+      "position": {
+        "x": 3.15211,
+        "y": -148.252
+      },
+      "data": {
+        "label": "NetworkNodeMain entry point",
+        "type": "network",
+        "extractedFromDOM": true,
+        "network": 1756298418290
+      }
+    },
+    {
+      "id": "cell-area-1",
+      "type": "customNode",
+      "position": {
+        "x": -251.466,
+        "y": 34.7314
+      },
+      "data": {
+        "label": "TAC #1TAC 1Area 51",
+        "type": "cell-area",
+        "extractedFromDOM": true,
+        "cell-area": 1
+      }
+    },
+    {
+      "id": "cell-area-2",
+      "type": "customNode",
+      "position": {
+        "x": 236.314,
+        "y": 31.5081
+      },
+      "data": {
+        "label": "TAC #2TAC 2Area 52",
+        "type": "cell-area",
+        "extractedFromDOM": true,
+        "cell-area": 2
+      }
+    },
+    {
+      "id": "rrp-1",
+      "type": "customNode",
+      "position": {
+        "x": -316.075,
+        "y": 253.223
+      },
+      "data": {
+        "label": "RRP#1PremiumAdd PLMN (creates RRPmember)Band 1: n78DL %50%UL %30%Band 2: n28DL %40%UL %20%Band 3DL %50%UL %50%Add Band",
+        "type": "rrp",
+        "extractedFromDOM": true,
+        "rrp": 1
+      }
+    },
+    {
+      "id": "rrp-2",
+      "type": "customNode",
+      "position": {
+        "x": 303.065,
+        "y": 287.482
+      },
+      "data": {
+        "label": "RRP#2BasicAdd PLMN (creates RRPmember)Band 1: n78DL %20%UL %10%Band 2: n28DL %20%UL %10%Add Band",
+        "type": "rrp",
+        "extractedFromDOM": true,
+        "rrp": 2
+      }
+    },
+    {
+      "id": "rrp-3",
+      "type": "customNode",
+      "position": {
+        "x": -4.45634,
+        "y": 288.964
+      },
+      "data": {
+        "label": "RRP#3ResidualAdd PLMN (creates RRPmember)Band 1: n78DL %40%UL %40%Band 2: n28DL %40%UL %40%Add Band",
+        "type": "rrp",
+        "extractedFromDOM": true,
+        "rrp": 3
+      }
+    },
+    {
+      "id": "rrpmember-1756298522116-122",
+      "type": "customNode",
+      "position": {
+        "x": -42.7895,
+        "y": 793.977
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 01",
+        "type": "rrpmember",
+        "extractedFromDOM": true,
+        "rrpmember": 122
+      }
+    },
+    {
+      "id": "rrpmember-1756298528108-7394",
+      "type": "customNode",
+      "position": {
+        "x": 431,
+        "y": 794
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 49",
+        "type": "rrpmember",
+        "extractedFromDOM": true,
+        "rrpmember": 7394
+      }
+    },
+    {
+      "id": "rrpmember-1756298536993-2136",
+      "type": "customNode",
+      "position": {
+        "x": -357.379,
+        "y": 797.333
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 49",
+        "type": "rrpmember",
+        "extractedFromDOM": true,
+        "rrpmember": 2136
+      }
+    },
+    {
+      "id": "s-nssai-1",
+      "type": "customNode",
+      "position": {
+        "x": -370.07,
+        "y": 937.727
+      },
+      "data": {
+        "label": "S-NSSAI#1NodeSD:SST:",
+        "type": "s-nssai",
+        "extractedFromDOM": true,
+        "s-nssai": 1
+      }
+    },
+    {
+      "id": "s-nssai-2",
+      "type": "customNode",
+      "position": {
+        "x": -28.767,
+        "y": 934.207
+      },
+      "data": {
+        "label": "S-NSSAI#2NodeSD:SST:",
+        "type": "s-nssai",
+        "extractedFromDOM": true,
+        "s-nssai": 2
+      }
+    },
+    {
+      "id": "dnn-1",
+      "type": "customNode",
+      "position": {
+        "x": -794.932,
+        "y": 1214
+      },
+      "data": {
+        "label": "DNN#1Nodehqvideo.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "dnn",
+        "extractedFromDOM": true,
+        "dnn": 1
+      }
+    },
+    {
+      "id": "dnn-2",
+      "type": "customNode",
+      "position": {
+        "x": 282,
+        "y": 1214
+      },
+      "data": {
+        "label": "DNN#2Nodebasic.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "dnn",
+        "extractedFromDOM": true,
+        "dnn": 2
+      }
+    },
+    {
+      "id": "dnn-3",
+      "type": "customNode",
+      "position": {
+        "x": 624,
+        "y": 1220
+      },
+      "data": {
+        "label": "DNN#3Nodevideo.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "dnn",
+        "extractedFromDOM": true,
+        "dnn": 3
+      }
+    },
+    {
+      "id": "dnn-4",
+      "type": "customNode",
+      "position": {
+        "x": -441.858,
+        "y": 1215.48
+      },
+      "data": {
+        "label": "DNN#4Nodepremium.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "dnn",
+        "extractedFromDOM": true,
+        "dnn": 4
+      }
+    },
+    {
+      "id": "dnn-5",
+      "type": "customNode",
+      "position": {
+        "x": 964.065,
+        "y": 1218.82
+      },
+      "data": {
+        "label": "DNN#5Nodegaming.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "dnn",
+        "extractedFromDOM": true,
+        "dnn": 5
+      }
+    },
+    {
+      "id": "dnn-6",
+      "type": "customNode",
+      "position": {
+        "x": -102.453,
+        "y": 1212.89
+      },
+      "data": {
+        "label": "DNN#6Nodezcvczvv2x.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "dnn",
+        "extractedFromDOM": true,
+        "dnn": 6
+      }
+    },
+    {
+      "id": "fiveqi-79",
+      "type": "customNode",
+      "position": {
+        "x": -18.7508,
+        "y": 1412.06
+      },
+      "data": {
+        "label": "5QI5QI: 79V2X messagesType:Non-GBRPriority:65Delay:50 ms",
+        "type": "fiveqi",
+        "extractedFromDOM": true,
+        "fiveqi": 79,
+        "fiveQIId": 79
+      }
+    },
+    {
+      "id": "fiveqi-9",
+      "type": "customNode",
+      "position": {
+        "x": -441.055,
+        "y": 1413.69
+      },
+      "data": {
+        "label": "5QI5QI: 9Video (Buffered Streaming), TCP-based servicesType:Non-GBRPriority:90Delay:300 ms",
+        "type": "fiveqi",
+        "extractedFromDOM": true,
+        "fiveqi": 9,
+        "fiveQIId": 9
+      }
+    },
+    {
+      "id": "fiveqi-67",
+      "type": "customNode",
+      "position": {
+        "x": -746.913,
+        "y": 1407.06
+      },
+      "data": {
+        "label": "5QI5QI: 67Mission Critical Video user planeType:GBRPriority:15Delay:100 ms",
+        "type": "fiveqi",
+        "extractedFromDOM": true,
+        "fiveqi": 67,
+        "fiveQIId": 67
+      }
+    },
+    {
+      "id": "fiveqi-7",
+      "type": "customNode",
+      "position": {
+        "x": 664,
+        "y": 1438
+      },
+      "data": {
+        "label": "5QI5QI: 7Voice, Video (Live Streaming), Interactive GamingType:Non-GBRPriority:70Delay:100 ms",
+        "type": "fiveqi",
+        "extractedFromDOM": true,
+        "fiveqi": 7,
+        "fiveQIId": 7
+      }
+    },
+    {
+      "id": "s-nssai-4",
+      "type": "customNode",
+      "position": {
+        "x": 341.233,
+        "y": 932.207
+      },
+      "data": {
+        "label": "S-NSSAI#4NodeSD:SST:",
+        "type": "s-nssai",
+        "extractedFromDOM": true,
+        "s-nssai": 4
+      }
+    },
+    {
+      "id": "rrpmember-1756313013671-6351",
+      "type": "customNode",
+      "position": {
+        "x": 111.544,
+        "y": 794.964
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 49",
+        "type": "rrpmember",
+        "extractedFromDOM": true,
+        "rrpmember": 6351
+      }
+    },
+    {
+      "id": "rrpmember-1756313029003-77",
+      "type": "customNode",
+      "position": {
+        "x": -194.075,
+        "y": 797.223
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 01",
+        "type": "rrpmember",
+        "extractedFromDOM": true,
+        "rrpmember": 77
+      }
+    },
+    {
+      "id": "rrpmember-1756313334883-4722",
+      "type": "customNode",
+      "position": {
+        "x": 267.065,
+        "y": 789.482
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 01",
+        "type": "rrpmember",
+        "extractedFromDOM": true,
+        "rrpmember": 4722
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "network-1756298418290-5901-cell-area-1",
+      "source": "network-1756298418290-5901",
+      "target": "cell-area-1",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "network-1756298418290-5901-cell-area-2",
+      "source": "network-1756298418290-5901",
+      "target": "cell-area-2",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-1-rrp-1",
+      "source": "cell-area-1",
+      "target": "rrp-1",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-2-rrp-2",
+      "source": "cell-area-2",
+      "target": "rrp-2",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-2-rrp-3",
+      "source": "cell-area-2",
+      "target": "rrp-3",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-3-rrpmember-1756298522116-122",
+      "source": "rrp-3",
+      "target": "rrpmember-1756298522116-122",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-2-rrpmember-1756298528108-7394",
+      "source": "rrp-2",
+      "target": "rrpmember-1756298528108-7394",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-1-rrpmember-1756298536993-2136",
+      "source": "rrp-1",
+      "target": "rrpmember-1756298536993-2136",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756298536993-2136-s-nssai-1",
+      "source": "rrpmember-1756298536993-2136",
+      "target": "s-nssai-1",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756298522116-122-s-nssai-2",
+      "source": "rrpmember-1756298522116-122",
+      "target": "s-nssai-2",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-1-dnn-1",
+      "source": "s-nssai-1",
+      "target": "dnn-1",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-2-dnn-2",
+      "source": "s-nssai-2",
+      "target": "dnn-2",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-1-dnn-4",
+      "source": "s-nssai-1",
+      "target": "dnn-4",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-1-dnn-6",
+      "source": "s-nssai-1",
+      "target": "dnn-6",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-6-fiveqi-79",
+      "source": "dnn-6",
+      "target": "fiveqi-79",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-4-fiveqi-9",
+      "source": "dnn-4",
+      "target": "fiveqi-9",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-1-fiveqi-67",
+      "source": "dnn-1",
+      "target": "fiveqi-67",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-3-fiveqi-7",
+      "source": "dnn-3",
+      "target": "fiveqi-7",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-3-rrpmember-1756313013671-6351",
+      "source": "rrp-3",
+      "target": "rrpmember-1756313013671-6351",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-1-rrpmember-1756313029003-77",
+      "source": "rrp-1",
+      "target": "rrpmember-1756313029003-77",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-2-rrpmember-1756313334883-4722",
+      "source": "rrp-2",
+      "target": "rrpmember-1756313334883-4722",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3
+      },
+      "data": {
+        "extractedFromDOM": true
+      }
+    }
+  ],
+  "extractionMethod": "DOM_SCRAPING",
+  "extractionTime": 1756635531393
+}
