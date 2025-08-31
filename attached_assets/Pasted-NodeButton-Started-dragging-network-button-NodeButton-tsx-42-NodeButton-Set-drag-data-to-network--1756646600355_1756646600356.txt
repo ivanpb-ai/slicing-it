@@ -1,0 +1,71 @@
+NodeButton: Started dragging network button
+NodeButton.tsx:42 NodeButton: Set drag data to: network
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "network" at position: {x: 451, y: 0.666656494140625}
+useDragDataParser.ts:3 parseDragData: Processing drag data: network
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: network
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 9
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 9
+useParentNodeDetection.ts:47 detectParentNodeFromDOM: No parent node found in DOM elements
+useParentNodeDetection.ts:55 detectParentNodeFromPosition: Checking position: {x: 451, y: 0.666656494140625}
+useParentNodeDetection.ts:56 detectParentNodeFromPosition: Available nodes: []
+useParentNodeDetection.ts:92 detectParentNodeFromPosition: No parent node found at position
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: none
+useNodeDragDrop.ts:160 useNodeDragDrop: Creating standalone network node at safe position: {x: 451, y: 0.666656494140625}
+useNodeEditor.ts:83 useNodeEditor: Adding network node at position: {x: 451, y: 0.666656494140625}
+FlowInstance.tsx:83 FlowInstance: Rendering with 1 nodes, 0 edges
+FlowInstance.tsx:85 FlowInstance: First node: {id: 'network-1756646557962-2475', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 1, edges: 0
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756646557962-2475, type=network, nodeNumber=2475
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756646557962-2475, type=network, nodeNumber=2475
+FlowInstance.tsx:83 FlowInstance: Rendering with 1 nodes, 0 edges
+FlowInstance.tsx:85 FlowInstance: First node: {id: 'network-1756646557962-2475', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 1, edges: 0
+NodeButton.tsx:28 NodeButton: Clicked on cell-area button
+NodeEditor.tsx:176 NodeEditor: Adding cell-area node at position: {x: 566.300548066233, y: 292.10978318822947}
+useNodeEditor.ts:83 useNodeEditor: Adding cell-area node at position: {x: 566.300548066233, y: 292.10978318822947}
+idCounters.ts:26 Generated new Cell Area ID: 1
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 0 edges
+FlowInstance.tsx:85 FlowInstance: First node: {id: 'network-1756646557962-2475', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 0 edges
+FlowInstance.tsx:85 FlowInstance: First node: {id: 'network-1756646557962-2475', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 0 edges
+FlowInstance.tsx:85 FlowInstance: First node: {id: 'network-1756646557962-2475', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 0 edges
+FlowInstance.tsx:85 FlowInstance: First node: {id: 'network-1756646557962-2475', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 0 edges
+FlowInstance.tsx:85 FlowInstance: First node: {id: 'network-1756646557962-2475', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+ToolbarContainer.tsx:84 Clear canvas button clicked in Toolbar
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
+ToolbarContainer.tsx:84 Clear canvas button clicked in Toolbar
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
+ToolbarContainer.tsx:84 Clear canvas button clicked in Toolbar
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
+ToolbarContainer.tsx:84 Clear canvas button clicked in Toolbar
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0

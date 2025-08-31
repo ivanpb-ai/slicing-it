@@ -78,16 +78,14 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Enhanced logging for debugging
+  // Reduced logging to prevent render loop debugging noise  
   useEffect(() => {
     console.log(`FlowInstance: Rendering with ${nodes.length} nodes, ${edges.length} edges`);
-    if (nodes.length > 0) {
+    // Only log details when there are significant changes
+    if (nodes.length > 0 && nodes.length <= 3) {
       console.log('FlowInstance: First node:', nodes[0]);
     }
-    if (edges.length > 0) {
-      console.log('FlowInstance: First edge:', edges[0]);
-    }
-  }, [nodes, edges]);
+  }, [nodes.length, edges.length]); // Only trigger on length changes, not content changes
 
   const handleFileImport = () => {
     if (fileInputRef.current) {
