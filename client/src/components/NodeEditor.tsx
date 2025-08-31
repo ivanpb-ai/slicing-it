@@ -285,31 +285,11 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       console.log(`Processed ${processedNodes.length} nodes and ${processedEdges.length} edges for loading`);
       console.log('NodeEditor: Processed nodes for load:', processedNodes.map(n => ({id: n.id, type: n.data?.type || n.type})));
       
-      // CRITICAL FIX: Use ReactFlow instance AND update component state
-      if (reactFlowInstance) {
-        reactFlowInstance.setNodes(processedNodes);
-        reactFlowInstance.setEdges(processedEdges);
-        // ALSO update component state so UI reflects the loaded nodes
-        setNodes(processedNodes);
-        setEdges(processedEdges);
-        
-        // CRITICAL FIX: Force ReactFlow to properly recognize loaded nodes
-        setTimeout(() => {
-          // Simple but effective: Force ReactFlow to refresh its internal state
-          const currentNodes = reactFlowInstance.getNodes();
-          const currentEdges = reactFlowInstance.getEdges();
-          
-          // Clear and immediately restore to force proper initialization
-          reactFlowInstance.setNodes([]);
-          setTimeout(() => {
-            reactFlowInstance.setNodes(currentNodes);
-            reactFlowInstance.setEdges(currentEdges);
-          }, 10);
-        }, 50);
-      } else {
-        setNodes(processedNodes);
-        setEdges(processedEdges);
-      }
+      // CRITICAL FIX: Use component state ONLY for proper initialization
+      // ReactFlow instance methods don't properly initialize nodes for interaction
+      // Component state setters work correctly with onNodesChange/onEdgesChange
+      setNodes(processedNodes);
+      setEdges(processedEdges);
       
       // Minimal delay only for DOM rendering, then fit view
       setTimeout(() => {
