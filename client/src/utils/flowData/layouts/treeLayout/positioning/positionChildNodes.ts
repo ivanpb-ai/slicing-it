@@ -39,7 +39,7 @@ export function positionChildNodes(
     spacing = 200,
     nodeHeight = 180,
     nodeWidth = 180,
-    verticalSpacing = 500,
+    verticalSpacing = 180, // Reduced from 500 to prevent huge gaps
     minNodeDistance = 20
   } = options;
 

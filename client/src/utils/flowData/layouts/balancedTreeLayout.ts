@@ -39,7 +39,7 @@ export const arrangeNodesInBalancedTree = (
     marginY = 100
   } = options;
 
-  console.log('✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with', nodes.length, 'nodes');
+  // Starting balanced hierarchical arrangement
 
   // Create node ID set for validation
   const nodeIds = new Set(nodes.map(node => node.id));
@@ -139,17 +139,7 @@ export const arrangeNodesInBalancedTree = (
   console.log('Level assignments:', nodePositions);
   console.log('Parent-child relationships:', allParentsMap);
   
-  // DEBUG: Log specific RRP-member relationships
-  Object.keys(allParentsMap).forEach(nodeId => {
-    if (nodeId.includes('rrpmember')) {
-      console.log(`🔍 RRP-member ${nodeId} has parents:`, allParentsMap[nodeId]);
-    }
-  });
-  Object.keys(childrenMap).forEach(nodeId => {
-    if (nodeId.includes('rrp-') && !nodeId.includes('rrpmember')) {
-      console.log(`🔍 RRP ${nodeId} has children:`, childrenMap[nodeId]);
-    }
-  });
+  // Removed excessive debug logging for performance
 
   // No need for subtree width calculation in DAG layout
 
@@ -189,10 +179,7 @@ export const arrangeNodesInBalancedTree = (
       sNssaiLevel = parseInt(levelStr);
     }
   });
-  console.log(`🎯 Found ${allDnnNodes.length} DNN nodes at level ${dnnLevel}: ${allDnnNodes.join(', ')}`);
-  console.log(`🎯 Found ${allRrpNodes.length} RRP nodes at level ${rrpLevel}: ${allRrpNodes.join(', ')}`);
-  console.log(`🎯 Found ${allCellAreaNodes.length} cell-area nodes at level ${cellAreaLevel}: ${allCellAreaNodes.join(', ')}`);
-  console.log(`🎯 Found ${allSNssaiNodes.length} S-NSSAI nodes at level ${sNssaiLevel}: ${allSNssaiNodes.join(', ')}`);
+  // Simplified node counting for performance
   
   // Process levels in order
   const sortedLevels = Object.keys(nodesByLevel).map(l => parseInt(l)).sort((a, b) => a - b);
@@ -221,8 +208,7 @@ export const arrangeNodesInBalancedTree = (
       y = 100 + (level - 1) * 350 + maxPrevLevelHeight + 100; // 100px buffer for clear separation
     }
     
-    console.log(`\n=== LEVEL ${level} (Y=${y}) ===`);
-    console.log(`Nodes to position: ${nodesInLevel.join(', ')}`);
+    // Level positioning for performance
     
     if (level === 0) {
       // Root level: center everything at x=0
@@ -230,20 +216,17 @@ export const arrangeNodesInBalancedTree = (
         const position = { x: 0, y };
         positionedNodes.push({ id: nodeId, position });
         nodePositionMap[nodeId] = position;
-        console.log(`✓ Root ${nodeId} at (0, ${y})`);
+        // Root positioned
       });
     } else {
       // Position based on parents
       nodesInLevel.forEach(nodeId => {
         const parents = allParentsMap[nodeId] || [];
-        console.log(`\nPositioning ${nodeId} - Parents: ${parents.join(', ')}`);
-        
         if (parents.length === 0) {
           // No parents: center at x=0
           const position = { x: 0, y };
           positionedNodes.push({ id: nodeId, position });
           nodePositionMap[nodeId] = position;
-          console.log(`✓ Orphan ${nodeId} at (0, ${y})`);
         } else {
           // Position based on first parent for simplicity
           const parentPos = nodePositionMap[parents[0]];
@@ -266,7 +249,7 @@ export const arrangeNodesInBalancedTree = (
                 const position = { x: parentPos.x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ Single DNN ${nodeId} centered under parent at (${parentPos.x}, ${y})`);
+                // Single DNN positioned
               } else {
                 // Multiple DNN siblings: spread around parent with close spacing
                 const nodeIndex = siblings.indexOf(nodeId);
@@ -278,7 +261,7 @@ export const arrangeNodesInBalancedTree = (
                 const position = { x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ DNN ${nodeId} positioned near parent at (${x}, ${y})`);
+                // Multiple DNN positioned
               }
             } else if (isRrpNode && level === rrpLevel) {
               // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
@@ -291,7 +274,7 @@ export const arrangeNodesInBalancedTree = (
               const position = { x, y };
               positionedNodes.push({ id: nodeId, position });
               nodePositionMap[nodeId] = position;
-              console.log(`🎯 RRP ${nodeId} (${nodeIndex + 1}/${allRrpNodes.length}) unified at (${x}, ${y}) - spacing: ${rrpSpacing}px`);
+              // RRP positioned
             } else if (isCellAreaNode && level === cellAreaLevel) {
               // SPECIAL CASE: Position ALL cell-area nodes with consistent spacing for uniform edge lengths
               const nodeIndex = allCellAreaNodes.indexOf(nodeId);
@@ -303,7 +286,7 @@ export const arrangeNodesInBalancedTree = (
               const position = { x, y };
               positionedNodes.push({ id: nodeId, position });
               nodePositionMap[nodeId] = position;
-              console.log(`🎯 CELL-AREA ${nodeId} (${nodeIndex + 1}/${allCellAreaNodes.length}) unified at (${x}, ${y}) - spacing: ${cellAreaSpacing}px`);
+              // Cell area positioned
             } else if (isSNssaiNode && level === sNssaiLevel) {
               // Position S-NSSAI nodes close to their parent instead of unified horizontal group
               if (siblings.length === 1) {
