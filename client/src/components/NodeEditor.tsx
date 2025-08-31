@@ -80,11 +80,14 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       toast.info('Canvas is already empty');
       return;
     }
-    // CRITICAL FIX: Use ReactFlow instance to maintain interactivity
+    // CRITICAL FIX: Use ReactFlow instance AND update component state
     if (reactFlowInstance) {
       reactFlowInstance.setNodes([]);
       reactFlowInstance.setEdges([]);
       reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+      // ALSO update component state so UI reflects the clear
+      setNodes([]);
+      setEdges([]);
     } else {
       setNodes([]);
       setEdges([]);
@@ -110,16 +113,18 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
       }
       
-      // CRITICAL FIX: Use ReactFlow instance for initialization
+      // CRITICAL FIX: Use ReactFlow instance AND update component state
       setTimeout(() => {
         if (reactFlowInstance) {
           reactFlowInstance.setNodes(EXAMPLE_GRAPH.nodes);
+          setNodes(EXAMPLE_GRAPH.nodes);
         } else {
           setNodes(EXAMPLE_GRAPH.nodes);
         }
         setTimeout(() => {
           if (reactFlowInstance) {
             reactFlowInstance.setEdges(EXAMPLE_GRAPH.edges);
+            setEdges(EXAMPLE_GRAPH.edges);
           } else {
             setEdges(EXAMPLE_GRAPH.edges);
           }
@@ -280,10 +285,13 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       console.log(`Processed ${processedNodes.length} nodes and ${processedEdges.length} edges for loading`);
       console.log('NodeEditor: Processed nodes for load:', processedNodes.map(n => ({id: n.id, type: n.data?.type || n.type})));
       
-      // CRITICAL FIX: Use ReactFlow instance to maintain interactivity after load
+      // CRITICAL FIX: Use ReactFlow instance AND update component state
       if (reactFlowInstance) {
         reactFlowInstance.setNodes(processedNodes);
         reactFlowInstance.setEdges(processedEdges);
+        // ALSO update component state so UI reflects the loaded nodes
+        setNodes(processedNodes);
+        setEdges(processedEdges);
       } else {
         setNodes(processedNodes);
         setEdges(processedEdges);

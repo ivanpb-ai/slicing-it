@@ -1,0 +1,107 @@
+lowInstance: Rendering with 3 nodes, 2 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756652876463-9884', type: 'customNode', position: {…}, data: {…}}
+2NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+3NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+3NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+5NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+15NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+3NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+index.js:624  [React Flow]: It seems that you are trying to drag a node that is not initialized. Please use onNodesChange as explained in the docs. Help: https://reactflow.dev/error#015
+devWarn @ index.js:624
+calculateNodePosition @ index.js:477
+updateNodes @ index.js:2046
+(anonymous) @ index.js:2167
+call @ dispatch.js:57
+gesture @ drag.js:148
+mousemoved @ drag.js:71
+(anonymous) @ on.js:3
+2NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+NodeEditor.tsx:333 NodeEditor: Save triggered with 3 nodes and 2 edges
+NodeEditor.tsx:361 NodeEditor: Attempting to save 3 nodes and 2 edges
+NodeEditor.tsx:362 NodeEditor: Nodes being saved: (3) [{…}, {…}, {…}]
+react-dom.development.js:4161 [Violation] 'click' handler took 11458ms
+[Violation] 'click' handler took 11458ms
+ToolbarContainer.tsx:84 Clear canvas button clicked in Toolbar
+FlowInstance.tsx:83 FlowInstance: Rendering with 0 nodes, 0 edges
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 0, edges: 0
+NodeEditor.tsx:216 NodeEditor: Load triggered
+NodeEditor.tsx:221 Available graphs for loading: 7
+NodeEditor.tsx:252 Loading graph "test7" with 3 nodes and 2 edges
+NodeEditor.tsx:253 NodeEditor: Loaded nodes: (3) [{…}, {…}, {…}]
+NodeEditor.tsx:280 Processed 3 nodes and 2 edges for loading
+NodeEditor.tsx:281 NodeEditor: Processed nodes for load: (3) [{…}, {…}, {…}]
+react-dom.development.js:4161 [Violation] 'click' handler took 5741ms
+[Violation] 'click' handler took 5741ms
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 0, edges: 0
