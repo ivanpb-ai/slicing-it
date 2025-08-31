@@ -139,21 +139,21 @@ export const useExportImportGraph = (
                 if (nodeTypeAttr) {
                   nodeDataType = nodeTypeAttr;
                 } else {
-                  // Fallback: analyze text content and ID patterns
+                  // Fallback: analyze ID patterns first (most reliable)
                   if (dataId.startsWith('network')) {
                     nodeDataType = 'network';
                   } else if (dataId.startsWith('cell-area')) {
                     nodeDataType = 'cell-area';
+                  } else if (dataId.startsWith('dnn-')) {
+                    nodeDataType = 'dnn'; // DNN nodes specifically
+                  } else if (dataId.startsWith('fiveqi-') || textContent.includes('5QI')) {
+                    nodeDataType = 'fiveqi';
+                  } else if (dataId.startsWith('s-nssai') || textContent.includes('S-NSSAI')) {
+                    nodeDataType = 's-nssai';
                   } else if (dataId.startsWith('rrp-') && !dataId.startsWith('rrpmember')) {
                     nodeDataType = 'rrp';
                   } else if (dataId.startsWith('rrpmember') || textContent.includes('RRP Member')) {
                     nodeDataType = 'rrpmember';
-                  } else if (dataId.startsWith('s-nssai') || textContent.includes('S-NSSAI')) {
-                    nodeDataType = 's-nssai';
-                  } else if (dataId.startsWith('dnn')) {
-                    nodeDataType = 'dnn';
-                  } else if (dataId.startsWith('fiveqi') || textContent.includes('5QI')) {
-                    nodeDataType = 'fiveqi';
                   }
                 }
                 
@@ -167,9 +167,10 @@ export const useExportImportGraph = (
                 // For specific node types, try to extract additional relevant data
                 if (nodeDataType === 'network') {
                   // Look for network-specific data
-                  const networkMatch = dataId.match(/network-(\d+)/);
+                  const networkMatch = dataId.match(/network-(.+)/);
                   if (networkMatch) {
-                    nodeData.network = parseInt(networkMatch[1]);
+                    const networkValue = isNaN(parseInt(networkMatch[1])) ? networkMatch[1] : parseInt(networkMatch[1]);
+                    nodeData.network = networkValue;
                   }
                 } else if (nodeDataType === 'cell-area') {
                   // Look for cell area number
@@ -184,10 +185,30 @@ export const useExportImportGraph = (
                     nodeData.dnn = parseInt(dnnMatch[1]);
                   }
                 } else if (nodeDataType === 'fiveqi') {
-                  // Look for 5QI number
+                  // Look for 5QI number and set up fiveQIId for FiveQiNode compatibility
                   const fiveqiMatch = dataId.match(/fiveqi-(\d+)/);
                   if (fiveqiMatch) {
-                    nodeData.fiveqi = parseInt(fiveqiMatch[1]);
+                    const fiveqiValue = parseInt(fiveqiMatch[1]);
+                    nodeData.fiveqi = fiveqiValue;
+                    nodeData.fiveQIId = fiveqiValue; // Required by FiveQiNode component
+                  }
+                } else if (nodeDataType === 's-nssai') {
+                  // Look for S-NSSAI number
+                  const snssaiMatch = dataId.match(/s-nssai-(\d+)/);
+                  if (snssaiMatch) {
+                    nodeData['s-nssai'] = parseInt(snssaiMatch[1]);
+                  }
+                } else if (nodeDataType === 'rrp') {
+                  // Look for RRP number
+                  const rrpMatch = dataId.match(/rrp-(\d+)/);
+                  if (rrpMatch) {
+                    nodeData.rrp = parseInt(rrpMatch[1]);
+                  }
+                } else if (nodeDataType === 'rrpmember') {
+                  // Look for RRP member number
+                  const rrpmemberMatch = dataId.match(/rrpmember-(.+)-(\d+)/);
+                  if (rrpmemberMatch) {
+                    nodeData.rrpmember = parseInt(rrpmemberMatch[2]);
                   }
                 }
                 
