@@ -503,17 +503,28 @@ export const useExportImportGraph = (
               console.log('Dispatching graph-loaded event after import');
               window.dispatchEvent(new CustomEvent('graph-loaded'));
               
-              // Additional fit view with a longer delay
+              // Additional fit view with more robust handling
               if (reactFlowInstance) {
                 setTimeout(() => {
                   console.log('Fitting view after importing graph (delayed)');
-                  if (!window.sessionStorage.getItem('prevent-fitview')) {
-                    reactFlowInstance.fitView({ 
-                      padding: 0.2,
-                      includeHiddenNodes: false,
-                      duration: 800
-                    });
-                  }
+                  
+                  // Force viewport reset first, then fit view
+                  reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 0.5 });
+                  
+                  setTimeout(() => {
+                    const nodes = reactFlowInstance.getNodes();
+                    console.log(`Fitting view for ${nodes.length} imported nodes`);
+                    if (nodes.length > 0) {
+                      console.log('First node position:', nodes[0]?.position);
+                      reactFlowInstance.fitView({ 
+                        padding: 0.1,
+                        includeHiddenNodes: true,
+                        minZoom: 0.1,
+                        maxZoom: 1.5,
+                        duration: 1000
+                      });
+                    }
+                  }, 200);
                 }, 500);
               }
             }, 500);
