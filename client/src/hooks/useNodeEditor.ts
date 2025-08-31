@@ -34,13 +34,26 @@ export const useNodeEditor = () => {
         if (change) {
           console.log(`useNodeEditor: Processing change for node ${change.id}:`, change);
           if (change.type === 'position' && change.position) {
-            return { ...node, position: change.position };
+            // CRITICAL FIX: Preserve ALL node properties during position update
+            return { 
+              ...node, 
+              position: change.position,
+              // Force React to recognize this as a new object for re-render
+              __updateKey: Date.now()
+            };
           }
           if (change.type === 'select') {
             return { ...node, selected: change.selected };
           }
           if (change.type === 'remove') {
             return null;
+          }
+          if (change.type === 'dimensions') {
+            return { ...node, measured: change.dimensions };
+          }
+          if (change.type === 'replace') {
+            // Handle ReactFlow replace events
+            return { ...node, ...change.item };
           }
         }
         return node;
