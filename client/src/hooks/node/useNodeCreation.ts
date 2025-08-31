@@ -10,6 +10,8 @@ export const useNodeCreation = (setNodes: React.Dispatch<React.SetStateAction<No
     position: XYPosition,
     fiveQIId?: string
   ): Node => {
+    console.log(`useNodeCreation: Creating ${type} node at position:`, position);
+    
     let id: string;
     let extraData = {};
     
@@ -64,7 +66,16 @@ export const useNodeCreation = (setNodes: React.Dispatch<React.SetStateAction<No
       }
     };
 
-    setNodes(prevNodes => [...prevNodes, newNode]);
+    console.log(`useNodeCreation: Created node object:`, newNode);
+    console.log(`useNodeCreation: Adding node to state...`);
+    
+    setNodes(prevNodes => {
+      const updatedNodes = [...prevNodes, newNode];
+      console.log(`useNodeCreation: Node added to state! Total nodes: ${updatedNodes.length}`);
+      return updatedNodes;
+    });
+    
+    console.log(`useNodeCreation: Finished creating ${type} node with ID: ${newNode.id}`);
     return newNode;
   }, [setNodes]);
 
