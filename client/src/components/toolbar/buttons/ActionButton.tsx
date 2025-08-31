@@ -30,7 +30,11 @@ const ActionButton: React.FC<ActionButtonProps> = ({
           <Button
             variant="outline"
             size="icon"
-            onClick={onClick}
+            onClick={() => {
+              console.log('🔥 ARRANGE BUTTON CLICKED - Starting debug trace');
+              onClick();
+              console.log('🔥 ARRANGE BUTTON CLICK HANDLER COMPLETED');
+            }}
             disabled={disabled}
             className="h-8 w-8 mb-1"
           >

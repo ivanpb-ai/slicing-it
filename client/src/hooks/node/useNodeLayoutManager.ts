@@ -14,8 +14,10 @@ export const useNodeLayoutManager = (
   const reactFlowInstance = useReactFlow();
 
   const arrangeNodesInLayout = useCallback(() => {
+    console.log('🔥 useNodeLayoutManager: STARTING arrangeNodesInLayout');
     // Get fresh nodes from ReactFlow instance to avoid stale closure
     const currentNodes = reactFlowInstance?.getNodes() || nodes;
+    console.log('🔥 useNodeLayoutManager: Got current nodes:', currentNodes.length);
     
     if (currentNodes.length === 0) {
       toast.info('No nodes to arrange');
@@ -58,8 +60,9 @@ export const useNodeLayoutManager = (
       
       // Special handling for balanced-tree layout that returns cleaned edges
       if (layoutOptions.type === 'balanced-tree') {
+        console.log('🔥 useNodeLayoutManager: About to call arrangeNodesInBalancedTree');
         const balancedResult = arrangeNodesInBalancedTree(nodesCopy, edges, layoutOptions);
-        
+        console.log('🔥 useNodeLayoutManager: arrangeNodesInBalancedTree completed');
         
         if (balancedResult.nodes?.length > 0) {
           // Ensure no duplicate nodes
@@ -76,7 +79,9 @@ export const useNodeLayoutManager = (
             data: { ...node.data } // Force data object recreation
           }));
           
+          console.log('🔥 useNodeLayoutManager: About to call setNodes');
           setNodes(forceUpdatedNodes);
+          console.log('🔥 useNodeLayoutManager: setNodes completed');
           
           // Update edges with cleaned edges if setEdges is available
           if (setEdges && balancedResult.cleanedEdges) {

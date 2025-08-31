@@ -1,0 +1,122 @@
+NodeButton.tsx:34 NodeButton: Started dragging network button
+NodeButton.tsx:42 NodeButton: Set drag data to: network
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "network" at position: {x: 485, y: 7.666656494140625}
+useDragDataParser.ts:3 parseDragData: Processing drag data: network
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: network
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 9
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 9
+useParentNodeDetection.ts:47 detectParentNodeFromDOM: No parent node found in DOM elements
+useParentNodeDetection.ts:55 detectParentNodeFromPosition: Checking position: {x: 485, y: 7.666656494140625}
+useParentNodeDetection.ts:56 detectParentNodeFromPosition: Available nodes: []
+useParentNodeDetection.ts:92 detectParentNodeFromPosition: No parent node found at position
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: none
+useNodeDragDrop.ts:160 useNodeDragDrop: Creating standalone network node at safe position: {x: 485, y: 7.666656494140625}
+useNodeEditor.ts:83 useNodeEditor: Adding network node at position: {x: 485, y: 7.666656494140625}
+FlowInstance.tsx:83 FlowInstance: Rendering with 1 nodes, 0 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756650149959-4459', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 1, edges: 0
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756650149959-4459, type=network, nodeNumber=4459
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756650149959-4459, type=network, nodeNumber=4459
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 1, edges: 0
+NodeButton.tsx:34 NodeButton: Started dragging cell-area button
+NodeButton.tsx:42 NodeButton: Set drag data to: cell-area
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "cell-area" at position: {x: 538, y: 9.666656494140625}
+useDragDataParser.ts:3 parseDragData: Processing drag data: cell-area
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: cell-area
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 238, y: 9.666656494140625}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 11
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 11
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: network-1756650149959-4459
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: network-1756650149959-4459
+useNodeRelationships.ts:35 Validating relationship: network -> cell-area
+useNodeRelationships.ts:64 Valid relationship confirmed: network -> cell-area
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child cell-area node under parent network-1756650149959-4459
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: network
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 205, y: 107.66665649414062}
+idCounters.ts:26 Generated new Cell Area ID: 1
+useSimpleChildNodeCreation.ts:29 Creating child cell-area with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child cell-area node with ID: cell-area-1 under parent: network-1756650149959-4459
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 0 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756650149959-4459', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 2, edges: 0
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756650149959-4459 to cell-area-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-network-1756650149959-4459-cell-area-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1756650149959-4459-cell-area-1', source: 'network-1756650149959-4459', target: 'cell-area-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 1
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756650149959-4459 to cell-area-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-network-1756650149959-4459-cell-area-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1756650149959-4459-cell-area-1', source: 'network-1756650149959-4459', target: 'cell-area-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge network-1756650149959-4459->cell-area-1 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge network-1756650149959-4459->cell-area-1 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 1 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756650149959-4459', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 2, edges: 1
+NodeButton.tsx:34 NodeButton: Started dragging cell-area button
+NodeButton.tsx:42 NodeButton: Set drag data to: cell-area
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "cell-area" at position: {x: 600, y: -10.333343505859375}
+useDragDataParser.ts:3 parseDragData: Processing drag data: cell-area
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: cell-area
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 900, y: -10.333343505859375}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 14
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 14
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: network-1756650149959-4459
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: network-1756650149959-4459
+useNodeRelationships.ts:35 Validating relationship: network -> cell-area
+useNodeRelationships.ts:64 Valid relationship confirmed: network -> cell-area
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child cell-area node under parent network-1756650149959-4459
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: network
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: 805, y: 107.66665649414062}
+idCounters.ts:26 Generated new Cell Area ID: 2
+useSimpleChildNodeCreation.ts:29 Creating child cell-area with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child cell-area node with ID: cell-area-2 under parent: network-1756650149959-4459
+FlowInstance.tsx:83 FlowInstance: Rendering with 3 nodes, 1 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756650149959-4459', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 1
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756650149959-4459 to cell-area-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-network-1756650149959-4459-cell-area-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1756650149959-4459-cell-area-2', source: 'network-1756650149959-4459', target: 'cell-area-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 2
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756650149959-4459 to cell-area-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-network-1756650149959-4459-cell-area-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1756650149959-4459-cell-area-2', source: 'network-1756650149959-4459', target: 'cell-area-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge network-1756650149959-4459->cell-area-2 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge network-1756650149959-4459->cell-area-2 already exists
+FlowInstance.tsx:83 FlowInstance: Rendering with 3 nodes, 2 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'network-1756650149959-4459', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+useLayoutOperations.ts:22 useLayoutOperations: Arranging layout for 3 nodes
+balancedTreeLayout.ts:136 Level assignments: {network-1756650149959-4459: {…}, cell-area-1: {…}, cell-area-2: {…}}
+balancedTreeLayout.ts:137 Parent-child relationships: {cell-area-1: Array(1), cell-area-2: Array(1)}
+balancedTreeLayout.ts:394 🎯 Graph centering: minX=-200, maxX=200, width=400, centerOffset=0
+balancedTreeLayout.ts:408 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 3 nodes
+balancedTreeLayout.ts:409 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:410 🎯 Final calculated positions: (3) [{…}, {…}, {…}]
+balancedTreeLayout.ts:411 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:70 🧹 Filtered duplicates: 3 -> 3 nodes
+useNodeLayoutManager.ts:88 🧹 Updating edges: 2 -> 2 (filtered duplicates)
+NodeEditor.tsx:74 NodeEditor: Using PROPS state - nodes: 3, edges: 2
+Index.tsx:160 MainContentWithGraphOperations: edges updated 2
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 2 edges
+Index.tsx:45 Index component: nodes state updated, count: 3
+Index.tsx:47 Index component: First node: {"id":"network-1756650149959-4459","type":"customNode","position":{"x":0,"y":100},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1756650149959-4459"}}
+Index.tsx:74 Index component: edges state updated, count: 2
+Index.tsx:76 Index component: First edge: {"id":"unified-network-1756650149959-4459-cell-area-1","source":"network-1756650149959-4459","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 2 edges

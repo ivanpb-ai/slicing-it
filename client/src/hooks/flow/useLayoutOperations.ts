@@ -19,6 +19,7 @@ export const useLayoutOperations = (
   
   // Handle arranging layout with improved error handling
   const handleArrangeLayout = useCallback(() => {
+    console.log('🔥 useLayoutOperations: STARTING handleArrangeLayout');
     console.log(`useLayoutOperations: Arranging layout for ${nodes.length} nodes`);
     
     if (nodes.length === 0) {
@@ -40,8 +41,10 @@ export const useLayoutOperations = (
     const edgesBackup = [...edges];
     
     try {
+      console.log('🔥 useLayoutOperations: About to call arrangeNodesInLayout()');
       // Call the arrange function
       arrangeNodesInLayout();
+      console.log('🔥 useLayoutOperations: arrangeNodesInLayout() completed');
       
       // CRITICAL FIX: Force ReactFlow to recognize position changes and center viewport
       setTimeout(() => {
