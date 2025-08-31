@@ -1,0 +1,328 @@
+MainContent: Export triggered
+MainContent.tsx:56 MainContent: Current state - nodes: 0 edges: 0
+useExportImportGraph.ts:20 🔍 useExportImportGraph.ts: Export function called with graphName: test1exp12
+useExportImportGraph.ts:21 🔍 useExportImportGraph.ts: ReactFlow instance available: true
+useExportImportGraph.ts:28 🔍 useExportImportGraph.ts: Exporting current graph with 0 nodes and 0 edges
+useExportImportGraph.ts:31 🔍 useExportImportGraph.ts: Checking props state - nodes: 0 edges: 0
+useExportImportGraph.ts:53  🔍 useExportImportGraph.ts: No props state available, nodes: 0
+(anonymous) @ useExportImportGraph.ts:53
+handleExport @ MainContent.tsx:58
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+useExportImportGraph.ts:57 🔍 useExportImportGraph.ts: Checking ReactFlow instance... true
+useExportImportGraph.ts:62 🔍 useExportImportGraph.ts: ReactFlow instance has 0 nodes and 0 edges
+useExportImportGraph.ts:85  🔍 useExportImportGraph.ts: ReactFlow instance has no nodes, falling to next priority
+(anonymous) @ useExportImportGraph.ts:85
+handleExport @ MainContent.tsx:58
+callCallback2 @ react-dom.development.js:4164
+invokeGuardedCallbackDev @ react-dom.development.js:4213
+invokeGuardedCallback @ react-dom.development.js:4277
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:4291
+executeDispatch @ react-dom.development.js:9041
+processDispatchQueueItemsInOrder @ react-dom.development.js:9073
+processDispatchQueue @ react-dom.development.js:9086
+dispatchEventsForPlugins @ react-dom.development.js:9097
+(anonymous) @ react-dom.development.js:9288
+batchedUpdates$1 @ react-dom.development.js:26179
+batchedUpdates @ react-dom.development.js:3991
+dispatchEventForPluginEventSystem @ react-dom.development.js:9287
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ react-dom.development.js:6465
+dispatchEvent @ react-dom.development.js:6457
+dispatchDiscreteEvent @ react-dom.development.js:6430
+useExportImportGraph.ts:96 🔍 useExportImportGraph.ts: Trying to get nodes from global debug state...
+useExportImportGraph.ts:102 🔍 useExportImportGraph.ts: Debug nodes found: 0
+useExportImportGraph.ts:103 🔍 useExportImportGraph.ts: Debug edges found: 0
+useExportImportGraph.ts:132 🔍 useExportImportGraph.ts: Attempting DOM extraction...
+useExportImportGraph.ts:135 🔍 useExportImportGraph.ts: Found 116 DOM elements with data-id
+useExportImportGraph.ts:138 🔍 useExportImportGraph.ts: Extracting graph data from DOM...
+useExportImportGraph.ts:256 🔍 useExportImportGraph.ts: Found 46 edge elements
+useExportImportGraph.ts:356 🔍 useExportImportGraph.ts: Extracted 25 nodes and 21 edges from DOM
+react-dom.development.js:4161 [Violation] 'click' handler took 8261ms
+[Violation] 'click' handler took 8262ms
+ToolbarContainer.tsx:84 Clear canvas button clicked in Toolbar
+idCounters.ts:104 Resetting all ID counters to 1
+react-dom.development.js:86  Warning: Encountered two children with the same key, `s-nssai-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at MiniMapNodes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9247:3)
+    at svg
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at MiniMapComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9319:10)
+    at FlowControls
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756635910826:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756635987261:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756635987261:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFunctionComponent @ react-dom.development.js:19649
+updateSimpleMemoComponent @ react-dom.development.js:19454
+beginWork @ react-dom.development.js:21717
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+(anonymous) @ react-dom.development.js:25690
+react-dom.development.js:86  Warning: Encountered two children with the same key, `s-nssai-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at MiniMapNodes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9247:3)
+    at svg
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at MiniMapComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9319:10)
+    at FlowControls
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx?t=1756635910826:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756635987261:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx?t=1756635987261:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+warnOnInvalidKey @ react-dom.development.js:13529
+reconcileChildrenArray @ react-dom.development.js:13566
+reconcileChildFibers2 @ react-dom.development.js:14057
+reconcileChildren @ react-dom.development.js:19193
+updateFunctionComponent @ react-dom.development.js:19649
+updateSimpleMemoComponent @ react-dom.development.js:19454
+beginWork @ react-dom.development.js:21717
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+(anonymous) @ react-dom.development.js:25690
+SaveLoadMenu.tsx:47 SaveLoadMenu: Import button clicked
+FileImportInput.tsx:52 FileImportInput: Force reset input before dialog
+FileImportInput.tsx:56 FileImportInput: Input reset completed
+FileImportInput.tsx:19 FileImportInput: Processing file: test1exp12_1756636050275.json, type: application/json, size: 15941
+SaveLoadMenu.tsx:60 SaveLoadMenu: File selected for import: test1exp12_1756636050275.json, size: 15941 bytes
+FileImportInput.tsx:52 FileImportInput: Force reset input before dialog
+FileImportInput.tsx:30 FileImportInput: Successfully called onImport handler
+FileImportInput.tsx:56 FileImportInput: Input reset completed
+FileImportInput.tsx:19 FileImportInput: Processing file: test1exp12_1756636050275.json, type: application/json, size: 15941
+NodeEditor.tsx:217 NodeEditor: Import handler called with file: test1exp12_1756636050275.json
+GraphExportImportService.ts:68 GraphExportImportService: Starting import of test1exp12_1756636050275.json, size: 15941 bytes
+FileImportInput.tsx:30 FileImportInput: Successfully called onImport handler
+GraphExportImportService.ts:83 GraphExportImportService: File contents length: 15941
+GraphExportImportService.ts:96 GraphExportImportService: Successfully parsed JSON {nodes: Array(25), edges: Array(21), extractionMethod: 'DOM_SCRAPING', extractionTime: 1756636050277}
+GraphExportImportService.ts:131 GraphExportImportService: Successfully processed graph with 25 nodes and 21 edges
+GraphExportImportService.ts:155 GraphExportImportService: Final validation passed - returning 25 nodes and 21 edges
+NodeEditor.tsx:228 NodeEditor: Successfully imported graph with 25 nodes and 21 edges
+NodeEditor.tsx:266 NodeEditor: Processed 25 nodes and 21 edges
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 79V2X messagesType:Non-GBRPriority:65Delay:50 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 79, fiveQIId: 79, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 79V2X messagesType:Non-GBRPriority:65Delay:50 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 79, fiveQIId: 79, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 9Video (Buffered Streaming), TCP-based servicesType:Non-GBRPriority:90Delay:300 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 9, fiveQIId: 9, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 9Video (Buffered Streaming), TCP-based servicesType:Non-GBRPriority:90Delay:300 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 9, fiveQIId: 9, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 67Mission Critical Video user planeType:GBRPriority:15Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 67, fiveQIId: 67, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+fiveQIUtils.ts:24 Looking up 5QI with ID: "67"
+fiveQIUtils.ts:33 Found matching 5QI for ID "67": {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 67Mission Critical Video user planeType:GBRPriority:15Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 67, fiveQIId: 67, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+fiveQIUtils.ts:24 Looking up 5QI with ID: "67"
+fiveQIUtils.ts:33 Found matching 5QI for ID "67": {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 7Voice, Video (Live Streaming), Interactive GamingType:Non-GBRPriority:70Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 7, fiveQIId: 7, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 7Voice, Video (Live Streaming), Interactive GamingType:Non-GBRPriority:70Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 7, fiveQIId: 7, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756298418290-5901, type=network, nodeNumber=1756298418290
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298522116-122, type=rrpmember, nodeNumber=122
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298528108-7394, type=rrpmember, nodeNumber=7394
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298536993-2136, type=rrpmember, nodeNumber=2136
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+FiveQiNode.tsx:34 FiveQiNode: Loading QoS values for ID: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:38 FiveQiNode: Found QoS values: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+FiveQiNode.tsx:34 FiveQiNode: Loading QoS values for ID: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:38 FiveQiNode: Found QoS values: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+FiveQiNode.tsx:34 FiveQiNode: Loading QoS values for ID: 67
+fiveQIUtils.ts:24 Looking up 5QI with ID: "67"
+fiveQIUtils.ts:33 Found matching 5QI for ID "67": {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+FiveQiNode.tsx:38 FiveQiNode: Found QoS values: {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-67, type=fiveqi, nodeNumber=67
+FiveQiNode.tsx:34 FiveQiNode: Loading QoS values for ID: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+FiveQiNode.tsx:38 FiveQiNode: Found QoS values: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-7, type=fiveqi, nodeNumber=7
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313013671-6351, type=rrpmember, nodeNumber=6351
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313029003-77, type=rrpmember, nodeNumber=77
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313334883-4722, type=rrpmember, nodeNumber=4722
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756298418290-5901, type=network, nodeNumber=1756298418290
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298522116-122, type=rrpmember, nodeNumber=122
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298528108-7394, type=rrpmember, nodeNumber=7394
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298536993-2136, type=rrpmember, nodeNumber=2136
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-67, type=fiveqi, nodeNumber=67
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-7, type=fiveqi, nodeNumber=7
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313013671-6351, type=rrpmember, nodeNumber=6351
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313029003-77, type=rrpmember, nodeNumber=77
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313334883-4722, type=rrpmember, nodeNumber=4722
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 79V2X messagesType:Non-GBRPriority:65Delay:50 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 79, fiveQIId: 79, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 79
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 79V2X messagesType:Non-GBRPriority:65Delay:50 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 79, fiveQIId: 79, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 79
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 9Video (Buffered Streaming), TCP-based servicesType:Non-GBRPriority:90Delay:300 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 9, fiveQIId: 9, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 9
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 9Video (Buffered Streaming), TCP-based servicesType:Non-GBRPriority:90Delay:300 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 9, fiveQIId: 9, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 9
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 67Mission Critical Video user planeType:GBRPriority:15Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 67, fiveQIId: 67, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 67Mission Critical Video user planeType:GBRPriority:15Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 67, fiveQIId: 67, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 7Voice, Video (Live Streaming), Interactive GamingType:Non-GBRPriority:70Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 7, fiveQIId: 7, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 7Voice, Video (Live Streaming), Interactive GamingType:Non-GBRPriority:70Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 7, fiveQIId: 7, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
