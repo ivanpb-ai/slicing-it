@@ -73,6 +73,8 @@ export const useNodeLayoutManager = (
             data: { ...node.data } // Force data object recreation
           }));
           
+          console.log('🔧 useNodeLayoutManager: Calling setNodes with', forceUpdatedNodes.length, 'nodes');
+          console.log('🔧 First updated node position:', forceUpdatedNodes[0]?.position);
           setNodes(forceUpdatedNodes);
           
           // Update edges with cleaned edges if setEdges is available

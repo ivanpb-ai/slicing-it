@@ -66,6 +66,9 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   const edges = (propEdges !== undefined && propEdges.length > 0) ? propEdges : localEdges;
   const setNodes = propSetNodes || localSetNodes;
   const setEdges = propSetEdges || localSetEdges;
+  
+  // Debug: Log which state system is being used
+  console.log(`NodeEditor: Using ${propNodes !== undefined ? 'PROPS' : 'LOCAL'} state - nodes: ${nodes.length}, edges: ${edges.length}`);
 
   // Debug logging to track state source
   useEffect(() => {
