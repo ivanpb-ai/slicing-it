@@ -195,6 +195,8 @@ export const useExportImportGraph = (
                   id: edgeId,
                   source: sourceId,
                   target: targetId,
+                  sourceHandle: 'bottom', // Default handle for extracted edges
+                  targetHandle: 'top',    // Default handle for extracted edges
                   type: 'default',
                   style: { stroke: '#2563eb', strokeWidth: 3 },
                   data: { extractedFromDOM: true }
