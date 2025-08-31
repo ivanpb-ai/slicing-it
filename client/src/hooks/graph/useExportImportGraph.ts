@@ -111,11 +111,12 @@ export const useExportImportGraph = (
             const extractedNodes: any[] = [];
             const extractedEdges: any[] = [];
             
+            // First pass: extract all nodes
             nodeElements.forEach((element: Element) => {
               const dataId = element.getAttribute('data-id');
               if (!dataId) return;
               
-              // Check if this is a node (has position transform) or edge
+              // Check if this is a node (has position transform)
               const transform = (element as HTMLElement).style.transform;
               const isNode = transform && transform.includes('translate');
               
@@ -154,17 +155,52 @@ export const useExportImportGraph = (
                     extractedFromDOM: true 
                   }
                 });
-              } else if (element.classList.contains('react-flow__edge') || dataId.includes('-')) {
-                // Try to extract edge source/target
-                const parts = dataId.split('-');
-                if (parts.length >= 2) {
-                  extractedEdges.push({
-                    id: dataId,
-                    source: parts[0],
-                    target: parts[1],
-                    data: { extractedFromDOM: true }
-                  });
+              // Skip non-node elements
+              }
+            });
+            
+            // Second pass: extract edges from ReactFlow edge elements
+            const edgeElements = document.querySelectorAll('.react-flow__edge');
+            console.log('🔍 useExportImportGraph.ts: Found', edgeElements.length, 'edge elements');
+            
+            edgeElements.forEach((edgeElement: Element) => {
+              const edgeId = edgeElement.getAttribute('data-id');
+              if (!edgeId || edgeId.includes('xy-edge__')) return; // Skip internal ReactFlow edges
+              
+              // Try to parse the edge ID to get source and target
+              // Edge IDs typically follow pattern: sourceId-targetId
+              const nodeIds = extractedNodes.map(n => n.id);
+              let sourceId = '';
+              let targetId = '';
+              
+              // Try different parsing strategies
+              for (const nodeId of nodeIds) {
+                if (edgeId.startsWith(nodeId + '-')) {
+                  sourceId = nodeId;
+                  const remainder = edgeId.substring(nodeId.length + 1);
+                  
+                  // Check if remainder matches another node ID
+                  for (const targetNodeId of nodeIds) {
+                    if (remainder === targetNodeId || remainder.startsWith(targetNodeId)) {
+                      targetId = targetNodeId;
+                      break;
+                    }
+                  }
+                  break;
                 }
+              }
+              
+              if (sourceId && targetId && sourceId !== targetId) {
+                extractedEdges.push({
+                  id: edgeId,
+                  source: sourceId,
+                  target: targetId,
+                  type: 'default',
+                  style: { stroke: '#2563eb', strokeWidth: 3 },
+                  data: { extractedFromDOM: true }
+                });
+              } else {
+                console.warn('🔍 useExportImportGraph.ts: Could not parse edge:', edgeId, 'source:', sourceId, 'target:', targetId);
               }
             });
             

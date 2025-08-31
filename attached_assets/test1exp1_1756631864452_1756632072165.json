@@ -1,0 +1,1061 @@
+{
+  "nodes": [
+    {
+      "id": "network-1756298418290-5901",
+      "type": "customNode",
+      "position": {
+        "x": 87.5,
+        "y": 100
+      },
+      "data": {
+        "label": "NetworkNodeMain entry point",
+        "type": "generic",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-1",
+      "type": "customNode",
+      "position": {
+        "x": -112.5,
+        "y": 320
+      },
+      "data": {
+        "label": "TAC #1TAC 1Area 51",
+        "type": "generic",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-2",
+      "type": "customNode",
+      "position": {
+        "x": 287.5,
+        "y": 320
+      },
+      "data": {
+        "label": "TAC #2TAC 2Area 52",
+        "type": "generic",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-1",
+      "type": "customNode",
+      "position": {
+        "x": -312.5,
+        "y": 670
+      },
+      "data": {
+        "label": "RRP#1PremiumAdd PLMN (creates RRPmember)Band 1: n78DL %50%UL %30%Band 2: n28DL %40%UL %20%Band 3DL %50%UL %50%Add Band",
+        "type": "rrp-member",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-2",
+      "type": "customNode",
+      "position": {
+        "x": 487.5,
+        "y": 670
+      },
+      "data": {
+        "label": "RRP#2BasicAdd PLMN (creates RRPmember)Band 1: n78DL %20%UL %10%Band 2: n28DL %20%UL %10%Add Band",
+        "type": "rrp-member",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-3",
+      "type": "customNode",
+      "position": {
+        "x": 87.5,
+        "y": 670
+      },
+      "data": {
+        "label": "RRP#3ResidualAdd PLMN (creates RRPmember)Band 1: n78DL %40%UL %40%Band 2: n28DL %40%UL %40%Add Band",
+        "type": "rrp-member",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756298522116-122",
+      "type": "customNode",
+      "position": {
+        "x": -12.5,
+        "y": 1180
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 01",
+        "type": "rrp-member",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756298528108-7394",
+      "type": "customNode",
+      "position": {
+        "x": 387.5,
+        "y": 1180
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 49",
+        "type": "rrp-member",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756298536993-2136",
+      "type": "customNode",
+      "position": {
+        "x": -412.5,
+        "y": 1180
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 49",
+        "type": "rrp-member",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-1",
+      "type": "customNode",
+      "position": {
+        "x": -312.5,
+        "y": 1370
+      },
+      "data": {
+        "label": "S-NSSAI#1NodeSD:SST:",
+        "type": "s-nssai",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-2",
+      "type": "customNode",
+      "position": {
+        "x": 87.5,
+        "y": 1370
+      },
+      "data": {
+        "label": "S-NSSAI#2NodeSD:SST:",
+        "type": "s-nssai",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-1",
+      "type": "customNode",
+      "position": {
+        "x": -912.5,
+        "y": 1720
+      },
+      "data": {
+        "label": "DNN#1Nodehqvideo.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "s-nssai",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-2",
+      "type": "customNode",
+      "position": {
+        "x": 287.5,
+        "y": 1720
+      },
+      "data": {
+        "label": "DNN#2Nodebasic.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "s-nssai",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-3",
+      "type": "customNode",
+      "position": {
+        "x": 687.5,
+        "y": 1720
+      },
+      "data": {
+        "label": "DNN#3Nodevideo.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "s-nssai",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-4",
+      "type": "customNode",
+      "position": {
+        "x": -512.5,
+        "y": 1720
+      },
+      "data": {
+        "label": "DNN#4Nodepremium.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "s-nssai",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-5",
+      "type": "customNode",
+      "position": {
+        "x": 1087.5,
+        "y": 1720
+      },
+      "data": {
+        "label": "DNN#5Nodegaming.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "s-nssai",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-6",
+      "type": "customNode",
+      "position": {
+        "x": -112.5,
+        "y": 1720
+      },
+      "data": {
+        "label": "DNN#6Nodezcvczvv2x.telia.nsConnect top handle to multiple S-NSSAI bottom handlesDrag 5QI nodes onto this DNN to connect them",
+        "type": "s-nssai",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "fiveqi-79",
+      "type": "customNode",
+      "position": {
+        "x": -287.5,
+        "y": 2070
+      },
+      "data": {
+        "label": "5QI5QI: 79V2X messagesType:Non-GBRPriority:65Delay:50 ms",
+        "type": "generic",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "fiveqi-9",
+      "type": "customNode",
+      "position": {
+        "x": -687.5,
+        "y": 2070
+      },
+      "data": {
+        "label": "5QI5QI: 9Video (Buffered Streaming), TCP-based servicesType:Non-GBRPriority:90Delay:300 ms",
+        "type": "generic",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "fiveqi-67",
+      "type": "customNode",
+      "position": {
+        "x": -1087.5,
+        "y": 2070
+      },
+      "data": {
+        "label": "5QI5QI: 67Mission Critical Video user planeType:GBRPriority:15Delay:100 ms",
+        "type": "generic",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "fiveqi-7",
+      "type": "customNode",
+      "position": {
+        "x": 512.5,
+        "y": 2070
+      },
+      "data": {
+        "label": "5QI5QI: 7Voice, Video (Live Streaming), Interactive GamingType:Non-GBRPriority:70Delay:100 ms",
+        "type": "generic",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-4",
+      "type": "customNode",
+      "position": {
+        "x": 387.5,
+        "y": 1370
+      },
+      "data": {
+        "label": "S-NSSAI#4NodeSD:SST:",
+        "type": "s-nssai",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756313013671-6351",
+      "type": "customNode",
+      "position": {
+        "x": 187.5,
+        "y": 1180
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 49",
+        "type": "rrp-member",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756313029003-77",
+      "type": "customNode",
+      "position": {
+        "x": -212.5,
+        "y": 1180
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 01",
+        "type": "rrp-member",
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756313334883-4722",
+      "type": "customNode",
+      "position": {
+        "x": 587.5,
+        "y": 1180
+      },
+      "data": {
+        "label": "RRP MemberPLMN: 240 01",
+        "type": "rrp-member",
+        "extractedFromDOM": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "network-1756298418290-5901-cell-area-1",
+      "source": "network",
+      "target": "1756298418290",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "network-1756298418290-5901-cell-area-1",
+      "source": "network",
+      "target": "1756298418290",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "network-1756298418290-5901-cell-area-2",
+      "source": "network",
+      "target": "1756298418290",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "network-1756298418290-5901-cell-area-2",
+      "source": "network",
+      "target": "1756298418290",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-1-rrp-1",
+      "source": "cell",
+      "target": "area",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-1-rrp-1",
+      "source": "cell",
+      "target": "area",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-2-rrp-2",
+      "source": "cell",
+      "target": "area",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-2-rrp-2",
+      "source": "cell",
+      "target": "area",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-2-rrp-3",
+      "source": "cell",
+      "target": "area",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "cell-area-2-rrp-3",
+      "source": "cell",
+      "target": "area",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "xy-edge__cell-area-1bottom-source-rrp-3top-target",
+      "source": "xy",
+      "target": "edge__cell",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-3-rrpmember-1756298522116-122",
+      "source": "rrp",
+      "target": "3",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-2-rrpmember-1756298528108-7394",
+      "source": "rrp",
+      "target": "2",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-1-rrpmember-1756298536993-2136",
+      "source": "rrp",
+      "target": "1",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756298536993-2136-s-nssai-1",
+      "source": "rrpmember",
+      "target": "1756298536993",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756298536993-2136-s-nssai-1",
+      "source": "rrpmember",
+      "target": "1756298536993",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756298522116-122-s-nssai-2",
+      "source": "rrpmember",
+      "target": "1756298522116",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrpmember-1756298522116-122-s-nssai-2",
+      "source": "rrpmember",
+      "target": "1756298522116",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-1-dnn-1",
+      "source": "s",
+      "target": "nssai",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-1-dnn-1",
+      "source": "s",
+      "target": "nssai",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-2-dnn-2",
+      "source": "s",
+      "target": "nssai",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-2-dnn-2",
+      "source": "s",
+      "target": "nssai",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-1-dnn-4",
+      "source": "s",
+      "target": "nssai",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-1-dnn-4",
+      "source": "s",
+      "target": "nssai",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-1-dnn-6",
+      "source": "s",
+      "target": "nssai",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "s-nssai-1-dnn-6",
+      "source": "s",
+      "target": "nssai",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-6-fiveqi-79",
+      "source": "dnn",
+      "target": "6",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-6-fiveqi-79",
+      "source": "dnn",
+      "target": "6",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-4-fiveqi-9",
+      "source": "dnn",
+      "target": "4",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-4-fiveqi-9",
+      "source": "dnn",
+      "target": "4",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-1-fiveqi-67",
+      "source": "dnn",
+      "target": "1",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-1-fiveqi-67",
+      "source": "dnn",
+      "target": "1",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-3-fiveqi-7",
+      "source": "dnn",
+      "target": "3",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "dnn-3-fiveqi-7",
+      "source": "dnn",
+      "target": "3",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "xy-edge__dnn-5bottom-source-fiveqi-7top-target",
+      "source": "xy",
+      "target": "edge__dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "xy-edge__dnn-2bottom-source-fiveqi-7top-target",
+      "source": "xy",
+      "target": "edge__dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "xy-edge__rrpmember-1756298528108-7394bottom-source-s-nssai-4top-target",
+      "source": "xy",
+      "target": "edge__rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "xy-edge__s-nssai-4bottom-source-dnn-3top-target",
+      "source": "xy",
+      "target": "edge__s",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "xy-edge__s-nssai-4bottom-source-dnn-5top-target",
+      "source": "xy",
+      "target": "edge__s",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-3-rrpmember-1756313013671-6351",
+      "source": "rrp",
+      "target": "3",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-1-rrpmember-1756313029003-77",
+      "source": "rrp",
+      "target": "1",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "xy-edge__rrpmember-1756313013671-6351bottom-source-s-nssai-2top-target",
+      "source": "xy",
+      "target": "edge__rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "xy-edge__rrpmember-1756313029003-77bottom-source-s-nssai-2top-target",
+      "source": "xy",
+      "target": "edge__rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "xy-edge__s-nssai-4bottom-source-dnn-2top-target",
+      "source": "xy",
+      "target": "edge__s",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "rrp-2-rrpmember-1756313334883-4722",
+      "source": "rrp",
+      "target": "2",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "xy-edge__rrpmember-1756313334883-4722bottom-source-s-nssai-4top-target",
+      "source": "xy",
+      "target": "edge__rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-network-1756298418290-5901-bottom-source-source",
+      "source": "1",
+      "target": "network",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-cell-area-1-top-target-target",
+      "source": "1",
+      "target": "cell",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-cell-area-1-bottom-source-source",
+      "source": "1",
+      "target": "cell",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-cell-area-2-top-target-target",
+      "source": "1",
+      "target": "cell",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-cell-area-2-bottom-source-source",
+      "source": "1",
+      "target": "cell",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrp-1-top-target-target",
+      "source": "1",
+      "target": "rrp",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrp-1-bottom-source-source",
+      "source": "1",
+      "target": "rrp",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrp-2-top-target-target",
+      "source": "1",
+      "target": "rrp",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrp-2-bottom-source-source",
+      "source": "1",
+      "target": "rrp",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrp-3-top-target-target",
+      "source": "1",
+      "target": "rrp",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrp-3-bottom-source-source",
+      "source": "1",
+      "target": "rrp",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756298522116-122-top-target-target",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756298522116-122-bottom-source-source",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756298528108-7394-top-target-target",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756298528108-7394-bottom-source-source",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756298536993-2136-top-target-target",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756298536993-2136-bottom-source-source",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-s-nssai-1-top-target-target",
+      "source": "1",
+      "target": "s",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-s-nssai-1-bottom-source-source",
+      "source": "1",
+      "target": "s",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-s-nssai-2-top-target-target",
+      "source": "1",
+      "target": "s",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-s-nssai-2-bottom-source-source",
+      "source": "1",
+      "target": "s",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-1-top-target-target",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-1-bottom-source-source",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-2-top-target-target",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-2-bottom-source-source",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-3-top-target-target",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-3-bottom-source-source",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-4-top-target-target",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-4-bottom-source-source",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-5-top-target-target",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-5-bottom-source-source",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-6-top-target-target",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-dnn-6-bottom-source-source",
+      "source": "1",
+      "target": "dnn",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-fiveqi-79-top-target-target",
+      "source": "1",
+      "target": "fiveqi",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-fiveqi-9-top-target-target",
+      "source": "1",
+      "target": "fiveqi",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-fiveqi-67-top-target-target",
+      "source": "1",
+      "target": "fiveqi",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-fiveqi-7-top-target-target",
+      "source": "1",
+      "target": "fiveqi",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-s-nssai-4-top-target-target",
+      "source": "1",
+      "target": "s",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-s-nssai-4-bottom-source-source",
+      "source": "1",
+      "target": "s",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756313013671-6351-top-target-target",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756313013671-6351-bottom-source-source",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756313029003-77-top-target-target",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756313029003-77-bottom-source-source",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756313334883-4722-top-target-target",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    },
+    {
+      "id": "1-rrpmember-1756313334883-4722-bottom-source-source",
+      "source": "1",
+      "target": "rrpmember",
+      "data": {
+        "extractedFromDOM": true
+      }
+    }
+  ],
+  "extractionMethod": "DOM_SCRAPING",
+  "extractionTime": 1756631864453
+}
