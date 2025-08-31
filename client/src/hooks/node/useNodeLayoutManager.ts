@@ -8,6 +8,7 @@ export const useNodeLayoutManager = (
   nodes: Node[],
   edges: Edge[],
   setNodes: React.Dispatch<React.SetStateAction<Node[]>>,
+  setEdges?: React.Dispatch<React.SetStateAction<Edge[]>>,
 ) => {
   const reactFlowInstance = useReactFlow();
 
@@ -43,58 +44,41 @@ export const useNodeLayoutManager = (
       console.log('Layout options:', layoutOptions);
       
       const nodesCopy = nodes.map(node => ({...node}));
-      const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
       
-      console.log('✅ Balanced tree layout completed:', arrangedNodes?.length, 'nodes positioned in hierarchy');
-      
-      if (arrangedNodes?.length > 0) {
-        // Set flag to prevent automatic fitView calls that would override our layout
-        window.sessionStorage.setItem('prevent-fitview', 'true');
+      // Special handling for balanced-tree layout that returns cleaned edges
+      if (layoutOptions.type === 'balanced-tree') {
+        const balancedResult = require('../../utils/flowData/layouts/balancedTreeLayout').arrangeNodesInBalancedTree(nodesCopy, edges, layoutOptions);
         
-        console.log('🎯 SETTING NODES WITH CALCULATED POSITIONS:');
-        arrangedNodes.slice(0, 5).forEach(node => {
-          console.log(`  ${node.id}: x=${node.position.x}, y=${node.position.y}`);
-        });
+        console.log(`🧹 Layout returned ${balancedResult.nodes.length} nodes and ${balancedResult.cleanedEdges.length} cleaned edges (was ${edges.length})`);
         
-        setNodes(arrangedNodes);
-        toast.success('Nodes arranged in balanced hierarchical tree layout');
-        
-        // Add verification after setNodes
-        setTimeout(() => {
-          if (reactFlowInstance) {
-            const currentNodes = reactFlowInstance.getNodes();
-            console.log('🔍 VERIFICATION: Nodes after setNodes call:');
-            currentNodes.slice(0, 5).forEach(node => {
-              console.log(`  ${node.id}: x=${node.position.x}, y=${node.position.y}`);
-            });
-          }
-        }, 100);
-        
-        // DO NOT call fitView - it might be repositioning nodes
-        // Force viewport to show all positioned nodes with proper zoom
-        // setTimeout(() => {
-        //   console.log('✅ Layout applied - fitting view to show proper spacing');
-        //   if (reactFlowInstance) {
-        //     reactFlowInstance.fitView({ 
-        //       padding: 100,
-        //       maxZoom: 0.8,     // Prevent zooming too close
-        //       minZoom: 0.2,     // Allow zooming out to see full layout
-        //       duration: 500     // Smooth transition
-        //     });
-        //   }
-        // }, 200);
-        
-        requestAnimationFrame(() => {
-          window.dispatchEvent(new CustomEvent('node-added'));
-          window.dispatchEvent(new CustomEvent('layout-changed'));
-          window.dispatchEvent(new CustomEvent('force-cell-visibility'));
+        if (balancedResult.nodes?.length > 0) {
+          setNodes(balancedResult.nodes);
           
-          // Clear the flag after events are processed
-          setTimeout(() => {
-            window.sessionStorage.removeItem('prevent-fitview');
-          }, 1000);
-        });
+          // Update edges with cleaned edges if setEdges is available
+          if (setEdges && balancedResult.cleanedEdges) {
+            console.log(`🧹 Updating edges: ${edges.length} -> ${balancedResult.cleanedEdges.length}`);
+            setEdges(balancedResult.cleanedEdges);
+          }
+          
+          return balancedResult.nodes;
+        }
+      } else {
+        // Use normal arrangement for other layout types
+        const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
+        if (arrangedNodes?.length > 0) {
+          setNodes(arrangedNodes);
+          return arrangedNodes;
+        }
       }
+      
+      // Handle success for special layouts
+      toast.success('Nodes arranged in balanced hierarchical tree layout');
+      
+      requestAnimationFrame(() => {
+        window.dispatchEvent(new CustomEvent('node-added'));
+        window.dispatchEvent(new CustomEvent('layout-changed'));
+        window.dispatchEvent(new CustomEvent('force-cell-visibility'));
+      });
     } catch (error) {
       console.error('Layout error:', error);
       
