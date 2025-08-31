@@ -214,8 +214,8 @@ export const arrangeNodesInBalancedTree = (
         }
       });
       
-      // Use dynamic spacing: base spacing + max height of previous level + buffer
-      y = 100 + (level - 1) * 350 + maxPrevLevelHeight + 100; // 100px buffer for clear separation
+      // Use dynamic spacing: base spacing + max height of previous level + buffer  
+      y = 100 + (level - 1) * 450 + maxPrevLevelHeight + 150; // Increased spacing for better separation
     }
     
     // Level positioning for performance
@@ -256,7 +256,7 @@ export const arrangeNodesInBalancedTree = (
             if (isDnnNode && level === dnnLevel) {
               // SPECIAL CASE: Position ALL DNN nodes with consistent spacing across the entire level
               const nodeIndex = allDnnNodes.indexOf(nodeId);
-              const dnnSpacing = 300; // Consistent spacing for DNN nodes
+              const dnnSpacing = 400; // Increased spacing for DNN nodes to prevent overlap
               const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
               const startX = 0 - totalDnnWidth / 2; // Center around X=0
               const x = startX + nodeIndex * dnnSpacing;
@@ -313,7 +313,7 @@ export const arrangeNodesInBalancedTree = (
             } else if (isFiveQiNode && level === fiveQiLevel) {
               // SPECIAL CASE: Position ALL 5QI nodes with consistent spacing across the entire level
               const nodeIndex = allFiveQiNodes.indexOf(nodeId);
-              const fiveQiSpacing = 250; // Tight spacing for 5QI nodes
+              const fiveQiSpacing = 350; // Increased spacing for 5QI nodes to prevent overlap
               const totalFiveQiWidth = (allFiveQiNodes.length - 1) * fiveQiSpacing;
               const startX = 0 - totalFiveQiWidth / 2; // Center around X=0
               const x = startX + nodeIndex * fiveQiSpacing;
@@ -329,7 +329,7 @@ export const arrangeNodesInBalancedTree = (
               if (isRrpMember) {
                 // RRP-member nodes: Position symmetrically BELOW parent (not at same level)
                 // Handle both single and multiple RRP members consistently
-                const rrpMemberY = parentPos.y + verticalSpacing; // Use proper vertical spacing
+                const rrpMemberY = parentPos.y + 400; // Increased vertical spacing to ensure RRP members are clearly below parents
                 
                 if (siblings.length === 1) {
                   // Single RRP member: position directly below parent
