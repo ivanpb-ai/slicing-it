@@ -27,10 +27,12 @@ export const useNodeEditor = () => {
   const { duplicateSelected } = useNodeDuplication(nodes, edges, setNodes, setEdges, selectedElements);
 
   const onNodesChange = useCallback((changes: any) => {
+    console.log('useNodeEditor: onNodesChange called with changes:', changes);
     setNodes((nds) => {
       const updatedNodes = nds.map(node => {
         const change = changes.find((c: any) => c.id === node.id);
         if (change) {
+          console.log(`useNodeEditor: Processing change for node ${change.id}:`, change);
           if (change.type === 'position' && change.position) {
             return { ...node, position: change.position };
           }
