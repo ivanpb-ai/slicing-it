@@ -1,0 +1,31 @@
+SaveLoadMenu: Import button clicked
+FileImportInput.tsx:52 FileImportInput: Force reset input before dialog
+FileImportInput.tsx:56 FileImportInput: Input reset completed
+FileImportInput.tsx:19 FileImportInput: Processing file: test1exp15_1756636660095.json, type: application/json, size: 18768
+SaveLoadMenu.tsx:60 SaveLoadMenu: File selected for import: test1exp15_1756636660095.json, size: 18768 bytes
+FileImportInput.tsx:52 FileImportInput: Force reset input before dialog
+FileImportInput.tsx:30 FileImportInput: Successfully called onImport handler
+FileImportInput.tsx:56 FileImportInput: Input reset completed
+FileImportInput.tsx:19 FileImportInput: Processing file: test1exp15_1756636660095.json, type: application/json, size: 18768
+NodeEditor.tsx:217 NodeEditor: Import handler called with file: test1exp15_1756636660095.json - delegating to parent import function
+MainContent.tsx:63 MainContent: Import triggered for test1exp15_1756636660095.json
+NodeEditor.tsx:222 NodeEditor: Successfully delegated import to parent function
+FileImportInput.tsx:30 FileImportInput: Successfully called onImport handler
+useExportImportGraph.ts:454 Resetting viewport before importing graph
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
+useExportImportGraph.ts:465 Setting imported nodes: 25
+useExportImportGraph.ts:479 Processed nodes with types: (25) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+Index.tsx:45 Index component: nodes state updated, count: 25
+Index.tsx:47 Index component: First node: {"id":"network-1756298418290-5901","type":"customNode","position":{"x":3.15211,"y":-148.252},"data":{"label":"NetworkNodeMain entry point","type":"network","extractedFromDOM":true,"network":1756298418290}}
+useExportImportGraph.ts:486 Setting imported edges: 29
+useExportImportGraph.ts:569 Final edge count after adding missing connections: 29
+Index.tsx:160 MainContentWithGraphOperations: edges updated 29
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 29 edges
+Index.tsx:74 Index component: edges state updated, count: 29
+Index.tsx:76 Index component: First edge: {"id":"network-1756298418290-5901-cell-area-1","source":"network-1756298418290-5901","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","style":{"stroke":"#2563eb","strokeWidth":3},"data":{"extractedFromDOM":true}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 29 edges
+useExportImportGraph.ts:575 Dispatching graph-loaded event after import
+useExportImportGraph.ts:581 Fitting view after importing graph (delayed)
