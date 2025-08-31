@@ -212,82 +212,19 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     return false;
   }, [handleLoadGraph]);
 
-  // FIXED: Import handler that directly handles the file import with proper state setters
+  // FIXED: Import handler that uses parent import function to update parent state
   const handleImportGraph = useCallback(async (file: File) => {
-    console.log(`NodeEditor: Import handler called with file: ${file.name}`);
+    console.log(`NodeEditor: Import handler called with file: ${file.name} - delegating to parent import function`);
     
     try {
-      // Use the GraphExportImportService directly with our state setters
-      const graphData = await GraphExportImportService.importGraphFromFile(file);
-      
-      if (!graphData) {
-        toast.error('Failed to import graph');
-        return;
-      }
-      
-      console.log(`NodeEditor: Successfully imported graph with ${graphData.nodes.length} nodes and ${graphData.edges.length} edges`);
-      
-      // Clear existing state first
-      setNodes([]);
-      setEdges([]);
-      
-      // Reset viewport (unless prevented by manual layout)
-      if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
-        reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
-      }
-      
-      // Process nodes to ensure correct type and structure
-      const processedNodes = graphData.nodes.map(node => ({
-        ...node,
-        type: 'customNode', // Force correct node type
-        position: {
-          x: typeof node.position?.x === 'number' ? node.position.x : 0,
-          y: typeof node.position?.y === 'number' ? node.position.y : 0
-        },
-        data: {
-          ...(node.data || {}),
-          label: node.data?.label || node.id || 'Unnamed Node',
-          type: node.data?.type || 'generic'
-        }
-      }));
-
-      // Process edges to ensure correct structure and styling
-      const processedEdges = (graphData.edges || []).map(edge => ({
-        ...edge,
-        id: edge.id || `e-${edge.source}-${edge.target}-${Date.now()}`,
-        source: String(edge.source),
-        target: String(edge.target),
-        sourceHandle: edge.sourceHandle || 'bottom-source', // Correct handle ID
-        targetHandle: edge.targetHandle || 'top-target',    // Correct handle ID
-        type: edge.type || 'default',
-        style: edge.style || { stroke: '#2563eb', strokeWidth: 3 }
-      }));
-
-      console.log(`NodeEditor: Processed ${processedNodes.length} nodes and ${processedEdges.length} edges`);
-
-      // Set processed nodes first
-      setTimeout(() => {
-        setNodes(processedNodes);
-        
-        // Then set processed edges with delay to ensure nodes are rendered
-        setTimeout(() => {
-          setEdges(processedEdges);
-          
-          // Fit view after loading
-          setTimeout(() => {
-            if (reactFlowInstance) {
-              reactFlowInstance.fitView({ padding: 0.2 });
-            }
-            toast.success(`Graph imported successfully with ${processedNodes.length} nodes and ${processedEdges.length} edges`);
-          }, 200);
-        }, 100);
-      }, 50);
-      
+      // Use the parent import function that updates the correct state
+      importGraph(file);
+      console.log(`NodeEditor: Successfully delegated import to parent function`);
     } catch (error) {
-      console.error('NodeEditor: Error importing graph:', error);
+      console.error('NodeEditor: Error delegating import:', error);
       toast.error('Failed to import graph');
     }
-  }, [setNodes, setEdges, reactFlowInstance]);
+  }, [importGraph]);
 
   // CRITICAL FIX: Direct save handler that saves the actual graph data
   const handleSaveGraph = useCallback(() => {

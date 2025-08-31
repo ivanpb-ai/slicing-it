@@ -1,0 +1,172 @@
+SaveLoadMenu.tsx:47 SaveLoadMenu: Import button clicked
+FileImportInput.tsx:52 FileImportInput: Force reset input before dialog
+FileImportInput.tsx:56 FileImportInput: Input reset completed
+FileImportInput.tsx:19 FileImportInput: Processing file: test1exp14_1756636383188.json, type: application/json, size: 15941
+SaveLoadMenu.tsx:60 SaveLoadMenu: File selected for import: test1exp14_1756636383188.json, size: 15941 bytes
+FileImportInput.tsx:52 FileImportInput: Force reset input before dialog
+FileImportInput.tsx:30 FileImportInput: Successfully called onImport handler
+FileImportInput.tsx:56 FileImportInput: Input reset completed
+FileImportInput.tsx:19 FileImportInput: Processing file: test1exp14_1756636383188.json, type: application/json, size: 15941
+NodeEditor.tsx:217 NodeEditor: Import handler called with file: test1exp14_1756636383188.json
+GraphExportImportService.ts:68 GraphExportImportService: Starting import of test1exp14_1756636383188.json, size: 15941 bytes
+FileImportInput.tsx:30 FileImportInput: Successfully called onImport handler
+GraphExportImportService.ts:83 GraphExportImportService: File contents length: 15941
+GraphExportImportService.ts:96 GraphExportImportService: Successfully parsed JSON {nodes: Array(25), edges: Array(21), extractionMethod: 'DOM_SCRAPING', extractionTime: 1756636383189}
+GraphExportImportService.ts:131 GraphExportImportService: Successfully processed graph with 25 nodes and 21 edges
+GraphExportImportService.ts:155 GraphExportImportService: Final validation passed - returning 25 nodes and 21 edges
+NodeEditor.tsx:228 NodeEditor: Successfully imported graph with 25 nodes and 21 edges
+NodeEditor.tsx:266 NodeEditor: Processed 25 nodes and 21 edges
+ 5QI Node rendering with data: {label: '5QI5QI: 79V2X messagesType:Non-GBRPriority:65Delay:50 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 79, fiveQIId: 79, …}
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+ Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+ 5QI Node rendering with data: {label: '5QI5QI: 79V2X messagesType:Non-GBRPriority:65Delay:50 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 79, fiveQIId: 79, …}
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+ Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+ 5QI Node rendering with data: {label: '5QI5QI: 9Video (Buffered Streaming), TCP-based servicesType:Non-GBRPriority:90Delay:300 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 9, fiveQIId: 9, …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {label: '5QI5QI: 9Video (Buffered Streaming), TCP-based servicesType:Non-GBRPriority:90Delay:300 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 9, fiveQIId: 9, …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {label: '5QI5QI: 67Mission Critical Video user planeType:GBRPriority:15Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 67, fiveQIId: 67, …}
+ 5QI Node fiveQIId: 67
+ Looking up 5QI with ID: "67"
+ Found matching 5QI for ID "67": {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+ Final QoS values for rendering: {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+ 5QI Node rendering with data: {label: '5QI5QI: 67Mission Critical Video user planeType:GBRPriority:15Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 67, fiveQIId: 67, …}
+ 5QI Node fiveQIId: 67
+ Looking up 5QI with ID: "67"
+ Found matching 5QI for ID "67": {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+ Final QoS values for rendering: {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+ 5QI Node rendering with data: {label: '5QI5QI: 7Voice, Video (Live Streaming), Interactive GamingType:Non-GBRPriority:70Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 7, fiveQIId: 7, …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {label: '5QI5QI: 7Voice, Video (Live Streaming), Interactive GamingType:Non-GBRPriority:70Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 7, fiveQIId: 7, …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ StandardNodeWrapper: id=network-1756298418290-5901, type=network, nodeNumber=1756298418290
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+ StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+ StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+ StandardNodeWrapper: id=rrpmember-1756298522116-122, type=rrpmember, nodeNumber=122
+ StandardNodeWrapper: id=rrpmember-1756298528108-7394, type=rrpmember, nodeNumber=7394
+ StandardNodeWrapper: id=rrpmember-1756298536993-2136, type=rrpmember, nodeNumber=2136
+ StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+ StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+ StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+ StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+ StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+ StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+ FiveQiNode: Loading QoS values for ID: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+ FiveQiNode: Found QoS values: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+ StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+ FiveQiNode: Loading QoS values for ID: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ FiveQiNode: Found QoS values: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+ FiveQiNode: Loading QoS values for ID: 67
+ Looking up 5QI with ID: "67"
+ Found matching 5QI for ID "67": {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+ FiveQiNode: Found QoS values: {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+ StandardNodeWrapper: id=fiveqi-67, type=fiveqi, nodeNumber=67
+ FiveQiNode: Loading QoS values for ID: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ FiveQiNode: Found QoS values: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ StandardNodeWrapper: id=fiveqi-7, type=fiveqi, nodeNumber=7
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313013671-6351, type=rrpmember, nodeNumber=6351
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313029003-77, type=rrpmember, nodeNumber=77
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313334883-4722, type=rrpmember, nodeNumber=4722
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756298418290-5901, type=network, nodeNumber=1756298418290
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298522116-122, type=rrpmember, nodeNumber=122
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298528108-7394, type=rrpmember, nodeNumber=7394
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756298536993-2136, type=rrpmember, nodeNumber=2136
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: undefined}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-67, type=fiveqi, nodeNumber=67
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-7, type=fiveqi, nodeNumber=7
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313013671-6351, type=rrpmember, nodeNumber=6351
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313029003-77, type=rrpmember, nodeNumber=77
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756313334883-4722, type=rrpmember, nodeNumber=4722
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 79V2X messagesType:Non-GBRPriority:65Delay:50 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 79, fiveQIId: 79, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 79
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 79V2X messagesType:Non-GBRPriority:65Delay:50 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 79, fiveQIId: 79, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 79
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 9Video (Buffered Streaming), TCP-based servicesType:Non-GBRPriority:90Delay:300 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 9, fiveQIId: 9, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 9
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 9Video (Buffered Streaming), TCP-based servicesType:Non-GBRPriority:90Delay:300 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 9, fiveQIId: 9, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 9
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 67Mission Critical Video user planeType:GBRPriority:15Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 67, fiveQIId: 67, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 67Mission Critical Video user planeType:GBRPriority:15Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 67, fiveQIId: 67, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 67
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '67', resourceType: 'GBR', priority: '15', packetDelay: '100 ms', service: 'Mission Critical Video user plane'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 7Voice, Video (Live Streaming), Interactive GamingType:Non-GBRPriority:70Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 7, fiveQIId: 7, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+FiveQiNode.tsx:22 5QI Node rendering with data: {label: '5QI5QI: 7Voice, Video (Live Streaming), Interactive GamingType:Non-GBRPriority:70Delay:100 ms', type: 'fiveqi', extractedFromDOM: true, fiveqi: 7, fiveQIId: 7, …}
+FiveQiNode.tsx:23 5QI Node fiveQIId: 7
+FiveQiNode.tsx:88 Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
