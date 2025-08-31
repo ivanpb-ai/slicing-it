@@ -292,6 +292,13 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         // ALSO update component state so UI reflects the loaded nodes
         setNodes(processedNodes);
         setEdges(processedEdges);
+        
+        // CRITICAL FIX: Force ReactFlow to properly initialize loaded nodes for interaction
+        setTimeout(() => {
+          // Trigger a dummy change to initialize nodes properly
+          const refreshedNodes = reactFlowInstance.getNodes();
+          reactFlowInstance.setNodes([...refreshedNodes]);
+        }, 50);
       } else {
         setNodes(processedNodes);
         setEdges(processedEdges);
@@ -303,7 +310,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
           reactFlowInstance.fitView({ padding: 0.2 });
         }
         toast.success(`Graph "${name}" loaded successfully`);
-      }, 100);
+      }, 200);
       
       return true;
     } catch (error) {
