@@ -295,10 +295,31 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         
         // CRITICAL FIX: Force ReactFlow to properly initialize loaded nodes for interaction
         setTimeout(() => {
-          // Trigger a dummy change to initialize nodes properly
+          // Force ReactFlow to reinitialize nodes by triggering proper change events
           const refreshedNodes = reactFlowInstance.getNodes();
-          reactFlowInstance.setNodes([...refreshedNodes]);
-        }, 50);
+          const refreshedEdges = reactFlowInstance.getEdges();
+          
+          // Trigger onNodesChange and onEdgesChange to properly initialize
+          if (onNodesChange && refreshedNodes.length > 0) {
+            // Create proper change events for each node to initialize them
+            const nodeChanges = refreshedNodes.map(node => ({
+              id: node.id,
+              type: 'position',
+              position: { ...node.position },
+              positionAbsolute: { ...node.position }
+            }));
+            onNodesChange(nodeChanges);
+          }
+          
+          if (onEdgesChange && refreshedEdges.length > 0) {
+            // Create proper change events for each edge
+            const edgeChanges = refreshedEdges.map(edge => ({
+              id: edge.id,
+              type: 'add'
+            }));
+            onEdgesChange(edgeChanges);
+          }
+        }, 100);
       } else {
         setNodes(processedNodes);
         setEdges(processedEdges);
