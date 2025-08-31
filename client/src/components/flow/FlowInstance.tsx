@@ -151,8 +151,16 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
       nodesDraggable={true}
       nodesConnectable={true}
       elementsSelectable={true}
-      onInit={() => {
+      onInit={(instance) => {
         console.log('FlowInstance: ReactFlow initialized');
+        
+        // Register instance globally for export functions
+        // @ts-ignore - Create global registry for ReactFlow instances
+        if (!window.__REACTFLOW_INSTANCES__) {
+          window.__REACTFLOW_INSTANCES__ = [];
+        }
+        window.__REACTFLOW_INSTANCES__.push(instance);
+        console.log('FlowInstance: Registered ReactFlow instance globally');
       }}
     >
       <FlowBackground />

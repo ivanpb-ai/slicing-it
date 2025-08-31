@@ -70,8 +70,47 @@ export class GraphPersistenceService {
     return GraphCloudStorageService.ensureStorageBucketExists();
   }
 
-  // Export and import methods
+  // Export and import methods with ReactFlow instance prioritization
   static exportGraphToFile(name: string | undefined, nodes: Node[], edges: Edge[]): string | null {
+    console.log('🔍 GraphPersistenceService: Export called with', nodes?.length || 0, 'nodes and', edges?.length || 0, 'edges');
+    
+    // PRIORITY 1: Try to get ReactFlow instance data from global registry
+    try {
+      // @ts-ignore - Access global ReactFlow instance if available
+      const globalReactFlowInstances = window.__REACTFLOW_INSTANCES__;
+      if (globalReactFlowInstances && globalReactFlowInstances.length > 0) {
+        const reactFlowInstance = globalReactFlowInstances[0]; // Use the first (main) instance
+        const flowNodes = reactFlowInstance.getNodes();
+        const flowEdges = reactFlowInstance.getEdges();
+        
+        console.log('🔍 GraphPersistenceService: Found ReactFlow instance with', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
+        
+        if (flowNodes.length > 0) {
+          console.log('🔍 GraphPersistenceService: Using ReactFlow instance data (PRIORITY 1)');
+          return GraphExportImportService.exportGraphToFile(name, flowNodes, flowEdges);
+        }
+      }
+    } catch (e) {
+      console.warn('🔍 GraphPersistenceService: Failed to access ReactFlow instance:', e);
+    }
+    
+    // PRIORITY 2: Try debug globals as fallback
+    try {
+      // @ts-ignore - This is for debugging only
+      const debugNodes = window.__DEBUG_NODE_EDITOR_NODES;
+      // @ts-ignore - This is for debugging only  
+      const debugEdges = window.__DEBUG_LAST_EDGES;
+      
+      if (debugNodes && debugNodes.length > 0 && debugEdges && debugEdges.length > 0) {
+        console.log('🔍 GraphPersistenceService: Using debug state with', debugNodes.length, 'nodes and', debugEdges.length, 'edges (PRIORITY 2)');
+        return GraphExportImportService.exportGraphToFile(name, debugNodes, debugEdges);
+      }
+    } catch (e) {
+      console.warn('🔍 GraphPersistenceService: Failed to access debug state:', e);
+    }
+    
+    // PRIORITY 3: Use passed parameters as last resort
+    console.log('🔍 GraphPersistenceService: Using passed parameters (PRIORITY 3) -', nodes?.length || 0, 'nodes and', edges?.length || 0, 'edges');
     return GraphExportImportService.exportGraphToFile(name, nodes, edges);
   }
 
