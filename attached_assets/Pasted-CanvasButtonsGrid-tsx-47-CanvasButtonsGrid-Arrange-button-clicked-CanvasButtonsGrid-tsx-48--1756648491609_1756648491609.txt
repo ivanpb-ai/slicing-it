@@ -1,0 +1,32 @@
+CanvasButtonsGrid.tsx:47 🎯 CanvasButtonsGrid: Arrange button clicked!
+CanvasButtonsGrid.tsx:48 🎯 onArrangeLayout function: function
+useLayoutOperations.ts:22 useLayoutOperations: Arranging layout for 22 nodes
+balancedTreeLayout.ts:93 Found 1 root nodes
+balancedTreeLayout.ts:137 Level assignments: {network-1756647915436-2494: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1756647926425-3975: {…}, s-nssai-1: {…}, …}
+balancedTreeLayout.ts:138 Parent-child relationships: {cell-area-1: Array(1), cell-area-2: Array(1), rrp-1: Array(1), rrp-2: Array(1), rrpmember-1756647926425-3975: Array(1), …}
+balancedTreeLayout.ts:323 ✓ Single RRP-member rrpmember-1756647926425-3975 positioned BELOW parent at (-200, 850)
+balancedTreeLayout.ts:344 ✓ RRP-member rrpmember-1756647928782-1723 positioned BELOW parent at (100, 850)
+balancedTreeLayout.ts:344 ✓ RRP-member rrpmember-1756647933037-3305 positioned BELOW parent at (300, 850)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-1 positioned near parent at (-325, 1370)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-4 positioned near parent at (-75, 1370)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-2 positioned near parent at (-25, 1370)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-5 positioned near parent at (225, 1370)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-3 positioned near parent at (175, 1370)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-6 positioned near parent at (425, 1370)
+balancedTreeLayout.ts:395 🎯 Graph centering: minX=-325, maxX=550, width=875, centerOffset=112.5
+balancedTreeLayout.ts:409 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 22 nodes
+balancedTreeLayout.ts:410 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:411 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+balancedTreeLayout.ts:412 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:60 🧹 Layout returned 22 nodes and 21 cleaned edges (was 21)
+useNodeLayoutManager.ts:68 🧹 Filtered duplicates: 22 -> 22 nodes
+useNodeLayoutManager.ts:80 🧹 Updating edges: 21 -> 21 (filtered duplicates)
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 22, edges: 21
+NodeEditor.tsx:142 🔧 NodeEditor: handleArrangeLayout function: function
+Index.tsx:160 MainContentWithGraphOperations: edges updated 21
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 21 edges
+Index.tsx:45 Index component: nodes state updated, count: 22
+Index.tsx:47 Index component: First node: {"id":"network-1756647915436-2494","type":"customNode","position":{"x":-112.5,"y":100},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1756647915436-2494","description":"Node"}}
+Index.tsx:74 Index component: edges state updated, count: 21
+Index.tsx:76 Index component: First edge: {"id":"unified-network-1756647915436-2494-cell-area-1","source":"network-1756647915436-2494","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 21 edges

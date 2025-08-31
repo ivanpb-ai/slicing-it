@@ -57,7 +57,6 @@ export const useNodeLayoutManager = (
       if (layoutOptions.type === 'balanced-tree') {
         const balancedResult = arrangeNodesInBalancedTree(nodesCopy, edges, layoutOptions);
         
-        console.log(`🧹 Layout returned ${balancedResult.nodes.length} nodes and ${balancedResult.cleanedEdges.length} cleaned edges (was ${edges.length})`);
         
         if (balancedResult.nodes?.length > 0) {
           // Ensure no duplicate nodes

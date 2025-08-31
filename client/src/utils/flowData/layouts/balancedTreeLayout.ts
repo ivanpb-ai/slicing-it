@@ -90,7 +90,6 @@ export const arrangeNodesInBalancedTree = (
     rootNodes.push(nodes[0]);
   }
 
-  console.log('Found', rootNodes.length, 'root nodes');
 
   // Build hierarchical levels for DAG layout (handles multiple parents properly)
   const nodesByLevel: Record<number, string[]> = {};

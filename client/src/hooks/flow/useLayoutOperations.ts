@@ -43,19 +43,20 @@ export const useLayoutOperations = (
       // Call the arrange function
       arrangeNodesInLayout();
       
-      // CRITICAL FIX: Reset ReactFlow viewport after arrangement to prevent unresponsiveness
+      // CRITICAL FIX: Center viewport on arranged nodes immediately
       setTimeout(() => {
         if (reactFlowInstance) {
           const allNodes = reactFlowInstance.getNodes();
           if (allNodes.length > 0) {
-            // Fit view to show all arranged nodes
+            // Smooth fit view to show all arranged nodes with proper padding
             reactFlowInstance.fitView({ 
-              padding: 0.1,
-              duration: 800
+              padding: 0.2,
+              duration: 1000,
+              includeHiddenNodes: false
             });
           }
         }
-      }, 100);
+      }, 150);
       
       // Arrangement completed successfully
       toast.success(`Successfully arranged nodes in balanced hierarchical tree layout`);
