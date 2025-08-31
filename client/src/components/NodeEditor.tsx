@@ -136,6 +136,11 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     setEdges,
     arrangeNodesInLayout
   );
+  
+  // Debug: Check if handleArrangeLayout exists
+  useEffect(() => {
+    console.log('🔧 NodeEditor: handleArrangeLayout function:', typeof handleArrangeLayout);
+  }, [handleArrangeLayout]);
 
   // Use the proper drag and drop handler
   const { onDragOver, onDrop } = useNodeDragDrop(

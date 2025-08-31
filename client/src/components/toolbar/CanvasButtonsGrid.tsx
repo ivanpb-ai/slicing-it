@@ -43,7 +43,15 @@ const CanvasButtonsGrid: React.FC<CanvasButtonsGridProps> = ({
             iconColor="text-green-600"
             tooltipTitle="Arrange Layout"
             tooltipDescription="Automatically arrange nodes in balanced tree"
-            onClick={onArrangeLayout}
+            onClick={() => {
+              console.log('🎯 CanvasButtonsGrid: Arrange button clicked!');
+              console.log('🎯 onArrangeLayout function:', typeof onArrangeLayout);
+              if (onArrangeLayout) {
+                onArrangeLayout();
+              } else {
+                console.log('❌ onArrangeLayout is undefined!');
+              }
+            }}
           />
         )}
       </TooltipProvider>

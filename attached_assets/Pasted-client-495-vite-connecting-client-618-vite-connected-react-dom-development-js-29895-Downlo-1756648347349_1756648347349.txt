@@ -1,0 +1,220 @@
+client:495 [vite] connecting...
+client:618 [vite] connected.
+react-dom.development.js:29895 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+react-dom.development.js:86  Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
+
+Check the render method of `Primitive.button.SlotClone`.
+    at DropdownMenu (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=19dd7dd3:2183:5)
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:2005:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:190:13
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Popper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:1997:11)
+    at Tooltip (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:98:5)
+    at div
+    at FiveQINodeButton (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/buttons/FiveQINodeButton.tsx:35:9)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at div
+    at NodeButtonsGrid (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/NodeButtonsGrid.tsx:30:28)
+    at div
+    at ToolbarContainer (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/ToolbarContainer.tsx:25:3)
+    at Toolbar
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at EditorPanels (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/EditorPanels.tsx:21:3)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx:31:10)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+error @ react-dom.development.js:60
+validateFunctionComponentInDev @ react-dom.development.js:20222
+mountIndeterminateComponent @ react-dom.development.js:20189
+beginWork @ react-dom.development.js:21626
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performConcurrentWorkOnRoot @ react-dom.development.js:25777
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+FlowInstance.tsx:83 FlowInstance: Rendering with 0 nodes, 0 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 0, edges: 0
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
+FlowInstance.tsx:83 FlowInstance: Rendering with 0 nodes, 0 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 0, edges: 0
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
+FlowInstance.tsx:149 FlowInstance: ReactFlow initialized
+FlowInstance.tsx:157 FlowInstance: Registered ReactFlow instance globally
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
+content.js:361 Background Response (check_popup_status) {data: 'enabled'}
+content.js:379 Background Response (check_my_tracking)
+content.js:238 Background Response (checkHasCashback)
+NodeEditor.tsx:202 NodeEditor: Load triggered
+NodeEditor.tsx:207 Available graphs for loading: 6
+NodeEditor.tsx:238 Loading graph "test6" with 22 nodes and 21 edges
+NodeEditor.tsx:253 Processed 22 nodes and 21 edges for loading
+react-dom.development.js:4161 [Violation] 'click' handler took 5134ms
+[Violation] 'click' handler took 5135ms
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 0, edges: 0
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
+FlowInstance.tsx:83 FlowInstance: Rendering with 22 nodes, 0 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 22, edges: 0
+Index.tsx:45 Index component: nodes state updated, count: 22
+Index.tsx:47 Index component: First node: {"id":"network-1756647915436-2494","type":"customNode","position":{"x":461,"y":-42.333343505859375},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1756647915436-2494","description":"Node"}}
+ StandardNodeWrapper: id=network-1756647915436-2494, type=network, nodeNumber=2494
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+ StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+ StandardNodeWrapper: id=rrpmember-1756647926425-3975, type=rrpmember, nodeNumber=3975
+ StandardNodeWrapper: id=rrpmember-1756647928782-1723, type=rrpmember, nodeNumber=1723
+ StandardNodeWrapper: id=rrpmember-1756647933037-3305, type=rrpmember, nodeNumber=3305
+ StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+ StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+ StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+ StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+ StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-4'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-5'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-6'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-7'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-7, type=dnn, nodeNumber=7
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-8'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-8, type=dnn, nodeNumber=8
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1756647915436-2494, type=network, nodeNumber=2494
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756647926425-3975, type=rrpmember, nodeNumber=3975
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756647928782-1723, type=rrpmember, nodeNumber=1723
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1756647933037-3305, type=rrpmember, nodeNumber=3305
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-4'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-5'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-6'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-7'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-7, type=dnn, nodeNumber=7
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-8'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-8, type=dnn, nodeNumber=8
+FlowInstance.tsx:83 FlowInstance: Rendering with 22 nodes, 21 edges
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 22, edges: 21
+Index.tsx:160 MainContentWithGraphOperations: edges updated 21
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 21 edges
+Index.tsx:74 Index component: edges state updated, count: 21
+Index.tsx:76 Index component: First edge: {"id":"unified-network-1756647915436-2494-cell-area-1","source":"network-1756647915436-2494","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 21 edges
+useLayoutOperations.ts:22 useLayoutOperations: Arranging layout for 22 nodes
+balancedTreeLayout.ts:93 Found 1 root nodes
+balancedTreeLayout.ts:137 Level assignments: {network-1756647915436-2494: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1756647926425-3975: {…}, s-nssai-1: {…}, …}
+balancedTreeLayout.ts:138 Parent-child relationships: {cell-area-1: Array(1), cell-area-2: Array(1), rrp-1: Array(1), rrp-2: Array(1), rrpmember-1756647926425-3975: Array(1), …}
+balancedTreeLayout.ts:323 ✓ Single RRP-member rrpmember-1756647926425-3975 positioned BELOW parent at (-200, 850)
+balancedTreeLayout.ts:344 ✓ RRP-member rrpmember-1756647928782-1723 positioned BELOW parent at (100, 850)
+balancedTreeLayout.ts:344 ✓ RRP-member rrpmember-1756647933037-3305 positioned BELOW parent at (300, 850)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-1 positioned near parent at (-325, 1370)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-4 positioned near parent at (-75, 1370)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-2 positioned near parent at (-25, 1370)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-5 positioned near parent at (225, 1370)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-3 positioned near parent at (175, 1370)
+balancedTreeLayout.ts:307 ✓ S-NSSAI s-nssai-6 positioned near parent at (425, 1370)
+balancedTreeLayout.ts:395 🎯 Graph centering: minX=-325, maxX=550, width=875, centerOffset=112.5
+balancedTreeLayout.ts:409 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 22 nodes
+balancedTreeLayout.ts:410 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:411 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+balancedTreeLayout.ts:412 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:60 🧹 Layout returned 22 nodes and 21 cleaned edges (was 21)
+useNodeLayoutManager.ts:68 🧹 Filtered duplicates: 22 -> 22 nodes
+useNodeLayoutManager.ts:80 🧹 Updating edges: 21 -> 21 (filtered duplicates)
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 22, edges: 21
+Index.tsx:160 MainContentWithGraphOperations: edges updated 21
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 21 edges
+Index.tsx:45 Index component: nodes state updated, count: 22
+Index.tsx:47 Index component: First node: {"id":"network-1756647915436-2494","type":"customNode","position":{"x":-112.5,"y":100},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1756647915436-2494","description":"Node"}}
+Index.tsx:74 Index component: edges state updated, count: 21
+Index.tsx:76 Index component: First edge: {"id":"unified-network-1756647915436-2494-cell-area-1","source":"network-1756647915436-2494","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 21 edges
