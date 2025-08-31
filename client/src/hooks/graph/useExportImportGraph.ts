@@ -72,12 +72,13 @@ export const useExportImportGraph = (
             const flowEdges = reactFlowInstance.getEdges();
             console.log('🔍 useExportImportGraph.ts: ReactFlow instance has', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
             
-            if (flowNodes.length > 0) {
+            if (flowNodes.length > 0 && flowEdges.length > 0) {
               console.log('🔍 useExportImportGraph.ts: Using ReactFlow instance data for export');
               const dataStr = JSON.stringify({ 
                 nodes: flowNodes || [], 
                 edges: flowEdges || [], 
-                exportTime: Date.now() 
+                exportTime: Date.now(),
+                exportMethod: 'REACTFLOW_INSTANCE'
               }, null, 2);
               
               const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
@@ -89,8 +90,10 @@ export const useExportImportGraph = (
               downloadLink.click();
               document.body.removeChild(downloadLink);
               
-              toast.success(`Graph exported as ${fileName} with ${flowNodes.length} nodes from ReactFlow instance`);
+              toast.success(`Graph exported as ${fileName} with ${flowNodes.length} nodes and ${flowEdges.length} edges from ReactFlow instance`);
               return dataStr;
+            } else if (flowNodes.length > 0) {
+              console.log('🔍 useExportImportGraph.ts: ReactFlow has nodes but no edges, falling back to DOM extraction for edges');
             }
           } catch (e) {
             console.error('🔍 useExportImportGraph.ts: Error accessing ReactFlow instance:', e);
