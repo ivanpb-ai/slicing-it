@@ -318,9 +318,15 @@ export const useExportImportGraph = (
             console.log('Setting imported nodes:', parsedData.nodes.length);
             
             // Ensure all nodes have the correct type set for our CustomNode component
+            // but preserve the original data.type which determines the specific node component
             const processedNodes = parsedData.nodes.map((node: Node) => ({
               ...node,
-              type: 'customNode'
+              type: 'customNode', // ReactFlow type for component lookup
+              data: {
+                ...node.data,
+                // Preserve data.type which StandardNodeWrapper uses to render specific nodes
+                type: node.data?.type || 'generic'
+              }
             }));
             
             setNodes(processedNodes);
