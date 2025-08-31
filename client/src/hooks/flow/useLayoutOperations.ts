@@ -19,7 +19,6 @@ export const useLayoutOperations = (
   
   // Handle arranging layout with improved error handling
   const handleArrangeLayout = useCallback(() => {
-    console.log('🔥 useLayoutOperations: STARTING handleArrangeLayout');
     console.log(`useLayoutOperations: Arranging layout for ${nodes.length} nodes`);
     
     if (nodes.length === 0) {
@@ -41,31 +40,19 @@ export const useLayoutOperations = (
     const edgesBackup = [...edges];
     
     try {
-      console.log('🔥 useLayoutOperations: About to call arrangeNodesInLayout()');
       // Call the arrange function
       arrangeNodesInLayout();
-      console.log('🔥 useLayoutOperations: arrangeNodesInLayout() completed');
       
-      // CRITICAL FIX: Force ReactFlow to recognize position changes and center viewport
+      // FIXED: Immediately center viewport to show arranged nodes
       setTimeout(() => {
         if (reactFlowInstance) {
-          // Force ReactFlow to recalculate node bounds 
-          const allNodes = reactFlowInstance.getNodes();
-          if (allNodes.length > 0) {
-            // First trigger a viewport reset to force refresh
-            reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 }, { duration: 0 });
-            
-            // Then smoothly fit view to show all arranged nodes
-            setTimeout(() => {
-              reactFlowInstance.fitView({ 
-                padding: 0.2,
-                duration: 800,
-                includeHiddenNodes: false
-              });
-            }, 50);
-          }
+          reactFlowInstance.fitView({ 
+            padding: 0.1,
+            duration: 500,
+            includeHiddenNodes: false
+          });
         }
-      }, 200);
+      }, 100);
       
       // Arrangement completed successfully
       toast.success(`Successfully arranged nodes in balanced hierarchical tree layout`);
