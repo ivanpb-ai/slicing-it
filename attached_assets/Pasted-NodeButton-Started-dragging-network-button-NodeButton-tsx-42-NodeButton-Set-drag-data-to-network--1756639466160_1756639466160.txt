@@ -1,0 +1,24 @@
+NodeButton: Started dragging network button
+NodeButton.tsx:42 NodeButton: Set drag data to: network
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "network" at position: {x: 541, y: 21.666656494140625}
+useDragDataParser.ts:3 parseDragData: Processing drag data: network
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: network
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 9
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 9
+useParentNodeDetection.ts:47 detectParentNodeFromDOM: No parent node found in DOM elements
+useParentNodeDetection.ts:55 detectParentNodeFromPosition: Checking position: {x: 541, y: 21.666656494140625}
+useParentNodeDetection.ts:56 detectParentNodeFromPosition: Available nodes: []
+useParentNodeDetection.ts:92 detectParentNodeFromPosition: No parent node found at position
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: none
+useNodeDragDrop.ts:160 useNodeDragDrop: Creating standalone network node at safe position: {x: 541, y: 21.666656494140625}
+useNodeEditor.ts:122 useNodeEditor: Adding network node at position: {x: 541, y: 21.666656494140625}
+useNodeCreation.ts:13 useNodeCreation: Creating network node at position: {x: 541, y: 21.666656494140625}
+useNodeCreation.ts:69 useNodeCreation: Created node object: {id: 'network-1756639455300-694', type: 'customNode', position: {…}, data: {…}}
+useNodeCreation.ts:70 useNodeCreation: Adding node to state...
+useNodeCreation.ts:78 useNodeCreation: Finished creating network node with ID: network-1756639455300-694
+useNodeCreation.ts:74 useNodeCreation: Node added to state! Total nodes: 3
+useNodeCreation.ts:74 useNodeCreation: Node added to state! Total nodes: 3

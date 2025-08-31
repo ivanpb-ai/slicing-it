@@ -61,9 +61,9 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     initializeCanvas
   } = useNodeEditor();
 
-  // Use prop state if available, otherwise fall back to local state
-  const nodes = propNodes !== undefined ? propNodes : localNodes;
-  const edges = propEdges !== undefined ? propEdges : localEdges;
+  // Use prop state if available and not empty, otherwise fall back to local state
+  const nodes = (propNodes !== undefined && propNodes.length > 0) ? propNodes : localNodes;
+  const edges = (propEdges !== undefined && propEdges.length > 0) ? propEdges : localEdges;
   const setNodes = propSetNodes || localSetNodes;
   const setEdges = propSetEdges || localSetEdges;
 
