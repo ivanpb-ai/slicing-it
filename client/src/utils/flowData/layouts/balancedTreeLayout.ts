@@ -135,9 +135,6 @@ export const arrangeNodesInBalancedTree = (
   
   console.log('Level assignments:', nodePositions);
   console.log('Parent-child relationships:', allParentsMap);
-  console.log(`🔧 DEBUG: Found ${allDnnNodes.length} DNN nodes:`, allDnnNodes);
-  console.log(`🔧 DEBUG: Found ${allFiveQiNodes.length} 5QI nodes:`, allFiveQiNodes);
-  console.log(`🔧 DEBUG: DNN level: ${dnnLevel}, 5QI level: ${fiveQiLevel}`);
   
   // Removed excessive debug logging for performance
 
@@ -186,6 +183,12 @@ export const arrangeNodesInBalancedTree = (
       fiveQiLevel = parseInt(levelStr);
     }
   });
+  
+  // Debug logging after initialization
+  console.log(`🔧 DEBUG: Found ${allDnnNodes.length} DNN nodes:`, allDnnNodes);
+  console.log(`🔧 DEBUG: Found ${allFiveQiNodes.length} 5QI nodes:`, allFiveQiNodes);
+  console.log(`🔧 DEBUG: DNN level: ${dnnLevel}, 5QI level: ${fiveQiLevel}`);
+  
   // Simplified node counting for performance
   
   // Process levels in order
