@@ -329,7 +329,7 @@ export const arrangeNodesInBalancedTree = (
               if (isRrpMember) {
                 // RRP-member nodes: Position symmetrically BELOW parent (not at same level)
                 // Handle both single and multiple RRP members consistently
-                const rrpMemberY = parentPos.y + 400; // Increased vertical spacing to ensure RRP members are clearly below parents
+                const rrpMemberY = parentPos.y + 550; // Much larger vertical spacing since RRP nodes are very tall
                 
                 if (siblings.length === 1) {
                   // Single RRP member: position directly below parent
@@ -342,17 +342,10 @@ export const arrangeNodesInBalancedTree = (
                   const nodeIndex = siblings.indexOf(nodeId);
                   const tightSpacing = 200; // Spacing between RRP-member nodes
                   
-                  // Calculate parent's VISUAL center
-                  const parentVisualCenterX = parentPos.x + nodeWidth / 2;
-                  
-                  // Center children symmetrically around parent's VISUAL center
+                  // Simplified centering: spread children around parent center
                   const totalWidth = (siblings.length - 1) * tightSpacing;
-                  const childrenCenterX = parentVisualCenterX;
-                  const startX = childrenCenterX - totalWidth / 2;
-                  const childX = startX + nodeIndex * tightSpacing;
-                  
-                  // Convert back to top-left positioning for React Flow
-                  const x = childX - nodeWidth / 2;
+                  const startX = parentPos.x - totalWidth / 2;
+                  const x = startX + nodeIndex * tightSpacing;
                   
                   const position = { x, y: rrpMemberY };
                   positionedNodes.push({ id: nodeId, position });
