@@ -343,7 +343,7 @@ export const arrangeNodesInBalancedTree = (
                   const tightSpacing = 200; // Spacing between RRP-member nodes
                   
                   // Center children around parent center with correct calculation
-                  const parentCenterX = parentPos.x + 90; // Parent's visual center
+                  const parentCenterX = parentPos.x + 120; // Parent's visual center (try wider offset)
                   
                   let x: number;
                   let childCenterX: number;
