@@ -12,6 +12,7 @@ import { GraphExportImportService } from '../services/export/GraphExportImportSe
 import { GraphNodeProcessor } from '../services/processing/GraphNodeProcessor';
 import { NodeEditorProvider } from '../contexts/NodeEditorContext';
 import { toast } from 'sonner';
+import { EXAMPLE_GRAPH } from '../data/exampleGraph';
 
 interface NodeEditorProps {
   nodes?: Node[];
@@ -71,6 +72,60 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     const source = propNodes !== undefined ? 'PROPS' : 'LOCAL';
     console.log(`NodeEditor: Using ${source} state - nodes: ${nodes.length}, edges: ${edges.length}`);
   }, [nodes, edges, propNodes]);
+
+  // Create custom clear and initialize functions that use the correct state setters
+  const handleClearCanvas = useCallback(() => {
+    if (nodes.length === 0) {
+      toast.info('Canvas is already empty');
+      return;
+    }
+    setNodes([]);
+    setEdges([]);
+    if (reactFlowInstance) {
+      reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+    }
+    toast.success('Canvas cleared');
+  }, [nodes.length, setNodes, setEdges, reactFlowInstance]);
+
+  const handleInitializeCanvas = useCallback(() => {
+    if (nodes.length > 0) {
+      const proceed = window.confirm('Canvas already has nodes. Clear it first and add example data?');
+      if (!proceed) return;
+    }
+
+    try {      
+      console.log(`NodeEditor: Loading example graph with ${EXAMPLE_GRAPH.nodes.length} nodes and ${EXAMPLE_GRAPH.edges.length} edges`);
+      
+      // Clear existing state first
+      setNodes([]);
+      setEdges([]);
+      
+      // Reset viewport
+      if (reactFlowInstance) {
+        reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+      }
+      
+      // Set nodes and edges with delay to ensure proper rendering
+      setTimeout(() => {
+        setNodes(EXAMPLE_GRAPH.nodes);
+        setTimeout(() => {
+          setEdges(EXAMPLE_GRAPH.edges);
+          
+          // Fit view after loading
+          setTimeout(() => {
+            if (reactFlowInstance) {
+              reactFlowInstance.fitView({ padding: 0.2 });
+            }
+            toast.success(`Example graph loaded with ${EXAMPLE_GRAPH.nodes.length} nodes and ${EXAMPLE_GRAPH.edges.length} edges`);
+          }, 200);
+        }, 100);
+      }, 50);
+      
+    } catch (error) {
+      console.error('NodeEditor: Error loading example graph:', error);
+      toast.error('Failed to load example graph');
+    }
+  }, [nodes.length, setNodes, setEdges, reactFlowInstance]);
 
   // Add layout management
   const { arrangeNodesInLayout } = useNodeLayoutManager(nodes, edges, setNodes);
@@ -323,8 +378,8 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
           handleAddNode={handleAddNode}
           deleteSelected={deleteSelected}
           duplicateSelected={duplicateSelected}
-          clearCanvas={clearCanvas}
-          initializeCanvas={initializeCanvas}
+          clearCanvas={handleClearCanvas}
+          initializeCanvas={handleInitializeCanvas}
           arrangeLayout={handleArrangeLayout}
           hasSelectedElements={hasSelectedElements}
           onSave={handleSaveGraph}
