@@ -479,9 +479,13 @@ export const useExportImportGraph = (
             console.log('Processed nodes with types:', processedNodes.map(n => ({ id: n.id, type: n.type, dataType: n.data?.type })));
             
             // Set nodes both in state AND ReactFlow instance for immediate availability
+            console.log('Setting nodes in state and ReactFlow instance');
+            console.log('ReactFlow instance available:', !!reactFlowInstance);
             setNodes(processedNodes);
             if (reactFlowInstance) {
+              console.log('Updating ReactFlow instance with nodes');
               reactFlowInstance.setNodes(processedNodes);
+              console.log('ReactFlow instance nodes after update:', reactFlowInstance.getNodes().length);
             }
             
             // Wait longer for nodes to fully render before setting edges
@@ -500,7 +504,9 @@ export const useExportImportGraph = (
               console.log('Filtered edges count after duplicate removal:', uniqueEdges.length);
               setEdges(uniqueEdges);
               if (reactFlowInstance) {
+                console.log('Updating ReactFlow instance with edges');
                 reactFlowInstance.setEdges(uniqueEdges);
+                console.log('ReactFlow instance edges after update:', reactFlowInstance.getEdges().length);
               }
             }, 300);
             
