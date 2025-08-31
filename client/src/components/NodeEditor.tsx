@@ -80,10 +80,14 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       toast.info('Canvas is already empty');
       return;
     }
-    setNodes([]);
-    setEdges([]);
+    // CRITICAL FIX: Use ReactFlow instance to maintain interactivity
     if (reactFlowInstance) {
+      reactFlowInstance.setNodes([]);
+      reactFlowInstance.setEdges([]);
       reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+    } else {
+      setNodes([]);
+      setEdges([]);
     }
     toast.success('Canvas cleared');
   }, [nodes.length, setNodes, setEdges, reactFlowInstance]);
@@ -106,11 +110,19 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
       }
       
-      // Set nodes and edges with delay to ensure proper rendering
+      // CRITICAL FIX: Use ReactFlow instance for initialization
       setTimeout(() => {
-        setNodes(EXAMPLE_GRAPH.nodes);
+        if (reactFlowInstance) {
+          reactFlowInstance.setNodes(EXAMPLE_GRAPH.nodes);
+        } else {
+          setNodes(EXAMPLE_GRAPH.nodes);
+        }
         setTimeout(() => {
-          setEdges(EXAMPLE_GRAPH.edges);
+          if (reactFlowInstance) {
+            reactFlowInstance.setEdges(EXAMPLE_GRAPH.edges);
+          } else {
+            setEdges(EXAMPLE_GRAPH.edges);
+          }
           
           // Fit view after loading
           setTimeout(() => {
@@ -239,9 +251,14 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       
       console.log(`Loading graph "${name}" with ${graphData.nodes.length} nodes and ${graphData.edges?.length || 0} edges`);
       
-      // Clear existing state first
-      setNodes([]);
-      setEdges([]);
+      // CRITICAL FIX: Clear existing state using ReactFlow instance
+      if (reactFlowInstance) {
+        reactFlowInstance.setNodes([]);
+        reactFlowInstance.setEdges([]);
+      } else {
+        setNodes([]);
+        setEdges([]);
+      }
       
       // Reset viewport (unless prevented by manual layout)
       if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
@@ -261,9 +278,14 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       
       console.log(`Processed ${processedNodes.length} nodes and ${processedEdges.length} edges for loading`);
       
-      // FIXED: Set nodes and edges immediately to prevent unresponsiveness
-      setNodes(processedNodes);
-      setEdges(processedEdges);
+      // CRITICAL FIX: Use ReactFlow instance to maintain interactivity after load
+      if (reactFlowInstance) {
+        reactFlowInstance.setNodes(processedNodes);
+        reactFlowInstance.setEdges(processedEdges);
+      } else {
+        setNodes(processedNodes);
+        setEdges(processedEdges);
+      }
       
       // Minimal delay only for DOM rendering, then fit view
       setTimeout(() => {
