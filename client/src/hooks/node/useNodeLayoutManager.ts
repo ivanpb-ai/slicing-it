@@ -41,8 +41,6 @@ export const useNodeLayoutManager = (
     };
 
     try {
-      console.log('✅ BALANCED TREE: Starting layout arrangement with improved spacing');
-      console.log('Layout options:', layoutOptions);
       
       // AGGRESSIVE duplicate filtering - this prevents React key warnings
       const uniqueInputNodes = nodes.filter((node, index) => 

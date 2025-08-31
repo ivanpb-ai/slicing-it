@@ -30,14 +30,7 @@ const ActionButton: React.FC<ActionButtonProps> = ({
           <Button
             variant="outline"
             size="icon"
-            onClick={() => {
-              console.log(`🚀 ActionButton clicked: ${label}`);
-              if (onClick) {
-                onClick();
-              } else {
-                console.log(`❌ No onClick handler for ${label}`);
-              }
-            }}
+            onClick={onClick}
             disabled={disabled}
             className="h-8 w-8 mb-1"
           >

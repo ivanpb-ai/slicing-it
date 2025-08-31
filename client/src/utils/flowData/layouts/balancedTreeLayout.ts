@@ -33,8 +33,8 @@ export const arrangeNodesInBalancedTree = (
   const {
     nodeWidth = 180,
     nodeHeight = 120,
-    horizontalSpacing = 800,
-    verticalSpacing = 200,  // Increased for better visual separation
+    horizontalSpacing = 300,  // Reduced to prevent excessive spreading
+    verticalSpacing = 250,   // Increased for better vertical separation
     marginX = 400,
     marginY = 100
   } = options;
@@ -43,7 +43,6 @@ export const arrangeNodesInBalancedTree = (
 
   // Create node ID set for validation
   const nodeIds = new Set(nodes.map(node => node.id));
-  console.log('Available node IDs:', Array.from(nodeIds));
 
   // Filter edges to only include those with valid nodes and clean up invalid ones
   const validEdges = edges.filter(edge => {
@@ -58,7 +57,6 @@ export const arrangeNodesInBalancedTree = (
     return true;
   });
 
-  console.log(`Filtered edges: ${edges.length} -> ${validEdges.length} valid edges`);
 
   // Build parent-child relationships with multiple parent support using only valid edges
   const childrenMap: Record<string, string[]> = {};
@@ -315,7 +313,7 @@ export const arrangeNodesInBalancedTree = (
               if (isRrpMember) {
                 // RRP-member nodes: Position symmetrically BELOW parent (not at same level)
                 // Handle both single and multiple RRP members consistently
-                const rrpMemberY = parentPos.y + 180; // Position below parent, not at same level
+                const rrpMemberY = parentPos.y + verticalSpacing; // Use proper vertical spacing
                 
                 if (siblings.length === 1) {
                   // Single RRP member: position directly below parent
