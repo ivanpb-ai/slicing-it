@@ -109,7 +109,7 @@ export const getWidth = (nodeType: string, rrpPercentage?: number): string => {
 
 // Additional utility for special shapes that need clip-path
 export const getClipPath = (nodeType: string): string => {
-  console.log(nodeType, "clip-path:", getClipPath);
+  // Removed infinite loop console.log
   switch (nodeType) {
     case "network":         // Rectangle with rounded corners (approximation; adjust radius as needed)
       return "inset(0% round 16px)";
