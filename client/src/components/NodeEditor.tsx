@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useEffect } from 'react';
-import { ReactFlowProvider, useReactFlow, Node, Edge } from '@xyflow/react';
+import { ReactFlowProvider, useReactFlow, Node, Edge, applyNodeChanges } from '@xyflow/react';
 import { useNodeEditor } from '../hooks/useNodeEditor';
 import { useNodeLayoutManager } from '../hooks/node/useNodeLayoutManager';
 import { useLayoutOperations } from '../hooks/flow/useLayoutOperations';
@@ -47,7 +47,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     edges: localEdges,
     setNodes: localSetNodes,
     setEdges: localSetEdges,
-    onNodesChange,
+    onNodesChange: localOnNodesChange,
     onEdgesChange,
     onConnect,
     onSelectionChange,
@@ -67,12 +67,18 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   const setNodes = propSetNodes || localSetNodes;
   const setEdges = propSetEdges || localSetEdges;
   
+  // CRITICAL FIX: Use correct onNodesChange handler for the active state
+  const onNodesChange = useCallback((changes: any) => {
+    if (propSetNodes && propNodes !== undefined) {
+      // Using prop state - need to update prop state
+      propSetNodes((nds) => applyNodeChanges(changes, nds));
+    } else {
+      // Using local state - delegate to local handler
+      localOnNodesChange(changes);
+    }
+  }, [propSetNodes, propNodes, localOnNodesChange]);
+  
 
-  // Debug logging to track state source
-  useEffect(() => {
-    const source = propNodes !== undefined ? 'PROPS' : 'LOCAL';
-    console.log(`NodeEditor: Using ${source} state - nodes: ${nodes.length}, edges: ${edges.length}`);
-  }, [nodes, edges, propNodes]);
 
   // Create custom clear and initialize functions that use the correct state setters
   const handleClearCanvas = useCallback(() => {

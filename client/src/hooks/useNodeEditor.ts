@@ -27,9 +27,6 @@ export const useNodeEditor = () => {
   const { duplicateSelected } = useNodeDuplication(nodes, edges, setNodes, setEdges, selectedElements);
 
   const onNodesChange = useCallback((changes: any) => {
-    console.log('useNodeEditor: onNodesChange called with changes:', changes);
-    console.log('useNodeEditor: Delegating to applyNodeChanges');
-    // CRITICAL FIX: Use ReactFlow's built-in applyNodeChanges for proper handling
     setNodes((nds) => applyNodeChanges(changes, nds));
   }, []);
 
