@@ -66,8 +66,14 @@ export const useNodeLayoutManager = (
           
           console.log(`🧹 Filtered duplicates: ${balancedResult.nodes.length} -> ${uniqueNodes.length} nodes`);
           
-          // CRITICAL FIX: Set nodes and edges in ONE batch to prevent React rendering issues
-          setNodes(uniqueNodes);
+          // CRITICAL FIX: Force React re-render by creating completely new node objects
+          const forceUpdatedNodes = uniqueNodes.map(node => ({
+            ...node,
+            position: { ...node.position }, // Force position object recreation
+            data: { ...node.data } // Force data object recreation
+          }));
+          
+          setNodes(forceUpdatedNodes);
           
           // Update edges with cleaned edges if setEdges is available
           if (setEdges && balancedResult.cleanedEdges) {
