@@ -79,12 +79,15 @@ export const useGraphOperations = (
         
         // Then set the new data with delay
         setTimeout(() => {
+          console.log('🔍 useGraphOperations: Setting nodes to React state:', graphData.nodes?.length || 0);
           setNodes(graphData.nodes || []);
           
           // Set edges with delay to ensure nodes are rendered
           setTimeout(() => {
+            console.log('🔍 useGraphOperations: Setting edges to React state:', graphData.edges?.length || 0);
             setEdges(graphData.edges || []);
             setIsLoading(false);
+            console.log('🔍 useGraphOperations: Load complete - React state should now have', graphData.nodes?.length || 0, 'nodes and', graphData.edges?.length || 0, 'edges');
           }, 200);
         }, 100);
         
