@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef } from 'react';
-import { Node, Edge, Connection, addEdge, useReactFlow } from '@xyflow/react';
+import { Node, Edge, Connection, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
 import { NodeType } from '../types/nodeTypes';
 import { useNodeCreation } from './node/useNodeCreation';
@@ -68,7 +68,50 @@ export const useNodeEditor = () => {
   }, []);
 
   const onConnect = useCallback((connection: Connection) => {
-    setEdges((eds) => addEdge(connection, eds));
+    if (!connection.source || !connection.target) {
+      console.error('useNodeEditor: Invalid connection - missing source or target');
+      return;
+    }
+    
+    console.log('useNodeEditor: Creating connection:', connection);
+    
+    const newEdge: Edge = {
+      id: `e-${connection.source}-${connection.target}`,
+      source: connection.source,
+      target: connection.target,
+      sourceHandle: connection.sourceHandle || null,
+      targetHandle: connection.targetHandle || null,
+      type: 'default',
+      animated: false,
+      style: { 
+        stroke: '#2563eb',
+        strokeWidth: 3,
+        opacity: 1
+      },
+      markerEnd: {
+        type: 'arrowclosed',
+        color: '#2563eb',
+        width: 12,
+        height: 12
+      }
+    };
+    
+    setEdges((eds) => {
+      // Check if edge already exists
+      const edgeExists = eds.some(e => 
+        (e.source === connection.source && e.target === connection.target) ||
+        e.id === newEdge.id
+      );
+      
+      if (edgeExists) {
+        console.log('useNodeEditor: Edge already exists, not adding duplicate');
+        return eds;
+      }
+      
+      const updatedEdges = [...eds, newEdge];
+      console.log(`useNodeEditor: Added connection edge, total edges: ${updatedEdges.length}`);
+      return updatedEdges;
+    });
   }, []);
 
   const onSelectionChange = useCallback((params: any) => {
