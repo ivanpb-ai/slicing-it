@@ -253,8 +253,62 @@ export const arrangeNodesInBalancedTree = (
               nodesByLevel[level] && nodesByLevel[level].includes(child)
             );
             
-            if (siblings.length === 1) {
-              // Single child: directly under parent
+            // Check for special node types first, regardless of sibling count
+            const isDnnNode = nodeId.includes('dnn-');
+            const isRrpNode = nodeId.includes('rrp-') && !nodeId.includes('rrpmember');
+            const isCellAreaNode = nodeId.includes('cell-area-');
+            const isSNssaiNode = nodeId.includes('s-nssai-');
+            
+            if (isDnnNode && level === dnnLevel) {
+              // SPECIAL CASE: Position ALL DNN nodes as one unified horizontal group
+              const nodeIndex = allDnnNodes.indexOf(nodeId);
+              const dnnSpacing = 400; // Balanced spacing for all DNN nodes - not too wide, not overlapping
+              const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
+              const startX = 0 - totalDnnWidth / 2; // Center around X=0
+              const x = startX + nodeIndex * dnnSpacing;
+              
+              const position = { x, y };
+              positionedNodes.push({ id: nodeId, position });
+              nodePositionMap[nodeId] = position;
+              console.log(`🎯 DNN ${nodeId} (${nodeIndex + 1}/${allDnnNodes.length}) unified at (${x}, ${y}) - spacing: ${dnnSpacing}px`);
+            } else if (isRrpNode && level === rrpLevel) {
+              // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
+              const nodeIndex = allRrpNodes.indexOf(nodeId);
+              const rrpSpacing = 400; // Consistent spacing for RRP nodes
+              const totalRrpWidth = (allRrpNodes.length - 1) * rrpSpacing;
+              const startX = 0 - totalRrpWidth / 2; // Center around X=0
+              const x = startX + nodeIndex * rrpSpacing;
+              
+              const position = { x, y };
+              positionedNodes.push({ id: nodeId, position });
+              nodePositionMap[nodeId] = position;
+              console.log(`🎯 RRP ${nodeId} (${nodeIndex + 1}/${allRrpNodes.length}) unified at (${x}, ${y}) - spacing: ${rrpSpacing}px`);
+            } else if (isCellAreaNode && level === cellAreaLevel) {
+              // SPECIAL CASE: Position ALL cell-area nodes with consistent spacing for uniform edge lengths
+              const nodeIndex = allCellAreaNodes.indexOf(nodeId);
+              const cellAreaSpacing = 400; // Consistent spacing for cell-area nodes
+              const totalCellAreaWidth = (allCellAreaNodes.length - 1) * cellAreaSpacing;
+              const startX = 0 - totalCellAreaWidth / 2; // Center around X=0
+              const x = startX + nodeIndex * cellAreaSpacing;
+              
+              const position = { x, y };
+              positionedNodes.push({ id: nodeId, position });
+              nodePositionMap[nodeId] = position;
+              console.log(`🎯 CELL-AREA ${nodeId} (${nodeIndex + 1}/${allCellAreaNodes.length}) unified at (${x}, ${y}) - spacing: ${cellAreaSpacing}px`);
+            } else if (isSNssaiNode && level === sNssaiLevel) {
+              // SPECIAL CASE: Position ALL S-NSSAI nodes with unified spacing to prevent overlaps
+              const nodeIndex = allSNssaiNodes.indexOf(nodeId);
+              const sNssaiSpacing = 400; // Consistent spacing for S-NSSAI nodes to prevent overlaps
+              const totalSNssaiWidth = (allSNssaiNodes.length - 1) * sNssaiSpacing;
+              const startX = 0 - totalSNssaiWidth / 2; // Center around X=0
+              const x = startX + nodeIndex * sNssaiSpacing;
+              
+              const position = { x, y };
+              positionedNodes.push({ id: nodeId, position });
+              nodePositionMap[nodeId] = position;
+              console.log(`🎯 S-NSSAI ${nodeId} (${nodeIndex + 1}/${allSNssaiNodes.length}) unified at (${x}, ${y}) - spacing: ${sNssaiSpacing}px`);
+            } else if (siblings.length === 1) {
+              // Single child: directly under parent (only for nodes that don't have special handling)
               const position = { x: parentPos.x, y };
               positionedNodes.push({ id: nodeId, position });
               nodePositionMap[nodeId] = position;
@@ -291,82 +345,18 @@ export const arrangeNodesInBalancedTree = (
                 console.log(`🔍 CALCULATION: childrenCenterX=${childrenCenterX}, startX=${startX}, childX=${childX}, final x=${x}`);
                 console.log(`🔍 VERIFICATION: Child visual centers should be: ${x + nodeWidth/2} (position ${x} + ${nodeWidth/2})`);
               } else {
-                const isDnnNode = nodeId.includes('dnn-');
+                // Other siblings: spread them around parent with proper spacing
+                const nodeIndex = siblings.indexOf(nodeId);
+                const spacing = 350; // Default spacing
                 
-                if (isDnnNode && level === dnnLevel) {
-                  // SPECIAL CASE: Position ALL DNN nodes as one unified horizontal group
-                  const nodeIndex = allDnnNodes.indexOf(nodeId);
-                  const dnnSpacing = 400; // Balanced spacing for all DNN nodes - not too wide, not overlapping
-                  const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
-                  const startX = 0 - totalDnnWidth / 2; // Center around X=0
-                  const x = startX + nodeIndex * dnnSpacing;
-                  
-                  const position = { x, y };
-                  positionedNodes.push({ id: nodeId, position });
-                  nodePositionMap[nodeId] = position;
-                  console.log(`🎯 DNN ${nodeId} (${nodeIndex + 1}/${allDnnNodes.length}) unified at (${x}, ${y}) - spacing: ${dnnSpacing}px`);
-                } else {
-                  const isRrpNode = nodeId.includes('rrp-') && !nodeId.includes('rrpmember');
-                  
-                  if (isRrpNode && level === rrpLevel) {
-                    // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
-                    const nodeIndex = allRrpNodes.indexOf(nodeId);
-                    const rrpSpacing = 400; // Consistent spacing for RRP nodes
-                    const totalRrpWidth = (allRrpNodes.length - 1) * rrpSpacing;
-                    const startX = 0 - totalRrpWidth / 2; // Center around X=0
-                    const x = startX + nodeIndex * rrpSpacing;
-                    
-                    const position = { x, y };
-                    positionedNodes.push({ id: nodeId, position });
-                    nodePositionMap[nodeId] = position;
-                    console.log(`🎯 RRP ${nodeId} (${nodeIndex + 1}/${allRrpNodes.length}) unified at (${x}, ${y}) - spacing: ${rrpSpacing}px`);
-                  } else {
-                    const isCellAreaNode = nodeId.includes('cell-area-');
-                    
-                    if (isCellAreaNode && level === cellAreaLevel) {
-                      // SPECIAL CASE: Position ALL cell-area nodes with consistent spacing for uniform edge lengths
-                      const nodeIndex = allCellAreaNodes.indexOf(nodeId);
-                      const cellAreaSpacing = 400; // Consistent spacing for cell-area nodes
-                      const totalCellAreaWidth = (allCellAreaNodes.length - 1) * cellAreaSpacing;
-                      const startX = 0 - totalCellAreaWidth / 2; // Center around X=0
-                      const x = startX + nodeIndex * cellAreaSpacing;
-                      
-                      const position = { x, y };
-                      positionedNodes.push({ id: nodeId, position });
-                      nodePositionMap[nodeId] = position;
-                      console.log(`🎯 CELL-AREA ${nodeId} (${nodeIndex + 1}/${allCellAreaNodes.length}) unified at (${x}, ${y}) - spacing: ${cellAreaSpacing}px`);
-                    } else {
-                      const isSNssaiNode = nodeId.includes('s-nssai-');
-                      
-                      if (isSNssaiNode && level === sNssaiLevel) {
-                        // SPECIAL CASE: Position ALL S-NSSAI nodes with unified spacing to prevent overlaps
-                        const nodeIndex = allSNssaiNodes.indexOf(nodeId);
-                        const sNssaiSpacing = 400; // Consistent spacing for S-NSSAI nodes to prevent overlaps
-                        const totalSNssaiWidth = (allSNssaiNodes.length - 1) * sNssaiSpacing;
-                        const startX = 0 - totalSNssaiWidth / 2; // Center around X=0
-                        const x = startX + nodeIndex * sNssaiSpacing;
-                        
-                        const position = { x, y };
-                        positionedNodes.push({ id: nodeId, position });
-                        nodePositionMap[nodeId] = position;
-                        console.log(`🎯 S-NSSAI ${nodeId} (${nodeIndex + 1}/${allSNssaiNodes.length}) unified at (${x}, ${y}) - spacing: ${sNssaiSpacing}px`);
-                      } else {
-                        // Other siblings: spread them around parent with proper spacing
-                        const nodeIndex = siblings.indexOf(nodeId);
-                        const spacing = 350; // Default spacing
-                        
-                        const totalWidth = (siblings.length - 1) * spacing;
-                        const startX = parentPos.x - totalWidth / 2;
-                        const x = startX + nodeIndex * spacing;
-                        
-                        const position = { x, y };
-                        positionedNodes.push({ id: nodeId, position });
-                        nodePositionMap[nodeId] = position;
-                        console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
-                      }
-                    }
-                  }
-                }
+                const totalWidth = (siblings.length - 1) * spacing;
+                const startX = parentPos.x - totalWidth / 2;
+                const x = startX + nodeIndex * spacing;
+                
+                const position = { x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ Sibling ${nodeId} (${nodeIndex + 1}/${siblings.length}) at (${x}, ${y}) - spacing: ${spacing}px, totalWidth: ${totalWidth}px`);
               }
             }
           } else {
