@@ -4,7 +4,7 @@ import { toast } from 'sonner';
 import { NodeType } from '../types/nodeTypes';
 import { useNodeCreation } from './node/useNodeCreation';
 import { useSimpleChildNodeCreation } from './node/useSimpleChildNodeCreation';
-import { useEdgeCreation } from './edge/useEdgeCreation';
+import { useUnifiedEdgeManager } from './edge/useUnifiedEdgeManager';
 import { useNodeSelection } from './node/useNodeSelection';
 import { useNodeDuplication } from './node/useNodeDuplication';
 import { resetCounters} from '../utils/flowData/idCounters';
@@ -19,7 +19,7 @@ export const useNodeEditor = () => {
 
   // Node creation hooks
   const { createNode } = useNodeCreation(setNodes);
-  const { addEdgeWithHandles } = useEdgeCreation(setEdges);
+  const { addEdgeWithHandles } = useUnifiedEdgeManager(setEdges);
   const { createChildNode } = useSimpleChildNodeCreation(setNodes, addEdgeWithHandles);
   
   // Selection and duplication hooks
@@ -67,52 +67,13 @@ export const useNodeEditor = () => {
     });
   }, []);
 
+  // Use unified edge manager instead of manual edge creation
+  const { onConnect: unifiedOnConnect } = useUnifiedEdgeManager(setEdges);
+  
   const onConnect = useCallback((connection: Connection) => {
-    if (!connection.source || !connection.target) {
-      console.error('useNodeEditor: Invalid connection - missing source or target');
-      return;
-    }
-    
-    console.log('useNodeEditor: Creating connection:', connection);
-    
-    const newEdge: Edge = {
-      id: `e-${connection.source}-${connection.target}`,
-      source: connection.source,
-      target: connection.target,
-      sourceHandle: connection.sourceHandle || null,
-      targetHandle: connection.targetHandle || null,
-      type: 'default',
-      animated: false,
-      style: { 
-        stroke: '#2563eb',
-        strokeWidth: 3,
-        opacity: 1
-      },
-      markerEnd: {
-        type: 'arrowclosed',
-        color: '#2563eb',
-        width: 12,
-        height: 12
-      }
-    };
-    
-    setEdges((eds) => {
-      // Check if edge already exists
-      const edgeExists = eds.some(e => 
-        (e.source === connection.source && e.target === connection.target) ||
-        e.id === newEdge.id
-      );
-      
-      if (edgeExists) {
-        console.log('useNodeEditor: Edge already exists, not adding duplicate');
-        return eds;
-      }
-      
-      const updatedEdges = [...eds, newEdge];
-      console.log(`useNodeEditor: Added connection edge, total edges: ${updatedEdges.length}`);
-      return updatedEdges;
-    });
-  }, []);
+    console.log('useNodeEditor: Delegating to unified edge manager:', connection);
+    unifiedOnConnect(connection);
+  }, [unifiedOnConnect]);
 
   const onSelectionChange = useCallback((params: any) => {
     handleSelectionChange(params);

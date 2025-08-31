@@ -80,34 +80,9 @@ export const FlowParentChildVerifier: React.FC<FlowParentChildVerifierProps> = (
             }
           }
           
-          // Create a straight edge to visually connect them
-          const newEdge = {
-            id: `e-${parentNode.id}-${childNode.id}`,
-            source: parentNode.id,
-            target: childNode.id,
-            sourceHandle: 'bottom-source',
-            targetHandle: 'top-target',
-            type: 'straight',
-            style: { stroke: '#94a3b8', strokeWidth: 2, opacity: 1 },
-            data: {
-              curvature: 0,
-              shortened: false,
-              shortenFactor: 0,
-              persistent: true,
-              permanent: true,
-              preserveEdge: true,
-              optimized: true,
-              visible: true,
-              forceVisible: true,
-              maintainVisibility: true
-            }
-          };
-          
-          // Add the edge
-          onEdgesChange({
-            type: 'add',
-            item: newEdge
-          });
+          // Skip edge creation here - let the unified edge manager handle it
+          // This prevents duplicate edges from being created by multiple systems
+          console.log(`Skipping edge creation in FlowParentChildVerifier - unified manager will handle it`);
           
           console.log(`Connected ${childNode.id} to ${parent} node ${parentNode.id}`);
           

@@ -1,0 +1,189 @@
+useLayoutOperations: Arranging layout for 39 nodes
+useNodeLayoutManager.ts:44 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+useNodeLayoutManager.ts:45 Layout options: Object
+useNodeLayoutManager.ts:61 🧹 Pre-layout duplicate filtering: 39 -> 39 nodes
+balancedTreeLayout.ts:42 ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 39 nodes
+balancedTreeLayout.ts:46 Available node IDs: Array(39)
+balancedTreeLayout.ts:61 Filtered edges: 69 -> 69 valid edges
+balancedTreeLayout.ts:95 Found 1 root nodes
+balancedTreeLayout.ts:139 Level assignments: Object
+balancedTreeLayout.ts:140 Parent-child relationships: Object
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756639624667-7964 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756639659671-7539 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756639687715-6191 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756639704851-6322 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756639734396-8976 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756639742081-8460 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756639755345-4860 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756639765238-6853 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756639788156-5077 has parents: Array(1)
+balancedTreeLayout.ts:150 🔍 RRP rrp-5 has children: Array(2)
+balancedTreeLayout.ts:150 🔍 RRP rrp-2 has children: Array(2)
+balancedTreeLayout.ts:150 🔍 RRP rrp-3 has children: Array(2)
+balancedTreeLayout.ts:150 🔍 RRP rrp-4 has children: Array(1)
+balancedTreeLayout.ts:150 🔍 RRP rrp-1 has children: Array(2)
+balancedTreeLayout.ts:192 🎯 Found 7 DNN nodes at level 5: dnn-3, dnn-4, dnn-1, dnn-2, dnn-5, dnn-6, dnn-7
+balancedTreeLayout.ts:193 🎯 Found 5 RRP nodes at level 2: rrp-1, rrp-5, rrp-2, rrp-3, rrp-4
+balancedTreeLayout.ts:194 🎯 Found 3 cell-area nodes at level 1: cell-area-1, cell-area-2, cell-area-3
+balancedTreeLayout.ts:195 🎯 Found 7 S-NSSAI nodes at level 4: s-nssai-3, s-nssai-4, s-nssai-1, s-nssai-2, s-nssai-5, s-nssai-6, s-nssai-7
+balancedTreeLayout.ts:224 
+=== LEVEL 0 (Y=100) ===
+balancedTreeLayout.ts:225 Nodes to position: network-1756639564755-9499
+balancedTreeLayout.ts:233 ✓ Root network-1756639564755-9499 at (0, 100)
+balancedTreeLayout.ts:224 
+=== LEVEL 1 (Y=320) ===
+balancedTreeLayout.ts:225 Nodes to position: cell-area-1, cell-area-2, cell-area-3
+balancedTreeLayout.ts:239 
+Positioning cell-area-1 - Parents: network-1756639564755-9499, network-1756639564755-9499
+balancedTreeLayout.ts:306 🎯 CELL-AREA cell-area-1 (1/3) unified at (-400, 320) - spacing: 400px
+balancedTreeLayout.ts:239 
+Positioning cell-area-2 - Parents: network-1756639564755-9499, network-1756639564755-9499
+balancedTreeLayout.ts:306 🎯 CELL-AREA cell-area-2 (2/3) unified at (0, 320) - spacing: 400px
+balancedTreeLayout.ts:239 
+Positioning cell-area-3 - Parents: network-1756639564755-9499, network-1756639564755-9499
+balancedTreeLayout.ts:306 🎯 CELL-AREA cell-area-3 (3/3) unified at (400, 320) - spacing: 400px
+balancedTreeLayout.ts:224 
+=== LEVEL 2 (Y=670) ===
+balancedTreeLayout.ts:225 Nodes to position: rrp-1, rrp-5, rrp-2, rrp-3, rrp-4
+balancedTreeLayout.ts:239 
+Positioning rrp-1 - Parents: cell-area-1, cell-area-1
+balancedTreeLayout.ts:294 🎯 RRP rrp-1 (1/5) unified at (-800, 670) - spacing: 400px
+balancedTreeLayout.ts:239 
+Positioning rrp-5 - Parents: cell-area-1, cell-area-1
+balancedTreeLayout.ts:294 🎯 RRP rrp-5 (2/5) unified at (-400, 670) - spacing: 400px
+balancedTreeLayout.ts:239 
+Positioning rrp-2 - Parents: cell-area-2, cell-area-2
+balancedTreeLayout.ts:294 🎯 RRP rrp-2 (3/5) unified at (0, 670) - spacing: 400px
+balancedTreeLayout.ts:239 
+Positioning rrp-3 - Parents: cell-area-3, cell-area-3
+balancedTreeLayout.ts:294 🎯 RRP rrp-3 (4/5) unified at (400, 670) - spacing: 400px
+balancedTreeLayout.ts:239 
+Positioning rrp-4 - Parents: cell-area-3, cell-area-3
+balancedTreeLayout.ts:294 🎯 RRP rrp-4 (5/5) unified at (800, 670) - spacing: 400px
+balancedTreeLayout.ts:224 
+=== LEVEL 3 (Y=1180) ===
+balancedTreeLayout.ts:225 Nodes to position: rrpmember-1756639742081-8460, rrpmember-1756639765238-6853, rrpmember-1756639624667-7964, rrpmember-1756639734396-8976, rrpmember-1756639659671-7539, rrpmember-1756639755345-4860, rrpmember-1756639687715-6191, rrpmember-1756639788156-5077, rrpmember-1756639704851-6322
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756639742081-8460 - Parents: rrp-1
+balancedTreeLayout.ts:361 ✓ RRP-member rrpmember-1756639742081-8460 positioned BELOW parent at (-900, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756639765238-6853 - Parents: rrp-1
+balancedTreeLayout.ts:361 ✓ RRP-member rrpmember-1756639765238-6853 positioned BELOW parent at (-700, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756639624667-7964 - Parents: rrp-5
+balancedTreeLayout.ts:361 ✓ RRP-member rrpmember-1756639624667-7964 positioned BELOW parent at (-500, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756639734396-8976 - Parents: rrp-5
+balancedTreeLayout.ts:361 ✓ RRP-member rrpmember-1756639734396-8976 positioned BELOW parent at (-300, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756639659671-7539 - Parents: rrp-2
+balancedTreeLayout.ts:361 ✓ RRP-member rrpmember-1756639659671-7539 positioned BELOW parent at (-100, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756639755345-4860 - Parents: rrp-2
+balancedTreeLayout.ts:361 ✓ RRP-member rrpmember-1756639755345-4860 positioned BELOW parent at (100, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756639687715-6191 - Parents: rrp-3
+balancedTreeLayout.ts:361 ✓ RRP-member rrpmember-1756639687715-6191 positioned BELOW parent at (300, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756639788156-5077 - Parents: rrp-3
+balancedTreeLayout.ts:361 ✓ RRP-member rrpmember-1756639788156-5077 positioned BELOW parent at (500, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756639704851-6322 - Parents: rrp-4
+balancedTreeLayout.ts:333 ✓ Single child rrpmember-1756639704851-6322 under parent at (800, 1180)
+balancedTreeLayout.ts:224 
+=== LEVEL 4 (Y=1370) ===
+balancedTreeLayout.ts:225 Nodes to position: s-nssai-3, s-nssai-4, s-nssai-1, s-nssai-2, s-nssai-5, s-nssai-6, s-nssai-7
+balancedTreeLayout.ts:239 
+Positioning s-nssai-3 - Parents: rrpmember-1756639742081-8460, rrpmember-1756639742081-8460
+balancedTreeLayout.ts:326 ✓ S-NSSAI s-nssai-3 positioned near parent at (-1025, 1370)
+balancedTreeLayout.ts:239 
+Positioning s-nssai-4 - Parents: rrpmember-1756639765238-6853, rrpmember-1756639765238-6853
+balancedTreeLayout.ts:326 ✓ S-NSSAI s-nssai-4 positioned near parent at (-825, 1370)
+balancedTreeLayout.ts:239 
+Positioning s-nssai-1 - Parents: rrpmember-1756639624667-7964, rrpmember-1756639624667-7964
+balancedTreeLayout.ts:326 ✓ S-NSSAI s-nssai-1 positioned near parent at (-625, 1370)
+balancedTreeLayout.ts:239 
+Positioning s-nssai-2 - Parents: rrpmember-1756639734396-8976, rrpmember-1756639734396-8976
+balancedTreeLayout.ts:326 ✓ S-NSSAI s-nssai-2 positioned near parent at (-425, 1370)
+balancedTreeLayout.ts:239 
+Positioning s-nssai-5 - Parents: rrpmember-1756639659671-7539, rrpmember-1756639659671-7539
+balancedTreeLayout.ts:326 ✓ S-NSSAI s-nssai-5 positioned near parent at (-225, 1370)
+balancedTreeLayout.ts:239 
+Positioning s-nssai-6 - Parents: rrpmember-1756639755345-4860, rrpmember-1756639755345-4860
+balancedTreeLayout.ts:326 ✓ S-NSSAI s-nssai-6 positioned near parent at (-25, 1370)
+balancedTreeLayout.ts:239 
+Positioning s-nssai-7 - Parents: rrpmember-1756639687715-6191, rrpmember-1756639687715-6191, rrpmember-1756639788156-5077, rrpmember-1756639704851-6322
+balancedTreeLayout.ts:326 ✓ S-NSSAI s-nssai-7 positioned near parent at (175, 1370)
+balancedTreeLayout.ts:224 
+=== LEVEL 5 (Y=1720) ===
+balancedTreeLayout.ts:225 Nodes to position: dnn-3, dnn-4, dnn-1, dnn-2, dnn-5, dnn-6, dnn-7
+balancedTreeLayout.ts:239 
+Positioning dnn-3 - Parents: s-nssai-3, s-nssai-3
+balancedTreeLayout.ts:281 ✓ DNN dnn-3 positioned near parent at (-1150, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-4 - Parents: s-nssai-4, s-nssai-4
+balancedTreeLayout.ts:281 ✓ DNN dnn-4 positioned near parent at (-950, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-1 - Parents: s-nssai-1, s-nssai-1
+balancedTreeLayout.ts:281 ✓ DNN dnn-1 positioned near parent at (-750, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-2 - Parents: s-nssai-2, s-nssai-2
+balancedTreeLayout.ts:281 ✓ DNN dnn-2 positioned near parent at (-550, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-5 - Parents: s-nssai-5, s-nssai-5
+balancedTreeLayout.ts:281 ✓ DNN dnn-5 positioned near parent at (-350, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-6 - Parents: s-nssai-6, s-nssai-6
+balancedTreeLayout.ts:281 ✓ DNN dnn-6 positioned near parent at (-150, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-7 - Parents: s-nssai-7, s-nssai-7
+balancedTreeLayout.ts:281 ✓ DNN dnn-7 positioned near parent at (50, 1720)
+balancedTreeLayout.ts:224 
+=== LEVEL 6 (Y=2070) ===
+balancedTreeLayout.ts:225 Nodes to position: fiveqi-3, fiveqi-4, fiveqi-1, fiveqi-2, fiveqi-6, fiveqi-8, fiveqi-9
+balancedTreeLayout.ts:239 
+Positioning fiveqi-3 - Parents: dnn-3, dnn-3
+balancedTreeLayout.ts:374 ✓ Sibling fiveqi-3 (1/2) at (-1325, 2070) - spacing: 350px, totalWidth: 350px
+balancedTreeLayout.ts:239 
+Positioning fiveqi-4 - Parents: dnn-4, dnn-4
+balancedTreeLayout.ts:374 ✓ Sibling fiveqi-4 (1/2) at (-1125, 2070) - spacing: 350px, totalWidth: 350px
+balancedTreeLayout.ts:239 
+Positioning fiveqi-1 - Parents: dnn-1, dnn-1
+balancedTreeLayout.ts:374 ✓ Sibling fiveqi-1 (1/2) at (-925, 2070) - spacing: 350px, totalWidth: 350px
+balancedTreeLayout.ts:239 
+Positioning fiveqi-2 - Parents: dnn-2, dnn-2
+balancedTreeLayout.ts:374 ✓ Sibling fiveqi-2 (1/2) at (-725, 2070) - spacing: 350px, totalWidth: 350px
+balancedTreeLayout.ts:239 
+Positioning fiveqi-6 - Parents: dnn-5, dnn-5
+balancedTreeLayout.ts:374 ✓ Sibling fiveqi-6 (1/2) at (-525, 2070) - spacing: 350px, totalWidth: 350px
+balancedTreeLayout.ts:239 
+Positioning fiveqi-8 - Parents: dnn-6, dnn-6
+balancedTreeLayout.ts:374 ✓ Sibling fiveqi-8 (1/2) at (-325, 2070) - spacing: 350px, totalWidth: 350px
+balancedTreeLayout.ts:239 
+Positioning fiveqi-9 - Parents: dnn-7, dnn-7
+balancedTreeLayout.ts:374 ✓ Sibling fiveqi-9 (1/2) at (-125, 2070) - spacing: 350px, totalWidth: 350px
+balancedTreeLayout.ts:405 🎯 Graph centering: minX=-1325, maxX=800, width=2125, centerOffset=-262.5
+balancedTreeLayout.ts:419 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 39 nodes
+balancedTreeLayout.ts:420 🎯 Final Y spacing used: 150 px
+balancedTreeLayout.ts:421 🎯 Final calculated positions: Array(5)
+balancedTreeLayout.ts:422 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:69 🧹 Layout returned 39 nodes and 69 cleaned edges (was 69)
+useNodeLayoutManager.ts:77 🧹 Filtered duplicates: 39 -> 39 nodes
+useNodeLayoutManager.ts:88 🧹 Updating edges: 69 -> 40 (filtered duplicates)
+FlowInstance.tsx:83 FlowInstance: Rendering with 39 nodes, 40 edges
+FlowInstance.tsx:85 FlowInstance: First node: Object
+FlowInstance.tsx:88 FlowInstance: First edge: Object
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 39, edges: 40
+Index.tsx:160 MainContentWithGraphOperations: edges updated 40
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 40 edges
+Index.tsx:45 Index component: nodes state updated, count: 39
+Index.tsx:47 Index component: First node: {"id":"network-1756639564755-9499","type":"customNode","position":{"x":262.5,"y":100},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1756639564755-9499","description":"Node"}}
+Index.tsx:74 Index component: edges state updated, count: 40
+Index.tsx:76 Index component: First edge: {"id":"network-1756639564755-9499-cell-area-1","source":"network-1756639564755-9499","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12},"data":{}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 40 edges
+useLayoutOperations.ts:50 After arrangement: Found 39 visible nodes, expected 39
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
