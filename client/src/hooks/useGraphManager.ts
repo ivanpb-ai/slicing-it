@@ -48,27 +48,24 @@ export const useGraphManager = () => {
         reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
       }
       
-      // Set nodes first with a small delay
-      setTimeout(() => {
-        console.log(`Setting ${graphData.nodes.length} nodes`);
-        setNodes(graphData.nodes);
-        
-        // Then set edges with a delay to ensure nodes are rendered
-        setTimeout(() => {
-          console.log(`Setting ${graphData.edges.length} edges`);
-          setEdges(graphData.edges);
-          
-          // Trigger events to notify components
-          window.dispatchEvent(new CustomEvent('graph-loaded'));
-          
-          // Force edge redraw
-          setTimeout(() => {
-            window.dispatchEvent(new CustomEvent('force-edge-redraw'));
-            setIsLoading(false);
-            toast.success(`Graph "${name}" loaded with ${graphData.nodes.length} nodes and ${graphData.edges.length} edges`);
-          }, 200);
-        }, 200);
-      }, 100);
+      // Filter duplicates before setting - this fixes React key warnings
+      const uniqueNodes = graphData.nodes.filter((node, index, arr) => 
+        arr.findIndex(n => n.id === node.id) === index
+      );
+      const uniqueEdges = graphData.edges.filter((edge, index, arr) => 
+        arr.findIndex(e => e.id === edge.id) === index
+      );
+      
+      console.log(`Setting ${uniqueNodes.length} unique nodes and ${uniqueEdges.length} unique edges`);
+      
+      // Set nodes and edges immediately without delays for better performance
+      setNodes(uniqueNodes);
+      setEdges(uniqueEdges);
+      
+      // Trigger events and finish
+      window.dispatchEvent(new CustomEvent('graph-loaded'));
+      setIsLoading(false);
+      toast.success(`Graph "${name}" loaded with ${uniqueNodes.length} nodes and ${uniqueEdges.length} edges`);
       
       return true;
     } catch (error) {

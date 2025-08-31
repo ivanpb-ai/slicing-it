@@ -44,21 +44,14 @@ export const useNodeLayoutManager = (
       console.log('✅ BALANCED TREE: Starting layout arrangement with improved spacing');
       console.log('Layout options:', layoutOptions);
       
-      // Check for duplicate nodes BEFORE layout
-      const duplicateIds = nodes.filter((node, index) => 
-        nodes.findIndex(n => n.id === node.id) !== index
-      ).map(n => n.id);
-      
-      if (duplicateIds.length > 0) {
-        console.warn('🚨 DUPLICATE NODES DETECTED before layout:', duplicateIds);
-      }
-      
-      // Remove duplicates from input to prevent spurious edges
+      // AGGRESSIVE duplicate filtering - this prevents React key warnings
       const uniqueInputNodes = nodes.filter((node, index) => 
         nodes.findIndex(n => n.id === node.id) === index
       );
       
-      console.log(`🧹 Pre-layout duplicate filtering: ${nodes.length} -> ${uniqueInputNodes.length} nodes`);
+      if (nodes.length !== uniqueInputNodes.length) {
+        console.log(`🧹 Pre-layout duplicate filtering: ${nodes.length} -> ${uniqueInputNodes.length} nodes`);
+      }
       
       const nodesCopy = uniqueInputNodes.map(node => ({...node}));
       

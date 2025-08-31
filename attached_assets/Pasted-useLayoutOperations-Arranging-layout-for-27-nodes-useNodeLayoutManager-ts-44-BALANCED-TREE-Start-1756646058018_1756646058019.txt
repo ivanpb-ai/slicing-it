@@ -1,0 +1,214 @@
+useLayoutOperations: Arranging layout for 27 nodes
+useNodeLayoutManager.ts:44 ✅ BALANCED TREE: Starting layout arrangement with improved spacing
+useNodeLayoutManager.ts:45 Layout options: Object
+useNodeLayoutManager.ts:53  🚨 DUPLICATE NODES DETECTED before layout: Array(2)
+(anonymous) @ useNodeLayoutManager.ts:53
+useNodeLayoutManager.ts:61 🧹 Pre-layout duplicate filtering: 27 -> 25 nodes
+balancedTreeLayout.ts:42 ✅ BALANCED TREE LAYOUT: Starting balanced hierarchical arrangement with 25 nodes
+balancedTreeLayout.ts:46 Available node IDs: Array(25)
+balancedTreeLayout.ts:61 Filtered edges: 31 -> 31 valid edges
+balancedTreeLayout.ts:95 Found 1 root nodes
+balancedTreeLayout.ts:139 Level assignments: Object
+balancedTreeLayout.ts:140 Parent-child relationships: Object
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756298522116-122 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756298528108-7394 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756298536993-2136 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756313013671-6351 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756313029003-77 has parents: Array(1)
+balancedTreeLayout.ts:145 🔍 RRP-member rrpmember-1756313334883-4722 has parents: Array(1)
+balancedTreeLayout.ts:150 🔍 RRP rrp-3 has children: Array(2)
+balancedTreeLayout.ts:150 🔍 RRP rrp-2 has children: Array(2)
+balancedTreeLayout.ts:150 🔍 RRP rrp-1 has children: Array(2)
+balancedTreeLayout.ts:192 🎯 Found 6 DNN nodes at level 5: dnn-1, dnn-4, dnn-6, dnn-2, dnn-3, dnn-5
+balancedTreeLayout.ts:193 🎯 Found 3 RRP nodes at level 2: rrp-1, rrp-3, rrp-2
+balancedTreeLayout.ts:194 🎯 Found 2 cell-area nodes at level 1: cell-area-1, cell-area-2
+balancedTreeLayout.ts:195 🎯 Found 3 S-NSSAI nodes at level 4: s-nssai-1, s-nssai-2, s-nssai-4
+balancedTreeLayout.ts:224 
+=== LEVEL 0 (Y=100) ===
+balancedTreeLayout.ts:225 Nodes to position: network-1756298418290-5901
+balancedTreeLayout.ts:233 ✓ Root network-1756298418290-5901 at (0, 100)
+balancedTreeLayout.ts:224 
+=== LEVEL 1 (Y=320) ===
+balancedTreeLayout.ts:225 Nodes to position: cell-area-1, cell-area-2
+balancedTreeLayout.ts:239 
+Positioning cell-area-1 - Parents: network-1756298418290-5901
+balancedTreeLayout.ts:306 🎯 CELL-AREA cell-area-1 (1/2) unified at (-200, 320) - spacing: 400px
+balancedTreeLayout.ts:239 
+Positioning cell-area-2 - Parents: network-1756298418290-5901
+balancedTreeLayout.ts:306 🎯 CELL-AREA cell-area-2 (2/2) unified at (200, 320) - spacing: 400px
+balancedTreeLayout.ts:224 
+=== LEVEL 2 (Y=670) ===
+balancedTreeLayout.ts:225 Nodes to position: rrp-1, rrp-3, rrp-2
+balancedTreeLayout.ts:239 
+Positioning rrp-1 - Parents: cell-area-1
+balancedTreeLayout.ts:294 🎯 RRP rrp-1 (1/3) unified at (-400, 670) - spacing: 400px
+balancedTreeLayout.ts:239 
+Positioning rrp-3 - Parents: cell-area-2, cell-area-1
+balancedTreeLayout.ts:294 🎯 RRP rrp-3 (2/3) unified at (0, 670) - spacing: 400px
+balancedTreeLayout.ts:239 
+Positioning rrp-2 - Parents: cell-area-2
+balancedTreeLayout.ts:294 🎯 RRP rrp-2 (3/3) unified at (400, 670) - spacing: 400px
+balancedTreeLayout.ts:224 
+=== LEVEL 3 (Y=1180) ===
+balancedTreeLayout.ts:225 Nodes to position: rrpmember-1756298536993-2136, rrpmember-1756313029003-77, rrpmember-1756298522116-122, rrpmember-1756313013671-6351, rrpmember-1756298528108-7394, rrpmember-1756313334883-4722
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756298536993-2136 - Parents: rrp-1
+balancedTreeLayout.ts:363 ✓ RRP-member rrpmember-1756298536993-2136 positioned BELOW parent at (-500, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756313029003-77 - Parents: rrp-1
+balancedTreeLayout.ts:363 ✓ RRP-member rrpmember-1756313029003-77 positioned BELOW parent at (-300, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756298522116-122 - Parents: rrp-3
+balancedTreeLayout.ts:363 ✓ RRP-member rrpmember-1756298522116-122 positioned BELOW parent at (-100, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756313013671-6351 - Parents: rrp-3
+balancedTreeLayout.ts:363 ✓ RRP-member rrpmember-1756313013671-6351 positioned BELOW parent at (100, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756298528108-7394 - Parents: rrp-2
+balancedTreeLayout.ts:363 ✓ RRP-member rrpmember-1756298528108-7394 positioned BELOW parent at (300, 850)
+balancedTreeLayout.ts:239 
+Positioning rrpmember-1756313334883-4722 - Parents: rrp-2
+balancedTreeLayout.ts:363 ✓ RRP-member rrpmember-1756313334883-4722 positioned BELOW parent at (500, 850)
+balancedTreeLayout.ts:224 
+=== LEVEL 4 (Y=1370) ===
+balancedTreeLayout.ts:225 Nodes to position: s-nssai-1, s-nssai-2, s-nssai-4
+balancedTreeLayout.ts:239 
+Positioning s-nssai-1 - Parents: rrpmember-1756298536993-2136
+balancedTreeLayout.ts:314 ✓ Single S-NSSAI s-nssai-1 centered under parent at (-500, 1370)
+balancedTreeLayout.ts:239 
+Positioning s-nssai-2 - Parents: rrpmember-1756298522116-122, rrpmember-1756313013671-6351, rrpmember-1756313029003-77
+balancedTreeLayout.ts:314 ✓ Single S-NSSAI s-nssai-2 centered under parent at (-100, 1370)
+balancedTreeLayout.ts:239 
+Positioning s-nssai-4 - Parents: rrpmember-1756298528108-7394, rrpmember-1756313334883-4722
+balancedTreeLayout.ts:314 ✓ Single S-NSSAI s-nssai-4 centered under parent at (300, 1370)
+balancedTreeLayout.ts:224 
+=== LEVEL 5 (Y=1720) ===
+balancedTreeLayout.ts:225 Nodes to position: dnn-1, dnn-4, dnn-6, dnn-2, dnn-3, dnn-5
+balancedTreeLayout.ts:239 
+Positioning dnn-1 - Parents: s-nssai-1
+balancedTreeLayout.ts:281 ✓ DNN dnn-1 positioned near parent at (-750, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-4 - Parents: s-nssai-1
+balancedTreeLayout.ts:281 ✓ DNN dnn-4 positioned near parent at (-500, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-6 - Parents: s-nssai-1
+balancedTreeLayout.ts:281 ✓ DNN dnn-6 positioned near parent at (-250, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-2 - Parents: s-nssai-2, s-nssai-4
+balancedTreeLayout.ts:269 ✓ Single DNN dnn-2 centered under parent at (-100, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-3 - Parents: s-nssai-4
+balancedTreeLayout.ts:281 ✓ DNN dnn-3 positioned near parent at (50, 1720)
+balancedTreeLayout.ts:239 
+Positioning dnn-5 - Parents: s-nssai-4
+balancedTreeLayout.ts:281 ✓ DNN dnn-5 positioned near parent at (300, 1720)
+balancedTreeLayout.ts:224 
+=== LEVEL 6 (Y=2070) ===
+balancedTreeLayout.ts:225 Nodes to position: fiveqi-67, fiveqi-9, fiveqi-79, fiveqi-7
+balancedTreeLayout.ts:239 
+Positioning fiveqi-67 - Parents: dnn-1
+balancedTreeLayout.ts:370 ✓ Single child fiveqi-67 under parent at (-750, 2070)
+balancedTreeLayout.ts:239 
+Positioning fiveqi-9 - Parents: dnn-4
+balancedTreeLayout.ts:370 ✓ Single child fiveqi-9 under parent at (-500, 2070)
+balancedTreeLayout.ts:239 
+Positioning fiveqi-79 - Parents: dnn-6
+balancedTreeLayout.ts:370 ✓ Single child fiveqi-79 under parent at (-250, 2070)
+balancedTreeLayout.ts:239 
+Positioning fiveqi-7 - Parents: dnn-3, dnn-5, dnn-2
+balancedTreeLayout.ts:370 ✓ Single child fiveqi-7 under parent at (50, 2070)
+balancedTreeLayout.ts:414 🎯 Graph centering: minX=-750, maxX=500, width=1250, centerOffset=-125
+balancedTreeLayout.ts:428 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 25 nodes
+balancedTreeLayout.ts:429 🎯 Final Y spacing used: 150 px
+balancedTreeLayout.ts:430 🎯 Final calculated positions: Array(5)
+balancedTreeLayout.ts:431 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:69 🧹 Layout returned 25 nodes and 31 cleaned edges (was 31)
+useNodeLayoutManager.ts:77 🧹 Filtered duplicates: 25 -> 25 nodes
+useNodeLayoutManager.ts:88 🧹 Updating edges: 31 -> 31 (filtered duplicates)
+react-dom.development.js:86  Warning: Encountered two children with the same key, `s-nssai-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at MiniMapNodes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9247:3)
+    at svg
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at MiniMapComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9319:10)
+    at FlowControls
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx:31:10)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `s-nssai-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at MiniMapNodes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9247:3)
+    at svg
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at MiniMapComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9319:10)
+    at FlowControls
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx:31:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx:31:10)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+FlowInstance.tsx:83 FlowInstance: Rendering with 25 nodes, 31 edges
+FlowInstance.tsx:85 FlowInstance: First node: Object
+FlowInstance.tsx:88 FlowInstance: First edge: Object
+NodeEditor.tsx:73 NodeEditor: Using PROPS state - nodes: 25, edges: 31
+Index.tsx:160 MainContentWithGraphOperations: edges updated 31
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 31 edges
+Index.tsx:45 Index component: nodes state updated, count: 25
+Index.tsx:47 Index component: First node: {"id":"network-1756298418290-5901","type":"customNode","position":{"x":125,"y":100},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1756298418290-5901","description":"Node"},"selected":false}
+Index.tsx:74 Index component: edges state updated, count: 31
+Index.tsx:76 Index component: First edge: {"id":"network-1756298418290-5901-cell-area-1","source":"network-1756298418290-5901","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12},"data":{}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 31 edges
+useLayoutOperations.ts:50 After arrangement: Found 25 visible nodes, expected 27
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again

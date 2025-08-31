@@ -38,76 +38,40 @@ export function useFlowEvents() {
       }, 1000);
     };
     
-    // Handler for when a new node is added - no longer auto fits view
+    // Handler for when a new node is added - lightweight
     const nodeAddedHandler = () => {
       if (isProcessingRef.current || !reactFlowInstance) return;
       isProcessingRef.current = true;
       
       console.log('Node added event received');
       
-      // Reset the flag after completion
-      setTimeout(() => {
-        isProcessingRef.current = false;
-      }, 500);
+      // Reset immediately for better performance
+      isProcessingRef.current = false;
     };
     
-    // Add handler for arranged nodes - no longer auto fits view
+    // Add handler for arranged nodes - lightweight
     const nodesArrangedHandler = () => {
       if (isProcessingRef.current || !reactFlowInstance) return;
       isProcessingRef.current = true;
       
       console.log('Nodes arranged event received');
       
-      // Reset the flag after completion
-      setTimeout(() => {
-        isProcessingRef.current = false;
-      }, 500);
+      // Reset immediately for better performance
+      isProcessingRef.current = false;
     };
     
-    // Add handler for node relationship updates (new event)
+    // DISABLED HEAVY PROCESSING - this was causing performance issues
     const nodeRelationshipUpdateHandler = () => {
       if (isProcessingRef.current || !reactFlowInstance) return;
       isProcessingRef.current = true;
       
-      console.log('Node relationship update event received, checking edges...');
+      console.log('Node relationship update event received (lightweight mode)');
       
-      // Check edges and make any necessary repairs
-      setTimeout(() => {
-        if (reactFlowInstance) {
-          // Get all nodes and edges
-          const nodes = reactFlowInstance.getNodes();
-          const edges = reactFlowInstance.getEdges();
-          
-          console.log(`Checking relationships for ${nodes.length} nodes and ${edges.length} edges`);
-          
-          // Look for any missing parent-child edges
-          const childNodes = nodes.filter(node => node.parentId); // Fixed: Changed parentNode to parentId
-          
-          childNodes.forEach(childNode => {
-            const parentId = childNode.parentId; // Fixed: Changed parentNode to parentId
-            if (parentId) {
-              // Check if an edge exists between this parent and child
-              const edgeExists = edges.some(edge => 
-                edge.source === parentId && edge.target === childNode.id
-              );
-              
-              if (!edgeExists) {
-                console.log(`Missing edge from ${parentId} to ${childNode.id}, triggering edge recreation`);
-                // Dispatch an event to trigger edge recreation
-                window.dispatchEvent(new CustomEvent('edge-created'));
-              }
-            }
-          });
-        }
-        
-        // Reset the processing flag
-        setTimeout(() => {
-          isProcessingRef.current = false;
-        }, 300);
-      }, 200);
+      // Reset immediately - no heavy processing
+      isProcessingRef.current = false;
     };
     
-    // Add handler for storage loaded graphs
+    // Add handler for storage loaded graphs - lightweight
     const storageGraphLoadedHandler = (event: CustomEvent) => {
       if (isProcessingRef.current) return;
       isProcessingRef.current = true;
@@ -118,11 +82,9 @@ export function useFlowEvents() {
       // Use the dedicated handler for storage loaded graphs
       handleStorageGraphLoaded(reactFlowInstance);
       
-      // Reset processing flag after a sufficient delay
-      setTimeout(() => {
-        isProcessingRef.current = false;
-        setIsStorageLoaded(false);
-      }, 1500);
+      // Reset immediately for better performance
+      isProcessingRef.current = false;
+      setIsStorageLoaded(false);
     };
     
     window.addEventListener('graph-loaded', graphLoadedHandler);
