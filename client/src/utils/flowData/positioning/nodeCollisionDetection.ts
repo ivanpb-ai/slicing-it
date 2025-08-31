@@ -38,12 +38,11 @@ export const findNonOverlappingPosition = (
   if (existingNodes.length === 0) {
     return desiredPosition;
   }
-  console.log(`Desired position: ${JSON.stringify(desiredPosition)}`);
 
   let position = { ...desiredPosition };
   let attempts = 0;
-  const maxAttempts = 50;
-  const spiralIncrement = 60; // Distance to move in spiral pattern
+  const maxAttempts = 20; // REDUCED to prevent infinite loops
+  const spiralIncrement = 100; // Larger increment for faster spacing
 
   while (attempts < maxAttempts) {
     // Check if current position overlaps with any existing node
@@ -55,27 +54,28 @@ export const findNonOverlappingPosition = (
       return position;
     }
 
-    // Move in a spiral pattern to find free space
-    const angle = (attempts * 0.5) * Math.PI;
-    const radius = spiralIncrement * (1 + Math.floor(attempts / 8));
+    // FIXED: Use simpler grid-based positioning to avoid infinite spirals
+    const gridSize = 200;
+    const row = Math.floor(attempts / 4);
+    const col = attempts % 4;
     
     position = {
-      x: desiredPosition.x + radius * Math.cos(angle),
-      y: desiredPosition.y + radius * Math.sin(angle)
+      x: desiredPosition.x + (col - 1.5) * gridSize,
+      y: desiredPosition.y + row * gridSize
     };
-    console.log(`Position: ${JSON.stringify(position.x)}`);
-    console.log(`Position: ${JSON.stringify(position.y)}`);
 
     attempts++;
   }
 
-  // Fallback: place node far to the right if no position found
-  const fallbackX = Math.max(...existingNodes.map(n => n.position.x)) + nodeWidth + MIN_NODE_SPACING;
+  // FIXED: Guaranteed fallback position that won't cause loops
+  const safeX = existingNodes.length > 0 
+    ? Math.max(...existingNodes.map(n => n.position.x)) + nodeWidth + MIN_NODE_SPACING
+    : desiredPosition.x + 200;
+    
   return {
-    x: fallbackX,
+    x: safeX,
     y: desiredPosition.y
   };
-    console.log(`Desired position: ${JSON.stringify(fallbackX)}`);
 };
 
 /**
