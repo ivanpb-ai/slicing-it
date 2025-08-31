@@ -325,42 +325,51 @@ export const arrangeNodesInBalancedTree = (
                 nodePositionMap[nodeId] = position;
                 console.log(`✓ S-NSSAI ${nodeId} positioned near parent at (${x}, ${y})`);
               }
-            } else if (siblings.length === 1) {
-              // Single child: directly under parent (only for nodes that don't have special handling)
-              const position = { x: parentPos.x, y };
-              positionedNodes.push({ id: nodeId, position });
-              nodePositionMap[nodeId] = position;
-              console.log(`✓ Single child ${nodeId} under parent at (${parentPos.x}, ${y})`);
             } else {
-              // Multiple siblings: SPECIAL CASE for RRP-member nodes
+              // Check for RRP-member nodes first (both single and multiple)
               const isRrpMember = nodeId.includes('rrpmember');
               
               if (isRrpMember) {
                 // RRP-member nodes: Position symmetrically BELOW parent (not at same level)
-                const nodeIndex = siblings.indexOf(nodeId);
-                const tightSpacing = 200; // Spacing between RRP-member nodes
-                
-                // Calculate parent's VISUAL center
-                const parentVisualCenterX = parentPos.x + nodeWidth / 2;
-                
-                // Position RRP members BELOW the parent with additional spacing
+                // Handle both single and multiple RRP members consistently
                 const rrpMemberY = parentPos.y + 180; // Position below parent, not at same level
                 
-                // Center children symmetrically around parent's VISUAL center
-                const totalWidth = (siblings.length - 1) * tightSpacing;
-                const childrenCenterX = parentVisualCenterX;
-                const startX = childrenCenterX - totalWidth / 2;
-                const childX = startX + nodeIndex * tightSpacing;
-                
-                // Convert back to top-left positioning for React Flow
-                const x = childX - nodeWidth / 2;
-                
-                const position = { x, y: rrpMemberY };
+                if (siblings.length === 1) {
+                  // Single RRP member: position directly below parent
+                  const position = { x: parentPos.x, y: rrpMemberY };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ Single RRP-member ${nodeId} positioned BELOW parent at (${parentPos.x}, ${rrpMemberY})`);
+                } else {
+                  // Multiple RRP members: spread symmetrically below parent
+                  const nodeIndex = siblings.indexOf(nodeId);
+                  const tightSpacing = 200; // Spacing between RRP-member nodes
+                  
+                  // Calculate parent's VISUAL center
+                  const parentVisualCenterX = parentPos.x + nodeWidth / 2;
+                  
+                  // Center children symmetrically around parent's VISUAL center
+                  const totalWidth = (siblings.length - 1) * tightSpacing;
+                  const childrenCenterX = parentVisualCenterX;
+                  const startX = childrenCenterX - totalWidth / 2;
+                  const childX = startX + nodeIndex * tightSpacing;
+                  
+                  // Convert back to top-left positioning for React Flow
+                  const x = childX - nodeWidth / 2;
+                  
+                  const position = { x, y: rrpMemberY };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ RRP-member ${nodeId} positioned BELOW parent at (${x}, ${rrpMemberY})`);
+                }
+              } else if (siblings.length === 1) {
+                // Single child: directly under parent (for non-RRP member nodes)
+                const position = { x: parentPos.x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ RRP-member ${nodeId} positioned BELOW parent at (${x}, ${rrpMemberY})`);
+                console.log(`✓ Single child ${nodeId} under parent at (${parentPos.x}, ${y})`);
               } else {
-                // Other siblings: spread them around parent with proper spacing
+                // Multiple siblings: spread them around parent with proper spacing
                 const nodeIndex = siblings.indexOf(nodeId);
                 const spacing = 350; // Default spacing
                 
