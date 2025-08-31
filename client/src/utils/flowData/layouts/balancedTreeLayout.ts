@@ -342,15 +342,23 @@ export const arrangeNodesInBalancedTree = (
                   const nodeIndex = siblings.indexOf(nodeId);
                   const tightSpacing = 200; // Spacing between RRP-member nodes
                   
-                  // Simplified centering: spread children around parent center
+                  // Center children around parent center with visual offset
                   const totalWidth = (siblings.length - 1) * tightSpacing;
-                  const startX = parentPos.x - totalWidth / 2;
-                  const x = startX + nodeIndex * tightSpacing;
+                  
+                  // Calculate parent's visual center (parent.x is top-left, we need center)
+                  const parentCenterX = parentPos.x + 90; // Half of RRP node width (180px / 2)
+                  
+                  // Spread children symmetrically around parent's visual center
+                  const startX = parentCenterX - totalWidth / 2;
+                  const childCenterX = startX + nodeIndex * tightSpacing;
+                  
+                  // Convert back to top-left positioning (subtract half of child width)
+                  const x = childCenterX - 90; // Half of RRP member node width (180px / 2)
                   
                   const position = { x, y: rrpMemberY };
                   positionedNodes.push({ id: nodeId, position });
                   nodePositionMap[nodeId] = position;
-                  console.log(`🔧 RRP-MEMBER: ${nodeId} positioned at (${x}, ${rrpMemberY}) - parent at (${parentPos.x}, ${parentPos.y})`);
+                  console.log(`🔧 RRP-MEMBER: ${nodeId} positioned at (${x}, ${rrpMemberY}) - parent center at (${parentCenterX}, ${parentPos.y}), child center at (${childCenterX})`);
                 }
               } else if (siblings.length === 1) {
                 // Single child: directly under parent (for non-RRP member nodes)
