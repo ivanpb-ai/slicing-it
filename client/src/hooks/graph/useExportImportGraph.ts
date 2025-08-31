@@ -240,20 +240,71 @@ export const useExportImportGraph = (
               let sourceId = '';
               let targetId = '';
               
-              // Try different parsing strategies
-              for (const nodeId of nodeIds) {
+              // Sort node IDs by length (longest first) to handle complex IDs correctly
+              const sortedNodeIds = [...nodeIds].sort((a, b) => b.length - a.length);
+              
+              // Try different parsing strategies - use longest matching node IDs first
+              for (const nodeId of sortedNodeIds) {
                 if (edgeId.startsWith(nodeId + '-')) {
                   sourceId = nodeId;
                   const remainder = edgeId.substring(nodeId.length + 1);
                   
-                  // Check if remainder matches another node ID
-                  for (const targetNodeId of nodeIds) {
-                    if (remainder === targetNodeId || remainder.startsWith(targetNodeId)) {
+                  // Check if remainder matches another node ID (also prioritize longer matches)
+                  for (const targetNodeId of sortedNodeIds) {
+                    if (remainder === targetNodeId) {
                       targetId = targetNodeId;
                       break;
                     }
                   }
-                  break;
+                  
+                  // If exact match failed, try partial matches but be more careful
+                  if (!targetId) {
+                    for (const targetNodeId of sortedNodeIds) {
+                      if (remainder.startsWith(targetNodeId) && 
+                          (remainder === targetNodeId || remainder[targetNodeId.length] === '-')) {
+                        targetId = targetNodeId;
+                        break;
+                      }
+                    }
+                  }
+                  
+                  if (targetId) break;
+                }
+              }
+              
+              // Alternative parsing: try to find the best match by testing all combinations
+              if (!sourceId || !targetId) {
+                let bestMatch = { source: '', target: '', score: 0 };
+                
+                for (const potentialSource of sortedNodeIds) {
+                  for (const potentialTarget of sortedNodeIds) {
+                    if (potentialSource === potentialTarget) continue;
+                    
+                    const expectedEdgeId = `${potentialSource}-${potentialTarget}`;
+                    if (edgeId === expectedEdgeId) {
+                      // Perfect match
+                      sourceId = potentialSource;
+                      targetId = potentialTarget;
+                      break;
+                    } else if (edgeId.includes(potentialSource) && edgeId.includes(potentialTarget)) {
+                      // Both IDs are present in the edge ID
+                      const sourceIndex = edgeId.indexOf(potentialSource);
+                      const targetIndex = edgeId.indexOf(potentialTarget);
+                      if (sourceIndex < targetIndex) {
+                        const score = potentialSource.length + potentialTarget.length;
+                        if (score > bestMatch.score) {
+                          bestMatch = { source: potentialSource, target: potentialTarget, score };
+                        }
+                      }
+                    }
+                  }
+                  if (sourceId && targetId) break;
+                }
+                
+                // Use best match if no perfect match found
+                if (!sourceId && bestMatch.score > 0) {
+                  sourceId = bestMatch.source;
+                  targetId = bestMatch.target;
                 }
               }
               
