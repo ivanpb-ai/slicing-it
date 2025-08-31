@@ -43,25 +43,24 @@ export const useLayoutOperations = (
       // Call the arrange function
       arrangeNodesInLayout();
       
-      setTimeout(() => {
-        if (reactFlowInstance) {
-          const visibleNodes = reactFlowInstance.getNodes();
+      // Check arrangement success immediately without delay for better performance
+      if (reactFlowInstance) {
+        const visibleNodes = reactFlowInstance.getNodes();
+        
+        console.log(`After arrangement: Found ${visibleNodes.length} visible nodes, expected ${nodes.length}`);
+        
+        // Check if arrangement was successful
+        if (visibleNodes.length === 0 && nodesBackup.length > 0) {
+          console.error('Nodes disappeared after arrangement, restoring from backup');
+          toast.error('Layout issue detected: Restoring nodes');
           
-          console.log(`After arrangement: Found ${visibleNodes.length} visible nodes, expected ${nodes.length}`);
-          
-          // Check if arrangement was successful
-          if (visibleNodes.length === 0 && nodesBackup.length > 0) {
-            console.error('Nodes disappeared after arrangement, restoring from backup');
-            toast.error('Layout issue detected: Restoring nodes');
-            
-            // Restore from backup
-            setNodes(nodesBackup);
-            setEdges(edgesBackup);
-          } else {
-            toast.success(`Successfully arranged ${visibleNodes.length} nodes in balanced hierarchical tree layout`);
-          }
+          // Restore from backup
+          setNodes(nodesBackup);
+          setEdges(edgesBackup);
+        } else {
+          toast.success(`Successfully arranged ${visibleNodes.length} nodes in balanced hierarchical tree layout`);
         }
-      }, 300);
+      }
     } catch (error) {
       console.error('Error in layout arrangement:', error);
       toast.error('Failed to arrange layout: Restoring previous arrangement');

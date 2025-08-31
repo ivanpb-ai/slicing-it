@@ -19,10 +19,8 @@ export function useFlowEvents() {
       console.log('Graph loaded event received, handling...');
       handleGraphLoaded(reactFlowInstance);
       
-      // Reset the flag after a delay
-      setTimeout(() => {
-        isProcessingRef.current = false;
-      }, 1000);
+      // Reset immediately for better performance
+      isProcessingRef.current = false;
     };
     
     const canvasClearedHandler = () => {
@@ -32,10 +30,8 @@ export function useFlowEvents() {
       console.log('Canvas cleared event received, handling...');
       handleCanvasCleared(reactFlowInstance);
       
-      // Reset the flag after a delay
-      setTimeout(() => {
-        isProcessingRef.current = false;
-      }, 1000);
+      // Reset immediately for better performance  
+      isProcessingRef.current = false;
     };
     
     // Handler for when a new node is added - lightweight

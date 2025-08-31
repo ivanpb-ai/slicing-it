@@ -36,15 +36,22 @@ export const useCanvasOperations = (
     ...options.layoutOptions
   };
   
-  // Clear the canvas
+  // Clear the canvas - FORCE immediate clearing
   const clearCanvas = useCallback(() => {
+    console.log('useCanvasOperations: Clear canvas called');
+    
     if (nodes.length === 0 && edges.length === 0) {
       toast.info('Canvas is already empty');
       return;
     }
     
+    // Force immediate state clearing
     setNodes([]);
     setEdges([]);
+    
+    // Dispatch clear event
+    window.dispatchEvent(new CustomEvent('canvas-cleared'));
+    
     toast.success('Canvas cleared');
   }, [nodes.length, edges.length, setNodes, setEdges]);
   
@@ -62,33 +69,28 @@ export const useCanvasOperations = (
     setNodes(initialNodes);
     setEdges(initialEdges);
     
-    // Then arrange them after a short delay to ensure they're properly rendered
-    setTimeout(() => {
-      const arrangedNodes = arrangeNodes(
-        initialNodes,
-        initialEdges,
-        {
-          type: 'balanced-tree',
-          spacing: 800,        // Optimal spacing for balanced tree
-          nodeWidth: 180,
-          nodeHeight: 120,
-          marginX: 400,        // Optimized margin for balanced tree
-          marginY: 100,        // Optimized margin for balanced tree
-          preventOverlap: true,
-          edgeShortenFactor: 0.95,
-          horizontalSpacing: 800,  // Horizontal spacing for balanced tree
-          verticalSpacing: 150     // Much shorter for compact edges
-        }
-      );
-      
-      if (arrangedNodes.length > 0) {
-        setNodes(arrangedNodes);
-        toast.success('Canvas initialized with balanced hierarchical tree layout');
-        // Dispatch events for ensuring visibility
-        window.dispatchEvent(new CustomEvent('ensure-nodes-visible'));
-        window.dispatchEvent(new CustomEvent('force-edge-redraw'));
+    // Arrange immediately without delay for better performance
+    const arrangedNodes = arrangeNodes(
+      initialNodes,
+      initialEdges,
+      {
+        type: 'balanced-tree',
+        spacing: 800,        
+        nodeWidth: 180,
+        nodeHeight: 120,
+        marginX: 400,        
+        marginY: 100,        
+        preventOverlap: true,
+        edgeShortenFactor: 0.95,
+        horizontalSpacing: 800,  
+        verticalSpacing: 150     
       }
-    }, 100);
+    );
+    
+    if (arrangedNodes.length > 0) {
+      setNodes(arrangedNodes);
+      toast.success('Canvas initialized with balanced hierarchical tree layout');
+    }
     
   }, [nodes.length, setNodes, setEdges]);
   
@@ -145,10 +147,8 @@ export const useCanvasOperations = (
       
       toast.success('Nodes arranged in balanced hierarchical tree layout');
       
-      // Dispatch event for further processing
-      setTimeout(() => {
-        window.dispatchEvent(new CustomEvent('nodes-arranged'));
-      }, 100);
+      // Dispatch event immediately for better performance
+      window.dispatchEvent(new CustomEvent('nodes-arranged'));
     } catch (error) {
       console.error('Error arranging nodes:', error);
       toast.error('Failed to arrange nodes');

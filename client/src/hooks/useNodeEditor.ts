@@ -121,16 +121,26 @@ export const useNodeEditor = () => {
   }, [nodes, edges]);
 
   const clearCanvas = useCallback(() => {
+    console.log('useNodeEditor: Clear canvas called');
+    
+    // Force immediate clearing - no delays
     setNodes([]);
     setEdges([]);
     resetCounters();
     
+    // Reset viewport immediately
     if (reactFlowInstance) {
       reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+      // Force reactflow to update
+      reactFlowInstance.setNodes([]);
+      reactFlowInstance.setEdges([]);
     }
     
+    // Dispatch clear event
+    window.dispatchEvent(new CustomEvent('canvas-cleared'));
+    
     toast.success('Canvas cleared');
-  }, [reactFlowInstance]);
+  }, [reactFlowInstance, resetCounters]);
 
   // Initialize canvas with hardcoded graph
   const initializeCanvas = useCallback(() => {
@@ -154,32 +164,24 @@ export const useNodeEditor = () => {
         reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
       }
       
-      // Set nodes first
-      setTimeout(() => {
-        setNodes(graphData.nodes || []);
-        
-        // Then set edges with delay to ensure nodes are rendered
-        setTimeout(() => {
-          if (Array.isArray(graphData.edges)) {
-             const validEdges: Edge[] = graphData.edges.map(edge => ({
-                   data: {},      // add missing optional fields if necessary
-                 ...edge,
-      }));
-         setEdges(validEdges);
-      }   else {
-         setEdges([]);
-        }
-
-          
-          // Fit view after loading (unless prevented by manual layout)
-          setTimeout(() => {
-            if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
-              reactFlowInstance.fitView({ padding: 0.2 });
-            }
-            toast.success('Example graph (example) loaded successfully');
-          }, 200);
-        }, 100);
-      }, 50);
+      // Set nodes and edges immediately for better performance
+      setNodes(graphData.nodes || []);
+      
+      if (Array.isArray(graphData.edges)) {
+         const validEdges: Edge[] = graphData.edges.map(edge => ({
+               data: {},      // add missing optional fields if necessary
+             ...edge,
+  }));
+     setEdges(validEdges);
+  }   else {
+     setEdges([]);
+    }
+      
+      // Fit view immediately if not prevented
+      if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
+        reactFlowInstance.fitView({ padding: 0.2 });
+      }
+      toast.success('Example graph (example) loaded successfully');
       
     } catch (error) {
       console.error('Error loading example graph:', error);
