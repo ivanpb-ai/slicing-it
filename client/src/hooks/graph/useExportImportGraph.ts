@@ -478,15 +478,10 @@ export const useExportImportGraph = (
             
             console.log('Processed nodes with types:', processedNodes.map(n => ({ id: n.id, type: n.type, dataType: n.data?.type })));
             
-            // Set nodes both in state AND ReactFlow instance for immediate availability
-            console.log('Setting nodes in state and ReactFlow instance');
+            // Set nodes in React state - ReactFlow will sync automatically
+            console.log('Setting nodes in React state');
             console.log('ReactFlow instance available:', !!reactFlowInstance);
             setNodes(processedNodes);
-            if (reactFlowInstance) {
-              console.log('Updating ReactFlow instance with nodes');
-              reactFlowInstance.setNodes(processedNodes);
-              console.log('ReactFlow instance nodes after update:', reactFlowInstance.getNodes().length);
-            }
             
             // Wait longer for nodes to fully render before setting edges
             setTimeout(() => {
@@ -503,11 +498,6 @@ export const useExportImportGraph = (
               
               console.log('Filtered edges count after duplicate removal:', uniqueEdges.length);
               setEdges(uniqueEdges);
-              if (reactFlowInstance) {
-                console.log('Updating ReactFlow instance with edges');
-                reactFlowInstance.setEdges(uniqueEdges);
-                console.log('ReactFlow instance edges after update:', reactFlowInstance.getEdges().length);
-              }
             }, 300);
             
             // Dispatch event after setting edges
@@ -515,19 +505,21 @@ export const useExportImportGraph = (
               console.log('Dispatching graph-loaded event after import');
               window.dispatchEvent(new CustomEvent('graph-loaded'));
               
-              // Additional fit view with more robust handling
+              // Wait longer for state to propagate to ReactFlow
               if (reactFlowInstance) {
                 setTimeout(() => {
-                  console.log('Fitting view after importing graph (delayed)');
+                  console.log('Checking ReactFlow node synchronization');
+                  const nodes = reactFlowInstance.getNodes();
+                  console.log(`ReactFlow has ${nodes.length} nodes (should be 39)`);
                   
-                  // Force viewport reset first, then fit view
-                  reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 0.5 });
-                  
-                  setTimeout(() => {
-                    const nodes = reactFlowInstance.getNodes();
-                    console.log(`Fitting view for ${nodes.length} imported nodes`);
-                    if (nodes.length > 0) {
-                      console.log('First node position:', nodes[0]?.position);
+                  if (nodes.length > 0) {
+                    console.log('ReactFlow synchronized! Fitting view...');
+                    console.log('First node position:', nodes[0]?.position);
+                    
+                    // Reset viewport first
+                    reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 0.5 });
+                    
+                    setTimeout(() => {
                       reactFlowInstance.fitView({ 
                         padding: 0.1,
                         includeHiddenNodes: true,
@@ -535,9 +527,29 @@ export const useExportImportGraph = (
                         maxZoom: 1.5,
                         duration: 1000
                       });
-                    }
-                  }, 200);
-                }, 500);
+                    }, 200);
+                  } else {
+                    console.log('ReactFlow not synchronized yet, retrying...');
+                    // Retry after more time
+                    setTimeout(() => {
+                      const retryNodes = reactFlowInstance.getNodes();
+                      console.log(`Retry: ReactFlow has ${retryNodes.length} nodes`);
+                      if (retryNodes.length > 0) {
+                        console.log('ReactFlow synchronized on retry! Fitting view...');
+                        reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 0.5 });
+                        setTimeout(() => {
+                          reactFlowInstance.fitView({ 
+                            padding: 0.1,
+                            includeHiddenNodes: true,
+                            minZoom: 0.1,
+                            maxZoom: 1.5,
+                            duration: 1000
+                          });
+                        }, 200);
+                      }
+                    }, 1000);
+                  }
+                }, 800);
               }
             }, 500);
           }, 100);
