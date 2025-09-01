@@ -1,0 +1,42 @@
+NodeEditor: Load triggered
+NodeEditor.tsx:207 Available graphs for loading: 10
+react-dom.development.js:4161 [Violation] 'click' handler took 2475ms
+[Violation] 'click' handler took 2475ms
+SaveLoadMenu.tsx:47 SaveLoadMenu: Import button clicked
+FileImportInput.tsx:52 FileImportInput: Force reset input before dialog
+FileImportInput.tsx:56 FileImportInput: Input reset completed
+FileImportInput.tsx:19 FileImportInput: Processing file: test3exp1_1756669152733.json, type: application/json, size: 27326
+SaveLoadMenu.tsx:60 SaveLoadMenu: File selected for import: test3exp1_1756669152733.json, size: 27326 bytes
+FileImportInput.tsx:52 FileImportInput: Force reset input before dialog
+FileImportInput.tsx:30 FileImportInput: Successfully called onImport handler
+FileImportInput.tsx:56 FileImportInput: Input reset completed
+FileImportInput.tsx:19 FileImportInput: Processing file: test3exp1_1756669152733.json, type: application/json, size: 27326
+NodeEditor.tsx:335 NodeEditor: Import handler called with file: test3exp1_1756669152733.json - delegating to parent import function
+MainContent.tsx:63 MainContent: Import triggered for test3exp1_1756669152733.json
+NodeEditor.tsx:340 NodeEditor: Successfully delegated import to parent function
+FileImportInput.tsx:30 FileImportInput: Successfully called onImport handler
+useExportImportGraph.ts:454 Resetting viewport before importing graph
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
+useExportImportGraph.ts:465 Setting imported nodes: 39
+useExportImportGraph.ts:479 Processed nodes with types: (39) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+useExportImportGraph.ts:482 Setting nodes in React state
+useExportImportGraph.ts:483 ReactFlow instance available: true
+Index.tsx:45 Index component: nodes state updated, count: 39
+Index.tsx:47 Index component: First node: {"id":"network-1756644818254-767","type":"customNode","position":{"x":-12.5,"y":100},"data":{"label":"NetworkMain entry point","type":"network","extractedFromDOM":true,"network":1756644818254}}
+useExportImportGraph.ts:488 Setting imported edges: 40
+useExportImportGraph.ts:491 Using imported edges without auto-generation to prevent spurious connections
+useExportImportGraph.ts:492 Original imported edges count: 40
+useExportImportGraph.ts:499 Filtered edges count after duplicate removal: 40
+Index.tsx:160 MainContentWithGraphOperations: edges updated 40
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 40 edges
+Index.tsx:74 Index component: edges state updated, count: 40
+Index.tsx:76 Index component: First edge: {"id":"unified-network-1756644818254-767-cell-area-1","source":"network-1756644818254-767","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","style":{"stroke":"#2563eb","strokeWidth":3},"data":{"extractedFromDOM":true}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 40 edges
+useExportImportGraph.ts:505 Dispatching graph-loaded event after import
+useExportImportGraph.ts:511 Checking ReactFlow node synchronization
+useExportImportGraph.ts:513 ReactFlow has 0 nodes (should be 39)
+useExportImportGraph.ts:532 ReactFlow not synchronized yet, retrying...
+useExportImportGraph.ts:536 Retry: ReactFlow has 0 nodes

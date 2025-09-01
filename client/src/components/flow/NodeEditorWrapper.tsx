@@ -100,6 +100,15 @@ const NodeEditorWrapper: React.FC<NodeEditorWrapperProps> = ({
     onPaneClick
   );
 
+  // Debug: Log when nodes change to track state propagation
+  React.useEffect(() => {
+    console.log(`NodeEditorWrapper: Nodes changed - count: ${nodes.length}`);
+    console.log(`NodeEditorWrapper: flowEventHandlers.nodes count: ${flowEventHandlers.nodes.length}`);
+    if (nodes.length > 0 && nodes.length !== flowEventHandlers.nodes.length) {
+      console.warn('NodeEditorWrapper: MISMATCH between nodes and flowEventHandlers.nodes!');
+    }
+  }, [nodes.length, flowEventHandlers.nodes.length]);
+
   // Simplified visibility handling - only ensure nodes are visible without viewport changes
   useEffect(() => {
     const forceNodeVisibility = () => {
