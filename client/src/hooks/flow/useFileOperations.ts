@@ -53,10 +53,13 @@ export const useFileOperations = ({
       }
 
       // Reset counters to avoid ID conflicts
+      console.log('useFileOperations: About to reset counters...');
       resetCounters();
+      console.log('useFileOperations: Counters reset, now updating based on imported nodes...');
       
       // Update counters based on imported nodes to prevent ID conflicts
       updateDnnCounter(graphData.nodes);
+      console.log('useFileOperations: Counter update completed');
 
       // Clear existing canvas first
       console.log('useFileOperations: Clearing existing nodes and edges');
