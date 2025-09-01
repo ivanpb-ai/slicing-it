@@ -84,13 +84,6 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
     }
   }, [nodes.length, edges.length]); // Only trigger on length changes, not content changes
 
-  const handleFileImport = () => {
-    if (fileInputRef.current) {
-      // Always reset so the same file can be selected again
-      fileInputRef.current.value = '';
-      fileInputRef.current.click();
-    }
-  };
 
   // Accepts either a graph name or a GraphData object
   const handleLoadGraphData = (graphData: GraphData | string): boolean => {
@@ -169,7 +162,7 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
         onLoad={onLoad}
         onDelete={onDelete}
         onExport={onExport}
-        onImport={handleFileImport}
+        onImport={onImport}
         getSavedGraphs={getSavedGraphs}
         onLoadGraphFromStorage={handleLoadGraphData}
       />
