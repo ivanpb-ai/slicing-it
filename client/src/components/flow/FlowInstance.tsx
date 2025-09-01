@@ -14,7 +14,6 @@ import NodeTypes from './NodeTypes';
 import FlowBackground from './FlowBackground';
 import FlowControls from './FlowControls';
 import EditorPanels from './EditorPanels';
-import FileImportInput from './FileImportInput';
 import { SavedGraph } from '../../hooks/types';
 import type { GraphData } from '../../services/storage/GraphLocalStorageService';
 import type { NodeData } from '../../types/nodeTypes';
@@ -76,8 +75,6 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
   getSavedGraphs,
   onLoadGraphFromStorage,
 }) => {
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
   // Reduced logging to prevent render loop debugging noise  
   useEffect(() => {
     console.log(`FlowInstance: Rendering with ${nodes.length} nodes, ${edges.length} edges`);
@@ -177,7 +174,6 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
         onLoadGraphFromStorage={handleLoadGraphData}
       />
 
-      <FileImportInput onImport={onImport} inputRef={fileInputRef} />
     </ReactFlow>
   );
 };
