@@ -73,9 +73,9 @@ export const updateDnnCounter = (nodes: any[]): void => {
       console.log(`Updated RRP counter to: ${rrpCounter}`);
     }
     
-    // Find the highest Cell Area ID - ensure we get simple sequential numbers
+    // Find the highest Cell Area ID - check both data.cellAreaId and extract from node.id
     const cellAreaNodes = nodes.filter(node => 
-      node.data && node.data.type === 'cell-area' && node.data.cellAreaId !== undefined
+      node.data && node.data.type === 'cell-area'
     );
     
     console.log(`🔍 Found ${cellAreaNodes.length} Cell Area nodes for counter update:`);
@@ -86,13 +86,24 @@ export const updateDnnCounter = (nodes: any[]): void => {
     if (cellAreaNodes.length > 0) {
       // Convert all cell area IDs to numbers and find the highest
       const cellAreaIds = cellAreaNodes.map(node => {
-        const id = node.data.cellAreaId;
-        // Handle both simple numbers and any other formats
-        if (typeof id === 'number') {
-          return id;
-        } else if (typeof id === 'string' && !isNaN(parseInt(id))) {
-          return parseInt(id);
+        // First try to get from data.cellAreaId (newly created nodes)
+        if (node.data.cellAreaId !== undefined) {
+          const id = node.data.cellAreaId;
+          if (typeof id === 'number') {
+            return id;
+          } else if (typeof id === 'string' && !isNaN(parseInt(id))) {
+            return parseInt(id);
+          }
         }
+        
+        // Fallback: extract from node.id for imported nodes (e.g., "cell-area-1" -> 1)
+        if (node.id && typeof node.id === 'string' && node.id.startsWith('cell-area-')) {
+          const idMatch = node.id.match(/cell-area-(\d+)/);
+          if (idMatch && idMatch[1]) {
+            return parseInt(idMatch[1]);
+          }
+        }
+        
         return 1; // Default fallback
       });
       
