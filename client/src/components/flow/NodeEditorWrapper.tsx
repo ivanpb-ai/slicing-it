@@ -201,7 +201,7 @@ const NodeEditorWrapper: React.FC<NodeEditorWrapperProps> = ({
 
   // CRITICAL FIX: Simplified file import that only uses the working handleImport from useFileOperations
   const handleFileImport = useCallback(async (file: File) => {
-    console.log(`🔍 NodeEditorWrapper: Starting file import for ${file.name}, size: ${file.size} bytes`);
+    console.log(`NodeEditorWrapper: Starting file import for ${file.name}, size: ${file.size} bytes`);
     
     if (!file) {
       toast.error("No file selected");
@@ -209,12 +209,11 @@ const NodeEditorWrapper: React.FC<NodeEditorWrapperProps> = ({
     }
     
     try {
-      console.log('🔍 NodeEditorWrapper: About to call handleImport from useFileOperations...');
       // Call handleImport directly - it has the correct setNodes and setEdges
       await handleImport(file);
-      console.log('🔍 NodeEditorWrapper: File import completed successfully');
+      console.log('NodeEditorWrapper: File import completed successfully');
     } catch (error) {
-      console.error('🔍 NodeEditorWrapper: Error during file import:', error);
+      console.error('NodeEditorWrapper: Error during file import:', error);
       toast.error("Error importing file: " + (error?.message || 'Unknown error'));
     }
   }, [handleImport]);

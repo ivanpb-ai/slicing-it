@@ -444,13 +444,10 @@ export const useExportImportGraph = (
           }
           
           // First reset all counters to avoid ID conflicts
-          console.log('🔍 useExportImportGraph: About to reset counters...');
           resetCounters();
-          console.log('🔍 useExportImportGraph: Counters reset, now updating based on imported nodes...');
           
           // Then update counters based on imported nodes
           updateDnnCounter(parsedData.nodes);
-          console.log('🔍 useExportImportGraph: Counter update completed');
           
           // First, reset the viewport
           if (reactFlowInstance) {

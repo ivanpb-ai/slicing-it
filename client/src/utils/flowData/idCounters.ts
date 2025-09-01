@@ -78,10 +78,7 @@ export const updateDnnCounter = (nodes: any[]): void => {
       node.data && node.data.type === 'cell-area'
     );
     
-    console.log(`🔍 Found ${cellAreaNodes.length} Cell Area nodes for counter update:`);
-    cellAreaNodes.forEach(node => {
-      console.log(`🔍 Cell Area node: id=${node.id}, cellAreaId=${node.data.cellAreaId}, type=${typeof node.data.cellAreaId}`);
-    });
+    // Cell Area nodes found for counter update
     
     if (cellAreaNodes.length > 0) {
       // Convert all cell area IDs to numbers and find the highest

@@ -57,10 +57,8 @@ const SaveLoadMenu: React.FC<SaveLoadMenuProps> = ({
 
   // SIMPLIFIED: Direct file handler that just calls onImport
   const handleFileSelected = (file: File) => {
-    console.log(`🔍 SaveLoadMenu: File selected for import: ${file.name}, size: ${file.size} bytes`);
-    console.log('🔍 SaveLoadMenu: About to call onImport...');
+    console.log(`SaveLoadMenu: File selected for import: ${file.name}, size: ${file.size} bytes`);
     onImport(file);
-    console.log('🔍 SaveLoadMenu: onImport call completed');
   };
 
   return (

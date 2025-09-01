@@ -15,16 +15,13 @@ export const useNodeCreation = (setNodes: React.Dispatch<React.SetStateAction<No
     
     // Handle specific node types that need sequential IDs
     if (type === 'cell-area') {
-      console.log('🔍 useNodeCreation: About to create Cell Area node...');
       const cellAreaId = getNextCellAreaId();
-      console.log(`🔍 useNodeCreation: Generated Cell Area ID: ${cellAreaId}`);
       id = `cell-area-${cellAreaId}`;
       extraData = { 
         cellAreaId,
         cellAreaDescription: `TAC ${cellAreaId}`,
         nodeId: id
       };
-      console.log(`🔍 useNodeCreation: Cell Area node data prepared: id=${id}, extraData=`, extraData);
     } else if (type === 'rrp') {
       const rrpId = getNextRrpId();
       id = `rrp-${rrpId}`;
@@ -67,12 +64,7 @@ export const useNodeCreation = (setNodes: React.Dispatch<React.SetStateAction<No
       }
     };
 
-    console.log(`🔍 useNodeCreation: About to add node to state: ${newNode.id}, type: ${type}`);
-    setNodes(prevNodes => {
-      console.log(`🔍 useNodeCreation: Adding node to ${prevNodes.length} existing nodes`);
-      return [...prevNodes, newNode];
-    });
-    console.log(`🔍 useNodeCreation: Node creation completed for ${newNode.id}`);
+    setNodes(prevNodes => [...prevNodes, newNode]);
     return newNode;
   }, [setNodes]);
 
