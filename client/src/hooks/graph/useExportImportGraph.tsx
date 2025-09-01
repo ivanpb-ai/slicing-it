@@ -4,6 +4,7 @@ import { Node, Edge } from '@xyflow/react';
 import { toast } from 'sonner';
 import { GraphPersistenceService } from '@/services/graphPersistenceService';
 import type { GraphData } from '@/services/storage/GraphLocalStorageService';
+import { resetCounters, updateDnnCounter } from '@/utils/flowData/idCounters';
 
 export const useExportImportGraph = (
   nodes?: Node[],
@@ -84,6 +85,13 @@ export const useExportImportGraph = (
       }
       
       console.log(`useExportImportGraph: Successfully imported graph with ${graphData.nodes?.length || 0} nodes and ${graphData.edges?.length || 0} edges`);
+      
+      // Reset and update ID counters to prevent conflicts with imported nodes
+      resetCounters();
+      if (graphData.nodes && Array.isArray(graphData.nodes)) {
+        updateDnnCounter(graphData.nodes);
+      }
+      
       toast.success('Graph imported successfully');
       return graphData;
     } catch (error) {
