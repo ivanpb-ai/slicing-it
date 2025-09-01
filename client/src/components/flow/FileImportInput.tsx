@@ -9,13 +9,27 @@ interface FileImportInputProps {
 const FileImportInput: React.FC<FileImportInputProps> = ({ onImport, inputRef }) => {
   const internalFileInputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = inputRef || internalFileInputRef;
+  const lastProcessedFile = useRef<string>('');
+  const lastProcessedTime = useRef<number>(0);
 
-  // Handle file selection and import - simplified logic
+  // Handle file selection and import - simplified logic with duplicate prevention
 const handleImportGraph = (event: React.ChangeEvent<HTMLInputElement>) => {
   const files = event.target.files;
   if (!files || files.length === 0) return;
   
   const file = files[0];
+  const now = Date.now();
+  const fileKey = `${file.name}-${file.size}-${file.lastModified}`;
+  
+  // Prevent duplicate processing of the same file within 1 second
+  if (lastProcessedFile.current === fileKey && (now - lastProcessedTime.current) < 1000) {
+    console.log('FileImportInput: Duplicate file selection prevented:', file.name);
+    return;
+  }
+  
+  lastProcessedFile.current = fileKey;
+  lastProcessedTime.current = now;
+  
   console.log(`FileImportInput: Processing file: ${file.name}, type: ${file.type}, size: ${file.size}`);
   
   // Validate file type
