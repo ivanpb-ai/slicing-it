@@ -1,0 +1,20 @@
+Generated new Cell Area ID: 3
+useSimpleChildNodeCreation.ts:29 Creating child cell-area with ID: 3
+useSimpleChildNodeCreation.ts:70 Creating child cell-area node with ID: cell-area-3 under parent: network-1756644818254-767
+FlowInstance.tsx:80 FlowInstance: Rendering with 40 nodes, 40 edges
+NodeEditor.tsx:67 NodeEditor: Syncing passed nodes (39) with hook nodes (40)
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-3, type=cell-area, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-3, type=cell-area, nodeNumber=3
+FlowInstance.tsx:80 FlowInstance: Rendering with 39 nodes, 40 edges
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756644818254-767 to cell-area-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-network-1756644818254-767-cell-area-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1756644818254-767-cell-area-3', source: 'network-1756644818254-767', target: 'cell-area-3', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 41
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from network-1756644818254-767 to cell-area-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-network-1756644818254-767-cell-area-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1756644818254-767-cell-area-3', source: 'network-1756644818254-767', target: 'cell-area-3', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge network-1756644818254-767->cell-area-3 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge network-1756644818254-767->cell-area-3 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 39 nodes, 41 edges
+NodeEditor.tsx:74 NodeEditor: Syncing passed edges (40) with hook edges (41)
+FlowInstance.tsx:80 FlowInstance: Rendering with 39 nodes, 40 edges

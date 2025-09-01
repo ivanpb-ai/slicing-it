@@ -61,17 +61,18 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     initializeCanvas
   } = useNodeEditor();
 
-  // CRITICAL FIX: Sync the passed state with the hook state
+  // CRITICAL FIX: Only sync when passed state has MORE items (like after import)
+  // Don't sync when hook state has more items (like after creating new nodes)
   React.useEffect(() => {
-    if (nodes.length !== hookNodes.length) {
-      console.log(`NodeEditor: Syncing passed nodes (${nodes.length}) with hook nodes (${hookNodes.length})`);
+    if (nodes.length > hookNodes.length) {
+      console.log(`NodeEditor: Syncing passed nodes (${nodes.length}) with hook nodes (${hookNodes.length}) - import detected`);
       hookSetNodes(nodes);
     }
   }, [nodes, hookNodes.length, hookSetNodes]);
 
   React.useEffect(() => {
-    if (edges.length !== hookEdges.length) {
-      console.log(`NodeEditor: Syncing passed edges (${edges.length}) with hook edges (${hookEdges.length})`);
+    if (edges.length > hookEdges.length) {
+      console.log(`NodeEditor: Syncing passed edges (${edges.length}) with hook edges (${hookEdges.length}) - import detected`);
       hookSetEdges(edges);
     }
   }, [edges, hookEdges.length, hookSetEdges]);
