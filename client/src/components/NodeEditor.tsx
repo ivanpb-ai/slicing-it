@@ -15,6 +15,10 @@ import { toast } from 'sonner';
 import { EXAMPLE_GRAPH } from '../data/exampleGraph';
 
 interface NodeEditorProps {
+  nodes: any[];
+  edges: any[];
+  setNodes: React.Dispatch<React.SetStateAction<any[]>>;
+  setEdges: React.Dispatch<React.SetStateAction<any[]>>;
   saveGraph: () => boolean;
   loadGraph: () => boolean;
   deleteGraph: (name: string) => boolean;
@@ -24,6 +28,10 @@ interface NodeEditorProps {
 }
 
 const NodeEditorContent: React.FC<NodeEditorProps> = ({
+  nodes,
+  edges,
+  setNodes,
+  setEdges,
   saveGraph,
   loadGraph,
   deleteGraph,
@@ -35,10 +43,10 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   const reactFlowWrapper = useRef<HTMLDivElement>(null);
 
   const {
-    nodes,
-    edges,
-    setNodes,
-    setEdges,
+    nodes: hookNodes,
+    edges: hookEdges,
+    setNodes: hookSetNodes,
+    setEdges: hookSetEdges,
     onNodesChange,
     onEdgesChange,
     onConnect,
@@ -52,6 +60,21 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     clearCanvas,
     initializeCanvas
   } = useNodeEditor();
+
+  // CRITICAL FIX: Sync the passed state with the hook state
+  React.useEffect(() => {
+    if (nodes.length !== hookNodes.length) {
+      console.log(`NodeEditor: Syncing passed nodes (${nodes.length}) with hook nodes (${hookNodes.length})`);
+      hookSetNodes(nodes);
+    }
+  }, [nodes, hookNodes.length, hookSetNodes]);
+
+  React.useEffect(() => {
+    if (edges.length !== hookEdges.length) {
+      console.log(`NodeEditor: Syncing passed edges (${edges.length}) with hook edges (${hookEdges.length})`);
+      hookSetEdges(edges);
+    }
+  }, [edges, hookEdges.length, hookSetEdges]);
   
 
 
@@ -409,8 +432,8 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     <NodeEditorProvider createChildNode={createChildNode} updateNodeData={updateNodeData}>
       <div ref={reactFlowWrapper} className="h-full w-full">
         <FlowInstance
-          nodes={nodes}
-          edges={edges}
+          nodes={hookNodes}
+          edges={hookEdges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
