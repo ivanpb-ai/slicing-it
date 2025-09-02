@@ -1,0 +1,95 @@
+index-BQRwrMC5.js:238 FlowInstance: Rendering with 0 nodes, 0 edges
+index-BQRwrMC5.js:239 MainContentWithGraphOperations: edges updated 0
+index-BQRwrMC5.js:239 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+index-BQRwrMC5.js:239 Index component: nodes state updated, count: 0
+index-BQRwrMC5.js:239 Index component: edges state updated, count: 0
+index-BQRwrMC5.js:238 FlowInstance: ReactFlow initialized
+index-BQRwrMC5.js:238 FlowInstance: Registered ReactFlow instance globally
+index-BQRwrMC5.js:238 NodeEditor: Loading example graph with 10 nodes and 12 edges
+index-BQRwrMC5.js:239 MainContentWithGraphOperations: edges updated 0
+index-BQRwrMC5.js:239 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+index-BQRwrMC5.js:239 Index component: nodes state updated, count: 0
+index-BQRwrMC5.js:239 Index component: edges state updated, count: 0
+index-BQRwrMC5.js:238 NodeEditor: Syncing passed nodes (10) with hook nodes (0) - import detected
+index-BQRwrMC5.js:239 Index component: nodes state updated, count: 10
+index-BQRwrMC5.js:239 Index component: First node: {"id":"network-1750337202178-7623","type":"customNode","position":{"x":586,"y":97.66666412353516},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1750337202178-7623"},"selected":true}
+index-BQRwrMC5.js:238 FlowInstance: Rendering with 10 nodes, 0 edges
+index-BQRwrMC5.js:198 5QI Node rendering with data: {type: 'fiveqi', label: '5QI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+index-BQRwrMC5.js:198 5QI Node fiveQIId: 9
+index-BQRwrMC5.js:198 Looking up 5QI with ID: "9"
+index-BQRwrMC5.js:198 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-BQRwrMC5.js:198 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-BQRwrMC5.js:198 StandardNodeWrapper: id=network-1750337202178-7623, type=network, nodeNumber=7623
+index-BQRwrMC5.js:198 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+index-BQRwrMC5.js:198 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+index-BQRwrMC5.js:198 StandardNodeWrapper: id=rrp-1750337216606-1118, type=rrp, nodeNumber=1118
+index-BQRwrMC5.js:198 StandardNodeWrapper: id=rrpmember-1750337236107-7355, type=rrpmember, nodeNumber=7355
+index-BQRwrMC5.js:198 StandardNodeWrapper: id=rrpmember-1750337242468-2761, type=rrpmember, nodeNumber=2761
+index-BQRwrMC5.js:198 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+index-BQRwrMC5.js:198 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+index-BQRwrMC5.js:198 DNN useEffect dnnCustomName: {dataDnnCustomName: 'telia.test.ns', prevName: 'telia.test.ns', currentLocalState: 'telia.test.ns'}
+index-BQRwrMC5.js:198 DNN useEffect data object changed: {dnnCustomName: 'telia.test.ns', currentCustomName: 'telia.test.ns', nodeId: 'dnn-1'}
+index-BQRwrMC5.js:198 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+index-BQRwrMC5.js:198 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+index-BQRwrMC5.js:238 NodeEditor: Syncing passed edges (12) with hook edges (0) - import detected
+index-BQRwrMC5.js:239 MainContentWithGraphOperations: edges updated 12
+index-BQRwrMC5.js:239 MainContentWithGraphOperations: Updated global debug edges with 12 edges
+index-BQRwrMC5.js:198 Removing orphaned edge cell-area-2-rrp-1750337216606-1119: source=cell-area-1 (exists: true), target=rrp-1750337216606-1119 (exists: false)
+index-BQRwrMC5.js:198 Removing orphaned edge rrp-1750337216606-1118-rrpmember-1750337329538-3864: source=rrp-1750337216606-1118 (exists: true), target=rrpmember-1750337329538-3864 (exists: false)
+index-BQRwrMC5.js:198 Removed 2 orphaned edges
+index-BQRwrMC5.js:239 Automatically removed 2 orphaned edges
+index-BQRwrMC5.js:239 Index component: edges state updated, count: 12
+index-BQRwrMC5.js:239 Index component: First edge: {"id":"network-1750337202178-7623-cell-area-1","source":"network-1750337202178-7623","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+index-BQRwrMC5.js:239 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 12 edges
+index-BQRwrMC5.js:238 FlowInstance: Rendering with 10 nodes, 12 edges
+index-BQRwrMC5.js:239 MainContentWithGraphOperations: edges updated 10
+index-BQRwrMC5.js:239 MainContentWithGraphOperations: Updated global debug edges with 10 edges
+index-BQRwrMC5.js:239 Index component: edges state updated, count: 10
+index-BQRwrMC5.js:239 Index component: First edge: {"id":"network-1750337202178-7623-cell-area-1","source":"network-1750337202178-7623","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+index-BQRwrMC5.js:239 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 10 edges
+index-BQRwrMC5.js:198 useLayoutOperations: Arranging layout for 10 nodes
+index-BQRwrMC5.js:198 Level assignments: {network-1750337202178-7623: {…}, cell-area-1: {…}, rrp-1750337216606-1118: {…}, rrpmember-1750337236107-7355: {…}, s-nssai-2: {…}, …}
+index-BQRwrMC5.js:198 Parent-child relationships: {cell-area-1: Array(1), cell-area-2: Array(1), rrp-1750337216606-1118: Array(1), rrpmember-1750337236107-7355: Array(1), rrpmember-1750337242468-2761: Array(1), …}
+index-BQRwrMC5.js:198 ✓ Single S-NSSAI s-nssai-2 centered under parent at (-70, 1720)
+index-BQRwrMC5.js:198 ✓ Single S-NSSAI s-nssai-1 centered under parent at (130, 1720)
+index-BQRwrMC5.js:198 🎯 Graph centering: minX=-200, maxX=200, width=400, centerOffset=0
+index-BQRwrMC5.js:198 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 10 nodes
+index-BQRwrMC5.js:198 🎯 Final Y spacing used: 180 px
+index-BQRwrMC5.js:198 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+index-BQRwrMC5.js:198 🧹 Cleaned 0 invalid edges
+index-BQRwrMC5.js:198 🧹 Filtered duplicates: 10 -> 10 nodes
+index-BQRwrMC5.js:198 🧹 Updating edges: 10 -> 10 (filtered duplicates)
+index-BQRwrMC5.js:238 FlowInstance: Rendering with 10 nodes, 10 edges
+index-BQRwrMC5.js:198 5QI Node rendering with data: {type: 'fiveqi', label: '5QI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+index-BQRwrMC5.js:198 5QI Node fiveQIId: 9
+index-BQRwrMC5.js:198 Looking up 5QI with ID: "9"
+index-BQRwrMC5.js:198 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-BQRwrMC5.js:198 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+index-BQRwrMC5.js:198 DNN useEffect data object changed: {dnnCustomName: 'telia.test.ns', currentCustomName: 'telia.test.ns', nodeId: 'dnn-1'}
+index-BQRwrMC5.js:198 NodeButton: Started dragging cell-area button
+index-BQRwrMC5.js:198 NodeButton: Set drag data to: cell-area
+index-BQRwrMC5.js:198 useNodeDragDrop: Drag started
+index-BQRwrMC5.js:198 useNodeDragDrop: Drop event triggered
+index-BQRwrMC5.js:198 useNodeDragDrop: Drop event received with data: "cell-area" at position: {x: 96.49381414719662, y: 63.03946919946795}
+index-BQRwrMC5.js:198 parseDragData: Processing drag data: cell-area
+index-BQRwrMC5.js:198 parseDragData: Not JSON format, trying string parsing
+index-BQRwrMC5.js:198 parseDragData: Using simple node type: cell-area
+index-BQRwrMC5.js:198 useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+index-BQRwrMC5.js:198 useNodeDragDrop: Adjusted position to prevent overlap: {x: 396.49381414719664, y: 63.03946919946795}
+index-BQRwrMC5.js:198 useNodeDragDrop: Elements at drop point: 14
+index-BQRwrMC5.js:198 detectParentNodeFromDOM: Checking elements at point: 14
+index-BQRwrMC5.js:198 detectParentNodeFromDOM: Found parent node container with ID: network-1750337202178-7623
+index-BQRwrMC5.js:198 useNodeDragDrop: Detected parent: network-1750337202178-7623
+index-BQRwrMC5.js:198 Validating relationship: network -> cell-area
+index-BQRwrMC5.js:198 Valid relationship confirmed: network -> cell-area
+index-BQRwrMC5.js:198 useNodeDragDrop: Creating child cell-area node under parent network-1750337202178-7623
+index-BQRwrMC5.js:198 useNodeDragDrop: Parent node found: network
+index-BQRwrMC5.js:198 useNodeDragDrop: Child position calculated: {x: -280, y: 600}
+index-BQRwrMC5.js:198 Generated new Cell Area ID: 1
+index-BQRwrMC5.js:198 Creating child cell-area with ID: 1
+index-BQRwrMC5.js:198 Creating child cell-area node with ID: cell-area-1 under parent: network-1750337202178-7623
+index-BQRwrMC5.js:238 FlowInstance: Rendering with 11 nodes, 10 edges
+index-BQRwrMC5.js:198 useSimpleChildNodeCreation: Creating edge from network-1750337202178-7623 to cell-area-1
+index-BQRwrMC5.js:198 UnifiedEdgeManager: Creating edge unified-network-1750337202178-7623-cell-area-1
+index-BQRwrMC5.js:198 UnifiedEdgeManager: Adding edge to state: {id: 'unified-network-1750337202178-7623-cell-area-1', source: 'network-1750337202178-7623', target: 'cell-area-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+index-BQRwrMC5.js:198 UnifiedEdgeManager: Edge network-1750337202178-7623->cell-area-1 already exists

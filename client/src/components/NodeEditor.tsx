@@ -13,6 +13,7 @@ import { GraphNodeProcessor } from '../services/processing/GraphNodeProcessor';
 import { NodeEditorProvider } from '../contexts/NodeEditorContext';
 import { toast } from 'sonner';
 import { EXAMPLE_GRAPH } from '../data/exampleGraph';
+import { resetCounters, updateDnnCounter } from '../utils/flowData/idCounters';
 
 interface NodeEditorProps {
   nodes: any[];
@@ -108,6 +109,10 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
 
     try {      
       console.log(`NodeEditor: Loading example graph with ${EXAMPLE_GRAPH.nodes.length} nodes and ${EXAMPLE_GRAPH.edges.length} edges`);
+      
+      // CRITICAL FIX: Reset and update counters to avoid ID conflicts
+      resetCounters();
+      updateDnnCounter(EXAMPLE_GRAPH.nodes);
       
       // Clear existing state first
       setNodes([]);
