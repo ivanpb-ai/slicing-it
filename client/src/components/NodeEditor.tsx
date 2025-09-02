@@ -86,6 +86,10 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       toast.info('Canvas is already empty');
       return;
     }
+    
+    // CRITICAL FIX: Reset ID counters when starting a new graph
+    resetCounters();
+    
     // CRITICAL FIX: Use ReactFlow instance AND update component state
     if (reactFlowInstance) {
       reactFlowInstance.setNodes([]);
