@@ -62,6 +62,8 @@ export const EXAMPLE_GRAPH = {
         "label": "RRP Node",
         "parentId": "cell-area-1",
         "nodeId": "rrp-1750337216606-1118",
+        "rrpId": 1,
+        "rrpName": "RRP 1",
         "rrpPercentage": 100,
         "plmn": "",
         "rrpBands": [
