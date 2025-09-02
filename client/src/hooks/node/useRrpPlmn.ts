@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { NodeData, NodeType } from "../../types/nodeTypes";
 import { XYPosition, useReactFlow } from '@xyflow/react';
+import { useNodeLayoutManager } from './useNodeLayoutManager';
 
 export const useRrpPlmn = (
   data: NodeData,
@@ -11,6 +12,9 @@ export const useRrpPlmn = (
 
   // Get reactFlowInstance at the hook top-level
   const reactFlowInstance = useReactFlow();
+  
+  // Get layout manager for proper positioning
+  const { arrangeNodesInLayout } = useNodeLayoutManager();
 
 
   // Handle change in the PLMN input field
@@ -48,11 +52,17 @@ export const useRrpPlmn = (
             createChildNode('rrpmember', childPosition, data.nodeId, currentValue);
             // Clear the PLMN field after creating child so user can enter another
             setPLMN('');
+            
+            // CRITICAL FIX: Trigger layout to position RRP member correctly below parent
+            setTimeout(() => {
+              console.log('🔧 Triggering layout after RRP member creation');
+              arrangeNodesInLayout();
+            }, 150); // Wait for node to be fully created and edge to be added
           }
         }
       }
     }
-  }, [data.nodeId, createChildNode, reactFlowInstance]);
+  }, [data.nodeId, createChildNode, reactFlowInstance, arrangeNodesInLayout]);
 
   // Enter PLMN edit mode (on click)
   const handlePLMNClick = useCallback(() => {
