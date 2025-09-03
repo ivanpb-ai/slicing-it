@@ -449,14 +449,18 @@ export const useExportImportGraph = (
           // Then update counters based on imported nodes
           updateDnnCounter(parsedData.nodes);
           
-          // First, reset the viewport
+          // CRITICAL FIX: Clear existing graph completely before importing
+          console.log('Clearing existing graph before import');
+          
+          // First, reset the viewport and clear ReactFlow instance state
           if (reactFlowInstance) {
-            console.log('Resetting viewport before importing graph');
+            console.log('Resetting viewport and clearing ReactFlow instance state');
+            reactFlowInstance.setNodes([]);
+            reactFlowInstance.setEdges([]);
             reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
-            // Note: Interactivity is enabled by default
           }
           
-          // Clear existing nodes and edges first
+          // Also clear React component state
           setNodes([]);
           setEdges([]);
           
