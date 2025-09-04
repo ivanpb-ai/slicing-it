@@ -122,15 +122,23 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
     case "fiveqi":
       // Check if this 5QI node is marked as default for special styling
       const isDefault5QI = data.isDefault === true;
-      const fiveQIClassName = isDefault5QI 
-        ? className.replace('border-2', 'border-4 border-purple-600') // Extra thick purple border for default
-        : className;
       
-      return (
-        <div className={fiveQIClassName} style={style}>
-          <FiveQiNode id={id} data={{ ...data, nodeNumber }} />
-        </div>
-      );
+      if (isDefault5QI) {
+        // For default 5QI nodes, add an extra wrapper with thick border
+        return (
+          <div className={className} style={style}>
+            <div className="border-4 border-purple-600 rounded-lg bg-purple-50/50 p-1">
+              <FiveQiNode id={id} data={{ ...data, nodeNumber }} />
+            </div>
+          </div>
+        );
+      } else {
+        return (
+          <div className={className} style={style}>
+            <FiveQiNode id={id} data={{ ...data, nodeNumber }} />
+          </div>
+        );
+      }
     default:
       return (
         <div className={className} style={style}>
