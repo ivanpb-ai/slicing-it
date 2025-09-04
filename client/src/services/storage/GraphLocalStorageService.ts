@@ -111,7 +111,7 @@ export class GraphLocalStorageService {
         return null;
       }
       
-      toast.success(`Graph "${name}" loaded successfully`);
+      toast.success(`Graph "${name}" loaded successfully with ${graphData.nodes?.length || 0} nodes and ${graphData.edges?.length || 0} edges`);
       
       return {
         nodes: graphData.nodes || [],

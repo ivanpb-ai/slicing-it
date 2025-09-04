@@ -343,7 +343,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
           }
         }, 100);
         
-        toast.success(`Graph "${name}" loaded successfully`);
+        toast.success(`Graph "${name}" loaded successfully with ${processedNodes.length} nodes and ${processedEdges.length} edges`);
       }, 200);
       
       return true;

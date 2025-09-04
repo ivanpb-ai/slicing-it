@@ -44,7 +44,7 @@ export class GraphLoadingService {
   // Method to notify when graph is loaded - this was missing
   static notifyGraphLoaded() {
     console.log('Graph loaded successfully');
-    toast.success('Graph loaded successfully');
+    // Note: This is a generic notification. Specific implementations should provide their own detailed notifications.
     
     // Dispatch a custom event to notify other components
     window.dispatchEvent(new CustomEvent('graph-loaded'));

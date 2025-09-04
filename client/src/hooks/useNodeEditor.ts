@@ -163,7 +163,7 @@ export const useNodeEditor = () => {
       if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
         reactFlowInstance.fitView({ padding: 0.2 });
       }
-      toast.success('Example graph (example) loaded successfully');
+      toast.success(`Example graph loaded successfully with ${graphData.nodes?.length || 0} nodes and ${graphData.edges?.length || 0} edges`);
       
     } catch (error) {
       console.error('Error loading example graph:', error);
