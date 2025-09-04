@@ -3,18 +3,26 @@ import { NodeData } from "../../types/nodeTypes";
 import { Badge } from "../../components/ui/badge";
 import { getFiveQIValueById } from "../../utils/flowData/utils/fiveQIUtils";
 import { Handle, Position } from "@xyflow/react";
+import { useNodeEditorContext } from "../../contexts/NodeEditorContext";
 
 
 interface FiveQiNodeProps {
+  id: string;
   data: NodeData;
 }
 
-const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
+const FiveQiNode = memo(({ id, data }: FiveQiNodeProps) => {
   // Use state to track the actual QoS values we should display
   const [qosValues, setQosValues] = useState(data.qosValues);
   
+  // Use state to track default checkbox
+  const [isDefault, setIsDefault] = useState(data.isDefault || false);
+  
   // Use ref to track previous fiveQIId to prevent unnecessary updates
   const previousFiveQIIdRef = useRef(data.fiveQIId);
+  
+  // Get node editor context for updating node data
+  const { updateNodeData } = useNodeEditorContext();
   
   // Extract fiveQIId correctly - always ensure it's a string
   const fiveQIId = data.fiveQIId ? String(data.fiveQIId) : undefined;
@@ -28,7 +36,7 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
     if (fiveQIId === previousFiveQIIdRef.current) return;
     
     // Update the ref
-    previousFiveQIIdRef.current = fiveQIId;
+    previousFiveQIIdRef.current = fiveQIId as any;
     
     if (fiveQIId) {
       console.log("FiveQiNode: Loading QoS values for ID:", fiveQIId);
@@ -47,7 +55,7 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
         // Even if we couldn't find values in the function, make one more direct attempt
         try {
           const { fiveQIValues } = require('@/utils/flowData/data/fiveQIData');
-          const directMatch = fiveQIValues.find(q => String(q.value) === String(fiveQIId));
+          const directMatch = fiveQIValues.find((q: any) => String(q.value) === String(fiveQIId));
           
           if (directMatch) {
             const valuesCopy = JSON.parse(JSON.stringify(directMatch));
@@ -61,6 +69,14 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
       }
     }
   }, [fiveQIId, data]);
+  
+  // Handle default checkbox change
+  const handleDefaultChange = (checked: boolean) => {
+    setIsDefault(checked);
+    if (updateNodeData && id) {
+      updateNodeData(id, { ...data, isDefault: checked });
+    }
+  };
   
   // If we still don't have values, try one more approach - direct access to data
   const displayValues = qosValues || 
@@ -131,6 +147,19 @@ const FiveQiNode = memo(({ data }: FiveQiNodeProps) => {
           <span className="font-semibold text-purple-800">Delay:</span>
           <span className="text-gray-800">{displayValues.packetDelay}</span>
         </div>
+      </div>
+      
+      {/* Default checkbox */}
+      <div className="mt-3 flex items-center justify-center">
+        <label className="flex items-center space-x-2 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={isDefault}
+            onChange={(e) => handleDefaultChange(e.target.checked)}
+            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 focus:ring-2"
+          />
+          <span className="text-sm font-medium text-purple-800">Default</span>
+        </label>
       </div>
 
           </div>
