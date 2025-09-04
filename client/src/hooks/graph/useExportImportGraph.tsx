@@ -92,7 +92,7 @@ export const useExportImportGraph = (
         updateDnnCounter(graphData.nodes);
       }
       
-      toast.success('Graph imported successfully');
+      toast.success(`Graph imported successfully with ${graphData.nodes?.length || 0} nodes and ${graphData.edges?.length || 0} edges`);
       return graphData;
     } catch (error) {
       console.error('Error importing graph:', error);

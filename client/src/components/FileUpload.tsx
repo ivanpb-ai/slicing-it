@@ -92,7 +92,7 @@ const FileUpload = ({ onFileLoad }: FileUploadProps) => {
         // Check if this is likely a graph file (has nodes and edges)
         if (jsonData.nodes && jsonData.edges) {
           onFileLoad(jsonData);
-          toast.success('Graph loaded successfully');
+          toast.success(`Graph loaded successfully with ${jsonData.nodes.length} nodes and ${jsonData.edges.length} edges`);
         } else {
           toast.error('Invalid graph file format');
         }

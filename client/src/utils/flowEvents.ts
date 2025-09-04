@@ -132,9 +132,9 @@ export const initializeCanvasWithNodes = (
       setNodes(processedNodes);
       setEdges(clonedEdges);
       
-      // Only show toast if we haven't already shown one for this load operation
+      // Only show toast if we haven't already shown one for this load operation and we have node count info
       if (!graphLoadToastShown) {
-        toast.success('Graph loaded successfully');
+        toast.success(`Graph loaded successfully with ${processedNodes.length} nodes and ${clonedEdges.length} edges`);
         graphLoadToastShown = true;
       }
       
