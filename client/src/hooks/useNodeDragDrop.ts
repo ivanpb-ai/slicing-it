@@ -134,7 +134,7 @@ export const useNodeDragDrop = (
               );
               console.log(`useNodeDragDrop: Positioning 5QI node below DNN at:`, childPosition);
               createChildNode(nodeType, childPosition, parentId, fiveQIId);
-              toast.success(`Added 5QI ${fiveQIId || ''} node as child of DNN node`);
+              toast.success(`Added 5QI ${fiveQIId || 'node'} as child of DNN node`);
             } else {
               // Position other child nodes with standard offset
               const childPosition = findNonOverlappingPosition(
