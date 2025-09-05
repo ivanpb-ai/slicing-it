@@ -82,7 +82,13 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
 
   // Create custom clear and initialize functions that use the correct state setters
   const handleClearCanvas = useCallback(() => {
-    if (nodes.length === 0) {
+    // Check actual current nodes from ReactFlow instance or hookNodes
+    const currentNodes = reactFlowInstance?.getNodes() || hookNodes;
+    const currentEdges = reactFlowInstance?.getEdges() || hookEdges;
+    
+    console.log('Clear canvas check - current nodes:', currentNodes.length, 'current edges:', currentEdges.length);
+    
+    if (currentNodes.length === 0 && currentEdges.length === 0) {
       toast.info('Canvas is already empty');
       return;
     }
