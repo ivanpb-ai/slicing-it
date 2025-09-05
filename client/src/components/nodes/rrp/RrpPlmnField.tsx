@@ -28,7 +28,7 @@ export const RrpPlmnField = memo(({
         onChange={onChange}
         onBlur={onBlur}
         placeholder={placeholder}
-        className="text-xs p-1 w-full border border-gray-300 rounded text-center mt-1"
+        className="text-sm p-2 w-full border border-gray-300 rounded text-center mt-1"
         autoFocus
       />
     );
