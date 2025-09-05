@@ -349,8 +349,17 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
           }
         }, 100);
         
-        // Toast is handled by flowEvents.ts to avoid duplicates
-        console.log(`Graph "${name}" loaded successfully with ${processedNodes.length} nodes and ${processedEdges.length} edges`);
+        // Show toast with proper styling
+        toast.success(`Graph "${name}" loaded successfully with ${processedNodes.length} nodes and ${processedEdges.length} edges`, {
+          style: {
+            color: '#000000 !important',
+            backgroundColor: '#ffffff !important',
+            border: '1px solid #e0e0e0 !important',
+            fontSize: '14px !important',
+            fontWeight: '500 !important'
+          },
+          className: 'custom-success-toast'
+        });
       }, 200);
       
       return true;
