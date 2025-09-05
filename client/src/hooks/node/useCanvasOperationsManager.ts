@@ -15,31 +15,33 @@ export const useCanvasOperationsManager = (
   const clearCanvas = useCallback(() => {
     console.log('useCanvasOperationsManager: Clear canvas called');
     
-    if (nodes.length === 0) {
-      toast.info('Canvas is already empty');
-      return;
+    // Always try to clear regardless of current nodes length to ensure state consistency
+    console.log('Current nodes count:', nodes.length);
+    
+    // Force ReactFlow to clear its internal state first
+    if (reactFlowInstance) {
+      console.log('Clearing ReactFlow instance state');
+      reactFlowInstance.setNodes([]);
+      reactFlowInstance.setEdges([]);
+      reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+    } else {
+      console.warn('ReactFlow instance not available');
     }
     
-    // CRITICAL: Complete state clearing
+    // Then clear component state
+    console.log('Clearing component state');
     setNodes([]);
     setEdges([]);
     
     // Reset all counters
     resetCounters();
     
-    // Force ReactFlow to clear its internal state
-    if (reactFlowInstance) {
-      reactFlowInstance.setNodes([]);
-      reactFlowInstance.setEdges([]);
-      reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
-    }
-    
     // Dispatch events
     window.dispatchEvent(new CustomEvent('canvas-cleared'));
     
     console.log('useCanvasOperationsManager: Canvas cleared successfully');
     toast.success('Canvas cleared');
-  }, [nodes.length, setNodes, setEdges, reactFlowInstance]);
+  }, [nodes, setNodes, setEdges, reactFlowInstance]);
 
   const initializeCanvas = useCallback(() => {
     if (nodes.length > 0) {
