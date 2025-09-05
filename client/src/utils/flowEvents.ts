@@ -141,10 +141,13 @@ export const initializeCanvasWithNodes = (
       if (!graphLoadToastShown) {
         toast.success(`Graph loaded successfully with ${processedNodes.length} nodes and ${clonedEdges.length} edges`, {
           style: {
-            color: '#000000',
-            backgroundColor: '#ffffff',
-            border: '1px solid #e0e0e0'
-          }
+            color: '#000000 !important',
+            backgroundColor: '#ffffff !important',
+            border: '1px solid #e0e0e0 !important',
+            fontSize: '14px !important',
+            fontWeight: '500 !important'
+          },
+          className: 'custom-success-toast'
         });
         graphLoadToastShown = true;
       }

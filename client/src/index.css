@@ -35,6 +35,20 @@ body {
   @apply bg-background text-foreground;
 }
 
+/* Custom toast styling to ensure visibility */
+.custom-success-toast {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #e0e0e0 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.custom-success-toast * {
+  color: #000000 !important;
+}
+
 .react-flow {
   overflow: auto !important;
 }
