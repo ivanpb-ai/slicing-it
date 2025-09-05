@@ -531,8 +531,17 @@ export const useExportImportGraph = (
             }, 500);
           }, 100);
           
-          // Toast is handled by flowEvents.ts to avoid duplicates
-          console.log(`Graph imported successfully with ${parsedData.nodes.length} nodes and ${parsedData.edges.length} edges`);
+          // Show import success toast with proper styling
+          toast.success(`Graph imported successfully with ${parsedData.nodes.length} nodes and ${parsedData.edges.length} edges`, {
+            style: {
+              color: '#000000 !important',
+              backgroundColor: '#ffffff !important',
+              border: '1px solid #e0e0e0 !important',
+              fontSize: '14px !important',
+              fontWeight: '500 !important'
+            },
+            className: 'custom-success-toast'
+          });
         } catch (error) {
           console.error('Error importing graph:', error);
           toast.error('Failed to import graph', {

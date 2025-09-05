@@ -92,8 +92,17 @@ const FileUpload = ({ onFileLoad }: FileUploadProps) => {
         // Check if this is likely a graph file (has nodes and edges)
         if (jsonData.nodes && jsonData.edges) {
           onFileLoad(jsonData);
-          // Toast is handled by flowEvents.ts to avoid duplicates
-          console.log(`Graph loaded successfully with ${jsonData.nodes.length} nodes and ${jsonData.edges.length} edges`);
+          // Show file upload success toast with proper styling
+          toast.success(`Graph loaded successfully with ${jsonData.nodes.length} nodes and ${jsonData.edges.length} edges`, {
+            style: {
+              color: '#000000 !important',
+              backgroundColor: '#ffffff !important',
+              border: '1px solid #e0e0e0 !important',
+              fontSize: '14px !important',
+              fontWeight: '500 !important'
+            },
+            className: 'custom-success-toast'
+          });
         } else {
           toast.error('Invalid graph file format');
         }
