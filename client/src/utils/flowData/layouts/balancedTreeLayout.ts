@@ -69,7 +69,11 @@ export const arrangeNodesInBalancedTree = (
   const allParentsMap: Record<string, string[]> = {};
   const primaryParentMap: Record<string, string> = {};
   
+  console.log('🔍 Processing edges for layout:', validEdges.length, 'valid edges');
+  
   validEdges.forEach(edge => {
+    console.log(`🔗 Processing edge: ${edge.source} -> ${edge.target}`);
+    
     // Track all children
     if (!childrenMap[edge.source]) {
       childrenMap[edge.source] = [];

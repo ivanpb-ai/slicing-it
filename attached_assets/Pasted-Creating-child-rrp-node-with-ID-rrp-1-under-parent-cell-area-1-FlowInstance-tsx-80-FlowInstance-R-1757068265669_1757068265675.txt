@@ -1,0 +1,38 @@
+Creating child rrp node with ID: rrp-1 under parent: cell-area-1
+FlowInstance.tsx:80 FlowInstance: Rendering with 3 nodes, 1 edges
+FlowInstance.tsx:83 FlowInstance: First node: {id: 'network-1757068202024-3431', type: 'customNode', position: {…}, data: {…}, measured: {…}}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-cell-area-1-rrp-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-cell-area-1-rrp-1', source: 'cell-area-1', target: 'rrp-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 2
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-cell-area-1-rrp-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-cell-area-1-rrp-1', source: 'cell-area-1', target: 'rrp-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge cell-area-1->rrp-1 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge cell-area-1->rrp-1 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 3 nodes, 2 edges
+FlowInstance.tsx:83 FlowInstance: First node: {id: 'network-1757068202024-3431', type: 'customNode', position: {…}, data: {…}, measured: {…}}
+useRrpPlmn.ts:40 Creating RRP member child for parent rrp-1 with PLMN: akjdksdk
+useRrpPlmn.ts:49 ✅ PLMN: Creating RRP-member (layout will position it properly) {x: -102, y: 311.6666564941406}
+useSimpleChildNodeCreation.ts:62 Creating RRPmember child with PLMN: akjdksdk
+useSimpleChildNodeCreation.ts:70 Creating child rrpmember node with ID: rrpmember-1757068214400-7564 under parent: rrp-1
+useSimpleChildNodeCreation.ts:85 ✅ Creating RRPmember (balanced tree layout will position it) {x: -102, y: 311.6666564941406}
+FlowInstance.tsx:80 FlowInstance: Rendering with 4 nodes, 2 edges
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757068214400-7564, type=rrpmember, nodeNumber=7564
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757068214400-7564, type=rrpmember, nodeNumber=7564
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrp-1 to rrpmember-1757068214400-7564
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrp-1-rrpmember-1757068214400-7564
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrp-1-rrpmember-1757068214400-7564', source: 'rrp-1', target: 'rrpmember-1757068214400-7564', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 3
+FlowInstance.tsx:80 FlowInstance: Rendering with 4 nodes, 3 edges
+useRrpPlmn.ts:58 🔧 Triggering layout after RRP member creation
+balancedTreeLayout.ts:142 Level assignments: {network-1757068202024-3431: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1757068214400-7564: {…}}
+balancedTreeLayout.ts:143 Parent-child relationships: {}
+balancedTreeLayout.ts:427 🎯 Graph centering: minX=0, maxX=0, width=0, centerOffset=0
+balancedTreeLayout.ts:441 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 4 nodes
+balancedTreeLayout.ts:442 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:443 🎯 Final calculated positions: (4) [{…}, {…}, {…}, {…}]
+balancedTreeLayout.ts:444 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:71 🧹 Filtered duplicates: 4 -> 4 nodes
