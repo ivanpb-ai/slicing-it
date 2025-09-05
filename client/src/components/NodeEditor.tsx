@@ -349,7 +349,8 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
           }
         }, 100);
         
-        toast.success(`Graph "${name}" loaded successfully with ${processedNodes.length} nodes and ${processedEdges.length} edges`);
+        // Toast is handled by flowEvents.ts to avoid duplicates
+        console.log(`Graph "${name}" loaded successfully with ${processedNodes.length} nodes and ${processedEdges.length} edges`);
       }, 200);
       
       return true;

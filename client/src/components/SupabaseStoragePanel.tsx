@@ -149,7 +149,8 @@ const SupabaseStoragePanel = ({ onFileLoad }: SupabaseStoragePanelProps) => {
       
       if (onFileLoad && graphData) {
         onFileLoad(graphData);
-        toast.success(`Graph loaded successfully with ${graphData.nodes?.length || 0} nodes and ${graphData.edges?.length || 0} edges`);
+        // Toast is handled by flowEvents.ts to avoid duplicates
+        console.log(`Graph loaded successfully with ${graphData.nodes?.length || 0} nodes and ${graphData.edges?.length || 0} edges`);
       }
     } catch (error: any) {
       console.error('Error loading graph from file:', error);

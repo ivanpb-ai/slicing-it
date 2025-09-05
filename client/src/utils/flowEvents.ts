@@ -56,7 +56,7 @@ export const handleGraphLoaded = debounce((reactFlowInstance: ReactFlowInstance)
     setTimeout(() => {
       graphLoadToastShown = false;
       isProcessingEvent = false;
-    }, 1000);
+    }, 2000); // Longer delay to prevent immediate re-triggering
   }, 300);
 }, 500);
 
