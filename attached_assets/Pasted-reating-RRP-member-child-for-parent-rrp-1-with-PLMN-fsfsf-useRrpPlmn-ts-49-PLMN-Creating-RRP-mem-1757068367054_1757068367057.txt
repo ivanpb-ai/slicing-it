@@ -1,0 +1,23 @@
+reating RRP member child for parent rrp-1 with PLMN: fsfsf
+useRrpPlmn.ts:49 ✅ PLMN: Creating RRP-member (layout will position it properly) {x: -202, y: 251.66665649414062}
+useSimpleChildNodeCreation.ts:62 Creating RRPmember child with PLMN: fsfsf
+useSimpleChildNodeCreation.ts:70 Creating child rrpmember node with ID: rrpmember-1757068329516-8338 under parent: rrp-1
+useSimpleChildNodeCreation.ts:85 ✅ Creating RRPmember (balanced tree layout will position it) {x: -202, y: 251.66665649414062}
+FlowInstance.tsx:80 FlowInstance: Rendering with 4 nodes, 2 edges
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757068329516-8338, type=rrpmember, nodeNumber=8338
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757068329516-8338, type=rrpmember, nodeNumber=8338
+useSimpleChildNodeCreation.ts:106 useSimpleChildNodeCreation: Creating edge from rrp-1 to rrpmember-1757068329516-8338
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrp-1-rrpmember-1757068329516-8338
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrp-1-rrpmember-1757068329516-8338', source: 'rrp-1', target: 'rrpmember-1757068329516-8338', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 3
+FlowInstance.tsx:80 FlowInstance: Rendering with 4 nodes, 3 edges
+useRrpPlmn.ts:58 🔧 Triggering layout after RRP member creation
+balancedTreeLayout.ts:72 🔍 Processing edges for layout: 0 valid edges
+balancedTreeLayout.ts:146 Level assignments: {network-1757068315749-4331: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1757068329516-8338: {…}}
+balancedTreeLayout.ts:147 Parent-child relationships: {}
+balancedTreeLayout.ts:431 🎯 Graph centering: minX=0, maxX=0, width=0, centerOffset=0
+balancedTreeLayout.ts:445 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 4 nodes
+balancedTreeLayout.ts:446 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:447 🎯 Final calculated positions: (4) [{…}, {…}, {…}, {…}]
+balancedTreeLayout.ts:448 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:71 🧹 Filtered duplicates: 4 -> 4 nodes
