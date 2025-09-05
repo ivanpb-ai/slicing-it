@@ -13,6 +13,11 @@ const debounce = (func: Function, wait: number) => {
 
 // Track if we've already shown a success toast for the current operation
 let graphLoadToastShown = false;
+
+// Function to reset the toast flag when starting a new operation
+export const resetGraphLoadToast = () => {
+  graphLoadToastShown = false;
+};
 // Flag to prevent multiple event processing
 let isProcessingEvent = false;
 
@@ -134,7 +139,13 @@ export const initializeCanvasWithNodes = (
       
       // Only show toast if we haven't already shown one for this load operation and we have node count info
       if (!graphLoadToastShown) {
-        toast.success(`Graph loaded successfully with ${processedNodes.length} nodes and ${clonedEdges.length} edges`);
+        toast.success(`Graph loaded successfully with ${processedNodes.length} nodes and ${clonedEdges.length} edges`, {
+          style: {
+            color: '#000000',
+            backgroundColor: '#ffffff',
+            border: '1px solid #e0e0e0'
+          }
+        });
         graphLoadToastShown = true;
       }
       

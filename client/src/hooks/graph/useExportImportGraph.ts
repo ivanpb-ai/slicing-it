@@ -531,7 +531,8 @@ export const useExportImportGraph = (
             }, 500);
           }, 100);
           
-          toast.success(`Graph imported successfully with ${parsedData.nodes.length} nodes and ${parsedData.edges.length} edges`);
+          // Toast is handled by flowEvents.ts to avoid duplicates
+          console.log(`Graph imported successfully with ${parsedData.nodes.length} nodes and ${parsedData.edges.length} edges`);
         } catch (error) {
           console.error('Error importing graph:', error);
           toast.error('Failed to import graph', {

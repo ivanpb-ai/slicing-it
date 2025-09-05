@@ -96,7 +96,8 @@ export const useLoadGraph = (
         }, 500); // Increased delay to ensure nodes are fully rendered
         
         // Show success toast
-        toast.success(`Graph loaded successfully with ${processedNodes.length} nodes and ${processedEdges.length} edges`);
+        // Toast is handled by flowEvents.ts to avoid duplicates
+        console.log(`Graph loaded successfully with ${processedNodes.length} nodes and ${processedEdges.length} edges`);
         
         return true;
       } catch (error) {
