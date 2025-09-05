@@ -28,7 +28,13 @@ export const arrangeNodesInBalancedTree = (
   edges: Edge[],
   options: BalancedTreeOptions = {}
 ): { nodes: Node[], cleanedEdges: Edge[] } => {
-  if (nodes.length === 0) return { nodes, cleanedEdges: edges };
+  if (nodes.length === 0) return { nodes, cleanedEdges: edges || [] };
+  
+  // Safety check: ensure edges is defined
+  if (!edges) {
+    console.warn('arrangeNodesInBalancedTree: edges parameter is undefined, using empty array');
+    edges = [];
+  }
 
   const {
     nodeWidth = 180,
