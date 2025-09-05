@@ -27,7 +27,7 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
       // Only set default if no saved data exists
       const newDescription = "Cell Area Description";
       setCellDescription(newDescription);
-      updateNodeData(data.nodeId, { ...data, cellAreaDescription: newDescription });
+      updateNodeData(data.nodeId || '', { ...data, cellAreaDescription: newDescription });
     }
   }, [data.cellAreaDescription]);
 
@@ -35,7 +35,7 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
   useEffect(() => {
     // Store node ID reference
     if (data.nodeId) {
-      data.id = data.nodeId;
+      data.id = data.nodeId || '';
     }
     
     // Simple visibility check
@@ -57,7 +57,7 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
   const handleDescriptionChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
     setCellDescription(newValue);
-    updateNodeData(data.nodeId, { ...data, cellAreaDescription: newValue });
+    updateNodeData(data.nodeId || '', { ...data, cellAreaDescription: newValue });
   }, [data, updateNodeData]);
 
   const handleDescriptionBlur = useCallback(() => {
@@ -71,7 +71,7 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
   const handleNotesChange = useCallback((e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newValue = e.target.value;
     setNotes(newValue);
-    updateNodeData(data.nodeId, { ...data, notes: newValue });
+    updateNodeData(data.nodeId || '', { ...data, notes: newValue });
   }, [data, updateNodeData]);
 
   // Format the cell area ID properly - ensure it shows a number
@@ -103,9 +103,9 @@ const CellAreaNode = memo(({ data }: CellAreaNodeProps) => {
     
       <div className="cell-area-content">
 
-      {/* Header - Shows "TAC #" with the cellAreaId */}
+      {/* Header - Shows "Cell Area #" with the cellAreaId */}
       <div className="w-full bg-blue-100 border-b border-blue-200 px-2 py-1 mb-2 rounded-t">
-        <div className="text-sm font-semibold text-blue-800 text-center">TAC #{displayId}</div>
+        <div className="text-sm font-semibold text-blue-800 text-center">Cell Area #{displayId}</div>
       </div>
 
       {isEditingDescription ? (

@@ -12,11 +12,11 @@ export const createInitialCellAreaNode = (): Node => {
     type: 'customNode',
     position: { x: 150, y: 200 },
     data: {
-      label: `TAC #${cellAreaId}`,
+      label: `Cell Area #${cellAreaId}`,
       type: 'cell-area',
-      description: `TAC ${cellAreaId}`,
+      description: `Cell Area ${cellAreaId}`,
       cellAreaId: cellAreaId,
-      cellAreaDescription: `TAC ${cellAreaId}`,
+      cellAreaDescription: `Cell Area ${cellAreaId}`,
       nodeId: `cell-area-${cellAreaId}`,
     },
   };

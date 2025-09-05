@@ -27,7 +27,7 @@ export const EXAMPLE_GRAPH = {
         "parentId": "network-1750337202178-7623",
         "nodeId": "cell-area-1",
         "cellAreaId": 1,
-        "cellAreaDescription": "TAC 1",
+        "cellAreaDescription": "Cell Area 1",
         "id": "cell-area-1"
       },
       "selected": false
@@ -45,7 +45,7 @@ export const EXAMPLE_GRAPH = {
         "parentId": "network-1750337202178-7623",
         "nodeId": "cell-area-2",
         "cellAreaId": 2,
-        "cellAreaDescription": "TAC 2",
+        "cellAreaDescription": "Cell Area 2",
         "id": "cell-area-2"
       },
       "selected": false
