@@ -68,6 +68,15 @@ export const useSimpleChildNodeCreation = (
     }
 
     console.log(`Creating child ${type} node with ID: ${id} under parent: ${parentId}`);
+    
+    // Trigger tooltip for cell-area nodes
+    if (type === 'cell-area') {
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('show-cell-area-tooltip', {
+          detail: { position }
+        }));
+      }, 100);
+    }
 
     // Calculate position based on node type and parent
     let childPosition = position;
