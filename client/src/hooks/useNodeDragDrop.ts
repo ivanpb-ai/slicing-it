@@ -135,6 +135,54 @@ export const useNodeDragDrop = (
               console.log(`useNodeDragDrop: Positioning 5QI node below DNN at:`, childPosition);
               createChildNode(nodeType, childPosition, parentId, fiveQIId);
               toast.success(`Added 5QI ${fiveQIId || 'node'} as child of DNN node`);
+            } 
+            // Special positioning for DNN nodes under S-NSSAI nodes
+            else if (nodeType === 'dnn' && parentNode.data?.type === 's-nssai') {
+              // Find existing DNN children of this S-NSSAI parent
+              const existingDnnChildren = existingNodes.filter(node => 
+                node.data?.parentId === parentId && node.data?.type === 'dnn'
+              );
+              
+              const spacing = 180; // Spacing between DNN nodes
+              const totalNodes = existingDnnChildren.length + 1; // Include the new node
+              
+              // Calculate starting position to center all nodes around parent
+              const totalWidth = (totalNodes - 1) * spacing;
+              const startX = parentNode.position.x - (totalWidth / 2);
+              
+              // Position the new node at the end of the sequence
+              const childPosition = {
+                x: startX + (existingDnnChildren.length * spacing),
+                y: parentNode.position.y + 200  // Position vertically below with spacing
+              };
+              
+              console.log(`useNodeDragDrop: Positioning DNN node #${totalNodes} at:`, childPosition, `(${existingDnnChildren.length} existing siblings)`);
+              
+              // Create the new DNN node first
+              createChildNode(nodeType, childPosition, parentId, fiveQIId);
+              
+              // IMPORTANT: Reposition existing DNN siblings to maintain symmetry
+              // Use setNodes to update positions of existing siblings
+              setTimeout(() => {
+                existingDnnChildren.forEach((siblingNode, index) => {
+                  const newSiblingX = startX + (index * spacing);
+                  console.log(`useNodeDragDrop: Repositioning DNN sibling #${index + 1} to x=${newSiblingX}`);
+                  
+                  // Update the sibling position directly
+                  siblingNode.position = {
+                    x: newSiblingX,
+                    y: parentNode.position.y + 200
+                  };
+                });
+                
+                // Trigger a re-render by updating nodes
+                if (reactFlowInstance) {
+                  const updatedNodes = reactFlowInstance.getNodes();
+                  reactFlowInstance.setNodes(updatedNodes);
+                }
+              }, 100); // Small delay to ensure the new node is created first
+              
+              toast.success(`Added DNN node as child of S-NSSAI node with proper spacing`);
             } else {
               // Position other child nodes with standard offset
               const childPosition = findNonOverlappingPosition(
