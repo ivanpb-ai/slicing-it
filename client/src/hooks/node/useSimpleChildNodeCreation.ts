@@ -130,7 +130,7 @@ export const useSimpleChildNodeCreation = (
           x: startX + (nodeIndex * spacing), // Distribute nodes horizontally
           y: parentNode.position.y + 200  // Position vertically below with spacing
         };
-        console.log(`✅ Creating DNN node #${nodeIndex + 1} at position:`, childPosition, `(${nodeIndex} existing siblings)`);
+        console.log(`✅ Creating DNN node #${nodeIndex + 1} positioned below S-NSSAI parent:`, childPosition);
       }
       
       const newNode: Node = {

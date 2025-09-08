@@ -261,16 +261,41 @@ export const arrangeNodesInBalancedTree = (
             const isFiveQiNode = nodeId.includes('fiveqi-');
             
             if (isDnnNode && level === dnnLevel) {
-              // SPECIAL CASE: Position ALL DNN nodes with consistent spacing across the entire level
-              const nodeIndex = allDnnNodes.indexOf(nodeId);
-              const dnnSpacing = 400; // Increased spacing for DNN nodes to prevent overlap
-              const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
-              const startX = 0 - totalDnnWidth / 2; // Center around X=0
-              const x = startX + nodeIndex * dnnSpacing;
+              // SPECIAL CASE: Position DNN nodes grouped by their S-NSSAI parent
+              const parentIds = allParentsMap[nodeId] || [];
+              const parentId = parentIds[0]; // Get first parent (S-NSSAI node)
               
-              const position = { x, y };
-              positionedNodes.push({ id: nodeId, position });
-              nodePositionMap[nodeId] = position;
+              if (parentId && nodePositionMap[parentId]) {
+                // Get all DNN siblings (nodes with same S-NSSAI parent)
+                const siblings = allDnnNodes.filter(dnnId => {
+                  const dnnParents = allParentsMap[dnnId] || [];
+                  return dnnParents.includes(parentId);
+                });
+                const siblingIndex = siblings.indexOf(nodeId);
+                const totalSiblings = siblings.length;
+                
+                // Calculate position relative to S-NSSAI parent
+                const parentX = nodePositionMap[parentId].x;
+                const dnnSpacing = 180; // Spacing between DNN siblings
+                const totalWidth = (totalSiblings - 1) * dnnSpacing;
+                const startX = parentX - totalWidth / 2;
+                const x = startX + siblingIndex * dnnSpacing;
+                
+                const position = { x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+              } else {
+                // Fallback: use original logic for DNN nodes without proper parent
+                const nodeIndex = allDnnNodes.indexOf(nodeId);
+                const dnnSpacing = 400;
+                const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
+                const startX = 0 - totalDnnWidth / 2;
+                const x = startX + nodeIndex * dnnSpacing;
+                
+                const position = { x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+              }
               // DNN node positioned with global spacing
             } else if (isRrpNode && level === rrpLevel) {
               // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
