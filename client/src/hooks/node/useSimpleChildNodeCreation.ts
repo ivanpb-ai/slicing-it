@@ -117,20 +117,30 @@ export const useSimpleChildNodeCreation = (
           node.data?.parentId === parentId && node.data?.type === 'dnn'
         );
         
-        // Use a wider horizontal spacing and center the nodes around the parent
-        const nodeIndex = existingDnnChildren.length;
-        const nodeWidth = 120; // Estimated DNN node width
-        const spacing = 180; // Increased spacing between nodes
+        const spacing = 180; // Spacing between DNN nodes
+        const totalNodes = existingDnnChildren.length + 1; // Include the new node
         
-        // Calculate starting position to center multiple nodes around parent
-        const totalWidth = (nodeIndex + 1) * spacing;
-        const startX = parentNode.position.x - (totalWidth / 2) + (spacing / 2);
+        // Calculate starting position to center all nodes around parent
+        const totalWidth = (totalNodes - 1) * spacing;
+        const startX = parentNode.position.x - (totalWidth / 2);
         
+        // Position the new node at the end of the sequence
         childPosition = {
-          x: startX + (nodeIndex * spacing), // Distribute nodes horizontally
+          x: startX + (existingDnnChildren.length * spacing),
           y: parentNode.position.y + 200  // Position vertically below with spacing
         };
-        console.log(`✅ Creating DNN node #${nodeIndex + 1} positioned below S-NSSAI parent:`, childPosition);
+        
+        console.log(`✅ Creating DNN node #${totalNodes} at position:`, childPosition, `(${existingDnnChildren.length} existing siblings)`);
+        
+        // IMPORTANT: Reposition existing DNN siblings to maintain symmetry
+        existingDnnChildren.forEach((siblingNode, index) => {
+          const newSiblingX = startX + (index * spacing);
+          siblingNode.position = {
+            x: newSiblingX,
+            y: parentNode.position.y + 200
+          };
+          console.log(`📍 Repositioned DNN sibling #${index + 1} to x=${newSiblingX}`);
+        });
       }
       
       const newNode: Node = {

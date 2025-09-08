@@ -94,8 +94,8 @@ export const arrangeNodesInBalancedTree = (
   
   // FALLBACK: Use parentId from node data for nodes without edges (handles timing issues)
   nodes.forEach(node => {
-    if (node.data?.parentId && !allParentsMap[node.id]) {
-      const parentId = node.data.parentId;
+    if (node.data?.parentId && typeof node.data.parentId === 'string' && !allParentsMap[node.id]) {
+      const parentId = node.data.parentId as string;
       console.log(`🔗 Using parentId fallback for ${node.id} -> parent: ${parentId}`);
       
       // Add to children map
