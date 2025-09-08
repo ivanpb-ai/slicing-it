@@ -92,6 +92,13 @@ export const useSimpleChildNodeCreation = (
           y: parentNode.position.y + 50  // Temporary - layout will override
         };
         console.log(`✅ Creating RRPmember (balanced tree layout will position it)`, childPosition);
+      } else if (type === 'rrp' && parentNode) {
+        // Position RRP nodes vertically below their TAC parent
+        childPosition = {
+          x: parentNode.position.x, // Keep same horizontal position as parent
+          y: parentNode.position.y + 200  // Position vertically below with spacing
+        };
+        console.log(`✅ Creating RRP node positioned below TAC parent:`, childPosition);
       }
       
       const newNode: Node = {
