@@ -88,6 +88,12 @@ export const useSimpleChildNodeCreation = (
           detail: { position }
         }));
       }, 100);
+    } else if (type === 'snssai') {
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('show-snssai-tooltip', {
+          detail: { position }
+        }));
+      }, 100);
     }
 
     // Calculate position based on node type and parent

@@ -6,6 +6,7 @@ import NetworkNodeTooltip from "@/components/tooltips/NetworkNodeTooltip";
 import CellAreaNodeTooltip from "@/components/tooltips/CellAreaNodeTooltip";
 import RRPNodeTooltip from "@/components/tooltips/RRPNodeTooltip";
 import RRPMemberNodeTooltip from "@/components/tooltips/RRPMemberNodeTooltip";
+import SNSSAINodeTooltip from "@/components/tooltips/SNSSAINodeTooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
@@ -22,6 +23,7 @@ const App = () => (
       <CellAreaNodeTooltip />
       <RRPNodeTooltip />
       <RRPMemberNodeTooltip />
+      <SNSSAINodeTooltip />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
