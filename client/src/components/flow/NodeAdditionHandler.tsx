@@ -80,7 +80,7 @@ const NodeAdditionHandler = ({
       if (type === 'cell-area') {
         // Find existing cell area nodes to calculate offset
         const existingCellAreas = existingNodes.filter(
-          node => node.data?.type === 'cell-area'
+          (node: any) => node.data?.type === 'cell-area'
         );
         
         if (existingCellAreas.length > 0) {

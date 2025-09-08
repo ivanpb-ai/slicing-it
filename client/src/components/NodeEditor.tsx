@@ -213,6 +213,22 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       position.y += (Math.random() - 0.5) * 100;
       
       console.log(`NodeEditor: Adding ${type} node at position:`, position);
+      
+      // Show tooltip notification for network nodes
+      if (type === 'network') {
+        toast.info("Please drag TAC nodes onto the network node to associate geographical areas with this network", {
+          style: {
+            color: '#000000 !important',
+            backgroundColor: '#ffffff !important',
+            border: '1px solid #e0e0e0 !important',
+            fontSize: '14px !important',
+            fontWeight: '500 !important'
+          },
+          className: 'custom-info-toast',
+          duration: 5000 // Show for 5 seconds
+        });
+      }
+      
       addNode(type, position, fiveQIId);
     } catch (error) {
       console.error('Error in handleAddNode:', error);
