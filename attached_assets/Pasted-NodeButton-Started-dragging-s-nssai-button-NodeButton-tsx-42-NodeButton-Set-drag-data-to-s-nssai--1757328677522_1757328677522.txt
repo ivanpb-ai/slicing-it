@@ -1,0 +1,34 @@
+NodeButton: Started dragging s-nssai button
+NodeButton.tsx:42 NodeButton: Set drag data to: s-nssai
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "s-nssai" at position: {x: 114.73444876992859, y: 1263.5129018196471}
+useDragDataParser.ts:3 parseDragData: Processing drag data: s-nssai
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: s-nssai
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 214.73444876992858, y: 1263.5129018196471}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 13
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 13
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1757328602603-4514
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: rrpmember-1757328602603-4514
+useNodeRelationships.ts:35 Validating relationship: rrpmember -> s-nssai
+useNodeRelationships.ts:64 Valid relationship confirmed: rrpmember -> s-nssai
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1757328602603-4514
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: rrpmember
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: -280, y: 1470}
+idCounters.ts:18 Generated new S-NSSAI ID: 1
+useSimpleChildNodeCreation.ts:45 Creating child S-NSSAI with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child s-nssai node with ID: s-nssai-1 under parent: rrpmember-1757328602603-4514
+FlowInstance.tsx:80 FlowInstance: Rendering with 5 nodes, 3 edges
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+useSimpleChildNodeCreation.ts:143 useSimpleChildNodeCreation: Creating edge from rrpmember-1757328602603-4514 to s-nssai-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757328602603-4514-s-nssai-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrpmember-1757328602603-4514-s-nssai-1', source: 'rrpmember-1757328602603-4514', target: 's-nssai-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 4
+FlowInstance.tsx:80 FlowInstance: Rendering with 5 nodes, 4 edges
+useSimpleChildNodeCreation.ts:143 useSimpleChildNodeCreation: Creating edge from rrpmember-1757328602603-4514 to s-nssai-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757328602603-4514-s-nssai-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrpmember-1757328602603-4514-s-nssai-1', source: 'rrpmember-1757328602603-4514', target: 's-nssai-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1757328602603-4514->s-nssai-1 already exists

@@ -14,13 +14,20 @@ const SNSSAINodeTooltip: React.FC = () => {
       const { position: nodePosition } = event.detail;
       
       // Calculate tooltip position relative to the node
-      // Ensure tooltip stays on screen with minimum margins
-      let tooltipX = nodePosition.x + 200; // Offset to the right
-      let tooltipY = nodePosition.y + 50;   // Offset below
+      // Use smaller offset to keep tooltip closer to node
+      let tooltipX = nodePosition.x + 120; // Closer offset to the right
+      let tooltipY = nodePosition.y + 20;   // Closer offset below
       
-      // Keep tooltip on screen with minimum 20px margin
-      tooltipX = Math.max(20, Math.min(tooltipX, window.innerWidth - 320)); // 320px for tooltip width
-      tooltipY = Math.max(20, Math.min(tooltipY, window.innerHeight - 150)); // 150px for tooltip height
+      // If node is off-screen (negative x or very high y), position tooltip in viewport
+      if (nodePosition.x < 0 || nodePosition.y > window.innerHeight) {
+        // Position tooltip in center-right of viewport when node is off-screen
+        tooltipX = window.innerWidth / 2;
+        tooltipY = window.innerHeight / 2;
+      }
+      
+      // Keep tooltip on screen with minimum 10px margin
+      tooltipX = Math.max(10, Math.min(tooltipX, window.innerWidth - 350)); // Account for tooltip width
+      tooltipY = Math.max(10, Math.min(tooltipY, window.innerHeight - 120)); // Account for tooltip height
       
       setPosition({
         x: tooltipX,
