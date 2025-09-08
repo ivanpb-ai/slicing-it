@@ -63,6 +63,22 @@ export const useNodeEditor = () => {
 
   const addNode = useCallback((type: NodeType, position: { x: number; y: number }, fiveQIId?: string) => {
     console.log(`useNodeEditor: Adding ${type} node at position:`, position);
+    
+    // Show tooltip notification for network nodes
+    if (type === 'network') {
+      toast.info("Please drag TAC nodes onto the network node to associate geographical areas with this network", {
+        style: {
+          color: '#000000 !important',
+          backgroundColor: '#ffffff !important',
+          border: '1px solid #e0e0e0 !important',
+          fontSize: '14px !important',
+          fontWeight: '500 !important'
+        },
+        className: 'custom-info-toast',
+        duration: 5000 // Show for 5 seconds
+      });
+    }
+    
     createNode(type, position, fiveQIId);
   }, [createNode]);
 
