@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NetworkNodeTooltip from "@/components/tooltips/NetworkNodeTooltip";
 import CellAreaNodeTooltip from "@/components/tooltips/CellAreaNodeTooltip";
+import RRPNodeTooltip from "@/components/tooltips/RRPNodeTooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
@@ -18,6 +19,7 @@ const App = () => (
       <Sonner />
       <NetworkNodeTooltip />
       <CellAreaNodeTooltip />
+      <RRPNodeTooltip />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />

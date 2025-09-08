@@ -69,10 +69,16 @@ export const useSimpleChildNodeCreation = (
 
     console.log(`Creating child ${type} node with ID: ${id} under parent: ${parentId}`);
     
-    // Trigger tooltip for cell-area nodes
+    // Trigger tooltips for specific node types
     if (type === 'cell-area') {
       setTimeout(() => {
         window.dispatchEvent(new CustomEvent('show-cell-area-tooltip', {
+          detail: { position }
+        }));
+      }, 100);
+    } else if (type === 'rrp') {
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('show-rrp-tooltip', {
           detail: { position }
         }));
       }, 100);
