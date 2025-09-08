@@ -116,13 +116,21 @@ export const useSimpleChildNodeCreation = (
         const existingDnnChildren = prevNodes.filter(node => 
           node.data?.parentId === parentId && node.data?.type === 'dnn'
         );
-        const horizontalOffset = existingDnnChildren.length * 150; // 150px spacing between DNN nodes
+        
+        // Use a wider horizontal spacing and center the nodes around the parent
+        const nodeIndex = existingDnnChildren.length;
+        const nodeWidth = 120; // Estimated DNN node width
+        const spacing = 180; // Increased spacing between nodes
+        
+        // Calculate starting position to center multiple nodes around parent
+        const totalWidth = (nodeIndex + 1) * spacing;
+        const startX = parentNode.position.x - (totalWidth / 2) + (spacing / 2);
         
         childPosition = {
-          x: parentNode.position.x + horizontalOffset, // Offset horizontally for each DNN node
+          x: startX + (nodeIndex * spacing), // Distribute nodes horizontally
           y: parentNode.position.y + 200  // Position vertically below with spacing
         };
-        console.log(`✅ Creating DNN node #${existingDnnChildren.length + 1} positioned below S-NSSAI parent:`, childPosition);
+        console.log(`✅ Creating DNN node #${nodeIndex + 1} at position:`, childPosition, `(${nodeIndex} existing siblings)`);
       }
       
       const newNode: Node = {

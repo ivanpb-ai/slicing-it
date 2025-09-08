@@ -1,0 +1,85 @@
+NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: dnn
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 15
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 15
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: s-nssai-2
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: s-nssai-2
+useNodeRelationships.ts:35 Validating relationship: s-nssai -> dnn
+useNodeRelationships.ts:53 Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child dnn node under parent s-nssai-2
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: s-nssai
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: Object
+idCounters.ts:10 Generated new DNN ID: 2
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-2 under parent: s-nssai-2
+useSimpleChildNodeCreation.ts:125 ✅ Creating DNN node #2 positioned below S-NSSAI parent: Object
+useSimpleChildNodeCreation.ts:125 ✅ Creating DNN node #2 positioned below S-NSSAI parent: Object
+FlowInstance.tsx:80 FlowInstance: Rendering with 17 nodes, 15 edges
+DnnNode.tsx:21 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+useSimpleChildNodeCreation.ts:155 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 16
+useSimpleChildNodeCreation.ts:155 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+2useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-2->dnn-2 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 17 nodes, 16 edges
+NodeButton.tsx:34 NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: dnn
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 15
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 15
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: s-nssai-2
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: s-nssai-2
+useNodeRelationships.ts:35 Validating relationship: s-nssai -> dnn
+useNodeRelationships.ts:53 Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child dnn node under parent s-nssai-2
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: s-nssai
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: Object
+idCounters.ts:10 Generated new DNN ID: 3
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 3
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-3 under parent: s-nssai-2
+useSimpleChildNodeCreation.ts:125 ✅ Creating DNN node #3 positioned below S-NSSAI parent: Object
+useSimpleChildNodeCreation.ts:125 ✅ Creating DNN node #3 positioned below S-NSSAI parent: Object
+FlowInstance.tsx:80 FlowInstance: Rendering with 18 nodes, 16 edges
+DnnNode.tsx:21 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:21 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+useSimpleChildNodeCreation.ts:155 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 17
+useSimpleChildNodeCreation.ts:155 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+2useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-2->dnn-3 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 18 nodes, 17 edges
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
