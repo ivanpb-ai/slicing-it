@@ -1,0 +1,38 @@
+NodeButton: Started dragging s-nssai button
+NodeButton.tsx:42 NodeButton: Set drag data to: s-nssai
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "s-nssai" at position: Object
+useDragDataParser.ts:3 parseDragData: Processing drag data: s-nssai
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: s-nssai
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 13
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 13
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1757328335433-5629
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: rrpmember-1757328335433-5629
+useNodeRelationships.ts:35 Validating relationship: rrpmember -> s-nssai
+useNodeRelationships.ts:64 Valid relationship confirmed: rrpmember -> s-nssai
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1757328335433-5629
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: rrpmember
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: Object
+idCounters.ts:18 Generated new S-NSSAI ID: 2
+useSimpleChildNodeCreation.ts:45 Creating child S-NSSAI with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child s-nssai node with ID: s-nssai-2 under parent: rrpmember-1757328335433-5629
+FlowInstance.tsx:80 FlowInstance: Rendering with 9 nodes, 7 edges
+2StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+useSimpleChildNodeCreation.ts:143 useSimpleChildNodeCreation: Creating edge from rrpmember-1757328335433-5629 to s-nssai-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757328335433-5629-s-nssai-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 8
+useSimpleChildNodeCreation.ts:143 useSimpleChildNodeCreation: Creating edge from rrpmember-1757328335433-5629 to s-nssai-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757328335433-5629-s-nssai-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+2useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1757328335433-5629->s-nssai-2 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 9 nodes, 8 edges
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
