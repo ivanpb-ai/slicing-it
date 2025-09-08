@@ -91,6 +91,35 @@ export const arrangeNodesInBalancedTree = (
       primaryParentMap[edge.target] = edge.source;
     }
   });
+  
+  // FALLBACK: Use parentId from node data for nodes without edges (handles timing issues)
+  nodes.forEach(node => {
+    if (node.data?.parentId && !allParentsMap[node.id]) {
+      const parentId = node.data.parentId;
+      console.log(`🔗 Using parentId fallback for ${node.id} -> parent: ${parentId}`);
+      
+      // Add to children map
+      if (!childrenMap[parentId]) {
+        childrenMap[parentId] = [];
+      }
+      if (!childrenMap[parentId].includes(node.id)) {
+        childrenMap[parentId].push(node.id);
+      }
+      
+      // Add to parents map
+      if (!allParentsMap[node.id]) {
+        allParentsMap[node.id] = [];
+      }
+      if (!allParentsMap[node.id].includes(parentId)) {
+        allParentsMap[node.id].push(parentId);
+      }
+      
+      // Set primary parent
+      if (!primaryParentMap[node.id]) {
+        primaryParentMap[node.id] = parentId;
+      }
+    }
+  });
 
   // Find root nodes (nodes with no parents)
   const rootNodes = nodes.filter(node => !allParentsMap[node.id] || allParentsMap[node.id].length === 0);
