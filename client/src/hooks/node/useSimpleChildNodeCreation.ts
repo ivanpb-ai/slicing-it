@@ -111,6 +111,13 @@ export const useSimpleChildNodeCreation = (
           y: parentNode.position.y + 200  // Position vertically below with spacing
         };
         console.log(`✅ Creating RRP node positioned below TAC parent:`, childPosition);
+      } else if (type === 'dnn' && parentNode) {
+        // Position DNN nodes vertically below their S-NSSAI parent
+        childPosition = {
+          x: parentNode.position.x, // Keep same horizontal position as parent
+          y: parentNode.position.y + 200  // Position vertically below with spacing
+        };
+        console.log(`✅ Creating DNN node positioned below S-NSSAI parent:`, childPosition);
       }
       
       const newNode: Node = {
