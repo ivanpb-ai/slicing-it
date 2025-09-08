@@ -1,0 +1,59 @@
+Creating RRP member child for parent rrp-1 with PLMN: 240 01
+useRrpPlmn.ts:49 ✅ PLMN: Creating RRP-member (layout will position it properly) Object
+useSimpleChildNodeCreation.ts:62 Creating RRPmember child with PLMN: 240 01
+useSimpleChildNodeCreation.ts:70 Creating child rrpmember node with ID: rrpmember-1757327883990-8282 under parent: rrp-1
+useSimpleChildNodeCreation.ts:112 ✅ Creating RRPmember (balanced tree layout will position it) Object
+FlowInstance.tsx:80 FlowInstance: Rendering with 5 nodes, 2 edges
+2StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757327883990-8282, type=rrpmember, nodeNumber=8282
+useSimpleChildNodeCreation.ts:140 useSimpleChildNodeCreation: Creating edge from rrp-1 to rrpmember-1757327883990-8282
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrp-1-rrpmember-1757327883990-8282
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 3
+FlowInstance.tsx:80 FlowInstance: Rendering with 5 nodes, 3 edges
+useRrpPlmn.ts:58 🔧 Triggering layout after RRP member creation
+useNodeLayoutManager.ts:64 🔧 Layout using current edges: 3
+balancedTreeLayout.ts:72 🔍 Processing edges for layout: 3 valid edges
+balancedTreeLayout.ts:75 🔗 Processing edge: network-1757327861971-210 -> cell-area-1
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-1 -> rrp-1
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-1 -> rrpmember-1757327883990-8282
+balancedTreeLayout.ts:146 Level assignments: Object
+balancedTreeLayout.ts:147 Parent-child relationships: Object
+balancedTreeLayout.ts:431 🎯 Graph centering: minX=0, maxX=0, width=0, centerOffset=0
+balancedTreeLayout.ts:445 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 5 nodes
+balancedTreeLayout.ts:446 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:447 🎯 Final calculated positions: Array(5)
+balancedTreeLayout.ts:448 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:73 🧹 Filtered duplicates: 5 -> 5 nodes
+NodeButton.tsx:34 NodeButton: Started dragging s-nssai button
+NodeButton.tsx:42 NodeButton: Set drag data to: s-nssai
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "s-nssai" at position: Object
+useDragDataParser.ts:3 parseDragData: Processing drag data: s-nssai
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: s-nssai
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 13
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 13
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1757327883990-8282
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: rrpmember-1757327883990-8282
+useNodeRelationships.ts:35 Validating relationship: rrpmember -> s-nssai
+useNodeRelationships.ts:64 Valid relationship confirmed: rrpmember -> s-nssai
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1757327883990-8282
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: rrpmember
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: Object
+idCounters.ts:18 Generated new S-NSSAI ID: 2
+useSimpleChildNodeCreation.ts:45 Creating child S-NSSAI with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child s-nssai node with ID: s-nssai-2 under parent: rrpmember-1757327883990-8282
+FlowInstance.tsx:80 FlowInstance: Rendering with 6 nodes, 3 edges
+2StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+useSimpleChildNodeCreation.ts:140 useSimpleChildNodeCreation: Creating edge from rrpmember-1757327883990-8282 to s-nssai-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757327883990-8282-s-nssai-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 4
+useSimpleChildNodeCreation.ts:140 useSimpleChildNodeCreation: Creating edge from rrpmember-1757327883990-8282 to s-nssai-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757327883990-8282-s-nssai-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+2useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1757327883990-8282->s-nssai-2 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 6 nodes, 4 edges

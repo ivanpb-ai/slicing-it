@@ -88,12 +88,6 @@ export const useSimpleChildNodeCreation = (
           detail: { position }
         }));
       }, 100);
-    } else if (type === 's-nssai') {
-      setTimeout(() => {
-        window.dispatchEvent(new CustomEvent('show-snssai-tooltip', {
-          detail: { position }
-        }));
-      }, 100);
     }
 
     // Calculate position based on node type and parent
@@ -134,6 +128,15 @@ export const useSimpleChildNodeCreation = (
 
       // Add the new node to the existing nodes
       const updatedNodes = [...prevNodes, newNode];
+      
+      // Trigger S-NSSAI tooltip after node is created
+      if (type === 's-nssai') {
+        setTimeout(() => {
+          window.dispatchEvent(new CustomEvent('show-snssai-tooltip', {
+            detail: { position: childPosition }
+          }));
+        }, 100);
+      }
       
       // Create edge connection from parent to child after a short delay
       setTimeout(() => {
