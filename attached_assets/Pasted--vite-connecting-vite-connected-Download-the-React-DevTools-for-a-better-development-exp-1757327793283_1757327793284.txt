@@ -1,0 +1,545 @@
+ [vite] connecting...
+ [vite] connected.
+ Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+  Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
+
+Check the render method of `Primitive.button.SlotClone`.
+    at DropdownMenu (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=19dd7dd3:2183:5)
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:2005:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:190:13
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Popper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:1997:11)
+    at Tooltip (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:98:5)
+    at div
+    at FiveQINodeButton (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/buttons/FiveQINodeButton.tsx:35:9)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at div
+    at NodeButtonsGrid (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/NodeButtonsGrid.tsx:30:28)
+    at div
+    at ToolbarContainer (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/ToolbarContainer.tsx:25:3)
+    at Toolbar
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at EditorPanels (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/EditorPanels.tsx:21:3)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx:30:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ chunk-WERSD76P.js?v=19dd7dd3:521
+ FlowInstance: Rendering with 0 nodes, 0 edges
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ FlowInstance: Rendering with 0 nodes, 0 edges
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ FlowInstance: ReactFlow initialized
+ FlowInstance: Registered ReactFlow instance globally
+ Background Response (check_popup_status) Object
+ Background Response (check_my_tracking)
+ Background Response (checkHasCashback)
+ NodeButton: Started dragging network button
+ NodeButton: Set drag data to: network
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "network" at position: Object
+ parseDragData: Processing drag data: network
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: network
+ useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+ useNodeDragDrop: Elements at drop point: 9
+ detectParentNodeFromDOM: Checking elements at point: 9
+ detectParentNodeFromDOM: No parent node found in DOM elements
+ detectParentNodeFromPosition: Checking position: Object
+ detectParentNodeFromPosition: Available nodes: Array(0)
+ detectParentNodeFromPosition: No parent node found at position
+ useNodeDragDrop: Detected parent: none
+ useNodeDragDrop: Creating standalone network node at safe position: Object
+ useNodeEditor: Adding network node at position: Object
+ FlowInstance: Rendering with 1 nodes, 0 edges
+ FlowInstance: First node: Object
+ StandardNodeWrapper: id=network-1757327429541-2878, type=network, nodeNumber=2878
+ StandardNodeWrapper: id=network-1757327429541-2878, type=network, nodeNumber=2878
+ NodeButton: Started dragging cell-area button
+ NodeButton: Set drag data to: cell-area
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "cell-area" at position: Object
+ parseDragData: Processing drag data: cell-area
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: cell-area
+ useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: network-1757327429541-2878
+ useNodeDragDrop: Detected parent: network-1757327429541-2878
+ Validating relationship: network -> cell-area
+ Valid relationship confirmed: network -> cell-area
+ useNodeDragDrop: Creating child cell-area node under parent network-1757327429541-2878
+ useNodeDragDrop: Parent node found: network
+ useNodeDragDrop: Child position calculated: Object
+ Generated new Cell Area ID: 1
+ Creating child cell-area with ID: 1
+ Creating child cell-area node with ID: cell-area-1 under parent: network-1757327429541-2878
+ FlowInstance: Rendering with 2 nodes, 0 edges
+ FlowInstance: First node: Object
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ useSimpleChildNodeCreation: Creating edge from network-1757327429541-2878 to cell-area-1
+ UnifiedEdgeManager: Creating edge unified-network-1757327429541-2878-cell-area-1
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 1
+ useSimpleChildNodeCreation: Creating edge from network-1757327429541-2878 to cell-area-1
+ UnifiedEdgeManager: Creating edge unified-network-1757327429541-2878-cell-area-1
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge network-1757327429541-2878->cell-area-1 already exists
+ UnifiedEdgeManager: Edge network-1757327429541-2878->cell-area-1 already exists
+ FlowInstance: Rendering with 2 nodes, 1 edges
+ FlowInstance: First node: Object
+ NodeButton: Started dragging rrp button
+ NodeButton: Set drag data to: rrp
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "rrp" at position: Object
+ parseDragData: Processing drag data: rrp
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: rrp
+ useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: cell-area-1
+ useNodeDragDrop: Detected parent: cell-area-1
+ Validating relationship: cell-area -> rrp
+ Valid relationship confirmed: cell-area -> rrp
+ useNodeDragDrop: Creating child rrp node under parent cell-area-1
+ useNodeDragDrop: Parent node found: cell-area
+ useNodeDragDrop: Child position calculated: Object
+ Generated new RRP ID: 1
+ Creating RRP with ID: 1
+ Creating child rrp node with ID: rrp-1 under parent: cell-area-1
+ ✅ Creating RRP node positioned below TAC parent: Object
+ ✅ Creating RRP node positioned below TAC parent: Object
+ FlowInstance: Rendering with 3 nodes, 1 edges
+ FlowInstance: First node: Object
+ StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+ StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+ useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-1
+ UnifiedEdgeManager: Creating edge unified-cell-area-1-rrp-1
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 2
+ useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-1
+ UnifiedEdgeManager: Creating edge unified-cell-area-1-rrp-1
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge cell-area-1->rrp-1 already exists
+ UnifiedEdgeManager: Edge cell-area-1->rrp-1 already exists
+ FlowInstance: Rendering with 3 nodes, 2 edges
+ FlowInstance: First node: Object
+ Creating RRP member child for parent rrp-1 with PLMN: 240 01
+ ✅ PLMN: Creating RRP-member (layout will position it properly) Object
+ Creating RRPmember child with PLMN: 240 01
+ Creating child rrpmember node with ID: rrpmember-1757327447385-3649 under parent: rrp-1
+ ✅ Creating RRPmember (balanced tree layout will position it) Object
+ FlowInstance: Rendering with 4 nodes, 2 edges
+ StandardNodeWrapper: id=rrpmember-1757327447385-3649, type=rrpmember, nodeNumber=3649
+ StandardNodeWrapper: id=rrpmember-1757327447385-3649, type=rrpmember, nodeNumber=3649
+ useSimpleChildNodeCreation: Creating edge from rrp-1 to rrpmember-1757327447385-3649
+ UnifiedEdgeManager: Creating edge unified-rrp-1-rrpmember-1757327447385-3649
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 3
+ FlowInstance: Rendering with 4 nodes, 3 edges
+ 🔧 Triggering layout after RRP member creation
+ 🔧 Layout using current edges: 3
+ 🔍 Processing edges for layout: 3 valid edges
+ 🔗 Processing edge: network-1757327429541-2878 -> cell-area-1
+ 🔗 Processing edge: cell-area-1 -> rrp-1
+ 🔗 Processing edge: rrp-1 -> rrpmember-1757327447385-3649
+ Level assignments: Object
+ Parent-child relationships: Object
+ 🎯 Graph centering: minX=0, maxX=0, width=0, centerOffset=0
+ 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 4 nodes
+ 🎯 Final Y spacing used: 180 px
+ 🎯 Final calculated positions: Array(4)
+ 🧹 Cleaned 0 invalid edges
+ 🧹 Filtered duplicates: 4 -> 4 nodes
+ NodeButton: Started dragging s-nssai button
+ NodeButton: Set drag data to: s-nssai
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "s-nssai" at position: Object
+ parseDragData: Processing drag data: s-nssai
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: s-nssai
+ useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 13
+ detectParentNodeFromDOM: Checking elements at point: 13
+ detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1757327447385-3649
+ useNodeDragDrop: Detected parent: rrpmember-1757327447385-3649
+ Validating relationship: rrpmember -> s-nssai
+ Valid relationship confirmed: rrpmember -> s-nssai
+ useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1757327447385-3649
+ useNodeDragDrop: Parent node found: rrpmember
+ useNodeDragDrop: Child position calculated: Object
+ Generated new S-NSSAI ID: 1
+ Creating child S-NSSAI with ID: 1
+ Creating child s-nssai node with ID: s-nssai-1 under parent: rrpmember-1757327447385-3649
+ FlowInstance: Rendering with 5 nodes, 3 edges
+ StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+ StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+ useSimpleChildNodeCreation: Creating edge from rrpmember-1757327447385-3649 to s-nssai-1
+ UnifiedEdgeManager: Creating edge unified-rrpmember-1757327447385-3649-s-nssai-1
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 4
+ useSimpleChildNodeCreation: Creating edge from rrpmember-1757327447385-3649 to s-nssai-1
+ UnifiedEdgeManager: Creating edge unified-rrpmember-1757327447385-3649-s-nssai-1
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge rrpmember-1757327447385-3649->s-nssai-1 already exists
+ UnifiedEdgeManager: Edge rrpmember-1757327447385-3649->s-nssai-1 already exists
+ FlowInstance: Rendering with 5 nodes, 4 edges
+ NodeButton: Started dragging s-nssai button
+ NodeButton: Set drag data to: s-nssai
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "s-nssai" at position: Object
+ parseDragData: Processing drag data: s-nssai
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: s-nssai
+ useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 11
+ detectParentNodeFromDOM: Checking elements at point: 11
+ detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1757327447385-3649
+ useNodeDragDrop: Detected parent: rrpmember-1757327447385-3649
+ Validating relationship: rrpmember -> s-nssai
+ Valid relationship confirmed: rrpmember -> s-nssai
+ useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1757327447385-3649
+ useNodeDragDrop: Parent node found: rrpmember
+ useNodeDragDrop: Child position calculated: Object
+ Generated new S-NSSAI ID: 2
+ Creating child S-NSSAI with ID: 2
+ Creating child s-nssai node with ID: s-nssai-2 under parent: rrpmember-1757327447385-3649
+ FlowInstance: Rendering with 6 nodes, 4 edges
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ useSimpleChildNodeCreation: Creating edge from rrpmember-1757327447385-3649 to s-nssai-2
+ UnifiedEdgeManager: Creating edge unified-rrpmember-1757327447385-3649-s-nssai-2
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 5
+ useSimpleChildNodeCreation: Creating edge from rrpmember-1757327447385-3649 to s-nssai-2
+ UnifiedEdgeManager: Creating edge unified-rrpmember-1757327447385-3649-s-nssai-2
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge rrpmember-1757327447385-3649->s-nssai-2 already exists
+ UnifiedEdgeManager: Edge rrpmember-1757327447385-3649->s-nssai-2 already exists
+ FlowInstance: Rendering with 6 nodes, 5 edges
+ [vite] hot updated: /src/index.css?v=M0as12zUgPREt-BwCpKUt
+ [vite] hot updated: /src/components/NodeEditor.tsx
+ [vite] hot updated: /src/App.tsx?v=M0as12zUgPREt-BwCpKUt
+ [vite] hot updated: /src/index.css?v=M0as12zUgPREt-BwCpKUt
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ [vite] hot updated: /src/App.tsx?v=M0as12zUgPREt-BwCpKUt
+ [vite] hot updated: /src/index.css?v=M0as12zUgPREt-BwCpKUt
+ FlowInstance: Rendering with 0 nodes, 0 edges
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ FlowInstance: Rendering with 0 nodes, 0 edges
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ FlowInstance: ReactFlow initialized
+ FlowInstance: Registered ReactFlow instance globally
+ NodeButton: Started dragging network button
+ NodeButton: Set drag data to: network
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "network" at position: Object
+ parseDragData: Processing drag data: network
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: network
+ useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+ useNodeDragDrop: Elements at drop point: 9
+ detectParentNodeFromDOM: Checking elements at point: 9
+ detectParentNodeFromDOM: No parent node found in DOM elements
+ detectParentNodeFromPosition: Checking position: Object
+ detectParentNodeFromPosition: Available nodes: Array(0)
+ detectParentNodeFromPosition: No parent node found at position
+ useNodeDragDrop: Detected parent: none
+ useNodeDragDrop: Creating standalone network node at safe position: Object
+ useNodeEditor: Adding network node at position: Object
+ FlowInstance: Rendering with 1 nodes, 0 edges
+ FlowInstance: First node: Object
+ StandardNodeWrapper: id=network-1757327726020-6026, type=network, nodeNumber=6026
+ StandardNodeWrapper: id=network-1757327726020-6026, type=network, nodeNumber=6026
+ NodeButton: Started dragging cell-area button
+ NodeButton: Set drag data to: cell-area
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "cell-area" at position: Object
+ parseDragData: Processing drag data: cell-area
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: cell-area
+ useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: network-1757327726020-6026
+ useNodeDragDrop: Detected parent: network-1757327726020-6026
+ Validating relationship: network -> cell-area
+ Valid relationship confirmed: network -> cell-area
+ useNodeDragDrop: Creating child cell-area node under parent network-1757327726020-6026
+ useNodeDragDrop: Parent node found: network
+ useNodeDragDrop: Child position calculated: Object
+ Generated new Cell Area ID: 2
+ Creating child cell-area with ID: 2
+ Creating child cell-area node with ID: cell-area-2 under parent: network-1757327726020-6026
+ FlowInstance: Rendering with 2 nodes, 0 edges
+ FlowInstance: First node: Object
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ useSimpleChildNodeCreation: Creating edge from network-1757327726020-6026 to cell-area-2
+ UnifiedEdgeManager: Creating edge unified-network-1757327726020-6026-cell-area-2
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 1
+ useSimpleChildNodeCreation: Creating edge from network-1757327726020-6026 to cell-area-2
+ UnifiedEdgeManager: Creating edge unified-network-1757327726020-6026-cell-area-2
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge network-1757327726020-6026->cell-area-2 already exists
+ UnifiedEdgeManager: Edge network-1757327726020-6026->cell-area-2 already exists
+ FlowInstance: Rendering with 2 nodes, 1 edges
+ FlowInstance: First node: Object
+ NodeButton: Started dragging rrp button
+ NodeButton: Set drag data to: rrp
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "rrp" at position: Object
+ parseDragData: Processing drag data: rrp
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: rrp
+ useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: cell-area-2
+ useNodeDragDrop: Detected parent: cell-area-2
+ Validating relationship: cell-area -> rrp
+ Valid relationship confirmed: cell-area -> rrp
+ useNodeDragDrop: Creating child rrp node under parent cell-area-2
+ useNodeDragDrop: Parent node found: cell-area
+ useNodeDragDrop: Child position calculated: Object
+ Generated new RRP ID: 2
+ Creating RRP with ID: 2
+ Creating child rrp node with ID: rrp-2 under parent: cell-area-2
+ ✅ Creating RRP node positioned below TAC parent: Object
+ ✅ Creating RRP node positioned below TAC parent: Object
+ FlowInstance: Rendering with 3 nodes, 1 edges
+ FlowInstance: First node: Object
+ StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+ StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+ useSimpleChildNodeCreation: Creating edge from cell-area-2 to rrp-2
+ UnifiedEdgeManager: Creating edge unified-cell-area-2-rrp-2
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 2
+ useSimpleChildNodeCreation: Creating edge from cell-area-2 to rrp-2
+ UnifiedEdgeManager: Creating edge unified-cell-area-2-rrp-2
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge cell-area-2->rrp-2 already exists
+ UnifiedEdgeManager: Edge cell-area-2->rrp-2 already exists
+ FlowInstance: Rendering with 3 nodes, 2 edges
+ FlowInstance: First node: Object
+ NodeButton: Started dragging s-nssai button
+ NodeButton: Set drag data to: s-nssai
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "s-nssai" at position: Object
+ parseDragData: Processing drag data: s-nssai
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: s-nssai
+ useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: rrp-2
+ useNodeDragDrop: Detected parent: rrp-2
+ Validating relationship: rrp -> s-nssai
+  Invalid relationship: rrp cannot have s-nssai as children
+(anonymous) @ useNodeRelationships.ts:38
+ Allowed children for rrp: Array(1)
+ useNodeDragDrop: Invalid hierarchy - cannot place s-nssai under rrp
+ Creating RRP member child for parent rrp-2 with PLMN: 240 01
+ ✅ PLMN: Creating RRP-member (layout will position it properly) Object
+ Creating RRPmember child with PLMN: 240 01
+ Creating child rrpmember node with ID: rrpmember-1757327747837-1834 under parent: rrp-2
+ ✅ Creating RRPmember (balanced tree layout will position it) Object
+ FlowInstance: Rendering with 4 nodes, 2 edges
+ StandardNodeWrapper: id=rrpmember-1757327747837-1834, type=rrpmember, nodeNumber=1834
+ StandardNodeWrapper: id=rrpmember-1757327747837-1834, type=rrpmember, nodeNumber=1834
+ useSimpleChildNodeCreation: Creating edge from rrp-2 to rrpmember-1757327747837-1834
+ UnifiedEdgeManager: Creating edge unified-rrp-2-rrpmember-1757327747837-1834
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 3
+ FlowInstance: Rendering with 4 nodes, 3 edges
+ 🔧 Triggering layout after RRP member creation
+ 🔧 Layout using current edges: 3
+ 🔍 Processing edges for layout: 3 valid edges
+ 🔗 Processing edge: network-1757327726020-6026 -> cell-area-2
+ 🔗 Processing edge: cell-area-2 -> rrp-2
+ 🔗 Processing edge: rrp-2 -> rrpmember-1757327747837-1834
+ Level assignments: Object
+ Parent-child relationships: Object
+ 🎯 Graph centering: minX=0, maxX=0, width=0, centerOffset=0
+ 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 4 nodes
+ 🎯 Final Y spacing used: 180 px
+ 🎯 Final calculated positions: Array(4)
+ 🧹 Cleaned 0 invalid edges
+ 🧹 Filtered duplicates: 4 -> 4 nodes
+ NodeButton: Started dragging s-nssai button
+ NodeButton: Set drag data to: s-nssai
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "s-nssai" at position: Object
+ parseDragData: Processing drag data: s-nssai
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: s-nssai
+ useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 11
+ detectParentNodeFromDOM: Checking elements at point: 11
+ detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1757327747837-1834
+ useNodeDragDrop: Detected parent: rrpmember-1757327747837-1834
+ Validating relationship: rrpmember -> s-nssai
+ Valid relationship confirmed: rrpmember -> s-nssai
+ useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1757327747837-1834
+ useNodeDragDrop: Parent node found: rrpmember
+ useNodeDragDrop: Child position calculated: Object
+ Generated new S-NSSAI ID: 3
+ Creating child S-NSSAI with ID: 3
+ Creating child s-nssai node with ID: s-nssai-3 under parent: rrpmember-1757327747837-1834
+ FlowInstance: Rendering with 5 nodes, 3 edges
+ StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+ StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+ useSimpleChildNodeCreation: Creating edge from rrpmember-1757327747837-1834 to s-nssai-3
+ UnifiedEdgeManager: Creating edge unified-rrpmember-1757327747837-1834-s-nssai-3
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 4
+ useSimpleChildNodeCreation: Creating edge from rrpmember-1757327747837-1834 to s-nssai-3
+ UnifiedEdgeManager: Creating edge unified-rrpmember-1757327747837-1834-s-nssai-3
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge rrpmember-1757327747837-1834->s-nssai-3 already exists
+ UnifiedEdgeManager: Edge rrpmember-1757327747837-1834->s-nssai-3 already exists
+ FlowInstance: Rendering with 5 nodes, 4 edges
+ NodeButton: Started dragging s-nssai button
+ NodeButton: Set drag data to: s-nssai
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "s-nssai" at position: Object
+ parseDragData: Processing drag data: s-nssai
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: s-nssai
+ useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 11
+ detectParentNodeFromDOM: Checking elements at point: 11
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1757327747837-1834
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: rrpmember-1757327747837-1834
+useNodeRelationships.ts:35 Validating relationship: rrpmember -> s-nssai
+useNodeRelationships.ts:64 Valid relationship confirmed: rrpmember -> s-nssai
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1757327747837-1834
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: rrpmember
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: Object
+idCounters.ts:18 Generated new S-NSSAI ID: 4
+useSimpleChildNodeCreation.ts:45 Creating child S-NSSAI with ID: 4
+useSimpleChildNodeCreation.ts:70 Creating child s-nssai node with ID: s-nssai-4 under parent: rrpmember-1757327747837-1834
+FlowInstance.tsx:80 FlowInstance: Rendering with 6 nodes, 4 edges
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+useSimpleChildNodeCreation.ts:140 useSimpleChildNodeCreation: Creating edge from rrpmember-1757327747837-1834 to s-nssai-4
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757327747837-1834-s-nssai-4
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 5
+useSimpleChildNodeCreation.ts:140 useSimpleChildNodeCreation: Creating edge from rrpmember-1757327747837-1834 to s-nssai-4
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757327747837-1834-s-nssai-4
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1757327747837-1834->s-nssai-4 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1757327747837-1834->s-nssai-4 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 6 nodes, 5 edges
+NodeButton.tsx:34 NodeButton: Started dragging s-nssai button
+NodeButton.tsx:42 NodeButton: Set drag data to: s-nssai
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "s-nssai" at position: Object
+useDragDataParser.ts:3 parseDragData: Processing drag data: s-nssai
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: s-nssai
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 13
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 13
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1757327747837-1834
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: rrpmember-1757327747837-1834
+useNodeRelationships.ts:35 Validating relationship: rrpmember -> s-nssai
+useNodeRelationships.ts:64 Valid relationship confirmed: rrpmember -> s-nssai
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1757327747837-1834
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: rrpmember
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: Object
+idCounters.ts:18 Generated new S-NSSAI ID: 5
+useSimpleChildNodeCreation.ts:45 Creating child S-NSSAI with ID: 5
+useSimpleChildNodeCreation.ts:70 Creating child s-nssai node with ID: s-nssai-5 under parent: rrpmember-1757327747837-1834
+FlowInstance.tsx:80 FlowInstance: Rendering with 7 nodes, 5 edges
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+useSimpleChildNodeCreation.ts:140 useSimpleChildNodeCreation: Creating edge from rrpmember-1757327747837-1834 to s-nssai-5
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757327747837-1834-s-nssai-5
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 6
+useSimpleChildNodeCreation.ts:140 useSimpleChildNodeCreation: Creating edge from rrpmember-1757327747837-1834 to s-nssai-5
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757327747837-1834-s-nssai-5
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1757327747837-1834->s-nssai-5 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1757327747837-1834->s-nssai-5 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 7 nodes, 6 edges
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again

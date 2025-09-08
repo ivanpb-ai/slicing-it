@@ -88,7 +88,7 @@ export const useSimpleChildNodeCreation = (
           detail: { position }
         }));
       }, 100);
-    } else if (type === 'snssai') {
+    } else if (type === 's-nssai') {
       setTimeout(() => {
         window.dispatchEvent(new CustomEvent('show-snssai-tooltip', {
           detail: { position }
