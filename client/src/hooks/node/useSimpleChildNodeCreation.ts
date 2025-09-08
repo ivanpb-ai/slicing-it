@@ -131,9 +131,7 @@ export const useSimpleChildNodeCreation = (
       
       // Trigger S-NSSAI tooltip after node is created
       if (type === 's-nssai') {
-        console.log('🎯 Triggering S-NSSAI tooltip at position:', childPosition);
         setTimeout(() => {
-          console.log('🎯 Dispatching show-snssai-tooltip event');
           window.dispatchEvent(new CustomEvent('show-snssai-tooltip', {
             detail: { position: childPosition }
           }));

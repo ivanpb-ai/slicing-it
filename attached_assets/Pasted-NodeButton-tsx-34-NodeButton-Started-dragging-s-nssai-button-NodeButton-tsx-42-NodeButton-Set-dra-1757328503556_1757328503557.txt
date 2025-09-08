@@ -1,0 +1,43 @@
+NodeButton.tsx:34 NodeButton: Started dragging s-nssai button
+NodeButton.tsx:42 NodeButton: Set drag data to: s-nssai
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "s-nssai" at position: {x: 108.02077854453654, y: 1285.7831499411434}
+useDragDataParser.ts:3 parseDragData: Processing drag data: s-nssai
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: s-nssai
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="s-nssai", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 408.02077854453654, y: 1285.7831499411434}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 13
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 13
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: rrpmember-1757328480583-3264
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: rrpmember-1757328480583-3264
+useNodeRelationships.ts:35 Validating relationship: rrpmember -> s-nssai
+useNodeRelationships.ts:64 Valid relationship confirmed: rrpmember -> s-nssai
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child s-nssai node under parent rrpmember-1757328480583-3264
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: rrpmember
+useNodeDragDrop.ts:149 useNodeDragDrop: Child position calculated: {x: -280, y: 1470}
+idCounters.ts:18 Generated new S-NSSAI ID: 1
+useSimpleChildNodeCreation.ts:45 Creating child S-NSSAI with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child s-nssai node with ID: s-nssai-1 under parent: rrpmember-1757328480583-3264
+useSimpleChildNodeCreation.ts:134 🎯 Triggering S-NSSAI tooltip at position: {x: -280, y: 1470}
+useSimpleChildNodeCreation.ts:134 🎯 Triggering S-NSSAI tooltip at position: {x: -280, y: 1470}
+FlowInstance.tsx:80 FlowInstance: Rendering with 5 nodes, 3 edges
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+useSimpleChildNodeCreation.ts:145 useSimpleChildNodeCreation: Creating edge from rrpmember-1757328480583-3264 to s-nssai-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757328480583-3264-s-nssai-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrpmember-1757328480583-3264-s-nssai-1', source: 'rrpmember-1757328480583-3264', target: 's-nssai-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 4
+useSimpleChildNodeCreation.ts:145 useSimpleChildNodeCreation: Creating edge from rrpmember-1757328480583-3264 to s-nssai-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-rrpmember-1757328480583-3264-s-nssai-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-rrpmember-1757328480583-3264-s-nssai-1', source: 'rrpmember-1757328480583-3264', target: 's-nssai-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1757328480583-3264->s-nssai-1 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge rrpmember-1757328480583-3264->s-nssai-1 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 5 nodes, 4 edges
+useSimpleChildNodeCreation.ts:136 🎯 Dispatching show-snssai-tooltip event
+SNSSAINodeTooltip.tsx:14 🎯 SNSSAINodeTooltip: Received show-snssai-tooltip event {position: {…}}
+SNSSAINodeTooltip.tsx:24 🎯 SNSSAINodeTooltip: Setting visible and position: {x: -80, y: 1520}
+useSimpleChildNodeCreation.ts:136 🎯 Dispatching show-snssai-tooltip event
+SNSSAINodeTooltip.tsx:14 🎯 SNSSAINodeTooltip: Received show-snssai-tooltip event {position: {…}}
+SNSSAINodeTooltip.tsx:24 🎯 SNSSAINodeTooltip: Setting visible and position: {x: -80, y: 1520}

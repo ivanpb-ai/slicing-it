@@ -11,17 +11,22 @@ const SNSSAINodeTooltip: React.FC = () => {
 
   useEffect(() => {
     const handleShowTooltip = (event: CustomEvent) => {
-      console.log('🎯 SNSSAINodeTooltip: Received show-snssai-tooltip event', event.detail);
       const { position: nodePosition } = event.detail;
       
       // Calculate tooltip position relative to the node
-      // Offset it to appear to the right and slightly below the node
+      // Ensure tooltip stays on screen with minimum margins
+      let tooltipX = nodePosition.x + 200; // Offset to the right
+      let tooltipY = nodePosition.y + 50;   // Offset below
+      
+      // Keep tooltip on screen with minimum 20px margin
+      tooltipX = Math.max(20, Math.min(tooltipX, window.innerWidth - 320)); // 320px for tooltip width
+      tooltipY = Math.max(20, Math.min(tooltipY, window.innerHeight - 150)); // 150px for tooltip height
+      
       setPosition({
-        x: nodePosition.x + 200, // Offset to the right
-        y: nodePosition.y + 50   // Offset below
+        x: tooltipX,
+        y: tooltipY
       });
       
-      console.log('🎯 SNSSAINodeTooltip: Setting visible and position:', { x: nodePosition.x + 200, y: nodePosition.y + 50 });
       setIsVisible(true);
       
       // Auto-hide after 7 seconds (longer text needs more time)
@@ -30,7 +35,6 @@ const SNSSAINodeTooltip: React.FC = () => {
       }, 7000);
     };
 
-    console.log('🎯 SNSSAINodeTooltip: Adding event listener for show-snssai-tooltip');
     // Listen for the custom event
     window.addEventListener('show-snssai-tooltip', handleShowTooltip as EventListener);
 
