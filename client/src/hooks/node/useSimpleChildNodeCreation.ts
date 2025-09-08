@@ -112,12 +112,17 @@ export const useSimpleChildNodeCreation = (
         };
         console.log(`✅ Creating RRP node positioned below TAC parent:`, childPosition);
       } else if (type === 'dnn' && parentNode) {
-        // Position DNN nodes vertically below their S-NSSAI parent
+        // Position DNN nodes vertically below their S-NSSAI parent with horizontal spacing
+        const existingDnnChildren = prevNodes.filter(node => 
+          node.data?.parentId === parentId && node.data?.type === 'dnn'
+        );
+        const horizontalOffset = existingDnnChildren.length * 150; // 150px spacing between DNN nodes
+        
         childPosition = {
-          x: parentNode.position.x, // Keep same horizontal position as parent
+          x: parentNode.position.x + horizontalOffset, // Offset horizontally for each DNN node
           y: parentNode.position.y + 200  // Position vertically below with spacing
         };
-        console.log(`✅ Creating DNN node positioned below S-NSSAI parent:`, childPosition);
+        console.log(`✅ Creating DNN node #${existingDnnChildren.length + 1} positioned below S-NSSAI parent:`, childPosition);
       }
       
       const newNode: Node = {
