@@ -64,11 +64,18 @@ export const useNodeEditor = () => {
   const addNode = useCallback((type: NodeType, position: { x: number; y: number }, fiveQIId?: string) => {
     console.log(`useNodeEditor: Adding ${type} node at position:`, position);
     
-    // Trigger tooltip for network nodes
+    // Trigger tooltips for specific node types
     if (type === 'network') {
       // Dispatch custom event with position data for positioning the tooltip
       setTimeout(() => {
         window.dispatchEvent(new CustomEvent('show-network-tooltip', {
+          detail: { position }
+        }));
+      }, 100);
+    } else if (type === 'cell-area') {
+      // Dispatch custom event for TAC nodes
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('show-cell-area-tooltip', {
           detail: { position }
         }));
       }, 100);
