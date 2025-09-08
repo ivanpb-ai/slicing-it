@@ -82,6 +82,12 @@ export const useSimpleChildNodeCreation = (
           detail: { position }
         }));
       }, 100);
+    } else if (type === 'rrpmember') {
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('show-rrpmember-tooltip', {
+          detail: { position }
+        }));
+      }, 100);
     }
 
     // Calculate position based on node type and parent
