@@ -60,7 +60,22 @@ export const useChildNodeCreationCore = (
     // Add the node first
     setNodes(prevNodes => {
       console.log(`useChildNodeCreationCore: Adding child node ${id} to nodes list`);
-      return [...prevNodes, newNode];
+      const updatedNodes = [...prevNodes, newNode];
+      
+      // CRITICAL: Also update ReactFlow instance to ensure state sync
+      try {
+        // @ts-ignore - Access global ReactFlow instance registry
+        const globalReactFlowInstances = window.__REACTFLOW_INSTANCES__;
+        if (globalReactFlowInstances && globalReactFlowInstances.length > 0) {
+          const reactFlowInstance = globalReactFlowInstances[0];
+          console.log(`useChildNodeCreationCore: Syncing ${updatedNodes.length} nodes to ReactFlow instance`);
+          reactFlowInstance.setNodes(updatedNodes);
+        }
+      } catch (e) {
+        console.warn('useChildNodeCreationCore: Failed to sync with ReactFlow instance:', e);
+      }
+      
+      return updatedNodes;
     });
     
     // Create edge using the provided addEdge function
