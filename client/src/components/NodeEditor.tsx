@@ -165,13 +165,13 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     }
   }, [nodes.length, setNodes, setEdges, reactFlowInstance]);
 
-  // Add layout management - pass setEdges for proper edge handling
-  const { arrangeNodesInLayout } = useNodeLayoutManager(nodes, edges, setNodes, setEdges);
+  // Add layout management - use hookNodes for accurate state
+  const { arrangeNodesInLayout } = useNodeLayoutManager(hookNodes, hookEdges, hookSetNodes, hookSetEdges);
   const { handleArrangeLayout } = useLayoutOperations(
-    nodes,
-    edges,
-    setNodes,
-    setEdges,
+    hookNodes,
+    hookEdges,
+    hookSetNodes,
+    hookSetEdges,
     arrangeNodesInLayout
   );
   
