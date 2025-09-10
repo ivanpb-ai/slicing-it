@@ -1,0 +1,129 @@
+NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: {x: -220.78698720536843, y: 1406.0714943886878}
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: dnn
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: -520.7869872053684, y: 1406.0714943886878}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 15
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 15
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: s-nssai-1
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: s-nssai-1
+useNodeRelationships.ts:35 Validating relationship: s-nssai -> dnn
+useNodeRelationships.ts:53 Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child dnn node under parent s-nssai-1
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: s-nssai
+useNodeDragDrop.ts:159 useNodeDragDrop: Positioning DNN node #1 at x=-280, y=1670 (0 existing siblings)
+idCounters.ts:10 Generated new DNN ID: 1
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-1 under parent: s-nssai-1
+useSimpleChildNodeCreation.ts:119 ✅ Using pre-calculated DNN position from drag-and-drop: x=-280, y=1670
+useSimpleChildNodeCreation.ts:119 ✅ Using pre-calculated DNN position from drag-and-drop: x=-280, y=1670
+FlowInstance.tsx:80 FlowInstance: Rendering with 6 nodes, 4 edges
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+useSimpleChildNodeCreation.ts:180 useSimpleChildNodeCreation: Creating edge from s-nssai-1 to dnn-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-1-dnn-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-1-dnn-1', source: 's-nssai-1', target: 'dnn-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 5
+useSimpleChildNodeCreation.ts:180 useSimpleChildNodeCreation: Creating edge from s-nssai-1 to dnn-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-1-dnn-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-1-dnn-1', source: 's-nssai-1', target: 'dnn-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-1->dnn-1 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-1->dnn-1 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 6 nodes, 5 edges
+useNodeDragDrop.ts:190 useNodeDragDrop: Applied repositioning for 0 DNN siblings
+NodeButton.tsx:34 NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: {x: -175.3154902100565, y: 1387.8828955905628}
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: dnn
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 124.68450978994349, y: 1587.8828955905628}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 15
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 15
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: s-nssai-1
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: s-nssai-1
+useNodeRelationships.ts:35 Validating relationship: s-nssai -> dnn
+useNodeRelationships.ts:53 Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child dnn node under parent s-nssai-1
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: s-nssai
+useNodeDragDrop.ts:159 useNodeDragDrop: Positioning DNN node #2 at x=-190, y=1670 (1 existing siblings)
+idCounters.ts:10 Generated new DNN ID: 2
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-2 under parent: s-nssai-1
+useSimpleChildNodeCreation.ts:119 ✅ Using pre-calculated DNN position from drag-and-drop: x=-190, y=1670
+useSimpleChildNodeCreation.ts:119 ✅ Using pre-calculated DNN position from drag-and-drop: x=-190, y=1670
+FlowInstance.tsx:80 FlowInstance: Rendering with 7 nodes, 5 edges
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+useSimpleChildNodeCreation.ts:180 useSimpleChildNodeCreation: Creating edge from s-nssai-1 to dnn-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-1-dnn-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-1-dnn-2', source: 's-nssai-1', target: 'dnn-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 6
+useSimpleChildNodeCreation.ts:180 useSimpleChildNodeCreation: Creating edge from s-nssai-1 to dnn-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-1-dnn-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-1-dnn-2', source: 's-nssai-1', target: 'dnn-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-1->dnn-2 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-1->dnn-2 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 7 nodes, 6 edges
+useNodeDragDrop.ts:175 useNodeDragDrop: Repositioning DNN sibling dnn-1 to x=-370
+useNodeDragDrop.ts:190 useNodeDragDrop: Applied repositioning for 1 DNN siblings
+NodeButton.tsx:34 NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: {x: -141.96972574682775, y: 1387.8828955905628}
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: dnn
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 158.03027425317225, y: 1587.8828955905628}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 15
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 15
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: s-nssai-1
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: s-nssai-1
+useNodeRelationships.ts:35 Validating relationship: s-nssai -> dnn
+useNodeRelationships.ts:53 Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child dnn node under parent s-nssai-1
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: s-nssai
+useNodeDragDrop.ts:159 useNodeDragDrop: Positioning DNN node #3 at x=-100, y=1670 (2 existing siblings)
+idCounters.ts:10 Generated new DNN ID: 3
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 3
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-3 under parent: s-nssai-1
+useSimpleChildNodeCreation.ts:119 ✅ Using pre-calculated DNN position from drag-and-drop: x=-100, y=1670
+useSimpleChildNodeCreation.ts:119 ✅ Using pre-calculated DNN position from drag-and-drop: x=-100, y=1670
+FlowInstance.tsx:80 FlowInstance: Rendering with 8 nodes, 6 edges
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+useSimpleChildNodeCreation.ts:180 useSimpleChildNodeCreation: Creating edge from s-nssai-1 to dnn-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-1-dnn-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-1-dnn-3', source: 's-nssai-1', target: 'dnn-3', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 7
+useSimpleChildNodeCreation.ts:180 useSimpleChildNodeCreation: Creating edge from s-nssai-1 to dnn-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-1-dnn-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-1-dnn-3', source: 's-nssai-1', target: 'dnn-3', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-1->dnn-3 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-1->dnn-3 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 8 nodes, 7 edges
+useNodeDragDrop.ts:175 useNodeDragDrop: Repositioning DNN sibling dnn-1 to x=-460
+useNodeDragDrop.ts:175 useNodeDragDrop: Repositioning DNN sibling dnn-2 to x=-280
+useNodeDragDrop.ts:190 useNodeDragDrop: Applied repositioning for 2 DNN siblings

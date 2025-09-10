@@ -123,7 +123,7 @@ export const useSimpleChildNodeCreation = (
             node.data?.parentId === parentId && node.data?.type === 'dnn'
           );
           
-          const spacing = 180; // Spacing between DNN nodes
+          const spacing = 220; // Increased spacing between DNN nodes to prevent overlap
           const totalNodes = existingDnnChildren.length + 1; // Include the new node
           
           // Calculate starting position to center all nodes around parent
