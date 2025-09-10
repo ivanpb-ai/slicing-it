@@ -74,6 +74,17 @@ export class GraphPersistenceService {
   static exportGraphToFile(name: string | undefined, nodes: Node[], edges: Edge[]): string | null {
     console.log('🔍 GraphPersistenceService: Export called with', nodes?.length || 0, 'nodes and', edges?.length || 0, 'edges');
     
+    // DEBUG: Check what node types were passed as parameters
+    if (nodes && nodes.length > 0) {
+      const passedNodeTypes = nodes.map(node => ({ id: node.id, type: node.data?.type }));
+      console.log('🔍 GraphPersistenceService: Passed node types:', passedNodeTypes);
+      
+      const passedDnnNodes = nodes.filter(node => node.data?.type === 'dnn');
+      const passedFiveQiNodes = nodes.filter(node => node.data?.type === 'fiveqi');
+      console.log('🔍 GraphPersistenceService: Passed DNN nodes:', passedDnnNodes.length, passedDnnNodes.map(n => n.id));
+      console.log('🔍 GraphPersistenceService: Passed 5QI nodes:', passedFiveQiNodes.length, passedFiveQiNodes.map(n => n.id));
+    }
+    
     // PRIORITY 1: Try to get ReactFlow instance data from global registry
     try {
       // @ts-ignore - Access global ReactFlow instance if available
@@ -84,6 +95,15 @@ export class GraphPersistenceService {
         const flowEdges = reactFlowInstance.getEdges();
         
         console.log('🔍 GraphPersistenceService: Found ReactFlow instance with', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
+        
+        // DEBUG: Check what node types are in ReactFlow instance
+        const instanceNodeTypes = flowNodes.map((node: any) => ({ id: node.id, type: node.data?.type }));
+        console.log('🔍 GraphPersistenceService: ReactFlow instance node types:', instanceNodeTypes);
+        
+        const instanceDnnNodes = flowNodes.filter((node: any) => node.data?.type === 'dnn');
+        const instanceFiveQiNodes = flowNodes.filter((node: any) => node.data?.type === 'fiveqi');
+        console.log('🔍 GraphPersistenceService: ReactFlow DNN nodes:', instanceDnnNodes.length, instanceDnnNodes.map((n: any) => n.id));
+        console.log('🔍 GraphPersistenceService: ReactFlow 5QI nodes:', instanceFiveQiNodes.length, instanceFiveQiNodes.map((n: any) => n.id));
         
         if (flowNodes.length > 0) {
           console.log('🔍 GraphPersistenceService: Using ReactFlow instance data (PRIORITY 1)');

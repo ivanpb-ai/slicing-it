@@ -15,6 +15,15 @@ export class GraphExportImportService {
       const startTime = performance.now();
       console.log('🔍 GraphExportImportService: Starting export with', nodes.length, 'nodes and', edges.length, 'edges');
       
+      // DEBUG: Check what node types we're exporting
+      const nodeTypes = nodes.map(node => ({ id: node.id, type: node.data?.type }));
+      console.log('🔍 GraphExportImportService: Node types being exported:', nodeTypes);
+      
+      const dnnNodes = nodes.filter(node => node.data?.type === 'dnn');
+      const fiveQiNodes = nodes.filter(node => node.data?.type === 'fiveqi');
+      console.log('🔍 GraphExportImportService: DNN nodes found:', dnnNodes.length, dnnNodes.map(n => ({ id: n.id, data: n.data })));
+      console.log('🔍 GraphExportImportService: 5QI nodes found:', fiveQiNodes.length, fiveQiNodes.map(n => ({ id: n.id, data: n.data })));
+      
       // Create file name
       const fileName = `${name || 'graph'}_${new Date().toISOString().split('T')[0]}.json`;
       console.log('🔍 GraphExportImportService: Filename:', fileName);
