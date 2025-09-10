@@ -9,13 +9,26 @@ export class GraphNodeProcessor {
       return [];
     }
     
-    return nodes.map(node => {
+    console.log(`GraphNodeProcessor: Processing ${nodes.length} nodes for loading`);
+    
+    return nodes.map((node, index) => {
+      // Ensure we have a valid node structure
+      if (!node || !node.id) {
+        console.error(`GraphNodeProcessor: Invalid node at index ${index}:`, node);
+        return null;
+      }
+      
+      // Robust position handling with NaN checks
+      const originalPosition = node.position || { x: 0, y: 0 };
+      const safeX = typeof originalPosition.x === 'number' && !isNaN(originalPosition.x) ? originalPosition.x : (index % 5) * 200;
+      const safeY = typeof originalPosition.y === 'number' && !isNaN(originalPosition.y) ? originalPosition.y : Math.floor(index / 5) * 150;
+      
       const processedNode = {
         ...node,
         type: 'customNode', // Ensure consistent node type
         position: {
-          x: typeof node.position?.x === 'number' ? node.position.x : 0,
-          y: typeof node.position?.y === 'number' ? node.position.y : 0
+          x: safeX,
+          y: safeY
         },
         // Ensure data field is properly structured while preserving all existing fields
         data: {
@@ -24,24 +37,30 @@ export class GraphNodeProcessor {
           label: node.data?.label || node.id || 'Unnamed Node',
           type: node.data?.type || 'generic',
           description: node.data?.description || 'Node'
-          // This preserves dnnCustomName, snssaiCustomName, etc.
+          // This preserves dnnCustomName, snssaiCustomName, fiveQIId, etc.
         }
       };
       
-      // Debug logging for DNN and 5QI nodes
+      // Enhanced debug logging for DNN and 5QI nodes
       if (node.data?.type === 'dnn' || node.data?.type === 'fiveqi') {
-        console.log(`🔍 GraphNodeProcessor: Processing ${node.data.type} node:`, {
+        console.log(`✅ GraphNodeProcessor: Successfully processed ${node.data.type} node:`, {
           nodeId: node.id,
           originalType: node.data?.type,
           processedType: processedNode.data.type,
-          hasPosition: !!(node.position?.x !== undefined && node.position?.y !== undefined),
-          position: node.position,
-          data: node.data
+          originalPosition: originalPosition,
+          processedPosition: processedNode.position,
+          dataFields: Object.keys(node.data || {}),
+          preservedData: {
+            dnnCustomName: node.data?.dnnCustomName,
+            dnnId: node.data?.dnnId,
+            fiveQIId: node.data?.fiveQIId,
+            qosValues: node.data?.qosValues
+          }
         });
       }
       
       return processedNode;
-    });
+    }).filter(node => node !== null); // Remove any null nodes
   }
   
   // Process edges before loading into ReactFlow

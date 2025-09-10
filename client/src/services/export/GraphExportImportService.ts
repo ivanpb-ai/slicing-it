@@ -130,32 +130,39 @@ export class GraphExportImportService {
           
           console.log(`GraphExportImportService: Successfully processed graph with ${graphData.nodes.length} nodes and ${graphData.edges.length} edges`);
           
-          // Additional validation: check if nodes have required properties
-          const validNodes = graphData.nodes.filter(node => {
-            const isValid = node && 
-              typeof node === 'object' && 
-              node.id && 
-              node.position &&
-              typeof node.position.x === 'number' &&
-              typeof node.position.y === 'number';
-            
-            // Debug logging for DNN and 5QI nodes
-            if (!isValid && (node?.data?.type === 'dnn' || node?.data?.type === 'fiveqi')) {
-              console.error(`🔍 GraphExportImportService: FILTERING OUT ${node?.data?.type} node:`, {
-                nodeId: node?.id,
-                hasId: !!node?.id,
-                hasPosition: !!node?.position,
-                positionX: node?.position?.x,
-                positionY: node?.position?.y,
-                positionXType: typeof node?.position?.x,
-                positionYType: typeof node?.position?.y,
-                nodeType: node?.data?.type,
-                fullNode: node
-              });
+          // Enhanced validation: check and fix nodes with invalid positions
+          const validNodes = graphData.nodes.map((node, index) => {
+            if (!node || typeof node !== 'object' || !node.id) {
+              console.warn(`GraphExportImportService: Invalid node at index ${index}:`, node);
+              return null;
             }
             
-            return isValid;
-          });
+            // Fix invalid positions
+            let hasValidPosition = node.position && 
+              typeof node.position.x === 'number' && 
+              typeof node.position.y === 'number' &&
+              !isNaN(node.position.x) && 
+              !isNaN(node.position.y);
+            
+            if (!hasValidPosition) {
+              console.warn(`GraphExportImportService: Fixing invalid position for ${node.data?.type || 'unknown'} node ${node.id}:`, node.position);
+              // Assign default position based on node index to prevent overlap
+              const defaultX = (index % 5) * 200; // 5 nodes per row
+              const defaultY = Math.floor(index / 5) * 150; // Rows 150px apart
+              
+              node = {
+                ...node,
+                position: {
+                  x: defaultX,
+                  y: defaultY
+                }
+              };
+              
+              console.log(`GraphExportImportService: Assigned default position (${defaultX}, ${defaultY}) to ${node.data?.type} node ${node.id}`);
+            }
+            
+            return node;
+          }).filter(node => node !== null);
           
           if (validNodes.length !== graphData.nodes.length) {
             const filteredNodes = graphData.nodes.filter((node, index) => !validNodes.includes(node));
