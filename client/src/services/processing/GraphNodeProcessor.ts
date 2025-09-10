@@ -9,23 +9,39 @@ export class GraphNodeProcessor {
       return [];
     }
     
-    return nodes.map(node => ({
-      ...node,
-      type: 'customNode', // Ensure consistent node type
-      position: {
-        x: typeof node.position?.x === 'number' ? node.position.x : 0,
-        y: typeof node.position?.y === 'number' ? node.position.y : 0
-      },
-      // Ensure data field is properly structured while preserving all existing fields
-      data: {
-        ...(node.data || {}),
-        // Only override these fields if they're missing, but preserve all other fields
-        label: node.data?.label || node.id || 'Unnamed Node',
-        type: node.data?.type || 'generic',
-        description: node.data?.description || 'Node'
-        // This preserves dnnCustomName, snssaiCustomName, etc.
+    return nodes.map(node => {
+      const processedNode = {
+        ...node,
+        type: 'customNode', // Ensure consistent node type
+        position: {
+          x: typeof node.position?.x === 'number' ? node.position.x : 0,
+          y: typeof node.position?.y === 'number' ? node.position.y : 0
+        },
+        // Ensure data field is properly structured while preserving all existing fields
+        data: {
+          ...(node.data || {}),
+          // Only override these fields if they're missing, but preserve all other fields
+          label: node.data?.label || node.id || 'Unnamed Node',
+          type: node.data?.type || 'generic',
+          description: node.data?.description || 'Node'
+          // This preserves dnnCustomName, snssaiCustomName, etc.
+        }
+      };
+      
+      // Debug logging for DNN and 5QI nodes
+      if (node.data?.type === 'dnn' || node.data?.type === 'fiveqi') {
+        console.log(`🔍 GraphNodeProcessor: Processing ${node.data.type} node:`, {
+          nodeId: node.id,
+          originalType: node.data?.type,
+          processedType: processedNode.data.type,
+          hasPosition: !!(node.position?.x !== undefined && node.position?.y !== undefined),
+          position: node.position,
+          data: node.data
+        });
       }
-    }));
+      
+      return processedNode;
+    });
   }
   
   // Process edges before loading into ReactFlow

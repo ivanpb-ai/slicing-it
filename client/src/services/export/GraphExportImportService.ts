@@ -131,17 +131,37 @@ export class GraphExportImportService {
           console.log(`GraphExportImportService: Successfully processed graph with ${graphData.nodes.length} nodes and ${graphData.edges.length} edges`);
           
           // Additional validation: check if nodes have required properties
-          const validNodes = graphData.nodes.filter(node => 
-            node && 
-            typeof node === 'object' && 
-            node.id && 
-            node.position &&
-            typeof node.position.x === 'number' &&
-            typeof node.position.y === 'number'
-          );
+          const validNodes = graphData.nodes.filter(node => {
+            const isValid = node && 
+              typeof node === 'object' && 
+              node.id && 
+              node.position &&
+              typeof node.position.x === 'number' &&
+              typeof node.position.y === 'number';
+            
+            // Debug logging for DNN and 5QI nodes
+            if (!isValid && (node?.data?.type === 'dnn' || node?.data?.type === 'fiveqi')) {
+              console.error(`🔍 GraphExportImportService: FILTERING OUT ${node?.data?.type} node:`, {
+                nodeId: node?.id,
+                hasId: !!node?.id,
+                hasPosition: !!node?.position,
+                positionX: node?.position?.x,
+                positionY: node?.position?.y,
+                positionXType: typeof node?.position?.x,
+                positionYType: typeof node?.position?.y,
+                nodeType: node?.data?.type,
+                fullNode: node
+              });
+            }
+            
+            return isValid;
+          });
           
           if (validNodes.length !== graphData.nodes.length) {
-            console.warn(`GraphExportImportService: Filtered out ${graphData.nodes.length - validNodes.length} invalid nodes`);
+            const filteredNodes = graphData.nodes.filter((node, index) => !validNodes.includes(node));
+            console.warn(`GraphExportImportService: Filtered out ${graphData.nodes.length - validNodes.length} invalid nodes:`, 
+              filteredNodes.map(node => ({ id: node?.id, type: node?.data?.type, position: node?.position }))
+            );
             graphData.nodes = validNodes;
           }
           
