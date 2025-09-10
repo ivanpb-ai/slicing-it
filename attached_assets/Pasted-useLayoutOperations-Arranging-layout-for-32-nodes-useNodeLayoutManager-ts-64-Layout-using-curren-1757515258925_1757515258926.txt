@@ -1,0 +1,148 @@
+useLayoutOperations: Arranging layout for 32 nodes
+useNodeLayoutManager.ts:64 🔧 Layout using current edges: 45
+balancedTreeLayout.ts:59 🧹 CLEANED: Removing invalid edge rrpmember-1757507555654-9110 -> s-nssai-8 (source: true, target: false)
+balancedTreeLayout.ts:59 🧹 CLEANED: Removing invalid edge rrpmember-1757507565770-444 -> s-nssai-9 (source: true, target: false)
+balancedTreeLayout.ts:59 🧹 CLEANED: Removing invalid edge rrpmember-1757507596048-2005 -> s-nssai-10 (source: true, target: false)
+balancedTreeLayout.ts:59 🧹 CLEANED: Removing invalid edge rrpmember-1757507600617-6445 -> s-nssai-11 (source: true, target: false)
+balancedTreeLayout.ts:72 🔍 Processing edges for layout: 41 valid edges
+balancedTreeLayout.ts:75 🔗 Processing edge: network-1757506172195-665 -> cell-area-1
+balancedTreeLayout.ts:75 🔗 Processing edge: network-1757506172195-665 -> cell-area-2
+balancedTreeLayout.ts:75 🔗 Processing edge: network-1757506172195-665 -> cell-area-3
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-1 -> rrp-1
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-1 -> rrpmember-1757506530003-2414
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-1 -> rrpmember-1757506538231-5218
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-2 -> rrpmember-1757506565261-1181
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-2 -> rrpmember-1757506569403-9882
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-3 -> rrpmember-1757506576193-4322
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-3 -> rrpmember-1757506581413-6257
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757506530003-2414 -> s-nssai-1
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757506538231-5218 -> s-nssai-2
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757506538231-5218 -> s-nssai-3
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757506565261-1181 -> s-nssai-4
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757506569403-9882 -> s-nssai-5
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757506576193-4322 -> s-nssai-6
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757506581413-6257 -> s-nssai-7
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-1 -> rrp-2
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-1 -> rrp-3
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-2 -> rrp-4
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-2 -> rrp-5
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-4 -> rrpmember-1757507555654-9110
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-4 -> rrpmember-1757507565770-444
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-5 -> rrpmember-1757507596048-2005
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-5 -> rrpmember-1757507600617-6445
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-3 -> rrp-4
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-3 -> rrp-5
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-2 -> rrp-3
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-3 -> rrp-3
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757507555654-9110 -> s-nssai-1
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757507565770-444 -> s-nssai-2
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757507565770-444 -> s-nssai-3
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757507596048-2005 -> s-nssai-4
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757507600617-6445 -> s-nssai-5
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-2 -> dnn-1
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-5 -> dnn-2
+balancedTreeLayout.ts:75 🔗 Processing edge: dnn-1 -> fiveqi-7
+balancedTreeLayout.ts:75 🔗 Processing edge: dnn-2 -> fiveqi-79
+balancedTreeLayout.ts:75 🔗 Processing edge: dnn-1 -> fiveqi-9
+balancedTreeLayout.ts:75 🔗 Processing edge: dnn-1 -> fiveqi-6
+balancedTreeLayout.ts:75 🔗 Processing edge: dnn-2 -> fiveqi-9
+balancedTreeLayout.ts:175 Level assignments: Object
+balancedTreeLayout.ts:176 Parent-child relationships: Object
+balancedTreeLayout.ts:376 ✓ Single S-NSSAI s-nssai-1 centered under parent at (-870, 1720)
+balancedTreeLayout.ts:388 ✓ S-NSSAI s-nssai-2 positioned near parent at (-795, 1720)
+balancedTreeLayout.ts:388 ✓ S-NSSAI s-nssai-3 positioned near parent at (-545, 1720)
+balancedTreeLayout.ts:376 ✓ Single S-NSSAI s-nssai-4 centered under parent at (-470, 1720)
+balancedTreeLayout.ts:376 ✓ Single S-NSSAI s-nssai-5 centered under parent at (-270, 1720)
+balancedTreeLayout.ts:376 ✓ Single S-NSSAI s-nssai-6 centered under parent at (-70, 1720)
+balancedTreeLayout.ts:376 ✓ Single S-NSSAI s-nssai-7 centered under parent at (130, 1720)
+balancedTreeLayout.ts:501 🎯 Graph centering: minX=-870, maxX=930, width=1800, centerOffset=30
+balancedTreeLayout.ts:515 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 32 nodes
+balancedTreeLayout.ts:516 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:517 🎯 Final calculated positions: Array(5)
+balancedTreeLayout.ts:518 🧹 Cleaned 4 invalid edges
+useNodeLayoutManager.ts:73 🧹 Filtered duplicates: 32 -> 32 nodes
+useNodeLayoutManager.ts:96 🧹 Updating edges: 45 -> 41 (filtered duplicates)
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FlowInstance.tsx:80 FlowInstance: Rendering with 32 nodes, 41 edges
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+(index):1   Failed to load resource: the server responded with a status of 503 (Service Unavailable)

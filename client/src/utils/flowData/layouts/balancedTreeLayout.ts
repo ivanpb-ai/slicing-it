@@ -367,25 +367,58 @@ export const arrangeNodesInBalancedTree = (
               nodePositionMap[nodeId] = position;
               // Cell area positioned
             } else if (isSNssaiNode && level === sNssaiLevel) {
-              // Position S-NSSAI nodes close to their parent instead of unified horizontal group
-              if (siblings.length === 1) {
-                // Single S-NSSAI child: position directly under parent
+              // CHECK: If most RRP-members have single S-NSSAI children, use global spacing to prevent overlap
+              const parentIds = allParentsMap[nodeId] || [];
+              const parentId = parentIds[0];
+              
+              if (parentId && nodePositionMap[parentId]) {
+                // Get all S-NSSAI siblings (nodes with same RRP-member parent)
+                const siblingsSameParent = allSNssaiNodes.filter(sNssaiId => {
+                  const sNssaiParents = allParentsMap[sNssaiId] || [];
+                  return sNssaiParents.includes(parentId);
+                });
+                const totalSiblingsSameParent = siblingsSameParent.length;
+                
+                // Check if we have many single S-NSSAI children (like DNN logic)
+                const mostlySingleSNssaiChildren = allSNssaiNodes.length > 3 && totalSiblingsSameParent === 1;
+                
+                if (mostlySingleSNssaiChildren) {
+                  // Use global spacing for single S-NSSAI children to prevent overlap
+                  const nodeIndex = allSNssaiNodes.indexOf(nodeId);
+                  const sNssaiSpacing = 350; // Larger spacing to prevent S-NSSAI overlap
+                  const totalSNssaiWidth = (allSNssaiNodes.length - 1) * sNssaiSpacing;
+                  const startX = 0 - totalSNssaiWidth / 2;
+                  const x = startX + nodeIndex * sNssaiSpacing;
+                  
+                  const position = { x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ Single S-NSSAI ${nodeId} positioned with global spacing at (${x}, ${y})`);
+                } else if (siblings.length === 1) {
+                  // Single S-NSSAI child: position directly under parent (original logic)
+                  const position = { x: parentPos.x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ Single S-NSSAI ${nodeId} centered under parent at (${parentPos.x}, ${y})`);
+                } else {
+                  // Multiple S-NSSAI siblings: spread around parent with increased spacing
+                  const nodeIndex = siblings.indexOf(nodeId);
+                  const spacing = 350; // Increased spacing to prevent overlap
+                  const totalWidth = (siblings.length - 1) * spacing;
+                  const startX = parentPos.x - totalWidth / 2;
+                  const x = startX + nodeIndex * spacing;
+                  
+                  const position = { x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ S-NSSAI ${nodeId} positioned near parent at (${x}, ${y})`);
+                }
+              } else {
+                // Fallback: position directly under parent if no positioning context
                 const position = { x: parentPos.x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ Single S-NSSAI ${nodeId} centered under parent at (${parentPos.x}, ${y})`);
-              } else {
-                // Multiple S-NSSAI siblings: spread around parent with close spacing
-                const nodeIndex = siblings.indexOf(nodeId);
-                const spacing = 250; // Closer spacing to keep near parent
-                const totalWidth = (siblings.length - 1) * spacing;
-                const startX = parentPos.x - totalWidth / 2;
-                const x = startX + nodeIndex * spacing;
-                
-                const position = { x, y };
-                positionedNodes.push({ id: nodeId, position });
-                nodePositionMap[nodeId] = position;
-                console.log(`✓ S-NSSAI ${nodeId} positioned near parent at (${x}, ${y})`);
+                console.log(`✓ S-NSSAI ${nodeId} fallback positioned at (${parentPos.x}, ${y})`);
               }
             } else if (isFiveQiNode && level === fiveQiLevel) {
               // SPECIAL CASE: Position ALL 5QI nodes with consistent spacing across the entire level
