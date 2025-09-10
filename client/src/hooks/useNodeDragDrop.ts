@@ -143,16 +143,15 @@ export const useNodeDragDrop = (
                 node.data?.parentId === parentId && node.data?.type === 'dnn'
               );
               
-              const spacing = 250; // Further increased spacing between DNN nodes to prevent overlap
+              const spacing = 300; // Much larger spacing between DNN nodes to ensure no overlap
               const totalNodes = existingDnnChildren.length + 1; // Include the new node
               
-              // Calculate starting position to center all nodes around parent
-              const totalWidth = (totalNodes - 1) * spacing;
-              const startX = parentNode.position.x - (totalWidth / 2);
+              // Simple approach: Start from a fixed offset to the left of parent, then space out
+              const baseStartX = parentNode.position.x - 200; // Start further left of parent
               
               // Position the new node at the end of the sequence
               const childPosition = {
-                x: startX + (existingDnnChildren.length * spacing),
+                x: baseStartX + (existingDnnChildren.length * spacing),
                 y: parentNode.position.y + 200  // Position vertically below with spacing
               };
               
@@ -175,7 +174,7 @@ export const useNodeDragDrop = (
                     if (node.data?.parentId === parentId && node.data?.type === 'dnn' && node.id !== `dnn-${totalNodes}`) {
                       const siblingIndex = existingDnnChildren.findIndex(sibling => sibling.id === node.id);
                       if (siblingIndex !== -1) {
-                        const newSiblingX = startX + (siblingIndex * spacing);
+                        const newSiblingX = baseStartX + (siblingIndex * spacing);
                         console.log(`useNodeDragDrop: Repositioning DNN sibling ${node.id} from x=${node.position.x} to x=${newSiblingX}`);
                         return {
                           ...node,
