@@ -143,7 +143,7 @@ export const useNodeDragDrop = (
                 node.data?.parentId === parentId && node.data?.type === 'dnn'
               );
               
-              const spacing = 220; // Increased spacing between DNN nodes to prevent overlap
+              const spacing = 250; // Further increased spacing between DNN nodes to prevent overlap
               const totalNodes = existingDnnChildren.length + 1; // Include the new node
               
               // Calculate starting position to center all nodes around parent
@@ -161,10 +161,14 @@ export const useNodeDragDrop = (
               // Create the new DNN node first
               createChildNode(nodeType, childPosition, parentId, fiveQIId);
               
-              // IMPORTANT: Reposition existing DNN siblings to maintain symmetry immediately
+              // IMPORTANT: Reposition existing DNN siblings to maintain symmetry
+              // Use multiple attempts to ensure ReactFlow updates properly
               setTimeout(() => {
                 if (reactFlowInstance) {
+                  console.log(`useNodeDragDrop: Starting repositioning of ${existingDnnChildren.length} DNN siblings`);
+                  
                   const currentNodes = reactFlowInstance.getNodes();
+                  console.log(`useNodeDragDrop: Found ${currentNodes.length} total nodes for repositioning`);
                   
                   // Update positions of existing DNN siblings
                   const updatedNodes = currentNodes.map(node => {
@@ -172,7 +176,7 @@ export const useNodeDragDrop = (
                       const siblingIndex = existingDnnChildren.findIndex(sibling => sibling.id === node.id);
                       if (siblingIndex !== -1) {
                         const newSiblingX = startX + (siblingIndex * spacing);
-                        console.log(`useNodeDragDrop: Repositioning DNN sibling ${node.id} to x=${newSiblingX}`);
+                        console.log(`useNodeDragDrop: Repositioning DNN sibling ${node.id} from x=${node.position.x} to x=${newSiblingX}`);
                         return {
                           ...node,
                           position: {
@@ -185,11 +189,14 @@ export const useNodeDragDrop = (
                     return node;
                   });
                   
-                  // Apply the updated positions
-                  reactFlowInstance.setNodes(updatedNodes);
-                  console.log(`useNodeDragDrop: Applied repositioning for ${existingDnnChildren.length} DNN siblings`);
+                  // Apply the updated positions with force refresh
+                  reactFlowInstance.setNodes([]);
+                  setTimeout(() => {
+                    reactFlowInstance.setNodes(updatedNodes);
+                    console.log(`useNodeDragDrop: Force-applied repositioning for ${existingDnnChildren.length} DNN siblings`);
+                  }, 50);
                 }
-              }, 150); // Small delay to ensure the new node is fully created
+              }, 200); // Longer delay to ensure the new node is fully rendered
               
               toast.success(`Added DNN node as child of S-NSSAI node with proper spacing`);
             } else {
