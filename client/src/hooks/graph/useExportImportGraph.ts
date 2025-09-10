@@ -31,6 +31,16 @@ export const useExportImportGraph = (
       console.log('🔍 useExportImportGraph.ts: Checking props state - nodes:', nodes?.length || 0, 'edges:', edges?.length || 0);
       if (nodes && nodes.length > 0) {
         console.log('🔍 useExportImportGraph.ts: Using props state for export (PRIORITY 1)');
+        
+        // DEBUG: Check what node types we're exporting from props state
+        const nodeTypes = nodes.map(node => ({ id: node.id, type: node.data?.type }));
+        console.log('🔍 useExportImportGraph.ts: Props state node types:', nodeTypes);
+        
+        const dnnNodes = nodes.filter(node => node.data?.type === 'dnn');
+        const fiveQiNodes = nodes.filter(node => node.data?.type === 'fiveqi');
+        console.log('🔍 useExportImportGraph.ts: Props DNN nodes:', dnnNodes.length, dnnNodes.map(n => ({ id: n.id, data: n.data })));
+        console.log('🔍 useExportImportGraph.ts: Props 5QI nodes:', fiveQiNodes.length, fiveQiNodes.map(n => ({ id: n.id, data: n.data })));
+        
         const dataStr = JSON.stringify({ 
           nodes: nodes || [], 
           edges: edges || [], 
