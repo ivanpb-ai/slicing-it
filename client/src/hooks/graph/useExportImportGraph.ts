@@ -71,6 +71,15 @@ export const useExportImportGraph = (
           const flowEdges = reactFlowInstance.getEdges();
           console.log('🔍 useExportImportGraph.ts: ReactFlow instance has', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
           
+          // DEBUG: Check what node types are in ReactFlow instance (vs component state)
+          const flowNodeTypes = flowNodes.map(node => ({ id: node.id, type: node.data?.type }));
+          console.log('🔍 useExportImportGraph.ts: ReactFlow instance node types:', flowNodeTypes);
+          
+          const flowDnnNodes = flowNodes.filter(node => node.data?.type === 'dnn');
+          const flowFiveQiNodes = flowNodes.filter(node => node.data?.type === 'fiveqi');
+          console.log('🔍 useExportImportGraph.ts: ReactFlow DNN nodes:', flowDnnNodes.length, flowDnnNodes.map(n => ({ id: n.id, data: n.data })));
+          console.log('🔍 useExportImportGraph.ts: ReactFlow 5QI nodes:', flowFiveQiNodes.length, flowFiveQiNodes.map(n => ({ id: n.id, data: n.data })));
+          
           if (flowNodes.length > 0) {
             console.log('🔍 useExportImportGraph.ts: Using ReactFlow instance data for export (PRIORITY 2)');
             const dataStr = JSON.stringify({ 
