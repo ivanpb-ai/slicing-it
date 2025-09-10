@@ -1,0 +1,26 @@
+useLayoutOperations: Arranging layout for 0 nodes
+client:223 [vite] hot updated: /src/components/NodeEditor.tsx
+client:223 [vite] hot updated: /src/index.css?v=bxh_WCLcYs76jgLUxFd2O
+useLayoutOperations.ts:22 useLayoutOperations: Arranging layout for 8 nodes
+useNodeLayoutManager.ts:64 🔧 Layout using current edges: 7
+balancedTreeLayout.ts:72 🔍 Processing edges for layout: 7 valid edges
+balancedTreeLayout.ts:75 🔗 Processing edge: network-1757494932689-4270 -> cell-area-1
+balancedTreeLayout.ts:75 🔗 Processing edge: cell-area-1 -> rrp-1
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-1 -> rrpmember-1757494941763-1014
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757494941763-1014 -> s-nssai-1
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-1 -> dnn-1
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-1 -> dnn-2
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-1 -> dnn-3
+balancedTreeLayout.ts:175 Level assignments: {network-1757494932689-4270: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1757494941763-1014: {…}, s-nssai-1: {…}, …}
+balancedTreeLayout.ts:176 Parent-child relationships: {cell-area-1: Array(1), rrp-1: Array(1), rrpmember-1757494941763-1014: Array(1), s-nssai-1: Array(1), dnn-1: Array(1), …}
+balancedTreeLayout.ts:360 ✓ Single S-NSSAI s-nssai-1 centered under parent at (0, 1720)
+balancedTreeLayout.ts:485 🎯 Graph centering: minX=-180, maxX=180, width=360, centerOffset=0
+balancedTreeLayout.ts:499 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 8 nodes
+balancedTreeLayout.ts:500 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:501 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+balancedTreeLayout.ts:502 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:73 🧹 Filtered duplicates: 8 -> 8 nodes
+useNodeLayoutManager.ts:96 🧹 Updating edges: 7 -> 7 (filtered duplicates)
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}

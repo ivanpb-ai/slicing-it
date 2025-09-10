@@ -305,7 +305,7 @@ export const arrangeNodesInBalancedTree = (
                 
                 // Calculate position relative to S-NSSAI parent
                 const parentX = nodePositionMap[parentId].x;
-                const dnnSpacing = 180; // Spacing between DNN siblings
+                const dnnSpacing = 300; // Increased spacing between DNN siblings to prevent overlap
                 const totalWidth = (totalSiblings - 1) * dnnSpacing;
                 const startX = parentX - totalWidth / 2;
                 const x = startX + siblingIndex * dnnSpacing;
@@ -316,7 +316,7 @@ export const arrangeNodesInBalancedTree = (
               } else {
                 // Fallback: use original logic for DNN nodes without proper parent
                 const nodeIndex = allDnnNodes.indexOf(nodeId);
-                const dnnSpacing = 400;
+                const dnnSpacing = 300; // Consistent spacing with drag-and-drop system
                 const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
                 const startX = 0 - totalDnnWidth / 2;
                 const x = startX + nodeIndex * dnnSpacing;
