@@ -34,12 +34,35 @@ export const useExportImportGraph = (
         
         // DEBUG: Check what node types we're exporting from props state
         const nodeTypes = nodes.map(node => ({ id: node.id, type: node.data?.type }));
-        console.log('🔍 useExportImportGraph.ts: Props state node types:', nodeTypes);
+        console.log('🔍 useExportImportGraph.ts: Props state node types EXPANDED:', nodeTypes);
+        
+        // Count each node type in props state
+        const typeCounts = nodeTypes.reduce((acc, { type }) => {
+          acc[type] = (acc[type] || 0) + 1;
+          return acc;
+        }, {});
+        console.log('🔍 useExportImportGraph.ts: Props state type counts:', typeCounts);
         
         const dnnNodes = nodes.filter(node => node.data?.type === 'dnn');
         const fiveQiNodes = nodes.filter(node => node.data?.type === 'fiveqi');
         console.log('🔍 useExportImportGraph.ts: Props DNN nodes:', dnnNodes.length, dnnNodes.map(n => ({ id: n.id, data: n.data })));
         console.log('🔍 useExportImportGraph.ts: Props 5QI nodes:', fiveQiNodes.length, fiveQiNodes.map(n => ({ id: n.id, data: n.data })));
+        
+        // CRITICAL: Also check ReactFlow instance even when props state exists
+        if (reactFlowInstance) {
+          const flowNodes = reactFlowInstance.getNodes();
+          const flowNodeTypes = flowNodes.map(node => ({ id: node.id, type: node.data?.type }));
+          const flowTypeCounts = flowNodeTypes.reduce((acc, { type }) => {
+            acc[type] = (acc[type] || 0) + 1;
+            return acc;
+          }, {});
+          console.log('🔍 useExportImportGraph.ts: ReactFlow instance type counts:', flowTypeCounts);
+          
+          const flowDnnNodes = flowNodes.filter(node => node.data?.type === 'dnn');
+          const flowFiveQiNodes = flowNodes.filter(node => node.data?.type === 'fiveqi');
+          console.log('🔍 useExportImportGraph.ts: ReactFlow DNN nodes:', flowDnnNodes.length, flowDnnNodes.map(n => ({ id: n.id, data: n.data })));
+          console.log('🔍 useExportImportGraph.ts: ReactFlow 5QI nodes:', flowFiveQiNodes.length, flowFiveQiNodes.map(n => ({ id: n.id, data: n.data })));
+        }
         
         const dataStr = JSON.stringify({ 
           nodes: nodes || [], 
