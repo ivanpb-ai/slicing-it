@@ -303,16 +303,32 @@ export const arrangeNodesInBalancedTree = (
                 const siblingIndex = siblings.indexOf(nodeId);
                 const totalSiblings = siblings.length;
                 
-                // Calculate position relative to S-NSSAI parent
-                const parentX = nodePositionMap[parentId].x;
-                const dnnSpacing = 300; // Increased spacing between DNN siblings to prevent overlap
-                const totalWidth = (totalSiblings - 1) * dnnSpacing;
-                const startX = parentX - totalWidth / 2;
-                const x = startX + siblingIndex * dnnSpacing;
+                // CHECK: If most S-NSSAI nodes have single DNN children, use global spacing to prevent overlap
+                const mostlySignleDnnChildren = allDnnNodes.length > 3 && totalSiblings === 1;
                 
-                const position = { x, y };
-                positionedNodes.push({ id: nodeId, position });
-                nodePositionMap[nodeId] = position;
+                if (mostlySignleDnnChildren) {
+                  // Use global spacing for single DNN children to prevent overlap
+                  const nodeIndex = allDnnNodes.indexOf(nodeId);
+                  const dnnSpacing = 300; // Global spacing between all DNN nodes
+                  const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
+                  const startX = 0 - totalDnnWidth / 2;
+                  const x = startX + nodeIndex * dnnSpacing;
+                  
+                  const position = { x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                } else {
+                  // Use parent-relative positioning for multiple DNN siblings
+                  const parentX = nodePositionMap[parentId].x;
+                  const dnnSpacing = 300; // Increased spacing between DNN siblings to prevent overlap
+                  const totalWidth = (totalSiblings - 1) * dnnSpacing;
+                  const startX = parentX - totalWidth / 2;
+                  const x = startX + siblingIndex * dnnSpacing;
+                  
+                  const position = { x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                }
               } else {
                 // Fallback: use original logic for DNN nodes without proper parent
                 const nodeIndex = allDnnNodes.indexOf(nodeId);

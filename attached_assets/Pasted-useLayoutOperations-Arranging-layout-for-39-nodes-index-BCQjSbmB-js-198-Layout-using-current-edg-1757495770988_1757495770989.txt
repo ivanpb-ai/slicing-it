@@ -1,0 +1,108 @@
+useLayoutOperations: Arranging layout for 39 nodes
+index-BCQjSbmB.js:198 🔧 Layout using current edges: 40
+index-BCQjSbmB.js:198 🔍 Processing edges for layout: 40 valid edges
+index-BCQjSbmB.js:198 🔗 Processing edge: network-1756644818254-767 -> cell-area-1
+index-BCQjSbmB.js:198 🔗 Processing edge: network-1756644818254-767 -> cell-area-2
+index-BCQjSbmB.js:198 🔗 Processing edge: cell-area-1 -> rrp-1
+index-BCQjSbmB.js:198 🔗 Processing edge: cell-area-1 -> rrp-2
+index-BCQjSbmB.js:198 🔗 Processing edge: cell-area-2 -> rrp-3
+index-BCQjSbmB.js:198 🔗 Processing edge: cell-area-2 -> rrp-4
+index-BCQjSbmB.js:198 🔗 Processing edge: cell-area-2 -> rrp-5
+index-BCQjSbmB.js:198 🔗 Processing edge: cell-area-1 -> rrp-6
+index-BCQjSbmB.js:198 🔗 Processing edge: rrp-6 -> rrpmember-1756644942621-7850
+index-BCQjSbmB.js:198 🔗 Processing edge: rrp-1 -> rrpmember-1756644950865-8003
+index-BCQjSbmB.js:198 🔗 Processing edge: rrp-1 -> rrpmember-1756644958037-3484
+index-BCQjSbmB.js:198 🔗 Processing edge: rrp-2 -> rrpmember-1756644977726-6227
+index-BCQjSbmB.js:198 🔗 Processing edge: rrp-2 -> rrpmember-1756644985042-5011
+index-BCQjSbmB.js:198 🔗 Processing edge: rrp-3 -> rrpmember-1756644995953-8793
+index-BCQjSbmB.js:198 🔗 Processing edge: rrp-3 -> rrpmember-1756645001616-4899
+index-BCQjSbmB.js:198 🔗 Processing edge: rrp-4 -> rrpmember-1756645128260-8642
+index-BCQjSbmB.js:198 🔗 Processing edge: rrp-5 -> rrpmember-1756645184438-4294
+index-BCQjSbmB.js:198 🔗 Processing edge: rrpmember-1756644942621-7850 -> s-nssai-1
+index-BCQjSbmB.js:198 🔗 Processing edge: rrpmember-1756644950865-8003 -> s-nssai-2
+index-BCQjSbmB.js:198 🔗 Processing edge: rrpmember-1756644958037-3484 -> s-nssai-3
+index-BCQjSbmB.js:198 🔗 Processing edge: rrpmember-1756644977726-6227 -> s-nssai-4
+index-BCQjSbmB.js:198 🔗 Processing edge: rrpmember-1756644985042-5011 -> s-nssai-5
+index-BCQjSbmB.js:198 🔗 Processing edge: rrpmember-1756644995953-8793 -> s-nssai-6
+index-BCQjSbmB.js:198 🔗 Processing edge: rrpmember-1756645001616-4899 -> s-nssai-7
+index-BCQjSbmB.js:198 🔗 Processing edge: rrpmember-1756645128260-8642 -> s-nssai-7
+index-BCQjSbmB.js:198 🔗 Processing edge: rrpmember-1756645184438-4294 -> s-nssai-7
+index-BCQjSbmB.js:198 🔗 Processing edge: s-nssai-1 -> dnn-1
+index-BCQjSbmB.js:198 🔗 Processing edge: s-nssai-2 -> dnn-3
+index-BCQjSbmB.js:198 🔗 Processing edge: s-nssai-3 -> dnn-4
+index-BCQjSbmB.js:198 🔗 Processing edge: s-nssai-4 -> dnn-5
+index-BCQjSbmB.js:198 🔗 Processing edge: s-nssai-5 -> dnn-6
+index-BCQjSbmB.js:198 🔗 Processing edge: s-nssai-6 -> dnn-7
+index-BCQjSbmB.js:198 🔗 Processing edge: s-nssai-7 -> dnn-8
+index-BCQjSbmB.js:198 🔗 Processing edge: dnn-1 -> fiveqi-3
+index-BCQjSbmB.js:198 🔗 Processing edge: dnn-3 -> fiveqi-59
+index-BCQjSbmB.js:198 🔗 Processing edge: dnn-4 -> fiveqi-75
+index-BCQjSbmB.js:198 🔗 Processing edge: dnn-5 -> fiveqi-7
+index-BCQjSbmB.js:198 🔗 Processing edge: dnn-6 -> fiveqi-11
+index-BCQjSbmB.js:198 🔗 Processing edge: dnn-7 -> fiveqi-71
+index-BCQjSbmB.js:198 🔗 Processing edge: dnn-8 -> fiveqi-79
+index-BCQjSbmB.js:198 Level assignments: Object
+index-BCQjSbmB.js:198 Parent-child relationships: Object
+index-BCQjSbmB.js:198 ✓ Single S-NSSAI s-nssai-2 centered under parent at (-1070, 1720)
+index-BCQjSbmB.js:198 ✓ Single S-NSSAI s-nssai-3 centered under parent at (-870, 1720)
+index-BCQjSbmB.js:198 ✓ Single S-NSSAI s-nssai-4 centered under parent at (-670, 1720)
+index-BCQjSbmB.js:198 ✓ Single S-NSSAI s-nssai-5 centered under parent at (-470, 1720)
+index-BCQjSbmB.js:198 ✓ Single S-NSSAI s-nssai-1 centered under parent at (-200, 1720)
+index-BCQjSbmB.js:198 ✓ Single S-NSSAI s-nssai-6 centered under parent at (130, 1720)
+index-BCQjSbmB.js:198 ✓ Single S-NSSAI s-nssai-7 centered under parent at (330, 1720)
+index-BCQjSbmB.js:198 🎯 Graph centering: minX=-1070, maxX=1050, width=2120, centerOffset=-10
+index-BCQjSbmB.js:198 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 39 nodes
+index-BCQjSbmB.js:198 🎯 Final Y spacing used: 180 px
+index-BCQjSbmB.js:198 🎯 Final calculated positions: Array(5)
+index-BCQjSbmB.js:198 🧹 Cleaned 0 invalid edges
+index-BCQjSbmB.js:198 🧹 Filtered duplicates: 39 -> 39 nodes
+index-BCQjSbmB.js:198 🧹 Updating edges: 40 -> 40 (filtered duplicates)
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 3
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 59
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 75
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 7
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 11
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 71
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 79
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 3
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 59
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 75
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 7
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 11
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 71
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 5QI Node rendering with data: Object
+index-BCQjSbmB.js:198 5QI Node fiveQIId: 79
+index-BCQjSbmB.js:198 Final QoS values for rendering: Object
+index-BCQjSbmB.js:198 DNN useEffect data object changed: Object
+index-BCQjSbmB.js:198 DNN useEffect data object changed: Object
+index-BCQjSbmB.js:198 DNN useEffect data object changed: Object
+index-BCQjSbmB.js:198 DNN useEffect data object changed: Object
+index-BCQjSbmB.js:198 DNN useEffect data object changed: Object
+index-BCQjSbmB.js:198 DNN useEffect data object changed: Object
+index-BCQjSbmB.js:198 DNN useEffect data object changed: Object
