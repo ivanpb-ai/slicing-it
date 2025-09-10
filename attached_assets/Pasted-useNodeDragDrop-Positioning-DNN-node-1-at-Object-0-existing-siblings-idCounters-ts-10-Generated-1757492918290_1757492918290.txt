@@ -1,0 +1,70 @@
+useNodeDragDrop: Positioning DNN node #1 at: Object (0 existing siblings)
+idCounters.ts:10 Generated new DNN ID: 3
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 3
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-3 under parent: s-nssai-2
+useSimpleChildNodeCreation.ts:133 ✅ Creating DNN node #1 at position: Object (0 existing siblings)
+useSimpleChildNodeCreation.ts:133 ✅ Creating DNN node #1 at position: Object (0 existing siblings)
+FlowInstance.tsx:80 FlowInstance: Rendering with 10 nodes, 8 edges
+DnnNode.tsx:21 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+DnnNode.tsx:21 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+useSimpleChildNodeCreation.ts:173 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 9
+useSimpleChildNodeCreation.ts:173 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-3
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-3
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+2useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-2->dnn-3 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 10 nodes, 9 edges
+NodeButton.tsx:34 NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: dnn
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 15
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 15
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: s-nssai-2
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: s-nssai-2
+useNodeRelationships.ts:35 Validating relationship: s-nssai -> dnn
+useNodeRelationships.ts:53 Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child dnn node under parent s-nssai-2
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: s-nssai
+useNodeDragDrop.ts:159 useNodeDragDrop: Positioning DNN node #2 at: Object (1 existing siblings)
+idCounters.ts:10 Generated new DNN ID: 4
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 4
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-4 under parent: s-nssai-2
+useSimpleChildNodeCreation.ts:133 ✅ Creating DNN node #2 at position: Object (1 existing siblings)
+useSimpleChildNodeCreation.ts:142 📍 Repositioned DNN sibling #1 to x=230
+useSimpleChildNodeCreation.ts:133 ✅ Creating DNN node #2 at position: Object (1 existing siblings)
+useSimpleChildNodeCreation.ts:142 📍 Repositioned DNN sibling #1 to x=230
+FlowInstance.tsx:80 FlowInstance: Rendering with 11 nodes, 9 edges
+DnnNode.tsx:21 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+DnnNode.tsx:21 DNN useEffect dnnCustomName: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+useSimpleChildNodeCreation.ts:173 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-4
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-4
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 10
+useSimpleChildNodeCreation.ts:173 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-4
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-4
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: Object
+2useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-2->dnn-4 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 11 nodes, 10 edges
+useNodeDragDrop.ts:169 useNodeDragDrop: Repositioning DNN sibling #1 to x=230
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again

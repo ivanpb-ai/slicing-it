@@ -156,7 +156,7 @@ export const useNodeDragDrop = (
                 y: parentNode.position.y + 200  // Position vertically below with spacing
               };
               
-              console.log(`useNodeDragDrop: Positioning DNN node #${totalNodes} at:`, childPosition, `(${existingDnnChildren.length} existing siblings)`);
+              console.log(`useNodeDragDrop: Positioning DNN node #${totalNodes} at x=${childPosition.x}, y=${childPosition.y} (${existingDnnChildren.length} existing siblings)`);
               
               // Create the new DNN node first
               createChildNode(nodeType, childPosition, parentId, fiveQIId);

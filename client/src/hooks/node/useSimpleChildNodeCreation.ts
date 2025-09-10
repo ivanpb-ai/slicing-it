@@ -112,35 +112,42 @@ export const useSimpleChildNodeCreation = (
         };
         console.log(`✅ Creating RRP node positioned below TAC parent:`, childPosition);
       } else if (type === 'dnn' && parentNode) {
-        // Position DNN nodes vertically below their S-NSSAI parent with horizontal spacing
-        const existingDnnChildren = prevNodes.filter(node => 
-          node.data?.parentId === parentId && node.data?.type === 'dnn'
-        );
-        
-        const spacing = 180; // Spacing between DNN nodes
-        const totalNodes = existingDnnChildren.length + 1; // Include the new node
-        
-        // Calculate starting position to center all nodes around parent
-        const totalWidth = (totalNodes - 1) * spacing;
-        const startX = parentNode.position.x - (totalWidth / 2);
-        
-        // Position the new node at the end of the sequence
-        childPosition = {
-          x: startX + (existingDnnChildren.length * spacing),
-          y: parentNode.position.y + 200  // Position vertically below with spacing
-        };
-        
-        console.log(`✅ Creating DNN node #${totalNodes} at position:`, childPosition, `(${existingDnnChildren.length} existing siblings)`);
-        
-        // IMPORTANT: Reposition existing DNN siblings to maintain symmetry
-        existingDnnChildren.forEach((siblingNode, index) => {
-          const newSiblingX = startX + (index * spacing);
-          siblingNode.position = {
-            x: newSiblingX,
-            y: parentNode.position.y + 200
+        // Check if position is already calculated (from drag-and-drop system)
+        if (position.x !== 0 || position.y !== 0) {
+          // Position already calculated by drag-and-drop system, use it directly
+          childPosition = position;
+          console.log(`✅ Using pre-calculated DNN position from drag-and-drop: x=${childPosition.x}, y=${childPosition.y}`);
+        } else {
+          // Position DNN nodes vertically below their S-NSSAI parent with horizontal spacing
+          const existingDnnChildren = prevNodes.filter(node => 
+            node.data?.parentId === parentId && node.data?.type === 'dnn'
+          );
+          
+          const spacing = 180; // Spacing between DNN nodes
+          const totalNodes = existingDnnChildren.length + 1; // Include the new node
+          
+          // Calculate starting position to center all nodes around parent
+          const totalWidth = (totalNodes - 1) * spacing;
+          const startX = parentNode.position.x - (totalWidth / 2);
+          
+          // Position the new node at the end of the sequence
+          childPosition = {
+            x: startX + (existingDnnChildren.length * spacing),
+            y: parentNode.position.y + 200  // Position vertically below with spacing
           };
-          console.log(`📍 Repositioned DNN sibling #${index + 1} to x=${newSiblingX}`);
-        });
+          
+          console.log(`✅ Creating DNN node #${totalNodes} at x=${childPosition.x}, y=${childPosition.y} (${existingDnnChildren.length} existing siblings)`);
+          
+          // IMPORTANT: Reposition existing DNN siblings to maintain symmetry
+          existingDnnChildren.forEach((siblingNode, index) => {
+            const newSiblingX = startX + (index * spacing);
+            siblingNode.position = {
+              x: newSiblingX,
+              y: parentNode.position.y + 200
+            };
+            console.log(`📍 Repositioned DNN sibling #${index + 1} to x=${newSiblingX}`);
+          });
+        }
       }
       
       const newNode: Node = {
