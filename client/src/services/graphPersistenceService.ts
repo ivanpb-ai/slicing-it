@@ -72,7 +72,6 @@ export class GraphPersistenceService {
 
   // Export and import methods with ReactFlow instance prioritization
   static exportGraphToFile(name: string | undefined, nodes: Node[], edges: Edge[]): string | null {
-    console.log('🔍 GraphPersistenceService: Export called with', nodes?.length || 0, 'nodes and', edges?.length || 0, 'edges');
     
     // DEBUG: Check what node types were passed as parameters
     if (nodes && nodes.length > 0) {

@@ -10,6 +10,7 @@ import { useNodeDuplication } from './node/useNodeDuplication';
 import { resetCounters} from '../utils/flowData/idCounters';
 import { cleanupOrphanedEdges } from '../utils/edgeCleanup';
 import { validateUniversalGuardrails } from '../utils/edgeGuardrails';
+import { MarkerType } from '@xyflow/react';
 
 import { EXAMPLE_GRAPH } from '../data/exampleGraph';
 
@@ -170,13 +171,21 @@ export const useNodeEditor = () => {
       
       if (Array.isArray(graphData.edges)) {
         const validEdges: Edge[] = graphData.edges.map(edge => ({
-          data: {},      // add missing optional fields if necessary
           ...edge,
+          data: { createdBy: 'manual', ...(edge as any).data },      // Ensure edge data exists
+          markerEnd: edge.markerEnd ? {
+            ...edge.markerEnd,
+            type: MarkerType.ArrowClosed  // Ensure proper type
+          } : {
+            type: MarkerType.ArrowClosed,
+            color: '#94a3b8',
+            width: 8,
+            height: 8,
+          }
         }));
         
         // 🛡️ GUARDRAIL: Validate edges to prevent multiple automatic parent connections
         const guardedEdges = validateUniversalGuardrails(validEdges, graphData.nodes || []);
-        console.log(`🛡️ Init Guardrail: Processed ${validEdges.length} → ${guardedEdges.length} edges`);
         
         setEdges(guardedEdges);
       } else {
