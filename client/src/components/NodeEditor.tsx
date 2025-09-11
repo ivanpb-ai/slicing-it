@@ -8,7 +8,6 @@ import FlowInstance from './flow/FlowInstance';
 import { SavedGraph } from '../hooks/types';
 import type { GraphData } from '../services/storage/GraphLocalStorageService';
 import { GraphLocalStorageService } from '../services/storage/GraphLocalStorageService';
-import { GraphExportImportService } from '../services/export/GraphExportImportService';
 import { GraphNodeProcessor } from '../services/processing/GraphNodeProcessor';
 import { NodeEditorProvider } from '../contexts/NodeEditorContext';
 import { toast } from 'sonner';
@@ -24,7 +23,6 @@ interface NodeEditorProps {
   loadGraph: () => boolean;
   deleteGraph: (name: string) => boolean;
   getSavedGraphs: () => SavedGraph[];
-  exportGraph: () => string | null;
   importGraph: (file: File) => void;
 }
 
@@ -37,7 +35,6 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   loadGraph,
   deleteGraph,
   getSavedGraphs,
-  exportGraph,
   importGraph
 }) => {
   const reactFlowInstance = useReactFlow();
