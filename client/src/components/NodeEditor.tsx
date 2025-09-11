@@ -65,23 +65,30 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   // CRITICAL FIX: Only sync when passed state has MORE items (like after import)
   // Don't sync when hook state has more items (like after creating new nodes)
   React.useEffect(() => {
-    // IMPROVED: Only sync if nodes length is significantly larger AND hookNodes isn't temporarily empty
-    // This prevents overwriting newly created nodes during state transitions
-    if (nodes.length > hookNodes.length && hookNodes.length > 0 && nodes.length > 0) {
+    // SMART SYNC: Allow imports but prevent DNN/5QI deletion
+    // Import scenario: nodes.length > hookNodes.length (e.g., 26 > 0 or 26 > 5)
+    // DNN creation scenario: hookNodes.length > nodes.length (e.g., 27 > 26) - should NOT sync
+    const shouldSync = nodes.length > hookNodes.length && nodes.length > 0;
+    const shouldPreventSync = hookNodes.length > nodes.length; // New nodes were created, don't overwrite
+    
+    if (shouldSync && !shouldPreventSync) {
       console.log(`NodeEditor: Syncing passed nodes (${nodes.length}) with hook nodes (${hookNodes.length}) - import detected`);
       hookSetNodes(nodes);
-    } else if (nodes.length > hookNodes.length) {
-      console.log(`NodeEditor: PREVENTED sync - nodes: ${nodes.length}, hookNodes: ${hookNodes.length} (avoiding DNN/5QI deletion)`);
+    } else if (shouldPreventSync) {
+      console.log(`NodeEditor: PREVENTED sync - nodes: ${nodes.length}, hookNodes: ${hookNodes.length} (protecting newly created DNN/5QI nodes)`);
     }
   }, [nodes, hookNodes.length, hookSetNodes]);
 
   React.useEffect(() => {
-    // IMPROVED: Only sync if edges length is significantly larger AND hookEdges isn't temporarily empty
-    if (edges.length > hookEdges.length && hookEdges.length > 0 && edges.length > 0) {
+    // SMART SYNC: Allow imports but prevent edge deletion
+    const shouldSync = edges.length > hookEdges.length && edges.length > 0;
+    const shouldPreventSync = hookEdges.length > edges.length; // New edges were created, don't overwrite
+    
+    if (shouldSync && !shouldPreventSync) {
       console.log(`NodeEditor: Syncing passed edges (${edges.length}) with hook edges (${hookEdges.length}) - import detected`);
       hookSetEdges(edges);
-    } else if (edges.length > hookEdges.length) {
-      console.log(`NodeEditor: PREVENTED edge sync - edges: ${edges.length}, hookEdges: ${hookEdges.length}`);
+    } else if (shouldPreventSync) {
+      console.log(`NodeEditor: PREVENTED edge sync - edges: ${edges.length}, hookEdges: ${hookEdges.length} (protecting newly created edges)`);
     }
   }, [edges, hookEdges.length, hookSetEdges]);
   

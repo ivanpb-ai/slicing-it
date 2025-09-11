@@ -1,0 +1,1349 @@
+{
+  "nodes": [
+    {
+      "id": "network-1757506172195-665",
+      "type": "customNode",
+      "position": {
+        "x": -4,
+        "y": 62
+      },
+      "data": {
+        "type": "network",
+        "label": "NETWORK Node",
+        "nodeId": "network-1757506172195-665"
+      },
+      "measured": {
+        "width": 170,
+        "height": 129
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "cell-area-1",
+      "type": "customNode",
+      "position": {
+        "x": -570,
+        "y": 357.7499084472656
+      },
+      "data": {
+        "type": "cell-area",
+        "label": "CELL-AREA Node",
+        "parentId": "network-1757506172195-665",
+        "nodeId": "cell-area-1",
+        "cellAreaId": 1,
+        "cellAreaDescription": "Sandhult",
+        "nodeNumber": 1,
+        "id": "cell-area-1",
+        "notes": "Main AstaZero automotive test track "
+      },
+      "measured": {
+        "width": 218,
+        "height": 185
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "cell-area-2",
+      "type": "customNode",
+      "position": {
+        "x": -26,
+        "y": 360
+      },
+      "data": {
+        "type": "cell-area",
+        "label": "CELL-AREA Node",
+        "parentId": "network-1757506172195-665",
+        "nodeId": "cell-area-2",
+        "cellAreaId": 2,
+        "cellAreaDescription": "Lindholmen",
+        "nodeNumber": 2,
+        "id": "cell-area-2",
+        "notes": "Area in Gothenburg with AZ, Ericsson and RISE offices"
+      },
+      "measured": {
+        "width": 218,
+        "height": 185
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "cell-area-3",
+      "type": "customNode",
+      "position": {
+        "x": 550,
+        "y": 360
+      },
+      "data": {
+        "type": "cell-area",
+        "label": "CELL-AREA Node",
+        "parentId": "network-1757506172195-665",
+        "nodeId": "cell-area-3",
+        "cellAreaId": 3,
+        "cellAreaDescription": "Trollhättan",
+        "nodeNumber": 3,
+        "id": "cell-area-3",
+        "notes": "Ex SAAB test track"
+      },
+      "measured": {
+        "width": 218,
+        "height": 185
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrp-1",
+      "type": "customNode",
+      "position": {
+        "x": -836,
+        "y": 750
+      },
+      "data": {
+        "type": "rrp",
+        "label": "RRP Node",
+        "parentId": "cell-area-1",
+        "nodeId": "rrp-1",
+        "rrpId": 1,
+        "extraData": {
+          "rrpPercentage": 100
+        },
+        "nodeNumber": 1,
+        "rrpName": "Premium",
+        "rrpBands": [
+          {
+            "name": "3500",
+            "dl": 50,
+            "ul": 50
+          },
+          {
+            "name": "1800",
+            "dl": 50,
+            "ul": 50
+          }
+        ]
+      },
+      "measured": {
+        "width": 346,
+        "height": 438
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrp-2",
+      "type": "customNode",
+      "position": {
+        "x": -478,
+        "y": 748
+      },
+      "data": {
+        "type": "rrp",
+        "label": "RRP Node",
+        "parentId": "cell-area-2",
+        "nodeId": "rrp-2",
+        "rrpId": 2,
+        "extraData": {
+          "rrpPercentage": 100
+        },
+        "nodeNumber": 2,
+        "rrpName": "Basic",
+        "rrpBands": [
+          {
+            "name": "3500",
+            "dl": 10,
+            "ul": 10
+          },
+          {
+            "name": "1800",
+            "dl": 50,
+            "ul": 50
+          }
+        ]
+      },
+      "measured": {
+        "width": 346,
+        "height": 438
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrp-3",
+      "type": "customNode",
+      "position": {
+        "x": -1190,
+        "y": 757.2490425109863
+      },
+      "data": {
+        "type": "rrp",
+        "label": "RRP Node",
+        "parentId": "cell-area-3",
+        "nodeId": "rrp-3",
+        "rrpId": 3,
+        "extraData": {
+          "rrpPercentage": 100
+        },
+        "nodeNumber": 3,
+        "rrpName": "Residual"
+      },
+      "measured": {
+        "width": 346,
+        "height": 255
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrpmember-1757506530003-2414",
+      "type": "customNode",
+      "position": {
+        "x": -832,
+        "y": 1384
+      },
+      "data": {
+        "type": "rrpmember",
+        "label": "RRPMEMBER Node",
+        "parentId": "rrp-1",
+        "nodeId": "rrpmember-1757506530003-2414",
+        "plmnValue": "240 01"
+      },
+      "measured": {
+        "width": 170,
+        "height": 109
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrpmember-1757506538231-5218",
+      "type": "customNode",
+      "position": {
+        "x": -666,
+        "y": 1386
+      },
+      "data": {
+        "type": "rrpmember",
+        "label": "RRPMEMBER Node",
+        "parentId": "rrp-1",
+        "nodeId": "rrpmember-1757506538231-5218",
+        "plmnValue": "240 49"
+      },
+      "measured": {
+        "width": 170,
+        "height": 109
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrpmember-1757506565261-1181",
+      "type": "customNode",
+      "position": {
+        "x": -464,
+        "y": 1382
+      },
+      "data": {
+        "type": "rrpmember",
+        "label": "RRPMEMBER Node",
+        "parentId": "rrp-2",
+        "nodeId": "rrpmember-1757506565261-1181",
+        "plmnValue": "240 01"
+      },
+      "measured": {
+        "width": 170,
+        "height": 109
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrpmember-1757506569403-9882",
+      "type": "customNode",
+      "position": {
+        "x": -310,
+        "y": 1384
+      },
+      "data": {
+        "type": "rrpmember",
+        "label": "RRPMEMBER Node",
+        "parentId": "rrp-2",
+        "nodeId": "rrpmember-1757506569403-9882",
+        "plmnValue": "240 49"
+      },
+      "measured": {
+        "width": 170,
+        "height": 109
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrpmember-1757506576193-4322",
+      "type": "customNode",
+      "position": {
+        "x": -1186,
+        "y": 1376
+      },
+      "data": {
+        "type": "rrpmember",
+        "label": "RRPMEMBER Node",
+        "parentId": "rrp-3",
+        "nodeId": "rrpmember-1757506576193-4322",
+        "plmnValue": "240 01"
+      },
+      "measured": {
+        "width": 170,
+        "height": 109
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrpmember-1757506581413-6257",
+      "type": "customNode",
+      "position": {
+        "x": -1022,
+        "y": 1380
+      },
+      "data": {
+        "type": "rrpmember",
+        "label": "RRPMEMBER Node",
+        "parentId": "rrp-3",
+        "nodeId": "rrpmember-1757506581413-6257",
+        "plmnValue": "240 49"
+      },
+      "measured": {
+        "width": 170,
+        "height": 109
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "s-nssai-1",
+      "type": "customNode",
+      "position": {
+        "x": -744,
+        "y": 1738
+      },
+      "data": {
+        "type": "s-nssai",
+        "label": "S-NSSAI Node",
+        "parentId": "rrpmember-1757506530003-2414",
+        "nodeId": "s-nssai-1",
+        "snssaiId": 1,
+        "nodeNumber": 1,
+        "sd": "1017",
+        "sst": "1"
+      },
+      "measured": {
+        "width": 197,
+        "height": 199
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "s-nssai-2",
+      "type": "customNode",
+      "position": {
+        "x": -499,
+        "y": 1740
+      },
+      "data": {
+        "type": "s-nssai",
+        "label": "S-NSSAI Node",
+        "parentId": "rrpmember-1757506538231-5218",
+        "nodeId": "s-nssai-2",
+        "snssaiId": 2,
+        "nodeNumber": 2,
+        "sd": "56",
+        "sst": "1"
+      },
+      "measured": {
+        "width": 197,
+        "height": 199
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "s-nssai-3",
+      "type": "customNode",
+      "position": {
+        "x": -253,
+        "y": 1740
+      },
+      "data": {
+        "type": "s-nssai",
+        "label": "S-NSSAI Node",
+        "parentId": "rrpmember-1757506538231-5218",
+        "nodeId": "s-nssai-3",
+        "snssaiId": 3,
+        "nodeNumber": 3,
+        "sd": "50",
+        "sst": "1"
+      },
+      "measured": {
+        "width": 197,
+        "height": 199
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "s-nssai-4",
+      "type": "customNode",
+      "position": {
+        "x": -18,
+        "y": 1738
+      },
+      "data": {
+        "type": "s-nssai",
+        "label": "S-NSSAI Node",
+        "parentId": "rrpmember-1757506565261-1181",
+        "nodeId": "s-nssai-4",
+        "snssaiId": 4,
+        "nodeNumber": 4,
+        "sd": "empty",
+        "sst": "1"
+      },
+      "measured": {
+        "width": 197,
+        "height": 199
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "s-nssai-5",
+      "type": "customNode",
+      "position": {
+        "x": 206,
+        "y": 1730
+      },
+      "data": {
+        "type": "s-nssai",
+        "label": "S-NSSAI Node",
+        "parentId": "rrpmember-1757506569403-9882",
+        "nodeId": "s-nssai-5",
+        "snssaiId": 5,
+        "nodeNumber": 5,
+        "sd": "55",
+        "sst": "1"
+      },
+      "measured": {
+        "width": 197,
+        "height": 199
+      },
+      "selected": true,
+      "dragging": false
+    },
+    {
+      "id": "s-nssai-6",
+      "type": "customNode",
+      "position": {
+        "x": -1200,
+        "y": 1738
+      },
+      "data": {
+        "type": "s-nssai",
+        "label": "S-NSSAI Node",
+        "parentId": "rrpmember-1757506576193-4322",
+        "nodeId": "s-nssai-6",
+        "snssaiId": 6,
+        "nodeNumber": 6,
+        "sd": "13714341",
+        "sst": "1"
+      },
+      "measured": {
+        "width": 197,
+        "height": 199
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "s-nssai-7",
+      "type": "customNode",
+      "position": {
+        "x": -1042,
+        "y": 1738
+      },
+      "data": {
+        "type": "s-nssai",
+        "label": "S-NSSAI Node",
+        "parentId": "rrpmember-1757506581413-6257",
+        "nodeId": "s-nssai-7",
+        "snssaiId": 7,
+        "nodeNumber": 7,
+        "sd": "1",
+        "sst": "1"
+      },
+      "measured": {
+        "width": 197,
+        "height": 199
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrp-4",
+      "type": "customNode",
+      "position": {
+        "x": 32,
+        "y": 730
+      },
+      "data": {
+        "type": "rrp",
+        "label": "RRP Node",
+        "parentId": "cell-area-2",
+        "nodeId": "rrp-4",
+        "rrpId": 4,
+        "extraData": {
+          "rrpPercentage": 100
+        },
+        "nodeNumber": 4,
+        "rrpName": "Premium",
+        "rrpBands": [
+          {
+            "name": "3500",
+            "dl": 20,
+            "ul": 20
+          },
+          {
+            "name": "1800",
+            "dl": 40,
+            "ul": 40
+          },
+          {
+            "name": "700",
+            "dl": 40,
+            "ul": 40
+          }
+        ]
+      },
+      "measured": {
+        "width": 346,
+        "height": 529
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrp-5",
+      "type": "customNode",
+      "position": {
+        "x": 386,
+        "y": 730
+      },
+      "data": {
+        "type": "rrp",
+        "label": "RRP Node",
+        "parentId": "cell-area-2",
+        "nodeId": "rrp-5",
+        "rrpId": 5,
+        "extraData": {
+          "rrpPercentage": 100
+        },
+        "nodeNumber": 5,
+        "rrpName": "Basic",
+        "rrpBands": [
+          {
+            "name": "3500",
+            "dl": 10,
+            "ul": 10
+          },
+          {
+            "name": "1800",
+            "dl": 10,
+            "ul": 10
+          },
+          {
+            "name": "700",
+            "dl": 10,
+            "ul": 10
+          }
+        ]
+      },
+      "measured": {
+        "width": 346,
+        "height": 529
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrpmember-1757507555654-9110",
+      "type": "customNode",
+      "position": {
+        "x": 48,
+        "y": 1360
+      },
+      "data": {
+        "type": "rrpmember",
+        "label": "RRPMEMBER Node",
+        "parentId": "rrp-4",
+        "nodeId": "rrpmember-1757507555654-9110",
+        "plmnValue": "240 01"
+      },
+      "measured": {
+        "width": 170,
+        "height": 109
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrpmember-1757507565770-444",
+      "type": "customNode",
+      "position": {
+        "x": 206,
+        "y": 1364
+      },
+      "data": {
+        "type": "rrpmember",
+        "label": "RRPMEMBER Node",
+        "parentId": "rrp-4",
+        "nodeId": "rrpmember-1757507565770-444",
+        "plmnValue": "240 49"
+      },
+      "measured": {
+        "width": 170,
+        "height": 109
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrpmember-1757507596048-2005",
+      "type": "customNode",
+      "position": {
+        "x": 406,
+        "y": 1366
+      },
+      "data": {
+        "type": "rrpmember",
+        "label": "RRPMEMBER Node",
+        "parentId": "rrp-5",
+        "nodeId": "rrpmember-1757507596048-2005",
+        "plmnValue": "240 01"
+      },
+      "measured": {
+        "width": 170,
+        "height": 109
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "rrpmember-1757507600617-6445",
+      "type": "customNode",
+      "position": {
+        "x": 560,
+        "y": 1366
+      },
+      "data": {
+        "type": "rrpmember",
+        "label": "RRPMEMBER Node",
+        "parentId": "rrp-5",
+        "nodeId": "rrpmember-1757507600617-6445",
+        "plmnValue": "240 49"
+      },
+      "measured": {
+        "width": 170,
+        "height": 109
+      },
+      "selected": false,
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "unified-network-1757506172195-665-cell-area-1",
+      "source": "network-1757506172195-665",
+      "target": "cell-area-1",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-network-1757506172195-665-cell-area-2",
+      "source": "network-1757506172195-665",
+      "target": "cell-area-2",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-network-1757506172195-665-cell-area-3",
+      "source": "network-1757506172195-665",
+      "target": "cell-area-3",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-cell-area-1-rrp-1",
+      "source": "cell-area-1",
+      "target": "rrp-1",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrp-1-rrpmember-1757506530003-2414",
+      "source": "rrp-1",
+      "target": "rrpmember-1757506530003-2414",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrp-1-rrpmember-1757506538231-5218",
+      "source": "rrp-1",
+      "target": "rrpmember-1757506538231-5218",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrp-2-rrpmember-1757506565261-1181",
+      "source": "rrp-2",
+      "target": "rrpmember-1757506565261-1181",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrp-2-rrpmember-1757506569403-9882",
+      "source": "rrp-2",
+      "target": "rrpmember-1757506569403-9882",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrp-3-rrpmember-1757506576193-4322",
+      "source": "rrp-3",
+      "target": "rrpmember-1757506576193-4322",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrp-3-rrpmember-1757506581413-6257",
+      "source": "rrp-3",
+      "target": "rrpmember-1757506581413-6257",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757506530003-2414-s-nssai-1",
+      "source": "rrpmember-1757506530003-2414",
+      "target": "s-nssai-1",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757506538231-5218-s-nssai-2",
+      "source": "rrpmember-1757506538231-5218",
+      "target": "s-nssai-2",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757506538231-5218-s-nssai-3",
+      "source": "rrpmember-1757506538231-5218",
+      "target": "s-nssai-3",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757506565261-1181-s-nssai-4",
+      "source": "rrpmember-1757506565261-1181",
+      "target": "s-nssai-4",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757506569403-9882-s-nssai-5",
+      "source": "rrpmember-1757506569403-9882",
+      "target": "s-nssai-5",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757506576193-4322-s-nssai-6",
+      "source": "rrpmember-1757506576193-4322",
+      "target": "s-nssai-6",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757506581413-6257-s-nssai-7",
+      "source": "rrpmember-1757506581413-6257",
+      "target": "s-nssai-7",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-cell-area-1-rrp-2",
+      "source": "cell-area-1",
+      "target": "rrp-2",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-cell-area-1-rrp-3",
+      "source": "cell-area-1",
+      "target": "rrp-3",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-cell-area-2-rrp-4",
+      "source": "cell-area-2",
+      "target": "rrp-4",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-cell-area-2-rrp-5",
+      "source": "cell-area-2",
+      "target": "rrp-5",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrp-4-rrpmember-1757507555654-9110",
+      "source": "rrp-4",
+      "target": "rrpmember-1757507555654-9110",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrp-4-rrpmember-1757507565770-444",
+      "source": "rrp-4",
+      "target": "rrpmember-1757507565770-444",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrp-5-rrpmember-1757507596048-2005",
+      "source": "rrp-5",
+      "target": "rrpmember-1757507596048-2005",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrp-5-rrpmember-1757507600617-6445",
+      "source": "rrp-5",
+      "target": "rrpmember-1757507600617-6445",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      },
+      "selected": false
+    },
+    {
+      "id": "unified-cell-area-3-rrp-4",
+      "source": "cell-area-3",
+      "target": "rrp-4",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-cell-area-3-rrp-5",
+      "source": "cell-area-3",
+      "target": "rrp-5",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-cell-area-2-rrp-3",
+      "source": "cell-area-2",
+      "target": "rrp-3",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-cell-area-3-rrp-3",
+      "source": "cell-area-3",
+      "target": "rrp-3",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757507555654-9110-s-nssai-1",
+      "source": "rrpmember-1757507555654-9110",
+      "target": "s-nssai-1",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757507565770-444-s-nssai-2",
+      "source": "rrpmember-1757507565770-444",
+      "target": "s-nssai-2",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757507565770-444-s-nssai-3",
+      "source": "rrpmember-1757507565770-444",
+      "target": "s-nssai-3",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757507596048-2005-s-nssai-4",
+      "source": "rrpmember-1757507596048-2005",
+      "target": "s-nssai-4",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "id": "unified-rrpmember-1757507600617-6445-s-nssai-5",
+      "source": "rrpmember-1757507600617-6445",
+      "target": "s-nssai-5",
+      "sourceHandle": "bottom-source",
+      "targetHandle": "top-target",
+      "type": "default",
+      "animated": false,
+      "style": {
+        "stroke": "#2563eb",
+        "strokeWidth": 3,
+        "opacity": 1
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#2563eb",
+        "width": 12,
+        "height": 12
+      }
+    }
+  ],
+  "exportTime": 1757584712054,
+  "exportMethod": "PROPS_STATE"
+}
