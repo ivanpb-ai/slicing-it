@@ -1,0 +1,417 @@
+NodeButton.tsx:34 NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: {x: -409, y: 1699.9999923706055}
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: dnn
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: -709, y: 2099.9999923706055}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 15
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 15
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: s-nssai-2
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: s-nssai-2
+useNodeRelationships.ts:35 Validating relationship: s-nssai -> dnn
+useNodeRelationships.ts:53 Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child dnn node under parent s-nssai-2
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: s-nssai
+useNodeDragDrop.ts:143 🎯 useNodeDragDrop: Creating DNN node under S-NSSAI s-nssai-2
+useNodeDragDrop.ts:148 🎯 useNodeDragDrop: Found 0 existing DNN children for S-NSSAI s-nssai-2
+useNodeDragDrop.ts:162 useNodeDragDrop: Positioning DNN node #1 at x=-699, y=1940 (0 existing siblings)
+useNodeDragDrop.ts:165 🎯 useNodeDragDrop: Calling createChildNode for DNN at position: {x: -699, y: 1940}
+idCounters.ts:10 Generated new DNN ID: 1
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 1
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-1 under parent: s-nssai-2
+useNodeDragDrop.ts:167 🎯 useNodeDragDrop: createChildNode call completed for DNN
+useSimpleChildNodeCreation.ts:119 ✅ Using pre-calculated DNN position from drag-and-drop: x=-699, y=1940
+useSimpleChildNodeCreation.ts:119 ✅ Using pre-calculated DNN position from drag-and-drop: x=-699, y=1940
+FlowInstance.tsx:80 FlowInstance: Rendering with 27 nodes, 34 edges
+NodeEditor.tsx:78 NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 27 (protecting newly created DNN/5QI nodes)
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+useSimpleChildNodeCreation.ts:179 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-2-dnn-1', source: 's-nssai-2', target: 'dnn-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 35
+useSimpleChildNodeCreation.ts:179 useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-1
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-1
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-2-dnn-1', source: 's-nssai-2', target: 'dnn-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-2->dnn-1 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-2->dnn-1 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 27 nodes, 35 edges
+NodeEditor.tsx:91 NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 35 (protecting newly created edges)
+useNodeDragDrop.ts:173 useNodeDragDrop: Starting repositioning of 0 DNN siblings
+useNodeDragDrop.ts:176 useNodeDragDrop: Found 27 total nodes for repositioning
+FlowInstance.tsx:80 FlowInstance: Rendering with 0 nodes, 35 edges
+NodeEditor.tsx:75 NodeEditor: Syncing passed nodes (26) with hook nodes (0) - import detected
+FlowInstance.tsx:80 FlowInstance: Rendering with 26 nodes, 35 edges
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1757506172195-665, type=network, nodeNumber=665
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-3, type=cell-area, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506530003-2414, type=rrpmember, nodeNumber=2414
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506538231-5218, type=rrpmember, nodeNumber=5218
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506565261-1181, type=rrpmember, nodeNumber=1181
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506569403-9882, type=rrpmember, nodeNumber=9882
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506576193-4322, type=rrpmember, nodeNumber=4322
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506581413-6257, type=rrpmember, nodeNumber=6257
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-7, type=s-nssai, nodeNumber=7
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-4, type=rrp, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-5, type=rrp, nodeNumber=5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507555654-9110, type=rrpmember, nodeNumber=9110
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507565770-444, type=rrpmember, nodeNumber=444
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507596048-2005, type=rrpmember, nodeNumber=2005
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507600617-6445, type=rrpmember, nodeNumber=6445
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1757506172195-665, type=network, nodeNumber=665
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-3, type=cell-area, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506530003-2414, type=rrpmember, nodeNumber=2414
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506538231-5218, type=rrpmember, nodeNumber=5218
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506565261-1181, type=rrpmember, nodeNumber=1181
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506569403-9882, type=rrpmember, nodeNumber=9882
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506576193-4322, type=rrpmember, nodeNumber=4322
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506581413-6257, type=rrpmember, nodeNumber=6257
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-7, type=s-nssai, nodeNumber=7
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-4, type=rrp, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-5, type=rrp, nodeNumber=5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507555654-9110, type=rrpmember, nodeNumber=9110
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507565770-444, type=rrpmember, nodeNumber=444
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507596048-2005, type=rrpmember, nodeNumber=2005
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507600617-6445, type=rrpmember, nodeNumber=6445
+useNodeDragDrop.ts:201 useNodeDragDrop: Force-applied repositioning for 0 DNN siblings
+FlowInstance.tsx:80 FlowInstance: Rendering with 27 nodes, 35 edges
+NodeEditor.tsx:78 NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 27 (protecting newly created DNN/5QI nodes)
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+NodeButton.tsx:34 NodeButton: Started dragging dnn button
+NodeButton.tsx:42 NodeButton: Set drag data to: dnn
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "dnn" at position: {x: 297, y: 1669.9999923706055}
+useDragDataParser.ts:3 parseDragData: Processing drag data: dnn
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: dnn
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 597, y: 1669.9999923706055}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 15
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 15
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: s-nssai-5
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: s-nssai-5
+useNodeRelationships.ts:35 Validating relationship: s-nssai -> dnn
+useNodeRelationships.ts:53 Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child dnn node under parent s-nssai-5
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: s-nssai
+useNodeDragDrop.ts:143 🎯 useNodeDragDrop: Creating DNN node under S-NSSAI s-nssai-5
+useNodeDragDrop.ts:148 🎯 useNodeDragDrop: Found 0 existing DNN children for S-NSSAI s-nssai-5
+useNodeDragDrop.ts:162 useNodeDragDrop: Positioning DNN node #1 at x=6, y=1930 (0 existing siblings)
+useNodeDragDrop.ts:165 🎯 useNodeDragDrop: Calling createChildNode for DNN at position: {x: 6, y: 1930}
+idCounters.ts:10 Generated new DNN ID: 2
+useSimpleChildNodeCreation.ts:37 Creating child DNN with ID: 2
+useSimpleChildNodeCreation.ts:70 Creating child dnn node with ID: dnn-2 under parent: s-nssai-5
+useNodeDragDrop.ts:167 🎯 useNodeDragDrop: createChildNode call completed for DNN
+useSimpleChildNodeCreation.ts:119 ✅ Using pre-calculated DNN position from drag-and-drop: x=6, y=1930
+useSimpleChildNodeCreation.ts:119 ✅ Using pre-calculated DNN position from drag-and-drop: x=6, y=1930
+FlowInstance.tsx:80 FlowInstance: Rendering with 28 nodes, 35 edges
+NodeEditor.tsx:78 NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 28 (protecting newly created DNN/5QI nodes)
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+useSimpleChildNodeCreation.ts:179 useSimpleChildNodeCreation: Creating edge from s-nssai-5 to dnn-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-5-dnn-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-5-dnn-2', source: 's-nssai-5', target: 'dnn-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 36
+useSimpleChildNodeCreation.ts:179 useSimpleChildNodeCreation: Creating edge from s-nssai-5 to dnn-2
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-s-nssai-5-dnn-2
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-s-nssai-5-dnn-2', source: 's-nssai-5', target: 'dnn-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-5->dnn-2 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge s-nssai-5->dnn-2 already exists
+FlowInstance.tsx:80 FlowInstance: Rendering with 28 nodes, 36 edges
+NodeEditor.tsx:91 NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 36 (protecting newly created edges)
+useNodeDragDrop.ts:173 useNodeDragDrop: Starting repositioning of 0 DNN siblings
+useNodeDragDrop.ts:176 useNodeDragDrop: Found 28 total nodes for repositioning
+FlowInstance.tsx:80 FlowInstance: Rendering with 0 nodes, 36 edges
+NodeEditor.tsx:75 NodeEditor: Syncing passed nodes (26) with hook nodes (0) - import detected
+FlowInstance.tsx:80 FlowInstance: Rendering with 26 nodes, 36 edges
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1757506172195-665, type=network, nodeNumber=665
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-3, type=cell-area, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506530003-2414, type=rrpmember, nodeNumber=2414
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506538231-5218, type=rrpmember, nodeNumber=5218
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506565261-1181, type=rrpmember, nodeNumber=1181
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506569403-9882, type=rrpmember, nodeNumber=9882
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506576193-4322, type=rrpmember, nodeNumber=4322
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506581413-6257, type=rrpmember, nodeNumber=6257
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-7, type=s-nssai, nodeNumber=7
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-4, type=rrp, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-5, type=rrp, nodeNumber=5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507555654-9110, type=rrpmember, nodeNumber=9110
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507565770-444, type=rrpmember, nodeNumber=444
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507596048-2005, type=rrpmember, nodeNumber=2005
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507600617-6445, type=rrpmember, nodeNumber=6445
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=network-1757506172195-665, type=network, nodeNumber=665
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=cell-area-3, type=cell-area, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506530003-2414, type=rrpmember, nodeNumber=2414
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506538231-5218, type=rrpmember, nodeNumber=5218
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506565261-1181, type=rrpmember, nodeNumber=1181
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506569403-9882, type=rrpmember, nodeNumber=9882
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506576193-4322, type=rrpmember, nodeNumber=4322
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757506581413-6257, type=rrpmember, nodeNumber=6257
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=s-nssai-7, type=s-nssai, nodeNumber=7
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-4, type=rrp, nodeNumber=4
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrp-5, type=rrp, nodeNumber=5
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507555654-9110, type=rrpmember, nodeNumber=9110
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507565770-444, type=rrpmember, nodeNumber=444
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507596048-2005, type=rrpmember, nodeNumber=2005
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=rrpmember-1757507600617-6445, type=rrpmember, nodeNumber=6445
+useNodeDragDrop.ts:201 useNodeDragDrop: Force-applied repositioning for 0 DNN siblings
+FlowInstance.tsx:80 FlowInstance: Rendering with 28 nodes, 36 edges
+NodeEditor.tsx:78 NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 28 (protecting newly created DNN/5QI nodes)
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+FiveQINodeButton.tsx:57 FiveQINodeButton: Started dragging 5QI 9
+FiveQINodeButton.tsx:62 FiveQINodeButton: Setting drag data: "fiveqi:9"
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "fiveqi:9" at position: {x: -369, y: 1895.9999923706055}
+useDragDataParser.ts:3 parseDragData: Processing drag data: fiveqi:9
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:25 parseDragData: Parsed 5QI format - ID: 9
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="fiveqi", fiveQIId="9"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: -469, y: 2095.9999923706055}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 3
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 3
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: dnn-1
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: dnn-1
+useNodeRelationships.ts:35 Validating relationship: dnn -> fiveqi
+useNodeRelationships.ts:64 Valid relationship confirmed: dnn -> fiveqi
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child fiveqi node under parent dnn-1
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: dnn
+useNodeDragDrop.ts:218 useNodeDragDrop: Child position calculated: {x: -979, y: 2040}
+useSimpleChildNodeCreation.ts:70 Creating child fiveqi node with ID: fiveqi-9 under parent: dnn-1
+FlowInstance.tsx:80 FlowInstance: Rendering with 29 nodes, 36 edges
+NodeEditor.tsx:78 NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 29 (protecting newly created DNN/5QI nodes)
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+useSimpleChildNodeCreation.ts:179 useSimpleChildNodeCreation: Creating edge from dnn-1 to fiveqi-9
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-dnn-1-fiveqi-9
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-dnn-1-fiveqi-9', source: 'dnn-1', target: 'fiveqi-9', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 37
+useSimpleChildNodeCreation.ts:179 useSimpleChildNodeCreation: Creating edge from dnn-1 to fiveqi-9
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-dnn-1-fiveqi-9
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-dnn-1-fiveqi-9', source: 'dnn-1', target: 'fiveqi-9', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge dnn-1->fiveqi-9 already exists
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge dnn-1->fiveqi-9 already exists
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FlowInstance.tsx:80 FlowInstance: Rendering with 29 nodes, 37 edges
+NodeEditor.tsx:91 NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 37 (protecting newly created edges)
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQINodeButton.tsx:57 FiveQINodeButton: Started dragging 5QI 79
+FiveQINodeButton.tsx:62 FiveQINodeButton: Setting drag data: "fiveqi:79"
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "fiveqi:79" at position: {x: 141, y: 1837.9999923706055}
+useDragDataParser.ts:3 parseDragData: Processing drag data: fiveqi:79
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:25 parseDragData: Parsed 5QI format - ID: 79
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="fiveqi", fiveQIId="79"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: {x: 441, y: 1837.9999923706055}
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 6
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 6
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: dnn-2
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: dnn-2
+useNodeRelationships.ts:35 Validating relationship: dnn -> fiveqi
+useNodeRelationships.ts:64 Valid relationship confirmed: dnn -> fiveqi
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child fiveqi node under parent dnn-2
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: dnn
+useNodeDragDrop.ts:218 useNodeDragDrop: Child position calculated: {x: -274, y: 2030}
+useSimpleChildNodeCreation.ts:70 Creating child fiveqi node with ID: fiveqi-79 under parent: dnn-2
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FlowInstance.tsx:80 FlowInstance: Rendering with 30 nodes, 37 edges
+NodeEditor.tsx:78 NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 30 (protecting newly created DNN/5QI nodes)
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-2', nodeId: 'fiveqi-79', fiveQIId: '79', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-2', nodeId: 'fiveqi-79', fiveQIId: '79', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+StandardNodeWrapper.tsx:57 StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+useSimpleChildNodeCreation.ts:179 useSimpleChildNodeCreation: Creating edge from dnn-2 to fiveqi-79
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-dnn-2-fiveqi-79
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-dnn-2-fiveqi-79', source: 'dnn-2', target: 'fiveqi-79', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useSimpleChildNodeCreation.ts:179 useSimpleChildNodeCreation: Creating edge from dnn-2 to fiveqi-79
+useUnifiedEdgeManager.ts:18 UnifiedEdgeManager: Creating edge unified-dnn-2-fiveqi-79
+useUnifiedEdgeManager.ts:50 UnifiedEdgeManager: Adding edge to state: {id: 'unified-dnn-2-fiveqi-79', source: 'dnn-2', target: 'fiveqi-79', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 38
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge dnn-2->fiveqi-79 already exists
+useUnifiedEdgeManager.ts:71 UnifiedEdgeManager: Total edges after addition: 38
+useUnifiedEdgeManager.ts:59 UnifiedEdgeManager: Edge dnn-2->fiveqi-79 already exists
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-2', nodeId: 'fiveqi-79', fiveQIId: '79', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-2', nodeId: 'fiveqi-79', fiveQIId: '79', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FlowInstance.tsx:80 FlowInstance: Rendering with 30 nodes, 38 edges
+NodeEditor.tsx:91 NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 38 (protecting newly created edges)
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-1', nodeId: 'fiveqi-9', fiveQIId: '9', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-2', nodeId: 'fiveqi-79', fiveQIId: '79', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:30 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'dnn-2', nodeId: 'fiveqi-79', fiveQIId: '79', …}
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+FiveQiNode.tsx:104 Final QoS values for rendering: {value: '79', resourceType: 'Non-GBR', priority: '65', packetDelay: '50 ms', service: 'V2X messages'}
+MainContent.tsx:55 MainContent: Export triggered
+MainContent.tsx:56 MainContent: Current state - nodes: 26 edges: 34
+useExportImportGraph.ts:20 🔍 useExportImportGraph.ts: Export function called with graphName: AZ v.0.4
+useExportImportGraph.ts:21 🔍 useExportImportGraph.ts: ReactFlow instance available: true
+useExportImportGraph.ts:28 🔍 useExportImportGraph.ts: Exporting current graph with 26 nodes and 34 edges
+useExportImportGraph.ts:31 🔍 useExportImportGraph.ts: Checking props state - nodes: 26 edges: 34
+useExportImportGraph.ts:33 🔍 useExportImportGraph.ts: Using props state for export (PRIORITY 1)
+useExportImportGraph.ts:37 🔍 useExportImportGraph.ts: Props state node types EXPANDED: (26) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+useExportImportGraph.ts:44 🔍 useExportImportGraph.ts: Props state type counts: {network: 1, cell-area: 3, rrp: 5, rrpmember: 10, s-nssai: 7}
+useExportImportGraph.ts:48 🔍 useExportImportGraph.ts: Props DNN nodes: 0 []
+useExportImportGraph.ts:49 🔍 useExportImportGraph.ts: Props 5QI nodes: 0 []
+useExportImportGraph.ts:59 🔍 useExportImportGraph.ts: ReactFlow instance type counts: {}
+useExportImportGraph.ts:63 🔍 useExportImportGraph.ts: ReactFlow DNN nodes: 0 []
+useExportImportGraph.ts:64 🔍 useExportImportGraph.ts: ReactFlow 5QI nodes: 0 []

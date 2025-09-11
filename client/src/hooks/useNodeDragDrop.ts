@@ -194,12 +194,10 @@ export const useNodeDragDrop = (
                     return node;
                   });
                   
-                  // Apply the updated positions with force refresh
-                  reactFlowInstance.setNodes([]);
-                  setTimeout(() => {
-                    reactFlowInstance.setNodes(updatedNodes);
-                    console.log(`useNodeDragDrop: Force-applied repositioning for ${existingDnnChildren.length} DNN siblings`);
-                  }, 50);
+                  // Apply the updated positions - FIXED: Don't clear nodes, just update directly
+                  console.log(`useNodeDragDrop: Applying repositioning for ${existingDnnChildren.length} DNN siblings directly (avoiding 0-node state)`);
+                  reactFlowInstance.setNodes(updatedNodes);
+                  console.log(`useNodeDragDrop: Applied repositioning for ${existingDnnChildren.length} DNN siblings`);
                 }
               }, 200); // Longer delay to ensure the new node is fully rendered
               
