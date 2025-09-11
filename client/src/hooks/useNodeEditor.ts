@@ -9,6 +9,7 @@ import { useNodeSelection } from './node/useNodeSelection';
 import { useNodeDuplication } from './node/useNodeDuplication';
 import { resetCounters} from '../utils/flowData/idCounters';
 import { cleanupOrphanedEdges } from '../utils/edgeCleanup';
+import { validateAllEdges } from '../utils/edgeGuardrails';
 
 import { EXAMPLE_GRAPH } from '../data/exampleGraph';
 
@@ -172,7 +173,12 @@ export const useNodeEditor = () => {
           data: {},      // add missing optional fields if necessary
           ...edge,
         }));
-        setEdges(validEdges);
+        
+        // 🛡️ GUARDRAIL: Validate edges to prevent multiple S-NSSAI→DNN connections
+        const guardedEdges = validateAllEdges(validEdges, graphData.nodes || []);
+        console.log(`🛡️ Init Guardrail: Processed ${validEdges.length} → ${guardedEdges.length} edges`);
+        
+        setEdges(guardedEdges);
       } else {
         setEdges([]);
       }

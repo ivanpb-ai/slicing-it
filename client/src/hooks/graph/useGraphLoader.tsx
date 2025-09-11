@@ -6,6 +6,7 @@ import { useGraphLoadingState } from './useGraphLoadingState';
 import { resetCounters } from '@/utils/flowData/idCounters';
 import type { GraphData } from '@/services/storage/GraphLocalStorageService';
 import { GraphNodeProcessor } from '@/services/processing/GraphNodeProcessor';
+import { validateAllEdges } from '@/utils/edgeGuardrails';
 
 export const useGraphLoader = (
   setNodes?: React.Dispatch<React.SetStateAction<Node[]>>,
@@ -132,7 +133,12 @@ export const useGraphLoader = (
         if (processedEdges.length > 0) {
           console.log('First edge being set:', JSON.stringify(processedEdges[0]));
         }
-        setEdges(processedEdges);
+        
+        // 🛡️ GUARDRAIL: Validate edges to prevent multiple S-NSSAI→DNN connections
+        const validatedEdges = validateAllEdges(processedEdges, processedNodes);
+        console.log(`🛡️ Import Guardrail: Processed ${processedEdges.length} → ${validatedEdges.length} edges`);
+        
+        setEdges(validatedEdges);
         
         // Store edges in global debug variable for debugging
         try {
