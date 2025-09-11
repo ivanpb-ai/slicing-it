@@ -54,7 +54,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       console.log('🔍 NodeEditor: Direct access - ReactFlow has', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
       
       if (flowNodes.length > 0) {
-        const fileName = graphName 
+        const fileName = graphName && typeof graphName === 'string'
           ? `${graphName.replace(/\s+/g, '_')}_${Date.now()}.json`
           : `graph_export_${Date.now()}.json`;
         
