@@ -1,0 +1,1000 @@
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+ StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+ StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+ StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+ StandardNodeWrapper: id=s-nssai-7, type=s-nssai, nodeNumber=7
+ StandardNodeWrapper: id=rrp-4, type=rrp, nodeNumber=4
+ StandardNodeWrapper: id=rrp-5, type=rrp, nodeNumber=5
+ StandardNodeWrapper: id=rrpmember-1757507555654-9110, type=rrpmember, nodeNumber=9110
+ StandardNodeWrapper: id=rrpmember-1757507565770-444, type=rrpmember, nodeNumber=444
+ StandardNodeWrapper: id=rrpmember-1757507596048-2005, type=rrpmember, nodeNumber=2005
+ StandardNodeWrapper: id=rrpmember-1757507600617-6445, type=rrpmember, nodeNumber=6445
+ Setting imported edges: 34
+ Using imported edges without auto-generation to prevent spurious connections
+ Original imported edges count: 34
+ Filtered edges count after duplicate removal: 34
+ NodeEditor: Syncing passed edges (34) with hook edges (0) - import detected
+ MainContentWithGraphOperations: edges updated 34
+ MainContentWithGraphOperations: Updated global debug edges with 34 edges
+ Index component: edges state updated, count: 34
+ Index component: First edge: {"id":"unified-network-1757506172195-665-cell-area-1","source":"network-1757506172195-665","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+ Index: Updated __DEBUG_NODE_EDITOR_EDGES with 34 edges
+ FlowInstance: Rendering with 26 nodes, 34 edges
+ Dispatching graph-loaded event after import
+ Fitting view for imported graph...
+ NodeButton: Started dragging dnn button
+ NodeButton: Set drag data to: dnn
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+ parseDragData: Processing drag data: dnn
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-2
+ useNodeDragDrop: Detected parent: s-nssai-2
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-2
+ useNodeDragDrop: Parent node found: s-nssai
+ 🎯 useNodeDragDrop: Creating DNN node under S-NSSAI s-nssai-2
+ 🎯 useNodeDragDrop: Found 0 existing DNN children for S-NSSAI s-nssai-2
+ useNodeDragDrop: Positioning DNN node #1 at x=-699, y=1940 (0 existing siblings)
+ 🎯 useNodeDragDrop: Calling createChildNode for DNN at position: Object
+ Generated new DNN ID: 1
+ Creating child DNN with ID: 1
+ Creating child dnn node with ID: dnn-1 under parent: s-nssai-2
+ 🎯 useNodeDragDrop: createChildNode call completed for DNN
+ ✅ Using pre-calculated DNN position from drag-and-drop: x=-699, y=1940
+ ✅ Using pre-calculated DNN position from drag-and-drop: x=-699, y=1940
+ FlowInstance: Rendering with 27 nodes, 34 edges
+ NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 27 (protecting newly created DNN/5QI nodes)
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-1
+ UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-1
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 35
+ useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-1
+ UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-1
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge s-nssai-2->dnn-1 already exists
+ UnifiedEdgeManager: Edge s-nssai-2->dnn-1 already exists
+ FlowInstance: Rendering with 27 nodes, 35 edges
+ NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 35 (protecting newly created edges)
+ useNodeDragDrop: Starting repositioning of 0 DNN siblings
+ useNodeDragDrop: Found 27 total nodes for repositioning
+ useNodeDragDrop: Applying repositioning for 0 DNN siblings directly (avoiding 0-node state)
+ useNodeDragDrop: Applied repositioning for 0 DNN siblings
+ NodeButton: Started dragging dnn button
+ NodeButton: Set drag data to: dnn
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+ parseDragData: Processing drag data: dnn
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-5
+ useNodeDragDrop: Detected parent: s-nssai-5
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-5
+ useNodeDragDrop: Parent node found: s-nssai
+ 🎯 useNodeDragDrop: Creating DNN node under S-NSSAI s-nssai-5
+ 🎯 useNodeDragDrop: Found 0 existing DNN children for S-NSSAI s-nssai-5
+ useNodeDragDrop: Positioning DNN node #1 at x=6, y=1930 (0 existing siblings)
+ 🎯 useNodeDragDrop: Calling createChildNode for DNN at position: Object
+ Generated new DNN ID: 2
+ Creating child DNN with ID: 2
+ Creating child dnn node with ID: dnn-2 under parent: s-nssai-5
+ 🎯 useNodeDragDrop: createChildNode call completed for DNN
+ ✅ Using pre-calculated DNN position from drag-and-drop: x=6, y=1930
+ ✅ Using pre-calculated DNN position from drag-and-drop: x=6, y=1930
+ FlowInstance: Rendering with 28 nodes, 35 edges
+ NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 28 (protecting newly created DNN/5QI nodes)
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+ useSimpleChildNodeCreation: Creating edge from s-nssai-5 to dnn-2
+ UnifiedEdgeManager: Creating edge unified-s-nssai-5-dnn-2
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 36
+ useSimpleChildNodeCreation: Creating edge from s-nssai-5 to dnn-2
+ UnifiedEdgeManager: Creating edge unified-s-nssai-5-dnn-2
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge s-nssai-5->dnn-2 already exists
+ UnifiedEdgeManager: Edge s-nssai-5->dnn-2 already exists
+ FlowInstance: Rendering with 28 nodes, 36 edges
+ NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 36 (protecting newly created edges)
+ useNodeDragDrop: Starting repositioning of 0 DNN siblings
+ useNodeDragDrop: Found 28 total nodes for repositioning
+ useNodeDragDrop: Applying repositioning for 0 DNN siblings directly (avoiding 0-node state)
+ useNodeDragDrop: Applied repositioning for 0 DNN siblings
+ FiveQINodeButton: Started dragging 5QI 9
+ FiveQINodeButton: Setting drag data: "fiveqi:9"
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "fiveqi:9" at position: Object
+ parseDragData: Processing drag data: fiveqi:9
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Parsed 5QI format - ID: 9
+ useNodeDragDrop: Parsed drag data: nodeType="fiveqi", fiveQIId="9"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 6
+ detectParentNodeFromDOM: Checking elements at point: 6
+ detectParentNodeFromDOM: Found parent node container with ID: dnn-1
+ useNodeDragDrop: Detected parent: dnn-1
+ Validating relationship: dnn -> fiveqi
+ Valid relationship confirmed: dnn -> fiveqi
+ useNodeDragDrop: Creating child fiveqi node under parent dnn-1
+ useNodeDragDrop: Parent node found: dnn
+ useNodeDragDrop: Child position calculated: Object
+ Creating child fiveqi node with ID: fiveqi-9 under parent: dnn-1
+ FlowInstance: Rendering with 29 nodes, 36 edges
+ NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 29 (protecting newly created DNN/5QI nodes)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+ StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ useSimpleChildNodeCreation: Creating edge from dnn-1 to fiveqi-9
+ UnifiedEdgeManager: Creating edge unified-dnn-1-fiveqi-9
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 37
+ useSimpleChildNodeCreation: Creating edge from dnn-1 to fiveqi-9
+ UnifiedEdgeManager: Creating edge unified-dnn-1-fiveqi-9
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge dnn-1->fiveqi-9 already exists
+ UnifiedEdgeManager: Edge dnn-1->fiveqi-9 already exists
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ FlowInstance: Rendering with 29 nodes, 37 edges
+ NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 37 (protecting newly created edges)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ FiveQINodeButton: Started dragging 5QI 79
+ FiveQINodeButton: Setting drag data: "fiveqi:79"
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "fiveqi:79" at position: Object
+ parseDragData: Processing drag data: fiveqi:79
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Parsed 5QI format - ID: 79
+ useNodeDragDrop: Parsed drag data: nodeType="fiveqi", fiveQIId="79"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 6
+ detectParentNodeFromDOM: Checking elements at point: 6
+ detectParentNodeFromDOM: Found parent node container with ID: dnn-2
+ useNodeDragDrop: Detected parent: dnn-2
+ Validating relationship: dnn -> fiveqi
+ Valid relationship confirmed: dnn -> fiveqi
+ useNodeDragDrop: Creating child fiveqi node under parent dnn-2
+ useNodeDragDrop: Parent node found: dnn
+ useNodeDragDrop: Child position calculated: Object
+ Creating child fiveqi node with ID: fiveqi-79 under parent: dnn-2
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ FlowInstance: Rendering with 30 nodes, 37 edges
+ NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 30 (protecting newly created DNN/5QI nodes)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+ StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+ useSimpleChildNodeCreation: Creating edge from dnn-2 to fiveqi-79
+ UnifiedEdgeManager: Creating edge unified-dnn-2-fiveqi-79
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 38
+ useSimpleChildNodeCreation: Creating edge from dnn-2 to fiveqi-79
+ UnifiedEdgeManager: Creating edge unified-dnn-2-fiveqi-79
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge dnn-2->fiveqi-79 already exists
+ UnifiedEdgeManager: Edge dnn-2->fiveqi-79 already exists
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ FlowInstance: Rendering with 30 nodes, 38 edges
+ NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 38 (protecting newly created edges)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ MainContent: Export triggered
+ MainContent: Current state - nodes: 26 edges: 34
+ 🔍 useExportImportGraph.ts: Export function called with graphName: AZ v.0.4
+ 🔍 useExportImportGraph.ts: ReactFlow instance available: true
+ 🔍 useExportImportGraph.ts: Exporting current graph with 26 nodes and 34 edges
+ 🔍 useExportImportGraph.ts: Checking props state - nodes: 26 edges: 34
+ 🔍 useExportImportGraph.ts: Using props state for export (PRIORITY 1)
+ 🔍 useExportImportGraph.ts: Props state node types EXPANDED: Array(26)
+ 🔍 useExportImportGraph.ts: Props state type counts: Object
+ 🔍 useExportImportGraph.ts: Props DNN nodes: 0 Array(0)
+ 🔍 useExportImportGraph.ts: Props 5QI nodes: 0 Array(0)
+ 🔍 useExportImportGraph.ts: ReactFlow instance type counts: Object
+ 🔍 useExportImportGraph.ts: ReactFlow DNN nodes: 0 Array(0)
+ 🔍 useExportImportGraph.ts: ReactFlow 5QI nodes: 0 Array(0)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ SaveLoadMenu: Import button clicked
+ FileImportInput: Force reset input before dialog
+ FileImportInput: Input reset completed
+ FileImportInput: Processing file: AZ_v.0.4_1757585318794.json, type: application/json, size: 31194
+ SaveLoadMenu: File selected for import: AZ_v.0.4_1757585318794.json, size: 31194 bytes
+ NodeEditor: Import handler called with file: AZ_v.0.4_1757585318794.json - delegating to parent import function
+ MainContent: Import triggered for AZ_v.0.4_1757585318794.json
+ NodeEditor: Successfully delegated import to parent function
+ FileImportInput: Successfully called onImport handler
+ Resetting all ID counters to 1
+ Updating ID counters based on nodes: 26
+ Updated S-NSSAI counter to: 8
+ Updated RRP counter to: 6
+ Updated Cell Area counter to: 4 (highest ID found: 3)
+ Clearing existing graph before import
+ Resetting viewport and clearing ReactFlow instance state
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ NodeEditor: PREVENTED sync - nodes: 0, hookNodes: 30 (protecting newly created DNN/5QI nodes)
+ NodeEditor: PREVENTED edge sync - edges: 0, hookEdges: 38 (protecting newly created edges)
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ Setting imported nodes: 26
+ Processed nodes with types: Array(26)
+ Setting nodes in React state
+ ReactFlow instance available: true
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 30 (protecting newly created DNN/5QI nodes)
+ Index component: nodes state updated, count: 26
+ Index component: First node: {"id":"network-1757506172195-665","type":"customNode","position":{"x":-4,"y":62},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1757506172195-665"},"measured":{"width":170,"height":129},"selected":false,"dragging":false}
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ Setting imported edges: 34
+ Using imported edges without auto-generation to prevent spurious connections
+ Original imported edges count: 34
+ Filtered edges count after duplicate removal: 34
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 38 (protecting newly created edges)
+ MainContentWithGraphOperations: edges updated 34
+ MainContentWithGraphOperations: Updated global debug edges with 34 edges
+ Index component: edges state updated, count: 34
+ Index component: First edge: {"id":"unified-network-1757506172195-665-cell-area-1","source":"network-1757506172195-665","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+ Index: Updated __DEBUG_NODE_EDITOR_EDGES with 34 edges
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ Dispatching graph-loaded event after import
+ Fitting view for imported graph...
+ Clear canvas button clicked in Toolbar
+ Clear canvas check - current nodes: 30 current edges: 38
+ Resetting all ID counters to 1
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ NodeEditor: PREVENTED sync - nodes: 0, hookNodes: 30 (protecting newly created DNN/5QI nodes)
+ NodeEditor: PREVENTED edge sync - edges: 0, hookEdges: 38 (protecting newly created edges)
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ FlowInstance: Rendering with 0 nodes, 0 edges
+ SaveLoadMenu: Import button clicked
+ FileImportInput: Force reset input before dialog
+ FileImportInput: Input reset completed
+ FileImportInput: Processing file: AZ_v.0.4_1757585318794.json, type: application/json, size: 31194
+ SaveLoadMenu: File selected for import: AZ_v.0.4_1757585318794.json, size: 31194 bytes
+ NodeEditor: Import handler called with file: AZ_v.0.4_1757585318794.json - delegating to parent import function
+ MainContent: Import triggered for AZ_v.0.4_1757585318794.json
+ NodeEditor: Successfully delegated import to parent function
+ FileImportInput: Successfully called onImport handler
+ Resetting all ID counters to 1
+ Updating ID counters based on nodes: 26
+ Updated S-NSSAI counter to: 8
+ Updated RRP counter to: 6
+ Updated Cell Area counter to: 4 (highest ID found: 3)
+ Clearing existing graph before import
+ Resetting viewport and clearing ReactFlow instance state
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ Setting imported nodes: 26
+ Processed nodes with types: Array(26)
+ Setting nodes in React state
+ ReactFlow instance available: true
+ NodeEditor: Syncing passed nodes (26) with hook nodes (0) - import detected
+ Index component: nodes state updated, count: 26
+ Index component: First node: {"id":"network-1757506172195-665","type":"customNode","position":{"x":-4,"y":62},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1757506172195-665"},"measured":{"width":170,"height":129},"selected":false,"dragging":false}
+ FlowInstance: Rendering with 26 nodes, 0 edges
+ StandardNodeWrapper: id=network-1757506172195-665, type=network, nodeNumber=665
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ StandardNodeWrapper: id=cell-area-3, type=cell-area, nodeNumber=3
+ StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+ StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+ StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+ StandardNodeWrapper: id=rrpmember-1757506530003-2414, type=rrpmember, nodeNumber=2414
+ StandardNodeWrapper: id=rrpmember-1757506538231-5218, type=rrpmember, nodeNumber=5218
+ StandardNodeWrapper: id=rrpmember-1757506565261-1181, type=rrpmember, nodeNumber=1181
+ StandardNodeWrapper: id=rrpmember-1757506569403-9882, type=rrpmember, nodeNumber=9882
+ StandardNodeWrapper: id=rrpmember-1757506576193-4322, type=rrpmember, nodeNumber=4322
+ StandardNodeWrapper: id=rrpmember-1757506581413-6257, type=rrpmember, nodeNumber=6257
+ StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+ StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+ StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+ StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+ StandardNodeWrapper: id=s-nssai-7, type=s-nssai, nodeNumber=7
+ StandardNodeWrapper: id=rrp-4, type=rrp, nodeNumber=4
+ StandardNodeWrapper: id=rrp-5, type=rrp, nodeNumber=5
+ StandardNodeWrapper: id=rrpmember-1757507555654-9110, type=rrpmember, nodeNumber=9110
+ StandardNodeWrapper: id=rrpmember-1757507565770-444, type=rrpmember, nodeNumber=444
+ StandardNodeWrapper: id=rrpmember-1757507596048-2005, type=rrpmember, nodeNumber=2005
+ StandardNodeWrapper: id=rrpmember-1757507600617-6445, type=rrpmember, nodeNumber=6445
+ StandardNodeWrapper: id=network-1757506172195-665, type=network, nodeNumber=665
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ StandardNodeWrapper: id=cell-area-3, type=cell-area, nodeNumber=3
+ StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+ StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+ StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+ StandardNodeWrapper: id=rrpmember-1757506530003-2414, type=rrpmember, nodeNumber=2414
+ StandardNodeWrapper: id=rrpmember-1757506538231-5218, type=rrpmember, nodeNumber=5218
+ StandardNodeWrapper: id=rrpmember-1757506565261-1181, type=rrpmember, nodeNumber=1181
+ StandardNodeWrapper: id=rrpmember-1757506569403-9882, type=rrpmember, nodeNumber=9882
+ StandardNodeWrapper: id=rrpmember-1757506576193-4322, type=rrpmember, nodeNumber=4322
+ StandardNodeWrapper: id=rrpmember-1757506581413-6257, type=rrpmember, nodeNumber=6257
+ StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+ StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+ StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+ StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+ StandardNodeWrapper: id=s-nssai-7, type=s-nssai, nodeNumber=7
+ StandardNodeWrapper: id=rrp-4, type=rrp, nodeNumber=4
+ StandardNodeWrapper: id=rrp-5, type=rrp, nodeNumber=5
+ StandardNodeWrapper: id=rrpmember-1757507555654-9110, type=rrpmember, nodeNumber=9110
+ StandardNodeWrapper: id=rrpmember-1757507565770-444, type=rrpmember, nodeNumber=444
+ StandardNodeWrapper: id=rrpmember-1757507596048-2005, type=rrpmember, nodeNumber=2005
+ StandardNodeWrapper: id=rrpmember-1757507600617-6445, type=rrpmember, nodeNumber=6445
+ Setting imported edges: 34
+ Using imported edges without auto-generation to prevent spurious connections
+ Original imported edges count: 34
+ Filtered edges count after duplicate removal: 34
+ NodeEditor: Syncing passed edges (34) with hook edges (0) - import detected
+ MainContentWithGraphOperations: edges updated 34
+ MainContentWithGraphOperations: Updated global debug edges with 34 edges
+ Index component: edges state updated, count: 34
+ Index component: First edge: {"id":"unified-network-1757506172195-665-cell-area-1","source":"network-1757506172195-665","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12}}
+ Index: Updated __DEBUG_NODE_EDITOR_EDGES with 34 edges
+ FlowInstance: Rendering with 26 nodes, 34 edges
+ Dispatching graph-loaded event after import
+ Fitting view for imported graph...
+ NodeButton: Started dragging dnn button
+ NodeButton: Set drag data to: dnn
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+ parseDragData: Processing drag data: dnn
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-2
+ useNodeDragDrop: Detected parent: s-nssai-2
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-2
+ useNodeDragDrop: Parent node found: s-nssai
+ 🎯 useNodeDragDrop: Creating DNN node under S-NSSAI s-nssai-2
+ 🎯 useNodeDragDrop: Found 0 existing DNN children for S-NSSAI s-nssai-2
+ useNodeDragDrop: Positioning DNN node #1 at x=-699, y=1940 (0 existing siblings)
+ 🎯 useNodeDragDrop: Calling createChildNode for DNN at position: Object
+ Generated new DNN ID: 1
+ Creating child DNN with ID: 1
+ Creating child dnn node with ID: dnn-1 under parent: s-nssai-2
+ 🎯 useNodeDragDrop: createChildNode call completed for DNN
+ ✅ Using pre-calculated DNN position from drag-and-drop: x=-699, y=1940
+ ✅ Using pre-calculated DNN position from drag-and-drop: x=-699, y=1940
+ FlowInstance: Rendering with 27 nodes, 34 edges
+ NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 27 (protecting newly created DNN/5QI nodes)
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-1
+ UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-1
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 35
+ useSimpleChildNodeCreation: Creating edge from s-nssai-2 to dnn-1
+ UnifiedEdgeManager: Creating edge unified-s-nssai-2-dnn-1
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge s-nssai-2->dnn-1 already exists
+ UnifiedEdgeManager: Edge s-nssai-2->dnn-1 already exists
+ FlowInstance: Rendering with 27 nodes, 35 edges
+ NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 35 (protecting newly created edges)
+ useNodeDragDrop: Starting repositioning of 0 DNN siblings
+ useNodeDragDrop: Found 27 total nodes for repositioning
+ useNodeDragDrop: Applying repositioning for 0 DNN siblings directly (avoiding 0-node state)
+ useNodeDragDrop: Applied repositioning for 0 DNN siblings
+ NodeButton: Started dragging dnn button
+ NodeButton: Set drag data to: dnn
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "dnn" at position: Object
+ parseDragData: Processing drag data: dnn
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: dnn
+ useNodeDragDrop: Parsed drag data: nodeType="dnn", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 15
+ detectParentNodeFromDOM: Checking elements at point: 15
+ detectParentNodeFromDOM: Found parent node container with ID: s-nssai-5
+ useNodeDragDrop: Detected parent: s-nssai-5
+ Validating relationship: s-nssai -> dnn
+ Valid relationship confirmed: s-nssai -> dnn (multiple allowed)
+ useNodeDragDrop: Creating child dnn node under parent s-nssai-5
+ useNodeDragDrop: Parent node found: s-nssai
+ 🎯 useNodeDragDrop: Creating DNN node under S-NSSAI s-nssai-5
+ 🎯 useNodeDragDrop: Found 0 existing DNN children for S-NSSAI s-nssai-5
+ useNodeDragDrop: Positioning DNN node #1 at x=6, y=1930 (0 existing siblings)
+ 🎯 useNodeDragDrop: Calling createChildNode for DNN at position: Object
+ Generated new DNN ID: 2
+ Creating child DNN with ID: 2
+ Creating child dnn node with ID: dnn-2 under parent: s-nssai-5
+ 🎯 useNodeDragDrop: createChildNode call completed for DNN
+ ✅ Using pre-calculated DNN position from drag-and-drop: x=6, y=1930
+ ✅ Using pre-calculated DNN position from drag-and-drop: x=6, y=1930
+ FlowInstance: Rendering with 28 nodes, 35 edges
+ NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 28 (protecting newly created DNN/5QI nodes)
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+ DNN useEffect dnnCustomName: Object
+ DNN useEffect data object changed: Object
+ StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+ useSimpleChildNodeCreation: Creating edge from s-nssai-5 to dnn-2
+ UnifiedEdgeManager: Creating edge unified-s-nssai-5-dnn-2
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 36
+ useSimpleChildNodeCreation: Creating edge from s-nssai-5 to dnn-2
+ UnifiedEdgeManager: Creating edge unified-s-nssai-5-dnn-2
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge s-nssai-5->dnn-2 already exists
+ UnifiedEdgeManager: Edge s-nssai-5->dnn-2 already exists
+ FlowInstance: Rendering with 28 nodes, 36 edges
+ NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 36 (protecting newly created edges)
+ useNodeDragDrop: Starting repositioning of 0 DNN siblings
+ useNodeDragDrop: Found 28 total nodes for repositioning
+ useNodeDragDrop: Applying repositioning for 0 DNN siblings directly (avoiding 0-node state)
+ useNodeDragDrop: Applied repositioning for 0 DNN siblings
+ FiveQINodeButton: Started dragging 5QI 9
+ FiveQINodeButton: Setting drag data: "fiveqi:9"
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "fiveqi:9" at position: Object
+ parseDragData: Processing drag data: fiveqi:9
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Parsed 5QI format - ID: 9
+ useNodeDragDrop: Parsed drag data: nodeType="fiveqi", fiveQIId="9"
+ useNodeDragDrop: Elements at drop point: 3
+ detectParentNodeFromDOM: Checking elements at point: 3
+ detectParentNodeFromDOM: Found parent node container with ID: dnn-1
+ useNodeDragDrop: Detected parent: dnn-1
+ Validating relationship: dnn -> fiveqi
+ Valid relationship confirmed: dnn -> fiveqi
+ useNodeDragDrop: Creating child fiveqi node under parent dnn-1
+ useNodeDragDrop: Parent node found: dnn
+ useNodeDragDrop: Child position calculated: Object
+ Creating child fiveqi node with ID: fiveqi-9 under parent: dnn-1
+ FlowInstance: Rendering with 29 nodes, 36 edges
+ NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 29 (protecting newly created DNN/5QI nodes)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+ StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ useSimpleChildNodeCreation: Creating edge from dnn-1 to fiveqi-9
+ UnifiedEdgeManager: Creating edge unified-dnn-1-fiveqi-9
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 37
+ useSimpleChildNodeCreation: Creating edge from dnn-1 to fiveqi-9
+ UnifiedEdgeManager: Creating edge unified-dnn-1-fiveqi-9
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge dnn-1->fiveqi-9 already exists
+ UnifiedEdgeManager: Edge dnn-1->fiveqi-9 already exists
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ FlowInstance: Rendering with 29 nodes, 37 edges
+ NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 37 (protecting newly created edges)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ FiveQINodeButton: Started dragging 5QI 79
+ FiveQINodeButton: Setting drag data: "fiveqi:79"
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "fiveqi:79" at position: Object
+ parseDragData: Processing drag data: fiveqi:79
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Parsed 5QI format - ID: 79
+ useNodeDragDrop: Parsed drag data: nodeType="fiveqi", fiveQIId="79"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 6
+ detectParentNodeFromDOM: Checking elements at point: 6
+ detectParentNodeFromDOM: Found parent node container with ID: dnn-2
+ useNodeDragDrop: Detected parent: dnn-2
+ Validating relationship: dnn -> fiveqi
+ Valid relationship confirmed: dnn -> fiveqi
+ useNodeDragDrop: Creating child fiveqi node under parent dnn-2
+ useNodeDragDrop: Parent node found: dnn
+ useNodeDragDrop: Child position calculated: Object
+ Creating child fiveqi node with ID: fiveqi-79 under parent: dnn-2
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ FlowInstance: Rendering with 30 nodes, 37 edges
+ NodeEditor: PREVENTED sync - nodes: 26, hookNodes: 30 (protecting newly created DNN/5QI nodes)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+ StandardNodeWrapper: id=fiveqi-79, type=fiveqi, nodeNumber=79
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ useSimpleChildNodeCreation: Creating edge from dnn-2 to fiveqi-79
+ UnifiedEdgeManager: Creating edge unified-dnn-2-fiveqi-79
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 38
+ useSimpleChildNodeCreation: Creating edge from dnn-2 to fiveqi-79
+ UnifiedEdgeManager: Creating edge unified-dnn-2-fiveqi-79
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Edge dnn-2->fiveqi-79 already exists
+ UnifiedEdgeManager: Edge dnn-2->fiveqi-79 already exists
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 79
+ Looking up 5QI with ID: "79"
+ Found matching 5QI for ID "79": Object
+ Final QoS values for rendering: Object
+ FlowInstance: Rendering with 30 nodes, 38 edges
+ NodeEditor: PREVENTED edge sync - edges: 34, hookEdges: 38 (protecting newly created edges)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+MainContent.tsx:55 MainContent: Export triggered
+MainContent.tsx:56 MainContent: Current state - nodes: 26 edges: 34
+useExportImportGraph.ts:20 🔍 useExportImportGraph.ts: Export function called with graphName: AZ v.0.5
+useExportImportGraph.ts:21 🔍 useExportImportGraph.ts: ReactFlow instance available: true
+useExportImportGraph.ts:28 🔍 useExportImportGraph.ts: Exporting current graph with 26 nodes and 34 edges
+useExportImportGraph.ts:31 🔍 useExportImportGraph.ts: Checking props state - nodes: 26 edges: 34
+useExportImportGraph.ts:33 🔍 useExportImportGraph.ts: Using props state for export (PRIORITY 1)
+useExportImportGraph.ts:37 🔍 useExportImportGraph.ts: Props state node types EXPANDED: Array(26)
+useExportImportGraph.ts:44 🔍 useExportImportGraph.ts: Props state type counts: Object
+useExportImportGraph.ts:48 🔍 useExportImportGraph.ts: Props DNN nodes: 0 Array(0)
+useExportImportGraph.ts:49 🔍 useExportImportGraph.ts: Props 5QI nodes: 0 Array(0)
+useExportImportGraph.ts:59 🔍 useExportImportGraph.ts: ReactFlow instance type counts: Object
+useExportImportGraph.ts:63 🔍 useExportImportGraph.ts: ReactFlow DNN nodes: 0 Array(0)
+useExportImportGraph.ts:64 🔍 useExportImportGraph.ts: ReactFlow 5QI nodes: 0 Array(0)
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
+FiveQiNode.tsx:30 5QI Node rendering with data: Object
+FiveQiNode.tsx:31 5QI Node fiveQIId: 79
+fiveQIUtils.ts:24 Looking up 5QI with ID: "79"
+fiveQIUtils.ts:33 Found matching 5QI for ID "79": Object
+FiveQiNode.tsx:104 Final QoS values for rendering: Object
