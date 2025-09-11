@@ -43,6 +43,48 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   const reactFlowInstance = useReactFlow();
   const reactFlowWrapper = useRef<HTMLDivElement>(null);
 
+  // SIMPLIFIED: Direct export using ReactFlow instance inside provider context
+  const directExportGraph = useCallback((graphName?: string): string | null => {
+    console.log('🔍 NodeEditor: Direct export called with ReactFlow instance');
+    console.log('🔍 NodeEditor: ReactFlow instance available:', !!reactFlowInstance);
+    
+    if (reactFlowInstance) {
+      const flowNodes = reactFlowInstance.getNodes();
+      const flowEdges = reactFlowInstance.getEdges();
+      console.log('🔍 NodeEditor: Direct access - ReactFlow has', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
+      
+      if (flowNodes.length > 0) {
+        const fileName = graphName 
+          ? `${graphName.replace(/\s+/g, '_')}_${Date.now()}.json`
+          : `graph_export_${Date.now()}.json`;
+        
+        const graphData = {
+          nodes: flowNodes,
+          edges: flowEdges,
+          exportTime: Date.now(),
+          exportMethod: 'DIRECT_REACTFLOW_ACCESS'
+        };
+        
+        const dataStr = JSON.stringify(graphData, null, 2);
+        const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
+        
+        const downloadLink = document.createElement('a');
+        downloadLink.setAttribute('href', dataUri);
+        downloadLink.setAttribute('download', fileName);
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+        
+        toast.success(`Graph exported with ${flowNodes.length} nodes using direct ReactFlow access!`);
+        return dataStr;
+      }
+    }
+    
+    console.error('🔍 NodeEditor: No ReactFlow instance or empty graph');
+    toast.error('Cannot export: no graph data available');
+    return null;
+  }, [reactFlowInstance]);
+
   const {
     nodes: hookNodes,
     edges: hookEdges,
@@ -61,6 +103,40 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     clearCanvas,
     initializeCanvas
   } = useNodeEditor();
+
+  // DEBUG: Temporary debug export button to validate fix
+  const debugExportTest = useCallback(() => {
+    console.log('🧪 DEBUG EXPORT TEST:');
+    console.log('🧪 ReactFlow instance available:', !!reactFlowInstance);
+    
+    if (reactFlowInstance) {
+      const flowNodes = reactFlowInstance.getNodes();
+      const flowEdges = reactFlowInstance.getEdges();
+      console.log('🧪 ReactFlow nodes count:', flowNodes.length);
+      console.log('🧪 ReactFlow edges count:', flowEdges.length);
+      
+      // Check for DNN and 5QI nodes specifically
+      const dnnNodes = flowNodes.filter(node => node.data?.type === 'dnn');
+      const fiveQiNodes = flowNodes.filter(node => node.data?.type === 'fiveqi');
+      console.log('🧪 DNN nodes found:', dnnNodes.length, dnnNodes.map(n => ({ id: n.id, type: n.data?.type })));
+      console.log('🧪 5QI nodes found:', fiveQiNodes.length, fiveQiNodes.map(n => ({ id: n.id, type: n.data?.type })));
+      
+      const allNodeTypes = flowNodes.reduce((acc, node) => {
+        const type = node.data?.type;
+        acc[type] = (acc[type] || 0) + 1;
+        return acc;
+      }, {});
+      console.log('🧪 All node types in ReactFlow:', allNodeTypes);
+      
+      toast.success(`DEBUG: ReactFlow has ${flowNodes.length} nodes (${dnnNodes.length} DNN, ${fiveQiNodes.length} 5QI)`);
+    } else {
+      console.error('🧪 DEBUG: No ReactFlow instance available');
+      toast.error('DEBUG: No ReactFlow instance');
+    }
+    
+    console.log('🧪 Props nodes count:', nodes?.length || 0);
+    console.log('🧪 Hook nodes count:', hookNodes?.length || 0);
+  }, [reactFlowInstance, nodes, hookNodes]);
 
   // CRITICAL FIX: Only sync when passed state has MORE items (like after import)
   // Don't sync when hook state has more items (like after creating new nodes)
@@ -508,7 +584,7 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
           onSave={handleSaveGraph}
           onLoad={handleLoadGraph}
           onDelete={deleteGraph}
-          onExport={exportGraph}
+          onExport={directExportGraph}
           onImport={handleImportGraph}
           getSavedGraphs={getSavedGraphs}
           onLoadGraphFromStorage={handleLoadGraphFromStorage}
