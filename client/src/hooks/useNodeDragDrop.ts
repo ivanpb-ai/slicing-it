@@ -133,15 +133,19 @@ export const useNodeDragDrop = (
                 dimensions.height
               );
               console.log(`useNodeDragDrop: Positioning 5QI node below DNN at:`, childPosition);
+              console.log(`🎯 useNodeDragDrop: Calling createChildNode for 5QI at position:`, childPosition);
               createChildNode(nodeType, childPosition, parentId, fiveQIId);
+              console.log(`🎯 useNodeDragDrop: createChildNode call completed for 5QI`);
               toast.success(`Added 5QI ${fiveQIId || 'node'} as child of DNN node`);
             } 
             // Special positioning for DNN nodes under S-NSSAI nodes
             else if (nodeType === 'dnn' && parentNode.data?.type === 's-nssai') {
+              console.log(`🎯 useNodeDragDrop: Creating DNN node under S-NSSAI ${parentId}`);
               // Find existing DNN children of this S-NSSAI parent
               const existingDnnChildren = existingNodes.filter(node => 
                 node.data?.parentId === parentId && node.data?.type === 'dnn'
               );
+              console.log(`🎯 useNodeDragDrop: Found ${existingDnnChildren.length} existing DNN children for S-NSSAI ${parentId}`);
               
               const spacing = 300; // Much larger spacing between DNN nodes to ensure no overlap
               const totalNodes = existingDnnChildren.length + 1; // Include the new node
@@ -158,7 +162,9 @@ export const useNodeDragDrop = (
               console.log(`useNodeDragDrop: Positioning DNN node #${totalNodes} at x=${childPosition.x}, y=${childPosition.y} (${existingDnnChildren.length} existing siblings)`);
               
               // Create the new DNN node first
+              console.log(`🎯 useNodeDragDrop: Calling createChildNode for DNN at position:`, childPosition);
               createChildNode(nodeType, childPosition, parentId, fiveQIId);
+              console.log(`🎯 useNodeDragDrop: createChildNode call completed for DNN`);
               
               // IMPORTANT: Reposition existing DNN siblings to maintain symmetry
               // Use multiple attempts to ensure ReactFlow updates properly
