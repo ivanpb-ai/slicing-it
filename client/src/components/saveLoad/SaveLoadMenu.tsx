@@ -77,7 +77,7 @@ const SaveLoadMenu: React.FC<SaveLoadMenuProps> = ({
       
       <MenuButton 
         icon={DownloadIcon} 
-        onClick={onExport}
+        onClick={() => onExport()}
         title="Export Graph"
       />
       
