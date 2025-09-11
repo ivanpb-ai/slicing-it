@@ -44,9 +44,12 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   const directExportGraph = useCallback((graphName?: string): string | null => {
     console.log('🔍 NodeEditor: Direct export called with ReactFlow instance');
     console.log('🔍 NodeEditor: ReactFlow instance available:', !!reactFlowInstance);
+    console.log('🔍 NodeEditor: graphName parameter passed:', graphName);
     
     // Get name from user if not provided
+    console.log('🔍 NodeEditor: About to show naming prompt...');
     const exportName = graphName || window.prompt('Enter a name for the exported file (optional):') || undefined;
+    console.log('🔍 NodeEditor: User entered name:', exportName);
     
     if (reactFlowInstance) {
       const flowNodes = reactFlowInstance.getNodes();
