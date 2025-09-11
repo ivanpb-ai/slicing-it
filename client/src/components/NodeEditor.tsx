@@ -48,14 +48,17 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     console.log('🔍 NodeEditor: Direct export called with ReactFlow instance');
     console.log('🔍 NodeEditor: ReactFlow instance available:', !!reactFlowInstance);
     
+    // Get name from user if not provided
+    const exportName = graphName || window.prompt('Enter a name for the exported file (optional):') || undefined;
+    
     if (reactFlowInstance) {
       const flowNodes = reactFlowInstance.getNodes();
       const flowEdges = reactFlowInstance.getEdges();
       console.log('🔍 NodeEditor: Direct access - ReactFlow has', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
       
       if (flowNodes.length > 0) {
-        const fileName = graphName && typeof graphName === 'string'
-          ? `${graphName.replace(/\s+/g, '_')}_${Date.now()}.json`
+        const fileName = exportName && typeof exportName === 'string'
+          ? `${exportName.replace(/\s+/g, '_')}_${Date.now()}.json`
           : `graph_export_${Date.now()}.json`;
         
         const graphData = {
@@ -104,39 +107,6 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     initializeCanvas
   } = useNodeEditor();
 
-  // DEBUG: Temporary debug export button to validate fix
-  const debugExportTest = useCallback(() => {
-    console.log('🧪 DEBUG EXPORT TEST:');
-    console.log('🧪 ReactFlow instance available:', !!reactFlowInstance);
-    
-    if (reactFlowInstance) {
-      const flowNodes = reactFlowInstance.getNodes();
-      const flowEdges = reactFlowInstance.getEdges();
-      console.log('🧪 ReactFlow nodes count:', flowNodes.length);
-      console.log('🧪 ReactFlow edges count:', flowEdges.length);
-      
-      // Check for DNN and 5QI nodes specifically
-      const dnnNodes = flowNodes.filter(node => node.data?.type === 'dnn');
-      const fiveQiNodes = flowNodes.filter(node => node.data?.type === 'fiveqi');
-      console.log('🧪 DNN nodes found:', dnnNodes.length, dnnNodes.map(n => ({ id: n.id, type: n.data?.type })));
-      console.log('🧪 5QI nodes found:', fiveQiNodes.length, fiveQiNodes.map(n => ({ id: n.id, type: n.data?.type })));
-      
-      const allNodeTypes = flowNodes.reduce((acc, node) => {
-        const type = node.data?.type;
-        acc[type] = (acc[type] || 0) + 1;
-        return acc;
-      }, {});
-      console.log('🧪 All node types in ReactFlow:', allNodeTypes);
-      
-      toast.success(`DEBUG: ReactFlow has ${flowNodes.length} nodes (${dnnNodes.length} DNN, ${fiveQiNodes.length} 5QI)`);
-    } else {
-      console.error('🧪 DEBUG: No ReactFlow instance available');
-      toast.error('DEBUG: No ReactFlow instance');
-    }
-    
-    console.log('🧪 Props nodes count:', nodes?.length || 0);
-    console.log('🧪 Hook nodes count:', hookNodes?.length || 0);
-  }, [reactFlowInstance, nodes, hookNodes]);
 
   // CRITICAL FIX: Only sync when passed state has MORE items (like after import)
   // Don't sync when hook state has more items (like after creating new nodes)
