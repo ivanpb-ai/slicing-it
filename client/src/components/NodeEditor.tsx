@@ -65,16 +65,23 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   // CRITICAL FIX: Only sync when passed state has MORE items (like after import)
   // Don't sync when hook state has more items (like after creating new nodes)
   React.useEffect(() => {
-    if (nodes.length > hookNodes.length) {
+    // IMPROVED: Only sync if nodes length is significantly larger AND hookNodes isn't temporarily empty
+    // This prevents overwriting newly created nodes during state transitions
+    if (nodes.length > hookNodes.length && hookNodes.length > 0 && nodes.length > 0) {
       console.log(`NodeEditor: Syncing passed nodes (${nodes.length}) with hook nodes (${hookNodes.length}) - import detected`);
       hookSetNodes(nodes);
+    } else if (nodes.length > hookNodes.length) {
+      console.log(`NodeEditor: PREVENTED sync - nodes: ${nodes.length}, hookNodes: ${hookNodes.length} (avoiding DNN/5QI deletion)`);
     }
   }, [nodes, hookNodes.length, hookSetNodes]);
 
   React.useEffect(() => {
-    if (edges.length > hookEdges.length) {
+    // IMPROVED: Only sync if edges length is significantly larger AND hookEdges isn't temporarily empty
+    if (edges.length > hookEdges.length && hookEdges.length > 0 && edges.length > 0) {
       console.log(`NodeEditor: Syncing passed edges (${edges.length}) with hook edges (${hookEdges.length}) - import detected`);
       hookSetEdges(edges);
+    } else if (edges.length > hookEdges.length) {
+      console.log(`NodeEditor: PREVENTED edge sync - edges: ${edges.length}, hookEdges: ${hookEdges.length}`);
     }
   }, [edges, hookEdges.length, hookSetEdges]);
   
