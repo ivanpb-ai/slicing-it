@@ -27,56 +27,50 @@ export const useExportImportGraph = (
         
       console.log('🔍 useExportImportGraph.ts: Exporting current graph with', nodes?.length || 0, 'nodes and', edges?.length || 0, 'edges');
       
-      // SMART PRIORITY: Check both state sources and use the one with more nodes
-      console.log('🔍 useExportImportGraph.ts: Checking props state - nodes:', nodes?.length || 0, 'edges:', edges?.length || 0);
+      // SIMPLIFIED: Always use ReactFlow instance as source of truth since that's what user sees
+      console.log('🔍 useExportImportGraph.ts: Using ReactFlow instance as primary source (what user actually sees)');
       
-      // Get ReactFlow instance data for comparison
-      const flowNodes = reactFlowInstance?.getNodes() || [];
-      const flowEdges = reactFlowInstance?.getEdges() || [];
-      console.log('🔍 useExportImportGraph.ts: ReactFlow has', flowNodes.length, 'nodes vs Props', nodes?.length || 0, 'nodes');
+      if (reactFlowInstance) {
+        const flowNodes = reactFlowInstance.getNodes();
+        const flowEdges = reactFlowInstance.getEdges();
+        console.log('🔍 useExportImportGraph.ts: ReactFlow instance has', flowNodes.length, 'nodes and', flowEdges.length, 'edges');
+        
+        if (flowNodes.length > 0) {
+          // Export from ReactFlow instance - this includes ALL nodes regardless of type
+          const reactFlowTypeCounts = flowNodes.reduce((acc, node) => {
+            const type = node.data?.type;
+            acc[type] = (acc[type] || 0) + 1;
+            return acc;
+          }, {});
+          console.log('🔍 useExportImportGraph.ts: All node types in ReactFlow:', reactFlowTypeCounts);
+          
+          const dataStr = JSON.stringify({ 
+            nodes: flowNodes, 
+            edges: flowEdges, 
+            exportTime: Date.now(),
+            exportMethod: 'REACTFLOW_INSTANCE',
+            totalNodes: flowNodes.length,
+            totalEdges: flowEdges.length 
+          }, null, 2);
+          
+          const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
+          
+          const downloadLink = document.createElement('a');
+          downloadLink.setAttribute('href', dataUri);
+          downloadLink.setAttribute('download', fileName);
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          document.body.removeChild(downloadLink);
+          
+          toast.success(`Graph exported as ${fileName} with ${flowNodes.length} nodes from ReactFlow instance!`);
+          return dataStr;
+        }
+      }
       
-      // Use ReactFlow if it has more nodes (newly created DNN/5QI), otherwise use props
-      const useReactFlowData = flowNodes.length > (nodes?.length || 0);
-      
-      if (useReactFlowData) {
-        console.log('🔍 useExportImportGraph.ts: Using ReactFlow instance for export (HAS MORE NODES:', flowNodes.length, 'vs', nodes?.length || 0, ')');
-        
-        // Export from ReactFlow instance with detailed debugging
-        const reactFlowTypeCounts = flowNodes.reduce((acc, node) => {
-          const type = node.data?.type;
-          acc[type] = (acc[type] || 0) + 1;
-          return acc;
-        }, {});
-        console.log('🔍 useExportImportGraph.ts: ReactFlow instance type counts:', reactFlowTypeCounts);
-        
-        const reactFlowDnnNodes = flowNodes.filter(node => node.data?.type === 'dnn');
-        const reactFlowFiveQiNodes = flowNodes.filter(node => node.data?.type === 'fiveqi');
-        console.log('🔍 useExportImportGraph.ts: ReactFlow DNN nodes:', reactFlowDnnNodes.length, reactFlowDnnNodes.map(n => ({ id: n.id, data: n.data })));
-        console.log('🔍 useExportImportGraph.ts: ReactFlow 5QI nodes:', reactFlowFiveQiNodes.length, reactFlowFiveQiNodes.map(n => ({ id: n.id, data: n.data })));
-        
-        const dataStr = JSON.stringify({ 
-          nodes: flowNodes || [], 
-          edges: flowEdges || [], 
-          exportTime: Date.now(),
-          exportMethod: 'REACTFLOW_INSTANCE',
-          totalNodes: flowNodes.length,
-          totalEdges: flowEdges.length 
-        }, null, 2);
-        
-        const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(dataStr)}`;
-        
-        const downloadLink = document.createElement('a');
-        downloadLink.setAttribute('href', dataUri);
-        downloadLink.setAttribute('download', fileName);
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-        
-        toast.success(`Graph exported as ${fileName} with ${flowNodes.length} nodes and ${flowEdges.length} edges from ReactFlow instance!`);
-        return dataStr;
-        
-      } else if (nodes && nodes.length > 0) {
-        console.log('🔍 useExportImportGraph.ts: Using props state for export (PRIORITY: props has', nodes.length, 'vs ReactFlow', flowNodes.length, ')');
+      // Fallback to props state only if ReactFlow instance is empty
+      console.log('🔍 useExportImportGraph.ts: ReactFlow instance empty, checking props state - nodes:', nodes?.length || 0, 'edges:', edges?.length || 0);
+      if (nodes && nodes.length > 0) {
+        console.log('🔍 useExportImportGraph.ts: Using props state as fallback');
         
         // DEBUG: Check what node types we're exporting from props state
         const nodeTypes = nodes.map(node => ({ id: node.id, type: node.data?.type }));
