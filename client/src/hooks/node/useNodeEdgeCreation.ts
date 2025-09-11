@@ -1,3 +1,4 @@
+import { Node, Edge } from '@xyflow/react';
 import { useUnifiedEdgeManager } from '../edge/useUnifiedEdgeManager';
 
 /**
@@ -5,9 +6,10 @@ import { useUnifiedEdgeManager } from '../edge/useUnifiedEdgeManager';
  * Now uses the unified edge manager to prevent duplicates
  */
 export const useNodeEdgeCreation = (
-  setEdges: React.Dispatch<React.SetStateAction<Edge[]>>
+  setEdges: React.Dispatch<React.SetStateAction<Edge[]>>,
+  nodes?: Node[]
 ) => {
-  const { addEdge } = useUnifiedEdgeManager(setEdges);
+  const { addEdge } = useUnifiedEdgeManager(setEdges, nodes);
   
   const createEdgeBetweenNodes = (sourceId: string, targetId: string) => {
     console.log(`useNodeEdgeCreation: Creating edge from ${sourceId} to ${targetId}`);

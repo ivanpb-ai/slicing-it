@@ -1,11 +1,14 @@
 import { useCallback } from 'react';
-import { Edge, Connection, MarkerType } from '@xyflow/react';
+import { Edge, Connection, MarkerType, Node } from '@xyflow/react';
 
 /**
  * Unified edge manager to prevent duplicate edge creation from multiple managers
  * This replaces useEdgeCreation, useEdgeManager, and useSimpleEdgeManager
  */
-export const useUnifiedEdgeManager = (setEdges: React.Dispatch<React.SetStateAction<Edge[]>>) => {
+export const useUnifiedEdgeManager = (
+  setEdges: React.Dispatch<React.SetStateAction<Edge[]>>,
+  nodes?: Node[]
+) => {
   const createEdge = useCallback((
     sourceId: string,
     targetId: string,
@@ -67,13 +70,40 @@ export const useUnifiedEdgeManager = (setEdges: React.Dispatch<React.SetStateAct
         return prevEdges;
       }
       
-      const updatedEdges = [...prevEdges, newEdge];
+      // SINGLE-PARENT DNN VALIDATION: Enforce one S-NSSAI parent per DNN
+      const targetNode = nodes?.find(n => n.id === targetId);
+      const sourceNode = nodes?.find(n => n.id === sourceId);
+      
+      let cleanedEdges = prevEdges;
+      
+      if (targetNode?.data?.type === 'dnn' && sourceNode?.data?.type === 's-nssai') {
+        // Check if DNN has expected parent relationship
+        const expectedParentId = targetNode.data.parentId;
+        
+        if (expectedParentId && expectedParentId !== sourceId) {
+          console.warn(`UnifiedEdgeManager: Rejecting S-NSSAI→DNN edge from ${sourceId} to ${targetId}. Expected parent: ${expectedParentId}`);
+          return prevEdges; // Reject this edge
+        }
+        
+        // Remove any existing S-NSSAI→DNN edges to this target (defensive cleanup)
+        const existingDnnEdges = prevEdges.filter(e => 
+          e.target === targetId && 
+          nodes?.find(n => n.id === e.source)?.data?.type === 's-nssai'
+        );
+        
+        if (existingDnnEdges.length > 0) {
+          console.log(`UnifiedEdgeManager: Removing ${existingDnnEdges.length} existing S-NSSAI→DNN edges to ${targetId}`);
+          cleanedEdges = prevEdges.filter(e => !existingDnnEdges.includes(e));
+        }
+      }
+      
+      const updatedEdges = [...cleanedEdges, newEdge];
       console.log(`UnifiedEdgeManager: Total edges after addition: ${updatedEdges.length}`);
       return updatedEdges;
     });
     
     return newEdge;
-  }, [createEdge, setEdges]);
+  }, [createEdge, setEdges, nodes]);
 
   const addEdgeWithHandles = useCallback((
     sourceId: string,

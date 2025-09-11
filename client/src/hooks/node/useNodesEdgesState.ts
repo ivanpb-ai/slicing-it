@@ -4,11 +4,11 @@ import { useUnifiedEdgeManager } from '../edge/useUnifiedEdgeManager';
 export const useNodesEdgesState = () => {
   const reactFlowInstance = useReactFlow();
   
-  const [nodes, setNodes, onNodesChange] = useNodesState([]);
-  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+  const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
   
   // Use unified edge manager to prevent duplicate edges
-  const { onConnect, addEdgeWithHandles } = useUnifiedEdgeManager(setEdges);
+  const { onConnect, addEdgeWithHandles } = useUnifiedEdgeManager(setEdges, nodes);
 
   return {
     nodes,

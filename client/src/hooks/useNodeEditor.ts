@@ -19,7 +19,7 @@ export const useNodeEditor = () => {
 
   // Node creation hooks
   const { createNode } = useNodeCreation(setNodes);
-  const { addEdgeWithHandles } = useUnifiedEdgeManager(setEdges);
+  const { addEdgeWithHandles } = useUnifiedEdgeManager(setEdges, nodes);
   const { createChildNode } = useSimpleChildNodeCreation(setNodes, addEdgeWithHandles);
   
   // Selection and duplication hooks
@@ -50,7 +50,7 @@ export const useNodeEditor = () => {
   }, []);
 
   // Use unified edge manager instead of manual edge creation
-  const { onConnect: unifiedOnConnect } = useUnifiedEdgeManager(setEdges);
+  const { onConnect: unifiedOnConnect } = useUnifiedEdgeManager(setEdges, nodes);
   
   const onConnect = useCallback((connection: Connection) => {
     console.log('useNodeEditor: Delegating to unified edge manager:', connection);
@@ -168,14 +168,14 @@ export const useNodeEditor = () => {
       setNodes(graphData.nodes || []);
       
       if (Array.isArray(graphData.edges)) {
-         const validEdges: Edge[] = graphData.edges.map(edge => ({
-               data: {},      // add missing optional fields if necessary
-             ...edge,
-  }));
-     setEdges(validEdges);
-  }   else {
-     setEdges([]);
-    }
+        const validEdges: Edge[] = graphData.edges.map(edge => ({
+          data: {},      // add missing optional fields if necessary
+          ...edge,
+        }));
+        setEdges(validEdges);
+      } else {
+        setEdges([]);
+      }
       
       // Fit view immediately if not prevented
       if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
