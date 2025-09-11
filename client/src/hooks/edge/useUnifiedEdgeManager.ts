@@ -13,12 +13,13 @@ export const useUnifiedEdgeManager = (
     sourceId: string,
     targetId: string,
     sourceHandle?: string,
-    targetHandle?: string
+    targetHandle?: string,
+    isManualConnection = false
   ): Edge => {
     // Use a standardized unique ID format
     const edgeId = `unified-${sourceId}-${targetId}`;
     
-    console.log(`UnifiedEdgeManager: Creating edge ${edgeId}`);
+    console.log(`UnifiedEdgeManager: Creating edge ${edgeId} (${isManualConnection ? 'manual' : 'auto'})`);
     
     return {
       id: edgeId,
@@ -38,6 +39,9 @@ export const useUnifiedEdgeManager = (
         color: '#2563eb',
         width: 12,
         height: 12
+      },
+      data: {
+        createdBy: isManualConnection ? 'manual' : 'auto'
       }
     };
   }, []);
@@ -49,7 +53,7 @@ export const useUnifiedEdgeManager = (
     targetHandle?: string,
     isManualConnection = false
   ) => {
-    const newEdge = createEdge(sourceId, targetId, sourceHandle, targetHandle);
+    const newEdge = createEdge(sourceId, targetId, sourceHandle, targetHandle, isManualConnection);
     
     console.log(`UnifiedEdgeManager: Adding edge to state:`, newEdge);
     
@@ -71,34 +75,37 @@ export const useUnifiedEdgeManager = (
         return prevEdges;
       }
       
-      // SINGLE-PARENT DNN VALIDATION: Only enforce during automatic child creation, not manual connections
+      // UNIVERSAL SINGLE-PARENT VALIDATION: Only enforce during automatic child creation, not manual connections
       const targetNode = nodes?.find(n => n.id === targetId);
       const sourceNode = nodes?.find(n => n.id === sourceId);
       
       let cleanedEdges = prevEdges;
       
-      if (targetNode?.data?.type === 'dnn' && sourceNode?.data?.type === 's-nssai' && !isManualConnection) {
-        // Only validate for automatic connections (child node creation)
-        // Allow manual connections to create multiple parents
-        const expectedParentId = targetNode.data.parentId;
+      if (targetNode && sourceNode && !isManualConnection) {
+        // Only validate for automatic connections (child node creation) - applies to ALL node types
+        // Allow manual connections to create multiple parents for any node type
+        const expectedParentId = targetNode.data?.parentId;
         
         if (expectedParentId && expectedParentId !== sourceId) {
-          console.warn(`UnifiedEdgeManager: Rejecting automatic S-NSSAI→DNN edge from ${sourceId} to ${targetId}. Expected parent: ${expectedParentId}`);
+          console.warn(`UnifiedEdgeManager: Rejecting automatic edge from ${sourceId} to ${targetId}. Expected parent: ${expectedParentId}`);
           return prevEdges; // Reject this edge
         }
         
-        // Remove any existing S-NSSAI→DNN edges to this target during automatic creation (defensive cleanup)
-        const existingDnnEdges = prevEdges.filter(e => 
-          e.target === targetId && 
-          nodes?.find(n => n.id === e.source)?.data?.type === 's-nssai'
-        );
+        // Remove any existing AUTOMATIC edges to this target (preserve manual connections)
+        // Only remove edges marked as 'auto' from nodes of the same type as the source
+        const existingAutoEdges = prevEdges.filter(e => {
+          const existingSourceNode = nodes?.find(n => n.id === e.source);
+          return e.target === targetId && 
+                 existingSourceNode?.data?.type === sourceNode.data?.type &&
+                 e.data?.createdBy === 'auto'; // Only remove automatic edges
+        });
         
-        if (existingDnnEdges.length > 0) {
-          console.log(`UnifiedEdgeManager: Removing ${existingDnnEdges.length} existing automatic S-NSSAI→DNN edges to ${targetId}`);
-          cleanedEdges = prevEdges.filter(e => !existingDnnEdges.includes(e));
+        if (existingAutoEdges.length > 0) {
+          console.log(`UnifiedEdgeManager: Removing ${existingAutoEdges.length} existing automatic ${sourceNode.data?.type}→${targetNode.data?.type} edges to ${targetId} (preserving manual connections)`);
+          cleanedEdges = prevEdges.filter(e => !existingAutoEdges.includes(e));
         }
-      } else if (isManualConnection && targetNode?.data?.type === 'dnn' && sourceNode?.data?.type === 's-nssai') {
-        console.log(`UnifiedEdgeManager: Allowing manual S-NSSAI→DNN connection from ${sourceId} to ${targetId} (multi-parent allowed)`);
+      } else if (isManualConnection && targetNode && sourceNode) {
+        console.log(`UnifiedEdgeManager: Allowing manual ${sourceNode.data?.type}→${targetNode.data?.type} connection from ${sourceId} to ${targetId} (multi-parent allowed)`);
       }
       
       const updatedEdges = [...cleanedEdges, newEdge];

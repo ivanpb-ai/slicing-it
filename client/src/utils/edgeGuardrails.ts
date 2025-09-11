@@ -1,11 +1,11 @@
 import { Edge, Node } from '@xyflow/react';
 
 /**
- * Guardrail validator for DNN nodes - LENIENT for imports
- * Only removes obviously invalid edges, preserves intentional multi-parent connections
+ * Universal guardrail validator - LENIENT for imports
+ * Only removes obviously invalid edges, preserves intentional multi-parent connections for all node types
  */
-export const validateDnnSingleParent = (edges: Edge[], nodes: Node[]): Edge[] => {
-  console.log(`🛡️ DNN Guardrail: Validating ${edges.length} edges across ${nodes.length} nodes (LENIENT mode)`);
+export const validateUniversalGuardrails = (edges: Edge[], nodes: Node[]): Edge[] => {
+  console.log(`🛡️ Universal Guardrail: Validating ${edges.length} edges across ${nodes.length} nodes (LENIENT mode)`);
   
   // Create node lookup map for efficiency
   const nodeMap = new Map<string, Node>();
@@ -18,19 +18,19 @@ export const validateDnnSingleParent = (edges: Edge[], nodes: Node[]): Edge[] =>
     
     // Remove edges to non-existent nodes
     if (!sourceNode || !targetNode) {
-      console.log(`🛡️ DNN Guardrail: Removing edge to non-existent node: ${edge.source} → ${edge.target}`);
+      console.log(`🛡️ Universal Guardrail: Removing edge to non-existent node: ${edge.source} → ${edge.target}`);
       return false;
     }
     
-    // Keep all other edges - allow multi-parent DNN connections for imports
+    // Keep all other edges - allow multi-parent connections for imports (all node types)
     return true;
   });
   
   const removedCount = edges.length - validEdges.length;
   if (removedCount > 0) {
-    console.log(`🛡️ DNN Guardrail: Removed ${removedCount} invalid edges (node existence check only)`);
+    console.log(`🛡️ Universal Guardrail: Removed ${removedCount} invalid edges (node existence check only)`);
   } else {
-    console.log(`🛡️ DNN Guardrail: All edges valid - preserving multi-parent DNN connections`);
+    console.log(`🛡️ Universal Guardrail: All edges valid - preserving multi-parent connections for all node types`);
   }
   
   return validEdges;
@@ -43,11 +43,11 @@ export const validateDnnSingleParent = (edges: Edge[], nodes: Node[]): Edge[] =>
 export const validateAllEdges = (edges: Edge[], nodes: Node[]): Edge[] => {
   console.log(`🛡️ Edge Guardrails: Starting comprehensive validation`);
   
-  // Run DNN single-parent validation
-  const dnnValidatedEdges = validateDnnSingleParent(edges, nodes);
+  // Run universal guardrail validation
+  const validatedEdges = validateUniversalGuardrails(edges, nodes);
   
   // Add other validations here as needed in the future
   
   console.log(`🛡️ Edge Guardrails: Validation complete`);
-  return dnnValidatedEdges;
+  return validatedEdges;
 };

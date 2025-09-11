@@ -3,10 +3,10 @@ import React, { useCallback } from 'react';
 import { Node, Edge, useReactFlow, MarkerType } from '@xyflow/react';
 import { toast } from 'sonner';
 import { useGraphLoadingState } from './useGraphLoadingState';
-import { resetCounters } from '@/utils/flowData/idCounters';
+import { resetCounters, updateDnnCounter } from '@/utils/flowData/idCounters';
 import type { GraphData } from '@/services/storage/GraphLocalStorageService';
 import { GraphNodeProcessor } from '@/services/processing/GraphNodeProcessor';
-import { validateAllEdges } from '@/utils/edgeGuardrails';
+import { validateUniversalGuardrails } from '@/utils/edgeGuardrails';
 
 export const useGraphLoader = (
   setNodes?: React.Dispatch<React.SetStateAction<Node[]>>,
@@ -134,8 +134,8 @@ export const useGraphLoader = (
           console.log('First edge being set:', JSON.stringify(processedEdges[0]));
         }
         
-        // 🛡️ GUARDRAIL: Validate edges to prevent multiple S-NSSAI→DNN connections
-        const validatedEdges = validateAllEdges(processedEdges, processedNodes);
+        // 🛡️ GUARDRAIL: Validate edges to prevent multiple automatic parent connections
+        const validatedEdges = validateUniversalGuardrails(processedEdges, processedNodes);
         console.log(`🛡️ Import Guardrail: Processed ${processedEdges.length} → ${validatedEdges.length} edges`);
         
         setEdges(validatedEdges);
