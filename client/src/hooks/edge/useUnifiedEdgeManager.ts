@@ -46,7 +46,8 @@ export const useUnifiedEdgeManager = (
     sourceId: string,
     targetId: string,
     sourceHandle?: string,
-    targetHandle?: string
+    targetHandle?: string,
+    isManualConnection = false
   ) => {
     const newEdge = createEdge(sourceId, targetId, sourceHandle, targetHandle);
     
@@ -70,31 +71,34 @@ export const useUnifiedEdgeManager = (
         return prevEdges;
       }
       
-      // SINGLE-PARENT DNN VALIDATION: Enforce one S-NSSAI parent per DNN
+      // SINGLE-PARENT DNN VALIDATION: Only enforce during automatic child creation, not manual connections
       const targetNode = nodes?.find(n => n.id === targetId);
       const sourceNode = nodes?.find(n => n.id === sourceId);
       
       let cleanedEdges = prevEdges;
       
-      if (targetNode?.data?.type === 'dnn' && sourceNode?.data?.type === 's-nssai') {
-        // Check if DNN has expected parent relationship
+      if (targetNode?.data?.type === 'dnn' && sourceNode?.data?.type === 's-nssai' && !isManualConnection) {
+        // Only validate for automatic connections (child node creation)
+        // Allow manual connections to create multiple parents
         const expectedParentId = targetNode.data.parentId;
         
         if (expectedParentId && expectedParentId !== sourceId) {
-          console.warn(`UnifiedEdgeManager: Rejecting S-NSSAI→DNN edge from ${sourceId} to ${targetId}. Expected parent: ${expectedParentId}`);
+          console.warn(`UnifiedEdgeManager: Rejecting automatic S-NSSAI→DNN edge from ${sourceId} to ${targetId}. Expected parent: ${expectedParentId}`);
           return prevEdges; // Reject this edge
         }
         
-        // Remove any existing S-NSSAI→DNN edges to this target (defensive cleanup)
+        // Remove any existing S-NSSAI→DNN edges to this target during automatic creation (defensive cleanup)
         const existingDnnEdges = prevEdges.filter(e => 
           e.target === targetId && 
           nodes?.find(n => n.id === e.source)?.data?.type === 's-nssai'
         );
         
         if (existingDnnEdges.length > 0) {
-          console.log(`UnifiedEdgeManager: Removing ${existingDnnEdges.length} existing S-NSSAI→DNN edges to ${targetId}`);
+          console.log(`UnifiedEdgeManager: Removing ${existingDnnEdges.length} existing automatic S-NSSAI→DNN edges to ${targetId}`);
           cleanedEdges = prevEdges.filter(e => !existingDnnEdges.includes(e));
         }
+      } else if (isManualConnection && targetNode?.data?.type === 'dnn' && sourceNode?.data?.type === 's-nssai') {
+        console.log(`UnifiedEdgeManager: Allowing manual S-NSSAI→DNN connection from ${sourceId} to ${targetId} (multi-parent allowed)`);
       }
       
       const updatedEdges = [...cleanedEdges, newEdge];
@@ -109,9 +113,10 @@ export const useUnifiedEdgeManager = (
     sourceId: string,
     targetId: string,
     sourceHandle?: string,
-    targetHandle?: string
+    targetHandle?: string,
+    isManualConnection = false
   ) => {
-    return addEdge(sourceId, targetId, sourceHandle, targetHandle);
+    return addEdge(sourceId, targetId, sourceHandle, targetHandle, isManualConnection);
   }, [addEdge]);
 
   // Handle manual connections (when user drags between handles)
@@ -126,7 +131,8 @@ export const useUnifiedEdgeManager = (
       connection.source, 
       connection.target, 
       connection.sourceHandle || 'bottom-source', 
-      connection.targetHandle || 'top-target'
+      connection.targetHandle || 'top-target',
+      true // Mark as manual connection
     );
   }, [addEdgeWithHandles]);
 
