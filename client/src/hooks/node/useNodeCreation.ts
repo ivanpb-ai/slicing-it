@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { Node, XYPosition } from '@xyflow/react';
 import { NodeType } from '../../types/nodeTypes';
 import { getNodeId } from '../../utils/flowData/idGenerator';
-import { getNextCellAreaId, getNextRrpId, getNextDnnId, getNextSnssaiId } from '../../utils/flowData/idCounters';
+import { getNextCellAreaId, getNextRrpId, getNextDnnId, getNextSnssaiId, getNextQoSFlowId } from '../../utils/flowData/idCounters';
 
 export const useNodeCreation = (setNodes: React.Dispatch<React.SetStateAction<Node[]>>) => {
   const createNode = useCallback((
@@ -43,6 +43,14 @@ export const useNodeCreation = (setNodes: React.Dispatch<React.SetStateAction<No
       id = `s-nssai-${snssaiId}`;
       extraData = { 
         snssaiId,
+        nodeId: id
+      };
+    } else if (type === 'qosflow') {
+      const qosFlowId = getNextQoSFlowId();
+      id = `qosflow-${qosFlowId}`;
+      extraData = { 
+        qosFlowId,
+        qosFlowName: `QoS Flow ${qosFlowId}`,
         nodeId: id
       };
     } else {

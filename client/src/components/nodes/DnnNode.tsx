@@ -48,7 +48,7 @@ const DnnNode = memo(({ data }: DnnNodeProps) => {
     setCustomName(newValue);
     
     // Use updateNodeData to properly persist the change
-    updateNodeData(data.nodeId, { ...data, dnnCustomName: newValue });
+    updateNodeData(data.nodeId || '', { ...data, dnnCustomName: newValue });
   }, [data, updateNodeData]);
 
   const handleBlur = useCallback(() => {
@@ -106,7 +106,7 @@ const DnnNode = memo(({ data }: DnnNodeProps) => {
         Connect top handle to multiple S-NSSAI bottom handles
       </div>
       <div className="text-xs text-center text-green-600 mt-1 font-semibold">
-        Drag 5QI nodes onto this DNN to connect them
+        Drag QoS Flow nodes onto this DNN to connect them
       </div>
 
       

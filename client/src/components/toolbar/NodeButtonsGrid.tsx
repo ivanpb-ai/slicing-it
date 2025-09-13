@@ -9,11 +9,12 @@ import {
   BarChart, 
   Workflow, 
   Share2, 
+  Gauge,
   Database 
 } from "lucide-react";
 
 interface NodeButtonsGridProps {
-  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "fiveqi", fiveQIId?: string) => void;
+  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "qosflow" | "fiveqi", fiveQIId?: string) => void;
 }
 
 const NodeButtonsGrid: React.FC<NodeButtonsGridProps> = ({ onAddNode }) => {
@@ -75,6 +76,16 @@ const NodeButtonsGrid: React.FC<NodeButtonsGridProps> = ({ onAddNode }) => {
           iconColor="text-orange-500"
           tooltipTitle="DNN Node"
           tooltipDescription="Data Network Name - connects to S-NSSAI"
+          onAddNode={onAddNode}
+        />
+
+        <NodeButton 
+          type="qosflow"
+          label="QoS Flow"
+          icon={Gauge}
+          iconColor="text-cyan-500"
+          tooltipTitle="QoS Flow Node"
+          tooltipDescription="Quality of Service Flow - connects to DNN"
           onAddNode={onAddNode}
         />
 
