@@ -5,13 +5,13 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { LucideIcon } from "lucide-react";
 
 interface NodeButtonProps {
-  type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn";
+  type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "qosflow";
   label: string;
   icon: LucideIcon;
   iconColor: string;
   tooltipTitle: string;
   tooltipDescription: string;
-  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "fiveqi", fiveQIId?: string) => void;
+  onAddNode: (type: "network" | "cell-area" | "rrp" | "s-nssai" | "dnn" | "qosflow" | "fiveqi", fiveQIId?: string) => void;
 }
 
 const NodeButton: React.FC<NodeButtonProps> = ({
