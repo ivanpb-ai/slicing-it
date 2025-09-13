@@ -34,14 +34,15 @@ export const useNodeRelationships = () => {
       
       console.log(`Validating relationship: ${parentType} -> ${childType}`);
       
-      // Map of valid parent-child relationships - updated to allow multiple S-NSSAI to DNN
+      // Map of valid parent-child relationships - updated to include QoS Flow layer
       const validRelationships: Record<string, string[]> = {
         'network': ['cell-area'],     
         'cell-area': ['rrp'],         
         'rrp': ['rrpmember'],         
         'rrpmember': ['s-nssai'],     
         's-nssai': ['dnn'],           
-        'dnn': ['fiveqi'],               
+        'dnn': ['qosflow'],           
+        'qosflow': ['fiveqi'],        
         'fiveqi': [],                    
       };
       
@@ -79,7 +80,8 @@ export const useNodeRelationships = () => {
       'rrp': ['rrpmember'],
       'rrpmember': ['s-nssai'],
       's-nssai': ['dnn'],
-      'dnn': ['fiveqi'],
+      'dnn': ['qosflow'],
+      'qosflow': ['fiveqi'],
       'fiveqi': [],
     };
     

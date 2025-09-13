@@ -1,0 +1,43 @@
+NodeButton: Started dragging qosflow button
+NodeButton.tsx:42 NodeButton: Set drag data to: qosflow
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "qosflow" at position: Object
+useDragDataParser.ts:3 parseDragData: Processing drag data: qosflow
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: qosflow
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="qosflow", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 13
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 13
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: dnn-2
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: dnn-2
+useNodeRelationships.ts:35 Validating relationship: dnn -> qosflow
+useNodeRelationships.ts:58  Invalid relationship: dnn cannot have qosflow as children
+(anonymous) @ useNodeRelationships.ts:58
+useNodeRelationships.ts:59 Allowed children for dnn: Array(1)
+useNodeDragDrop.ts:114 useNodeDragDrop: Invalid hierarchy - cannot place qosflow under dnn
+NodeButton.tsx:34 NodeButton: Started dragging qosflow button
+NodeButton.tsx:42 NodeButton: Set drag data to: qosflow
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "qosflow" at position: Object
+useDragDataParser.ts:3 parseDragData: Processing drag data: qosflow
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: qosflow
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="qosflow", fiveQIId="undefined"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 14
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 14
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: dnn-2
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: dnn-2
+useNodeRelationships.ts:35 Validating relationship: dnn -> qosflow
+useNodeRelationships.ts:58  Invalid relationship: dnn cannot have qosflow as children
+(anonymous) @ useNodeRelationships.ts:58
+useNodeRelationships.ts:59 Allowed children for dnn: Array(1)
+useNodeDragDrop.ts:114 useNodeDragDrop: Invalid hierarchy - cannot place qosflow under dnn
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
