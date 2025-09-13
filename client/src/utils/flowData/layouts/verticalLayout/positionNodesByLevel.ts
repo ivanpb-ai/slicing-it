@@ -1,8 +1,9 @@
 
 import { Node } from '@xyflow/react';
 import { HierarchyInfo } from './buildNodesHierarchy';
-import { isDnn, is5QI, isSnssai } from './nodeTypeDetection';
+import { isDnn, isQoSFlow, is5QI, isSnssai } from './nodeTypeDetection';
 import { positionDnnNodes } from './positionDnnNodes';
+import { positionQoSFlowNodes } from './positionQoSFlowNodes';
 import { position5QINodes } from './position5QINodes';
 import { positionOtherNodes } from './positionOtherNodes';
 import { VERTICAL_LEVEL_SPACINGS } from '../constants';
@@ -75,6 +76,19 @@ export const positionNodesByLevel = (
       );
     }
 
+    // Position QoS Flow nodes with special alignment (between DNN and 5QI)
+    const qosFlowNodes = nodesInLevel.filter(isQoSFlow);
+    if (qosFlowNodes.length > 0) {
+      positionQoSFlowNodes(
+        qosFlowNodes,
+        y,
+        startX,
+        arrangedNodes,
+        options,
+        childrenMap
+      );
+    }
+
     // Position 5QI nodes with special alignment
     const fiveQiNodes = nodesInLevel.filter(is5QI);
     if (fiveQiNodes.length > 0) {
@@ -89,7 +103,7 @@ export const positionNodesByLevel = (
     }
 
     // Now position other nodes with standard alignment
-    const otherNodes = nodesInLevel.filter(n => !isDnn(n) && !is5QI(n));
+    const otherNodes = nodesInLevel.filter(n => !isDnn(n) && !isQoSFlow(n) && !is5QI(n));
     if (otherNodes.length > 0) {
       positionOtherNodes(
         otherNodes,

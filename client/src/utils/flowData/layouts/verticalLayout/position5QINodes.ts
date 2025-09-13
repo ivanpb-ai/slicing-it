@@ -19,7 +19,7 @@ export const position5QINodes = (
       // Calculate x position to center node
       let x = startX + index * (options.nodeWidth + options.spacing * options.compactFactor);
       
-      // Use preferred position from parent DNN if available
+      // Use preferred position from parent QoS Flow if available
       if (node.data?.preferredX !== undefined) {
         const preferredX = typeof node.data.preferredX === 'number' ? node.data.preferredX : x;
         x = preferredX;
