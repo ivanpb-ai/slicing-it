@@ -16,6 +16,7 @@ import SnssaiNode from "../SnssaiNode";
 import DnnNode from "../DnnNode";
 import FiveQiNode from "../FiveQiNode";
 import RrpMemberNode from "../RrpMemberNode";
+import QoSFlowNode from "../QoSFlowNode";
 
 interface StandardNodeWrapperProps {
   id: string;
@@ -28,6 +29,7 @@ type IdKey =
   "rrp" |
   "s-nssai" |
   "dnn" |
+  "qosflow" |
   "fiveqi" |
   "rrpmember";
 
@@ -38,6 +40,7 @@ function getNodeNumber(data: NodeData, id: string): number  {
     "rrp",
     "s-nssai",
     "dnn",
+    "qosflow",
     "fiveqi",
     "rrpmember"
   ];
@@ -119,26 +122,33 @@ export const StandardNodeWrapper = memo(({ id, data }: StandardNodeWrapperProps)
           <DnnNode data={{ ...data, nodeNumber }} />
         </div>
       );
-    case "fiveqi":
-      // Check if this 5QI node is marked as default for special styling
-      const isDefault5QI = data.isDefault === true;
+    case "qosflow":
+      // Check if this QoS Flow node is marked as default for special styling
+      const isDefaultQoSFlow = data.isDefault === true;
       
-      if (isDefault5QI) {
-        // For default 5QI nodes, add an extra wrapper with thick border
+      if (isDefaultQoSFlow) {
+        // For default QoS Flow nodes, add an extra wrapper with thick border
         return (
           <div className={className} style={style}>
-            <div className="border-4 border-purple-600 rounded-lg bg-purple-50/50 p-1">
-              <FiveQiNode id={id} data={{ ...data, nodeNumber }} />
+            <div className="border-4 border-cyan-600 rounded-lg bg-cyan-50/50 p-1">
+              <QoSFlowNode id={id} data={{ ...data, nodeNumber }} />
             </div>
           </div>
         );
       } else {
         return (
           <div className={className} style={style}>
-            <FiveQiNode id={id} data={{ ...data, nodeNumber }} />
+            <QoSFlowNode id={id} data={{ ...data, nodeNumber }} />
           </div>
         );
       }
+    case "fiveqi":
+      // 5QI nodes no longer have default styling - that's moved to QoS Flow
+      return (
+        <div className={className} style={style}>
+          <FiveQiNode id={id} data={{ ...data, nodeNumber }} />
+        </div>
+      );
     default:
       return (
         <div className={className} style={style}>

@@ -15,8 +15,6 @@ const FiveQiNode = memo(({ id, data }: FiveQiNodeProps) => {
   // Use state to track the actual QoS values we should display
   const [qosValues, setQosValues] = useState(data.qosValues);
   
-  // Use state to track default checkbox
-  const [isDefault, setIsDefault] = useState(data.isDefault || false);
   
   // Use ref to track previous fiveQIId to prevent unnecessary updates
   const previousFiveQIIdRef = useRef(data.fiveQIId);
@@ -70,13 +68,6 @@ const FiveQiNode = memo(({ id, data }: FiveQiNodeProps) => {
     }
   }, [fiveQIId, data]);
   
-  // Handle default checkbox change
-  const handleDefaultChange = (checked: boolean) => {
-    setIsDefault(checked);
-    if (updateNodeData && id) {
-      updateNodeData(id, { ...data, isDefault: checked });
-    }
-  };
   
   // If we still don't have values, try one more approach - direct access to data
   const displayValues = qosValues || 
@@ -149,18 +140,6 @@ const FiveQiNode = memo(({ id, data }: FiveQiNodeProps) => {
         </div>
       </div>
       
-      {/* Default checkbox */}
-      <div className="mt-3 flex items-center justify-center">
-        <label className="flex items-center space-x-2 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={isDefault}
-            onChange={(e) => handleDefaultChange(e.target.checked)}
-            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 focus:ring-2"
-          />
-          <span className="text-sm font-medium text-purple-800">Default</span>
-        </label>
-      </div>
 
           </div>
 

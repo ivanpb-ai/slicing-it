@@ -16,6 +16,11 @@ export const getNodeId = (type: NodeType, fiveQIId?: string): string => {
     return `fiveqi-${fiveQIId}`;
   }
   
+  // If it's a QoS Flow node, use similar logic as 5QI
+  if (type === 'qosflow' && fiveQIId) {
+    return `qosflow-${fiveQIId}`;
+  }
+  
   // For cell-area nodes, create simpler IDs
   if (type === 'cell-area') {
     if (fiveQIId) {

@@ -5,6 +5,7 @@ export type NodeType =
   | 'rrp' 
   | 's-nssai' 
   | 'dnn' 
+  | 'qosflow'
   | 'fiveqi'
   | 'rrpmember';
 
@@ -17,6 +18,8 @@ export interface NodeData {
   parentId?: number;
   networkId?: number;
   fiveQIId?: number;
+  qosFlowId?: number;
+  qosFlowName?: string;
   snssaiId?: number;
   dnnId?: number;
   rrpId?: string;

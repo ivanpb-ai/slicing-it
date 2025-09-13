@@ -25,7 +25,9 @@ export const useChildNodeTypeResolver = () => {
       case 's-nssai':
         return 'dnn';
       case 'dnn':
-        return '5qi';
+        return 'qosflow';
+      case 'qosflow':
+        return 'fiveqi';
       default:
         return undefined;
     }

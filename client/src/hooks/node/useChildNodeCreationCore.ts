@@ -36,6 +36,14 @@ export const useChildNodeCreationCore = (
           cellAreaDescription: `Cell coverage area ${cellAreaId}`
         };
       }
+    } else if (type === 'qosflow') {
+      // For QoS Flow, we'll let the ID generator handle the ID
+      // fiveQIId parameter can be reused for QoS Flow ID generation
+      const qosFlowId = fiveQIId ? parseInt(fiveQIId) : 1;
+      extraData = { 
+        qosFlowId,
+        qosFlowName: `QoS Flow ${qosFlowId}`
+      };
     } else if (type === 'fiveqi') {
       extraData = { fiveQIId };
     } else if (type === 'rrp') {

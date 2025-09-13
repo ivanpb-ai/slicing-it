@@ -1,5 +1,6 @@
 // Counters for generating IDs - use numbers for consistent typing
 let dnnCounter = 1;
+let qosFlowCounter = 1;
 let snssaiCounter = 1;
 let rrpCounter = 1;
 let cellAreaCounter = 1;
@@ -25,6 +26,14 @@ export const getNextCellAreaId = (): number => {
   const id = cellAreaCounter;
   console.log(`Generated new Cell Area ID: ${id}`);
   cellAreaCounter++;
+  return id;
+};
+
+// Get the next QoS Flow ID - return as number
+export const getNextQoSFlowId = (): number => {
+  const id = qosFlowCounter;
+  console.log(`Generated new QoS Flow ID: ${id}`);
+  qosFlowCounter++;
   return id;
 };
 
@@ -73,6 +82,17 @@ export const updateDnnCounter = (nodes: any[]): void => {
       console.log(`Updated RRP counter to: ${rrpCounter}`);
     }
     
+    // Find the highest QoS Flow ID
+    const qosFlowNodes = nodes.filter(node => 
+      node.data && node.data.type === 'qosflow' && node.data.qosFlowId
+    );
+    
+    if (qosFlowNodes.length > 0) {
+      const highestQoSFlowId = Math.max(...qosFlowNodes.map(node => parseInt(node.data.qosFlowId)));
+      qosFlowCounter = highestQoSFlowId + 1;
+      console.log(`Updated QoS Flow counter to: ${qosFlowCounter}`);
+    }
+
     // Find the highest Cell Area ID - check both data.cellAreaId and extract from node.id
     const cellAreaNodes = nodes.filter(node => 
       node.data && node.data.type === 'cell-area'
@@ -119,6 +139,7 @@ export const updateDnnCounter = (nodes: any[]): void => {
 export const resetCounters = (): void => {
   console.log('Resetting all ID counters to 1');
   dnnCounter = 1;
+  qosFlowCounter = 1;
   snssaiCounter = 1;
   rrpCounter = 1;
   cellAreaCounter = 1;

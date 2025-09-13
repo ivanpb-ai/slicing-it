@@ -24,10 +24,14 @@ export const connectionRules: ConnectionRules = {
   },
   'dnn': { 
     's-nssai': { sourceHandle: 'top-target', targetHandle: 'bottom-source' },
+    'qosflow': { sourceHandle: 'bottom-source', targetHandle: 'top-target' } 
+  },
+  'qosflow': { 
+    'dnn': { sourceHandle: 'top-target', targetHandle: 'bottom-source' },
     'fiveqi': { sourceHandle: 'bottom-source', targetHandle: 'top-target' } 
   },
   'fiveqi': { 
-    'dnn': { sourceHandle: 'top-target', targetHandle: 'bottom-source' }
+    'qosflow': { sourceHandle: 'top-target', targetHandle: 'bottom-source' }
   }
 };
 
