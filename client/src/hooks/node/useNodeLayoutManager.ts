@@ -86,20 +86,26 @@ export const useNodeLayoutManager = (
             setNodes(forceUpdatedNodes);
           }
           
-          // Update edges with cleaned edges if setEdges is available
-          if (setEdges && balancedResult.cleanedEdges) {
+          // Update edges with cleaned edges (always apply cleaned edges)
+          if (balancedResult.cleanedEdges) {
             // Ensure no duplicate edges
             const uniqueEdges = balancedResult.cleanedEdges.filter((edge, index, arr) => 
               arr.findIndex(e => e.id === edge.id) === index
             );
             
-            console.log(`🧹 Updating edges: ${edges.length} -> ${uniqueEdges.length} (filtered duplicates)`);
-            // CRITICAL FIX: Use ReactFlow instance to update edges to maintain interactivity  
+            console.log(`🧹 Updating edges: ${currentEdges.length} -> ${uniqueEdges.length} (filtered duplicates)`);
+            // CRITICAL FIX: Always update ReactFlow instance AND React state to keep them in sync
             if (reactFlowInstance) {
               reactFlowInstance.setEdges(uniqueEdges);
-            } else {
+            }
+            if (setEdges) {
               setEdges(uniqueEdges);
             }
+            
+            // Sanity check to confirm persistence
+            setTimeout(() => {
+              console.log('🔍 Post-update edges count:', reactFlowInstance?.getEdges()?.length || 0);
+            }, 10);
           }
           
           // Event dispatch removed - was causing unresponsiveness
