@@ -108,41 +108,33 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   } = useNodeEditor();
 
 
-  // CRITICAL FIX: Allow imports AND clear operations, but prevent DNN/5QI deletion
+  // CRITICAL FIX: Allow imports AND explicit clear operations, but prevent interference with normal node creation
   React.useEffect(() => {
     // Import scenario: nodes.length > hookNodes.length (e.g., 26 > 0 or 26 > 5)
-    // Clear scenario: nodes.length === 0 AND edges.length === 0 (legitimate clear operation)
+    // REMOVED: Clear scenario sync - this was interfering with normal drag/drop node creation
     // DNN creation scenario: hookNodes.length > nodes.length (e.g., 27 > 26) - should NOT sync
     
     const isImport = nodes.length > hookNodes.length && nodes.length > 0;
-    const isClear = nodes.length === 0 && edges.length === 0 && hookNodes.length > 0;
-    const isNewNodeCreation = hookNodes.length > nodes.length && nodes.length > 0;
+    const isNewNodeCreation = hookNodes.length > nodes.length;
     
     if (isImport) {
       console.log(`NodeEditor: Syncing passed nodes (${nodes.length}) with hook nodes (${hookNodes.length}) - import detected`);
       hookSetNodes(nodes);
-    } else if (isClear) {
-      console.log(`NodeEditor: Syncing clear operation - clearing ${hookNodes.length} hook nodes`);
-      hookSetNodes([]);
     } else if (isNewNodeCreation) {
-      console.log(`NodeEditor: PREVENTED sync - nodes: ${nodes.length}, hookNodes: ${hookNodes.length} (protecting newly created DNN/5QI nodes)`);
+      console.log(`NodeEditor: PRESERVED new nodes - nodes: ${nodes.length}, hookNodes: ${hookNodes.length} (normal node creation or child node addition)`);
     }
   }, [nodes, edges.length, hookNodes.length, hookSetNodes]);
 
   React.useEffect(() => {
-    // SMART SYNC: Allow imports AND clear operations, but prevent edge deletion
+    // SMART SYNC: Allow imports but prevent interference with normal edge creation
     const isImport = edges.length > hookEdges.length && edges.length > 0;
-    const isClear = edges.length === 0 && nodes.length === 0 && hookEdges.length > 0;
-    const isNewEdgeCreation = hookEdges.length > edges.length && edges.length > 0;
+    const isNewEdgeCreation = hookEdges.length > edges.length;
     
     if (isImport) {
       console.log(`NodeEditor: Syncing passed edges (${edges.length}) with hook edges (${hookEdges.length}) - import detected`);
       hookSetEdges(edges);
-    } else if (isClear) {
-      console.log(`NodeEditor: Syncing clear operation - clearing ${hookEdges.length} hook edges`);
-      hookSetEdges([]);
     } else if (isNewEdgeCreation) {
-      console.log(`NodeEditor: PREVENTED edge sync - edges: ${edges.length}, hookEdges: ${hookEdges.length} (protecting newly created edges)`);
+      console.log(`NodeEditor: PRESERVED new edges - edges: ${edges.length}, hookEdges: ${hookEdges.length} (normal edge creation)`);
     }
   }, [edges, nodes.length, hookEdges.length, hookSetEdges]);
   
