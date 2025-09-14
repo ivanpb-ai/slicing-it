@@ -71,10 +71,11 @@ const calculateSubtreeWidths = (
   childrenMap: Record<string, string[]>,
   allParentsMap: Record<string, string[]>,
   nodesByLevel: Map<number, string[]>,
-  maxLevel: number
+  maxLevel: number,
+  horizontalSpacing: number
 ): Map<string, number> => {
   const subtreeWidths = new Map<string, number>();
-  const gutter = 60; // Standard spacing between siblings
+  const gutter = horizontalSpacing; // Use provided horizontal spacing
   
   // Process levels bottom-up to calculate subtree widths
   for (let level = maxLevel; level >= 0; level--) {
@@ -165,9 +166,9 @@ export const arrangeNodesInBalancedTree = (
   const {
     nodeWidth = 180,
     nodeHeight = 120,
-    horizontalSpacing = 300,  // Reduced to prevent excessive spreading
-    verticalSpacing = 250,   // Increased for better vertical separation
-    marginX = 400,
+    horizontalSpacing = 140,  // Compact default for better overview
+    verticalSpacing = 160,   // Adequate vertical separation
+    marginX = 96,            // Compact margin for better viewport usage
     marginY = 100
   } = options;
 
@@ -310,7 +311,7 @@ export const arrangeNodesInBalancedTree = (
   });
   
   console.log('🔧 Calculating subtree widths for overlap prevention...');
-  const subtreeWidths = calculateSubtreeWidths(childrenMap, allParentsMap, nodesByLevelMap, maxLevel);
+  const subtreeWidths = calculateSubtreeWidths(childrenMap, allParentsMap, nodesByLevelMap, maxLevel, horizontalSpacing);
   console.log('🔧 Subtree widths calculated:', Object.fromEntries(Array.from(subtreeWidths.entries()).slice(0, 5)));
   
   // Calculate height-aware level Y positions to prevent overlaps
@@ -374,9 +375,9 @@ export const arrangeNodesInBalancedTree = (
       let currentX = 0;
       const childBounds: { leftX: number; rightX: number; centerX: number }[] = [];
       
-      // Adaptive spacing: upper levels need more space due to wider subtrees
-      // Base spacing increases for upper levels, plus dynamic adjustment based on subtree width
-      const baseGutter = level <= 2 ? 120 : level <= 4 ? 90 : 60;
+      // Level-scaled baseline from horizontalSpacing option for better compactness
+      const scaleByLevel = level <= 0 ? 1.1 : level <= 1 ? 1.0 : level <= 2 ? 0.9 : 0.8;
+      const baseGutter = horizontalSpacing * scaleByLevel;
       
       // Calculate average subtree width of children to adjust spacing dynamically
       const childSubtreeWidths = children.map(childId => {
@@ -387,9 +388,9 @@ export const arrangeNodesInBalancedTree = (
         ? childSubtreeWidths.reduce((sum, w) => sum + w, 0) / childSubtreeWidths.length 
         : 200;
       
-      // Adaptive gutter: more spacing for wider subtrees (FIXED: prevent excessive expansion)
-      const subtreeWidthFactor = Math.min(avgChildSubtreeWidth / 400, 1.2); // FIXED: Cap at 1.2x instead of 2x
-      const gutter = Math.floor(baseGutter * subtreeWidthFactor);
+      // Gentle modulation factor for spacing (much more conservative)
+      const subtreeWidthFactor = Math.max(0.9, Math.min(1.05, Math.sqrt(avgChildSubtreeWidth / 400)));
+      const gutter = Math.round(baseGutter * subtreeWidthFactor);
       
       console.log(`✓ Level ${level} spacing: base=${baseGutter}, factor=${subtreeWidthFactor.toFixed(2)}, final=${gutter}`);
       
@@ -494,7 +495,7 @@ export const arrangeNodesInBalancedTree = (
   console.log(`📊 Positioned ${positionedCount} out of ${expectedCount} nodes`);
   
   // Handle any unpositioned nodes (isolated/disconnected)
-  let fallbackX = 0;
+  let fallbackX = marginX;
   nodes.forEach(node => {
     if (!nodePositionMap[node.id]) {
       console.warn(`⚠️ Node ${node.id} was not positioned by layout, placing as fallback`);
@@ -503,45 +504,19 @@ export const arrangeNodesInBalancedTree = (
     }
   });
 
-  // Convert to positioned nodes format
-  const positionedNodes = Object.entries(nodePositionMap).map(([id, position]) => ({
-    id,
-    position
-  }));
-
-  console.log('🎯 Bottom-up balanced layout completed');
-
-  // Calculate the bounds of all positioned nodes to center the entire graph
-  const allPositionX = positionedNodes.map(p => p.position.x);
-  const minXPos = Math.min(...allPositionX);
-  const maxXPos = Math.max(...allPositionX);
-  const graphWidth = maxXPos - minXPos;
-  const graphCenterX = (minXPos + maxXPos) / 2;
-  
-  // Shift all nodes so the graph center is at X=0
-  const centeredNodes = positionedNodes.map(p => ({
-    ...p,
-    position: {
-      x: p.position.x - graphCenterX,
-      y: p.position.y
-    }
-  }));
-  
-  console.log(`🎯 Graph centering: minX=${minXPos}, maxX=${maxXPos}, width=${graphWidth}, centerOffset=${graphCenterX}`);
-
-  // Update original nodes with centered positions
+  // Update original nodes with normalized positions (NO DOUBLE CENTERING)
   const updatedNodes = nodes.map(node => {
-    const positioned = centeredNodes.find(p => p.id === node.id);
-    if (positioned) {
+    const position = nodePositionMap[node.id];
+    if (position) {
       return {
         ...node,
-        position: positioned.position
+        position: position
       };
     }
     return node;
   });
 
-  console.log('🎯 BALANCED TREE LAYOUT COMPLETED. Positioned', positionedNodes.length, 'nodes');
+  console.log('🎯 BALANCED TREE LAYOUT COMPLETED. Positioned', updatedNodes.length, 'nodes');
   console.log('🎯 Height-aware Y positioning used with minimum gap:', minGap, 'px');
   console.log('🎯 Level heights:', Object.fromEntries(Array.from(levelHeights.entries())));
   console.log('🎯 Level Y positions:', Object.fromEntries(Array.from(levelY.entries())));

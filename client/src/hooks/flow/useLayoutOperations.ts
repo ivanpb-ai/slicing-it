@@ -45,16 +45,24 @@ export const useLayoutOperations = (
       arrangeNodesInLayout();
       console.log('✅ arrangeNodesInLayout completed successfully');
       
-      // FIXED: Call fitView immediately after layout completes
-      console.log('🔍 FitView: Calling fitView immediately after layout...');
+      // FIXED: Defer fitView until after nodes are measured using double RAF
+      console.log('🔍 FitView: Deferring fitView until nodes are measured...');
       if (reactFlowInstance) {
-        console.log('✅ FitView: ReactFlow instance available, calling fitView');
-        reactFlowInstance.fitView({ 
-          padding: 0.1,
-          duration: 500,
-          includeHiddenNodes: false
+        console.log('✅ FitView: ReactFlow instance available, scheduling deferred fitView');
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            if (reactFlowInstance) {
+              console.log('🎯 FitView: Executing deferred fitView after node measurement');
+              reactFlowInstance.fitView({ 
+                padding: 0.22,           // Increased padding for better overview
+                duration: 350,           // Slightly faster animation
+                includeHiddenNodes: false,
+                minZoom: 0.15           // Prevent over-zoomed-out views
+              });
+              console.log('🎯 FitView: Deferred fitView completed successfully');
+            }
+          });
         });
-        console.log('🎯 FitView: fitView() called successfully');
       } else {
         console.error('❌ FitView: ReactFlow instance not available!');
       }
