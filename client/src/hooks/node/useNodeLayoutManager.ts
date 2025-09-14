@@ -89,7 +89,7 @@ export const useNodeLayoutManager = (
         }
       } else {
         // Use normal arrangement for other layout types
-        const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
+        const arrangedNodes = arrangeNodes(nodesCopy, currentEdges, layoutOptions);
         if (arrangedNodes?.length > 0) {
           // Use state setter (provided or fallback) to update nodes
           updateNodes(arrangedNodes);
@@ -104,7 +104,7 @@ export const useNodeLayoutManager = (
       console.error('Layout error:', error);
       
       try {
-        const fallbackNodes = arrangeNodes(currentNodes, edges, {
+        const fallbackNodes = arrangeNodes(currentNodes, currentEdges, {
           type: 'grid' as LayoutType,
           spacing: 250,              // Proper fallback spacing
           preventOverlap: true,
