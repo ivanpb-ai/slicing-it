@@ -33,6 +33,31 @@ const getNodeWidth = (nodeId: string, nodeType?: string): number => {
   }
 };
 
+// Helper function to get actual node height based on type (matching real rendered heights)
+const getNodeHeight = (nodeId: string, nodeType?: string): number => {
+  // Use node type if provided, otherwise infer from ID
+  const type = nodeType || (
+    nodeId.includes('s-nssai') ? 's-nssai' :
+    nodeId.includes('dnn') ? 'dnn' :
+    nodeId.includes('rrpmember') ? 'rrpmember' :
+    nodeId.includes('rrp') ? 'rrp' :
+    nodeId.includes('qosflow') ? 'qosflow' :
+    nodeId.includes('fiveqi') ? 'fiveqi' :
+    'default'
+  );
+  
+  // Real rendered heights based on CSS and content - RRP nodes are notably taller
+  switch (type) {
+    case 'rrp': return 340; // RRP nodes are significantly taller due to complex content
+    case 's-nssai': return 150; // S-NSSAI nodes have medium height
+    case 'dnn': return 140; // DNN nodes have medium height
+    case 'qosflow': return 130; // QoS Flow nodes
+    case 'rrpmember': return 120; // RRP Member nodes are shorter
+    case 'fiveqi': return 120; // 5QI nodes are compact
+    default: return 120; // Default fallback
+  }
+};
+
 // Helper function to get parent center X position
 const getParentCenterX = (parentPos: { x: number; y: number }, parentId: string, subtreeWidths?: Map<string, number>): number => {
   const parentWidth = subtreeWidths?.get(parentId) || getNodeWidth(parentId);
@@ -286,12 +311,36 @@ export const arrangeNodesInBalancedTree = (
   const subtreeWidths = calculateSubtreeWidths(childrenMap, allParentsMap, nodesByLevelMap, maxLevel);
   console.log('🔧 Subtree widths calculated:', Object.fromEntries(Array.from(subtreeWidths.entries()).slice(0, 5)));
   
-  // Removed excessive debug logging for performance
-
-  // Using subtree width calculation for proper spacing to prevent overlaps
-
+  // Calculate height-aware level Y positions to prevent overlaps
+  console.log('🔧 Calculating height-aware Y positions for each level...');
+  const levelHeights = new Map<number, number>();
+  const levelY = new Map<number, number>();
+  
+  // Calculate maximum height for each level
+  for (let level = 0; level <= maxLevel; level++) {
+    const nodesAtLevel = nodesByLevel[level] || [];
+    const maxHeightAtLevel = Math.max(
+      ...nodesAtLevel.map(nodeId => getNodeHeight(nodeId)),
+      120 // minimum height fallback
+    );
+    levelHeights.set(level, maxHeightAtLevel);
+    console.log(`🔧 Level ${level}: max height = ${maxHeightAtLevel}px`);
+  }
+  
+  // Calculate cumulative Y positions with adequate gaps
+  const minGap = 160; // Minimum gap between levels, especially important for RRP → RRP Member
+  levelY.set(0, marginY); // Root level starts at marginY
+  
+  for (let level = 1; level <= maxLevel; level++) {
+    const prevLevelY = levelY.get(level - 1) || marginY;
+    const prevLevelHeight = levelHeights.get(level - 1) || 120;
+    const newY = prevLevelY + prevLevelHeight + minGap;
+    levelY.set(level, newY);
+    console.log(`🔧 Level ${level}: Y position = ${newY} (prev Y: ${prevLevelY} + prev height: ${prevLevelHeight} + gap: ${minGap})`);
+  }
+  
   // BOTTOM-UP BALANCED TREE LAYOUT for true symmetry
-  console.log('🎯 Starting bottom-up balanced positioning...');
+  console.log('🎯 Starting bottom-up balanced positioning with height-aware spacing...');
   
   // Position nodes using bottom-up approach for balanced layout
   const nodePositionMap: Record<string, { x: number; y: number }> = {};
@@ -300,9 +349,9 @@ export const arrangeNodesInBalancedTree = (
   const positionSubtreeBottomUp = (nodeId: string, level: number): { leftX: number; rightX: number; centerX: number } => {
     const children = childrenMap[nodeId] || [];
     
-    // FIXED: Use deterministic Y positioning based on level and verticalSpacing
-    const y = marginY + level * verticalSpacing;
-    console.log(`📍 Level ${level} Y position: ${y} (marginY=${marginY} + level=${level} * verticalSpacing=${verticalSpacing})`);
+    // FIXED: Use height-aware Y positioning based on actual level heights
+    const y = levelY.get(level) || marginY;
+    console.log(`📍 Level ${level} Y position: ${y} (height-aware positioning)`);
     
     if (children.length === 0) {
       // Leaf node: return bounds centered at 0 (fixed for bottom-up algorithm)
@@ -491,7 +540,9 @@ export const arrangeNodesInBalancedTree = (
   });
 
   console.log('🎯 BALANCED TREE LAYOUT COMPLETED. Positioned', positionedNodes.length, 'nodes');
-  console.log('🎯 Final Y spacing used:', verticalSpacing, 'px');
+  console.log('🎯 Height-aware Y positioning used with minimum gap:', minGap, 'px');
+  console.log('🎯 Level heights:', Object.fromEntries(Array.from(levelHeights.entries())));
+  console.log('🎯 Level Y positions:', Object.fromEntries(Array.from(levelY.entries())));
   console.log('🎯 Final calculated positions:', updatedNodes.slice(0, 5).map(n => ({ id: n.id, x: n.position.x, y: n.position.y })));
   console.log(`🧹 Cleaned ${edges.length - validEdges.length} invalid edges`);
 
