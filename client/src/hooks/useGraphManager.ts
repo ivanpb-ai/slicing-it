@@ -119,21 +119,14 @@ export const useGraphManager = () => {
       // Set nodes first
       setTimeout(() => {
         console.log(`Setting ${graphData.nodes.length} imported nodes`);
-        // CRITICAL FIX: Use ReactFlow instance for import
-        if (reactFlowInstance) {
-          reactFlowInstance.setNodes(graphData.nodes);
-        } else {
-          setNodes(graphData.nodes);
-        }
+        // Use React state for import - ReactFlow will automatically sync
+        setNodes(graphData.nodes);
         
         // Then set edges
         setTimeout(() => {
           console.log(`Setting ${graphData.edges.length} imported edges`);
-          if (reactFlowInstance) {
-            reactFlowInstance.setEdges(graphData.edges);
-          } else {
-            setEdges(graphData.edges);
-          }
+          // Use React state for edges - ReactFlow will automatically sync
+          setEdges(graphData.edges);
           
           // Notify and reset loading
           window.dispatchEvent(new CustomEvent('graph-loaded'));

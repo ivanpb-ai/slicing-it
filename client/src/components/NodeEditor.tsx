@@ -193,12 +193,8 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       setTimeout(() => {
         setNodes(EXAMPLE_GRAPH.nodes);
         setTimeout(() => {
-          if (reactFlowInstance) {
-            reactFlowInstance.setEdges(EXAMPLE_GRAPH.edges);
-            setEdges(EXAMPLE_GRAPH.edges);
-          } else {
-            setEdges(EXAMPLE_GRAPH.edges);
-          }
+          // Use React state for edges - ReactFlow will automatically sync
+          setEdges(EXAMPLE_GRAPH.edges);
           
           // Fit view after loading
           setTimeout(() => {
@@ -231,7 +227,8 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   const { onDragOver, onDrop } = useNodeDragDrop(
     reactFlowWrapper,
     addNode,
-    createChildNode
+    createChildNode,
+    setNodes
   );
 
   const hasSelectedElements = selectedElements.nodes.length > 0 || selectedElements.edges.length > 0;

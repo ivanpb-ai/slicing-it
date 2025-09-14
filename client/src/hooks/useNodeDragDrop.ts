@@ -12,7 +12,8 @@ import { useNodeRelationships } from './node/useNodeRelationships';
 export const useNodeDragDrop = (
   reactFlowWrapper: React.RefObject<HTMLDivElement>,
   addNode: (type: NodeType, position: XYPosition, fiveQIId?: string) => void,
-  createChildNode: (type: NodeType, position: XYPosition, parentId: string, fiveQIId?: string) => void
+  createChildNode: (type: NodeType, position: XYPosition, parentId: string, fiveQIId?: string) => void,
+  setNodes: React.Dispatch<React.SetStateAction<Node[]>>
 ) => {
   const reactFlowInstance = useReactFlow();
   const [isProcessingDrop, setIsProcessingDrop] = useState(false);
@@ -194,9 +195,9 @@ export const useNodeDragDrop = (
                     return node;
                   });
                   
-                  // Apply the updated positions - FIXED: Don't clear nodes, just update directly
+                  // Apply the updated positions using React state - ReactFlow will automatically sync
                   console.log(`useNodeDragDrop: Applying repositioning for ${existingDnnChildren.length} DNN siblings directly (avoiding 0-node state)`);
-                  reactFlowInstance.setNodes(updatedNodes);
+                  setNodes(updatedNodes);
                   console.log(`useNodeDragDrop: Applied repositioning for ${existingDnnChildren.length} DNN siblings`);
                 }
               }, 200); // Longer delay to ensure the new node is fully rendered

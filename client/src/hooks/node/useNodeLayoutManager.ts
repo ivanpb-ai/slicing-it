@@ -96,12 +96,8 @@ export const useNodeLayoutManager = (
           marginX: 400,
           marginY: 100
         });
-        // CRITICAL FIX: Use ReactFlow instance for fallback too
-        if (reactFlowInstance) {
-          reactFlowInstance.setNodes(fallbackNodes);
-        } else {
-          setNodes(fallbackNodes);
-        }
+        // Use React state for fallback - ReactFlow will automatically sync
+        setNodes(fallbackNodes);
         toast.warning('Using fallback grid layout');
       } catch (e) {
         console.error('Failed to apply fallback layout');
