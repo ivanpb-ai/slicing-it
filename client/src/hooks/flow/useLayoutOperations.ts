@@ -45,12 +45,17 @@ export const useLayoutOperations = (
       
       // FIXED: Immediately center viewport to show arranged nodes
       setTimeout(() => {
+        console.log('🔍 FitView: Attempting to fit view after layout...');
         if (reactFlowInstance) {
+          console.log('✅ FitView: ReactFlow instance available, calling fitView');
           reactFlowInstance.fitView({ 
             padding: 0.1,
             duration: 500,
             includeHiddenNodes: false
           });
+          console.log('🎯 FitView: fitView() called successfully');
+        } else {
+          console.error('❌ FitView: ReactFlow instance not available!');
         }
       }, 100);
       
