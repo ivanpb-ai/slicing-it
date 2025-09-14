@@ -461,11 +461,11 @@ export const arrangeNodesInBalancedTree = (
             } else if (isRrpNode && level === rrpLevel) {
               // Position RRP nodes using subtree widths for proper spacing
               const nodeIndex = allRrpNodes.indexOf(nodeId);
-              const gutter = 60;
+              const gutter = 30; // Reduced gutter for upper level nodes
               
-              // Calculate total width needed for all RRP nodes based on subtree widths
+              // Calculate total width needed for all RRP nodes - use actual node widths instead of full subtree widths for upper level compactness
               const totalRrpWidth = allRrpNodes.reduce((sum, rrpId) => {
-                return sum + (subtreeWidths.get(rrpId) || getNodeWidth(rrpId));
+                return sum + getNodeWidth(rrpId); // Use actual node width instead of subtree width for more compact layout
               }, 0);
               const totalGutterWidth = (allRrpNodes.length - 1) * gutter;
               const totalWidth = totalRrpWidth + totalGutterWidth;
@@ -474,7 +474,7 @@ export const arrangeNodesInBalancedTree = (
               // Calculate cumulative position for this RRP node
               let cumulativeX = startX;
               for (let i = 0; i < nodeIndex; i++) {
-                cumulativeX += (subtreeWidths.get(allRrpNodes[i]) || getNodeWidth(allRrpNodes[i])) + gutter;
+                cumulativeX += getNodeWidth(allRrpNodes[i]) + gutter; // Use actual node width for compact spacing
               }
               
               const position = { x: cumulativeX, y };
@@ -484,11 +484,11 @@ export const arrangeNodesInBalancedTree = (
             } else if (isCellAreaNode && level === cellAreaLevel) {
               // Position cell-area nodes using subtree widths for proper spacing
               const nodeIndex = allCellAreaNodes.indexOf(nodeId);
-              const gutter = 60;
+              const gutter = 30; // Reduced gutter for upper level nodes
               
-              // Calculate total width needed for all cell-area nodes based on subtree widths
+              // Calculate total width needed for all cell-area nodes - use actual node widths for upper level compactness  
               const totalCellAreaWidth = allCellAreaNodes.reduce((sum, cellId) => {
-                return sum + (subtreeWidths.get(cellId) || getNodeWidth(cellId));
+                return sum + getNodeWidth(cellId); // Use actual node width instead of subtree width for more compact layout
               }, 0);
               const totalGutterWidth = (allCellAreaNodes.length - 1) * gutter;
               const totalWidth = totalCellAreaWidth + totalGutterWidth;
@@ -497,7 +497,7 @@ export const arrangeNodesInBalancedTree = (
               // Calculate cumulative position for this cell-area node
               let cumulativeX = startX;
               for (let i = 0; i < nodeIndex; i++) {
-                cumulativeX += (subtreeWidths.get(allCellAreaNodes[i]) || getNodeWidth(allCellAreaNodes[i])) + gutter;
+                cumulativeX += getNodeWidth(allCellAreaNodes[i]) + gutter; // Use actual node width for compact spacing
               }
               
               const position = { x: cumulativeX, y };
