@@ -459,63 +459,126 @@ export const arrangeNodesInBalancedTree = (
               }
               // DNN node positioned with width-aware spacing
             } else if (isRrpNode && level === rrpLevel) {
-              // Position RRP nodes using subtree widths for proper spacing
-              const nodeIndex = allRrpNodes.indexOf(nodeId);
-              const gutter = 30; // Reduced gutter for upper level nodes
+              // Position RRP nodes per-parent for organized layout
+              const parentIds = allParentsMap[nodeId] || [];
+              const parentId = parentIds[0];
               
-              // Calculate total width needed for all RRP nodes - use moderate subtree width allocation for proper descendant space
-              const totalRrpWidth = allRrpNodes.reduce((sum, rrpId) => {
-                const nodeWidth = getNodeWidth(rrpId);
-                const subtreeWidth = subtreeWidths.get(rrpId) || nodeWidth;
-                // Use 60% of subtree width + 40% node width for balanced spacing
-                return sum + (subtreeWidth * 0.6 + nodeWidth * 0.4);
-              }, 0);
-              const totalGutterWidth = (allRrpNodes.length - 1) * gutter;
-              const totalWidth = totalRrpWidth + totalGutterWidth;
-              const startX = 0 - totalWidth / 2;
-              
-              // Calculate cumulative position for this RRP node
-              let cumulativeX = startX;
-              for (let i = 0; i < nodeIndex; i++) {
-                const nodeWidth = getNodeWidth(allRrpNodes[i]);
-                const subtreeWidth = subtreeWidths.get(allRrpNodes[i]) || nodeWidth;
-                // Use balanced width allocation for proper spacing
-                cumulativeX += (subtreeWidth * 0.6 + nodeWidth * 0.4) + gutter;
+              if (parentId && nodePositionMap[parentId]) {
+                const parentPos = nodePositionMap[parentId];
+                
+                // Get all RRP siblings under same parent (cell-area)
+                const typedSiblings = (childrenMap[parentId] || []).filter(id => id.includes('rrp'));
+                
+                // Get parent center for proper alignment
+                const parentCenterX = getParentCenterX(parentPos, parentId, subtreeWidths);
+                
+                if (typedSiblings.length === 1) {
+                  // Single RRP child: center under parent
+                  const nodeWidth = getNodeWidth(nodeId);
+                  const x = parentCenterX - nodeWidth / 2;
+                  
+                  const position = { x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ Single RRP ${nodeId} centered under parent at (${x}, ${y})`);
+                } else {
+                  // Multiple RRP siblings: distribute compactly under parent
+                  const nodeIndex = typedSiblings.indexOf(nodeId);
+                  const gutter = 50; // Compact spacing for clean layout
+                  
+                  // Use node widths + small margin for compact upper level
+                  const totalSiblingWidth = typedSiblings.reduce((sum, sibId) => {
+                    return sum + getNodeWidth(sibId);
+                  }, 0);
+                  const totalGutterWidth = (typedSiblings.length - 1) * gutter;
+                  const totalWidth = totalSiblingWidth + totalGutterWidth;
+                  
+                  // Start from left edge of the group, centered under parent
+                  const startX = parentCenterX - totalWidth / 2;
+                  
+                  // Calculate cumulative position for this specific node
+                  let cumulativeX = startX;
+                  for (let i = 0; i < nodeIndex; i++) {
+                    cumulativeX += getNodeWidth(typedSiblings[i]) + gutter;
+                  }
+                  
+                  const position = { x: cumulativeX, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ RRP ${nodeId} positioned under parent at (${cumulativeX}, ${y})`);
+                }
+              } else {
+                // Fallback: position using node width
+                const nodeWidth = getNodeWidth(nodeId);
+                const x = 0 - nodeWidth / 2;
+                const position = { x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ RRP ${nodeId} fallback positioned at (${x}, ${y})`);
               }
-              
-              const position = { x: cumulativeX, y };
-              positionedNodes.push({ id: nodeId, position });
-              nodePositionMap[nodeId] = position;
-              console.log(`✓ RRP ${nodeId} positioned with subtree width at (${cumulativeX}, ${y})`);
             } else if (isCellAreaNode && level === cellAreaLevel) {
-              // Position cell-area nodes using subtree widths for proper spacing
-              const nodeIndex = allCellAreaNodes.indexOf(nodeId);
-              const gutter = 30; // Reduced gutter for upper level nodes
+              // Position cell-area nodes per-parent for organized layout
+              const parentIds = allParentsMap[nodeId] || [];
+              const parentId = parentIds[0];
               
-              // Calculate total width needed for all cell-area nodes - use moderate subtree width allocation for proper descendant space  
-              const totalCellAreaWidth = allCellAreaNodes.reduce((sum, cellId) => {
-                const nodeWidth = getNodeWidth(cellId);
-                const subtreeWidth = subtreeWidths.get(cellId) || nodeWidth;
-                // Use 60% of subtree width + 40% node width for balanced spacing
-                return sum + (subtreeWidth * 0.6 + nodeWidth * 0.4);
-              }, 0);
-              const totalGutterWidth = (allCellAreaNodes.length - 1) * gutter;
-              const totalWidth = totalCellAreaWidth + totalGutterWidth;
-              const startX = 0 - totalWidth / 2;
-              
-              // Calculate cumulative position for this cell-area node
-              let cumulativeX = startX;
-              for (let i = 0; i < nodeIndex; i++) {
-                const nodeWidth = getNodeWidth(allCellAreaNodes[i]);
-                const subtreeWidth = subtreeWidths.get(allCellAreaNodes[i]) || nodeWidth;
-                // Use balanced width allocation for proper spacing
-                cumulativeX += (subtreeWidth * 0.6 + nodeWidth * 0.4) + gutter;
+              if (parentId && nodePositionMap[parentId]) {
+                const parentPos = nodePositionMap[parentId];
+                
+                // Get all cell-area siblings under same parent (network)
+                const typedSiblings = (childrenMap[parentId] || []).filter(id => id.includes('cell-area'));
+                
+                // Get parent center for proper alignment
+                const parentCenterX = getParentCenterX(parentPos, parentId, subtreeWidths);
+                
+                if (typedSiblings.length === 1) {
+                  // Single cell-area child: center under parent
+                  const nodeWidth = getNodeWidth(nodeId);
+                  const x = parentCenterX - nodeWidth / 2;
+                  
+                  const position = { x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ Single Cell-area ${nodeId} centered under parent at (${x}, ${y})`);
+                } else {
+                  // Multiple cell-area siblings: distribute with moderate spacing
+                  const nodeIndex = typedSiblings.indexOf(nodeId);
+                  const gutter = 80; // Moderate spacing for upper level
+                  
+                  // Use node widths + small subtree allowance for balanced layout
+                  const totalSiblingWidth = typedSiblings.reduce((sum, sibId) => {
+                    const nodeWidth = getNodeWidth(sibId);
+                    const subtreeWidth = subtreeWidths.get(sibId) || nodeWidth;
+                    // Limited subtree influence: 30% for less spread
+                    return sum + (nodeWidth + (subtreeWidth - nodeWidth) * 0.3);
+                  }, 0);
+                  const totalGutterWidth = (typedSiblings.length - 1) * gutter;
+                  const totalWidth = totalSiblingWidth + totalGutterWidth;
+                  
+                  // Start from left edge of the group, centered under parent
+                  const startX = parentCenterX - totalWidth / 2;
+                  
+                  // Calculate cumulative position for this specific node
+                  let cumulativeX = startX;
+                  for (let i = 0; i < nodeIndex; i++) {
+                    const sibNodeWidth = getNodeWidth(typedSiblings[i]);
+                    const sibSubtreeWidth = subtreeWidths.get(typedSiblings[i]) || sibNodeWidth;
+                    cumulativeX += (sibNodeWidth + (sibSubtreeWidth - sibNodeWidth) * 0.3) + gutter;
+                  }
+                  
+                  const position = { x: cumulativeX, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ Cell-area ${nodeId} positioned under parent at (${cumulativeX}, ${y})`);
+                }
+              } else {
+                // Fallback: position using node width
+                const nodeWidth = getNodeWidth(nodeId);
+                const x = 0 - nodeWidth / 2;
+                const position = { x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ Cell-area ${nodeId} fallback positioned at (${x}, ${y})`);
               }
-              
-              const position = { x: cumulativeX, y };
-              positionedNodes.push({ id: nodeId, position });
-              nodePositionMap[nodeId] = position;
-              console.log(`✓ Cell-area ${nodeId} positioned with subtree width at (${cumulativeX}, ${y})`);
               // Cell area positioned
             } else if (isSNssaiNode && level === sNssaiLevel) {
               // Multi-parent support for S-NSSAI nodes with width-aware positioning
