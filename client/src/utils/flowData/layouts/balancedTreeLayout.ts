@@ -316,18 +316,17 @@ export const arrangeNodesInBalancedTree = (
     }
     
     if (children.length === 0) {
-      // Leaf node: position using its width - BUT don't overlap them all at centerX=0!
+      // Leaf node: return bounds centered at 0 (fixed for bottom-up algorithm)
       const nodeWidth = getNodeWidth(nodeId);
       
-      // CRITICAL FIX: Use a unique position for each leaf based on processing order
-      // This prevents all leaf nodes from overlapping at the same position
-      const uniqueOffset = Object.keys(nodePositionMap).length * 100; // Spread them out initially
-      const centerX = uniqueOffset;
+      // CRITICAL FIX: Return relative bounds centered at 0 for proper bottom-up positioning
+      // Position will be finalized when parent applies shift
+      const centerX = 0;
       const leftX = centerX - nodeWidth / 2;
       const rightX = centerX + nodeWidth / 2;
       
       nodePositionMap[nodeId] = { x: leftX, y };
-      console.log(`✓ Leaf ${nodeId} positioned at (${leftX}, ${y}) with unique offset`);
+      console.log(`✓ Leaf ${nodeId} positioned at (${leftX}, ${y}) relative to parent`);
       
       return { leftX, rightX, centerX };
     } else {
@@ -402,11 +401,35 @@ export const arrangeNodesInBalancedTree = (
     }
   };
 
-  // Find root nodes and position their subtrees using bottom-up approach
+  // Find root nodes and position their subtrees using bottom-up approach with horizontal packing
   const rootNodeIds = nodesByLevel[0] || [];
+  let rootCurrentX = 0;
+  const rootGutter = 300; // Space between root subtrees
   
   rootNodeIds.forEach(rootId => {
-    positionSubtreeBottomUp(rootId, 0);
+    // Track nodes before positioning this root
+    const nodesBefore = new Set(Object.keys(nodePositionMap));
+    
+    // Position this root's subtree
+    const rootBounds = positionSubtreeBottomUp(rootId, 0);
+    
+    // Find all nodes added during this root's positioning
+    const nodesInThisRoot = Object.keys(nodePositionMap).filter(id => !nodesBefore.has(id));
+    nodesInThisRoot.push(rootId); // Include the root itself
+    
+    // Shift this entire root subtree to avoid overlap with previous roots
+    const shiftX = rootCurrentX - rootBounds.leftX;
+    nodesInThisRoot.forEach(nodeId => {
+      if (nodePositionMap[nodeId]) {
+        nodePositionMap[nodeId].x += shiftX;
+      }
+    });
+    
+    console.log(`✓ Root ${rootId} subtree shifted by ${shiftX}px to avoid overlap`);
+    
+    // Advance position for next root
+    const rootSubtreeWidth = rootBounds.rightX - rootBounds.leftX;
+    rootCurrentX += rootSubtreeWidth + rootGutter;
   });
 
   // Normalize positions: shift so leftmost node starts at marginX
