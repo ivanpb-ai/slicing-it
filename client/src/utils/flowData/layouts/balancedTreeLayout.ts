@@ -316,14 +316,18 @@ export const arrangeNodesInBalancedTree = (
     }
     
     if (children.length === 0) {
-      // Leaf node: position using its width
+      // Leaf node: position using its width - BUT don't overlap them all at centerX=0!
       const nodeWidth = getNodeWidth(nodeId);
-      const centerX = 0; // Will be normalized later
+      
+      // CRITICAL FIX: Use a unique position for each leaf based on processing order
+      // This prevents all leaf nodes from overlapping at the same position
+      const uniqueOffset = Object.keys(nodePositionMap).length * 100; // Spread them out initially
+      const centerX = uniqueOffset;
       const leftX = centerX - nodeWidth / 2;
       const rightX = centerX + nodeWidth / 2;
       
       nodePositionMap[nodeId] = { x: leftX, y };
-      console.log(`✓ Leaf ${nodeId} positioned at (${leftX}, ${y})`);
+      console.log(`✓ Leaf ${nodeId} positioned at (${leftX}, ${y}) with unique offset`);
       
       return { leftX, rightX, centerX };
     } else {
@@ -344,8 +348,8 @@ export const arrangeNodesInBalancedTree = (
         ? childSubtreeWidths.reduce((sum, w) => sum + w, 0) / childSubtreeWidths.length 
         : 200;
       
-      // Adaptive gutter: more spacing for wider subtrees
-      const subtreeWidthFactor = Math.min(avgChildSubtreeWidth / 300, 2); // Cap at 2x
+      // Adaptive gutter: more spacing for wider subtrees (FIXED: prevent excessive expansion)
+      const subtreeWidthFactor = Math.min(avgChildSubtreeWidth / 400, 1.2); // FIXED: Cap at 1.2x instead of 2x
       const gutter = Math.floor(baseGutter * subtreeWidthFactor);
       
       console.log(`✓ Level ${level} spacing: base=${baseGutter}, factor=${subtreeWidthFactor.toFixed(2)}, final=${gutter}`);
