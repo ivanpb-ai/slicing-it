@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { Node, XYPosition } from '@xyflow/react';
 import { NodeType } from '../../types/nodeTypes';
 import { getNodeId } from '../../utils/flowData/idGenerator';
-import { getNextCellAreaId, getNextDnnId, getNextRrpId, getNextSnssaiId } from '../../utils/flowData/idCounters';
+import { getNextCellAreaId, getNextDnnId, getNextRrpId, getNextSnssaiId, getNextQoSFlowId } from '../../utils/flowData/idCounters';
 
 export const useSimpleChildNodeCreation = (
   setNodes: React.Dispatch<React.SetStateAction<Node[]>>,
@@ -60,10 +60,19 @@ export const useSimpleChildNodeCreation = (
         nodeId: id
       };
       console.log(`Creating RRPmember child with PLMN: ${fiveQIId || 'Unknown'}`);
+    } else if (type === 'qosflow') {
+      const qosFlowId = getNextQoSFlowId();
+      id = `qosflow-${Date.now()}-${Math.floor(Math.random() * 10000)}`;
+      extraData = { 
+        qosFlowId,
+        qosFlowName: `QoS Flow ${qosFlowId}`,
+        nodeId: id
+      };
+      console.log(`Creating child QoS Flow with ID: ${qosFlowId}`);
     } else {
-      id = getNodeId(type, fiveQIId);
+      id = getNodeId(type); // Remove fiveQIId parameter to ensure unique IDs
       if (type === 'fiveqi') {
-        extraData = { fiveQIId };
+        extraData = { fiveQIId }; // Keep fiveQIId in data for display
       } 
     }
 
@@ -174,14 +183,15 @@ export const useSimpleChildNodeCreation = (
         }, 100);
       }
       
-      // Create edge connection from parent to child after a short delay
-      setTimeout(() => {
-        console.log(`useSimpleChildNodeCreation: Creating edge from ${parentId} to ${id}`);
-        addEdgeWithHandles(parentId, id, 'bottom-source', 'top-target');
-      }, 50);
-
       return updatedNodes;
     });
+
+    // Create edge connection from parent to child OUTSIDE the setNodes updater
+    // This prevents double execution in React StrictMode
+    setTimeout(() => {
+      console.log(`useSimpleChildNodeCreation: Creating edge from ${parentId} to ${id}`);
+      addEdgeWithHandles(parentId, id, 'bottom-source', 'top-target');
+    }, 50);
 
     // Return a placeholder node for the function signature
     const newNode: Node = {

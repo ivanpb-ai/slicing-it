@@ -1,0 +1,583 @@
+FiveQINodeButton: Started dragging 5QI 9
+FiveQINodeButton.tsx:62 FiveQINodeButton: Setting drag data: "fiveqi:9"
+useNodeDragDrop.ts:30 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:39 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:61 useNodeDragDrop: Drop event received with data: "fiveqi:9" at position: Object
+useDragDataParser.ts:3 parseDragData: Processing drag data: fiveqi:9
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:25 parseDragData: Parsed 5QI format - ID: 9
+useNodeDragDrop.ts:77 useNodeDragDrop: Parsed drag data: nodeType="fiveqi", fiveQIId="9"
+useNodeDragDrop.ts:92 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:97 useNodeDragDrop: Elements at drop point: 6
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 6
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: qosflow-1757840952857-7954
+useNodeDragDrop.ts:106 useNodeDragDrop: Detected parent: qosflow-1757840952857-7954
+useNodeRelationships.ts:35 Validating relationship: qosflow -> fiveqi
+useNodeRelationships.ts:65 Valid relationship confirmed: qosflow -> fiveqi
+useNodeDragDrop.ts:119 useNodeDragDrop: Creating child fiveqi node under parent qosflow-1757840952857-7954
+useNodeDragDrop.ts:122 useNodeDragDrop: Parent node found: qosflow
+useNodeDragDrop.ts:216 useNodeDragDrop: Child position calculated: Object
+useSimpleChildNodeCreation.ts:70 Creating child fiveqi node with ID: fiveqi-9 under parent: qosflow-1757840952857-7954
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FlowInstance.tsx:80 FlowInstance: Rendering with 32 nodes, 31 edges
+NodeEditor.tsx:124 NodeEditor: PREVENTED sync - nodes: 0, hookNodes: 32 (protecting newly created DNN/5QI nodes)
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+2StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-9, type=fiveqi, nodeNumber=9
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+useSimpleChildNodeCreation.ts:179 useSimpleChildNodeCreation: Creating edge from qosflow-1757840952857-7954 to fiveqi-9
+useUnifiedEdgeManager.ts:22 UnifiedEdgeManager: Creating edge unified-qosflow-1757840952857-7954-fiveqi-9 (auto)
+useUnifiedEdgeManager.ts:58 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:112 UnifiedEdgeManager: Total edges after addition: 32
+useSimpleChildNodeCreation.ts:179 useSimpleChildNodeCreation: Creating edge from qosflow-1757840952857-7954 to fiveqi-9
+useUnifiedEdgeManager.ts:22 UnifiedEdgeManager: Creating edge unified-qosflow-1757840952857-7954-fiveqi-9 (auto)
+useUnifiedEdgeManager.ts:58 UnifiedEdgeManager: Adding edge to state: Object
+2useUnifiedEdgeManager.ts:67 UnifiedEdgeManager: Edge qosflow-1757840952857-7954->fiveqi-9 already exists
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FlowInstance.tsx:80 FlowInstance: Rendering with 32 nodes, 32 edges
+NodeEditor.tsx:137 NodeEditor: PREVENTED edge sync - edges: 0, hookEdges: 32 (protecting newly created edges)
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 7
+fiveQIUtils.ts:24 Looking up 5QI with ID: "7"
+fiveQIUtils.ts:33 Found matching 5QI for ID "7": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 10
+fiveQIUtils.ts:24 Looking up 5QI with ID: "10"
+fiveQIUtils.ts:33 Found matching 5QI for ID "10": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
