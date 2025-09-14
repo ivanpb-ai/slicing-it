@@ -30,15 +30,15 @@ export const useNodeLayoutManager = (
       return;
     }
 
-    // Layout options with proper spacing to prevent overlap
+    // Layout options with improved spacing to prevent overlap and alignment issues
     const layoutOptions = {
       type: 'balanced-tree' as LayoutType,
-      horizontalSpacing: 400,     // Reduced to fix DNN overlapping
-      verticalSpacing: 180,       // Consistent with child positioning
+      horizontalSpacing: 400,     // Horizontal spacing between siblings
+      verticalSpacing: 250,       // INCREASED: More vertical space between levels (was 180)
       nodeWidth: 180,
       nodeHeight: 120,
       marginX: 100,
-      marginY: 100,
+      marginY: 150,              // INCREASED: More top margin to accommodate larger nodes
       preventOverlap: true,
       edgeShortenFactor: 0.95,
       minNodeDistance: 50         

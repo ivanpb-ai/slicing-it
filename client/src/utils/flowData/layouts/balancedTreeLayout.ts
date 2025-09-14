@@ -393,12 +393,12 @@ export const arrangeNodesInBalancedTree = (
       const subtreeRightX = rightmostChild.rightX;
       const subtreeCenterX = (subtreeLeftX + subtreeRightX) / 2;
       
-      // Position parent centered over children
+      // Position parent centered over children with improved alignment
       const nodeWidth = getNodeWidth(nodeId);
       const parentX = subtreeCenterX - nodeWidth / 2;
       
       nodePositionMap[nodeId] = { x: parentX, y };
-      console.log(`✓ Parent ${nodeId} centered over children at (${parentX}, ${y})`);
+      console.log(`✓ Parent ${nodeId} centered over children at (${Math.round(parentX)}, ${y})`);
       
       return { 
         leftX: Math.min(subtreeLeftX, parentX), 
