@@ -86,20 +86,43 @@ export const useNodeLayoutManager = (
             setNodes(forceUpdatedNodes);
           }
           
-          // Update edges with cleaned edges (always apply cleaned edges)
+          // CRITICAL FIX: Reconcile edges against final node set to prevent dangling-edge exceptions
           if (balancedResult.cleanedEdges) {
-            // Ensure no duplicate edges
-            const uniqueEdges = balancedResult.cleanedEdges.filter((edge, index, arr) => 
+            // Build set of valid node IDs from uniqueNodes
+            const validNodeIds = new Set(uniqueNodes.map(node => node.id));
+            
+            // Filter edges to only include those with valid source/target nodes
+            const reconcileEdges = balancedResult.cleanedEdges.filter(edge => {
+              const hasValidSource = edge.source && validNodeIds.has(edge.source);
+              const hasValidTarget = edge.target && validNodeIds.has(edge.target);
+              const hasValidId = edge.id && edge.id.trim() !== '';
+              
+              if (!hasValidSource || !hasValidTarget || !hasValidId) {
+                console.warn(`🔧 Dropping invalid edge: ${edge.id} (${edge.source} -> ${edge.target})`);
+                return false;
+              }
+              return true;
+            });
+            
+            // Ensure no duplicate edges and synthesize missing IDs
+            const uniqueEdges = reconcileEdges.filter((edge, index, arr) => 
               arr.findIndex(e => e.id === edge.id) === index
             );
             
-            console.log(`🧹 Updating edges: ${currentEdges.length} -> ${uniqueEdges.length} (filtered duplicates)`);
-            // CRITICAL FIX: Always update ReactFlow instance AND React state to keep them in sync
-            if (reactFlowInstance) {
-              reactFlowInstance.setEdges(uniqueEdges);
-            }
-            if (setEdges) {
-              setEdges(uniqueEdges);
+            console.log(`🧹 Edge reconciliation: ${balancedResult.cleanedEdges.length} -> ${reconcileEdges.length} -> ${uniqueEdges.length} (filtered invalid/duplicates)`);
+            
+            try {
+              // CRITICAL FIX: Wrap ReactFlow updates in try-catch to prevent exceptions
+              if (reactFlowInstance) {
+                reactFlowInstance.setEdges(uniqueEdges);
+              }
+              if (setEdges) {
+                setEdges(uniqueEdges);
+              }
+              console.log('✅ Successfully updated edges without exceptions');
+            } catch (error) {
+              console.error('❌ Edge update failed:', error);
+              console.log('🔧 Problematic edges sample:', uniqueEdges.slice(0, 3));
             }
             
             // Sanity check to confirm persistence
