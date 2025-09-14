@@ -5,6 +5,7 @@ import { isDnn, isQoSFlow, is5QI, isSnssai } from './nodeTypeDetection';
 import { positionDnnNodes } from './positionDnnNodes';
 import { positionQoSFlowNodes } from './positionQoSFlowNodes';
 import { position5QINodes } from './position5QINodes';
+import { positionSnssaiNodes } from './positionSnssaiNodes';
 import { positionOtherNodes } from './positionOtherNodes';
 import { VERTICAL_LEVEL_SPACINGS } from '../constants';
 
@@ -102,8 +103,21 @@ export const positionNodesByLevel = (
       );
     }
 
+    // Position S-NSSAI nodes with parent-group aware positioning  
+    const snssaiNodes = nodesInLevel.filter(isSnssai);
+    if (snssaiNodes.length > 0) {
+      positionSnssaiNodes(
+        snssaiNodes,
+        y,
+        startX,
+        arrangedNodes,
+        options,
+        childrenMap
+      );
+    }
+
     // Now position other nodes with standard alignment
-    const otherNodes = nodesInLevel.filter(n => !isDnn(n) && !isQoSFlow(n) && !is5QI(n));
+    const otherNodes = nodesInLevel.filter(n => !isDnn(n) && !isQoSFlow(n) && !is5QI(n) && !isSnssai(n));
     if (otherNodes.length > 0) {
       positionOtherNodes(
         otherNodes,
