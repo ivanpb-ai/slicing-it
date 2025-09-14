@@ -108,35 +108,43 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   } = useNodeEditor();
 
 
-  // CRITICAL FIX: Only sync when passed state has MORE items (like after import)
-  // Don't sync when hook state has more items (like after creating new nodes)
+  // CRITICAL FIX: Allow imports AND clear operations, but prevent DNN/5QI deletion
   React.useEffect(() => {
-    // SMART SYNC: Allow imports but prevent DNN/5QI deletion
     // Import scenario: nodes.length > hookNodes.length (e.g., 26 > 0 or 26 > 5)
+    // Clear scenario: nodes.length === 0 AND edges.length === 0 (legitimate clear operation)
     // DNN creation scenario: hookNodes.length > nodes.length (e.g., 27 > 26) - should NOT sync
-    const shouldSync = nodes.length > hookNodes.length && nodes.length > 0;
-    const shouldPreventSync = hookNodes.length > nodes.length; // New nodes were created, don't overwrite
     
-    if (shouldSync && !shouldPreventSync) {
+    const isImport = nodes.length > hookNodes.length && nodes.length > 0;
+    const isClear = nodes.length === 0 && edges.length === 0 && hookNodes.length > 0;
+    const isNewNodeCreation = hookNodes.length > nodes.length && nodes.length > 0;
+    
+    if (isImport) {
       console.log(`NodeEditor: Syncing passed nodes (${nodes.length}) with hook nodes (${hookNodes.length}) - import detected`);
       hookSetNodes(nodes);
-    } else if (shouldPreventSync) {
+    } else if (isClear) {
+      console.log(`NodeEditor: Syncing clear operation - clearing ${hookNodes.length} hook nodes`);
+      hookSetNodes([]);
+    } else if (isNewNodeCreation) {
       console.log(`NodeEditor: PREVENTED sync - nodes: ${nodes.length}, hookNodes: ${hookNodes.length} (protecting newly created DNN/5QI nodes)`);
     }
-  }, [nodes, hookNodes.length, hookSetNodes]);
+  }, [nodes, edges.length, hookNodes.length, hookSetNodes]);
 
   React.useEffect(() => {
-    // SMART SYNC: Allow imports but prevent edge deletion
-    const shouldSync = edges.length > hookEdges.length && edges.length > 0;
-    const shouldPreventSync = hookEdges.length > edges.length; // New edges were created, don't overwrite
+    // SMART SYNC: Allow imports AND clear operations, but prevent edge deletion
+    const isImport = edges.length > hookEdges.length && edges.length > 0;
+    const isClear = edges.length === 0 && nodes.length === 0 && hookEdges.length > 0;
+    const isNewEdgeCreation = hookEdges.length > edges.length && edges.length > 0;
     
-    if (shouldSync && !shouldPreventSync) {
+    if (isImport) {
       console.log(`NodeEditor: Syncing passed edges (${edges.length}) with hook edges (${hookEdges.length}) - import detected`);
       hookSetEdges(edges);
-    } else if (shouldPreventSync) {
+    } else if (isClear) {
+      console.log(`NodeEditor: Syncing clear operation - clearing ${hookEdges.length} hook edges`);
+      hookSetEdges([]);
+    } else if (isNewEdgeCreation) {
       console.log(`NodeEditor: PREVENTED edge sync - edges: ${edges.length}, hookEdges: ${hookEdges.length} (protecting newly created edges)`);
     }
-  }, [edges, hookEdges.length, hookSetEdges]);
+  }, [edges, nodes.length, hookEdges.length, hookSetEdges]);
   
 
 
