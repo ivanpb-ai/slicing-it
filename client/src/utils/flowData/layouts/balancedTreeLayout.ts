@@ -358,7 +358,7 @@ export const arrangeNodesInBalancedTree = (
       });
       
       // Use dynamic spacing: base spacing + max height of previous level + buffer  
-      y = 100 + (level - 1) * 450 + maxPrevLevelHeight + 150; // Increased spacing for better separation
+      y = 100 + (level - 1) * 200 + maxPrevLevelHeight + 80; // Reduced spacing for more compact layout
     }
     
     // Level positioning for performance
