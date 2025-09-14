@@ -115,8 +115,10 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     // DNN creation scenario: hookNodes.length > nodes.length AND nodes.length > 0 (should NOT sync)
     
     const isImport = nodes.length > hookNodes.length && nodes.length > 0;
-    const isClearOperation = nodes.length === 0 && edges.length === 0 && hookNodes.length > 0;
-    const isNewNodeCreation = hookNodes.length > nodes.length && nodes.length > 0;
+    // FIXED: Only clear when parent state is deliberately set to empty AND we had content before
+    // The key insight: normal node creation will never set both nodes AND edges to 0 simultaneously
+    const isClearOperation = nodes.length === 0 && edges.length === 0 && hookNodes.length > 0 && hookEdges.length > 0;
+    const isNewNodeCreation = hookNodes.length > nodes.length;
     
     if (isImport) {
       console.log(`NodeEditor: Syncing passed nodes (${nodes.length}) with hook nodes (${hookNodes.length}) - import detected`);
@@ -132,8 +134,9 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   React.useEffect(() => {
     // SMART SYNC: Allow imports, clear operations, and preserve normal edge creation
     const isImport = edges.length > hookEdges.length && edges.length > 0;
-    const isClearOperation = edges.length === 0 && nodes.length === 0 && hookEdges.length > 0;
-    const isNewEdgeCreation = hookEdges.length > edges.length && edges.length > 0;
+    // FIXED: Only clear when parent state is deliberately set to empty AND we had content before  
+    const isClearOperation = edges.length === 0 && nodes.length === 0 && hookEdges.length > 0 && hookNodes.length > 0;
+    const isNewEdgeCreation = hookEdges.length > edges.length;
     
     if (isImport) {
       console.log(`NodeEditor: Syncing passed edges (${edges.length}) with hook edges (${hookEdges.length}) - import detected`);
