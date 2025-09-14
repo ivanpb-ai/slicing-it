@@ -30,15 +30,15 @@ export const useNodeLayoutManager = (
       return;
     }
 
-    // Layout options with improved spacing to prevent overlap and alignment issues
+    // Layout options with much larger spacing to accommodate variable-height RRP nodes
     const layoutOptions = {
       type: 'balanced-tree' as LayoutType,
       horizontalSpacing: 400,     // Horizontal spacing between siblings
-      verticalSpacing: 250,       // INCREASED: More vertical space between levels (was 180)
+      verticalSpacing: 320,       // FURTHER INCREASED: Much more space for RRP nodes that can grow (was 250)
       nodeWidth: 180,
       nodeHeight: 120,
       marginX: 100,
-      marginY: 150,              // INCREASED: More top margin to accommodate larger nodes
+      marginY: 200,              // FURTHER INCREASED: More top margin for large RRP nodes (was 150)
       preventOverlap: true,
       edgeShortenFactor: 0.95,
       minNodeDistance: 50         
