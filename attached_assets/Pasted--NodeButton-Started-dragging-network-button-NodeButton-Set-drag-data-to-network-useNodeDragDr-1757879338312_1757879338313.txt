@@ -1,0 +1,299 @@
+ NodeButton: Started dragging network button
+ NodeButton: Set drag data to: network
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "network" at position: Object
+ parseDragData: Processing drag data: network
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: network
+ useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+ useNodeDragDrop: Elements at drop point: 9
+ detectParentNodeFromDOM: Checking elements at point: 9
+ detectParentNodeFromDOM: No parent node found in DOM elements
+ detectParentNodeFromPosition: Checking position: Object
+ detectParentNodeFromPosition: Available nodes: Array(0)
+ detectParentNodeFromPosition: No parent node found at position
+ useNodeDragDrop: Detected parent: none
+ useNodeDragDrop: Creating standalone network node at safe position: Object
+ useNodeEditor: Adding network node at position: Object
+ FlowInstance: Rendering with 1 nodes, 0 edges
+ FlowInstance: First node: Object
+ NodeEditor: Syncing clear operation - clearing 1 hook nodes
+ StandardNodeWrapper: id=network-1757879065859-2957, type=network, nodeNumber=2957
+ StandardNodeWrapper: id=network-1757879065859-2957, type=network, nodeNumber=2957
+ FlowInstance: Rendering with 0 nodes, 0 edges
+ [vite] hot updated: /src/components/NodeEditor.tsx
+ [vite] hot updated: /src/index.css?v=wRabfSmjielQkUs6Tznaj
+ [vite] hot updated: /src/components/NodeEditor.tsx
+ [vite] hot updated: /src/index.css?v=wRabfSmjielQkUs6Tznaj
+ NodeButton: Started dragging network button
+ NodeButton: Set drag data to: network
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "network" at position: Object
+ parseDragData: Processing drag data: network
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: network
+ useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+ useNodeDragDrop: Elements at drop point: 9
+ detectParentNodeFromDOM: Checking elements at point: 9
+ detectParentNodeFromDOM: No parent node found in DOM elements
+ detectParentNodeFromPosition: Checking position: Object
+ detectParentNodeFromPosition: Available nodes: Array(0)
+ detectParentNodeFromPosition: No parent node found at position
+ useNodeDragDrop: Detected parent: none
+ useNodeDragDrop: Creating standalone network node at safe position: Object
+ useNodeEditor: Adding network node at position: Object
+ FlowInstance: Rendering with 1 nodes, 0 edges
+ FlowInstance: First node: Object
+ NodeEditor: PRESERVED new nodes - nodes: 0, hookNodes: 1 (normal node creation or child node addition)
+ StandardNodeWrapper: id=network-1757879182509-4834, type=network, nodeNumber=4834
+ StandardNodeWrapper: id=network-1757879182509-4834, type=network, nodeNumber=4834
+ NodeButton: Started dragging cell-area button
+ NodeButton: Set drag data to: cell-area
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "cell-area" at position: Object
+ parseDragData: Processing drag data: cell-area
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: cell-area
+ useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: network-1757879182509-4834
+ useNodeDragDrop: Detected parent: network-1757879182509-4834
+ Validating relationship: network -> cell-area
+ Valid relationship confirmed: network -> cell-area
+ useNodeDragDrop: Creating child cell-area node under parent network-1757879182509-4834
+ useNodeDragDrop: Parent node found: network
+ useNodeDragDrop: Child position calculated: Object
+ Generated new Cell Area ID: 2
+ Creating child cell-area with ID: 2
+ Creating child cell-area node with ID: cell-area-2 under parent: network-1757879182509-4834
+ 🎯 useNodeDragDrop: NOT triggering layout for cell-area - parent position preserved
+ FlowInstance: Rendering with 2 nodes, 0 edges
+ FlowInstance: First node: Object
+ NodeEditor: PRESERVED new nodes - nodes: 0, hookNodes: 2 (normal node creation or child node addition)
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ useSimpleChildNodeCreation: Creating edge from network-1757879182509-4834 to cell-area-2
+ UnifiedEdgeManager: Creating edge unified-network-1757879182509-4834-cell-area-2 (auto)
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 1
+ FlowInstance: Rendering with 2 nodes, 1 edges
+ FlowInstance: First node: Object
+ NodeEditor: Syncing clear operation - clearing 1 hook edges
+ FlowInstance: Rendering with 2 nodes, 0 edges
+ FlowInstance: First node: Object
+ NodeButton: Started dragging cell-area button
+ NodeButton: Set drag data to: cell-area
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "cell-area" at position: Object
+ parseDragData: Processing drag data: cell-area
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: cell-area
+ useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 11
+ detectParentNodeFromDOM: Checking elements at point: 11
+ detectParentNodeFromDOM: Found parent node container with ID: network-1757879182509-4834
+ useNodeDragDrop: Detected parent: network-1757879182509-4834
+ Validating relationship: network -> cell-area
+ Valid relationship confirmed: network -> cell-area
+ useNodeDragDrop: Creating child cell-area node under parent network-1757879182509-4834
+ useNodeDragDrop: Parent node found: network
+ useNodeDragDrop: Child position calculated: Object
+ Generated new Cell Area ID: 3
+ Creating child cell-area with ID: 3
+ Creating child cell-area node with ID: cell-area-3 under parent: network-1757879182509-4834
+ 🎯 useNodeDragDrop: NOT triggering layout for cell-area - parent position preserved
+ FlowInstance: Rendering with 3 nodes, 0 edges
+ FlowInstance: First node: Object
+ NodeEditor: PRESERVED new nodes - nodes: 0, hookNodes: 3 (normal node creation or child node addition)
+ StandardNodeWrapper: id=cell-area-3, type=cell-area, nodeNumber=3
+ StandardNodeWrapper: id=cell-area-3, type=cell-area, nodeNumber=3
+ useSimpleChildNodeCreation: Creating edge from network-1757879182509-4834 to cell-area-3
+ UnifiedEdgeManager: Creating edge unified-network-1757879182509-4834-cell-area-3 (auto)
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 1
+ FlowInstance: Rendering with 3 nodes, 1 edges
+ FlowInstance: First node: Object
+ NodeEditor: Syncing clear operation - clearing 1 hook edges
+ FlowInstance: Rendering with 3 nodes, 0 edges
+ FlowInstance: First node: Object
+ [vite] hot updated: /src/components/NodeEditor.tsx
+ [vite] hot updated: /src/index.css?v=wRabfSmjielQkUs6Tznaj
+ NodeEditor: PRESERVED new nodes - nodes: 0, hookNodes: 3 (normal node creation or child node addition)
+ NodeEditor: PRESERVED edges - edges: 0, hookEdges: 0 (normal operation or edge creation)
+ Clear canvas button clicked in Toolbar
+ Clear canvas check - current nodes: 3 current edges: 0
+ Resetting all ID counters to 1
+ NodeEditor: PRESERVED new nodes - nodes: 0, hookNodes: 3 (normal node creation or child node addition)
+ NodeEditor: PRESERVED edges - edges: 0, hookEdges: 0 (normal operation or edge creation)
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ NodeButton: Started dragging network button
+ NodeButton: Set drag data to: network
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "network" at position: Object
+ parseDragData: Processing drag data: network
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: network
+ useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+ useNodeDragDrop: Elements at drop point: 9
+ detectParentNodeFromDOM: Checking elements at point: 9
+ detectParentNodeFromDOM: No parent node found in DOM elements
+ detectParentNodeFromPosition: Checking position: Object
+ detectParentNodeFromPosition: Available nodes: Array(3)
+ detectParentNodeFromPosition: No parent node found at position
+ useNodeDragDrop: Detected parent: none
+ useNodeDragDrop: Creating standalone network node at safe position: Object
+ useNodeEditor: Adding network node at position: Object
+ FlowInstance: Rendering with 4 nodes, 0 edges
+ NodeEditor: PRESERVED new nodes - nodes: 0, hookNodes: 4 (normal node creation or child node addition)
+ StandardNodeWrapper: id=network-1757879305100-7445, type=network, nodeNumber=7445
+ StandardNodeWrapper: id=network-1757879305100-7445, type=network, nodeNumber=7445
+ NodeButton: Started dragging cell-area button
+ NodeButton: Set drag data to: cell-area
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "cell-area" at position: Object
+ parseDragData: Processing drag data: cell-area
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: cell-area
+useNodeDragDrop.ts:79 useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+useNodeDragDrop.ts:94 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:99 useNodeDragDrop: Elements at drop point: 13
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 13
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: network-1757879305100-7445
+useNodeDragDrop.ts:108 useNodeDragDrop: Detected parent: network-1757879305100-7445
+useNodeRelationships.ts:35 Validating relationship: network -> cell-area
+useNodeRelationships.ts:65 Valid relationship confirmed: network -> cell-area
+useNodeDragDrop.ts:121 useNodeDragDrop: Creating child cell-area node under parent network-1757879305100-7445
+useNodeDragDrop.ts:124 useNodeDragDrop: Parent node found: network
+useNodeDragDrop.ts:235 useNodeDragDrop: Child position calculated: Object
+idCounters.ts:27 Generated new Cell Area ID: 1
+useSimpleChildNodeCreation.ts:29 Creating child cell-area with ID: 1
+useSimpleChildNodeCreation.ts:79 Creating child cell-area node with ID: cell-area-1 under parent: network-1757879305100-7445
+useNodeDragDrop.ts:247 🎯 useNodeDragDrop: NOT triggering layout for cell-area - parent position preserved
+FlowInstance.tsx:80 FlowInstance: Rendering with 5 nodes, 0 edges
+NodeEditor.tsx:130 NodeEditor: PRESERVED new nodes - nodes: 0, hookNodes: 5 (normal node creation or child node addition)
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+useSimpleChildNodeCreation.ts:192 useSimpleChildNodeCreation: Creating edge from network-1757879305100-7445 to cell-area-1
+useUnifiedEdgeManager.ts:22 UnifiedEdgeManager: Creating edge unified-network-1757879305100-7445-cell-area-1 (auto)
+useUnifiedEdgeManager.ts:58 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:112 UnifiedEdgeManager: Total edges after addition: 1
+FlowInstance.tsx:80 FlowInstance: Rendering with 5 nodes, 1 edges
+NodeEditor.tsx:145 NodeEditor: PRESERVED edges - edges: 0, hookEdges: 1 (normal operation or edge creation)
+NodeButton.tsx:34 NodeButton: Started dragging cell-area button
+NodeButton.tsx:42 NodeButton: Set drag data to: cell-area
+useNodeDragDrop.ts:32 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:41 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:63 useNodeDragDrop: Drop event received with data: "cell-area" at position: Object
+useDragDataParser.ts:3 parseDragData: Processing drag data: cell-area
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: cell-area
+useNodeDragDrop.ts:79 useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+useNodeDragDrop.ts:94 useNodeDragDrop: Adjusted position to prevent overlap: Object
+useNodeDragDrop.ts:99 useNodeDragDrop: Elements at drop point: 13
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 13
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: network-1757879305100-7445
+useNodeDragDrop.ts:108 useNodeDragDrop: Detected parent: network-1757879305100-7445
+useNodeRelationships.ts:35 Validating relationship: network -> cell-area
+useNodeRelationships.ts:65 Valid relationship confirmed: network -> cell-area
+useNodeDragDrop.ts:121 useNodeDragDrop: Creating child cell-area node under parent network-1757879305100-7445
+useNodeDragDrop.ts:124 useNodeDragDrop: Parent node found: network
+useNodeDragDrop.ts:235 useNodeDragDrop: Child position calculated: Object
+idCounters.ts:27 Generated new Cell Area ID: 2
+useSimpleChildNodeCreation.ts:29 Creating child cell-area with ID: 2
+useSimpleChildNodeCreation.ts:79 Creating child cell-area node with ID: cell-area-2 under parent: network-1757879305100-7445
+useNodeDragDrop.ts:247 🎯 useNodeDragDrop: NOT triggering layout for cell-area - parent position preserved
+FlowInstance.tsx:80 FlowInstance: Rendering with 6 nodes, 1 edges
+NodeEditor.tsx:127 NodeEditor: Syncing clear operation - clearing 6 hook nodes
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at MiniMapNodes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9247:3)
+    at svg
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at MiniMapComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9319:10)
+    at FlowControls
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx:30:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1757879273661:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+react-dom.development.js:86  Warning: Encountered two children with the same key, `cell-area-2`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at MiniMapNodes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9247:3)
+    at svg
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at MiniMapComponent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:9319:10)
+    at FlowControls
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx:30:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx?t=1757879273661:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ react-dom.development.js:86
+FlowInstance.tsx:80 FlowInstance: Rendering with 0 nodes, 1 edges
+useSimpleChildNodeCreation.ts:192 useSimpleChildNodeCreation: Creating edge from network-1757879305100-7445 to cell-area-2
+useUnifiedEdgeManager.ts:22 UnifiedEdgeManager: Creating edge unified-network-1757879305100-7445-cell-area-2 (auto)
+useUnifiedEdgeManager.ts:58 UnifiedEdgeManager: Adding edge to state: Object
+useUnifiedEdgeManager.ts:90  UnifiedEdgeManager: Rejecting automatic edge from network-1757879305100-7445 to cell-area-2. Expected parent: network-1757879182509-4834
+(anonymous) @ useUnifiedEdgeManager.ts:90
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again

@@ -132,17 +132,15 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
   }, [nodes, edges.length, hookNodes.length, hookSetNodes]);
 
   React.useEffect(() => {
-    // SMART SYNC: Allow imports but be very conservative about clearing edges
+    // COMPLETELY CONSERVATIVE EDGE SYNC: Only allow imports, never auto-clear
     const isImport = edges.length > hookEdges.length && edges.length > 0;
     
     if (isImport) {
-      console.log(`NodeEditor: Syncing passed edges (${edges.length}) with hook edges (${hookEdges.length}) - import detected`);
+      console.log(`🔄 NodeEditor: Syncing IMPORT - edges: ${edges.length} -> hookEdges: ${hookEdges.length}`);
       hookSetEdges(edges);
     } else {
-      // FIXED: Never automatically clear edges during normal operation
-      // Edge clearing should only happen via explicit clear canvas operation
-      // This prevents edge disappearing during normal drag/drop child creation
-      console.log(`NodeEditor: PRESERVED edges - edges: ${edges.length}, hookEdges: ${hookEdges.length} (normal operation or edge creation)`);
+      // NEVER auto-clear edges - only manual clear canvas should clear edges
+      console.log(`✅ NodeEditor: EDGE PRESERVATION - edges: ${edges.length}, hookEdges: ${hookEdges.length} (no auto-clear)`);
     }
   }, [edges, nodes.length, hookEdges.length, hookSetEdges]);
   
