@@ -123,6 +123,10 @@ export const arrangeNodesInBalancedTree = (
   edges: Edge[],
   options: BalancedTreeOptions = {}
 ): { nodes: Node[], cleanedEdges: Edge[] } => {
+  console.log('🚀 arrangeNodesInBalancedTree CALLED! This confirms we are running the correct algorithm');
+  console.log('🔧 Received options:', options);
+  console.log('🔧 Input nodes count:', nodes.length, 'edges count:', edges?.length || 0);
+  
   if (nodes.length === 0) return { nodes, cleanedEdges: edges || [] };
   
   // Safety check: ensure edges is defined
