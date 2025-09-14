@@ -30,15 +30,15 @@ export const useNodeLayoutManager = (
       return;
     }
 
-    // Layout options with much larger spacing to accommodate variable-height RRP nodes
+    // Layout options with massive spacing to accommodate very tall RRP nodes with band data
     const layoutOptions = {
       type: 'balanced-tree' as LayoutType,
       horizontalSpacing: 400,     // Horizontal spacing between siblings
-      verticalSpacing: 320,       // FURTHER INCREASED: Much more space for RRP nodes that can grow (was 250)
+      verticalSpacing: 450,       // MASSIVE INCREASE: Accommodate RRP nodes up to 300px+ tall (was 320)
       nodeWidth: 180,
       nodeHeight: 120,
       marginX: 100,
-      marginY: 200,              // FURTHER INCREASED: More top margin for large RRP nodes (was 150)
+      marginY: 250,              // MASSIVE INCREASE: Much more top margin for very large RRP nodes (was 200)
       preventOverlap: true,
       edgeShortenFactor: 0.95,
       minNodeDistance: 50         
