@@ -58,14 +58,9 @@ export const useGraphManager = () => {
       
       console.log(`Setting ${uniqueNodes.length} unique nodes and ${uniqueEdges.length} unique edges`);
       
-      // CRITICAL FIX: Use ReactFlow instance to maintain interactivity after load
-      if (reactFlowInstance) {
-        reactFlowInstance.setNodes(uniqueNodes);
-        reactFlowInstance.setEdges(uniqueEdges);
-      } else {
-        setNodes(uniqueNodes);
-        setEdges(uniqueEdges);
-      }
+      // Set nodes and edges using React state - ReactFlow will automatically sync
+      setNodes(uniqueNodes);
+      setEdges(uniqueEdges);
       
       // Trigger events and finish
       window.dispatchEvent(new CustomEvent('graph-loaded'));

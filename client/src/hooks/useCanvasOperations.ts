@@ -47,14 +47,9 @@ export const useCanvasOperations = (
       return;
     }
     
-    // CRITICAL FIX: Use ReactFlow instance to maintain interactivity
-    if (reactFlowInstance) {
-      reactFlowInstance.setNodes([]);
-      reactFlowInstance.setEdges([]);
-    } else {
-      setNodes([]);
-      setEdges([]);
-    }
+    // Clear canvas using React state - ReactFlow will automatically sync
+    setNodes([]);
+    setEdges([]);
     
     // Dispatch clear event
     window.dispatchEvent(new CustomEvent('canvas-cleared'));
@@ -72,14 +67,9 @@ export const useCanvasOperations = (
     const initialNodes = getInitialNodes();
     const initialEdges = getInitialEdges();
     
-    // CRITICAL FIX: Use ReactFlow instance for initialization
-    if (reactFlowInstance) {
-      reactFlowInstance.setNodes(initialNodes);
-      reactFlowInstance.setEdges(initialEdges);
-    } else {
-      setNodes(initialNodes);
-      setEdges(initialEdges);
-    }
+    // Initialize using React state - ReactFlow will automatically sync
+    setNodes(initialNodes);
+    setEdges(initialEdges);
     
     // Arrange immediately without delay for better performance
     const arrangedNodes = arrangeNodes(
@@ -100,12 +90,8 @@ export const useCanvasOperations = (
     );
     
     if (arrangedNodes.length > 0) {
-      // CRITICAL FIX: Use ReactFlow instance for arranged nodes
-      if (reactFlowInstance) {
-        reactFlowInstance.setNodes(arrangedNodes);
-      } else {
-        setNodes(arrangedNodes);
-      }
+      // Update nodes using React state - ReactFlow will automatically sync
+      setNodes(arrangedNodes);
       toast.success('Canvas initialized with balanced hierarchical tree layout');
     }
     
@@ -159,12 +145,8 @@ export const useCanvasOperations = (
         };
       });
       
-      // CRITICAL FIX: Use ReactFlow instance for arrange
-      if (reactFlowInstance) {
-        reactFlowInstance.setNodes(updatedNodes);
-      } else {
-        setNodes(updatedNodes);
-      }
+      // Update nodes using React state - ReactFlow will automatically sync
+      setNodes(updatedNodes);
       
       toast.success('Nodes arranged in balanced hierarchical tree layout');
       

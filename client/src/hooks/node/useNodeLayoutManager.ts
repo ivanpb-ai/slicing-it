@@ -45,17 +45,8 @@ export const useNodeLayoutManager = (
     };
 
     try {
-      
-      // AGGRESSIVE duplicate filtering - this prevents React key warnings
-      const uniqueInputNodes = currentNodes.filter((node, index) => 
-        currentNodes.findIndex(n => n.id === node.id) === index
-      );
-      
-      if (currentNodes.length !== uniqueInputNodes.length) {
-        console.log(`🧹 Pre-layout duplicate filtering: ${currentNodes.length} -> ${uniqueInputNodes.length} nodes`);
-      }
-      
-      const nodesCopy = uniqueInputNodes.map(node => ({...node}));
+      // Create copy of nodes for layout processing
+      const nodesCopy = currentNodes.map(node => ({...node}));
       
       // Special handling for balanced-tree layout that returns cleaned edges
       if (layoutOptions.type === 'balanced-tree') {
@@ -65,93 +56,25 @@ export const useNodeLayoutManager = (
         const balancedResult = arrangeNodesInBalancedTree(nodesCopy, safeEdges, layoutOptions);
         
         if (balancedResult.nodes?.length > 0) {
-          // Ensure no duplicate nodes
-          const uniqueNodes = balancedResult.nodes.filter((node, index, arr) => 
-            arr.findIndex(n => n.id === node.id) === index
-          );
+          // Use setNodes to update state - let ReactFlow manage deduplication
+          setNodes(balancedResult.nodes);
           
-          console.log(`🧹 Filtered duplicates: ${balancedResult.nodes.length} -> ${uniqueNodes.length} nodes`);
-          
-          // CRITICAL FIX: Force React re-render by creating completely new node objects
-          const forceUpdatedNodes = uniqueNodes.map(node => ({
-            ...node,
-            position: { ...node.position }, // Force position object recreation
-            data: { ...node.data } // Force data object recreation
-          }));
-          
-          // CRITICAL FIX: Use ReactFlow instance to update nodes to maintain interactivity
-          if (reactFlowInstance) {
-            reactFlowInstance.setNodes(forceUpdatedNodes);
-          } else {
-            setNodes(forceUpdatedNodes);
-          }
-          
-          // CRITICAL FIX: Reconcile edges against final node set to prevent dangling-edge exceptions
-          if (balancedResult.cleanedEdges) {
-            // Build set of valid node IDs from uniqueNodes
-            const validNodeIds = new Set(uniqueNodes.map(node => node.id));
-            
-            // Filter edges to only include those with valid source/target nodes
-            const reconcileEdges = balancedResult.cleanedEdges.filter(edge => {
-              const hasValidSource = edge.source && validNodeIds.has(edge.source);
-              const hasValidTarget = edge.target && validNodeIds.has(edge.target);
-              const hasValidId = edge.id && edge.id.trim() !== '';
-              
-              if (!hasValidSource || !hasValidTarget || !hasValidId) {
-                console.warn(`🔧 Dropping invalid edge: ${edge.id} (${edge.source} -> ${edge.target})`);
-                return false;
-              }
-              return true;
-            });
-            
-            // Ensure no duplicate edges and synthesize missing IDs
-            const uniqueEdges = reconcileEdges.filter((edge, index, arr) => 
-              arr.findIndex(e => e.id === edge.id) === index
-            );
-            
-            console.log(`🧹 Edge reconciliation: ${balancedResult.cleanedEdges.length} -> ${reconcileEdges.length} -> ${uniqueEdges.length} (filtered invalid/duplicates)`);
-            
-            try {
-              // CRITICAL FIX: Wrap ReactFlow updates in try-catch to prevent exceptions
-              if (reactFlowInstance) {
-                reactFlowInstance.setEdges(uniqueEdges);
-              }
-              if (setEdges) {
-                setEdges(uniqueEdges);
-              }
-              console.log('✅ Successfully updated edges without exceptions');
-            } catch (error) {
-              console.error('❌ Edge update failed:', error);
-              console.log('🔧 Problematic edges sample:', uniqueEdges.slice(0, 3));
-            }
-            
-            // Sanity check to confirm persistence
-            setTimeout(() => {
-              console.log('🔍 Post-update edges count:', reactFlowInstance?.getEdges()?.length || 0);
-            }, 10);
+          // Update edges if provided by layout algorithm
+          if (balancedResult.cleanedEdges && setEdges) {
+            setEdges(balancedResult.cleanedEdges);
           }
           
           // Event dispatch removed - was causing unresponsiveness
           
-          return uniqueNodes;
+          return balancedResult.nodes;
         }
       } else {
         // Use normal arrangement for other layout types
         const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
         if (arrangedNodes?.length > 0) {
-          // Ensure no duplicate nodes for non-balanced layouts too
-          const uniqueNodes = arrangedNodes.filter((node, index, arr) => 
-            arr.findIndex(n => n.id === node.id) === index
-          );
-          
-          console.log(`🧹 Regular layout - filtered duplicates: ${arrangedNodes.length} -> ${uniqueNodes.length} nodes`);
-          // CRITICAL FIX: Use ReactFlow instance for regular layouts too
-          if (reactFlowInstance) {
-            reactFlowInstance.setNodes(uniqueNodes);
-          } else {
-            setNodes(uniqueNodes);
-          }
-          return uniqueNodes;
+          // Use setNodes to update state
+          setNodes(arrangedNodes);
+          return arrangedNodes;
         }
       }
       

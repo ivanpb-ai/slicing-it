@@ -125,7 +125,7 @@ export const useNodeEditor = () => {
   const clearCanvas = useCallback(() => {
     console.log('useNodeEditor: Clear canvas called');
     
-    // Force immediate clearing - no delays
+    // Clear canvas using React state - ReactFlow will automatically sync
     setNodes([]);
     setEdges([]);
     resetCounters();
@@ -133,9 +133,6 @@ export const useNodeEditor = () => {
     // Reset viewport immediately
     if (reactFlowInstance) {
       reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
-      // Force reactflow to update
-      reactFlowInstance.setNodes([]);
-      reactFlowInstance.setEdges([]);
     }
     
     // Dispatch clear event

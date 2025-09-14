@@ -18,20 +18,14 @@ export const useCanvasOperationsManager = (
     // Always try to clear regardless of current nodes length to ensure state consistency
     console.log('Current nodes count:', nodes.length);
     
-    // Force ReactFlow to clear its internal state first
-    if (reactFlowInstance) {
-      console.log('Clearing ReactFlow instance state');
-      reactFlowInstance.setNodes([]);
-      reactFlowInstance.setEdges([]);
-      reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
-    } else {
-      console.warn('ReactFlow instance not available');
-    }
-    
-    // Then clear component state
-    console.log('Clearing component state');
+    // Clear using React state - ReactFlow will automatically sync
     setNodes([]);
     setEdges([]);
+    
+    // Reset viewport
+    if (reactFlowInstance) {
+      reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+    }
     
     // Reset all counters
     resetCounters();

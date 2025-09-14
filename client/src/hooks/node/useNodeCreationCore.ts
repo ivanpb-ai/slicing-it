@@ -57,25 +57,8 @@ export const useNodeCreationCore = (
           };
         }
         
-        // Add the node to state with a functional update to ensure we don't miss any pending updates
-        setNodes(prevNodes => {
-          const updatedNodes = [...prevNodes, newNode];
-          
-          // CRITICAL: Also update ReactFlow instance to ensure state sync
-          try {
-            // @ts-ignore - Access global ReactFlow instance registry
-            const globalReactFlowInstances = window.__REACTFLOW_INSTANCES__;
-            if (globalReactFlowInstances && globalReactFlowInstances.length > 0) {
-              const reactFlowInstance = globalReactFlowInstances[0];
-              console.log(`useNodeCreationCore: Syncing ${updatedNodes.length} nodes to ReactFlow instance`);
-              reactFlowInstance.setNodes(updatedNodes);
-            }
-          } catch (e) {
-            console.warn('useNodeCreationCore: Failed to sync with ReactFlow instance:', e);
-          }
-          
-          return updatedNodes;
-        });
+        // Add the node to state - ReactFlow will automatically sync
+        setNodes(prevNodes => [...prevNodes, newNode]);
         console.log(`Added new ${type} node with ID: ${newNode.id}`);
         
         // Trigger visibility events

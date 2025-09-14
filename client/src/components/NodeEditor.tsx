@@ -156,17 +156,13 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     // CRITICAL FIX: Reset ID counters when starting a new graph
     resetCounters();
     
-    // CRITICAL FIX: Use ReactFlow instance AND update component state
+    // Clear using React state - ReactFlow will automatically sync
+    setNodes([]);
+    setEdges([]);
+    
+    // Reset viewport
     if (reactFlowInstance) {
-      reactFlowInstance.setNodes([]);
-      reactFlowInstance.setEdges([]);
       reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
-      // ALSO update component state so UI reflects the clear
-      setNodes([]);
-      setEdges([]);
-    } else {
-      setNodes([]);
-      setEdges([]);
     }
     toast.success('Canvas cleared');
   }, [nodes.length, setNodes, setEdges, reactFlowInstance]);
@@ -193,14 +189,9 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
       }
       
-      // CRITICAL FIX: Use ReactFlow instance AND update component state
+      // Set nodes using React state - ReactFlow will automatically sync
       setTimeout(() => {
-        if (reactFlowInstance) {
-          reactFlowInstance.setNodes(EXAMPLE_GRAPH.nodes);
-          setNodes(EXAMPLE_GRAPH.nodes);
-        } else {
-          setNodes(EXAMPLE_GRAPH.nodes);
-        }
+        setNodes(EXAMPLE_GRAPH.nodes);
         setTimeout(() => {
           if (reactFlowInstance) {
             reactFlowInstance.setEdges(EXAMPLE_GRAPH.edges);
@@ -353,14 +344,9 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       console.log(`Loading graph "${name}" with ${graphData.nodes.length} nodes and ${graphData.edges?.length || 0} edges`);
       console.log('NodeEditor: Loaded nodes:', graphData.nodes.map(n => ({id: n.id, type: n.data?.type || n.type})));
       
-      // CRITICAL FIX: Clear existing state using ReactFlow instance
-      if (reactFlowInstance) {
-        reactFlowInstance.setNodes([]);
-        reactFlowInstance.setEdges([]);
-      } else {
-        setNodes([]);
-        setEdges([]);
-      }
+      // Clear existing state using React state - ReactFlow will automatically sync
+      setNodes([]);
+      setEdges([]);
       
       // Reset viewport (unless prevented by manual layout)
       if (reactFlowInstance && !window.sessionStorage.getItem('prevent-fitview')) {
@@ -381,13 +367,8 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
       console.log(`Processed ${processedNodes.length} nodes and ${processedEdges.length} edges for loading`);
       console.log('NodeEditor: Processed nodes for load:', processedNodes.map(n => ({id: n.id, type: n.data?.type || n.type})));
       
-      // CRITICAL FIX: Force ReactFlow to treat loaded nodes as completely new
-      // Clear everything first to reset ReactFlow's internal state
-      if (reactFlowInstance) {
-        console.log('NodeEditor: Resetting ReactFlow state for clean load');
-        reactFlowInstance.setNodes([]);
-        reactFlowInstance.setEdges([]);
-      }
+      // Clear everything first to reset state
+      console.log('NodeEditor: Resetting state for clean load');
       setNodes([]);
       setEdges([]);
       
@@ -406,23 +387,9 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
         
         // CRITICAL FIX: Force ReactFlow to initialize node interactivity
         // Trigger a position change for each node to register them as interactive
+        // Remove the position refresh hack - not needed with proper state management
         setTimeout(() => {
-          if (reactFlowInstance) {
-            const currentNodes = reactFlowInstance.getNodes();
-            const refreshedNodes = currentNodes.map(node => ({
-              ...node,
-              position: { 
-                x: node.position.x + 0.01, // Tiny position change
-                y: node.position.y + 0.01 
-              }
-            }));
-            reactFlowInstance.setNodes(refreshedNodes);
-            
-            // Immediately restore exact positions
-            setTimeout(() => {
-              reactFlowInstance.setNodes(currentNodes);
-            }, 10);
-          }
+          // The nodes are already loaded via React state, no manual refresh needed
         }, 100);
         
         // Show toast with proper styling

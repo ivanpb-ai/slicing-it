@@ -534,17 +534,15 @@ export const useExportImportGraph = (
           // CRITICAL FIX: Clear existing graph completely before importing
           console.log('Clearing existing graph before import');
           
-          // First, reset the viewport and clear ReactFlow instance state
-          if (reactFlowInstance) {
-            console.log('Resetting viewport and clearing ReactFlow instance state');
-            reactFlowInstance.setNodes([]);
-            reactFlowInstance.setEdges([]);
-            reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
-          }
-          
-          // Also clear React component state
+          // Clear using React state - ReactFlow will automatically sync
+          console.log('Clearing state before import');
           setNodes([]);
           setEdges([]);
+          
+          // Reset viewport
+          if (reactFlowInstance) {
+            reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
+          }
           
           // Set the imported nodes and edges with a delay
           setTimeout(() => {
