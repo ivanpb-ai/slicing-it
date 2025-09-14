@@ -14,8 +14,7 @@ const CanvasOperations = ({
   const handleClearCanvas = useCallback(() => {
     console.log("Clear canvas action triggered");
     clearCanvas();
-    // Dispatch canvas cleared event
-    window.dispatchEvent(new CustomEvent('canvas-cleared'));
+    // Event is already dispatched by clearCanvas function - no duplicate needed
   }, [clearCanvas]);
 
   // Initialize with example data
