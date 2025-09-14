@@ -10,6 +10,35 @@ interface BalancedTreeOptions {
   marginY?: number;
 }
 
+// Helper function to get actual node width based on type (matching real rendered widths)
+const getNodeWidth = (nodeId: string, nodeType?: string): number => {
+  // Use node type if provided, otherwise infer from ID
+  const type = nodeType || (
+    nodeId.includes('s-nssai') ? 's-nssai' :
+    nodeId.includes('dnn') ? 'dnn' :
+    nodeId.includes('rrp') ? 'rrp' :
+    nodeId.includes('qosflow') ? 'qosflow' :
+    nodeId.includes('fiveqi') ? 'fiveqi' :
+    'default'
+  );
+  
+  // Real rendered widths based on CSS and content
+  switch (type) {
+    case 's-nssai': return 360; // S-NSSAI nodes are wider due to content
+    case 'dnn': return 320; // DNN nodes are medium width
+    case 'rrp': return 240; // RRP nodes
+    case 'qosflow': return 300; // QoS Flow nodes
+    case 'fiveqi': return 280; // 5QI nodes
+    default: return 180; // Default fallback
+  }
+};
+
+// Helper function to get parent center X position
+const getParentCenterX = (parentPos: { x: number; y: number }, parentId: string): number => {
+  const parentWidth = getNodeWidth(parentId);
+  return parentPos.x + parentWidth / 2;
+};
+
 interface TreeNode {
   id: string;
   node: Node;
@@ -290,58 +319,65 @@ export const arrangeNodesInBalancedTree = (
             const isFiveQiNode = nodeId.includes('fiveqi-');
             
             if (isDnnNode && level === dnnLevel) {
-              // SPECIAL CASE: Position DNN nodes grouped by their S-NSSAI parent
+              // DNN nodes with width-aware positioning to prevent overlap
               const parentIds = allParentsMap[nodeId] || [];
               const parentId = parentIds[0]; // Get first parent (S-NSSAI node)
               
               if (parentId && nodePositionMap[parentId]) {
-                // Get all DNN siblings (nodes with same S-NSSAI parent)
-                const siblings = allDnnNodes.filter(dnnId => {
+                const parentPos = nodePositionMap[parentId];
+                
+                // Get all DNN siblings that share the same parent
+                const typedSiblings = allDnnNodes.filter(dnnId => {
                   const dnnParents = allParentsMap[dnnId] || [];
                   return dnnParents.includes(parentId);
                 });
-                const siblingIndex = siblings.indexOf(nodeId);
-                const totalSiblings = siblings.length;
                 
-                // CHECK: If most S-NSSAI nodes have single DNN children, use global spacing to prevent overlap
-                const mostlySignleDnnChildren = allDnnNodes.length > 3 && totalSiblings === 1;
+                // Get parent center for proper alignment
+                const parentCenterX = getParentCenterX(parentPos, parentId);
                 
-                if (mostlySignleDnnChildren) {
-                  // Use global spacing for single DNN children to prevent overlap
-                  const nodeIndex = allDnnNodes.indexOf(nodeId);
-                  const dnnSpacing = 300; // Global spacing between all DNN nodes
-                  const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
-                  const startX = 0 - totalDnnWidth / 2;
-                  const x = startX + nodeIndex * dnnSpacing;
+                if (typedSiblings.length === 1) {
+                  // Single DNN child: center under parent
+                  const nodeWidth = getNodeWidth(nodeId, 'dnn');
+                  const x = parentCenterX - nodeWidth / 2;
                   
                   const position = { x, y };
                   positionedNodes.push({ id: nodeId, position });
                   nodePositionMap[nodeId] = position;
+                  console.log(`✓ Single DNN ${nodeId} centered under parent at (${x}, ${y})`);
                 } else {
-                  // Use parent-relative positioning for multiple DNN siblings
-                  const parentX = nodePositionMap[parentId].x;
-                  const dnnSpacing = 300; // Increased spacing between DNN siblings to prevent overlap
-                  const totalWidth = (totalSiblings - 1) * dnnSpacing;
-                  const startX = parentX - totalWidth / 2;
-                  const x = startX + siblingIndex * dnnSpacing;
+                  // Multiple DNN siblings: distribute with actual widths
+                  const nodeIndex = typedSiblings.indexOf(nodeId);
+                  const gutter = 60; // Spacing between nodes
                   
-                  const position = { x, y };
+                  // Calculate total width needed for all siblings
+                  const totalSiblingWidth = typedSiblings.reduce((sum, sibId) => sum + getNodeWidth(sibId, 'dnn'), 0);
+                  const totalGutterWidth = (typedSiblings.length - 1) * gutter;
+                  const totalWidth = totalSiblingWidth + totalGutterWidth;
+                  
+                  // Start from left edge of the group, centered under parent
+                  const startX = parentCenterX - totalWidth / 2;
+                  
+                  // Calculate cumulative position for this specific node
+                  let cumulativeX = startX;
+                  for (let i = 0; i < nodeIndex; i++) {
+                    cumulativeX += getNodeWidth(typedSiblings[i], 'dnn') + gutter;
+                  }
+                  
+                  const position = { x: cumulativeX, y };
                   positionedNodes.push({ id: nodeId, position });
                   nodePositionMap[nodeId] = position;
+                  console.log(`✓ DNN ${nodeId} positioned with width-aware spacing at (${cumulativeX}, ${y})`);
                 }
               } else {
-                // Fallback: use original logic for DNN nodes without proper parent
-                const nodeIndex = allDnnNodes.indexOf(nodeId);
-                const dnnSpacing = 300; // Consistent spacing with drag-and-drop system
-                const totalDnnWidth = (allDnnNodes.length - 1) * dnnSpacing;
-                const startX = 0 - totalDnnWidth / 2;
-                const x = startX + nodeIndex * dnnSpacing;
-                
+                // Fallback: position using standard width
+                const nodeWidth = getNodeWidth(nodeId, 'dnn');
+                const x = 0 - nodeWidth / 2; // Center at origin
                 const position = { x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
+                console.log(`✓ DNN ${nodeId} fallback positioned at (${x}, ${y})`);
               }
-              // DNN node positioned with global spacing
+              // DNN node positioned with width-aware spacing
             } else if (isRrpNode && level === rrpLevel) {
               // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
               const nodeIndex = allRrpNodes.indexOf(nodeId);
@@ -367,58 +403,63 @@ export const arrangeNodesInBalancedTree = (
               nodePositionMap[nodeId] = position;
               // Cell area positioned
             } else if (isSNssaiNode && level === sNssaiLevel) {
-              // CHECK: If most RRP-members have single S-NSSAI children, use global spacing to prevent overlap
+              // Multi-parent support for S-NSSAI nodes with width-aware positioning
               const parentIds = allParentsMap[nodeId] || [];
               const parentId = parentIds[0];
               
               if (parentId && nodePositionMap[parentId]) {
-                // Get all S-NSSAI siblings (nodes with same RRP-member parent)
-                const siblingsSameParent = allSNssaiNodes.filter(sNssaiId => {
+                const parentPos = nodePositionMap[parentId];
+                
+                // Get all S-NSSAI siblings that share the same parent
+                const typedSiblings = allSNssaiNodes.filter(sNssaiId => {
                   const sNssaiParents = allParentsMap[sNssaiId] || [];
                   return sNssaiParents.includes(parentId);
                 });
-                const totalSiblingsSameParent = siblingsSameParent.length;
                 
-                // Check if we have many single S-NSSAI children (like DNN logic)
-                const mostlySingleSNssaiChildren = allSNssaiNodes.length > 3 && totalSiblingsSameParent === 1;
+                // Get parent center for proper alignment
+                const parentCenterX = getParentCenterX(parentPos, parentId);
                 
-                if (mostlySingleSNssaiChildren) {
-                  // Use global spacing for single S-NSSAI children to prevent overlap
-                  const nodeIndex = allSNssaiNodes.indexOf(nodeId);
-                  const sNssaiSpacing = 350; // Larger spacing to prevent S-NSSAI overlap
-                  const totalSNssaiWidth = (allSNssaiNodes.length - 1) * sNssaiSpacing;
-                  const startX = 0 - totalSNssaiWidth / 2;
-                  const x = startX + nodeIndex * sNssaiSpacing;
+                if (typedSiblings.length === 1) {
+                  // Single S-NSSAI child: center under parent
+                  const nodeWidth = getNodeWidth(nodeId, 's-nssai');
+                  const x = parentCenterX - nodeWidth / 2;
                   
                   const position = { x, y };
                   positionedNodes.push({ id: nodeId, position });
                   nodePositionMap[nodeId] = position;
-                  console.log(`✓ Single S-NSSAI ${nodeId} positioned with global spacing at (${x}, ${y})`);
-                } else if (siblings.length === 1) {
-                  // Single S-NSSAI child: position directly under parent (original logic)
-                  const position = { x: parentPos.x, y };
-                  positionedNodes.push({ id: nodeId, position });
-                  nodePositionMap[nodeId] = position;
-                  console.log(`✓ Single S-NSSAI ${nodeId} centered under parent at (${parentPos.x}, ${y})`);
+                  console.log(`✓ Single S-NSSAI ${nodeId} centered under parent at (${x}, ${y})`);
                 } else {
-                  // Multiple S-NSSAI siblings: spread around parent with increased spacing
-                  const nodeIndex = siblings.indexOf(nodeId);
-                  const spacing = 350; // Increased spacing to prevent overlap
-                  const totalWidth = (siblings.length - 1) * spacing;
-                  const startX = parentPos.x - totalWidth / 2;
-                  const x = startX + nodeIndex * spacing;
+                  // Multiple S-NSSAI siblings: distribute with actual widths
+                  const nodeIndex = typedSiblings.indexOf(nodeId);
+                  const gutter = 60; // Spacing between nodes
                   
-                  const position = { x, y };
+                  // Calculate total width needed for all siblings
+                  const totalSiblingWidth = typedSiblings.reduce((sum, sibId) => sum + getNodeWidth(sibId, 's-nssai'), 0);
+                  const totalGutterWidth = (typedSiblings.length - 1) * gutter;
+                  const totalWidth = totalSiblingWidth + totalGutterWidth;
+                  
+                  // Start from left edge of the group, centered under parent
+                  const startX = parentCenterX - totalWidth / 2;
+                  
+                  // Calculate cumulative position for this specific node
+                  let cumulativeX = startX;
+                  for (let i = 0; i < nodeIndex; i++) {
+                    cumulativeX += getNodeWidth(typedSiblings[i], 's-nssai') + gutter;
+                  }
+                  
+                  const position = { x: cumulativeX, y };
                   positionedNodes.push({ id: nodeId, position });
                   nodePositionMap[nodeId] = position;
-                  console.log(`✓ S-NSSAI ${nodeId} positioned near parent at (${x}, ${y})`);
+                  console.log(`✓ S-NSSAI ${nodeId} positioned with width-aware spacing at (${cumulativeX}, ${y})`);
                 }
               } else {
-                // Fallback: position directly under parent if no positioning context
-                const position = { x: parentPos.x, y };
+                // Fallback: position using standard width
+                const nodeWidth = getNodeWidth(nodeId, 's-nssai');
+                const x = 0 - nodeWidth / 2; // Center at origin
+                const position = { x, y };
                 positionedNodes.push({ id: nodeId, position });
                 nodePositionMap[nodeId] = position;
-                console.log(`✓ S-NSSAI ${nodeId} fallback positioned at (${parentPos.x}, ${y})`);
+                console.log(`✓ S-NSSAI ${nodeId} fallback positioned at (${x}, ${y})`);
               }
             } else if (isFiveQiNode && level === fiveQiLevel) {
               // SPECIAL CASE: Position ALL 5QI nodes with consistent spacing across the entire level

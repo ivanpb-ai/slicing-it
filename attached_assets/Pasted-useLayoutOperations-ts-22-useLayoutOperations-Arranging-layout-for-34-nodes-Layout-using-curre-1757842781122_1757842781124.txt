@@ -1,0 +1,68 @@
+useLayoutOperations.ts:22 useLayoutOperations: Arranging layout for 34 nodes
+ 🔧 Layout using current edges: 33
+balancedTreeLayout.ts:72 🔍 Processing edges for layout: 33 valid edges
+balancedTreeLayout.ts:75 🔗 Processing edge: network-1757842614833-1705 -> cell-area-1
+ 🔗 Processing edge: network-1757842614833-1705 -> cell-area-2
+ 🔗 Processing edge: cell-area-1 -> rrp-1
+ 🔗 Processing edge: cell-area-1 -> rrp-2
+ 🔗 Processing edge: cell-area-2 -> rrp-3
+ 🔗 Processing edge: cell-area-2 -> rrp-4
+ 🔗 Processing edge: rrp-1 -> rrpmember-1757842655286-8566
+ 🔗 Processing edge: rrp-2 -> rrpmember-1757842659382-2820
+ 🔗 Processing edge: rrp-3 -> rrpmember-1757842662302-6776
+balancedTreeLayout.ts:75 🔗 Processing edge: rrp-4 -> rrpmember-1757842664695-9375
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757842655286-8566 -> s-nssai-1
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757842659382-2820 -> s-nssai-2
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757842655286-8566 -> s-nssai-3
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757842659382-2820 -> s-nssai-4
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757842662302-6776 -> s-nssai-5
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757842662302-6776 -> s-nssai-6
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757842664695-9375 -> s-nssai-7
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757842664695-9375 -> s-nssai-8
+balancedTreeLayout.ts:75 🔗 Processing edge: rrpmember-1757842664695-9375 -> s-nssai-9
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-1 -> dnn-1
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-3 -> dnn-2
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-2 -> dnn-3
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-4 -> dnn-4
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-6 -> dnn-5
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-5 -> dnn-6
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-9 -> dnn-7
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-8 -> dnn-8
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-7 -> dnn-9
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-7 -> dnn-10
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-2 -> dnn-11
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-4 -> dnn-12
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-5 -> dnn-13
+balancedTreeLayout.ts:75 🔗 Processing edge: s-nssai-3 -> dnn-14
+balancedTreeLayout.ts:175 Level assignments: {network-1757842614833-1705: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1757842655286-8566: {…}, s-nssai-1: {…}, …}
+balancedTreeLayout.ts:176 Parent-child relationships: {cell-area-1: Array(1), cell-area-2: Array(1), rrp-1: Array(1), rrp-2: Array(1), rrp-3: Array(1), …}
+balancedTreeLayout.ts:414 ✓ S-NSSAI s-nssai-1 positioned near parent at (-775, 1720)
+balancedTreeLayout.ts:414 ✓ S-NSSAI s-nssai-3 positioned near parent at (-425, 1720)
+balancedTreeLayout.ts:414 ✓ S-NSSAI s-nssai-2 positioned near parent at (-375, 1720)
+balancedTreeLayout.ts:414 ✓ S-NSSAI s-nssai-4 positioned near parent at (-25, 1720)
+balancedTreeLayout.ts:414 ✓ S-NSSAI s-nssai-5 positioned near parent at (25, 1720)
+balancedTreeLayout.ts:414 ✓ S-NSSAI s-nssai-6 positioned near parent at (375, 1720)
+balancedTreeLayout.ts:414 ✓ S-NSSAI s-nssai-7 positioned near parent at (250, 1720)
+balancedTreeLayout.ts:414 ✓ S-NSSAI s-nssai-8 positioned near parent at (600, 1720)
+balancedTreeLayout.ts:414 ✓ S-NSSAI s-nssai-9 positioned near parent at (950, 1720)
+balancedTreeLayout.ts:534 🎯 Graph centering: minX=-1950, maxX=1950, width=3900, centerOffset=0
+balancedTreeLayout.ts:548 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 34 nodes
+balancedTreeLayout.ts:549 🎯 Final Y spacing used: 180 px
+balancedTreeLayout.ts:550 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+balancedTreeLayout.ts:551 🧹 Cleaned 0 invalid edges
+ 🧹 Filtered duplicates: 34 -> 34 nodes
+ 🧹 Updating edges: 33 -> 33 (filtered duplicates)
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-4'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-5'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-6'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-7'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-8'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-9'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-10'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-11'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-12'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-13'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-14'}
