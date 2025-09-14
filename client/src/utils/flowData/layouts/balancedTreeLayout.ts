@@ -296,24 +296,9 @@ export const arrangeNodesInBalancedTree = (
   const positionSubtreeBottomUp = (nodeId: string, level: number): { leftX: number; rightX: number; centerX: number } => {
     const children = childrenMap[nodeId] || [];
     
-    // Calculate Y position with dynamic spacing
-    let y = 100; // Start position
-    if (level > 0) {
-      const prevLevelNodes = nodesByLevel[level - 1] || [];
-      let maxPrevLevelHeight = 120; // Default node height
-      
-      // For RRP nodes with content, estimate larger height
-      prevLevelNodes.forEach(prevNodeId => {
-        const node = nodes.find(n => n.id === prevNodeId);
-        if (node && node.data.type === 'rrp') {
-          const hasContent = node.data.extraData || node.data.bands || false;
-          maxPrevLevelHeight = Math.max(maxPrevLevelHeight, hasContent ? 280 : 120);
-        }
-      });
-      
-      // Dynamic spacing: base + max height + buffer
-      y = 100 + (level - 1) * 200 + maxPrevLevelHeight + 80;
-    }
+    // FIXED: Use deterministic Y positioning based on level and verticalSpacing
+    const y = marginY + level * verticalSpacing;
+    console.log(`📍 Level ${level} Y position: ${y} (marginY=${marginY} + level=${level} * verticalSpacing=${verticalSpacing})`);
     
     if (children.length === 0) {
       // Leaf node: return bounds centered at 0 (fixed for bottom-up algorithm)
@@ -401,36 +386,21 @@ export const arrangeNodesInBalancedTree = (
     }
   };
 
-  // Find root nodes and position their subtrees using bottom-up approach with horizontal packing
+  // FIXED: Use virtual super-root to unify all roots and avoid overlap issues
   const rootNodeIds = nodesByLevel[0] || [];
-  let rootCurrentX = 0;
-  const rootGutter = 300; // Space between root subtrees
   
-  rootNodeIds.forEach(rootId => {
-    // Track nodes before positioning this root
-    const nodesBefore = new Set(Object.keys(nodePositionMap));
-    
-    // Position this root's subtree
-    const rootBounds = positionSubtreeBottomUp(rootId, 0);
-    
-    // Find all nodes added during this root's positioning
-    const nodesInThisRoot = Object.keys(nodePositionMap).filter(id => !nodesBefore.has(id));
-    nodesInThisRoot.push(rootId); // Include the root itself
-    
-    // Shift this entire root subtree to avoid overlap with previous roots
-    const shiftX = rootCurrentX - rootBounds.leftX;
-    nodesInThisRoot.forEach(nodeId => {
-      if (nodePositionMap[nodeId]) {
-        nodePositionMap[nodeId].x += shiftX;
-      }
-    });
-    
-    console.log(`✓ Root ${rootId} subtree shifted by ${shiftX}px to avoid overlap`);
-    
-    // Advance position for next root
-    const rootSubtreeWidth = rootBounds.rightX - rootBounds.leftX;
-    rootCurrentX += rootSubtreeWidth + rootGutter;
-  });
+  if (rootNodeIds.length === 0) {
+    console.warn('⚠️ No root nodes found for layout');
+    return { nodes, cleanedEdges: validEdges };
+  }
+  
+  // Create a virtual super-root that contains all actual roots as children
+  const VIRTUAL_ROOT = '__virtual_super_root__';
+  childrenMap[VIRTUAL_ROOT] = rootNodeIds;
+  
+  // Position the entire graph starting from the virtual super-root
+  console.log(`🌟 Positioning graph with virtual super-root containing ${rootNodeIds.length} actual roots`);
+  positionSubtreeBottomUp(VIRTUAL_ROOT, -1); // Start at level -1 so actual roots are at level 0
 
   // Normalize positions: shift so leftmost node starts at marginX
   const allXPositions = Object.values(nodePositionMap).map(pos => pos.x);
@@ -443,6 +413,22 @@ export const arrangeNodesInBalancedTree = (
   });
 
   console.log(`🎯 Layout normalized: shifted all nodes by ${normalizeShift} to start at marginX=${marginX}`);
+
+  // FIXED: Ensure all nodes get positioned and validate completeness
+  const positionedCount = Object.keys(nodePositionMap).length;
+  const expectedCount = nodes.length;
+  
+  console.log(`📊 Positioned ${positionedCount} out of ${expectedCount} nodes`);
+  
+  // Handle any unpositioned nodes (isolated/disconnected)
+  let fallbackX = 0;
+  nodes.forEach(node => {
+    if (!nodePositionMap[node.id]) {
+      console.warn(`⚠️ Node ${node.id} was not positioned by layout, placing as fallback`);
+      nodePositionMap[node.id] = { x: fallbackX, y: marginY };
+      fallbackX += 200; // Space them out horizontally
+    }
+  });
 
   // Convert to positioned nodes format
   const positionedNodes = Object.entries(nodePositionMap).map(([id, position]) => ({

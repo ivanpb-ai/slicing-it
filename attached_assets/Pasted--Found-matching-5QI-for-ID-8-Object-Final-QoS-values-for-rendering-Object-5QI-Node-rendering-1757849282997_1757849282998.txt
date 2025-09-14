@@ -1,0 +1,1000 @@
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ FlowInstance: Rendering with 67 nodes, 66 edges
+ Dispatching graph-loaded event after import
+ Fitting view for imported graph...
+ useLayoutOperations: Arranging layout for 67 nodes
+ 🔧 Layout using current edges: 66
+ 🔍 Processing edges for layout: 66 valid edges
+ 🔗 Processing edge: network-1757845832340-4888 -> cell-area-1
+ 🔗 Processing edge: network-1757845832340-4888 -> cell-area-2
+ 🔗 Processing edge: cell-area-1 -> rrp-1
+ 🔗 Processing edge: cell-area-1 -> rrp-2
+ 🔗 Processing edge: cell-area-2 -> rrp-3
+ 🔗 Processing edge: cell-area-2 -> rrp-4
+ 🔗 Processing edge: rrp-2 -> rrpmember-1757845865901-8288
+ 🔗 Processing edge: rrp-1 -> rrpmember-1757845872121-4286
+ 🔗 Processing edge: rrp-3 -> rrpmember-1757845874273-8806
+ 🔗 Processing edge: rrp-4 -> rrpmember-1757845876107-6071
+ 🔗 Processing edge: rrpmember-1757845872121-4286 -> s-nssai-1
+ 🔗 Processing edge: rrpmember-1757845876107-6071 -> s-nssai-2
+ 🔗 Processing edge: rrpmember-1757845876107-6071 -> s-nssai-3
+ 🔗 Processing edge: rrpmember-1757845872121-4286 -> s-nssai-4
+ 🔗 Processing edge: rrpmember-1757845865901-8288 -> s-nssai-5
+ 🔗 Processing edge: rrpmember-1757845865901-8288 -> s-nssai-6
+ 🔗 Processing edge: rrpmember-1757845874273-8806 -> s-nssai-7
+ 🔗 Processing edge: rrpmember-1757845874273-8806 -> s-nssai-8
+ 🔗 Processing edge: s-nssai-1 -> dnn-1
+ 🔗 Processing edge: s-nssai-4 -> dnn-2
+ 🔗 Processing edge: s-nssai-5 -> dnn-3
+ 🔗 Processing edge: s-nssai-6 -> dnn-4
+ 🔗 Processing edge: s-nssai-3 -> dnn-5
+ 🔗 Processing edge: s-nssai-7 -> dnn-6
+ 🔗 Processing edge: s-nssai-2 -> dnn-7
+ 🔗 Processing edge: s-nssai-1 -> dnn-8
+ 🔗 Processing edge: s-nssai-3 -> dnn-9
+ 🔗 Processing edge: s-nssai-2 -> dnn-10
+ 🔗 Processing edge: dnn-1 -> qosflow-1757845984589-6842
+ 🔗 Processing edge: dnn-1 -> qosflow-1757845986828-6140
+ 🔗 Processing edge: dnn-8 -> qosflow-1757845991436-3452
+ 🔗 Processing edge: dnn-2 -> qosflow-1757845993647-840
+ 🔗 Processing edge: dnn-3 -> qosflow-1757845995745-2321
+ 🔗 Processing edge: dnn-4 -> qosflow-1757845999269-6164
+ 🔗 Processing edge: dnn-4 -> qosflow-1757846003015-1791
+ 🔗 Processing edge: dnn-6 -> qosflow-1757846005447-8448
+ 🔗 Processing edge: dnn-6 -> qosflow-1757846008407-5924
+ 🔗 Processing edge: qosflow-1757845984589-6842 -> fiveqi-1757846021907-1078
+ 🔗 Processing edge: qosflow-1757845986828-6140 -> fiveqi-1757846024042-5667
+ 🔗 Processing edge: qosflow-1757845991436-3452 -> fiveqi-1757846026265-9537
+ 🔗 Processing edge: qosflow-1757845993647-840 -> fiveqi-1757846028829-102
+ 🔗 Processing edge: qosflow-1757845995745-2321 -> fiveqi-1757846031777-5979
+ 🔗 Processing edge: qosflow-1757845999269-6164 -> fiveqi-1757846049412-2403
+ 🔗 Processing edge: qosflow-1757845999269-6164 -> fiveqi-1757846056422-4955
+ 🔗 Processing edge: qosflow-1757846008407-5924 -> fiveqi-1757846059962-6359
+ 🔗 Processing edge: qosflow-1757846008407-5924 -> fiveqi-1757846062538-7258
+ 🔗 Processing edge: qosflow-1757846008407-5924 -> fiveqi-1757846065223-1762
+ 🔗 Processing edge: qosflow-1757846005447-8448 -> fiveqi-1757846084734-8743
+ 🔗 Processing edge: dnn-7 -> qosflow-1757846093158-2312
+ 🔗 Processing edge: dnn-10 -> qosflow-1757846095260-3081
+ 🔗 Processing edge: dnn-5 -> qosflow-1757846097630-6982
+ 🔗 Processing edge: dnn-9 -> qosflow-1757846099732-3840
+ 🔗 Processing edge: dnn-7 -> qosflow-1757846105158-128
+ 🔗 Processing edge: dnn-10 -> qosflow-1757846108166-7346
+ 🔗 Processing edge: dnn-9 -> qosflow-1757846111254-6175
+ 🔗 Processing edge: qosflow-1757846099732-3840 -> fiveqi-1757846118434-5000
+ 🔗 Processing edge: qosflow-1757846111254-6175 -> fiveqi-1757846128931-699
+ 🔗 Processing edge: qosflow-1757846097630-6982 -> fiveqi-1757846137445-3053
+ 🔗 Processing edge: qosflow-1757846095260-3081 -> fiveqi-1757846143837-5217
+ 🔗 Processing edge: qosflow-1757846108166-7346 -> fiveqi-1757846147146-7326
+ 🔗 Processing edge: qosflow-1757846093158-2312 -> fiveqi-1757846150171-2814
+ 🔗 Processing edge: qosflow-1757846105158-128 -> fiveqi-1757846154066-902
+ 🔗 Processing edge: s-nssai-8 -> dnn-11
+ 🔗 Processing edge: dnn-11 -> qosflow-1757846173004-2753
+ 🔗 Processing edge: qosflow-1757846173004-2753 -> fiveqi-1757846179413-7331
+ 🔗 Processing edge: qosflow-1757846003015-1791 -> fiveqi-1757847846408-9544
+ Level assignments: Object
+ Parent-child relationships: Object
+ 🔧 Calculating subtree widths for overlap prevention...
+ 🔧 Subtree widths calculated: Object
+ 🎯 Starting bottom-up balanced positioning...
+ ✓ Level 0 spacing: base=120, factor=1.20, final=144
+ ✓ Level 1 spacing: base=120, factor=1.20, final=144
+ ✓ Level 2 spacing: base=120, factor=1.20, final=144
+ ✓ Level 3 spacing: base=90, factor=1.20, final=108
+ ✓ Level 4 spacing: base=90, factor=1.20, final=108
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846021907-1078 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757845984589-6842 centered over children at (-10, 1300)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846024042-5667 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757845986828-6140 centered over children at (-10, 1300)
+ ✓ Parent dnn-1 centered over children at (162.5, 1100)
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846026265-9537 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757845991436-3452 centered over children at (-10, 1300)
+ ✓ Parent dnn-8 centered over children at (-10, 1100)
+ ✓ Parent s-nssai-1 centered over children at (356.5, 900)
+ ✓ Level 4 spacing: base=90, factor=0.80, final=72
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846028829-102 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757845993647-840 centered over children at (-10, 1300)
+ ✓ Parent dnn-2 centered over children at (-10, 1100)
+ ✓ Parent s-nssai-4 centered over children at (-20, 900)
+ ✓ Parent rrpmember-1757845872121-4286 centered over children at (650.5, 860)
+ ✓ Parent rrp-1 centered over children at (650.5, 500)
+ ✓ Level 2 spacing: base=120, factor=1.20, final=144
+ ✓ Level 3 spacing: base=90, factor=1.20, final=108
+ ✓ Level 4 spacing: base=90, factor=0.80, final=72
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846031777-5979 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757845995745-2321 centered over children at (-10, 1300)
+ ✓ Parent dnn-3 centered over children at (-10, 1100)
+ ✓ Parent s-nssai-5 centered over children at (-20, 900)
+ ✓ Level 4 spacing: base=90, factor=1.20, final=108
+ ✓ Level 5 spacing: base=60, factor=1.15, final=69
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846049412-2403 positioned at (-140, 1500) relative to parent
+ ✓ Leaf fiveqi-1757846056422-4955 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757845999269-6164 centered over children at (151, 1300)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757847846408-9544 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846003015-1791 centered over children at (-10, 1300)
+ ✓ Parent dnn-4 centered over children at (325.5, 1100)
+ ✓ Parent s-nssai-6 centered over children at (305.5, 900)
+ ✓ Parent rrpmember-1757845865901-8288 centered over children at (599.5, 860)
+ ✓ Parent rrp-2 centered over children at (599.5, 500)
+ ✓ Parent cell-area-1 centered over children at (1472, 300)
+ ✓ Level 1 spacing: base=120, factor=1.20, final=144
+ ✓ Level 2 spacing: base=120, factor=1.20, final=144
+ ✓ Level 3 spacing: base=90, factor=1.20, final=108
+ ✓ Level 4 spacing: base=90, factor=1.20, final=108
+ ✓ Level 5 spacing: base=60, factor=1.20, final=72
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846084734-8743 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846005447-8448 centered over children at (-10, 1300)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846059962-6359 positioned at (-140, 1500) relative to parent
+ ✓ Leaf fiveqi-1757846062538-7258 positioned at (-140, 1500) relative to parent
+ ✓ Leaf fiveqi-1757846065223-1762 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846008407-5924 centered over children at (312, 1300)
+ ✓ Parent dnn-6 centered over children at (488, 1100)
+ ✓ Parent s-nssai-7 centered over children at (468, 900)
+ ✓ Level 4 spacing: base=90, factor=0.80, final=72
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846179413-7331 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846173004-2753 centered over children at (-10, 1300)
+ ✓ Parent dnn-11 centered over children at (-10, 1100)
+ ✓ Parent s-nssai-8 centered over children at (-20, 900)
+ ✓ Parent rrpmember-1757845874273-8806 centered over children at (762, 860)
+ ✓ Parent rrp-3 centered over children at (762, 500)
+ ✓ Level 2 spacing: base=120, factor=1.20, final=144
+ ✓ Level 3 spacing: base=90, factor=1.20, final=108
+ ✓ Level 4 spacing: base=90, factor=1.20, final=108
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846150171-2814 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846093158-2312 centered over children at (-10, 1300)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846154066-902 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846105158-128 centered over children at (-10, 1300)
+ ✓ Parent dnn-7 centered over children at (162.5, 1100)
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846143837-5217 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846095260-3081 centered over children at (-10, 1300)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846147146-7326 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846108166-7346 centered over children at (-10, 1300)
+ ✓ Parent dnn-10 centered over children at (162.5, 1100)
+ ✓ Parent s-nssai-2 centered over children at (519, 900)
+ ✓ Level 4 spacing: base=90, factor=1.20, final=108
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846137445-3053 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846097630-6982 centered over children at (-10, 1300)
+ ✓ Parent dnn-5 centered over children at (-10, 1100)
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846118434-5000 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846099732-3840 centered over children at (-10, 1300)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ ✓ Leaf fiveqi-1757846128931-699 positioned at (-140, 1500) relative to parent
+ ✓ Parent qosflow-1757846111254-6175 centered over children at (-10, 1300)
+ ✓ Parent dnn-9 centered over children at (162.5, 1100)
+ ✓ Parent s-nssai-3 centered over children at (356.5, 900)
+ ✓ Parent rrpmember-1757845876107-6071 centered over children at (1169.5, 860)
+ ✓ Parent rrp-4 centered over children at (1169.5, 500)
+ ✓ Parent cell-area-2 centered over children at (2153.5, 300)
+ ✓ Parent network-1757845832340-4888 centered over children at (3787.5, 100)
+ ✓ Root network-1757845832340-4888 subtree shifted by 0px to avoid overlap
+ 🎯 Layout normalized: shifted all nodes by 100 to start at marginX=100
+ 🎯 Bottom-up balanced layout completed
+ 🎯 Graph centering: minX=100, maxX=5521.5, width=5421.5, centerOffset=2810.75
+ 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 67 nodes
+ 🎯 Final Y spacing used: 180 px
+ 🎯 Final calculated positions: Array(5)
+ 🧹 Cleaned 0 invalid edges
+ 🧹 Filtered duplicates: 67 -> 67 nodes
+ 🧹 Updating edges: 66 -> 66 (filtered duplicates)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 11
+fiveQIUtils.ts:24 Looking up 5QI with ID: "11"
+fiveQIUtils.ts:33 Found matching 5QI for ID "11": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 11
+fiveQIUtils.ts:24 Looking up 5QI with ID: "11"
+fiveQIUtils.ts:33 Found matching 5QI for ID "11": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 4
+fiveQIUtils.ts:24 Looking up 5QI with ID: "4"
+fiveQIUtils.ts:33 Found matching 5QI for ID "4": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 4
+fiveQIUtils.ts:24 Looking up 5QI with ID: "4"
+fiveQIUtils.ts:33 Found matching 5QI for ID "4": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 3
+fiveQIUtils.ts:24 Looking up 5QI with ID: "3"
+fiveQIUtils.ts:33 Found matching 5QI for ID "3": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+FiveQiNode.tsx:28 5QI Node rendering with data: Object
+FiveQiNode.tsx:29 5QI Node fiveQIId: 3
+fiveQIUtils.ts:24 Looking up 5QI with ID: "3"
+fiveQIUtils.ts:33 Found matching 5QI for ID "3": Object
+FiveQiNode.tsx:95 Final QoS values for rendering: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+DnnNode.tsx:35 DNN useEffect data object changed: Object
+useNodeLayoutManager.ts:107 🔍 Post-update edges count: 66
