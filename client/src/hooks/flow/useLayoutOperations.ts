@@ -40,9 +40,12 @@ export const useLayoutOperations = (
     const edgesBackup = [...edges];
     
     try {
+      console.log('🚀 Starting arrangeNodesInLayout...');
       // Call the arrange function
       arrangeNodesInLayout();
+      console.log('✅ arrangeNodesInLayout completed successfully');
       
+      console.log('⏳ Setting up setTimeout for fitView...');
       // FIXED: Immediately center viewport to show arranged nodes
       setTimeout(() => {
         console.log('🔍 FitView: Attempting to fit view after layout...');
@@ -58,9 +61,12 @@ export const useLayoutOperations = (
           console.error('❌ FitView: ReactFlow instance not available!');
         }
       }, 100);
+      console.log('✅ setTimeout for fitView set up successfully');
       
       // Arrangement completed successfully
+      console.log('🎉 Showing success toast...');
       toast.success(`Successfully arranged nodes in balanced hierarchical tree layout`);
+      console.log('✅ Success toast shown');
     } catch (error) {
       console.error('Error in layout arrangement:', error);
       toast.error('Failed to arrange layout: Restoring previous arrangement');
