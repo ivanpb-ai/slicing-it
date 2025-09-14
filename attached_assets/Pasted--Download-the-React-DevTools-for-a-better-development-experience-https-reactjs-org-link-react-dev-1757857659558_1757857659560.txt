@@ -1,0 +1,268 @@
+ Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+  Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
+
+Check the render method of `Primitive.button.SlotClone`.
+    at DropdownMenu (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=19dd7dd3:2183:5)
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:79:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-JFWPD3MN.js?v=19dd7dd3:56:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YD5KNE6W.js?v=19dd7dd3:43:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:2005:13
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:190:13
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at Popper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-MGGEE7VW.js?v=19dd7dd3:1997:11)
+    at Tooltip (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:98:5)
+    at div
+    at FiveQINodeButton (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/buttons/FiveQINodeButton.tsx:35:9)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at div
+    at NodeButtonsGrid (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/NodeButtonsGrid.tsx:31:28)
+    at div
+    at ToolbarContainer (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/toolbar/ToolbarContainer.tsx:25:3)
+    at Toolbar
+    at div
+    at https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6334:46
+    at EditorPanels (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/EditorPanels.tsx:21:3)
+    at Wrapper (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8933:30)
+    at div
+    at ReactFlow (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8947:22)
+    at FlowInstance (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/flow/FlowInstance.tsx:30:3)
+    at div
+    at NodeEditorProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/contexts/NodeEditorContext.tsx:29:38)
+    at NodeEditorContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/NodeEditor.tsx:31:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at NodeEditor
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at main
+    at MainContent (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/components/layout/MainContent.tsx:23:3)
+    at MainContentWithGraphOperations (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:160:3)
+    at BatchProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:6867:36)
+    at ReactFlowProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@xyflow_react.js?v=19dd7dd3:8916:44)
+    at div
+    at Index (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/src/pages/Index.tsx:27:29)
+    at RenderedRoute (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:5594:26)
+    at Routes (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6357:3)
+    at Router (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:6300:13)
+    at BrowserRouter (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-router-dom.js?v=19dd7dd3:9401:3)
+    at Provider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-CAUXOZI5.js?v=19dd7dd3:36:15)
+    at TooltipProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=19dd7dd3:54:5)
+    at QueryClientProvider (https://adf0c343-7851-4654-99e6-5f6622af9070-00-34az7l5l7aajk.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=19dd7dd3:2934:3)
+    at App
+printWarning @ /@fs/home/runner/wor…P.js?v=19dd7dd3:521
+ FlowInstance: Rendering with 0 nodes, 0 edges
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ FlowInstance: Rendering with 0 nodes, 0 edges
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ FlowInstance: ReactFlow initialized
+ FlowInstance: Registered ReactFlow instance globally
+ NodeButton: Started dragging network button
+ NodeButton: Set drag data to: network
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "network" at position: Object
+ parseDragData: Processing drag data: network
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: network
+ useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+ useNodeDragDrop: Elements at drop point: 9
+ detectParentNodeFromDOM: Checking elements at point: 9
+ detectParentNodeFromDOM: No parent node found in DOM elements
+ detectParentNodeFromPosition: Checking position: Object
+ detectParentNodeFromPosition: Available nodes: Array(0)
+ detectParentNodeFromPosition: No parent node found at position
+ useNodeDragDrop: Detected parent: none
+ useNodeDragDrop: Creating standalone network node at safe position: Object
+ useNodeEditor: Adding network node at position: Object
+ FlowInstance: Rendering with 1 nodes, 0 edges
+ FlowInstance: First node: Object
+ NodeEditor: PREVENTED sync - nodes: 0, hookNodes: 1 (protecting newly created DNN/5QI nodes)
+ StandardNodeWrapper: id=network-1757857550268-7831, type=network, nodeNumber=7831
+ StandardNodeWrapper: id=network-1757857550268-7831, type=network, nodeNumber=7831
+ NodeButton: Started dragging cell-area button
+ NodeButton: Set drag data to: cell-area
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "cell-area" at position: Object
+ parseDragData: Processing drag data: cell-area
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: cell-area
+ useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: network-1757857550268-7831
+ useNodeDragDrop: Detected parent: network-1757857550268-7831
+ Validating relationship: network -> cell-area
+ Valid relationship confirmed: network -> cell-area
+ useNodeDragDrop: Creating child cell-area node under parent network-1757857550268-7831
+ useNodeDragDrop: Parent node found: network
+ useNodeDragDrop: Child position calculated: Object
+ Generated new Cell Area ID: 1
+ Creating child cell-area with ID: 1
+ Creating child cell-area node with ID: cell-area-1 under parent: network-1757857550268-7831
+ FlowInstance: Rendering with 2 nodes, 0 edges
+ FlowInstance: First node: Object
+ NodeEditor: PREVENTED sync - nodes: 0, hookNodes: 2 (protecting newly created DNN/5QI nodes)
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ useSimpleChildNodeCreation: Creating edge from network-1757857550268-7831 to cell-area-1
+ UnifiedEdgeManager: Creating edge unified-network-1757857550268-7831-cell-area-1 (auto)
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 1
+ FlowInstance: Rendering with 2 nodes, 1 edges
+ FlowInstance: First node: Object
+ NodeEditor: PREVENTED edge sync - edges: 0, hookEdges: 1 (protecting newly created edges)
+ NodeButton: Started dragging rrp button
+ NodeButton: Set drag data to: rrp
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "rrp" at position: Object
+ parseDragData: Processing drag data: rrp
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: rrp
+ useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 14
+ detectParentNodeFromDOM: Checking elements at point: 14
+ detectParentNodeFromDOM: Found parent node container with ID: cell-area-1
+ useNodeDragDrop: Detected parent: cell-area-1
+ Validating relationship: cell-area -> rrp
+ Valid relationship confirmed: cell-area -> rrp
+ useNodeDragDrop: Creating child rrp node under parent cell-area-1
+ useNodeDragDrop: Parent node found: cell-area
+ useNodeDragDrop: Child position calculated: Object
+ Generated new RRP ID: 1
+ Creating RRP with ID: 1
+ Creating child rrp node with ID: rrp-1 under parent: cell-area-1
+ ✅ Creating RRP node positioned below TAC parent: Object
+ ✅ Creating RRP node positioned below TAC parent: Object
+ FlowInstance: Rendering with 3 nodes, 1 edges
+ FlowInstance: First node: Object
+ NodeEditor: PREVENTED sync - nodes: 0, hookNodes: 3 (protecting newly created DNN/5QI nodes)
+ StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+ StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+ useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-1
+ UnifiedEdgeManager: Creating edge unified-cell-area-1-rrp-1 (auto)
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 2
+ FlowInstance: Rendering with 3 nodes, 2 edges
+ FlowInstance: First node: Object
+ NodeEditor: PREVENTED edge sync - edges: 0, hookEdges: 2 (protecting newly created edges)
+ Creating RRP member child for parent rrp-1 with PLMN: fffdf
+ ✅ PLMN: Creating RRP-member (layout will position it properly) Object
+ Creating RRPmember child with PLMN: fffdf
+ Creating child rrpmember node with ID: rrpmember-1757857561229-8361 under parent: rrp-1
+ ✅ Creating RRPmember (balanced tree layout will position it) Object
+ FlowInstance: Rendering with 4 nodes, 2 edges
+ NodeEditor: PREVENTED sync - nodes: 0, hookNodes: 4 (protecting newly created DNN/5QI nodes)
+ StandardNodeWrapper: id=rrpmember-1757857561229-8361, type=rrpmember, nodeNumber=8361
+ StandardNodeWrapper: id=rrpmember-1757857561229-8361, type=rrpmember, nodeNumber=8361
+ useSimpleChildNodeCreation: Creating edge from rrp-1 to rrpmember-1757857561229-8361
+ UnifiedEdgeManager: Creating edge unified-rrp-1-rrpmember-1757857561229-8361 (auto)
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 3
+ FlowInstance: Rendering with 4 nodes, 3 edges
+ NodeEditor: PREVENTED edge sync - edges: 0, hookEdges: 3 (protecting newly created edges)
+ 🔧 Triggering layout after RRP member creation
+ 🔧 Layout using current edges: 3
+ 🚀 arrangeNodesInBalancedTree CALLED! This confirms we are running the correct algorithm
+ 🔧 Received options: Object
+ 🔧 Input nodes count: 4 edges count: 3
+ 🔍 Processing edges for layout: 3 valid edges
+ 🔗 Processing edge: network-1757857550268-7831 -> cell-area-1
+ 🔗 Processing edge: cell-area-1 -> rrp-1
+ 🔗 Processing edge: rrp-1 -> rrpmember-1757857561229-8361
+ Level assignments: Object
+ Parent-child relationships: Object
+ 🔧 Calculating subtree widths for overlap prevention...
+ 🔧 Subtree widths calculated: Object
+ 🔧 Calculating height-aware Y positions for each level...
+ 🔧 Level 0: max height = 120px
+ 🔧 Level 1: max height = 120px
+ 🔧 Level 2: max height = 340px
+ 🔧 Level 3: max height = 120px
+ 🔧 Level 1: Y position = 530 (prev Y: 250 + prev height: 120 + gap: 160)
+ 🔧 Level 2: Y position = 810 (prev Y: 530 + prev height: 120 + gap: 160)
+ 🔧 Level 3: Y position = 1310 (prev Y: 810 + prev height: 340 + gap: 160)
+ 🎯 Starting bottom-up balanced positioning with height-aware spacing...
+ 🌟 Positioning graph with virtual super-root containing 1 actual roots
+ 📍 Level -1 Y position: 250 (height-aware positioning)
+ ✓ Level -1 spacing: base=120, factor=0.60, final=72
+ 📍 Level 0 Y position: 250 (height-aware positioning)
+ ✓ Level 0 spacing: base=120, factor=0.60, final=72
+ 📍 Level 1 Y position: 530 (height-aware positioning)
+ ✓ Level 1 spacing: base=120, factor=0.60, final=72
+ 📍 Level 2 Y position: 810 (height-aware positioning)
+ ✓ Level 2 spacing: base=120, factor=0.60, final=72
+ 📍 Level 3 Y position: 1310 (height-aware positioning)
+ ✓ Leaf rrpmember-1757857561229-8361 positioned at (-120, 1310) - will be adjusted by parent
+ 🔧 Shifting child rrpmember-1757857561229-8361 subtree by 120px
+ ✓ Parent rrp-1 centered over children at (0, 810)
+ ✓ Parent cell-area-1 centered over children at (30, 530)
+ ✓ Parent network-1757857550268-7831 centered over children at (30, 250)
+ ✓ Parent __virtual_super_root__ centered over children at (30, 250)
+ 🎯 Layout normalized: shifted all nodes by 100 to start at marginX=100
+ 📊 Positioned 5 out of 4 nodes
+ 🎯 Bottom-up balanced layout completed
+ 🎯 Graph centering: minX=100, maxX=130, width=30, centerOffset=115
+ 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 5 nodes
+ 🎯 Height-aware Y positioning used with minimum gap: 160 px
+ 🎯 Level heights: Object
+ 🎯 Level Y positions: Object
+ 🎯 Final calculated positions: Array(4)
+ 🧹 Cleaned 0 invalid edges
+  Layout error: TypeError: setNodes is not a function
+    at /src/hooks/node/useNodeLayoutManager.ts:42:11
+    at /src/hooks/node/useRrpPlmn.ts:35:15
+(anonymous) @ /src/hooks/node/useN…LayoutManager.ts:58
+ 🔥 DEBUG: arrangeNodes called with options: Object
+ LayoutProcessor: Using layout type 'grid' from options: Object
+ Overlap prevention completed in 1 iterations
+  Failed to apply fallback layout
+(anonymous) @ /src/hooks/node/useN…LayoutManager.ts:77
+ NodeButton: Started dragging rrp button
+ NodeButton: Set drag data to: rrp
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "rrp" at position: Object
+ parseDragData: Processing drag data: rrp
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: rrp
+ useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 13
+ detectParentNodeFromDOM: Checking elements at point: 13
+ detectParentNodeFromDOM: Found parent node container with ID: cell-area-1
+ useNodeDragDrop: Detected parent: cell-area-1
+ Validating relationship: cell-area -> rrp
+ Valid relationship confirmed: cell-area -> rrp
+ useNodeDragDrop: Creating child rrp node under parent cell-area-1
+ useNodeDragDrop: Parent node found: cell-area
+ useNodeDragDrop: Child position calculated: Object
+ Generated new RRP ID: 2
+ Creating RRP with ID: 2
+ Creating child rrp node with ID: rrp-2 under parent: cell-area-1
+ ✅ Creating RRP node positioned below TAC parent: Object
+ ✅ Creating RRP node positioned below TAC parent: Object
+ FlowInstance: Rendering with 5 nodes, 3 edges
+ NodeEditor: PREVENTED sync - nodes: 0, hookNodes: 5 (protecting newly created DNN/5QI nodes)
+ StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+ StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+ useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-2
+ UnifiedEdgeManager: Creating edge unified-cell-area-1-rrp-2 (auto)
+ UnifiedEdgeManager: Adding edge to state: Object
+ UnifiedEdgeManager: Total edges after addition: 4
+ FlowInstance: Rendering with 5 nodes, 4 edges
+ NodeEditor: PREVENTED edge sync - edges: 0, hookEdges: 4 (protecting newly created edges)

@@ -12,10 +12,11 @@ interface BalancedTreeOptions {
 
 // Helper function to get actual node width based on type (matching real rendered widths)
 const getNodeWidth = (nodeId: string, nodeType?: string): number => {
-  // Use node type if provided, otherwise infer from ID
+  // Use node type if provided, otherwise infer from ID (check rrpmember before rrp to avoid misclassification)
   const type = nodeType || (
     nodeId.includes('s-nssai') ? 's-nssai' :
     nodeId.includes('dnn') ? 'dnn' :
+    nodeId.includes('rrpmember') ? 'rrpmember' :
     nodeId.includes('rrp') ? 'rrp' :
     nodeId.includes('qosflow') ? 'qosflow' :
     nodeId.includes('fiveqi') ? 'fiveqi' :
@@ -27,6 +28,7 @@ const getNodeWidth = (nodeId: string, nodeType?: string): number => {
     case 's-nssai': return 360; // S-NSSAI nodes are wider due to content
     case 'dnn': return 320; // DNN nodes are medium width
     case 'rrp': return 240; // RRP nodes
+    case 'rrpmember': return 120; // RRP Member nodes are compact
     case 'qosflow': return 300; // QoS Flow nodes
     case 'fiveqi': return 280; // 5QI nodes
     default: return 180; // Default fallback

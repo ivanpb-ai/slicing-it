@@ -6,17 +6,36 @@ import { arrangeNodes, LayoutType } from '../../utils/flowData/layouts';
 import { arrangeNodesInBalancedTree } from '../../utils/flowData/layouts/balancedTreeLayout';
 
 export const useNodeLayoutManager = (
-  nodes: Node[],
-  edges: Edge[],
-  setNodes: React.Dispatch<React.SetStateAction<Node[]>>,
+  nodes?: Node[],
+  edges?: Edge[],
+  setNodes?: React.Dispatch<React.SetStateAction<Node[]>>,
   setEdges?: React.Dispatch<React.SetStateAction<Edge[]>>,
 ) => {
   const reactFlowInstance = useReactFlow();
 
   const arrangeNodesInLayout = useCallback(() => {
     // Get fresh nodes and edges from ReactFlow instance to avoid stale closure
-    const currentNodes = reactFlowInstance?.getNodes() || nodes;
-    const currentEdges = reactFlowInstance?.getEdges() || edges;
+    const currentNodes = reactFlowInstance?.getNodes() || nodes || [];
+    const currentEdges = reactFlowInstance?.getEdges() || edges || [];
+    
+    // Use provided state setters or fall back to ReactFlow instance methods
+    const updateNodes = setNodes || ((newNodes: Node[]) => {
+      if (reactFlowInstance) {
+        console.log('📍 Layout Manager: Using ReactFlow instance setNodes fallback');
+        reactFlowInstance.setNodes(newNodes);
+      } else {
+        console.warn('📍 Layout Manager: No setNodes method available');
+      }
+    });
+    
+    const updateEdges = setEdges || ((newEdges: Edge[]) => {
+      if (reactFlowInstance) {
+        console.log('📍 Layout Manager: Using ReactFlow instance setEdges fallback');
+        reactFlowInstance.setEdges(newEdges);
+      } else {
+        console.warn('📍 Layout Manager: No setEdges method available');
+      }
+    });
     
     if (currentNodes.length === 0) {
       toast.info('No nodes to arrange');
@@ -56,12 +75,12 @@ export const useNodeLayoutManager = (
         const balancedResult = arrangeNodesInBalancedTree(nodesCopy, safeEdges, layoutOptions);
         
         if (balancedResult.nodes?.length > 0) {
-          // Use setNodes to update state - let ReactFlow manage deduplication
-          setNodes(balancedResult.nodes);
+          // Use state setter (provided or fallback) to update nodes
+          updateNodes(balancedResult.nodes);
           
           // Update edges if provided by layout algorithm
-          if (balancedResult.cleanedEdges && setEdges) {
-            setEdges(balancedResult.cleanedEdges);
+          if (balancedResult.cleanedEdges) {
+            updateEdges(balancedResult.cleanedEdges);
           }
           
           // Event dispatch removed - was causing unresponsiveness
@@ -72,8 +91,8 @@ export const useNodeLayoutManager = (
         // Use normal arrangement for other layout types
         const arrangedNodes = arrangeNodes(nodesCopy, edges, layoutOptions);
         if (arrangedNodes?.length > 0) {
-          // Use setNodes to update state
-          setNodes(arrangedNodes);
+          // Use state setter (provided or fallback) to update nodes
+          updateNodes(arrangedNodes);
           return arrangedNodes;
         }
       }
@@ -96,8 +115,8 @@ export const useNodeLayoutManager = (
           marginX: 400,
           marginY: 100
         });
-        // Use React state for fallback - ReactFlow will automatically sync
-        setNodes(fallbackNodes);
+        // Use state setter (provided or fallback) for fallback layout
+        updateNodes(fallbackNodes);
         toast.warning('Using fallback grid layout');
       } catch (e) {
         console.error('Failed to apply fallback layout');
