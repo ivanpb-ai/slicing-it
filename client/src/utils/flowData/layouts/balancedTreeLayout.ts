@@ -330,7 +330,25 @@ export const arrangeNodesInBalancedTree = (
       // Internal node: position children first, then center parent over them
       let currentX = 0;
       const childBounds: { leftX: number; rightX: number; centerX: number }[] = [];
-      const gutter = 60; // Standard spacing between siblings
+      
+      // Adaptive spacing: upper levels need more space due to wider subtrees
+      // Base spacing increases for upper levels, plus dynamic adjustment based on subtree width
+      const baseGutter = level <= 2 ? 120 : level <= 4 ? 90 : 60;
+      
+      // Calculate average subtree width of children to adjust spacing dynamically
+      const childSubtreeWidths = children.map(childId => {
+        const subtreeWidth = subtreeWidths.get(childId) || getNodeWidth(childId);
+        return subtreeWidth;
+      });
+      const avgChildSubtreeWidth = childSubtreeWidths.length > 0 
+        ? childSubtreeWidths.reduce((sum, w) => sum + w, 0) / childSubtreeWidths.length 
+        : 200;
+      
+      // Adaptive gutter: more spacing for wider subtrees
+      const subtreeWidthFactor = Math.min(avgChildSubtreeWidth / 300, 2); // Cap at 2x
+      const gutter = Math.floor(baseGutter * subtreeWidthFactor);
+      
+      console.log(`✓ Level ${level} spacing: base=${baseGutter}, factor=${subtreeWidthFactor.toFixed(2)}, final=${gutter}`);
       
       // Position all children from left to right
       children.forEach((childId, index) => {
