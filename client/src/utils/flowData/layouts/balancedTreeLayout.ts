@@ -315,7 +315,7 @@ export const arrangeNodesInBalancedTree = (
       const rightX = centerX + nodeWidth / 2;
       
       nodePositionMap[nodeId] = { x: leftX, y };
-      console.log(`✓ Leaf ${nodeId} positioned at (${leftX}, ${y}) relative to parent`);
+      console.log(`✓ Leaf ${nodeId} positioned at (${leftX}, ${y}) - will be adjusted by parent`);
       
       return { leftX, rightX, centerX };
     } else {
@@ -347,13 +347,31 @@ export const arrangeNodesInBalancedTree = (
         const childLevel = level + 1;
         const bounds = positionSubtreeBottomUp(childId, childLevel);
         
-        // Adjust child position based on current cursor
+        // CRITICAL FIX: Adjust child position AND ALL DESCENDANTS in the subtree
         const childShift = currentX - bounds.leftX;
-        const currentChildPos = nodePositionMap[childId];
-        nodePositionMap[childId] = { 
-          x: currentChildPos.x + childShift, 
-          y: currentChildPos.y 
-        };
+        
+        // Apply shift to ALL nodes that were positioned in this child's subtree
+        if (childShift !== 0) {
+          console.log(`🔧 Shifting child ${childId} subtree by ${childShift}px`);
+          
+          // Find all descendants of this child
+          const findAllDescendants = (parentId: string): string[] => {
+            const directChildren = childrenMap[parentId] || [];
+            const allDescendants = [...directChildren];
+            directChildren.forEach(childId => {
+              allDescendants.push(...findAllDescendants(childId));
+            });
+            return allDescendants;
+          };
+          
+          // Shift the child and all its descendants
+          const nodesToShift = [childId, ...findAllDescendants(childId)];
+          nodesToShift.forEach(nodeId => {
+            if (nodePositionMap[nodeId]) {
+              nodePositionMap[nodeId].x += childShift;
+            }
+          });
+        }
         
         // Update bounds with shifted position
         const shiftedBounds = {
