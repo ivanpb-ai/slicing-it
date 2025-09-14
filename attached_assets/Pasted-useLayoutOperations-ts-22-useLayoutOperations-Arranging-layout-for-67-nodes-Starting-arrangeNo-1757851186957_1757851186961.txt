@@ -1,0 +1,944 @@
+useLayoutOperations.ts:22 useLayoutOperations: Arranging layout for 67 nodes
+ 🚀 Starting arrangeNodesInLayout...
+ 🔧 Layout using current edges: 66
+ 🚀 arrangeNodesInBalancedTree CALLED! This confirms we are running the correct algorithm
+ 🔧 Received options: {type: 'balanced-tree', horizontalSpacing: 400, verticalSpacing: 450, nodeWidth: 180, nodeHeight: 120, …}
+ 🔧 Input nodes count: 67 edges count: 66
+ 🔍 Processing edges for layout: 66 valid edges
+ 🔗 Processing edge: network-1757845832340-4888 -> cell-area-1
+ 🔗 Processing edge: network-1757845832340-4888 -> cell-area-2
+ 🔗 Processing edge: cell-area-1 -> rrp-1
+ 🔗 Processing edge: cell-area-1 -> rrp-2
+ 🔗 Processing edge: cell-area-2 -> rrp-3
+ 🔗 Processing edge: cell-area-2 -> rrp-4
+ 🔗 Processing edge: rrp-2 -> rrpmember-1757845865901-8288
+ 🔗 Processing edge: rrp-1 -> rrpmember-1757845872121-4286
+ 🔗 Processing edge: rrp-3 -> rrpmember-1757845874273-8806
+ 🔗 Processing edge: rrp-4 -> rrpmember-1757845876107-6071
+ 🔗 Processing edge: rrpmember-1757845872121-4286 -> s-nssai-1
+ 🔗 Processing edge: rrpmember-1757845876107-6071 -> s-nssai-2
+ 🔗 Processing edge: rrpmember-1757845876107-6071 -> s-nssai-3
+ 🔗 Processing edge: rrpmember-1757845872121-4286 -> s-nssai-4
+ 🔗 Processing edge: rrpmember-1757845865901-8288 -> s-nssai-5
+ 🔗 Processing edge: rrpmember-1757845865901-8288 -> s-nssai-6
+ 🔗 Processing edge: rrpmember-1757845874273-8806 -> s-nssai-7
+ 🔗 Processing edge: rrpmember-1757845874273-8806 -> s-nssai-8
+ 🔗 Processing edge: s-nssai-1 -> dnn-1
+ 🔗 Processing edge: s-nssai-4 -> dnn-2
+ 🔗 Processing edge: s-nssai-5 -> dnn-3
+ 🔗 Processing edge: s-nssai-6 -> dnn-4
+ 🔗 Processing edge: s-nssai-3 -> dnn-5
+ 🔗 Processing edge: s-nssai-7 -> dnn-6
+ 🔗 Processing edge: s-nssai-2 -> dnn-7
+ 🔗 Processing edge: s-nssai-1 -> dnn-8
+ 🔗 Processing edge: s-nssai-3 -> dnn-9
+ 🔗 Processing edge: s-nssai-2 -> dnn-10
+ 🔗 Processing edge: dnn-1 -> qosflow-1757845984589-6842
+ 🔗 Processing edge: dnn-1 -> qosflow-1757845986828-6140
+ 🔗 Processing edge: dnn-8 -> qosflow-1757845991436-3452
+ 🔗 Processing edge: dnn-2 -> qosflow-1757845993647-840
+ 🔗 Processing edge: dnn-3 -> qosflow-1757845995745-2321
+ 🔗 Processing edge: dnn-4 -> qosflow-1757845999269-6164
+ 🔗 Processing edge: dnn-4 -> qosflow-1757846003015-1791
+ 🔗 Processing edge: dnn-6 -> qosflow-1757846005447-8448
+ 🔗 Processing edge: dnn-6 -> qosflow-1757846008407-5924
+ 🔗 Processing edge: qosflow-1757845984589-6842 -> fiveqi-1757846021907-1078
+ 🔗 Processing edge: qosflow-1757845986828-6140 -> fiveqi-1757846024042-5667
+ 🔗 Processing edge: qosflow-1757845991436-3452 -> fiveqi-1757846026265-9537
+ 🔗 Processing edge: qosflow-1757845993647-840 -> fiveqi-1757846028829-102
+ 🔗 Processing edge: qosflow-1757845995745-2321 -> fiveqi-1757846031777-5979
+ 🔗 Processing edge: qosflow-1757845999269-6164 -> fiveqi-1757846049412-2403
+ 🔗 Processing edge: qosflow-1757845999269-6164 -> fiveqi-1757846056422-4955
+ 🔗 Processing edge: qosflow-1757846008407-5924 -> fiveqi-1757846059962-6359
+ 🔗 Processing edge: qosflow-1757846008407-5924 -> fiveqi-1757846062538-7258
+ 🔗 Processing edge: qosflow-1757846008407-5924 -> fiveqi-1757846065223-1762
+ 🔗 Processing edge: qosflow-1757846005447-8448 -> fiveqi-1757846084734-8743
+ 🔗 Processing edge: dnn-7 -> qosflow-1757846093158-2312
+ 🔗 Processing edge: dnn-10 -> qosflow-1757846095260-3081
+ 🔗 Processing edge: dnn-5 -> qosflow-1757846097630-6982
+ 🔗 Processing edge: dnn-9 -> qosflow-1757846099732-3840
+ 🔗 Processing edge: dnn-7 -> qosflow-1757846105158-128
+ 🔗 Processing edge: dnn-10 -> qosflow-1757846108166-7346
+ 🔗 Processing edge: dnn-9 -> qosflow-1757846111254-6175
+ 🔗 Processing edge: qosflow-1757846099732-3840 -> fiveqi-1757846118434-5000
+ 🔗 Processing edge: qosflow-1757846111254-6175 -> fiveqi-1757846128931-699
+ 🔗 Processing edge: qosflow-1757846097630-6982 -> fiveqi-1757846137445-3053
+ 🔗 Processing edge: qosflow-1757846095260-3081 -> fiveqi-1757846143837-5217
+ 🔗 Processing edge: qosflow-1757846108166-7346 -> fiveqi-1757846147146-7326
+ 🔗 Processing edge: qosflow-1757846093158-2312 -> fiveqi-1757846150171-2814
+ 🔗 Processing edge: qosflow-1757846105158-128 -> fiveqi-1757846154066-902
+ 🔗 Processing edge: s-nssai-8 -> dnn-11
+ 🔗 Processing edge: dnn-11 -> qosflow-1757846173004-2753
+ 🔗 Processing edge: qosflow-1757846173004-2753 -> fiveqi-1757846179413-7331
+ 🔗 Processing edge: qosflow-1757846003015-1791 -> fiveqi-1757847846408-9544
+ Level assignments: {network-1757845832340-4888: {…}, cell-area-1: {…}, rrp-1: {…}, rrpmember-1757845872121-4286: {…}, s-nssai-1: {…}, …}
+ Parent-child relationships: {cell-area-1: Array(1), cell-area-2: Array(1), rrp-1: Array(1), rrp-2: Array(1), rrp-3: Array(1), …}
+ 🔧 Calculating subtree widths for overlap prevention...
+ 🔧 Subtree widths calculated: {fiveqi-1757846021907-1078: 280, fiveqi-1757846024042-5667: 280, fiveqi-1757846026265-9537: 280, fiveqi-1757846028829-102: 280, fiveqi-1757846031777-5979: 280}
+ 🎯 Starting bottom-up balanced positioning...
+ 🌟 Positioning graph with virtual super-root containing 1 actual roots
+ 📍 Level -1 Y position: -200 (marginY=250 + level=-1 * verticalSpacing=450)
+ ✓ Level -1 spacing: base=120, factor=1.20, final=144
+ 📍 Level 0 Y position: 250 (marginY=250 + level=0 * verticalSpacing=450)
+ ✓ Level 0 spacing: base=120, factor=1.20, final=144
+ 📍 Level 1 Y position: 700 (marginY=250 + level=1 * verticalSpacing=450)
+ ✓ Level 1 spacing: base=120, factor=1.20, final=144
+ 📍 Level 2 Y position: 1150 (marginY=250 + level=2 * verticalSpacing=450)
+ ✓ Level 2 spacing: base=120, factor=1.20, final=144
+ 📍 Level 3 Y position: 1600 (marginY=250 + level=3 * verticalSpacing=450)
+ ✓ Level 3 spacing: base=90, factor=1.20, final=108
+ 📍 Level 4 Y position: 2050 (marginY=250 + level=4 * verticalSpacing=450)
+ ✓ Level 4 spacing: base=90, factor=1.20, final=108
+ 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846021907-1078 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846021907-1078 subtree by 140px
+ ✓ Parent qosflow-1757845984589-6842 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757845984589-6842 subtree by 10px
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846024042-5667 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846024042-5667 subtree by 140px
+ ✓ Parent qosflow-1757845986828-6140 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757845986828-6140 subtree by 355px
+ ✓ Parent dnn-1 centered over children at (163, 2500)
+ 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846026265-9537 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846026265-9537 subtree by 140px
+ ✓ Parent qosflow-1757845991436-3452 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757845991436-3452 subtree by 10px
+ ✓ Parent dnn-8 centered over children at (-10, 2500)
+ 🔧 Shifting child dnn-8 subtree by 763px
+ ✓ Parent s-nssai-1 centered over children at (357, 2050)
+ 📍 Level 4 Y position: 2050 (marginY=250 + level=4 * verticalSpacing=450)
+ ✓ Level 4 spacing: base=90, factor=0.80, final=72
+ 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846028829-102 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846028829-102 subtree by 140px
+ ✓ Parent qosflow-1757845993647-840 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757845993647-840 subtree by 10px
+ ✓ Parent dnn-2 centered over children at (-10, 2500)
+ 🔧 Shifting child dnn-2 subtree by 10px
+ ✓ Parent s-nssai-4 centered over children at (-20, 2050)
+ 🔧 Shifting child s-nssai-4 subtree by 1201px
+ ✓ Parent rrpmember-1757845872121-4286 centered over children at (651, 1600)
+ ✓ Parent rrp-1 centered over children at (651, 1150)
+ 📍 Level 2 Y position: 1150 (marginY=250 + level=2 * verticalSpacing=450)
+ ✓ Level 2 spacing: base=120, factor=1.20, final=144
+ 📍 Level 3 Y position: 1600 (marginY=250 + level=3 * verticalSpacing=450)
+ ✓ Level 3 spacing: base=90, factor=1.20, final=108
+ 📍 Level 4 Y position: 2050 (marginY=250 + level=4 * verticalSpacing=450)
+ ✓ Level 4 spacing: base=90, factor=0.80, final=72
+ 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846031777-5979 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846031777-5979 subtree by 140px
+ ✓ Parent qosflow-1757845995745-2321 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757845995745-2321 subtree by 10px
+ ✓ Parent dnn-3 centered over children at (-10, 2500)
+ 🔧 Shifting child dnn-3 subtree by 10px
+ ✓ Parent s-nssai-5 centered over children at (-20, 2050)
+ 🔧 Shifting child s-nssai-5 subtree by 20px
+ 📍 Level 4 Y position: 2050 (marginY=250 + level=4 * verticalSpacing=450)
+ ✓ Level 4 spacing: base=90, factor=1.20, final=108
+ 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+ ✓ Level 5 spacing: base=60, factor=1.15, final=69
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846049412-2403 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846049412-2403 subtree by 140px
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846056422-4955 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846056422-4955 subtree by 462px
+ ✓ Parent qosflow-1757845999269-6164 centered over children at (151, 2950)
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757847846408-9544 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757847846408-9544 subtree by 140px
+ ✓ Parent qosflow-1757846003015-1791 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757846003015-1791 subtree by 681px
+ ✓ Parent dnn-4 centered over children at (326, 2500)
+ ✓ Parent s-nssai-6 centered over children at (306, 2050)
+ 🔧 Shifting child s-nssai-6 subtree by 468px
+ ✓ Parent rrpmember-1757845865901-8288 centered over children at (600, 1600)
+ ✓ Parent rrp-2 centered over children at (600, 1150)
+ 🔧 Shifting child rrp-2 subtree by 1685px
+ ✓ Parent cell-area-1 centered over children at (1472, 700)
+ 📍 Level 1 Y position: 700 (marginY=250 + level=1 * verticalSpacing=450)
+ ✓ Level 1 spacing: base=120, factor=1.20, final=144
+ 📍 Level 2 Y position: 1150 (marginY=250 + level=2 * verticalSpacing=450)
+ ✓ Level 2 spacing: base=120, factor=1.20, final=144
+ 📍 Level 3 Y position: 1600 (marginY=250 + level=3 * verticalSpacing=450)
+ ✓ Level 3 spacing: base=90, factor=1.20, final=108
+ 📍 Level 4 Y position: 2050 (marginY=250 + level=4 * verticalSpacing=450)
+ ✓ Level 4 spacing: base=90, factor=1.20, final=108
+ 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+ ✓ Level 5 spacing: base=60, factor=1.20, final=72
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846084734-8743 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846084734-8743 subtree by 140px
+ ✓ Parent qosflow-1757846005447-8448 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757846005447-8448 subtree by 10px
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846059962-6359 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846059962-6359 subtree by 140px
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846062538-7258 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846062538-7258 subtree by 462px
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846065223-1762 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846065223-1762 subtree by 784px
+ ✓ Parent qosflow-1757846008407-5924 centered over children at (312, 2950)
+ 🔧 Shifting child qosflow-1757846008407-5924 subtree by 372px
+ ✓ Parent dnn-6 centered over children at (488, 2500)
+ ✓ Parent s-nssai-7 centered over children at (468, 2050)
+ 📍 Level 4 Y position: 2050 (marginY=250 + level=4 * verticalSpacing=450)
+ ✓ Level 4 spacing: base=90, factor=0.80, final=72
+ 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846179413-7331 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846179413-7331 subtree by 140px
+ ✓ Parent qosflow-1757846173004-2753 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757846173004-2753 subtree by 10px
+ ✓ Parent dnn-11 centered over children at (-10, 2500)
+ 🔧 Shifting child dnn-11 subtree by 10px
+ ✓ Parent s-nssai-8 centered over children at (-20, 2050)
+ 🔧 Shifting child s-nssai-8 subtree by 1424px
+ ✓ Parent rrpmember-1757845874273-8806 centered over children at (762, 1600)
+ ✓ Parent rrp-3 centered over children at (762, 1150)
+ 📍 Level 2 Y position: 1150 (marginY=250 + level=2 * verticalSpacing=450)
+ ✓ Level 2 spacing: base=120, factor=1.20, final=144
+ 📍 Level 3 Y position: 1600 (marginY=250 + level=3 * verticalSpacing=450)
+ ✓ Level 3 spacing: base=90, factor=1.20, final=108
+ 📍 Level 4 Y position: 2050 (marginY=250 + level=4 * verticalSpacing=450)
+ ✓ Level 4 spacing: base=90, factor=1.20, final=108
+ 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846150171-2814 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846150171-2814 subtree by 140px
+ ✓ Parent qosflow-1757846093158-2312 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757846093158-2312 subtree by 10px
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846154066-902 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846154066-902 subtree by 140px
+ ✓ Parent qosflow-1757846105158-128 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757846105158-128 subtree by 355px
+ ✓ Parent dnn-7 centered over children at (163, 2500)
+ 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+ ✓ Level 5 spacing: base=60, factor=0.75, final=45
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846143837-5217 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846143837-5217 subtree by 140px
+ ✓ Parent qosflow-1757846095260-3081 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757846095260-3081 subtree by 10px
+ 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+ ✓ Level 6 spacing: base=60, factor=0.70, final=42
+ 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+ ✓ Leaf fiveqi-1757846147146-7326 positioned at (-140, 3400) - will be adjusted by parent
+ 🔧 Shifting child fiveqi-1757846147146-7326 subtree by 140px
+ ✓ Parent qosflow-1757846108166-7346 centered over children at (-10, 2950)
+ 🔧 Shifting child qosflow-1757846108166-7346 subtree by 355px
+ ✓ Parent dnn-10 centered over children at (163, 2500)
+ 🔧 Shifting child dnn-10 subtree by 753px
+ ✓ Parent s-nssai-2 centered over children at (519, 2050)
+ 📍 Level 4 Y position: 2050 (marginY=250 + level=4 * verticalSpacing=450)
+ ✓ Level 4 spacing: base=90, factor=1.20, final=108
+ 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+balancedTreeLayout.ts:343 ✓ Level 5 spacing: base=60, factor=0.75, final=45
+balancedTreeLayout.ts:305 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+balancedTreeLayout.ts:343 ✓ Level 6 spacing: base=60, factor=0.70, final=42
+balancedTreeLayout.ts:305 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+balancedTreeLayout.ts:318 ✓ Leaf fiveqi-1757846137445-3053 positioned at (-140, 3400) - will be adjusted by parent
+balancedTreeLayout.ts:355 🔧 Shifting child fiveqi-1757846137445-3053 subtree by 140px
+balancedTreeLayout.ts:401 ✓ Parent qosflow-1757846097630-6982 centered over children at (-10, 2950)
+balancedTreeLayout.ts:355 🔧 Shifting child qosflow-1757846097630-6982 subtree by 10px
+balancedTreeLayout.ts:401 ✓ Parent dnn-5 centered over children at (-10, 2500)
+balancedTreeLayout.ts:355 🔧 Shifting child dnn-5 subtree by 10px
+balancedTreeLayout.ts:305 📍 Level 5 Y position: 2500 (marginY=250 + level=5 * verticalSpacing=450)
+balancedTreeLayout.ts:343 ✓ Level 5 spacing: base=60, factor=0.75, final=45
+balancedTreeLayout.ts:305 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+balancedTreeLayout.ts:343 ✓ Level 6 spacing: base=60, factor=0.70, final=42
+balancedTreeLayout.ts:305 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+balancedTreeLayout.ts:318 ✓ Leaf fiveqi-1757846118434-5000 positioned at (-140, 3400) - will be adjusted by parent
+balancedTreeLayout.ts:355 🔧 Shifting child fiveqi-1757846118434-5000 subtree by 140px
+balancedTreeLayout.ts:401 ✓ Parent qosflow-1757846099732-3840 centered over children at (-10, 2950)
+balancedTreeLayout.ts:355 🔧 Shifting child qosflow-1757846099732-3840 subtree by 10px
+balancedTreeLayout.ts:305 📍 Level 6 Y position: 2950 (marginY=250 + level=6 * verticalSpacing=450)
+balancedTreeLayout.ts:343 ✓ Level 6 spacing: base=60, factor=0.70, final=42
+balancedTreeLayout.ts:305 📍 Level 7 Y position: 3400 (marginY=250 + level=7 * verticalSpacing=450)
+balancedTreeLayout.ts:318 ✓ Leaf fiveqi-1757846128931-699 positioned at (-140, 3400) - will be adjusted by parent
+balancedTreeLayout.ts:355 🔧 Shifting child fiveqi-1757846128931-699 subtree by 140px
+balancedTreeLayout.ts:401 ✓ Parent qosflow-1757846111254-6175 centered over children at (-10, 2950)
+balancedTreeLayout.ts:355 🔧 Shifting child qosflow-1757846111254-6175 subtree by 355px
+balancedTreeLayout.ts:401 ✓ Parent dnn-9 centered over children at (163, 2500)
+balancedTreeLayout.ts:355 🔧 Shifting child dnn-9 subtree by 428px
+balancedTreeLayout.ts:401 ✓ Parent s-nssai-3 centered over children at (357, 2050)
+balancedTreeLayout.ts:355 🔧 Shifting child s-nssai-3 subtree by 1506px
+balancedTreeLayout.ts:401 ✓ Parent rrpmember-1757845876107-6071 centered over children at (1170, 1600)
+balancedTreeLayout.ts:401 ✓ Parent rrp-4 centered over children at (1170, 1150)
+balancedTreeLayout.ts:355 🔧 Shifting child rrp-4 subtree by 1908px
+balancedTreeLayout.ts:401 ✓ Parent cell-area-2 centered over children at (2154, 700)
+balancedTreeLayout.ts:355 🔧 Shifting child cell-area-2 subtree by 3268px
+balancedTreeLayout.ts:401 ✓ Parent network-1757845832340-4888 centered over children at (3788, 250)
+balancedTreeLayout.ts:401 ✓ Parent __virtual_super_root__ centered over children at (3788, -200)
+balancedTreeLayout.ts:437 🎯 Layout normalized: shifted all nodes by 100 to start at marginX=100
+balancedTreeLayout.ts:443 📊 Positioned 68 out of 67 nodes
+balancedTreeLayout.ts:461 🎯 Bottom-up balanced layout completed
+balancedTreeLayout.ts:479 🎯 Graph centering: minX=100, maxX=7565, width=7465, centerOffset=3832.5
+balancedTreeLayout.ts:493 🎯 BALANCED TREE LAYOUT COMPLETED. Positioned 68 nodes
+balancedTreeLayout.ts:494 🎯 Final Y spacing used: 450 px
+balancedTreeLayout.ts:495 🎯 Final calculated positions: (5) [{…}, {…}, {…}, {…}, {…}]
+balancedTreeLayout.ts:496 🧹 Cleaned 0 invalid edges
+useNodeLayoutManager.ts:73 🧹 Filtered duplicates: 67 -> 67 nodes
+useNodeLayoutManager.ts:96 🧹 Updating edges: 66 -> 66 (filtered duplicates)
+useLayoutOperations.ts:46 ✅ arrangeNodesInLayout completed successfully
+useLayoutOperations.ts:48 ⏳ Setting up setTimeout for fitView...
+useLayoutOperations.ts:64 ✅ setTimeout for fitView set up successfully
+useLayoutOperations.ts:67 🎉 Showing success toast...
+useLayoutOperations.ts:69 ✅ Success toast shown
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845984589-6842', nodeId: 'fiveqi-1757846021907-1078', fiveQIId: '6', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 6
+fiveQIUtils.ts:24 Looking up 5QI with ID: "6"
+fiveQIUtils.ts:33 Found matching 5QI for ID "6": {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845984589-6842', nodeId: 'fiveqi-1757846021907-1078', fiveQIId: '6', …}
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845986828-6140', nodeId: 'fiveqi-1757846024042-5667', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845986828-6140', nodeId: 'fiveqi-1757846024042-5667', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845991436-3452', nodeId: 'fiveqi-1757846026265-9537', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845991436-3452', nodeId: 'fiveqi-1757846026265-9537', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845993647-840', nodeId: 'fiveqi-1757846028829-102', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845993647-840', nodeId: 'fiveqi-1757846028829-102', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845995745-2321', nodeId: 'fiveqi-1757846031777-5979', fiveQIId: '10', …}
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ Final QoS values for rendering: {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845995745-2321', nodeId: 'fiveqi-1757846031777-5979', fiveQIId: '10', …}
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ Final QoS values for rendering: {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846049412-2403', fiveQIId: '3', …}
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846049412-2403', fiveQIId: '3', …}
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846056422-4955', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846056422-4955', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846059962-6359', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846059962-6359', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846062538-7258', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846062538-7258', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846065223-1762', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846065223-1762', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846005447-8448', nodeId: 'fiveqi-1757846084734-8743', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846005447-8448', nodeId: 'fiveqi-1757846084734-8743', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846099732-3840', nodeId: 'fiveqi-1757846118434-5000', fiveQIId: '75', …}
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ Final QoS values for rendering: {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846099732-3840', nodeId: 'fiveqi-1757846118434-5000', fiveQIId: '75', …}
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ Final QoS values for rendering: {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846111254-6175', nodeId: 'fiveqi-1757846128931-699', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846111254-6175', nodeId: 'fiveqi-1757846128931-699', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846097630-6982', nodeId: 'fiveqi-1757846137445-3053', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846097630-6982', nodeId: 'fiveqi-1757846137445-3053', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846095260-3081', nodeId: 'fiveqi-1757846143837-5217', fiveQIId: '12', …}
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846095260-3081', nodeId: 'fiveqi-1757846143837-5217', fiveQIId: '12', …}
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846108166-7346', nodeId: 'fiveqi-1757846147146-7326', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846108166-7346', nodeId: 'fiveqi-1757846147146-7326', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846093158-2312', nodeId: 'fiveqi-1757846150171-2814', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846093158-2312', nodeId: 'fiveqi-1757846150171-2814', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846105158-128', nodeId: 'fiveqi-1757846154066-902', fiveQIId: '11', …}
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846105158-128', nodeId: 'fiveqi-1757846154066-902', fiveQIId: '11', …}
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846173004-2753', nodeId: 'fiveqi-1757846179413-7331', fiveQIId: '4', …}
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ Final QoS values for rendering: {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846173004-2753', nodeId: 'fiveqi-1757846179413-7331', fiveQIId: '4', …}
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ Final QoS values for rendering: {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846003015-1791', nodeId: 'fiveqi-1757847846408-9544', fiveQIId: '3', …}
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846003015-1791', nodeId: 'fiveqi-1757847846408-9544', fiveQIId: '3', …}
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845984589-6842', nodeId: 'fiveqi-1757846021907-1078', fiveQIId: '6', …}
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845984589-6842', nodeId: 'fiveqi-1757846021907-1078', fiveQIId: '6', …}
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845986828-6140', nodeId: 'fiveqi-1757846024042-5667', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845986828-6140', nodeId: 'fiveqi-1757846024042-5667', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845991436-3452', nodeId: 'fiveqi-1757846026265-9537', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845991436-3452', nodeId: 'fiveqi-1757846026265-9537', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845993647-840', nodeId: 'fiveqi-1757846028829-102', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845993647-840', nodeId: 'fiveqi-1757846028829-102', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845995745-2321', nodeId: 'fiveqi-1757846031777-5979', fiveQIId: '10', …}
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ Final QoS values for rendering: {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845995745-2321', nodeId: 'fiveqi-1757846031777-5979', fiveQIId: '10', …}
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ Final QoS values for rendering: {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846049412-2403', fiveQIId: '3', …}
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846049412-2403', fiveQIId: '3', …}
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846056422-4955', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846056422-4955', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846059962-6359', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846059962-6359', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846062538-7258', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846062538-7258', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846065223-1762', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846065223-1762', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846005447-8448', nodeId: 'fiveqi-1757846084734-8743', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846005447-8448', nodeId: 'fiveqi-1757846084734-8743', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846099732-3840', nodeId: 'fiveqi-1757846118434-5000', fiveQIId: '75', …}
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ Final QoS values for rendering: {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846099732-3840', nodeId: 'fiveqi-1757846118434-5000', fiveQIId: '75', …}
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ Final QoS values for rendering: {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846111254-6175', nodeId: 'fiveqi-1757846128931-699', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846111254-6175', nodeId: 'fiveqi-1757846128931-699', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846097630-6982', nodeId: 'fiveqi-1757846137445-3053', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846097630-6982', nodeId: 'fiveqi-1757846137445-3053', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846095260-3081', nodeId: 'fiveqi-1757846143837-5217', fiveQIId: '12', …}
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846095260-3081', nodeId: 'fiveqi-1757846143837-5217', fiveQIId: '12', …}
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846108166-7346', nodeId: 'fiveqi-1757846147146-7326', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846108166-7346', nodeId: 'fiveqi-1757846147146-7326', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846093158-2312', nodeId: 'fiveqi-1757846150171-2814', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846093158-2312', nodeId: 'fiveqi-1757846150171-2814', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846105158-128', nodeId: 'fiveqi-1757846154066-902', fiveQIId: '11', …}
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846105158-128', nodeId: 'fiveqi-1757846154066-902', fiveQIId: '11', …}
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846173004-2753', nodeId: 'fiveqi-1757846179413-7331', fiveQIId: '4', …}
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ Final QoS values for rendering: {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846173004-2753', nodeId: 'fiveqi-1757846179413-7331', fiveQIId: '4', …}
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ Final QoS values for rendering: {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846003015-1791', nodeId: 'fiveqi-1757847846408-9544', fiveQIId: '3', …}
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846003015-1791', nodeId: 'fiveqi-1757847846408-9544', fiveQIId: '3', …}
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845984589-6842', nodeId: 'fiveqi-1757846021907-1078', fiveQIId: '6', …}
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845984589-6842', nodeId: 'fiveqi-1757846021907-1078', fiveQIId: '6', …}
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845986828-6140', nodeId: 'fiveqi-1757846024042-5667', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845986828-6140', nodeId: 'fiveqi-1757846024042-5667', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845991436-3452', nodeId: 'fiveqi-1757846026265-9537', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845991436-3452', nodeId: 'fiveqi-1757846026265-9537', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845993647-840', nodeId: 'fiveqi-1757846028829-102', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845993647-840', nodeId: 'fiveqi-1757846028829-102', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845995745-2321', nodeId: 'fiveqi-1757846031777-5979', fiveQIId: '10', …}
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ Final QoS values for rendering: {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845995745-2321', nodeId: 'fiveqi-1757846031777-5979', fiveQIId: '10', …}
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ Final QoS values for rendering: {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846049412-2403', fiveQIId: '3', …}
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846049412-2403', fiveQIId: '3', …}
+ 5QI Node fiveQIId: 3
+ Looking up 5QI with ID: "3"
+ Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846056422-4955', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757845999269-6164', nodeId: 'fiveqi-1757846056422-4955', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846059962-6359', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846059962-6359', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846062538-7258', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846062538-7258', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846065223-1762', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846008407-5924', nodeId: 'fiveqi-1757846065223-1762', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846005447-8448', nodeId: 'fiveqi-1757846084734-8743', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846005447-8448', nodeId: 'fiveqi-1757846084734-8743', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846099732-3840', nodeId: 'fiveqi-1757846118434-5000', fiveQIId: '75', …}
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ Final QoS values for rendering: {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846099732-3840', nodeId: 'fiveqi-1757846118434-5000', fiveQIId: '75', …}
+ 5QI Node fiveQIId: 75
+ Looking up 5QI with ID: "75"
+ Found matching 5QI for ID "75": {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ Final QoS values for rendering: {value: '75', resourceType: 'GBR', priority: '25', packetDelay: '50 ms', service: 'V2X messages'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846111254-6175', nodeId: 'fiveqi-1757846128931-699', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846111254-6175', nodeId: 'fiveqi-1757846128931-699', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846097630-6982', nodeId: 'fiveqi-1757846137445-3053', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846097630-6982', nodeId: 'fiveqi-1757846137445-3053', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846095260-3081', nodeId: 'fiveqi-1757846143837-5217', fiveQIId: '12', …}
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846095260-3081', nodeId: 'fiveqi-1757846143837-5217', fiveQIId: '12', …}
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846108166-7346', nodeId: 'fiveqi-1757846147146-7326', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846108166-7346', nodeId: 'fiveqi-1757846147146-7326', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846093158-2312', nodeId: 'fiveqi-1757846150171-2814', fiveQIId: '9', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846093158-2312', nodeId: 'fiveqi-1757846150171-2814', fiveQIId: '9', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846105158-128', nodeId: 'fiveqi-1757846154066-902', fiveQIId: '11', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 11
+fiveQIUtils.ts:24 Looking up 5QI with ID: "11"
+fiveQIUtils.ts:33 Found matching 5QI for ID "11": {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846105158-128', nodeId: 'fiveqi-1757846154066-902', fiveQIId: '11', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 11
+fiveQIUtils.ts:24 Looking up 5QI with ID: "11"
+fiveQIUtils.ts:33 Found matching 5QI for ID "11": {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846173004-2753', nodeId: 'fiveqi-1757846179413-7331', fiveQIId: '4', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 4
+fiveQIUtils.ts:24 Looking up 5QI with ID: "4"
+fiveQIUtils.ts:33 Found matching 5QI for ID "4": {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846173004-2753', nodeId: 'fiveqi-1757846179413-7331', fiveQIId: '4', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 4
+fiveQIUtils.ts:24 Looking up 5QI with ID: "4"
+fiveQIUtils.ts:33 Found matching 5QI for ID "4": {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846003015-1791', nodeId: 'fiveqi-1757847846408-9544', fiveQIId: '3', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 3
+fiveQIUtils.ts:24 Looking up 5QI with ID: "3"
+fiveQIUtils.ts:33 Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757846003015-1791', nodeId: 'fiveqi-1757847846408-9544', fiveQIId: '3', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 3
+fiveQIUtils.ts:24 Looking up 5QI with ID: "3"
+fiveQIUtils.ts:33 Found matching 5QI for ID "3": {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '3', resourceType: 'GBR', priority: '30', packetDelay: '50 ms', service: 'Real Time Gaming, V2X messages'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-4'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-5'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-6'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-7'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-8'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-9'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-10'}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-11'}
+useNodeLayoutManager.ts:107 🔍 Post-update edges count: 66
+useLayoutOperations.ts:51 🔍 FitView: Attempting to fit view after layout...
+useLayoutOperations.ts:53 ✅ FitView: ReactFlow instance available, calling fitView
+useLayoutOperations.ts:59 🎯 FitView: fitView() called successfully
