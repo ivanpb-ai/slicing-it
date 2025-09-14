@@ -13,7 +13,8 @@ export const useNodeDragDrop = (
   reactFlowWrapper: React.RefObject<HTMLDivElement>,
   addNode: (type: NodeType, position: XYPosition, fiveQIId?: string) => void,
   createChildNode: (type: NodeType, position: XYPosition, parentId: string, fiveQIId?: string) => void,
-  setNodes: React.Dispatch<React.SetStateAction<Node[]>>
+  setNodes: React.Dispatch<React.SetStateAction<Node[]>>,
+  arrangeNodesInLayout?: () => void
 ) => {
   const reactFlowInstance = useReactFlow();
   const [isProcessingDrop, setIsProcessingDrop] = useState(false);
@@ -137,6 +138,15 @@ export const useNodeDragDrop = (
               console.log(`🎯 useNodeDragDrop: Calling createChildNode for 5QI at position:`, childPosition);
               createChildNode(nodeType, childPosition, parentId, fiveQIId);
               console.log(`🎯 useNodeDragDrop: createChildNode call completed for 5QI`);
+              
+              // Trigger layout to properly space siblings
+              if (arrangeNodesInLayout) {
+                setTimeout(() => {
+                  console.log('🎯 useNodeDragDrop: Triggering layout after 5QI creation');
+                  arrangeNodesInLayout();
+                }, 100);
+              }
+              
               toast.success(`Added 5QI ${fiveQIId || 'node'} as child of DNN node`);
             } 
             // Special positioning for DNN nodes under S-NSSAI nodes
@@ -166,6 +176,14 @@ export const useNodeDragDrop = (
               console.log(`🎯 useNodeDragDrop: Calling createChildNode for DNN at position:`, childPosition);
               createChildNode(nodeType, childPosition, parentId, fiveQIId);
               console.log(`🎯 useNodeDragDrop: createChildNode call completed for DNN`);
+              
+              // Trigger layout to properly space siblings after DNN creation
+              if (arrangeNodesInLayout) {
+                setTimeout(() => {
+                  console.log('🎯 useNodeDragDrop: Triggering layout after DNN creation');
+                  arrangeNodesInLayout();
+                }, 150);
+              }
               
               // IMPORTANT: Reposition existing DNN siblings to maintain symmetry
               // Use multiple attempts to ensure ReactFlow updates properly
@@ -216,11 +234,29 @@ export const useNodeDragDrop = (
               );
               console.log('useNodeDragDrop: Child position calculated:', childPosition);
               createChildNode(nodeType, childPosition, parentId, fiveQIId);
+              
+              // Trigger layout to properly space siblings - CRITICAL for RRP siblings under TAC
+              if (arrangeNodesInLayout) {
+                setTimeout(() => {
+                  console.log(`🎯 useNodeDragDrop: Triggering layout after ${nodeType} creation (fixes sibling overlap)`);
+                  arrangeNodesInLayout();
+                }, 100);
+              }
+              
               toast.success(`Added ${nodeType} node as child of ${parentNode.data?.type || 'parent'} node`);
             }
           } else {
             console.log('useNodeDragDrop: Parent node not found in ReactFlow instance, creating at safe position');
             createChildNode(nodeType, safePosition, parentId, fiveQIId);
+            
+            // Trigger layout to properly space siblings
+            if (arrangeNodesInLayout) {
+              setTimeout(() => {
+                console.log('🎯 useNodeDragDrop: Triggering layout after fallback child creation');
+                arrangeNodesInLayout();
+              }, 100);
+            }
+            
             toast.success(`Added ${nodeType} node as child`);
           }
         } else {
@@ -239,7 +275,7 @@ export const useNodeDragDrop = (
         setIsProcessingDrop(false);
       }
     },
-    [reactFlowWrapper, reactFlowInstance, addNode, createChildNode, isProcessingDrop, validateParentChildRelationship]
+    [reactFlowWrapper, reactFlowInstance, addNode, createChildNode, isProcessingDrop, validateParentChildRelationship, arrangeNodesInLayout]
   );
 
   return { onDragOver, onDrop };

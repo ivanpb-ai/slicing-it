@@ -228,7 +228,8 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     reactFlowWrapper,
     addNode,
     createChildNode,
-    setNodes
+    setNodes,
+    arrangeNodesInLayout
   );
 
   const hasSelectedElements = selectedElements.nodes.length > 0 || selectedElements.edges.length > 0;
