@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import { Node, Edge, useReactFlow } from '@xyflow/react';
 import { toast } from 'sonner';
 import { getInitialNodes, getInitialEdges } from '@/utils/flowData/initialNodes';
-import { resetCounters } from '@/utils/idCounters';
+import { resetCounters } from '../../utils/flowData/idCounters';
 
 export const useCanvasOperationsManager = (
   nodes: Node[],
