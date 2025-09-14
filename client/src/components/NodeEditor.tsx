@@ -110,24 +110,15 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
 
   // CRITICAL FIX: Allow imports, clear operations, and preserve normal node creation
   React.useEffect(() => {
-    // Import scenario: nodes.length > hookNodes.length (e.g., 26 > 0 or 26 > 5)
-    // Clear scenario: nodes.length === 0 AND edges.length === 0 (explicit clear operation)
-    // DNN creation scenario: hookNodes.length > nodes.length AND nodes.length > 0 (should NOT sync)
-    
+    // COMPLETELY CONSERVATIVE NODE SYNC: Only allow imports, never auto-clear
     const isImport = nodes.length > hookNodes.length && nodes.length > 0;
-    // FIXED: Only clear when parent state is deliberately set to empty AND we had content before
-    // The key insight: normal node creation will never set both nodes AND edges to 0 simultaneously
-    const isClearOperation = nodes.length === 0 && edges.length === 0 && hookNodes.length > 0 && hookEdges.length > 0;
-    const isNewNodeCreation = hookNodes.length > nodes.length;
     
     if (isImport) {
-      console.log(`NodeEditor: Syncing passed nodes (${nodes.length}) with hook nodes (${hookNodes.length}) - import detected`);
+      console.log(`🔄 NodeEditor: Syncing IMPORT - nodes: ${nodes.length} -> hookNodes: ${hookNodes.length}`);
       hookSetNodes(nodes);
-    } else if (isClearOperation) {
-      console.log(`NodeEditor: Syncing clear operation - clearing ${hookNodes.length} hook nodes`);
-      hookSetNodes([]);
-    } else if (isNewNodeCreation) {
-      console.log(`NodeEditor: PRESERVED new nodes - nodes: ${nodes.length}, hookNodes: ${hookNodes.length} (normal node creation or child node addition)`);
+    } else {
+      // NEVER auto-clear nodes - only manual clear canvas should clear nodes
+      console.log(`✅ NodeEditor: NODE PRESERVATION - nodes: ${nodes.length}, hookNodes: ${hookNodes.length} (no auto-clear)`);
     }
   }, [nodes, edges.length, hookNodes.length, hookSetNodes]);
 

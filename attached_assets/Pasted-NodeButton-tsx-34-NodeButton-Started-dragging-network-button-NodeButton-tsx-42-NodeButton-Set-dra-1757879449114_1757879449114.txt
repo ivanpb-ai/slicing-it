@@ -1,0 +1,24 @@
+NodeButton.tsx:34 NodeButton: Started dragging network button
+NodeButton.tsx:42 NodeButton: Set drag data to: network
+useNodeDragDrop.ts:32 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:41 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:63 useNodeDragDrop: Drop event received with data: "network" at position: {x: 360.36093325140297, y: -340.8805842932207}
+useDragDataParser.ts:3 parseDragData: Processing drag data: network
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: network
+useNodeDragDrop.ts:79 useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+useNodeDragDrop.ts:99 useNodeDragDrop: Elements at drop point: 9
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 9
+useParentNodeDetection.ts:47 detectParentNodeFromDOM: No parent node found in DOM elements
+useParentNodeDetection.ts:55 detectParentNodeFromPosition: Checking position: {x: 360.36093325140297, y: -340.8805842932207}
+useParentNodeDetection.ts:56 detectParentNodeFromPosition: Available nodes: []
+useParentNodeDetection.ts:92 detectParentNodeFromPosition: No parent node found at position
+useNodeDragDrop.ts:108 useNodeDragDrop: Detected parent: none
+useNodeDragDrop.ts:268 useNodeDragDrop: Creating standalone network node at safe position: {x: 360.36093325140297, y: -340.8805842932207}
+useNodeEditor.ts:67 useNodeEditor: Adding network node at position: {x: 360.36093325140297, y: -340.8805842932207}
+FlowInstance.tsx:80 FlowInstance: Rendering with 1 nodes, 1 edges
+FlowInstance.tsx:83 FlowInstance: First node: {id: 'network-1757879434367-6948', type: 'customNode', position: {…}, data: {…}}
+NodeEditor.tsx:127 NodeEditor: Syncing clear operation - clearing 1 hook nodes
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=network-1757879434367-6948, type=network, nodeNumber=6948
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=network-1757879434367-6948, type=network, nodeNumber=6948
+FlowInstance.tsx:80 FlowInstance: Rendering with 0 nodes, 1 edges
