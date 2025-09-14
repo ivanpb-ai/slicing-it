@@ -213,9 +213,9 @@ export const useNodeDragDrop = (
                     return node;
                   });
                   
-                  // Apply the updated positions using React state - ReactFlow will automatically sync
-                  console.log(`useNodeDragDrop: Applying repositioning for ${existingDnnChildren.length} DNN siblings directly (avoiding 0-node state)`);
-                  setNodes(updatedNodes);
+                  // Apply the updated positions using ReactFlow instance to avoid type issues
+                  console.log(`useNodeDragDrop: Applying repositioning for ${existingDnnChildren.length} DNN siblings via ReactFlow`);
+                  reactFlowInstance.setNodes(updatedNodes);
                   console.log(`useNodeDragDrop: Applied repositioning for ${existingDnnChildren.length} DNN siblings`);
                 }
               }, 200); // Longer delay to ensure the new node is fully rendered
@@ -235,12 +235,16 @@ export const useNodeDragDrop = (
               console.log('useNodeDragDrop: Child position calculated:', childPosition);
               createChildNode(nodeType, childPosition, parentId, fiveQIId);
               
-              // Trigger layout to properly space siblings - CRITICAL for RRP siblings under TAC
-              if (arrangeNodesInLayout) {
+              // FIXED: Only trigger layout for specific cases that need sibling repositioning
+              // Most child node creation should NOT move the parent or trigger full layout
+              if (arrangeNodesInLayout && nodeType === 'rrpmember') {
+                // Only trigger layout for RRP Member nodes that need sibling spacing
                 setTimeout(() => {
-                  console.log(`🎯 useNodeDragDrop: Triggering layout after ${nodeType} creation (fixes sibling overlap)`);
+                  console.log(`🎯 useNodeDragDrop: Triggering layout after ${nodeType} creation (fixes RRP Member sibling overlap)`);
                   arrangeNodesInLayout();
                 }, 100);
+              } else {
+                console.log(`🎯 useNodeDragDrop: NOT triggering layout for ${nodeType} - parent position preserved`);
               }
               
               toast.success(`Added ${nodeType} node as child of ${parentNode.data?.type || 'parent'} node`);
