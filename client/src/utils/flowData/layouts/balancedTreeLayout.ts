@@ -34,9 +34,75 @@ const getNodeWidth = (nodeId: string, nodeType?: string): number => {
 };
 
 // Helper function to get parent center X position
-const getParentCenterX = (parentPos: { x: number; y: number }, parentId: string): number => {
-  const parentWidth = getNodeWidth(parentId);
+const getParentCenterX = (parentPos: { x: number; y: number }, parentId: string, subtreeWidths?: Map<string, number>): number => {
+  const parentWidth = subtreeWidths?.get(parentId) || getNodeWidth(parentId);
   return parentPos.x + parentWidth / 2;
+};
+
+// Calculate subtree widths (required width including all descendants)
+const calculateSubtreeWidths = (
+  childrenMap: Record<string, string[]>,
+  allParentsMap: Record<string, string[]>,
+  nodesByLevel: Map<number, string[]>,
+  maxLevel: number
+): Map<string, number> => {
+  const subtreeWidths = new Map<string, number>();
+  const gutter = 60; // Standard spacing between siblings
+  
+  // Process levels bottom-up to calculate subtree widths
+  for (let level = maxLevel; level >= 0; level--) {
+    const nodesAtLevel = nodesByLevel.get(level) || [];
+    
+    nodesAtLevel.forEach(nodeId => {
+      const children = childrenMap[nodeId] || [];
+      const nodeWidth = getNodeWidth(nodeId);
+      
+      if (children.length === 0) {
+        // Leaf node: subtree width = own width
+        subtreeWidths.set(nodeId, nodeWidth);
+      } else {
+        // Group children by type and calculate required width for each group
+        const childGroups = new Map<string, string[]>();
+        children.forEach(childId => {
+          const childType = getNodeType(childId);
+          if (!childGroups.has(childType)) {
+            childGroups.set(childType, []);
+          }
+          childGroups.get(childType)!.push(childId);
+        });
+        
+        let maxChildGroupWidth = 0;
+        childGroups.forEach(typeChildren => {
+          // Calculate total width for this type group
+          const totalChildWidth = typeChildren.reduce((sum, childId) => {
+            return sum + (subtreeWidths.get(childId) || getNodeWidth(childId));
+          }, 0);
+          const totalGutterWidth = (typeChildren.length - 1) * gutter;
+          const groupWidth = totalChildWidth + totalGutterWidth;
+          maxChildGroupWidth = Math.max(maxChildGroupWidth, groupWidth);
+        });
+        
+        // Subtree width = max(own width, widest child group)
+        const requiredWidth = Math.max(nodeWidth, maxChildGroupWidth);
+        subtreeWidths.set(nodeId, requiredWidth);
+      }
+    });
+  }
+  
+  return subtreeWidths;
+};
+
+// Helper function to get node type from ID
+const getNodeType = (nodeId: string): string => {
+  if (nodeId.includes('s-nssai')) return 's-nssai';
+  if (nodeId.includes('dnn')) return 'dnn';
+  if (nodeId.includes('rrpmember')) return 'rrpmember';
+  if (nodeId.includes('rrp-')) return 'rrp';
+  if (nodeId.includes('cell-area')) return 'cell-area';
+  if (nodeId.includes('network')) return 'network';
+  if (nodeId.includes('qosflow')) return 'qosflow';
+  if (nodeId.includes('fiveqi')) return 'fiveqi';
+  return 'default';
 };
 
 interface TreeNode {
@@ -204,9 +270,21 @@ export const arrangeNodesInBalancedTree = (
   console.log('Level assignments:', nodePositions);
   console.log('Parent-child relationships:', allParentsMap);
   
+  // Calculate subtree widths for proper spacing to prevent overlaps
+  const maxLevel = Math.max(...Object.keys(nodesByLevel).map(k => parseInt(k)));
+  const nodesByLevelMap = new Map<number, string[]>();
+  Object.keys(nodesByLevel).forEach(levelStr => {
+    const level = parseInt(levelStr);
+    nodesByLevelMap.set(level, nodesByLevel[level]);
+  });
+  
+  console.log('🔧 Calculating subtree widths for overlap prevention...');
+  const subtreeWidths = calculateSubtreeWidths(childrenMap, allParentsMap, nodesByLevelMap, maxLevel);
+  console.log('🔧 Subtree widths calculated:', Object.fromEntries(Array.from(subtreeWidths.entries()).slice(0, 5)));
+  
   // Removed excessive debug logging for performance
 
-  // No need for subtree width calculation in DAG layout
+  // Using subtree width calculation for proper spacing to prevent overlaps
 
   // SIMPLE HIERARCHICAL POSITIONING ALGORITHM
   const positionedNodes: { id: string; position: { x: number; y: number } }[] = [];
@@ -332,12 +410,12 @@ export const arrangeNodesInBalancedTree = (
                   return dnnParents.includes(parentId);
                 });
                 
-                // Get parent center for proper alignment
-                const parentCenterX = getParentCenterX(parentPos, parentId);
+                // Get parent center for proper alignment using subtree width
+                const parentCenterX = getParentCenterX(parentPos, parentId, subtreeWidths);
                 
                 if (typedSiblings.length === 1) {
-                  // Single DNN child: center under parent
-                  const nodeWidth = getNodeWidth(nodeId, 'dnn');
+                  // Single DNN child: center under parent using subtree width
+                  const nodeWidth = subtreeWidths.get(nodeId) || getNodeWidth(nodeId, 'dnn');
                   const x = parentCenterX - nodeWidth / 2;
                   
                   const position = { x, y };
@@ -349,18 +427,20 @@ export const arrangeNodesInBalancedTree = (
                   const nodeIndex = typedSiblings.indexOf(nodeId);
                   const gutter = 60; // Spacing between nodes
                   
-                  // Calculate total width needed for all siblings
-                  const totalSiblingWidth = typedSiblings.reduce((sum, sibId) => sum + getNodeWidth(sibId, 'dnn'), 0);
+                  // Calculate total width needed for all siblings using subtree widths
+                  const totalSiblingWidth = typedSiblings.reduce((sum, sibId) => {
+                    return sum + (subtreeWidths.get(sibId) || getNodeWidth(sibId, 'dnn'));
+                  }, 0);
                   const totalGutterWidth = (typedSiblings.length - 1) * gutter;
                   const totalWidth = totalSiblingWidth + totalGutterWidth;
                   
                   // Start from left edge of the group, centered under parent
                   const startX = parentCenterX - totalWidth / 2;
                   
-                  // Calculate cumulative position for this specific node
+                  // Calculate cumulative position for this specific node using subtree widths
                   let cumulativeX = startX;
                   for (let i = 0; i < nodeIndex; i++) {
-                    cumulativeX += getNodeWidth(typedSiblings[i], 'dnn') + gutter;
+                    cumulativeX += (subtreeWidths.get(typedSiblings[i]) || getNodeWidth(typedSiblings[i], 'dnn')) + gutter;
                   }
                   
                   const position = { x: cumulativeX, y };
@@ -379,28 +459,51 @@ export const arrangeNodesInBalancedTree = (
               }
               // DNN node positioned with width-aware spacing
             } else if (isRrpNode && level === rrpLevel) {
-              // SPECIAL CASE: Position ALL RRP nodes with consistent spacing for uniform edge lengths
+              // Position RRP nodes using subtree widths for proper spacing
               const nodeIndex = allRrpNodes.indexOf(nodeId);
-              const rrpSpacing = 400; // Consistent spacing for RRP nodes
-              const totalRrpWidth = (allRrpNodes.length - 1) * rrpSpacing;
-              const startX = 0 - totalRrpWidth / 2; // Center around X=0
-              const x = startX + nodeIndex * rrpSpacing;
+              const gutter = 60;
               
-              const position = { x, y };
+              // Calculate total width needed for all RRP nodes based on subtree widths
+              const totalRrpWidth = allRrpNodes.reduce((sum, rrpId) => {
+                return sum + (subtreeWidths.get(rrpId) || getNodeWidth(rrpId));
+              }, 0);
+              const totalGutterWidth = (allRrpNodes.length - 1) * gutter;
+              const totalWidth = totalRrpWidth + totalGutterWidth;
+              const startX = 0 - totalWidth / 2;
+              
+              // Calculate cumulative position for this RRP node
+              let cumulativeX = startX;
+              for (let i = 0; i < nodeIndex; i++) {
+                cumulativeX += (subtreeWidths.get(allRrpNodes[i]) || getNodeWidth(allRrpNodes[i])) + gutter;
+              }
+              
+              const position = { x: cumulativeX, y };
               positionedNodes.push({ id: nodeId, position });
               nodePositionMap[nodeId] = position;
-              // RRP positioned
+              console.log(`✓ RRP ${nodeId} positioned with subtree width at (${cumulativeX}, ${y})`);
             } else if (isCellAreaNode && level === cellAreaLevel) {
-              // SPECIAL CASE: Position ALL cell-area nodes with consistent spacing for uniform edge lengths
+              // Position cell-area nodes using subtree widths for proper spacing
               const nodeIndex = allCellAreaNodes.indexOf(nodeId);
-              const cellAreaSpacing = 400; // Consistent spacing for cell-area nodes
-              const totalCellAreaWidth = (allCellAreaNodes.length - 1) * cellAreaSpacing;
-              const startX = 0 - totalCellAreaWidth / 2; // Center around X=0
-              const x = startX + nodeIndex * cellAreaSpacing;
+              const gutter = 60;
               
-              const position = { x, y };
+              // Calculate total width needed for all cell-area nodes based on subtree widths
+              const totalCellAreaWidth = allCellAreaNodes.reduce((sum, cellId) => {
+                return sum + (subtreeWidths.get(cellId) || getNodeWidth(cellId));
+              }, 0);
+              const totalGutterWidth = (allCellAreaNodes.length - 1) * gutter;
+              const totalWidth = totalCellAreaWidth + totalGutterWidth;
+              const startX = 0 - totalWidth / 2;
+              
+              // Calculate cumulative position for this cell-area node
+              let cumulativeX = startX;
+              for (let i = 0; i < nodeIndex; i++) {
+                cumulativeX += (subtreeWidths.get(allCellAreaNodes[i]) || getNodeWidth(allCellAreaNodes[i])) + gutter;
+              }
+              
+              const position = { x: cumulativeX, y };
               positionedNodes.push({ id: nodeId, position });
               nodePositionMap[nodeId] = position;
+              console.log(`✓ Cell-area ${nodeId} positioned with subtree width at (${cumulativeX}, ${y})`);
               // Cell area positioned
             } else if (isSNssaiNode && level === sNssaiLevel) {
               // Multi-parent support for S-NSSAI nodes with width-aware positioning
@@ -416,12 +519,12 @@ export const arrangeNodesInBalancedTree = (
                   return sNssaiParents.includes(parentId);
                 });
                 
-                // Get parent center for proper alignment
-                const parentCenterX = getParentCenterX(parentPos, parentId);
+                // Get parent center for proper alignment using subtree width
+                const parentCenterX = getParentCenterX(parentPos, parentId, subtreeWidths);
                 
                 if (typedSiblings.length === 1) {
-                  // Single S-NSSAI child: center under parent
-                  const nodeWidth = getNodeWidth(nodeId, 's-nssai');
+                  // Single S-NSSAI child: center under parent using subtree width
+                  const nodeWidth = subtreeWidths.get(nodeId) || getNodeWidth(nodeId, 's-nssai');
                   const x = parentCenterX - nodeWidth / 2;
                   
                   const position = { x, y };
@@ -433,18 +536,20 @@ export const arrangeNodesInBalancedTree = (
                   const nodeIndex = typedSiblings.indexOf(nodeId);
                   const gutter = 60; // Spacing between nodes
                   
-                  // Calculate total width needed for all siblings
-                  const totalSiblingWidth = typedSiblings.reduce((sum, sibId) => sum + getNodeWidth(sibId, 's-nssai'), 0);
+                  // Calculate total width needed for all siblings using subtree widths
+                  const totalSiblingWidth = typedSiblings.reduce((sum, sibId) => {
+                    return sum + (subtreeWidths.get(sibId) || getNodeWidth(sibId, 's-nssai'));
+                  }, 0);
                   const totalGutterWidth = (typedSiblings.length - 1) * gutter;
                   const totalWidth = totalSiblingWidth + totalGutterWidth;
                   
                   // Start from left edge of the group, centered under parent
                   const startX = parentCenterX - totalWidth / 2;
                   
-                  // Calculate cumulative position for this specific node
+                  // Calculate cumulative position for this specific node using subtree widths
                   let cumulativeX = startX;
                   for (let i = 0; i < nodeIndex; i++) {
-                    cumulativeX += getNodeWidth(typedSiblings[i], 's-nssai') + gutter;
+                    cumulativeX += (subtreeWidths.get(typedSiblings[i]) || getNodeWidth(typedSiblings[i], 's-nssai')) + gutter;
                   }
                   
                   const position = { x: cumulativeX, y };
@@ -461,18 +566,131 @@ export const arrangeNodesInBalancedTree = (
                 nodePositionMap[nodeId] = position;
                 console.log(`✓ S-NSSAI ${nodeId} fallback positioned at (${x}, ${y})`);
               }
-            } else if (isFiveQiNode && level === fiveQiLevel) {
-              // SPECIAL CASE: Position ALL 5QI nodes with consistent spacing across the entire level
-              const nodeIndex = allFiveQiNodes.indexOf(nodeId);
-              const fiveQiSpacing = 350; // Increased spacing for 5QI nodes to prevent overlap
-              const totalFiveQiWidth = (allFiveQiNodes.length - 1) * fiveQiSpacing;
-              const startX = 0 - totalFiveQiWidth / 2; // Center around X=0
-              const x = startX + nodeIndex * fiveQiSpacing;
+            } else if (nodeId.includes('qosflow')) {
+              // QoS Flow nodes with width-aware positioning to prevent overlap
+              const parentIds = allParentsMap[nodeId] || [];
+              const parentId = parentIds[0];
               
-              const position = { x, y };
-              positionedNodes.push({ id: nodeId, position });
-              nodePositionMap[nodeId] = position;
-              // 5QI node positioned with global spacing
+              if (parentId && nodePositionMap[parentId]) {
+                const parentPos = nodePositionMap[parentId];
+                
+                // Get all QoS Flow siblings that share the same parent
+                const typedSiblings = Object.keys(allParentsMap)
+                  .filter(id => id.includes('qosflow'))
+                  .filter(qosId => {
+                    const qosParents = allParentsMap[qosId] || [];
+                    return qosParents.includes(parentId);
+                  });
+                
+                // Get parent center for proper alignment using subtree width
+                const parentCenterX = getParentCenterX(parentPos, parentId, subtreeWidths);
+                
+                if (typedSiblings.length === 1) {
+                  // Single QoS Flow child: center under parent using subtree width
+                  const nodeWidth = subtreeWidths.get(nodeId) || getNodeWidth(nodeId, 'qosflow');
+                  const x = parentCenterX - nodeWidth / 2;
+                  
+                  const position = { x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ Single QoS Flow ${nodeId} centered under parent at (${x}, ${y})`);
+                } else {
+                  // Multiple QoS Flow siblings: distribute with subtree widths
+                  const nodeIndex = typedSiblings.indexOf(nodeId);
+                  const gutter = 60;
+                  
+                  // Calculate total width needed for all siblings using subtree widths
+                  const totalSiblingWidth = typedSiblings.reduce((sum, sibId) => {
+                    return sum + (subtreeWidths.get(sibId) || getNodeWidth(sibId, 'qosflow'));
+                  }, 0);
+                  const totalGutterWidth = (typedSiblings.length - 1) * gutter;
+                  const totalWidth = totalSiblingWidth + totalGutterWidth;
+                  
+                  // Start from left edge of the group, centered under parent
+                  const startX = parentCenterX - totalWidth / 2;
+                  
+                  // Calculate cumulative position for this specific node using subtree widths
+                  let cumulativeX = startX;
+                  for (let i = 0; i < nodeIndex; i++) {
+                    cumulativeX += (subtreeWidths.get(typedSiblings[i]) || getNodeWidth(typedSiblings[i], 'qosflow')) + gutter;
+                  }
+                  
+                  const position = { x: cumulativeX, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ QoS Flow ${nodeId} positioned with subtree width spacing at (${cumulativeX}, ${y})`);
+                }
+              } else {
+                // Fallback: position using subtree width
+                const nodeWidth = subtreeWidths.get(nodeId) || getNodeWidth(nodeId, 'qosflow');
+                const x = 0 - nodeWidth / 2;
+                const position = { x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ QoS Flow ${nodeId} fallback positioned at (${x}, ${y})`);
+              }
+            } else if (isFiveQiNode && level === fiveQiLevel) {
+              // 5QI nodes with width-aware positioning  
+              const parentIds = allParentsMap[nodeId] || [];
+              const parentId = parentIds[0];
+              
+              if (parentId && nodePositionMap[parentId]) {
+                const parentPos = nodePositionMap[parentId];
+                
+                // Get all 5QI siblings that share the same parent
+                const typedSiblings = allFiveQiNodes.filter(fiveQiId => {
+                  const fiveQiParents = allParentsMap[fiveQiId] || [];
+                  return fiveQiParents.includes(parentId);
+                });
+                
+                // Get parent center for proper alignment using subtree width
+                const parentCenterX = getParentCenterX(parentPos, parentId, subtreeWidths);
+                
+                if (typedSiblings.length === 1) {
+                  // Single 5QI child: center under parent using subtree width
+                  const nodeWidth = subtreeWidths.get(nodeId) || getNodeWidth(nodeId, 'fiveqi');
+                  const x = parentCenterX - nodeWidth / 2;
+                  
+                  const position = { x, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ Single 5QI ${nodeId} centered under parent at (${x}, ${y})`);
+                } else {
+                  // Multiple 5QI siblings: distribute with subtree widths
+                  const nodeIndex = typedSiblings.indexOf(nodeId);
+                  const gutter = 60;
+                  
+                  // Calculate total width needed for all siblings using subtree widths
+                  const totalSiblingWidth = typedSiblings.reduce((sum, sibId) => {
+                    return sum + (subtreeWidths.get(sibId) || getNodeWidth(sibId, 'fiveqi'));
+                  }, 0);
+                  const totalGutterWidth = (typedSiblings.length - 1) * gutter;
+                  const totalWidth = totalSiblingWidth + totalGutterWidth;
+                  
+                  // Start from left edge of the group, centered under parent
+                  const startX = parentCenterX - totalWidth / 2;
+                  
+                  // Calculate cumulative position for this specific node using subtree widths
+                  let cumulativeX = startX;
+                  for (let i = 0; i < nodeIndex; i++) {
+                    cumulativeX += (subtreeWidths.get(typedSiblings[i]) || getNodeWidth(typedSiblings[i], 'fiveqi')) + gutter;
+                  }
+                  
+                  const position = { x: cumulativeX, y };
+                  positionedNodes.push({ id: nodeId, position });
+                  nodePositionMap[nodeId] = position;
+                  console.log(`✓ 5QI ${nodeId} positioned with subtree width spacing at (${cumulativeX}, ${y})`);
+                }
+              } else {
+                // Fallback: position using subtree width
+                const nodeWidth = subtreeWidths.get(nodeId) || getNodeWidth(nodeId, 'fiveqi');
+                const x = 0 - nodeWidth / 2;
+                const position = { x, y };
+                positionedNodes.push({ id: nodeId, position });
+                nodePositionMap[nodeId] = position;
+                console.log(`✓ 5QI ${nodeId} fallback positioned at (${x}, ${y})`);
+              }
+              // 5QI node positioned with subtree width spacing
             } else {
               // Check for RRP-member nodes first (both single and multiple)
               const isRrpMember = nodeId.includes('rrpmember');
