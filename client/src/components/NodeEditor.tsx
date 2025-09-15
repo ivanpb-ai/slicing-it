@@ -135,7 +135,20 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     }
   }, [edges, nodes.length, hookEdges.length, hookSetEdges]);
   
+  // Listen for canvas-cleared event to force clear hook state
+  useEffect(() => {
+    const handleCanvasClearedEvent = () => {
+      console.log('NodeEditor: Canvas-cleared event received, forcing hook state clear');
+      hookSetNodes([]);
+      hookSetEdges([]);
+    };
 
+    window.addEventListener('canvas-cleared', handleCanvasClearedEvent);
+    
+    return () => {
+      window.removeEventListener('canvas-cleared', handleCanvasClearedEvent);
+    };
+  }, [hookSetNodes, hookSetEdges]);
 
   // Create custom clear and initialize functions that use the correct state setters
   const handleClearCanvas = useCallback(() => {

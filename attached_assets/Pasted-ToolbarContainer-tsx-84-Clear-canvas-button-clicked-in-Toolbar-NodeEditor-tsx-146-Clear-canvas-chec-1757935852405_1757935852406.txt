@@ -1,0 +1,49 @@
+ToolbarContainer.tsx:84 Clear canvas button clicked in Toolbar
+NodeEditor.tsx:146 Clear canvas check - current nodes: 19 current edges: 18
+idCounters.ts:140 Resetting all ID counters to 1
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757935760814-1908', nodeId: 'fiveqi-1757935785916-3563', fiveQIId: '8', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757935760814-1908', nodeId: 'fiveqi-1757935785916-3563', fiveQIId: '8', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757935767031-5688', nodeId: 'fiveqi-1757935789866-4697', fiveQIId: '8', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757935767031-5688', nodeId: 'fiveqi-1757935789866-4697', fiveQIId: '8', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 8
+fiveQIUtils.ts:24 Looking up 5QI with ID: "8"
+fiveQIUtils.ts:33 Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757935763158-5237', nodeId: 'fiveqi-1757935792789-6273', fiveQIId: '9', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757935763158-5237', nodeId: 'fiveqi-1757935792789-6273', fiveQIId: '9', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 9
+fiveQIUtils.ts:24 Looking up 5QI with ID: "9"
+fiveQIUtils.ts:33 Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757935776706-7640', nodeId: 'fiveqi-1757935795396-7953', fiveQIId: '90', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 90
+fiveQIUtils.ts:24 Looking up 5QI with ID: "90"
+fiveQIUtils.ts:33 Found matching 5QI for ID "90": {value: '90', resourceType: 'GBR', priority: '8', packetDelay: '10 ms', service: 'High Performance Motion Control'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '90', resourceType: 'GBR', priority: '8', packetDelay: '10 ms', service: 'High Performance Motion Control'}
+FiveQiNode.tsx:28 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757935776706-7640', nodeId: 'fiveqi-1757935795396-7953', fiveQIId: '90', …}
+FiveQiNode.tsx:29 5QI Node fiveQIId: 90
+fiveQIUtils.ts:24 Looking up 5QI with ID: "90"
+fiveQIUtils.ts:33 Found matching 5QI for ID "90": {value: '90', resourceType: 'GBR', priority: '8', packetDelay: '10 ms', service: 'High Performance Motion Control'}
+FiveQiNode.tsx:95 Final QoS values for rendering: {value: '90', resourceType: 'GBR', priority: '8', packetDelay: '10 ms', service: 'High Performance Motion Control'}
+NodeEditor.tsx:121 ✅ NodeEditor: NODE PRESERVATION - nodes: 0, hookNodes: 19 (no auto-clear)
+NodeEditor.tsx:134 ✅ NodeEditor: EDGE PRESERVATION - edges: 0, hookEdges: 18 (no auto-clear)
+Index.tsx:160 MainContentWithGraphOperations: edges updated 0
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 0 edges
+Index.tsx:45 Index component: nodes state updated, count: 0
+Index.tsx:74 Index component: edges state updated, count: 0
