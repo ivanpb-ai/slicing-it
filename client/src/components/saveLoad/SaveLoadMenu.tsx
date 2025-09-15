@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Dialog } from '@/components/ui/dialog';
 import { SaveIcon, FolderOpenIcon, DownloadIcon, UploadIcon } from 'lucide-react';
+import { useReactFlow } from '@xyflow/react';
 import MenuButton from './MenuButton';
 import StarIcon from './StarIcon';
 import SaveLoadDialog from './SaveLoadDialog';
@@ -29,6 +30,7 @@ const SaveLoadMenu: React.FC<SaveLoadMenuProps> = ({
   getSavedGraphs,
   onLoadGraphFromStorage
 }) => {
+  const { zoomIn, zoomOut, fitView } = useReactFlow();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogMode, setDialogMode] = useState<'save' | 'load'>('save');
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -91,6 +93,31 @@ const SaveLoadMenu: React.FC<SaveLoadMenuProps> = ({
         onImport={handleFileSelected}
         inputRef={fileInputRef}
       />
+      
+      {/* Zoom Controls */}
+      <div className="border-t border-gray-200 pt-2 mt-2">
+        <button
+          onClick={() => zoomIn()}
+          className="w-10 h-8 mb-1 flex items-center justify-center bg-white hover:bg-gray-100 border border-gray-300 rounded text-gray-700 transition-colors text-sm font-medium"
+          title="Zoom In"
+        >
+          +
+        </button>
+        <button
+          onClick={() => zoomOut()}
+          className="w-10 h-8 mb-1 flex items-center justify-center bg-white hover:bg-gray-100 border border-gray-300 rounded text-gray-700 transition-colors text-sm font-medium"
+          title="Zoom Out"
+        >
+          −
+        </button>
+        <button
+          onClick={() => fitView({ padding: 0.1, duration: 500 })}
+          className="w-10 h-8 flex items-center justify-center bg-white hover:bg-gray-100 border border-gray-300 rounded text-gray-700 transition-colors text-xs font-medium"
+          title="Fit View"
+        >
+          ⌂
+        </button>
+      </div>
     </div>
   );
 };
