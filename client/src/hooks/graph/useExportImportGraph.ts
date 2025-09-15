@@ -37,8 +37,8 @@ export const useExportImportGraph = (
         
         if (flowNodes.length > 0) {
           // Export from ReactFlow instance - this includes ALL nodes regardless of type
-          const reactFlowTypeCounts = flowNodes.reduce((acc, node) => {
-            const type = node.data?.type;
+          const reactFlowTypeCounts = flowNodes.reduce((acc: Record<string, number>, node) => {
+            const type = node.data?.type || 'unknown';
             acc[type] = (acc[type] || 0) + 1;
             return acc;
           }, {});
@@ -77,8 +77,9 @@ export const useExportImportGraph = (
         console.log('🔍 useExportImportGraph.ts: Props state node types EXPANDED:', nodeTypes);
         
         // Count each node type in props state
-        const typeCounts = nodeTypes.reduce((acc, { type }) => {
-          acc[type] = (acc[type] || 0) + 1;
+        const typeCounts = nodeTypes.reduce((acc: Record<string, number>, { type }) => {
+          const nodeType = type || 'unknown';
+          acc[nodeType] = (acc[nodeType] || 0) + 1;
           return acc;
         }, {});
         console.log('🔍 useExportImportGraph.ts: Props state type counts:', typeCounts);
@@ -92,8 +93,9 @@ export const useExportImportGraph = (
         if (reactFlowInstance) {
           const flowNodes = reactFlowInstance.getNodes();
           const flowNodeTypes = flowNodes.map(node => ({ id: node.id, type: node.data?.type }));
-          const flowTypeCounts = flowNodeTypes.reduce((acc, { type }) => {
-            acc[type] = (acc[type] || 0) + 1;
+          const flowTypeCounts = flowNodeTypes.reduce((acc: Record<string, number>, { type }) => {
+            const nodeType = type || 'unknown';
+            acc[nodeType] = (acc[nodeType] || 0) + 1;
             return acc;
           }, {});
           console.log('🔍 useExportImportGraph.ts: ReactFlow instance type counts:', flowTypeCounts);
@@ -544,72 +546,50 @@ export const useExportImportGraph = (
             reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
           }
           
-          // Set the imported nodes and edges with a delay
+          // Process nodes and edges immediately
+          console.log('Setting imported nodes:', parsedData.nodes.length);
+          
+          // Ensure all nodes have the correct type set for our CustomNode component
+          const processedNodes = parsedData.nodes.map((node: Node) => ({
+            ...node,
+            type: 'customNode', // ReactFlow type for component lookup
+            data: {
+              ...node.data,
+              // Preserve data.type which StandardNodeWrapper uses to render specific nodes
+              type: node.data?.type || 'generic'
+            }
+          }));
+          
+          console.log('Processed nodes with types:', processedNodes.map((n: Node) => ({ id: n.id, type: n.type, dataType: n.data?.type })));
+          
+          // Filter out any duplicate edges by ID to prevent spurious connections
+          const uniqueEdges = parsedData.edges.filter((edge: any, index: number, arr: any[]) => 
+            arr.findIndex((e: any) => e.id === edge.id) === index
+          );
+          
+          console.log('Setting imported edges:', uniqueEdges.length);
+          
+          // Set nodes and edges in React state
+          setNodes(processedNodes);
+          setEdges(uniqueEdges);
+          
+          // Fit viewport to imported graph after a short delay for rendering
           setTimeout(() => {
-            console.log('Setting imported nodes:', parsedData.nodes.length);
+            if (reactFlowInstance && processedNodes.length > 0) {
+              console.log('Auto-fitting viewport for imported graph');
+              reactFlowInstance.fitView({ 
+                padding: 0.15,
+                includeHiddenNodes: true,
+                minZoom: 0.1,
+                maxZoom: 1.2,
+                duration: 800
+              });
+            }
             
-            // Ensure all nodes have the correct type set for our CustomNode component
-            // but preserve the original data.type which determines the specific node component
-            const processedNodes = parsedData.nodes.map((node: Node) => ({
-              ...node,
-              type: 'customNode', // ReactFlow type for component lookup
-              data: {
-                ...node.data,
-                // Preserve data.type which StandardNodeWrapper uses to render specific nodes
-                type: node.data?.type || 'generic'
-              }
-            }));
-            
-            console.log('Processed nodes with types:', processedNodes.map(n => ({ id: n.id, type: n.type, dataType: n.data?.type })));
-            
-            // Set nodes in React state - ReactFlow will sync automatically
-            console.log('Setting nodes in React state');
-            console.log('ReactFlow instance available:', !!reactFlowInstance);
-            setNodes(processedNodes);
-            
-            // Wait longer for nodes to fully render before setting edges
-            setTimeout(() => {
-              console.log('Setting imported edges:', parsedData.edges.length);
-              
-              // Use only the imported edges - no auto-generation to prevent spurious edges
-              console.log('Using imported edges without auto-generation to prevent spurious connections');
-              console.log('Original imported edges count:', parsedData.edges.length);
-              
-              // Filter out any duplicate edges by ID to prevent spurious connections
-              const uniqueEdges = parsedData.edges.filter((edge: any, index: number, arr: any[]) => 
-                arr.findIndex((e: any) => e.id === edge.id) === index
-              );
-              
-              console.log('Filtered edges count after duplicate removal:', uniqueEdges.length);
-              setEdges(uniqueEdges);
-            }, 300);
-            
-            // Dispatch event after setting edges
-            setTimeout(() => {
-              console.log('Dispatching graph-loaded event after import');
-              window.dispatchEvent(new CustomEvent('graph-loaded'));
-              
-              // Wait for state to propagate, then fit view
-              if (reactFlowInstance) {
-                setTimeout(() => {
-                  console.log('Fitting view for imported graph...');
-                  
-                  // Reset viewport first  
-                  reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 0.5 });
-                  
-                  setTimeout(() => {
-                    reactFlowInstance.fitView({ 
-                      padding: 0.1,
-                      includeHiddenNodes: true,
-                      minZoom: 0.1,
-                      maxZoom: 1.5,
-                      duration: 1000
-                    });
-                  }, 300);
-                }, 1000);
-              }
-            }, 500);
-          }, 100);
+            // Dispatch graph-loaded event
+            console.log('Dispatching graph-loaded event after import');
+            window.dispatchEvent(new CustomEvent('graph-loaded'));
+          }, 500);
           
           // Show import success toast with proper styling
           toast.success(`Graph imported successfully with ${parsedData.nodes.length} nodes and ${parsedData.edges.length} edges`, {
