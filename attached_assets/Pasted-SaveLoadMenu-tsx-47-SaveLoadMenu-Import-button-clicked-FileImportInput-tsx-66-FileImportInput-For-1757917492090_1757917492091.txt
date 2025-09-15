@@ -1,0 +1,379 @@
+SaveLoadMenu.tsx:47 SaveLoadMenu: Import button clicked
+FileImportInput.tsx:66 FileImportInput: Force reset input before dialog
+FileImportInput.tsx:70 FileImportInput: Input reset completed
+FileImportInput.tsx:33 FileImportInput: Processing file: test2_1757862379437.json, type: application/json, size: 63204
+SaveLoadMenu.tsx:60 SaveLoadMenu: File selected for import: test2_1757862379437.json, size: 63204 bytes
+NodeEditor.tsx:422 NodeEditor: Import handler called with file: test2_1757862379437.json - delegating to parent import function
+MainContent.tsx:63 MainContent: Import triggered for test2_1757862379437.json
+NodeEditor.tsx:427 NodeEditor: Successfully delegated import to parent function
+FileImportInput.tsx:44 FileImportInput: Successfully called onImport handler
+idCounters.ts:140 Resetting all ID counters to 1
+idCounters.ts:50 Updating ID counters based on nodes: 66
+idCounters.ts:60 Updated DNN counter to: 14
+idCounters.ts:71 Updated S-NSSAI counter to: 9
+idCounters.ts:82 Updated RRP counter to: 5
+idCounters.ts:93 Updated QoS Flow counter to: 17
+idCounters.ts:130 Updated Cell Area counter to: 3 (highest ID found: 2)
+useExportImportGraph.ts:537 Clearing existing graph before import
+useExportImportGraph.ts:540 Clearing state before import
+useExportImportGraph.ts:550 Setting imported nodes: 66
+useExportImportGraph.ts:563 Processed nodes with types: (66) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+useExportImportGraph.ts:570 Setting imported edges: 65
+NodeEditor.tsx:117 🔄 NodeEditor: Syncing IMPORT - nodes: 66 -> hookNodes: 0
+NodeEditor.tsx:130 🔄 NodeEditor: Syncing IMPORT - edges: 65 -> hookEdges: 0
+Index.tsx:160 MainContentWithGraphOperations: edges updated 65
+Index.tsx:167 MainContentWithGraphOperations: Updated global debug edges with 65 edges
+Index.tsx:45 Index component: nodes state updated, count: 66
+Index.tsx:47 Index component: First node: {"id":"network-1757858451331-3378","type":"customNode","position":{"x":3493.5,"y":250},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1757858451331-3378"},"measured":{"width":170,"height":129}}
+Index.tsx:74 Index component: edges state updated, count: 65
+Index.tsx:76 Index component: First edge: {"id":"unified-network-1757858451331-3378-cell-area-1","source":"network-1757858451331-3378","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12},"data":{"createdBy":"auto"}}
+Index.tsx:82 Index: Updated __DEBUG_NODE_EDITOR_EDGES with 65 edges
+FlowInstance.tsx:80 FlowInstance: Rendering with 66 nodes, 65 edges
+NodeEditor.tsx:121 ✅ NodeEditor: NODE PRESERVATION - nodes: 66, hookNodes: 66 (no auto-clear)
+NodeEditor.tsx:134 ✅ NodeEditor: EDGE PRESERVATION - edges: 65, hookEdges: 65 (no auto-clear)
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858595228-6114', nodeId: 'fiveqi-1757858617383-2635', fiveQIId: '6', …}
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858595228-6114', nodeId: 'fiveqi-1757858617383-2635', fiveQIId: '6', …}
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858597524-2446', nodeId: 'fiveqi-1757858620619-2850', fiveQIId: '6', …}
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858597524-2446', nodeId: 'fiveqi-1757858620619-2850', fiveQIId: '6', …}
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '6', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858600301-5440', nodeId: 'fiveqi-1757858623539-5861', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858600301-5440', nodeId: 'fiveqi-1757858623539-5861', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858603595-6628', nodeId: 'fiveqi-1757858632642-6332', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858603595-6628', nodeId: 'fiveqi-1757858632642-6332', fiveQIId: '8', …}
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '8', resourceType: 'Non-GBR', priority: '80', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858605759-76', nodeId: 'fiveqi-1757858635000-576', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858605759-76', nodeId: 'fiveqi-1757858635000-576', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858608777-869', nodeId: 'fiveqi-1757858638226-4239', fiveQIId: '10', …}
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ Final QoS values for rendering: {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858608777-869', nodeId: 'fiveqi-1757858638226-4239', fiveQIId: '10', …}
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ Final QoS values for rendering: {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858663580-7440', nodeId: 'fiveqi-1757858677691-3707', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858663580-7440', nodeId: 'fiveqi-1757858677691-3707', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858587172-9914', nodeId: 'fiveqi-1757861296821-4460', fiveQIId: '2', …}
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": {value: '2', resourceType: 'GBR', priority: '40', packetDelay: '150 ms', service: 'Conversational Video (Live Streaming)'}
+ Final QoS values for rendering: {value: '2', resourceType: 'GBR', priority: '40', packetDelay: '150 ms', service: 'Conversational Video (Live Streaming)'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858587172-9914', nodeId: 'fiveqi-1757861296821-4460', fiveQIId: '2', …}
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": {value: '2', resourceType: 'GBR', priority: '40', packetDelay: '150 ms', service: 'Conversational Video (Live Streaming)'}
+ Final QoS values for rendering: {value: '2', resourceType: 'GBR', priority: '40', packetDelay: '150 ms', service: 'Conversational Video (Live Streaming)'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858589329-8116', nodeId: 'fiveqi-1757861299208-598', fiveQIId: '4', …}
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ Final QoS values for rendering: {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858589329-8116', nodeId: 'fiveqi-1757861299208-598', fiveQIId: '4', …}
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ Final QoS values for rendering: {value: '4', resourceType: 'GBR', priority: '50', packetDelay: '300 ms', service: 'Non-Conversational Video (Buffered Streaming)'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858592987-5228', nodeId: 'fiveqi-1757861302126-4692', fiveQIId: '59', …}
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": {value: '59', resourceType: 'GBR', priority: '54', packetDelay: '50 ms', service: 'Live Video (non-mission critical)'}
+ Final QoS values for rendering: {value: '59', resourceType: 'GBR', priority: '54', packetDelay: '50 ms', service: 'Live Video (non-mission critical)'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858592987-5228', nodeId: 'fiveqi-1757861302126-4692', fiveQIId: '59', …}
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": {value: '59', resourceType: 'GBR', priority: '54', packetDelay: '50 ms', service: 'Live Video (non-mission critical)'}
+ Final QoS values for rendering: {value: '59', resourceType: 'GBR', priority: '54', packetDelay: '50 ms', service: 'Live Video (non-mission critical)'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757862331901-9188', nodeId: 'fiveqi-1757862341307-8536', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757862331901-9188', nodeId: 'fiveqi-1757862341307-8536', fiveQIId: '7', …}
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ Final QoS values for rendering: {value: '7', resourceType: 'Non-GBR', priority: '70', packetDelay: '100 ms', service: 'Voice, Video (Live Streaming), Interactive Gaming'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757862327511-4109', nodeId: 'fiveqi-1757862344583-3964', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757862327511-4109', nodeId: 'fiveqi-1757862344583-3964', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757862325080-835', nodeId: 'fiveqi-1757862347115-7181', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757862325080-835', nodeId: 'fiveqi-1757862347115-7181', fiveQIId: '9', …}
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ Final QoS values for rendering: {value: '9', resourceType: 'Non-GBR', priority: '90', packetDelay: '300 ms', service: 'Video (Buffered Streaming), TCP-based services'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858579871-1146', nodeId: 'fiveqi-1757862352488-3734', fiveQIId: '10', …}
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ Final QoS values for rendering: {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858579871-1146', nodeId: 'fiveqi-1757862352488-3734', fiveQIId: '10', …}
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ Final QoS values for rendering: {value: '10', resourceType: 'Non-GBR', priority: '60', packetDelay: '300 ms', service: 'Non-Mission Critical User Plane Push To Talk voice'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858583382-5485', nodeId: 'fiveqi-1757862355235-4166', fiveQIId: '11', …}
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858583382-5485', nodeId: 'fiveqi-1757862355235-4166', fiveQIId: '11', …}
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '11', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858585268-8813', nodeId: 'fiveqi-1757862359822-3087', fiveQIId: '12', …}
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ 5QI Node rendering with data: {type: 'fiveqi', label: 'FIVEQI Node', parentId: 'qosflow-1757858585268-8813', nodeId: 'fiveqi-1757862359822-3087', fiveQIId: '12', …}
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ Final QoS values for rendering: {value: '12', resourceType: 'Non-GBR', priority: '85', packetDelay: '300 ms', service: 'Low Latency/Low Loss Internet Streaming and Website Access'}
+ StandardNodeWrapper: id=network-1757858451331-3378, type=network, nodeNumber=3378
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+ StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+ StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+ StandardNodeWrapper: id=rrp-4, type=rrp, nodeNumber=4
+ StandardNodeWrapper: id=rrpmember-1757858473740-1839, type=rrpmember, nodeNumber=1839
+ StandardNodeWrapper: id=rrpmember-1757858476086-6889, type=rrpmember, nodeNumber=6889
+ StandardNodeWrapper: id=rrpmember-1757858477972-3929, type=rrpmember, nodeNumber=3929
+ StandardNodeWrapper: id=rrpmember-1757858480376-1389, type=rrpmember, nodeNumber=1389
+ StandardNodeWrapper: id=rrpmember-1757858482553-3455, type=rrpmember, nodeNumber=3455
+ StandardNodeWrapper: id=rrpmember-1757858485325-4205, type=rrpmember, nodeNumber=4205
+ StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+ StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+ StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+ StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+ StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}
+ StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-4'}
+ StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-5'}
+ StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-6'}
+ StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-7'}
+ StandardNodeWrapper: id=dnn-7, type=dnn, nodeNumber=7
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-8'}
+ StandardNodeWrapper: id=dnn-8, type=dnn, nodeNumber=8
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-9'}
+ StandardNodeWrapper: id=dnn-9, type=dnn, nodeNumber=9
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-10'}
+ StandardNodeWrapper: id=dnn-10, type=dnn, nodeNumber=10
+ StandardNodeWrapper: id=s-nssai-7, type=s-nssai, nodeNumber=7
+ StandardNodeWrapper: id=s-nssai-8, type=s-nssai, nodeNumber=8
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-11'}
+ StandardNodeWrapper: id=dnn-11, type=dnn, nodeNumber=11
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-12'}
+ StandardNodeWrapper: id=dnn-12, type=dnn, nodeNumber=12
+ StandardNodeWrapper: id=qosflow-1757858579871-1146, type=qosflow, nodeNumber=1146
+ StandardNodeWrapper: id=qosflow-1757858583382-5485, type=qosflow, nodeNumber=5485
+ StandardNodeWrapper: id=qosflow-1757858585268-8813, type=qosflow, nodeNumber=8813
+ StandardNodeWrapper: id=qosflow-1757858587172-9914, type=qosflow, nodeNumber=9914
+ StandardNodeWrapper: id=qosflow-1757858589329-8116, type=qosflow, nodeNumber=8116
+ StandardNodeWrapper: id=qosflow-1757858592987-5228, type=qosflow, nodeNumber=5228
+ StandardNodeWrapper: id=qosflow-1757858595228-6114, type=qosflow, nodeNumber=6114
+ StandardNodeWrapper: id=qosflow-1757858597524-2446, type=qosflow, nodeNumber=2446
+ StandardNodeWrapper: id=qosflow-1757858600301-5440, type=qosflow, nodeNumber=5440
+ StandardNodeWrapper: id=qosflow-1757858603595-6628, type=qosflow, nodeNumber=6628
+ StandardNodeWrapper: id=qosflow-1757858605759-76, type=qosflow, nodeNumber=76
+ StandardNodeWrapper: id=qosflow-1757858608777-869, type=qosflow, nodeNumber=869
+ StandardNodeWrapper: id=fiveqi-1757858617383-2635, type=fiveqi, nodeNumber=2635
+ StandardNodeWrapper: id=fiveqi-1757858620619-2850, type=fiveqi, nodeNumber=2850
+ StandardNodeWrapper: id=fiveqi-1757858623539-5861, type=fiveqi, nodeNumber=5861
+ StandardNodeWrapper: id=fiveqi-1757858632642-6332, type=fiveqi, nodeNumber=6332
+ StandardNodeWrapper: id=fiveqi-1757858635000-576, type=fiveqi, nodeNumber=576
+ StandardNodeWrapper: id=fiveqi-1757858638226-4239, type=fiveqi, nodeNumber=4239
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-13'}
+ StandardNodeWrapper: id=dnn-13, type=dnn, nodeNumber=13
+ StandardNodeWrapper: id=qosflow-1757858663580-7440, type=qosflow, nodeNumber=7440
+ StandardNodeWrapper: id=fiveqi-1757858677691-3707, type=fiveqi, nodeNumber=3707
+ StandardNodeWrapper: id=fiveqi-1757861296821-4460, type=fiveqi, nodeNumber=4460
+ StandardNodeWrapper: id=fiveqi-1757861299208-598, type=fiveqi, nodeNumber=598
+ StandardNodeWrapper: id=fiveqi-1757861302126-4692, type=fiveqi, nodeNumber=4692
+ StandardNodeWrapper: id=qosflow-1757862325080-835, type=qosflow, nodeNumber=835
+ StandardNodeWrapper: id=qosflow-1757862327511-4109, type=qosflow, nodeNumber=4109
+ StandardNodeWrapper: id=qosflow-1757862331901-9188, type=qosflow, nodeNumber=9188
+ StandardNodeWrapper: id=fiveqi-1757862341307-8536, type=fiveqi, nodeNumber=8536
+ StandardNodeWrapper: id=fiveqi-1757862344583-3964, type=fiveqi, nodeNumber=3964
+ StandardNodeWrapper: id=fiveqi-1757862347115-7181, type=fiveqi, nodeNumber=7181
+ StandardNodeWrapper: id=fiveqi-1757862352488-3734, type=fiveqi, nodeNumber=3734
+ StandardNodeWrapper: id=fiveqi-1757862355235-4166, type=fiveqi, nodeNumber=4166
+ StandardNodeWrapper: id=fiveqi-1757862359822-3087, type=fiveqi, nodeNumber=3087
+ StandardNodeWrapper: id=network-1757858451331-3378, type=network, nodeNumber=3378
+ StandardNodeWrapper: id=cell-area-1, type=cell-area, nodeNumber=1
+ StandardNodeWrapper: id=cell-area-2, type=cell-area, nodeNumber=2
+ StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+ StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+ StandardNodeWrapper: id=rrp-3, type=rrp, nodeNumber=3
+ StandardNodeWrapper: id=rrp-4, type=rrp, nodeNumber=4
+ StandardNodeWrapper: id=rrpmember-1757858473740-1839, type=rrpmember, nodeNumber=1839
+ StandardNodeWrapper: id=rrpmember-1757858476086-6889, type=rrpmember, nodeNumber=6889
+ StandardNodeWrapper: id=rrpmember-1757858477972-3929, type=rrpmember, nodeNumber=3929
+ StandardNodeWrapper: id=rrpmember-1757858480376-1389, type=rrpmember, nodeNumber=1389
+ StandardNodeWrapper: id=rrpmember-1757858482553-3455, type=rrpmember, nodeNumber=3455
+ StandardNodeWrapper: id=rrpmember-1757858485325-4205, type=rrpmember, nodeNumber=4205
+ StandardNodeWrapper: id=s-nssai-1, type=s-nssai, nodeNumber=1
+ StandardNodeWrapper: id=s-nssai-2, type=s-nssai, nodeNumber=2
+ StandardNodeWrapper: id=s-nssai-3, type=s-nssai, nodeNumber=3
+ StandardNodeWrapper: id=s-nssai-4, type=s-nssai, nodeNumber=4
+ StandardNodeWrapper: id=s-nssai-5, type=s-nssai, nodeNumber=5
+ StandardNodeWrapper: id=s-nssai-6, type=s-nssai, nodeNumber=6
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-1'}
+ StandardNodeWrapper: id=dnn-1, type=dnn, nodeNumber=1
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-2'}
+ StandardNodeWrapper: id=dnn-2, type=dnn, nodeNumber=2
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-3'}
+ StandardNodeWrapper: id=dnn-3, type=dnn, nodeNumber=3
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-4'}
+ StandardNodeWrapper: id=dnn-4, type=dnn, nodeNumber=4
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-5'}
+ StandardNodeWrapper: id=dnn-5, type=dnn, nodeNumber=5
+ DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+ DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-6'}
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=dnn-6, type=dnn, nodeNumber=6
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-7'}
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=dnn-7, type=dnn, nodeNumber=7
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-8'}
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=dnn-8, type=dnn, nodeNumber=8
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-9'}
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=dnn-9, type=dnn, nodeNumber=9
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-10'}
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=dnn-10, type=dnn, nodeNumber=10
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=s-nssai-7, type=s-nssai, nodeNumber=7
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=s-nssai-8, type=s-nssai, nodeNumber=8
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-11'}
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=dnn-11, type=dnn, nodeNumber=11
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-12'}
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=dnn-12, type=dnn, nodeNumber=12
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858579871-1146, type=qosflow, nodeNumber=1146
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858583382-5485, type=qosflow, nodeNumber=5485
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858585268-8813, type=qosflow, nodeNumber=8813
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858587172-9914, type=qosflow, nodeNumber=9914
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858589329-8116, type=qosflow, nodeNumber=8116
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858592987-5228, type=qosflow, nodeNumber=5228
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858595228-6114, type=qosflow, nodeNumber=6114
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858597524-2446, type=qosflow, nodeNumber=2446
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858600301-5440, type=qosflow, nodeNumber=5440
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858603595-6628, type=qosflow, nodeNumber=6628
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858605759-76, type=qosflow, nodeNumber=76
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858608777-869, type=qosflow, nodeNumber=869
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757858617383-2635, type=fiveqi, nodeNumber=2635
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757858620619-2850, type=fiveqi, nodeNumber=2850
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757858623539-5861, type=fiveqi, nodeNumber=5861
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757858632642-6332, type=fiveqi, nodeNumber=6332
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757858635000-576, type=fiveqi, nodeNumber=576
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757858638226-4239, type=fiveqi, nodeNumber=4239
+DnnNode.tsx:21 DNN useEffect dnnCustomName: {dataDnnCustomName: undefined, prevName: undefined, currentLocalState: ''}
+DnnNode.tsx:35 DNN useEffect data object changed: {dnnCustomName: undefined, currentCustomName: '', nodeId: 'dnn-13'}
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=dnn-13, type=dnn, nodeNumber=13
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757858663580-7440, type=qosflow, nodeNumber=7440
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757858677691-3707, type=fiveqi, nodeNumber=3707
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757861296821-4460, type=fiveqi, nodeNumber=4460
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757861299208-598, type=fiveqi, nodeNumber=598
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757861302126-4692, type=fiveqi, nodeNumber=4692
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757862325080-835, type=qosflow, nodeNumber=835
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757862327511-4109, type=qosflow, nodeNumber=4109
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=qosflow-1757862331901-9188, type=qosflow, nodeNumber=9188
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757862341307-8536, type=fiveqi, nodeNumber=8536
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757862344583-3964, type=fiveqi, nodeNumber=3964
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757862347115-7181, type=fiveqi, nodeNumber=7181
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757862352488-3734, type=fiveqi, nodeNumber=3734
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757862355235-4166, type=fiveqi, nodeNumber=4166
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=fiveqi-1757862359822-3087, type=fiveqi, nodeNumber=3087
+useExportImportGraph.ts:579 Auto-fitting viewport for imported graph
+useExportImportGraph.ts:590 Dispatching graph-loaded event after import
