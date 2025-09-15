@@ -7,6 +7,7 @@ import { useSimpleChildNodeCreation } from './node/useSimpleChildNodeCreation';
 import { useUnifiedEdgeManager } from './edge/useUnifiedEdgeManager';
 import { useNodeSelection } from './node/useNodeSelection';
 import { useNodeDuplication } from './node/useNodeDuplication';
+import { useNodeLayoutManager } from './node/useNodeLayoutManager';
 import { resetCounters} from '../utils/flowData/idCounters';
 import { cleanupOrphanedEdges } from '../utils/edgeCleanup';
 import { validateUniversalGuardrails } from '../utils/edgeGuardrails';
@@ -22,7 +23,8 @@ export const useNodeEditor = () => {
   // Node creation hooks
   const { createNode } = useNodeCreation(setNodes);
   const { addEdgeWithHandles } = useUnifiedEdgeManager(setEdges, nodes);
-  const { createChildNode } = useSimpleChildNodeCreation(setNodes, addEdgeWithHandles);
+  const { arrangeNodesInLayout } = useNodeLayoutManager(nodes, edges, setNodes, setEdges);
+  const { createChildNode } = useSimpleChildNodeCreation(setNodes, addEdgeWithHandles, arrangeNodesInLayout);
   
   // Selection and duplication hooks
   const { selectedElements, handleSelectionChange } = useNodeSelection();
