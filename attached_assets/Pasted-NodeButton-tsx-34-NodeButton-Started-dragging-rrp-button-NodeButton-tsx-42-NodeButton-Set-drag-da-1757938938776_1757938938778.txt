@@ -1,0 +1,74 @@
+NodeButton.tsx:34 NodeButton: Started dragging rrp button
+NodeButton.tsx:42 NodeButton: Set drag data to: rrp
+useNodeDragDrop.ts:32 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:41 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:63 useNodeDragDrop: Drop event received with data: "rrp" at position: {x: 588, y: 91.66666412353516}
+useDragDataParser.ts:3 parseDragData: Processing drag data: rrp
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: rrp
+useNodeDragDrop.ts:79 useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+useNodeDragDrop.ts:94 useNodeDragDrop: Adjusted position to prevent overlap: {x: 888, y: 91.66666412353516}
+useNodeDragDrop.ts:99 useNodeDragDrop: Elements at drop point: 15
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 15
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: cell-area-1
+useNodeDragDrop.ts:108 useNodeDragDrop: Detected parent: cell-area-1
+useNodeRelationships.ts:35 Validating relationship: cell-area -> rrp
+useNodeRelationships.ts:65 Valid relationship confirmed: cell-area -> rrp
+useNodeDragDrop.ts:121 useNodeDragDrop: Creating child rrp node under parent cell-area-1
+useNodeDragDrop.ts:124 useNodeDragDrop: Parent node found: cell-area
+useNodeDragDrop.ts:235 useNodeDragDrop: Child position calculated: {x: 229, y: 212.66666412353516}
+idCounters.ts:43 Generated new RRP ID: 1
+useSimpleChildNodeCreation.ts:54 Creating RRP with ID: 1
+useSimpleChildNodeCreation.ts:79 Creating child rrp node with ID: rrp-1 under parent: cell-area-1
+useNodeDragDrop.ts:247 🎯 useNodeDragDrop: NOT triggering layout for rrp - parent position preserved
+useSimpleChildNodeCreation.ts:122 ✅ Creating RRP node positioned below TAC parent: {x: 509, y: 312.66666412353516}
+useSimpleChildNodeCreation.ts:122 ✅ Creating RRP node positioned below TAC parent: {x: 509, y: 312.66666412353516}
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 0 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'cell-area-1', type: 'customNode', position: {…}, data: {…}, measured: {…}}
+NodeEditor.tsx:121 ✅ NodeEditor: NODE PRESERVATION - nodes: 0, hookNodes: 2 (no auto-clear)
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=rrp-1, type=rrp, nodeNumber=1
+useSimpleChildNodeCreation.ts:192 useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-1
+useUnifiedEdgeManager.ts:22 UnifiedEdgeManager: Creating edge unified-cell-area-1-rrp-1 (auto)
+useUnifiedEdgeManager.ts:58 UnifiedEdgeManager: Adding edge to state: {id: 'unified-cell-area-1-rrp-1', source: 'cell-area-1', target: 'rrp-1', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:112 UnifiedEdgeManager: Total edges after addition: 1
+FlowInstance.tsx:83 FlowInstance: Rendering with 2 nodes, 1 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'cell-area-1', type: 'customNode', position: {…}, data: {…}, measured: {…}}
+NodeEditor.tsx:134 ✅ NodeEditor: EDGE PRESERVATION - edges: 0, hookEdges: 1 (no auto-clear)
+NodeButton.tsx:34 NodeButton: Started dragging rrp button
+NodeButton.tsx:42 NodeButton: Set drag data to: rrp
+useNodeDragDrop.ts:32 useNodeDragDrop: Drag started
+useNodeDragDrop.ts:41 useNodeDragDrop: Drop event triggered
+useNodeDragDrop.ts:63 useNodeDragDrop: Drop event received with data: "rrp" at position: {x: 589, y: 101.66666412353516}
+useDragDataParser.ts:3 parseDragData: Processing drag data: rrp
+useDragDataParser.ts:17 parseDragData: Not JSON format, trying string parsing
+useDragDataParser.ts:46 parseDragData: Using simple node type: rrp
+useNodeDragDrop.ts:79 useNodeDragDrop: Parsed drag data: nodeType="rrp", fiveQIId="undefined"
+useNodeDragDrop.ts:94 useNodeDragDrop: Adjusted position to prevent overlap: {x: 889, y: 101.66666412353516}
+useNodeDragDrop.ts:99 useNodeDragDrop: Elements at drop point: 14
+useParentNodeDetection.ts:9 detectParentNodeFromDOM: Checking elements at point: 14
+useParentNodeDetection.ts:28 detectParentNodeFromDOM: Found parent node container with ID: cell-area-1
+useNodeDragDrop.ts:108 useNodeDragDrop: Detected parent: cell-area-1
+useNodeRelationships.ts:35 Validating relationship: cell-area -> rrp
+useNodeRelationships.ts:65 Valid relationship confirmed: cell-area -> rrp
+useNodeDragDrop.ts:121 useNodeDragDrop: Creating child rrp node under parent cell-area-1
+useNodeDragDrop.ts:124 useNodeDragDrop: Parent node found: cell-area
+useNodeDragDrop.ts:235 useNodeDragDrop: Child position calculated: {x: 229, y: 212.66666412353516}
+idCounters.ts:43 Generated new RRP ID: 2
+useSimpleChildNodeCreation.ts:54 Creating RRP with ID: 2
+useSimpleChildNodeCreation.ts:79 Creating child rrp node with ID: rrp-2 under parent: cell-area-1
+useNodeDragDrop.ts:247 🎯 useNodeDragDrop: NOT triggering layout for rrp - parent position preserved
+useSimpleChildNodeCreation.ts:122 ✅ Creating RRP node positioned below TAC parent: {x: 509, y: 312.66666412353516}
+useSimpleChildNodeCreation.ts:122 ✅ Creating RRP node positioned below TAC parent: {x: 509, y: 312.66666412353516}
+FlowInstance.tsx:83 FlowInstance: Rendering with 3 nodes, 1 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'cell-area-1', type: 'customNode', position: {…}, data: {…}, measured: {…}}
+NodeEditor.tsx:121 ✅ NodeEditor: NODE PRESERVATION - nodes: 0, hookNodes: 3 (no auto-clear)
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+StandardNodeWrapper.tsx:60 StandardNodeWrapper: id=rrp-2, type=rrp, nodeNumber=2
+useSimpleChildNodeCreation.ts:192 useSimpleChildNodeCreation: Creating edge from cell-area-1 to rrp-2
+useUnifiedEdgeManager.ts:22 UnifiedEdgeManager: Creating edge unified-cell-area-1-rrp-2 (auto)
+useUnifiedEdgeManager.ts:58 UnifiedEdgeManager: Adding edge to state: {id: 'unified-cell-area-1-rrp-2', source: 'cell-area-1', target: 'rrp-2', sourceHandle: 'bottom-source', targetHandle: 'top-target', …}
+useUnifiedEdgeManager.ts:112 UnifiedEdgeManager: Total edges after addition: 2
+FlowInstance.tsx:83 FlowInstance: Rendering with 3 nodes, 2 edges
+FlowInstance.tsx:86 FlowInstance: First node: {id: 'cell-area-1', type: 'customNode', position: {…}, data: {…}, measured: {…}}
+NodeEditor.tsx:134 ✅ NodeEditor: EDGE PRESERVATION - edges: 0, hookEdges: 2 (no auto-clear)

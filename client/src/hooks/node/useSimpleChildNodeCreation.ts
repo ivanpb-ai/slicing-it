@@ -114,12 +114,34 @@ export const useSimpleChildNodeCreation = (
         };
         console.log(`✅ Creating RRPmember (balanced tree layout will position it)`, childPosition);
       } else if (type === 'rrp' && parentNode) {
-        // Position RRP nodes vertically below their TAC parent
+        // Position RRP nodes with horizontal spacing for siblings
+        const existingRrpChildren = prevNodes.filter(node => 
+          node.data?.parentId === parentId && node.data?.type === 'rrp'
+        );
+        
+        const spacing = 250; // Horizontal spacing between RRP siblings
+        const totalNodes = existingRrpChildren.length + 1; // Include the new node
+        
+        // Start from left of parent and space horizontally
+        const baseStartX = parentNode.position.x - ((totalNodes - 1) * spacing / 2);
+        
+        // Position the new node
         childPosition = {
-          x: parentNode.position.x, // Keep same horizontal position as parent
+          x: baseStartX + (existingRrpChildren.length * spacing),
           y: parentNode.position.y + 200  // Position vertically below with spacing
         };
-        console.log(`✅ Creating RRP node positioned below TAC parent:`, childPosition);
+        
+        console.log(`✅ Creating RRP node #${totalNodes} at x=${childPosition.x}, y=${childPosition.y} (${existingRrpChildren.length} existing siblings)`);
+        
+        // IMPORTANT: Reposition existing RRP siblings to maintain symmetry
+        existingRrpChildren.forEach((siblingNode, index) => {
+          const newSiblingX = baseStartX + (index * spacing);
+          siblingNode.position = {
+            x: newSiblingX,
+            y: parentNode.position.y + 200
+          };
+          console.log(`📍 Repositioned RRP sibling #${index + 1} to x=${newSiblingX}`);
+        });
       } else if (type === 'dnn' && parentNode) {
         // Check if position is already calculated (from drag-and-drop system)
         if (position.x !== 0 || position.y !== 0) {
