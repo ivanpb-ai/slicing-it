@@ -75,6 +75,8 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
   getSavedGraphs,
   onLoadGraphFromStorage,
 }) => {
+  const reactFlowInstanceRef = useRef(null);
+
   // Reduced logging to prevent render loop debugging noise  
   useEffect(() => {
     console.log(`FlowInstance: Rendering with ${nodes.length} nodes, ${edges.length} edges`);
@@ -83,6 +85,42 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
       console.log('FlowInstance: First node:', nodes[0]);
     }
   }, [nodes.length, edges.length]); // Only trigger on length changes, not content changes
+
+  // Listen for graph-loaded event to auto-fit viewport
+  useEffect(() => {
+    const handleGraphLoaded = () => {
+      console.log('FlowInstance: Graph loaded event received - checking for auto-fit');
+      
+      if (reactFlowInstanceRef.current && nodes.length > 0) {
+        console.log('FlowInstance: Auto-fitting viewport for imported graph with', nodes.length, 'nodes');
+        
+        setTimeout(() => {
+          try {
+            reactFlowInstanceRef.current.fitView({
+              padding: 0.15,
+              includeHiddenNodes: true,
+              minZoom: 0.1,
+              maxZoom: 1.2,
+              duration: 800
+            });
+            console.log('FlowInstance: Viewport fitted successfully');
+          } catch (error) {
+            console.error('FlowInstance: Error during fitView:', error);
+          }
+        }, 300);
+      } else {
+        console.warn('FlowInstance: Cannot fit view - missing instance or no nodes');
+        console.warn('ReactFlow instance available:', !!reactFlowInstanceRef.current);
+        console.warn('Nodes count:', nodes.length);
+      }
+    };
+
+    window.addEventListener('graph-loaded', handleGraphLoaded);
+    
+    return () => {
+      window.removeEventListener('graph-loaded', handleGraphLoaded);
+    };
+  }, [nodes.length]); // Re-setup listener when nodes change
 
 
   // Accepts either a graph name or a GraphData object
@@ -138,13 +176,16 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
       onInit={(instance) => {
         console.log('FlowInstance: ReactFlow initialized');
         
+        // Store instance in ref for local access
+        reactFlowInstanceRef.current = instance;
+        
         // Register instance globally for export functions
         // @ts-ignore - Create global registry for ReactFlow instances
         if (!window.__REACTFLOW_INSTANCES__) {
           window.__REACTFLOW_INSTANCES__ = [];
         }
         window.__REACTFLOW_INSTANCES__.push(instance);
-        console.log('FlowInstance: Registered ReactFlow instance globally');
+        console.log('FlowInstance: Registered ReactFlow instance globally and in ref');
       }}
     >
       <FlowBackground />
