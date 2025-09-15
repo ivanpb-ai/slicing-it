@@ -460,7 +460,7 @@ export const arrangeNodesInBalancedTree = (
     }
   };
 
-  // FIXED: Use virtual super-root to unify all roots and avoid overlap issues
+  // ANCHOR ROOT NODES: Position each root subtree and anchor to actual root position
   const rootNodeIds = nodesByLevel[0] || [];
   
   if (rootNodeIds.length === 0) {
@@ -468,25 +468,56 @@ export const arrangeNodesInBalancedTree = (
     return { nodes, cleanedEdges: validEdges };
   }
   
-  // Create a virtual super-root that contains all actual roots as children
-  const VIRTUAL_ROOT = '__virtual_super_root__';
-  childrenMap[VIRTUAL_ROOT] = rootNodeIds;
-  
-  // Position the entire graph starting from the virtual super-root
-  console.log(`🌟 Positioning graph with virtual super-root containing ${rootNodeIds.length} actual roots`);
-  positionSubtreeBottomUp(VIRTUAL_ROOT, -1); // Start at level -1 so actual roots are at level 0
-
-  // Normalize positions: shift so leftmost node starts at marginX
-  const allXPositions = Object.values(nodePositionMap).map(pos => pos.x);
-  const minX = Math.min(...allXPositions);
-  const normalizeShift = marginX - minX;
-  
-  // Apply normalization shift to all nodes
-  Object.keys(nodePositionMap).forEach(nodeId => {
-    nodePositionMap[nodeId].x += normalizeShift;
+  // Process each root node separately - anchor to current position
+  rootNodeIds.forEach(rootId => {
+    const rootNode = nodes.find(n => n.id === rootId);
+    if (!rootNode) {
+      console.warn(`⚠️ Root node ${rootId} not found in nodes array`);
+      return;
+    }
+    
+    console.log(`🌟 Anchoring root subtree for ${rootId} at position (${rootNode.position.x}, ${rootNode.position.y})`);
+    
+    // Compute subtree layout with root at level 0
+    positionSubtreeBottomUp(rootId, 0);
+    
+    // Get the computed position for this root
+    const computedRootPos = nodePositionMap[rootId];
+    if (!computedRootPos) {
+      console.warn(`⚠️ No computed position for root ${rootId}`);
+      return;
+    }
+    
+    // Calculate shift needed to anchor root to its actual position
+    const dx = rootNode.position.x - computedRootPos.x;
+    const dy = rootNode.position.y - computedRootPos.y;
+    
+    console.log(`🎯 Anchoring shift: dx=${dx.toFixed(1)}, dy=${dy.toFixed(1)} for root ${rootId}`);
+    
+    // Find all descendants of this root for anchoring
+    const findAllDescendants = (parentId: string): string[] => {
+      const directChildren = childrenMap[parentId] || [];
+      const allDescendants = [...directChildren];
+      directChildren.forEach(childId => {
+        allDescendants.push(...findAllDescendants(childId));
+      });
+      return allDescendants;
+    };
+    
+    // Apply anchor shift to root and all its descendants
+    const nodesToShift = [rootId, ...findAllDescendants(rootId)];
+    nodesToShift.forEach(nodeId => {
+      if (nodePositionMap[nodeId]) {
+        nodePositionMap[nodeId].x += dx;
+        nodePositionMap[nodeId].y += dy;
+        console.log(`📍 Anchored ${nodeId} to (${nodePositionMap[nodeId].x.toFixed(1)}, ${nodePositionMap[nodeId].y.toFixed(1)})`);
+      }
+    });
+    
+    console.log(`✅ Root ${rootId} subtree anchored - root stays at user position, children arranged relative to it`);
   });
 
-  console.log(`🎯 Layout normalized: shifted all nodes by ${normalizeShift} to start at marginX=${marginX}`);
+  console.log(`🎯 Layout completed with anchored roots - network nodes stay fixed, children arranged relative to them`);
 
   // FIXED: Ensure all nodes get positioned and validate completeness
   const positionedCount = Object.keys(nodePositionMap).length;
