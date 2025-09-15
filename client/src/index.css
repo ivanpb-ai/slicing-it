@@ -119,6 +119,12 @@ body {
 
 .react-flow__controls {
   @apply rounded-lg overflow-hidden shadow-md backdrop-blur-sm bg-white/70;
+  position: absolute !important;
+  right: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  left: unset !important;
+  bottom: unset !important;
 }
 
 .react-flow__controls-button {

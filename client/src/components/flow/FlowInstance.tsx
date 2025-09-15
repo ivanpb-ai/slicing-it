@@ -174,6 +174,8 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
       nodesDraggable={true}
       nodesConnectable={true}
       elementsSelectable={true}
+      minZoom={0.01}
+      maxZoom={3}
       onInit={(instance) => {
         console.log('FlowInstance: ReactFlow initialized');
         
