@@ -174,6 +174,10 @@ const NodeEditorContent: React.FC<NodeEditorProps> = ({
     if (reactFlowInstance) {
       reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
     }
+    
+    // CRITICAL FIX: Dispatch canvas-cleared event to trigger hook state clear
+    window.dispatchEvent(new CustomEvent('canvas-cleared'));
+    
     toast.success('Canvas cleared');
   }, [nodes.length, setNodes, setEdges, reactFlowInstance]);
 
