@@ -546,75 +546,80 @@ export const useExportImportGraph = (
             reactFlowInstance.setViewport({ x: 0, y: 0, zoom: 1 });
           }
           
-          // Process nodes and edges immediately
-          console.log('Setting imported nodes:', parsedData.nodes.length);
+          // CRITICAL: Dispatch canvas-cleared event to trigger hook state clear
+          window.dispatchEvent(new CustomEvent('canvas-cleared'));
           
-          // Ensure all nodes have the correct type set for our CustomNode component
-          const processedNodes = parsedData.nodes.map((node: Node) => ({
-            ...node,
-            type: 'customNode', // ReactFlow type for component lookup
-            data: {
-              ...node.data,
-              // Preserve data.type which StandardNodeWrapper uses to render specific nodes
-              type: node.data?.type || 'generic'
-            }
-          }));
-          
-          console.log('Processed nodes with types:', processedNodes.map((n: Node) => ({ id: n.id, type: n.type, dataType: n.data?.type })));
-          
-          // Filter out any duplicate edges by ID to prevent spurious connections
-          const uniqueEdges = parsedData.edges.filter((edge: any, index: number, arr: any[]) => 
-            arr.findIndex((e: any) => e.id === edge.id) === index
-          );
-          
-          console.log('Setting imported edges:', uniqueEdges.length);
-          
-          // Set nodes and edges in React state
-          setNodes(processedNodes);
-          setEdges(uniqueEdges);
-          
-          // Fit viewport to imported graph after a short delay for rendering
+          // Add delay to ensure clearing takes effect before importing
           setTimeout(() => {
-            console.log('FitView timeout triggered - checking conditions');
-            console.log('ReactFlow instance available:', !!reactFlowInstance);
-            console.log('Processed nodes length:', processedNodes.length);
-            
-            if (reactFlowInstance && processedNodes.length > 0) {
-              console.log('Auto-fitting viewport for imported graph with', processedNodes.length, 'nodes');
-              try {
-                reactFlowInstance.fitView({ 
-                  padding: 0.15,
-                  includeHiddenNodes: true,
-                  minZoom: 0.1,
-                  maxZoom: 1.2,
-                  duration: 800
-                });
-                console.log('fitView completed successfully');
-              } catch (error) {
-                console.error('Error during fitView:', error);
-              }
-            } else {
-              console.warn('Cannot fit view - missing reactFlowInstance or no nodes');
-              console.warn('ReactFlow instance:', !!reactFlowInstance);
-              console.warn('Nodes count:', processedNodes.length);
-            }
-            
-            // Dispatch graph-loaded event
-            console.log('Dispatching graph-loaded event after import');
-            window.dispatchEvent(new CustomEvent('graph-loaded'));
-          }, 500);
+            console.log('Setting imported nodes after clear delay:', parsedData.nodes.length);
           
-          // Show import success toast with proper styling
-          toast.success(`Graph imported successfully with ${parsedData.nodes.length} nodes and ${parsedData.edges.length} edges`, {
-            style: {
-              color: '#000000 !important',
-              backgroundColor: '#ffffff !important',
-              border: '1px solid #e0e0e0 !important',
-              fontSize: '14px !important',
-              fontWeight: '500 !important'
-            },
-            className: 'custom-success-toast'
-          });
+            // Ensure all nodes have the correct type set for our CustomNode component
+            const processedNodes = parsedData.nodes.map((node: Node) => ({
+              ...node,
+              type: 'customNode', // ReactFlow type for component lookup
+              data: {
+                ...node.data,
+                // Preserve data.type which StandardNodeWrapper uses to render specific nodes
+                type: node.data?.type || 'generic'
+              }
+            }));
+            
+            console.log('Processed nodes with types:', processedNodes.map((n: Node) => ({ id: n.id, type: n.type, dataType: n.data?.type })));
+            
+            // Filter out any duplicate edges by ID to prevent spurious connections
+            const uniqueEdges = parsedData.edges.filter((edge: any, index: number, arr: any[]) => 
+              arr.findIndex((e: any) => e.id === edge.id) === index
+            );
+            
+            console.log('Setting imported edges:', uniqueEdges.length);
+            
+            // Set nodes and edges in React state
+            setNodes(processedNodes);
+            setEdges(uniqueEdges);
+            
+            // Fit viewport to imported graph after a short delay for rendering
+            setTimeout(() => {
+              console.log('FitView timeout triggered - checking conditions');
+              console.log('ReactFlow instance available:', !!reactFlowInstance);
+              console.log('Processed nodes length:', processedNodes.length);
+              
+              if (reactFlowInstance && processedNodes.length > 0) {
+                console.log('Auto-fitting viewport for imported graph with', processedNodes.length, 'nodes');
+                try {
+                  reactFlowInstance.fitView({ 
+                    padding: 0.15,
+                    includeHiddenNodes: true,
+                    minZoom: 0.1,
+                    maxZoom: 1.2,
+                    duration: 800
+                  });
+                  console.log('fitView completed successfully');
+                } catch (error) {
+                  console.error('Error during fitView:', error);
+                }
+              } else {
+                console.warn('Cannot fit view - missing reactFlowInstance or no nodes');
+                console.warn('ReactFlow instance:', !!reactFlowInstance);
+                console.warn('Nodes count:', processedNodes.length);
+              }
+              
+              // Dispatch graph-loaded event
+              console.log('Dispatching graph-loaded event after import');
+              window.dispatchEvent(new CustomEvent('graph-loaded'));
+            }, 500);
+            
+            // Show import success toast with proper styling
+            toast.success(`Graph imported successfully with ${parsedData.nodes.length} nodes and ${parsedData.edges.length} edges`, {
+              style: {
+                color: '#000000 !important',
+                backgroundColor: '#ffffff !important',
+                border: '1px solid #e0e0e0 !important',
+                fontSize: '14px !important',
+                fontWeight: '500 !important'
+              },
+              className: 'custom-success-toast'
+            });
+          }, 100);
         } catch (error) {
           console.error('Error importing graph:', error);
           toast.error('Failed to import graph', {
