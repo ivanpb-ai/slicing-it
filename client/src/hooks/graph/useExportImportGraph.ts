@@ -575,15 +575,28 @@ export const useExportImportGraph = (
           
           // Fit viewport to imported graph after a short delay for rendering
           setTimeout(() => {
+            console.log('FitView timeout triggered - checking conditions');
+            console.log('ReactFlow instance available:', !!reactFlowInstance);
+            console.log('Processed nodes length:', processedNodes.length);
+            
             if (reactFlowInstance && processedNodes.length > 0) {
-              console.log('Auto-fitting viewport for imported graph');
-              reactFlowInstance.fitView({ 
-                padding: 0.15,
-                includeHiddenNodes: true,
-                minZoom: 0.1,
-                maxZoom: 1.2,
-                duration: 800
-              });
+              console.log('Auto-fitting viewport for imported graph with', processedNodes.length, 'nodes');
+              try {
+                reactFlowInstance.fitView({ 
+                  padding: 0.15,
+                  includeHiddenNodes: true,
+                  minZoom: 0.1,
+                  maxZoom: 1.2,
+                  duration: 800
+                });
+                console.log('fitView completed successfully');
+              } catch (error) {
+                console.error('Error during fitView:', error);
+              }
+            } else {
+              console.warn('Cannot fit view - missing reactFlowInstance or no nodes');
+              console.warn('ReactFlow instance:', !!reactFlowInstance);
+              console.warn('Nodes count:', processedNodes.length);
             }
             
             // Dispatch graph-loaded event
