@@ -1,10 +1,36 @@
 
-import { MiniMap, Controls } from '@xyflow/react';
+import React from 'react';
+import { MiniMap, useReactFlow } from '@xyflow/react';
 
 const FlowControls = () => {
+  const { zoomIn, zoomOut, fitView } = useReactFlow();
+
   return (
     <>
-      <Controls className="controls-panel" />
+      {/* Custom Controls positioned on the right */}
+      <div className="fixed right-5 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-1 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-2 border border-gray-200">
+        <button
+          onClick={() => zoomIn()}
+          className="w-10 h-8 flex items-center justify-center bg-white hover:bg-gray-100 border border-gray-300 rounded text-gray-700 transition-colors text-sm font-medium"
+          title="Zoom In"
+        >
+          +
+        </button>
+        <button
+          onClick={() => zoomOut()}
+          className="w-10 h-8 flex items-center justify-center bg-white hover:bg-gray-100 border border-gray-300 rounded text-gray-700 transition-colors text-sm font-medium"
+          title="Zoom Out"
+        >
+          −
+        </button>
+        <button
+          onClick={() => fitView({ padding: 0.1, duration: 500 })}
+          className="w-10 h-8 flex items-center justify-center bg-white hover:bg-gray-100 border border-gray-300 rounded text-gray-700 transition-colors text-xs font-medium"
+          title="Fit View"
+        >
+          ⌂
+        </button>
+      </div>
       <MiniMap 
         nodeStrokeWidth={3}
         zoomable

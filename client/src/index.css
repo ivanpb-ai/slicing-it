@@ -117,14 +117,32 @@ body {
   @apply fill-gray-700 text-xs font-medium;
 }
 
-.react-flow__controls {
+/* Force ReactFlow controls to the right side with maximum specificity */
+.react-flow__controls,
+.react-flow .react-flow__controls,
+.bg-gray-100 .react-flow__controls,
+div.react-flow__controls,
+div[class*="react-flow__controls"] {
   @apply rounded-lg overflow-hidden shadow-md backdrop-blur-sm bg-white/70;
-  position: absolute !important;
+  position: fixed !important;
   right: 20px !important;
   top: 50% !important;
+  left: auto !important;
+  bottom: auto !important;
   transform: translateY(-50%) !important;
-  left: unset !important;
-  bottom: unset !important;
+  z-index: 9999 !important;
+  margin: 0 !important;
+}
+
+/* Backup approach using attribute selector */
+[class^="react-flow__controls"] {
+  position: fixed !important;
+  right: 20px !important;
+  top: 50% !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+  z-index: 9999 !important;
 }
 
 .react-flow__controls-button {
