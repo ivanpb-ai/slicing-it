@@ -3,9 +3,6 @@ import { Node, Edge } from '@xyflow/react';
 import { LayoutOptions } from './LayoutTypes';
 import { getDefaultLayoutOptions } from './DefaultLayoutOptions';
 import { applyFallbackLayout } from './FallbackLayout';
-import { arrangeNodesInGrid } from '../gridLayout';
-import { arrangeNodesInTreeLayout } from '../treeLayout/treeLayoutEngine';
-import { arrangeNodesInGridRows } from '../gridRowLayout';
 import { arrangeNodesInBalancedTree } from '../balancedTreeLayout';
 import { preventNodeOverlap } from '../preventOverlap';
 
@@ -31,78 +28,22 @@ export const processNodesWithLayout = (
     
     console.log(`LayoutProcessor: Using layout type '${mergedOptions.type}' from options:`, mergedOptions);
     
-    switch (mergedOptions.type) {
-      case 'balanced-tree':
-        // Use the new balanced tree layout
-        const balancedResult = arrangeNodesInBalancedTree(nodes, edges, {
-          nodeWidth: mergedOptions.nodeWidth,
-          nodeHeight: mergedOptions.nodeHeight,
-          horizontalSpacing: mergedOptions.horizontalSpacing || mergedOptions.spacing,
-          verticalSpacing: mergedOptions.verticalSpacing || 500,
-          marginX: mergedOptions.marginX,
-          marginY: mergedOptions.marginY
-        });
-        arrangedNodes = balancedResult.nodes;
-        // Store cleaned edges in global variable for use by the calling function
-        (window as any).__CLEANED_EDGES__ = balancedResult.cleanedEdges;
-        break;
-        
-      case 'gridrows':
-        // Use our grid rows layout
-        arrangedNodes = arrangeNodesInGridRows(nodes, {
-          cellWidth: mergedOptions.nodeWidth,
-          cellHeight: mergedOptions.nodeHeight,
-          marginX: mergedOptions.marginX,
-          marginY: mergedOptions.marginY,
-          spacing: mergedOptions.spacing
-        });
-        break;
-        
-      case 'tree':
-        // Use improved tree layout with balanced distribution
-        arrangedNodes = arrangeNodesInTreeLayout(nodes, edges, {
-          spacing: mergedOptions.spacing,
-          nodeWidth: mergedOptions.nodeWidth,
-          nodeHeight: mergedOptions.nodeHeight,
-          marginX: mergedOptions.marginX,
-          marginY: mergedOptions.marginY,
-          compactFactor: mergedOptions.compactFactor,
-          edgeShortenFactor: mergedOptions.edgeShortenFactor,
-          horizontalSpacing: mergedOptions.horizontalSpacing, 
-          verticalSpacing: mergedOptions.verticalSpacing,
-          levelHeight: mergedOptions.levelHeight,
-          preventOverlap: mergedOptions.preventOverlap,
-          minNodeDistance: mergedOptions.minNodeDistance
-        });
-        break;
-        
-      case 'grid':
-      default:
-        // Use grid layout for maximum stability
-        arrangedNodes = arrangeNodesInGrid(nodes, {
-          spacing: mergedOptions.spacing,
-          marginX: mergedOptions.marginX,
-          marginY: mergedOptions.marginY,
-          nodeWidth: mergedOptions.nodeWidth,
-          nodeHeight: mergedOptions.nodeHeight,
-          preventOverlap: mergedOptions.preventOverlap,
-          minNodeDistance: mergedOptions.minNodeDistance
-        });
-        break;
-    }
+    // Only support balanced-tree layout
+    console.log(`LayoutProcessor: Using balanced-tree layout with options:`, mergedOptions);
     
-    // Apply overlap prevention as a post-processing step if requested
-    // Skip overlap prevention for balanced-tree layout to preserve symmetry
-    if (mergedOptions.preventOverlap && mergedOptions.type !== 'balanced-tree') {
-      return preventNodeOverlap(
-        arrangedNodes, 
-        mergedOptions.nodeWidth || 180, 
-        mergedOptions.nodeHeight || 120, 
-        mergedOptions.minNodeDistance || 80, 
-        mergedOptions.maxIterations || 50,
-        mergedOptions.edgeShortenFactor || 0.8
-      );
-    }
+    const balancedResult = arrangeNodesInBalancedTree(nodes, edges, {
+      nodeWidth: mergedOptions.nodeWidth,
+      nodeHeight: mergedOptions.nodeHeight,
+      horizontalSpacing: mergedOptions.horizontalSpacing || mergedOptions.spacing,
+      verticalSpacing: mergedOptions.verticalSpacing || 500,
+      marginX: mergedOptions.marginX,
+      marginY: mergedOptions.marginY
+    });
+    arrangedNodes = balancedResult.nodes;
+    // Store cleaned edges in global variable for use by the calling function
+    (window as any).__CLEANED_EDGES__ = balancedResult.cleanedEdges;
+    
+    // Balanced-tree layout preserves symmetry, no overlap prevention needed
     
     return arrangedNodes;
   } catch (error) {

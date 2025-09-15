@@ -2,14 +2,7 @@
 /**
  * Available layout types
  */
-export type LayoutType = 
-  | 'grid'
-  | 'tree' 
-  | 'horizontal'
-  | 'vertical'
-  | 'circle'
-  | 'gridrows'
-  | 'balanced-tree';
+export type LayoutType = 'balanced-tree';
 
 /**
  * Layout configuration options

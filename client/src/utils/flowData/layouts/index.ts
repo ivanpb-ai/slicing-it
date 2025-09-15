@@ -6,25 +6,7 @@ export {
   type LayoutType
 } from './baseLayout';
 
-export {
-  arrangeNodesInGrid
-} from './gridLayout';
-
-export {
-  arrangeNodesVertically
-} from './verticalLayout';
-
-export {
-  arrangeNodesHorizontally
-} from './horizontalLayout';
-
-export {
-  arrangeNodesInCircle
-} from './circleLayout';
-
-export {
-  arrangeNodesInGridRows
-} from './gridRowLayout';
+// Only balanced-tree layout is supported
 
 export {
   arrangeNodesInBalancedTree
