@@ -41,7 +41,7 @@ export const useExportImportGraph = (
             const type = node.data?.type || 'unknown';
             acc[type] = (acc[type] || 0) + 1;
             return acc;
-          }, {});
+          }, {} as Record<string, number>);
           console.log('🔍 useExportImportGraph.ts: All node types in ReactFlow:', reactFlowTypeCounts);
           
           const dataStr = JSON.stringify({ 
@@ -81,7 +81,7 @@ export const useExportImportGraph = (
           const nodeType = type || 'unknown';
           acc[nodeType] = (acc[nodeType] || 0) + 1;
           return acc;
-        }, {});
+        }, {} as Record<string, number>);
         console.log('🔍 useExportImportGraph.ts: Props state type counts:', typeCounts);
         
         const dnnNodes = nodes.filter(node => node.data?.type === 'dnn');
@@ -97,7 +97,7 @@ export const useExportImportGraph = (
             const nodeType = type || 'unknown';
             acc[nodeType] = (acc[nodeType] || 0) + 1;
             return acc;
-          }, {});
+          }, {} as Record<string, number>);
           console.log('🔍 useExportImportGraph.ts: ReactFlow instance type counts:', flowTypeCounts);
           
           const flowDnnNodes = flowNodes.filter(node => node.data?.type === 'dnn');

@@ -8,6 +8,7 @@ import {
   NodeChange,
   EdgeChange,
   Connection,
+  ReactFlowInstance,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import NodeTypes from './NodeTypes';
@@ -75,7 +76,7 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
   getSavedGraphs,
   onLoadGraphFromStorage,
 }) => {
-  const reactFlowInstanceRef = useRef(null);
+  const reactFlowInstanceRef = useRef<ReactFlowInstance | null>(null);
 
   // Reduced logging to prevent render loop debugging noise  
   useEffect(() => {
@@ -96,7 +97,7 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
         
         setTimeout(() => {
           try {
-            reactFlowInstanceRef.current.fitView({
+            reactFlowInstanceRef.current?.fitView({
               padding: 0.15,
               includeHiddenNodes: true,
               minZoom: 0.1,
@@ -127,7 +128,7 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
   const handleLoadGraphData = (graphData: GraphData | string): boolean => {
     if (typeof graphData === 'string') {
       return onLoadGraphFromStorage(graphData);
-    } else if (graphData && typeof graphData === 'object' && 'name' in graphData) {
+    } else if (graphData && typeof graphData === 'object' && 'name' in graphData && graphData.name) {
       // If your onLoadGraphFromStorage expects a name, extract it
       return onLoadGraphFromStorage(graphData.name);
     } else {
@@ -181,10 +182,10 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
         
         // Register instance globally for export functions
         // @ts-ignore - Create global registry for ReactFlow instances
-        if (!window.__REACTFLOW_INSTANCES__) {
-          window.__REACTFLOW_INSTANCES__ = [];
+        if (!(window as any).__REACTFLOW_INSTANCES__) {
+          (window as any).__REACTFLOW_INSTANCES__ = [];
         }
-        window.__REACTFLOW_INSTANCES__.push(instance);
+        (window as any).__REACTFLOW_INSTANCES__.push(instance);
         console.log('FlowInstance: Registered ReactFlow instance globally and in ref');
       }}
     >
@@ -203,7 +204,7 @@ const FlowInstance: React.FC<FlowInstanceProps> = ({
         onLoad={onLoad}
         onDelete={onDelete}
         onExport={onExport}
-        onImport={onImport}
+        onImport={onImport as any}
         getSavedGraphs={getSavedGraphs}
         onLoadGraphFromStorage={handleLoadGraphData}
       />
