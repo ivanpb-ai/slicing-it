@@ -1,0 +1,1001 @@
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ ✅ NodeEditor: NODE PRESERVATION - nodes: 0, hookNodes: 66 (no auto-clear)
+ ✅ NodeEditor: EDGE PRESERVATION - edges: 0, hookEdges: 65 (no auto-clear)
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ SaveLoadMenu: Import button clicked
+ FileImportInput: Force reset input before dialog
+ FileImportInput: Input reset completed
+ FileImportInput: Processing file: test2_1757862379437.json, type: application/json, size: 63204
+ SaveLoadMenu: File selected for import: test2_1757862379437.json, size: 63204 bytes
+ NodeEditor: Import handler called with file: test2_1757862379437.json - delegating to parent import function
+ MainContent: Import triggered for test2_1757862379437.json
+ NodeEditor: Successfully delegated import to parent function
+ FileImportInput: Successfully called onImport handler
+ Resetting all ID counters to 1
+ Updating ID counters based on nodes: 66
+ Updated DNN counter to: 14
+ Updated S-NSSAI counter to: 9
+ Updated RRP counter to: 5
+ Updated QoS Flow counter to: 17
+ Updated Cell Area counter to: 3 (highest ID found: 2)
+ Clearing existing graph before import
+ Clearing state before import
+ Setting imported nodes: 66
+ Processed nodes with types: Array(66)
+ Setting imported edges: 65
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ ✅ NodeEditor: NODE PRESERVATION - nodes: 66, hookNodes: 66 (no auto-clear)
+ ✅ NodeEditor: EDGE PRESERVATION - edges: 65, hookEdges: 65 (no auto-clear)
+ MainContentWithGraphOperations: edges updated 65
+ MainContentWithGraphOperations: Updated global debug edges with 65 edges
+ Index component: nodes state updated, count: 66
+ Index component: First node: {"id":"network-1757858451331-3378","type":"customNode","position":{"x":3493.5,"y":250},"data":{"type":"network","label":"NETWORK Node","nodeId":"network-1757858451331-3378"},"measured":{"width":170,"height":129}}
+ Index component: edges state updated, count: 65
+ Index component: First edge: {"id":"unified-network-1757858451331-3378-cell-area-1","source":"network-1757858451331-3378","target":"cell-area-1","sourceHandle":"bottom-source","targetHandle":"top-target","type":"default","animated":false,"style":{"stroke":"#2563eb","strokeWidth":3,"opacity":1},"markerEnd":{"type":"arrowclosed","color":"#2563eb","width":12,"height":12},"data":{"createdBy":"auto"}}
+ Index: Updated __DEBUG_NODE_EDITOR_EDGES with 65 edges
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ FitView timeout triggered - checking conditions
+ ReactFlow instance available: true
+ Processed nodes length: 66
+ Auto-fitting viewport for imported graph with 66 nodes
+ fitView completed successfully
+ Dispatching graph-loaded event after import
+ FlowInstance: Graph loaded event received - checking for auto-fit
+ FlowInstance: Auto-fitting viewport for imported graph with 66 nodes
+ FlowInstance: Viewport fitted successfully
+ Clear canvas button clicked in Toolbar
+ Clear canvas check - current nodes: 66 current edges: 65
+ Resetting all ID counters to 1
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ ✅ NodeEditor: NODE PRESERVATION - nodes: 0, hookNodes: 66 (no auto-clear)
+ ✅ NodeEditor: EDGE PRESERVATION - edges: 0, hookEdges: 65 (no auto-clear)
+ MainContentWithGraphOperations: edges updated 0
+ MainContentWithGraphOperations: Updated global debug edges with 0 edges
+ Index component: nodes state updated, count: 0
+ Index component: edges state updated, count: 0
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ NodeButton: Started dragging network button
+ NodeButton: Set drag data to: network
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "network" at position: Object
+ parseDragData: Processing drag data: network
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: network
+ useNodeDragDrop: Parsed drag data: nodeType="network", fiveQIId="undefined"
+ useNodeDragDrop: Elements at drop point: 9
+ detectParentNodeFromDOM: Checking elements at point: 9
+ detectParentNodeFromDOM: No parent node found in DOM elements
+ detectParentNodeFromPosition: Checking position: Object
+ detectParentNodeFromPosition: Available nodes: Array(66)
+ detectParentNodeFromPosition: No parent node found at position
+ useNodeDragDrop: Detected parent: none
+ useNodeDragDrop: Creating standalone network node at safe position: Object
+ useNodeEditor: Adding network node at position: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ FlowInstance: Rendering with 67 nodes, 65 edges
+ ✅ NodeEditor: NODE PRESERVATION - nodes: 0, hookNodes: 67 (no auto-clear)
+ StandardNodeWrapper: id=network-1757936239552-8406, type=network, nodeNumber=8406
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ NodeButton: Started dragging cell-area button
+ NodeButton: Set drag data to: cell-area
+ useNodeDragDrop: Drag started
+ useNodeDragDrop: Drop event triggered
+ useNodeDragDrop: Drop event received with data: "cell-area" at position: Object
+ parseDragData: Processing drag data: cell-area
+ parseDragData: Not JSON format, trying string parsing
+ parseDragData: Using simple node type: cell-area
+ useNodeDragDrop: Parsed drag data: nodeType="cell-area", fiveQIId="undefined"
+ useNodeDragDrop: Adjusted position to prevent overlap: Object
+ useNodeDragDrop: Elements at drop point: 13
+ detectParentNodeFromDOM: Checking elements at point: 13
+ detectParentNodeFromDOM: Found parent node container with ID: network-1757936239552-8406
+ useNodeDragDrop: Detected parent: network-1757936239552-8406
+ Validating relationship: network -> cell-area
+ Valid relationship confirmed: network -> cell-area
+ useNodeDragDrop: Creating child cell-area node under parent network-1757936239552-8406
+ useNodeDragDrop: Parent node found: network
+ useNodeDragDrop: Child position calculated: Object
+ Generated new Cell Area ID: 1
+ Creating child cell-area with ID: 1
+ Creating child cell-area node with ID: cell-area-1 under parent: network-1757936239552-8406
+ 🎯 useNodeDragDrop: NOT triggering layout for cell-area - parent position preserved
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ FlowInstance: Rendering with 68 nodes, 65 edges
+ ✅ NodeEditor: NODE PRESERVATION - nodes: 0, hookNodes: 68 (no auto-clear)
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 8
+ Looking up 5QI with ID: "8"
+ Found matching 5QI for ID "8": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 2
+ Looking up 5QI with ID: "2"
+ Found matching 5QI for ID "2": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 4
+ Looking up 5QI with ID: "4"
+ Found matching 5QI for ID "4": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 59
+ Looking up 5QI with ID: "59"
+ Found matching 5QI for ID "59": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+ Looking up 5QI with ID: "7"
+ Found matching 5QI for ID "7": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 9
+ Looking up 5QI with ID: "9"
+ Found matching 5QI for ID "9": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 10
+ Looking up 5QI with ID: "10"
+ Found matching 5QI for ID "10": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 11
+ Looking up 5QI with ID: "11"
+ Found matching 5QI for ID "11": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 12
+ Looking up 5QI with ID: "12"
+ Found matching 5QI for ID "12": Object
+ Final QoS values for rendering: Object
+ useSimpleChildNodeCreation: Creating edge from network-1757936239552-8406 to cell-area-1
+ UnifiedEdgeManager: Creating edge unified-network-1757936239552-8406-cell-area-1 (auto)
+ UnifiedEdgeManager: Adding edge to state: Object
+  UnifiedEdgeManager: Rejecting automatic edge from network-1757936239552-8406 to cell-area-1. Expected parent: network-1757858451331-3378
+(anonymous) @ index-DKMx3flS.js:203
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 6
+ Looking up 5QI with ID: "6"
+ Found matching 5QI for ID "6": Object
+ Final QoS values for rendering: Object
+ 5QI Node rendering with data: Object
+ 5QI Node fiveQIId: 7
+index-DKMx3flS.js:203 Looking up 5QI with ID: "7"
+index-DKMx3flS.js:203 Found matching 5QI for ID "7": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 8
+index-DKMx3flS.js:203 Looking up 5QI with ID: "8"
+index-DKMx3flS.js:203 Found matching 5QI for ID "8": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 9
+index-DKMx3flS.js:203 Looking up 5QI with ID: "9"
+index-DKMx3flS.js:203 Found matching 5QI for ID "9": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 10
+index-DKMx3flS.js:203 Looking up 5QI with ID: "10"
+index-DKMx3flS.js:203 Found matching 5QI for ID "10": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 9
+index-DKMx3flS.js:203 Looking up 5QI with ID: "9"
+index-DKMx3flS.js:203 Found matching 5QI for ID "9": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 2
+index-DKMx3flS.js:203 Looking up 5QI with ID: "2"
+index-DKMx3flS.js:203 Found matching 5QI for ID "2": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 4
+index-DKMx3flS.js:203 Looking up 5QI with ID: "4"
+index-DKMx3flS.js:203 Found matching 5QI for ID "4": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 59
+index-DKMx3flS.js:203 Looking up 5QI with ID: "59"
+index-DKMx3flS.js:203 Found matching 5QI for ID "59": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 7
+index-DKMx3flS.js:203 Looking up 5QI with ID: "7"
+index-DKMx3flS.js:203 Found matching 5QI for ID "7": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 9
+index-DKMx3flS.js:203 Looking up 5QI with ID: "9"
+index-DKMx3flS.js:203 Found matching 5QI for ID "9": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 9
+index-DKMx3flS.js:203 Looking up 5QI with ID: "9"
+index-DKMx3flS.js:203 Found matching 5QI for ID "9": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 10
+index-DKMx3flS.js:203 Looking up 5QI with ID: "10"
+index-DKMx3flS.js:203 Found matching 5QI for ID "10": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 11
+index-DKMx3flS.js:203 Looking up 5QI with ID: "11"
+index-DKMx3flS.js:203 Found matching 5QI for ID "11": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object
+index-DKMx3flS.js:203 5QI Node rendering with data: Object
+index-DKMx3flS.js:203 5QI Node fiveQIId: 12
+index-DKMx3flS.js:203 Looking up 5QI with ID: "12"
+index-DKMx3flS.js:203 Found matching 5QI for ID "12": Object
+index-DKMx3flS.js:203 Final QoS values for rendering: Object

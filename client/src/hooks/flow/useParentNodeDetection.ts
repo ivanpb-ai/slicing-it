@@ -55,6 +55,7 @@ export const detectParentNodeFromPosition = (
   console.log('detectParentNodeFromPosition: Checking position:', dropPosition);
   console.log('detectParentNodeFromPosition: Available nodes:', nodes.map(n => ({ id: n.id, type: n.data?.type, pos: n.position })));
   
+  // FIXED: More restrictive parent detection - only detect if dropping in CENTER area
   // Sort nodes by area (smallest first) to get the most specific parent
   const sortedNodes = [...nodes].sort((a, b) => {
     const aWidth = a.measured?.width || a.style?.width || 200;
@@ -70,7 +71,7 @@ export const detectParentNodeFromPosition = (
     return aArea - bArea;
   });
   
-  // Check each node to see if the drop position is within its bounds
+  // Check each node with MORE RESTRICTIVE bounds - only center 60% of node area
   for (const node of sortedNodes) {
     const nodeWidth = node.measured?.width || node.style?.width || 200;
     const nodeHeight = node.measured?.height || node.style?.height || 100;
@@ -78,17 +79,23 @@ export const detectParentNodeFromPosition = (
     const width = typeof nodeWidth === 'string' ? parseInt(nodeWidth) : nodeWidth;
     const height = typeof nodeHeight === 'string' ? parseInt(nodeHeight) : nodeHeight;
     
-    const withinX = dropPosition.x >= node.position.x && 
-                   dropPosition.x <= node.position.x + width;
-    const withinY = dropPosition.y >= node.position.y && 
-                   dropPosition.y <= node.position.y + height;
+    // FIXED: Create a smaller "drop zone" - only 60% of the node's center area
+    const margin = 0.2; // 20% margin on each side = 60% center area
+    const dropZoneLeft = node.position.x + (width * margin);
+    const dropZoneRight = node.position.x + (width * (1 - margin));
+    const dropZoneTop = node.position.y + (height * margin);
+    const dropZoneBottom = node.position.y + (height * (1 - margin));
+    
+    const withinX = dropPosition.x >= dropZoneLeft && dropPosition.x <= dropZoneRight;
+    const withinY = dropPosition.y >= dropZoneTop && dropPosition.y <= dropZoneBottom;
     
     if (withinX && withinY) {
-      console.log(`detectParentNodeFromPosition: Found node ${node.id} (${node.data?.type}) at position`);
+      console.log(`detectParentNodeFromPosition: Found node ${node.id} (${node.data?.type}) in CENTER drop zone`);
+      console.log(`detectParentNodeFromPosition: Drop zone bounds: x=${dropZoneLeft}-${dropZoneRight}, y=${dropZoneTop}-${dropZoneBottom}`);
       return node.id;
     }
   }
   
-  console.log('detectParentNodeFromPosition: No parent node found at position');
+  console.log('detectParentNodeFromPosition: No parent node found in CENTER drop zones');
   return null;
 };
